@@ -1,0 +1,46 @@
+{
+  "id": "C67470",
+  "mpn": "LM393DR",
+  "manufacturer": "Texas Instruments",
+  "package": "SOIC-8",
+  "classification": "Extended",
+  "assembly": "SMT Assembly",
+  "pcba_type": "Economic and Standard",
+  "stock": 208296,
+  "loss": 0,
+  "prices": [
+    {
+      "min_qty": 1,
+      "max_qty": 99,
+      "usd": 0.0635
+    },
+    {
+      "min_qty": 100,
+      "max_qty": 299,
+      "usd": 0.0506
+    },
+    {
+      "min_qty": 300,
+      "max_qty": 2499,
+      "usd": 0.0441
+    },
+    {
+      "min_qty": 2500,
+      "max_qty": 4999,
+      "usd": 0.0385
+    },
+    {
+      "min_qty": 5000,
+      "max_qty": 9999,
+      "usd": 0.0367
+    },
+    {
+      "min_qty": 10000,
+      "max_qty": -1,
+      "usd": 0.0354
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/C67470",
+  "checked_at": "2026-10-13T15:10:20.548004+00:00",
+  "status": "public JLC page observed; recheck at ordering"
+}

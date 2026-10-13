@@ -1,0 +1,46 @@
+{
+  "id": "C42381015",
+  "mpn": "EL357N(B)(TA)-G",
+  "manufacturer": "Everlight Elec",
+  "package": "SOP-4-2.54mm",
+  "classification": "Extended",
+  "assembly": "SMT Assembly",
+  "pcba_type": "Economic and Standard",
+  "stock": 510538,
+  "loss": 1,
+  "prices": [
+    {
+      "min_qty": 1,
+      "max_qty": 99,
+      "usd": 0.0578
+    },
+    {
+      "min_qty": 100,
+      "max_qty": 299,
+      "usd": 0.0456
+    },
+    {
+      "min_qty": 300,
+      "max_qty": 999,
+      "usd": 0.0392
+    },
+    {
+      "min_qty": 1000,
+      "max_qty": 3499,
+      "usd": 0.0341
+    },
+    {
+      "min_qty": 3500,
+      "max_qty": 10499,
+      "usd": 0.0323
+    },
+    {
+      "min_qty": 10500,
+      "max_qty": -1,
+      "usd": 0.031
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/C42381015",
+  "checked_at": "2026-10-13T15:15:57.027013+00:00",
+  "status": "public JLC page observed; recheck at ordering"
+}

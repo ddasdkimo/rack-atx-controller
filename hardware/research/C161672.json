@@ -1,0 +1,46 @@
+{
+  "id": "C161672",
+  "mpn": "S10B-PHDSS(LF)(SN)",
+  "manufacturer": "JST",
+  "package": "Push-Pull,P=2mm",
+  "classification": "Extended",
+  "assembly": "Wave Soldering",
+  "pcba_type": "Economic and Standard",
+  "stock": 9875,
+  "loss": 0,
+  "prices": [
+    {
+      "min_qty": 1,
+      "max_qty": 49,
+      "usd": 0.4727
+    },
+    {
+      "min_qty": 50,
+      "max_qty": 149,
+      "usd": 0.3678
+    },
+    {
+      "min_qty": 150,
+      "max_qty": 499,
+      "usd": 0.3228
+    },
+    {
+      "min_qty": 500,
+      "max_qty": 2499,
+      "usd": 0.2667
+    },
+    {
+      "min_qty": 2500,
+      "max_qty": 4999,
+      "usd": 0.2418
+    },
+    {
+      "min_qty": 5000,
+      "max_qty": -1,
+      "usd": 0.2268
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/C161672",
+  "checked_at": "2026-10-13T15:20:39.554597+00:00",
+  "status": "public JLC page observed; recheck at ordering"
+}

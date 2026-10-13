@@ -1,0 +1,46 @@
+{
+  "id": "C15127",
+  "mpn": "AO3401A",
+  "manufacturer": "Alpha & Omega Semicon",
+  "package": "SOT-23",
+  "classification": "Basic",
+  "assembly": "SMT Assembly",
+  "pcba_type": "Economic and Standard",
+  "stock": 631158,
+  "loss": 4,
+  "prices": [
+    {
+      "min_qty": 1,
+      "max_qty": 49,
+      "usd": 0.102
+    },
+    {
+      "min_qty": 50,
+      "max_qty": 149,
+      "usd": 0.0824
+    },
+    {
+      "min_qty": 150,
+      "max_qty": 499,
+      "usd": 0.0723
+    },
+    {
+      "min_qty": 500,
+      "max_qty": 2999,
+      "usd": 0.064
+    },
+    {
+      "min_qty": 3000,
+      "max_qty": 5999,
+      "usd": 0.061
+    },
+    {
+      "min_qty": 6000,
+      "max_qty": -1,
+      "usd": 0.0591
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/C15127",
+  "checked_at": "2026-10-13T15:24:52.156424+00:00",
+  "status": "public JLC page observed; recheck at ordering"
+}

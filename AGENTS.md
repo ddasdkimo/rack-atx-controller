@@ -23,4 +23,4 @@ The user requests considering JLCPCB PCB fabrication / PCBA and its available pa
 
 ## Current release scope
 
-Revision A is an architecture and wiring visualization, not fabrication output. There are no validated schematics, Gerbers, production footprints or electrical simulations yet. Keep that status visible until the relevant validation has actually been completed.
+Revision B.1 includes native KiCad schematics, catalog-backed BOM and analytical checks. No routed PCB, Gerbers, CPL, qualified footprints, SPICE run or physical prototype validation exists. Keep this boundary visible. Regenerate circuit/BOM via scripts/make-schematic.py, export both native KiCad netlists and ERC reports, run scripts/check-circuit.py and scripts/cost.py; update the cost summary in hardware/design.json and PDFs with the same circuit revision before rebuilding the viewer. Never publish raw KiCad netlists with absolute workstation paths.

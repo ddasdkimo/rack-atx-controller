@@ -1,0 +1,46 @@
+{
+  "id": "C12333",
+  "mpn": "PRTR5V0U2X,215",
+  "manufacturer": "Nexperia",
+  "package": "SOT-143",
+  "classification": "Extended",
+  "assembly": "SMT Assembly",
+  "pcba_type": "Economic and Standard",
+  "stock": 23665,
+  "loss": 0,
+  "prices": [
+    {
+      "min_qty": 1,
+      "max_qty": 9,
+      "usd": 0.4306
+    },
+    {
+      "min_qty": 10,
+      "max_qty": 29,
+      "usd": 0.3377
+    },
+    {
+      "min_qty": 30,
+      "max_qty": 99,
+      "usd": 0.2969
+    },
+    {
+      "min_qty": 100,
+      "max_qty": 499,
+      "usd": 0.2463
+    },
+    {
+      "min_qty": 500,
+      "max_qty": 999,
+      "usd": 0.2235
+    },
+    {
+      "min_qty": 1000,
+      "max_qty": -1,
+      "usd": 0.2104
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/C12333",
+  "checked_at": "2026-10-13T15:24:52.166312+00:00",
+  "status": "public JLC page observed; recheck at ordering"
+}

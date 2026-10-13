@@ -2,12 +2,14 @@
 
 10 台電腦的機櫃遠端電源控制硬體規劃，保留原機殼 POWER／RESET 按鈕、電源燈與硬碟燈。
 
-**目前版本：A.2 · 概念設計。** 3D 外形、元件配置和電腦主機板均為示意，尚未完成原理圖、PCB 佈線、電氣驗證或製造檔。
+**目前版本：B.1 · 原理圖審閱版。** 已有 JLC 選料、完整電路定值、KiCad 原理圖、BOM 與批量成本。ERC／連線及 DC 角落計算已檢查；尚無 PCB 佈線、CPL／Gerber 或實機驗證。3D 仍是機構示意。
 
 - 公開討論網頁：[3D 控制板與兩台電腦接線](https://rack-atx-controller-ddasdkimo.raidavid.chatgpt.site)
 - [硬體架構與接線](hardware/HARDWARE.md)
 - [接頭與設計資料來源](hardware/design.json)
 - [JLCPCB 製造與選料方向](hardware/JLCPCB.md)
+- [KiCad 原始檔](hardware/cad/) · [主控板原理圖 PDF](hardware/release/controller-schematic.pdf) · [分接板 PDF](hardware/release/adapter-schematic.pdf)
+- [完整 BOM 與 JLC 格式](hardware/bom/) · [驗證結果](hardware/validation/checks.json) · [原廠依據](hardware/SOURCES.md)
 - [修改紀錄](CHANGELOG.md)
 
 ## 3D 圖可以查看什麼
@@ -17,11 +19,11 @@
 - PC-01 接 J01、PC-02 接 J02，其他八路預留。
 - 滑鼠旋轉、滾輪／雙指縮放、觀察位置切換、外殼顯示，以及逐組訊號追線。
 - 下方接線圖直接呈現原線直通與控制支路；訊號編號表列出全部腳位及實際線芯配色，不冒充原廠插孔位置圖。
-- 連接器候選：Molex Micro-Fit 3.0（43045-1000／43025-1000／43030-0007）；線材候選：Belden 9505。均為真實型號，但線束需要訂製、壓接及實物驗證。
+- B.1 連接器：JST PHD（S10B-PHDSS(LF)(SN)／PHDR-10VS／SPHD-001T-P0.5）；線材候選：Belden 9505。均為真實型號，但線束需要訂製、壓接及實物驗證。
 
 ## 核心原則
 
-原按鈕與 LED 的路徑走轉接板的被動直通銅箔，不依赖控制器供電。POWER／RESET 以常開隔離開關並聯；LED 用有限負載的高阻抗差動偵測與隔離回傳。每台主機的參考地只連到它自己的隔離偵測區。
+原按鈕與 LED 的路徑走轉接板的被動直通銅箔，不依賴控制器供電。POWER／RESET 以常開隔離開關並聯；LED 用有限負載的高阻抗差動偵測與隔離回傳。每台主機的參考地只連到它自己的隔離偵測區。
 
 **J01–J10 是本專案自訂接頭，不是通用的主機板 F_PANEL 針位，也不是 Ethernet。** 主機板端使用分開的標籤插頭，依實際主機板手冊接線。沒有 RESET／HDD LED 的主機可留空該組；雙色或三腳電源燈需要另外適配。
 
@@ -43,4 +45,6 @@ python3 -m http.server 8080 --directory docs
 
 使用者已要求：**每次完善電路板時，都要同步更新 3D 與接線圖。** 詳見 [AGENTS.md](AGENTS.md)。電路、腳位、線材、隔離邊界、尺寸或元件位置有改動時，必須同時修改設計資料、圖面、硬體文件與 changelog，重建、驗證後更新公開網頁與此 repository。
 
-未完成項目：實際主機板型號／針位確認、感測器掉電負載及回灌驗證、線長與 EMI 測試、元件定值、接頭料號、電源預算、硬體計時器、原理圖與 PCB layout。模型中的線路只表達功能，不構成電氣模擬。
+零件＋組裝試算：2 片約 US$87–98／片，5 片約 US$64–69／片。未含裸 PCB、耗損料、線束、外殼、電源、運費與稅；不是正式報價。若只有一個機櫃，先做 2 片原型較省總支出。
+
+未完成：五類未指派焊盤與其餘候選焊盤審核、PCB layout／DRC／製造檔、實際主機板針位、掉電負載及回灌、timer 公差與故障釋放、線長／EMI、溫升與實機驗證。模型中的線路只表達功能，不構成 SPICE 或硬體測試。

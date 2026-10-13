@@ -1,0 +1,79 @@
+{
+  "revision": "B.1",
+  "currency": "USD",
+  "catalog_checked_date": "2026-10-13",
+  "fee_source": "https://jlcpcb.com/help/article/pcb-assembly-price",
+  "fee_source_updated": "2026-09-09",
+  "quote": false,
+  "components_per_controller": 694,
+  "unique_part_numbers": 48,
+  "basic_skus": 27,
+  "extended_smt_skus": 16,
+  "extended_all_skus": 21,
+  "smt_joints_estimate_per_board": 1731,
+  "manual_joints_estimate_per_board": 160,
+  "batches": [
+    {
+      "boards": 2,
+      "parts_total_usd": 97.58,
+      "parts_per_board_usd": 48.79,
+      "assembly_labor_total_usd": 10.79,
+      "setup_stencil_confirmation_manual_setup_usd": 13.74,
+      "feeder_usd_range": [
+        49.12,
+        64.47
+      ],
+      "xray_usd_range": [
+        3.28,
+        9.84
+      ],
+      "subtotal_range_usd": [
+        174.51,
+        196.42
+      ],
+      "per_controller_range_usd": [
+        87.26,
+        98.21
+      ]
+    },
+    {
+      "boards": 5,
+      "parts_total_usd": 224.27,
+      "parts_per_board_usd": 44.85,
+      "assembly_labor_total_usd": 26.97,
+      "setup_stencil_confirmation_manual_setup_usd": 13.74,
+      "feeder_usd_range": [
+        49.12,
+        64.47
+      ],
+      "xray_usd_range": [
+        8.2,
+        12.3
+      ],
+      "subtotal_range_usd": [
+        322.3,
+        341.75
+      ],
+      "per_controller_range_usd": [
+        64.46,
+        68.35
+      ]
+    }
+  ],
+  "ten_passive_adapters_parts_only_usd": 6.4,
+  "exclusions": [
+    "PCB fabrication, rails/panelization, DFM-driven extra operations",
+    "component attrition/MOQ and price changes",
+    "extra pre-reflow, fixtures, freight, taxes",
+    "ten adapter bare PCBs and hand labor",
+    "custom harnesses, crimp contacts/housings, motherboard patch leads",
+    "external 5V supply and enclosure"
+  ],
+  "assumptions": [
+    "One-side Economic PCBA; final board/stock acceptance pending",
+    "Loading lower case: SMT Extended only; upper case: all Extended including through-hole",
+    "No promotional coupons assumed",
+    "X-ray counts 1..3 components per board; final classified parts are supplier decision",
+    "Selected generic footprints are candidates; no CPL or PCB quote exists"
+  ]
+}

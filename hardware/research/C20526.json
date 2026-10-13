@@ -1,0 +1,46 @@
+{
+  "id": "C20526",
+  "mpn": "MMBT3904(RANGE:100-300)",
+  "manufacturer": "Jiangsu Changjing Electronics Technology Co., Ltd.",
+  "package": "SOT-23",
+  "classification": "Basic",
+  "assembly": "SMT Assembly",
+  "pcba_type": "Economic and Standard",
+  "stock": 605058,
+  "loss": 5,
+  "prices": [
+    {
+      "min_qty": 1,
+      "max_qty": 499,
+      "usd": 0.0116
+    },
+    {
+      "min_qty": 500,
+      "max_qty": 2999,
+      "usd": 0.0092
+    },
+    {
+      "min_qty": 3000,
+      "max_qty": 5999,
+      "usd": 0.0081
+    },
+    {
+      "min_qty": 6000,
+      "max_qty": 23999,
+      "usd": 0.0073
+    },
+    {
+      "min_qty": 24000,
+      "max_qty": 50999,
+      "usd": 0.007
+    },
+    {
+      "min_qty": 51000,
+      "max_qty": -1,
+      "usd": 0.0068
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/C20526",
+  "checked_at": "2026-10-13T15:24:52.145924+00:00",
+  "status": "public JLC page observed; recheck at ordering"
+}

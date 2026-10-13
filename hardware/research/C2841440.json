@@ -1,0 +1,46 @@
+{
+  "id": "C2841440",
+  "mpn": "PESD5V0S2BT",
+  "manufacturer": "TECH PUBLIC",
+  "package": "SOT-23",
+  "classification": "Extended",
+  "assembly": "SMT Assembly",
+  "pcba_type": "Economic and Standard",
+  "stock": 2806,
+  "loss": 4,
+  "prices": [
+    {
+      "min_qty": 1,
+      "max_qty": 99,
+      "usd": 0.0429
+    },
+    {
+      "min_qty": 100,
+      "max_qty": 299,
+      "usd": 0.0343
+    },
+    {
+      "min_qty": 300,
+      "max_qty": 2999,
+      "usd": 0.0299
+    },
+    {
+      "min_qty": 3000,
+      "max_qty": 5999,
+      "usd": 0.0257
+    },
+    {
+      "min_qty": 6000,
+      "max_qty": 8999,
+      "usd": 0.023
+    },
+    {
+      "min_qty": 9000,
+      "max_qty": -1,
+      "usd": 0.0217
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/C2841440",
+  "checked_at": "2026-10-13T15:22:35.277548+00:00",
+  "status": "public JLC page observed; recheck at ordering"
+}

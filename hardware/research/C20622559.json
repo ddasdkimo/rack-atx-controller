@@ -1,0 +1,46 @@
+{
+  "id": "C20622559",
+  "mpn": "B0505S-1WR3L",
+  "manufacturer": "HENIPER",
+  "package": "SIP,11.6x6mm",
+  "classification": "Extended",
+  "assembly": "Wave Soldering",
+  "pcba_type": "Economic and Standard",
+  "stock": 410,
+  "loss": 0,
+  "prices": [
+    {
+      "min_qty": 1,
+      "max_qty": 9,
+      "usd": 0.8579
+    },
+    {
+      "min_qty": 10,
+      "max_qty": 29,
+      "usd": 0.6883
+    },
+    {
+      "min_qty": 30,
+      "max_qty": 89,
+      "usd": 0.6035
+    },
+    {
+      "min_qty": 90,
+      "max_qty": 509,
+      "usd": 0.5203
+    },
+    {
+      "min_qty": 510,
+      "max_qty": 989,
+      "usd": 0.4698
+    },
+    {
+      "min_qty": 990,
+      "max_qty": -1,
+      "usd": 0.4437
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/C20622559",
+  "checked_at": "2026-10-13T15:10:20.765309+00:00",
+  "status": "public JLC page observed; recheck at ordering"
+}

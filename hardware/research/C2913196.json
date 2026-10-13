@@ -1,0 +1,46 @@
+{
+  "id": "C2913196",
+  "mpn": "ESP32-S3FN8",
+  "manufacturer": "Espressif Systems",
+  "package": "QFN-56-EP(7x7)",
+  "classification": "Extended",
+  "assembly": "SMT Assembly",
+  "pcba_type": "Economic and Standard",
+  "stock": 2345,
+  "loss": 0,
+  "prices": [
+    {
+      "min_qty": 1,
+      "max_qty": 9,
+      "usd": 3.337
+    },
+    {
+      "min_qty": 10,
+      "max_qty": 29,
+      "usd": 2.988
+    },
+    {
+      "min_qty": 30,
+      "max_qty": 99,
+      "usd": 2.7809
+    },
+    {
+      "min_qty": 100,
+      "max_qty": 499,
+      "usd": 2.608
+    },
+    {
+      "min_qty": 500,
+      "max_qty": 999,
+      "usd": 2.4922
+    },
+    {
+      "min_qty": 1000,
+      "max_qty": -1,
+      "usd": 2.4384
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/C2913196",
+  "checked_at": "2026-10-13T15:12:40.649680+00:00",
+  "status": "public JLC page observed; recheck at ordering"
+}

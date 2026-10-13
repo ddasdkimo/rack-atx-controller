@@ -1,0 +1,46 @@
+{
+  "id": "C32843",
+  "mpn": "W5500",
+  "manufacturer": "WIZNET",
+  "package": "LQFP-48_7x7",
+  "classification": "Extended",
+  "assembly": "SMT Assembly",
+  "pcba_type": "Economic and Standard",
+  "stock": 15204,
+  "loss": 0,
+  "prices": [
+    {
+      "min_qty": 1,
+      "max_qty": 9,
+      "usd": 2.8249
+    },
+    {
+      "min_qty": 10,
+      "max_qty": 29,
+      "usd": 2.4596
+    },
+    {
+      "min_qty": 30,
+      "max_qty": 99,
+      "usd": 2.2019
+    },
+    {
+      "min_qty": 100,
+      "max_qty": 499,
+      "usd": 1.967
+    },
+    {
+      "min_qty": 500,
+      "max_qty": 999,
+      "usd": 1.8577
+    },
+    {
+      "min_qty": 1000,
+      "max_qty": -1,
+      "usd": 1.8137
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/C32843",
+  "checked_at": "2026-10-13T15:20:39.517626+00:00",
+  "status": "public JLC page observed; recheck at ordering"
+}

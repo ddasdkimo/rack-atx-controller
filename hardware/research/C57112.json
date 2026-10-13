@@ -1,0 +1,46 @@
+{
+  "id": "C57112",
+  "mpn": "0603B103K500NT",
+  "manufacturer": "FH (Guangdong Fenghua Advanced Tech)",
+  "package": "0603",
+  "classification": "Basic",
+  "assembly": "SMT Assembly",
+  "pcba_type": "Economic and Standard",
+  "stock": 6247556,
+  "loss": 10,
+  "prices": [
+    {
+      "min_qty": 1,
+      "max_qty": 499,
+      "usd": 0.0101
+    },
+    {
+      "min_qty": 500,
+      "max_qty": 1499,
+      "usd": 0.008
+    },
+    {
+      "min_qty": 1500,
+      "max_qty": 3999,
+      "usd": 0.007
+    },
+    {
+      "min_qty": 4000,
+      "max_qty": 23999,
+      "usd": 0.0062
+    },
+    {
+      "min_qty": 24000,
+      "max_qty": 47999,
+      "usd": 0.0059
+    },
+    {
+      "min_qty": 48000,
+      "max_qty": -1,
+      "usd": 0.0057
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/C57112",
+  "checked_at": "2026-10-13T15:22:34.255431+00:00",
+  "status": "public JLC page observed; recheck at ordering"
+}

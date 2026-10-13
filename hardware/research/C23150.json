@@ -1,0 +1,46 @@
+{
+  "id": "C23150",
+  "mpn": "0603WAF3903T5E",
+  "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0603",
+  "classification": "Extended",
+  "assembly": "SMT Assembly",
+  "pcba_type": "Economic and Standard",
+  "stock": 68710,
+  "loss": 10,
+  "prices": [
+    {
+      "min_qty": 1,
+      "max_qty": 999,
+      "usd": 0.0032
+    },
+    {
+      "min_qty": 1000,
+      "max_qty": 4999,
+      "usd": 0.0025
+    },
+    {
+      "min_qty": 5000,
+      "max_qty": 9999,
+      "usd": 0.0022
+    },
+    {
+      "min_qty": 10000,
+      "max_qty": 49999,
+      "usd": 0.0021
+    },
+    {
+      "min_qty": 50000,
+      "max_qty": 50199,
+      "usd": 0.0018
+    },
+    {
+      "min_qty": 50200,
+      "max_qty": -1,
+      "usd": 0.0018
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/C23150",
+  "checked_at": "2026-10-13T15:54:44.202957+00:00",
+  "status": "public JLC page observed; recheck at ordering"
+}

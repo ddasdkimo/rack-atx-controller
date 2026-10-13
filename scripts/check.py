@@ -28,4 +28,10 @@ assert html.escape(fragment, quote=True) in page
 assert page == (root / 'dist/index.html').read_text()
 for path in (root / 'README.md', root / 'CHANGELOG.md'):
     assert d['revision'] in path.read_text(), str(path)
+c=json.loads((root / 'hardware/circuit.json').read_text())
+cost=json.loads((root / 'hardware/bom/cost-model.json').read_text())
+assert d['costs']==cost and c['revision']==d['revision']==cost['revision']
+for item in d['electronics']:
+    keys=[k for k,p in c['parts'].items() if p['code']==item['code']]
+    assert len(keys)==1 and item['qty']==sum(x['key']==keys[0] and x['sheet']!='adapter' for x in c['components'])
 print('PASS: manifest, 10 connector pins, two hosts, revision, generated viewer and public page agree.')

@@ -1,0 +1,46 @@
+{
+  "id": "C15849",
+  "mpn": "CL10A105KB8NNNC",
+  "manufacturer": "Samsung Electro-Mechanics",
+  "package": "0603",
+  "classification": "Basic",
+  "assembly": "SMT Assembly",
+  "pcba_type": "Economic and Standard",
+  "stock": 10311730,
+  "loss": 10,
+  "prices": [
+    {
+      "min_qty": 1,
+      "max_qty": 499,
+      "usd": 0.0158
+    },
+    {
+      "min_qty": 500,
+      "max_qty": 1499,
+      "usd": 0.0123
+    },
+    {
+      "min_qty": 1500,
+      "max_qty": 3999,
+      "usd": 0.0108
+    },
+    {
+      "min_qty": 4000,
+      "max_qty": 23999,
+      "usd": 0.0096
+    },
+    {
+      "min_qty": 24000,
+      "max_qty": 47999,
+      "usd": 0.0092
+    },
+    {
+      "min_qty": 48000,
+      "max_qty": -1,
+      "usd": 0.0088
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/C15849",
+  "checked_at": "2026-10-13T15:46:51.366149+00:00",
+  "status": "public JLC page observed; recheck at ordering"
+}

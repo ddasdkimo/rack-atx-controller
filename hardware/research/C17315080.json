@@ -1,0 +1,47 @@
+{
+  "id": "C17315080",
+  "mpn": "430451011",
+  "manufacturer": "MOLEX",
+  "package": "SMD,P=3mm,Surface Mount，Right Angle",
+  "classification": "Extended",
+  "assembly": "SMT Assembly",
+  "pcba_type": "Economic and Standard",
+  "stock": 5,
+  "minimum": "$undefined",
+  "loss": 0,
+  "prices": [
+    {
+      "min_qty": 1,
+      "max_qty": 9,
+      "usd": 5.7134
+    },
+    {
+      "min_qty": 10,
+      "max_qty": 29,
+      "usd": 5.5796
+    },
+    {
+      "min_qty": 30,
+      "max_qty": 99,
+      "usd": 5.4899
+    },
+    {
+      "min_qty": 100,
+      "max_qty": 101,
+      "usd": 5.4002
+    },
+    {
+      "min_qty": 102,
+      "max_qty": 103,
+      "usd": 5.4002
+    },
+    {
+      "min_qty": 104,
+      "max_qty": -1,
+      "usd": 5.4002
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/C17315080",
+  "checked_at": "2026-10-13T15:17:31.638830+00:00",
+  "status": "public JLC page observed; recheck at ordering"
+}

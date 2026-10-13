@@ -1,0 +1,46 @@
+{
+  "id": "C45783",
+  "mpn": "CL21A226MAQNNNE",
+  "manufacturer": "Samsung Electro-Mechanics",
+  "package": "0805",
+  "classification": "Basic",
+  "assembly": "SMT Assembly",
+  "pcba_type": "Economic and Standard",
+  "stock": 3454275,
+  "loss": 0,
+  "prices": [
+    {
+      "min_qty": 1,
+      "max_qty": 199,
+      "usd": 0.2372
+    },
+    {
+      "min_qty": 200,
+      "max_qty": 599,
+      "usd": 0.1806
+    },
+    {
+      "min_qty": 600,
+      "max_qty": 1999,
+      "usd": 0.153
+    },
+    {
+      "min_qty": 2000,
+      "max_qty": 9999,
+      "usd": 0.1284
+    },
+    {
+      "min_qty": 10000,
+      "max_qty": 19999,
+      "usd": 0.1216
+    },
+    {
+      "min_qty": 20000,
+      "max_qty": -1,
+      "usd": 0.1175
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/C45783",
+  "checked_at": "2026-10-13T15:15:59.158144+00:00",
+  "status": "public JLC page observed; recheck at ordering"
+}

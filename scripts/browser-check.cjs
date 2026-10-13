@@ -11,7 +11,7 @@ const assert=require('node:assert/strict');
   assert(frame,'Viewer frame exists');
   await frame.waitForFunction(()=>!!window.rackViewer,{timeout:30000});
   const counts=await frame.evaluate(()=>window.rackViewer.hardwareCounts);
-  assert.deepEqual(counts,{photorelays:20,isolatedSupplies:10,ioExpanders:3,hostPorts:10,simulatedHosts:2});
+  assert.deepEqual(counts,{photorelays:20,isolatedSupplies:10,shiftRegisters:3,hostPorts:10,simulatedHosts:2});
   fs.mkdirSync('artifacts/local',{recursive:true});
   await page.screenshot({path:'artifacts/local/overview.png',fullPage:true});
   for(const view of ['controller','pc1','pc2']){
@@ -43,6 +43,15 @@ const assert=require('node:assert/strict');
     assert.equal(await frame.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1),true,'No horizontal overflow at '+width);
     await page.screenshot({path:'artifacts/local/mobile-'+width+'.png',fullPage:true});
   }
+  await page.setViewportSize({width:1120,height:900});
+  await frame.locator('[data-costs]').scrollIntoViewIfNeeded();
+  await page.waitForTimeout(200);
+  assert.match(await frame.locator('[data-costs]').innerText(), /87.26/);
+  await page.screenshot({path:'artifacts/local/costs.png'});
+  await page.setViewportSize({width:390,height:900});
+  await frame.locator('[data-costs]').scrollIntoViewIfNeeded();
+  await page.waitForTimeout(200);
+  await page.screenshot({path:'artifacts/local/costs-mobile.png'});
   assert.deepEqual(errors,[]);
   console.log(JSON.stringify({status:'pass',hardwareCounts:counts,views:4,signals:6,mobileWidths:[736,390,320],errors},null,2));
   await browser.close();

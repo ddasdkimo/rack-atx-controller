@@ -1,0 +1,46 @@
+{
+  "id": "C15850",
+  "mpn": "CL21A106KAYNNNE",
+  "manufacturer": "Samsung Electro-Mechanics",
+  "package": "0805",
+  "classification": "Basic",
+  "assembly": "SMT Assembly",
+  "pcba_type": "Economic and Standard",
+  "stock": 4003857,
+  "loss": 10,
+  "prices": [
+    {
+      "min_qty": 1,
+      "max_qty": 199,
+      "usd": 0.0689
+    },
+    {
+      "min_qty": 200,
+      "max_qty": 599,
+      "usd": 0.0508
+    },
+    {
+      "min_qty": 600,
+      "max_qty": 1999,
+      "usd": 0.0416
+    },
+    {
+      "min_qty": 2000,
+      "max_qty": 9999,
+      "usd": 0.034
+    },
+    {
+      "min_qty": 10000,
+      "max_qty": 19999,
+      "usd": 0.0312
+    },
+    {
+      "min_qty": 20000,
+      "max_qty": -1,
+      "usd": 0.0294
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/C15850",
+  "checked_at": "2026-10-13T15:20:39.544599+00:00",
+  "status": "public JLC page observed; recheck at ordering"
+}

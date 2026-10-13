@@ -1,0 +1,46 @@
+{
+  "id": "C5947",
+  "mpn": "74HC595D,118",
+  "manufacturer": "Nexperia",
+  "package": "SOIC-16",
+  "classification": "Basic",
+  "assembly": "SMT Assembly",
+  "pcba_type": "Economic and Standard",
+  "stock": 296051,
+  "loss": 0,
+  "prices": [
+    {
+      "min_qty": 1,
+      "max_qty": 49,
+      "usd": 0.1132
+    },
+    {
+      "min_qty": 50,
+      "max_qty": 149,
+      "usd": 0.0899
+    },
+    {
+      "min_qty": 150,
+      "max_qty": 499,
+      "usd": 0.0778
+    },
+    {
+      "min_qty": 500,
+      "max_qty": 2499,
+      "usd": 0.0681
+    },
+    {
+      "min_qty": 2500,
+      "max_qty": 4999,
+      "usd": 0.0645
+    },
+    {
+      "min_qty": 5000,
+      "max_qty": -1,
+      "usd": 0.0622
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/C5947",
+  "checked_at": "2026-10-13T15:20:39.527642+00:00",
+  "status": "public JLC page observed; recheck at ordering"
+}

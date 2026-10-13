@@ -1,0 +1,46 @@
+{
+  "id": "C165948",
+  "mpn": "TYPE-C-31-M-12",
+  "manufacturer": "Korean Hroparts Elec",
+  "package": "SMD",
+  "classification": "Extended",
+  "assembly": "SMT Assembly",
+  "pcba_type": "Economic and Standard",
+  "stock": 398485,
+  "loss": 0,
+  "prices": [
+    {
+      "min_qty": 1,
+      "max_qty": 49,
+      "usd": 0.1863
+    },
+    {
+      "min_qty": 50,
+      "max_qty": 149,
+      "usd": 0.1472
+    },
+    {
+      "min_qty": 150,
+      "max_qty": 999,
+      "usd": 0.1279
+    },
+    {
+      "min_qty": 1000,
+      "max_qty": 1999,
+      "usd": 0.1038
+    },
+    {
+      "min_qty": 2000,
+      "max_qty": 4999,
+      "usd": 0.0991
+    },
+    {
+      "min_qty": 5000,
+      "max_qty": -1,
+      "usd": 0.0963
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/C165948",
+  "checked_at": "2026-10-13T15:11:33.015832+00:00",
+  "status": "public JLC page observed; recheck at ordering"
+}

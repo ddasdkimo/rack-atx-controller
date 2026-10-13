@@ -47,26 +47,35 @@
   <div class="rack-pinlist text-small tabular-nums" data-pinlist></div>
   <div class="text-small text-muted">上表為訊號編號，非插孔位置圖；實際接頭方向須依原廠圖面確認。主機板端依各板手冊辨識訊號。</div>
   <hr>
-  <div class="rack-detail">實際料號候選 · 尚待樣品壓接／機構驗證</div>
+  <div class="rack-detail">接頭與線束 · B.1 選料</div>
   <div class="table-responsive"><table class="table table-sm"><thead><tr><th>位置</th><th>型號</th><th>規格</th></tr></thead><tbody data-parts></tbody></table></div>
   <div class="text-small text-muted">線束需訂製；圖中色彩表示訊號功能，實際導體配色見上方 pin 表。3D 為簡化外形。</div>
-  <div class="rack-detail text-small">製造方向：<a href="https://jlcpcb.com/hk" target="_blank" rel="noopener noreferrer">JLCPCB 打板／PCBA</a> · 元件庫存、LCSC 編號及代貼支援待逐項核對</div>
+  <hr>
+  <div class="rack-detail">主控板代貼零件 · 每片支援 10 台</div>
+  <div class="table-responsive"><table class="table table-sm"><thead><tr><th>功能</th><th>選定料號／JLC 編號</th><th>數量</th></tr></thead><tbody data-electronics></tbody></table></div>
+  <div class="rack-detail">JLCPCB 成本試算 · USD</div>
+  <div class="table-responsive"><table class="table table-sm tabular-nums"><thead><tr><th>批量</th><th>每片零件</th><th>每片零件＋組裝</th><th>整批小計</th></tr></thead><tbody data-costs></tbody></table></div>
+  <div class="text-small text-muted">未含 PCB、耗損料、運費稅金、外殼、電源與線束；不是工廠報價。單面 Economic PCBA，延伸料上料及 X-ray 分類以工廠審核為準。</div>
+  <div class="rack-detail text-small" data-cost-note></div>
+  <div class="rack-detail text-small">原理圖：<a href="https://github.com/ddasdkimo/rack-atx-controller/blob/main/hardware/release/controller-schematic.pdf" target="_blank" rel="noopener noreferrer">主控板 PDF</a> · <a href="https://github.com/ddasdkimo/rack-atx-controller/blob/main/hardware/release/adapter-schematic.pdf" target="_blank" rel="noopener noreferrer">免供電分接板 PDF</a> · <a href="https://github.com/ddasdkimo/rack-atx-controller/tree/main/hardware/cad" target="_blank" rel="noopener noreferrer">KiCad 原始檔</a></div>
+  <div class="rack-detail text-small">採購：<a href="https://github.com/ddasdkimo/rack-atx-controller/tree/main/hardware/bom" target="_blank" rel="noopener noreferrer">完整 BOM／批量成本表</a> · <a href="https://github.com/ddasdkimo/rack-atx-controller/blob/main/hardware/JLCPCB.md" target="_blank" rel="noopener noreferrer">收費與選料依據</a></div>
+  <div class="rack-detail text-small">B.1 原理圖審閱版 · ERC 與連線檢查完成 · 焊盤審核、PCB 佈線與實機驗證尚未完成</div>
   <div class="rack-detail text-small"><a href="https://github.com/ddasdkimo/rack-atx-controller" target="_blank" rel="noopener noreferrer">GitHub 設計紀錄</a></div>
   <script type="application/json" data-design>{
   "project": "Rack ATX Controller",
-  "revision": "A.2",
-  "date": "2026-10-13",
-  "stage": "concept",
+  "revision": "B.1",
+  "date": "2026-10-14",
+  "stage": "schematic-review",
   "host_count": 10,
   "controller_outline_mm": [
-    280,
-    220,
+    200,
+    160,
     1.6
   ],
-  "outline_status": "illustrative envelope, not mechanically validated",
+  "outline_status": "Placement study only; no routed PCB, production footprints or enclosure approval",
   "connector": {
     "name": "J01–J10",
-    "type": "Molex Micro-Fit 3.0, 43045-1000 PCB header + 43025-1000 receptacle housing; candidate",
+    "type": "JST PHD 2.0 mm: S10B-PHDSS(LF)(SN) right-angle PCB header + PHDR-10VS housing",
     "view": "Signal allocation only. Physical cavity order and mating-face orientation must be verified from manufacturer drawing before fabrication.",
     "pins": [
       {
@@ -225,49 +234,49 @@
   ],
   "blocks": [
     {
-      "name": "ESP32-S3 module",
+      "name": "ESP32-S3FN8 wired-only MCU",
       "qty": 1,
-      "status": "candidate"
+      "status": "Selected; KiCad schematic B.1; layout and hardware validation pending"
     },
     {
-      "name": "W5500 Ethernet interface and magnetics",
+      "name": "W5500 Ethernet + HR911105A",
       "qty": 1,
-      "status": "candidate"
+      "status": "Selected; KiCad schematic B.1; layout and hardware validation pending"
     },
     {
-      "name": "MCP23S17 16-bit I/O expander",
+      "name": "74HC595D 8-bit output latch",
       "qty": 3,
-      "status": "candidate"
+      "status": "Selected; KiCad schematic B.1; layout and hardware validation pending"
     },
     {
       "name": "TLP3122A normally-open photorelay",
       "qty": 20,
-      "status": "candidate, not final footprint"
+      "status": "Selected; KiCad schematic B.1; layout and hardware validation pending"
     },
     {
-      "name": "High-impedance differential LED sensing channel",
+      "name": "LM393 differential LED sensing channel",
       "qty": 20,
-      "status": "circuit values and protection TBD"
+      "status": "Selected; KiCad schematic B.1; layout and hardware validation pending"
     },
     {
-      "name": "Isolated LED status return channel",
+      "name": "EL357N(B) isolated status return",
       "qty": 20,
-      "status": "candidate optocoupler"
+      "status": "Selected; KiCad schematic B.1; layout and hardware validation pending"
     },
     {
-      "name": "Host-domain isolated DC/DC supply with regulation",
+      "name": "B0505S-1WR3L + HT7533-1 isolated regulated host supply",
       "qty": 10,
-      "status": "part and load budget TBD"
+      "status": "Selected; KiCad schematic B.1; layout and hardware validation pending"
     },
     {
-      "name": "Hardware watchdog and bounded button timing",
+      "name": "TLC555 shared output-rail monostable",
       "qty": 1,
-      "status": "circuit TBD"
+      "status": "Selected; KiCad schematic B.1; layout and hardware validation pending"
     },
     {
       "name": "Passive case pass-through adapter",
       "qty": 10,
-      "status": "mechanical and pinout concept"
+      "status": "Selected; KiCad schematic B.1; layout and hardware validation pending"
     }
   ],
   "constraints": {
@@ -282,56 +291,228 @@
     "cable_status": "prototype validation target only, not a supported maximum",
     "cable": "Belden 9505 candidate; four signal pairs + host reference; fifth yellow conductor insulated and parked at both ends, pin 10 unpopulated. Shield/drain separate from all signal pins.",
     "ethernet": "LAN port only; electrically distinct from J01–J10",
-    "manufacturing_ready": false
+    "manufacturing_ready": false,
+    "input_power": "External regulated 5V +/-5%, 2A, WJ500V-5.08-2P terminal, pin1 +5V pin2 GND",
+    "temperature_target_c": [
+      0,
+      70
+    ],
+    "led_input_envelope": "Each lead 0..5V relative to local HOST_REF; OFF \u003c=0.2V differential; ON >=1.4V. Verify actual motherboard."
   },
   "physical_parts": [
     {
       "role": "兩端 PCB 插座",
-      "part": "Molex 43045-1000",
-      "spec": "Micro-Fit 3.0 · 10 pin · 直角通孔",
-      "url": "https://www.molex.com/en-us/products/part-detail/430451000",
+      "part": "JST S10B-PHDSS(LF)(SN)",
+      "spec": "PHD · 2 mm · 2×5 pin · 直角通孔 · C161672",
+      "url": "https://jlcpcb.com/partdetail/C161672",
       "qty_full_10_hosts": 20,
-      "lcsc_id": null,
-      "jlc_assembly_verified": false,
-      "status": "candidate, manufacturer specifications checked; assembly unverified"
+      "lcsc_id": "C161672",
+      "jlc_assembly_verified": true,
+      "status": "JLC Economic/Standard, Wave Soldering, stock observed 2026-10-13; footprint sample review pending"
     },
     {
       "role": "線端膠殼",
-      "part": "Molex 43025-1000",
-      "spec": "雙排 10 pin · 防反插／鎖扣",
-      "url": "https://www.molex.com/en-us/products/part-detail/430251000",
+      "part": "JST PHDR-10VS",
+      "spec": "10 pin 防反插膠殼；另購及壓接",
+      "url": "https://www.jst-mfg.com/product/pdf/eng/ePHD.pdf",
       "qty_full_10_hosts": 20,
       "lcsc_id": null,
       "jlc_assembly_verified": false,
-      "status": "candidate, manufacturer specifications checked; assembly unverified"
+      "status": "External harness item, manufacturer mating series selected"
     },
     {
       "role": "壓接端子",
-      "part": "Molex 43030-0007",
-      "spec": "母端子 · 24–20 AWG · 鍍錫",
-      "url": "https://www.molex.com/en-us/products/part-detail/430300007",
+      "part": "JST SPHD-001T-P0.5",
+      "spec": "26–22 AWG · 絕緣外徑 1.0–1.5 mm",
+      "url": "https://www.jst-mfg.com/product/pdf/eng/ePHD.pdf",
       "qty_full_10_hosts": 180,
       "lcsc_id": null,
       "jlc_assembly_verified": false,
-      "status": "candidate, manufacturer specifications checked; assembly unverified"
+      "status": "External harness item; tooling and pull test pending"
     },
     {
       "role": "機櫃間線材",
       "part": "Belden 9505",
-      "spec": "5 對／10 芯 · 24 AWG 絞線 · 總屏蔽 · 外徑 7.34 mm",
+      "spec": "5 對／10 芯 · 24 AWG · 總屏蔽 · 外徑 7.34 mm",
       "url": "https://www.belden.com/products/cable/electronic-wire-cable/multi-pair-cable/9505",
-      "qty_full_10_hosts": "cut to length",
+      "qty_full_10_hosts": "10 runs, cut to measured length",
       "lcsc_id": null,
       "jlc_assembly_verified": false,
-      "status": "candidate, manufacturer specifications checked; assembly unverified"
+      "status": "External custom harness; 1–3 m is prototype test target only"
     }
   ],
   "manufacturing": {
     "preferred_fabricator": "JLCPCB",
     "prefer_assembly_catalog_parts": true,
-    "stock_verified": false,
+    "stock_verified": true,
     "fabrication_ready": false,
-    "notes": "Verify exact LCSC ID, package, assembly support and current stock before release."
+    "notes": "All populated PCB MPNs have observed JLC Economic support and stock. No reservation. Single-side assembly plan; five land-pattern families unassigned pending review, no PCB/CPL/Gerber.",
+    "stock_check_date": "2026-10-13"
+  },
+  "electronics": [
+    {
+      "role": "主控／USB燒錄",
+      "mpn": "ESP32-S3FN8",
+      "code": "C2913196",
+      "qty": 1,
+      "url": "https://jlcpcb.com/partdetail/C2913196"
+    },
+    {
+      "role": "有線網路",
+      "mpn": "W5500",
+      "code": "C32843",
+      "qty": 1,
+      "url": "https://jlcpcb.com/partdetail/C32843"
+    },
+    {
+      "role": "網路插座／磁性元件",
+      "mpn": "HR911105A",
+      "code": "C12074",
+      "qty": 1,
+      "url": "https://jlcpcb.com/partdetail/C12074"
+    },
+    {
+      "role": "按鍵輸出暫存",
+      "mpn": "74HC595D,118",
+      "code": "C5947",
+      "qty": 3,
+      "url": "https://jlcpcb.com/partdetail/C5947"
+    },
+    {
+      "role": "POWER／RESET 接點",
+      "mpn": "TLP3122A(TPL,E",
+      "code": "C4153843",
+      "qty": 20,
+      "url": "https://jlcpcb.com/partdetail/C4153843"
+    },
+    {
+      "role": "LED 差動比較器",
+      "mpn": "LM393DR",
+      "code": "C67470",
+      "qty": 10,
+      "url": "https://jlcpcb.com/partdetail/C67470"
+    },
+    {
+      "role": "LED 狀態隔離回傳",
+      "mpn": "EL357N(B)(TA)-G",
+      "code": "C42381015",
+      "qty": 20,
+      "url": "https://jlcpcb.com/partdetail/C42381015"
+    },
+    {
+      "role": "每台隔離供電",
+      "mpn": "B0505S-1WR3L",
+      "code": "C20622559",
+      "qty": 10,
+      "url": "https://jlcpcb.com/partdetail/C20622559"
+    },
+    {
+      "role": "隔離側 3.3V 穩壓",
+      "mpn": "HT7533-1",
+      "code": "C14289",
+      "qty": 10,
+      "url": "https://jlcpcb.com/partdetail/C14289"
+    },
+    {
+      "role": "硬體限時",
+      "mpn": "TLC555CDR",
+      "code": "C6986",
+      "qty": 1,
+      "url": "https://jlcpcb.com/partdetail/C6986"
+    },
+    {
+      "role": "3.3V 主穩壓",
+      "mpn": "AP63203WU-7",
+      "code": "C780769",
+      "qty": 1,
+      "url": "https://jlcpcb.com/partdetail/C780769"
+    },
+    {
+      "role": "主機訊號 ESD",
+      "mpn": "PESD5V0S2BT",
+      "code": "C2841440",
+      "qty": 40,
+      "url": "https://jlcpcb.com/partdetail/C2841440"
+    }
+  ],
+  "costs": {
+    "revision": "B.1",
+    "currency": "USD",
+    "catalog_checked_date": "2026-10-13",
+    "fee_source": "https://jlcpcb.com/help/article/pcb-assembly-price",
+    "fee_source_updated": "2026-09-09",
+    "quote": false,
+    "components_per_controller": 694,
+    "unique_part_numbers": 48,
+    "basic_skus": 27,
+    "extended_smt_skus": 16,
+    "extended_all_skus": 21,
+    "smt_joints_estimate_per_board": 1731,
+    "manual_joints_estimate_per_board": 160,
+    "batches": [
+      {
+        "boards": 2,
+        "parts_total_usd": 97.58,
+        "parts_per_board_usd": 48.79,
+        "assembly_labor_total_usd": 10.79,
+        "setup_stencil_confirmation_manual_setup_usd": 13.74,
+        "feeder_usd_range": [
+          49.12,
+          64.47
+        ],
+        "xray_usd_range": [
+          3.28,
+          9.84
+        ],
+        "subtotal_range_usd": [
+          174.51,
+          196.42
+        ],
+        "per_controller_range_usd": [
+          87.26,
+          98.21
+        ]
+      },
+      {
+        "boards": 5,
+        "parts_total_usd": 224.27,
+        "parts_per_board_usd": 44.85,
+        "assembly_labor_total_usd": 26.97,
+        "setup_stencil_confirmation_manual_setup_usd": 13.74,
+        "feeder_usd_range": [
+          49.12,
+          64.47
+        ],
+        "xray_usd_range": [
+          8.2,
+          12.3
+        ],
+        "subtotal_range_usd": [
+          322.3,
+          341.75
+        ],
+        "per_controller_range_usd": [
+          64.46,
+          68.35
+        ]
+      }
+    ],
+    "ten_passive_adapters_parts_only_usd": 6.4,
+    "exclusions": [
+      "PCB fabrication, rails/panelization, DFM-driven extra operations",
+      "component attrition/MOQ and price changes",
+      "extra pre-reflow, fixtures, freight, taxes",
+      "ten adapter bare PCBs and hand labor",
+      "custom harnesses, crimp contacts/housings, motherboard patch leads",
+      "external 5V supply and enclosure"
+    ],
+    "assumptions": [
+      "One-side Economic PCBA; final board/stock acceptance pending",
+      "Loading lower case: SMT Extended only; upper case: all Extended including through-hole",
+      "No promotional coupons assumed",
+      "X-ray counts 1..3 components per board; final classified parts are supplier decision",
+      "Selected generic footprints are candidates; no CPL or PCB quote exists"
+    ]
   }
 }</script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.min.js"></script>
@@ -351,8 +532,12 @@
     normalize();
     const groupIndex=id=>design.functions.find(f=>f.id===id)?.series||1;
     const cssSeries=id=>'var(--viz-series-'+groupIndex(id)+')';
-    qs('[data-revision]').textContent='Rev '+design.revision+' · 概念設計';
+    qs('[data-revision]').textContent='Rev '+design.revision+' · 原理圖審閱版';
     qs('[data-parts]').innerHTML=(design.physical_parts||[]).map(p=>'<tr><td>'+p.role+'</td><td><a target="_blank" rel="noopener noreferrer" href="'+p.url+'">'+p.part+'</a></td><td>'+p.spec+'</td></tr>').join('');
+    qs('[data-electronics]').innerHTML=design.electronics.map(p=>'<tr><td>'+p.role+'</td><td><a target="_blank" rel="noopener noreferrer" href="'+p.url+'">'+p.mpn+' · '+p.code+'</a></td><td>'+p.qty+'</td></tr>').join('');
+    const money=n=>'$'+n.toFixed(2),range=a=>a.map(money).join('–');
+    qs('[data-costs]').innerHTML=design.costs.batches.map(b=>'<tr><td>'+b.boards+' 片</td><td>'+money(b.parts_per_board_usd)+'</td><td>'+range(b.per_controller_range_usd)+'</td><td>'+range(b.subtotal_range_usd)+'</td></tr>').join('');
+    qs('[data-cost-note]').textContent='庫存核對：'+design.costs.catalog_checked_date+' · '+design.costs.basic_skus+' 種 Basic · '+design.costs.extended_smt_skus+' 種 SMT 延伸料。10 片免供電分接板的接頭零件約 '+money(design.costs.ten_passive_adapters_parts_only_usd)+'，另加裸板及手焊。';
     qs('[data-legend]').innerHTML=design.functions.map(f=>'<span><i style="background:'+cssSeries(f.id)+'"></i>'+f.label+'</span>').join('');
     const pinlist=qs('[data-pinlist]');
     function updatePins(){pinlist.innerHTML=design.connector.pins.map(p=>'<div class="rack-pinitem" style="opacity:'+(state.signal==='all'||p.group===state.signal||p.group==='unused'?1:.35)+'"><span>'+p.pin+' · '+p.signal+'</span><span>'+(p.conductor||'')+'</span></div>').join('');}
@@ -424,7 +609,7 @@
     renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,2));renderer.setClearAlpha(0);renderer.outputColorSpace=T.SRGBColorSpace;space.prepend(renderer.domElement);
     scene.add(new T.HemisphereLight(0xffffff,0xffffff,2));
     const light=new T.DirectionalLight(0xffffff,2.8);light.position.set(-30,80,30);scene.add(light);
-    const mats=[],labels=[],signalObjects=[],shells=[],hardwareCounts={photorelays:0,isolatedSupplies:0,ioExpanders:0,hostPorts:0,simulatedHosts:0};
+    const mats=[],labels=[],signalObjects=[],shells=[],hardwareCounts={photorelays:0,isolatedSupplies:0,shiftRegisters:0,hostPorts:0,simulatedHosts:0};
     const colorCanvas=document.createElement('canvas');colorCanvas.width=colorCanvas.height=1;const colorCtx=colorCanvas.getContext('2d');
     function colorOf(token){
       const p=document.createElement('span');p.style.color='var(--background)';root.appendChild(p);const bg=getComputedStyle(p).color;p.style.color='var('+token+')';const c=getComputedStyle(p).color;p.remove();colorCtx.clearRect(0,0,1,1);colorCtx.fillStyle=bg;colorCtx.fillRect(0,0,1,1);colorCtx.fillStyle=c;colorCtx.fillRect(0,0,1,1);const d=colorCtx.getImageData(0,0,1,1).data;return new T.Color().setRGB(d[0]/255,d[1]/255,d[2]/255,T.SRGBColorSpace);
@@ -440,27 +625,28 @@
     function trace(points){const g=new T.BufferGeometry().setFromPoints(points.map(p=>new T.Vector3(...p)));scene.add(new T.Line(g,traceMat));}
     function ic(x,y,z,w,d){box(x,y,z,w,.48,d,chip);for(let i=0;i<4;i++){box(x-w/2-.15,y-.08,z-d*.35+i*d*.23,.3,.12,.1,metal);box(x+w/2+.15,y-.08,z-d*.35+i*d*.23,.3,.12,.1,metal);}}
     function header(x,y,z,rows=5){box(x,y,z,1.3,.72,rows*.22+.25,body);for(let j=0;j<rows;j++)for(let k=0;k<2;k++)box(x+(k-.5)*.52,y+.5,z+(j-(rows-1)/2)*.22,.12,.46,.12,pin);box(x-.8,y+.1,z,.16,.45,.55,metal);}
-    function microFit(x,y,z,dir=1){box(x,y,z,1.7,1.03,1.95,chip);box(x+dir*.86,y,z,.04,.72,1.6,body);for(let row=0;row<2;row++)for(let col=0;col<5;col++)box(x+dir*.93,y+(row-.5)*.3,z+(col-2)*.3,.14,.09,.09,pin);box(x-.1*dir,y+.61,z,.55,.18,.45,chip);}
+    function jstPhd(x,y,z,dir=1){box(x,y,z,.9,.5,1.19,body);box(x+dir*.46,y,z,.03,.35,1.04,chip);for(let row=0;row<2;row++)for(let col=0;col<5;col++)box(x+dir*.49,y+(row-.5)*.2,z+(col-2)*.2,.08,.06,.06,pin);box(x-.1*dir,y+.28,z,.35,.1,.35,body);}
     const cx=-27,cz=0,boardW=design.controller_outline_mm[0]/10,boardD=design.controller_outline_mm[1]/10;
     box(cx,.25,cz,boardW,.18,boardD,pcb);box(cx,.17,cz,boardW,.08,boardD,boardEdge);
-    for(const x of [-39.8,-14.2])for(const z of [-boardD/2+1.1,boardD/2-1.1]){cyl(x,.39,z,.36,.1,metal);cyl(x,-.2,z,.25,1,body);}
-    box(-38.5,1.2,-5.8,4,1.7,2.8,metal);box(-40.56,1.2,-5.8,.1,.95,1.7,chip);ic(-35.2,.7,-5.8,1.7,1.7);
-    box(-38,1,0,4.6,1.25,3.2,metal);box(-38,1.7,.9,4.4,.13,1.1,body);
-    for(let i=0;i<3;i++){ic(-33.3,.68,-2.3+i*2.2,1.55,1.5);hardwareCounts.ioExpanders++;}
-    box(-38,1,6,2.1,1.2,2.4,body);box(-40.4,1,6,1.8,1.6,2.4,metal);ic(-35,.65,6,1.8,1.7);ic(-33,.65,6,1.3,1.3);
+    for(const x of [cx-boardW/2+.8,cx+boardW/2-.8])for(const z of [-boardD/2+.6,boardD/2-.6]){cyl(x,.39,z,.25,.1,metal);cyl(x,-.2,z,.2,1,body);}
+    box(-35.4,1.1,-4.8,2.1,1.5,1.6,metal);box(-36.5,1.1,-4.8,.08,.95,1.25,chip);ic(-33.2,.65,-4.8,.7,.7);
+    ic(-34.8,.65,-.8,.7,.7);box(-34,.56,.1,.32,.2,.25,metal);box(-36.5,.65,-.8,.73,.35,.9,metal);
+    for(let i=0;i<3;i++){ic(-31.8,.68,-1.8+i*1.5,.6,1);hardwareCounts.shiftRegisters++;}
+    box(-36,1,5.2,1.02,1.3,.92,body);for(let k=0;k<2;k++)cyl(-36,.95,5.2+(k-.5)*.508,.13,.13,metal);ic(-34.6,.65,5.2,.6,.7);ic(-32.7,.65,5.2,.6,.8);
     tag('控制板 · 10 路',[cx,3,-10],['overview'],1);
-    tag('ESP32-S3',[-38,3,.8],['controller']);tag('LAN · W5500',[-38.2,3,-6.5],['controller']);tag('12V 電源／穩壓',[-38,3,7.5],['controller']);tag('3 × I/O',[-33.3,3,-3.7],['controller']);tag('隔離電源 ×10',[-29.5,3,-9],['controller']);tag('隔離開關 ×20',[-24.7,3,-9],['controller']);tag('LED 偵測／隔離',[-19.6,3,-9],['controller']);
+    tag('ESP32-S3FN8',[-35,3,-.1],['controller']);tag('LAN · W5500',[-35,3,-6],['controller']);tag('5V 輸入／穩壓',[-35,3,6.8],['controller']);tag('3 × 74HC595',[-31.8,3,-3],['controller']);tag('隔離電源 ×10',[-29,3,-8],['controller']);tag('TLP3122A ×20',[-26,3,-8],['controller']);tag('LM393／EL357',[-22,3,-8],['controller']);
     const ports=[];
     for(let i=0;i<10;i++){
-      const z=-9.2+i*2.05;
-      box(-29.3,1.05,z,2.5,1.25,1.05,chip);hardwareCounts.isolatedSupplies++;
-      for(let q=0;q<2;q++){box(-26.4+q*1.8,.77,z,1.22,.8,.85,body);hardwareCounts.photorelays++;}
-      ic(-22,.65,z,1.3,.7);box(-20.2,.65,z,1.25,.48,.67,chip);box(-18.6,.65,z,1.15,.48,.67,body);
-      microFit(-14.9,.95,z);hardwareCounts.hostPorts++;
-      ports.push([-14.2,1.45,z]);
-      trace([[-17.9,.38,z],[-16.3,.38,z],[-15.5,.38,z+.15]]);
-      trace([[-31,.38,z],[-30.8,.38,z],[-30.8,.38,z+.4]]);
-      tag('J'+String(i+1).padStart(2,'0'),[-12.3,1.8,z],['controller']);
+      const z=-6.75+i*1.5;
+      box(-29.2,.95,z,1.16,1.01,.6,chip);hardwareCounts.isolatedSupplies++;
+      box(-28.1,.55,z,.45,.2,.25,chip);
+      for(let q=0;q<2;q++){box(-26.5+q*1.2,.6,z,.95,.25,.7,body);hardwareCounts.photorelays++;}
+      ic(-23.8,.6,z,.6,.5);for(let q=0;q<2;q++)box(-22.4+q*.8,.6,z,.7,.2,.44,body);
+      for(let q=0;q<4;q++)box(-20.7+q*.45,.46,z,.16,.08,.08,chip);
+      jstPhd(-17.65,.65,z);hardwareCounts.hostPorts++;
+      ports.push([-17.1,.9,z]);
+      trace([[-20,.38,z],[-18.8,.38,z],[-18.2,.38,z+.15]]);
+      tag('J'+String(i+1).padStart(2,'0'),[-15.7,1.3,z],['controller']);
     }
     const controllerShell=box(cx,2.8,0,boardW+1,5.6,boardD+1,material('--foreground',{transparent:true,opacity:.06,depthWrite:false}));shells.push(controllerShell);
     const controllerObjects=scene.children.filter(o=>!o.isLight),pcObjects=[];
@@ -481,7 +667,7 @@
       const mb=[x0-8,1.1,z0+9],ad=[x0-12.2,1,z0+9];
       box(ad[0],.8,ad[2],3.2,.2,5.8,pcb);
       for(let f=0;f<4;f++){header(mb[0],mb[1],mb[2]-2+f*1.05,1);header(ad[0]-.7,ad[1],ad[2]-2+f*1.05,1);header(ad[0]+.7,ad[1],ad[2]-2+f*1.05,1);}
-      microFit(ad[0],ad[1],ad[2]+2.3,-1);
+      jstPhd(ad[0],ad[1],ad[2]+2.3,-1);
       const p=ports[idx];
       path([[p[0],1.45,p[2]],[-8,2,p[2]],[0,3,z0+12],[ad[0]-1.7,1.5,ad[2]+2.3]],material('--muted-foreground'),.33);
       design.functions.forEach((f,fi)=>{
@@ -510,10 +696,10 @@
       pcObjects[idx]=scene.children.slice(start);
     }
     makePC(0,-21);makePC(1,21);
-    path([[-40.6,1.2,-5.8],[-44,1,-8],[-45,1,-15]],material('--border'),.2);
-    path([[-40.8,1,6],[-44,1,8],[-45,1,12]],material('--muted-foreground'),.15);
-    tag('LAN',[-44,2,-16],['controller']);tag('獨立電源',[-44,2,13],['controller']);
-    let yaw=-.2,pitch=.91,zoom=1,focus=new T.Vector3(-3,0,0),bounds=[90,58],raf=0;
+    path([[-36.5,1.2,-4.8],[-39,1,-7],[-40,1,-11]],material('--border'),.2);
+    path([[-36,1,5.2],[-39,1,7],[-40,1,10]],material('--muted-foreground'),.15);
+    tag('LAN',[-40,2,-12],['controller']);tag('獨立 5V 電源',[-40,2,11],['controller']);
+    let yaw=-.2,pitch=.91,zoom=1,focus=new T.Vector3(-3,0,0),bounds=[90,78],raf=0;
     function render(){
       raf=0;const w=space.clientWidth,h=space.clientHeight;if(!w||!h)return;
       renderer.setSize(w,h,false);const span=Math.max(bounds[1],bounds[0]/(w/h))*zoom;
@@ -531,9 +717,9 @@
     draw3D=()=>{if(!raf)raf=requestAnimationFrame(render);};
     setView=()=>{
       yaw=-.2;pitch=.91;zoom=1;
-      if(state.view==='controller'){focus.set(-28,0,0);bounds=[42,32];pitch=1.05;}
+      if(state.view==='controller'){focus.set(-28,0,0);bounds=[32,25];pitch=1.05;}
       else if(state.view==='pc1'||state.view==='pc2'){focus.set(16,1,state.view==='pc1'?-21:21);bounds=[48,42];yaw=-.25;pitch=1.05;}
-      else{focus.set(-3,0,0);bounds=[90,58];}
+      else{focus.set(-3,0,0);bounds=[90,78];}
       const msg={overview:'J01 → PC-01 · J02 → PC-02 · J03–J10 預留',controller:design.controller_outline_mm.slice(0,2).join(' × ')+' mm 示意外形 · 20 隔離開關 · 20 LED 偵測 · 10 隔離區',pc1:'PC-01：主機板 → A01 免供電分接板 → 原機殼；旁路線 → J01',pc2:'PC-02：主機板 → A02 免供電分接板 → 原機殼；旁路線 → J02'};
       qs('[data-scene-detail]').textContent=msg[state.view];draw3D();
     };

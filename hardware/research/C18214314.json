@@ -1,0 +1,46 @@
+{
+  "id": "C18214314",
+  "mpn": "XL2EL89COI-111YLC-40M",
+  "manufacturer": "YXC Crystal Oscillators",
+  "package": "SMD3225-4P",
+  "classification": "Extended",
+  "assembly": "SMT Assembly",
+  "pcba_type": "Economic and Standard",
+  "stock": 31425,
+  "loss": 4,
+  "prices": [
+    {
+      "min_qty": 1,
+      "max_qty": 49,
+      "usd": 0.0816
+    },
+    {
+      "min_qty": 50,
+      "max_qty": 149,
+      "usd": 0.0651
+    },
+    {
+      "min_qty": 150,
+      "max_qty": 499,
+      "usd": 0.057
+    },
+    {
+      "min_qty": 500,
+      "max_qty": 2999,
+      "usd": 0.0508
+    },
+    {
+      "min_qty": 3000,
+      "max_qty": 5999,
+      "usd": 0.0459
+    },
+    {
+      "min_qty": 6000,
+      "max_qty": -1,
+      "usd": 0.0434
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/C18214314",
+  "checked_at": "2026-10-13T15:20:35.889069+00:00",
+  "status": "public JLC page observed; recheck at ordering"
+}

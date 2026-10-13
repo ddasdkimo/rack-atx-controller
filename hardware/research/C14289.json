@@ -1,0 +1,46 @@
+{
+  "id": "C14289",
+  "mpn": "HT7533-1",
+  "manufacturer": "Holtek Semicon",
+  "package": "SOT-89-3",
+  "classification": "Basic",
+  "assembly": "SMT Assembly",
+  "pcba_type": "Economic and Standard",
+  "stock": 58016,
+  "loss": 2,
+  "prices": [
+    {
+      "min_qty": 1,
+      "max_qty": 49,
+      "usd": 0.1436
+    },
+    {
+      "min_qty": 50,
+      "max_qty": 149,
+      "usd": 0.1157
+    },
+    {
+      "min_qty": 150,
+      "max_qty": 999,
+      "usd": 0.1017
+    },
+    {
+      "min_qty": 1000,
+      "max_qty": 1999,
+      "usd": 0.0883
+    },
+    {
+      "min_qty": 2000,
+      "max_qty": 4999,
+      "usd": 0.08
+    },
+    {
+      "min_qty": 5000,
+      "max_qty": -1,
+      "usd": 0.0757
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/C14289",
+  "checked_at": "2026-10-13T15:20:39.495943+00:00",
+  "status": "public JLC page observed; recheck at ordering"
+}

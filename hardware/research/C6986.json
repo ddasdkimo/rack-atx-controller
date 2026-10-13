@@ -1,0 +1,46 @@
+{
+  "id": "C6986",
+  "mpn": "TLC555CDR",
+  "manufacturer": "Texas Instruments",
+  "package": "SOIC-8",
+  "classification": "Extended",
+  "assembly": "SMT Assembly",
+  "pcba_type": "Economic and Standard",
+  "stock": 87305,
+  "loss": 0,
+  "prices": [
+    {
+      "min_qty": 1,
+      "max_qty": 49,
+      "usd": 0.2326
+    },
+    {
+      "min_qty": 50,
+      "max_qty": 149,
+      "usd": 0.1817
+    },
+    {
+      "min_qty": 150,
+      "max_qty": 499,
+      "usd": 0.1599
+    },
+    {
+      "min_qty": 500,
+      "max_qty": 2499,
+      "usd": 0.1326
+    },
+    {
+      "min_qty": 2500,
+      "max_qty": 4999,
+      "usd": 0.1116
+    },
+    {
+      "min_qty": 5000,
+      "max_qty": -1,
+      "usd": 0.1043
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/C6986",
+  "checked_at": "2026-10-13T15:48:46.801603+00:00",
+  "status": "public JLC page observed; recheck at ordering"
+}

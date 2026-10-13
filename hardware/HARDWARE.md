@@ -1,79 +1,68 @@
-# Hardware plan — revision A.2
+# 硬體設計 B.1
 
-## Architecture
+這版已完成選料、可編輯 KiCad 原理圖及電阻／電容定值。這是**原理圖審閱版**：尚無 PCB 佈線、Gerber 或 CPL；亦未接上實際主機驗證。3D 是同版本的機構配置示意，不能用作元件座標。
 
-One central controller supports ten independent host channels. Each PC has a passive pass-through adapter between its motherboard front-panel signals and its original case wiring. Four signal pairs and one host reference return to the controller via a dedicated locking harness.
+## 架構與實物數量
 
-The controller illustration has a provisional 280 × 220 mm envelope. Component packages, clearances, mounting positions and enclosure dimensions are placeholders. No traces in the illustration are PCB routing. Each host adapter is passive and unpowered; a custom Y harness may replace it.
+1 塊中央控制板接 10 台電腦；每台用 1 片**免供電分接板**，也可以用等效 Y 線束。分接板只有 JST 接頭及 2.54 mm 排針，不含 MCU、供電或通訊電路。主控板內的每一路有獨立隔離電源、感測器及隔離開關。
 
-## Custom host connector
+主控：ESP32-S3FN8（8 MB 內建 Quad flash）＋ W5500 ＋ HR911105A 有線網路。禁用 Wi-Fi／BLE；依 Espressif 指引留空 RF 腳。GPIO26–32 留給內部 flash。USB-C 僅燒錄／除錯，不替本板供電。GPIO 表在 [circuit.json](circuit.json)。
 
-The table below is a SIGNAL ALLOCATION LIST, not a cavity-location or mating-face drawing. The manufacturer drawing and physical pin-1 marking must be checked before harness fabrication. Do not infer contact orientation or a solder-side mirror from this table.
+輸出：3 × 74HC595D 鎖存 20 個 POWER／RESET 開關位元。20 路 LED 回傳直接接 MCU GPIO，靠中斷擷取，不用慢速 I/O polling。HDD 活動只代表前面板 LED 訊號，不能據此判定 OS 或硬碟健康；Linux ping／SSH／Agent 屬後續軟體工作。
 
-| Left | Right |
-|---|---|
-| 1 — PWR_A | 2 — PWR_B |
-| 3 — RST_A | 4 — RST_B |
-| 5 — PLED+ | 6 — PLED− |
-| 7 — HDD+ | 8 — HDD− |
-| 9 — HOST_REF | 10 — NC |
+## 電源
 
-This is a project-defined connector. Motherboard signal locations must be read from the specific board manual. Host reference must be independently verified; neither LED negative terminal may be assumed to be ground. Do not merge grounds across channels or connect HOST_REF to controller ground. No controller supply voltage is intentionally sent to motherboard front-panel headers.
+外部穩壓 **5 V ±5%、2 A**，經 WJ500V-5.08-2P 螺絲端子 J101：1 = +5 V、2 = GND。使用合格隔離式外接電源；本板只處理低壓 DC。1.5 A PPTC 加 AO3401A 防反接，AP63203WU-7 與 4.7 µH 電感產生 3.3 V。以本板 5 V 母線在負載下保持 ≥4.5 V 為驗收條件；電源引線與保護元件的壓降一起計算。
 
-## Preserve original controls
+每台主機：B0505S-1WR3L 隔離 DC/DC，接 HT7533-1 產生該台專用 3.3 V。非穩壓模組的輕載輸出不可當精確 5 V；HT7533-1 可承受較高輸入。輸入 4.7 µF、隔離原始輸出 10 µF、LDO 輸出 10 µF＋100 nF，另有 10 kΩ 放電負載。模組資料表允許 0% 負載；仍須量測啟動、輕載過衝及 LDO 溫升。模組資料表隔離試驗為 **1500 VDC**，不是 JLC 摘要標成的 Vrms。本板沒有整機安全隔離認證。
 
-POWER and RESET each retain a direct connection to their original case switch. A normally-open isolated photorelay connects across the same two contacts. Controller boot, reset and loss of power must leave these contacts open. Hardware-bounded pulse duration and watchdog gating remain to be designed. A TLP3122A is a candidate, not a finalized purchasing choice or footprint.
+預算抓 3.3 V 主系統峰值 0.65 A、十路隔離供電合計 0.25 A@5 V、輸出全開約 0.20 A@5 V，總輸入約 1 A 等級；正常韌體一次只操作一個按鍵。這是配置預算，不是量測值。PPTC 高溫降額、buck 效率及 DC/DC 啟動浪湧列為板上驗收項目。
 
-Both original LEDs also remain directly connected. A protected high-impedance differential branch observes voltage across each LED without using LED− as a shared ground. Each host's active sensing electronics receive independently isolated, regulated power and report through an isolation barrier. Include current-limiting near the tap, input protection, hysteresis, and measures to prevent unacceptable loading/backfeed when the controller is unpowered. The real sensor resistor values, common-mode range and thresholds require measurement on the target board. An ordinary optocoupler directly paralleled with an LED does not guarantee preserved brightness.
+## POWER／RESET 支路
 
-The passive pass-through path stays functional when the controller is unpowered under normal operation; this is not a guarantee against every component or cable short-circuit fault. Check branch-fault behavior during circuit design.
+原按鈕兩端直通，TLP3122A 常開雙向接點並聯。**實際腳號 1 = LED A、3 = LED K、4／6 = 開關**，不能套用 1／2／3／4 SOP4。其光輸入由 74HC595 → 1.5 kΩ → MMBT3904 驅動，base 有 100 kΩ 下拉；光 LED 串 2 × 220 Ω。假設 5 V 母線最低 4.5 V、LED VF 最高 1.7 V、BJT 壓降 0.3 V，光電流最低約 5.63 mA；正常最大估計約 9.76 mA。這覆蓋 Toshiba 建議的 ≥5 mA 工作值。
 
-## Cable and installation
+TLC555CDR 單穩態經 BJT／PMOS 控制共用 PHOTO_5V 光驅動電源。510 kΩ 與 3 × 10 µF 的名目時間約 16.8 秒。觸發採 AC 耦合，因此 GPIO 固定高電位不會一直把 TRIG 拉低。CMOS TLC555 的 RESET 有 100 kΩ 下拉；未採雙極 NE555，避免它的 RESET 偏置電流讓弱下拉失效。
 
-Revision A.2 candidate parts, verified against manufacturer specifications:
+**8–25 秒是待實測的硬體窗口目標，並非已保證的最長時間。** MLCC 偏壓降容、溫度、timer 門檻及漏電會影響時間。重複觸發或反覆切換 ARM 仍可建立新窗口，所以這不是能防禦任意韌體故障的安全計時器。MCU watchdog 仍要在韌體啟用。
 
-| Function | Part | Quantity for 10 hosts | Selection basis |
-|---|---|---:|---|
-| Board header at controller and passive adapter | Molex 43045-1000 | 20 | 10 circuits, 3 mm pitch, right-angle through-hole |
-| Cable receptacle housing, both ends | Molex 43025-1000 | 20 | 10 circuits, polarized and locking |
-| Female crimp contact | Molex 43030-0007 | 180 populated + spares | 24–20 AWG, insulation diameter up to 1.85 mm |
-| Bulk cable | Belden 9505 | Cut to actual lengths | 5 twisted pairs, 24 AWG stranded, 1.1 mm conductor insulation diameter, overall foil shield, 7.34 mm outside diameter |
+韌體順序：OE 保持高 → ARM/FIRE 低 → shift 24 個 0 → latch → OE 低 → 寫入單一按鍵位元 → ARM/FIRE 觸發 → 短按 100–300 ms 或長按約 5 秒 → 清除位元並撤除 ARM。長按效果依主機板／OS 設定；它不會切斷 AC 或 5VSB。三顆 595 共用 Ethernet SPI CLK/MOSI，只有完整輸出 frame 後才能 latch；Ethernet 封包不能誤鎖進輸出。SPI 建議初版 8 MHz 並驗證時序。
 
-The cable and contact wire ranges are compatible on paper; crimp tooling, strip length, pull-force, insulation grip, cavity geometry and strain relief still require samples and the manufacturer application drawings. This is a custom harness, not a pre-made cable assembly with a single purchase number. The 3D header is a simplified shape, not an imported manufacturer STEP model.
+## 保留 LED 的感測電路
 
-Pair assignment: red/black → pins 1/2; white/black → 3/4; green/black → 5/6; blue/black → 7/8; fifth-pair black → 9. Insulate the fifth-pair yellow conductor at BOTH ends; leave pin 10 without a terminal. Identify black wires by their original twisted pair, and label after breakout. The foil/drain wire is separate from all ten contacts. Prototype shield termination is to controller enclosure at one end, with the PC end insulated, subject to EMI/ESD testing; it must not replace HOST_REF or connect isolated signal grounds.
+每個 LED 的正、負端各經 100 kΩ 到比較器網路，10 kΩ 到該主機 HOST_REF、1 nF 濾波。LM393 的 IN− 接 LED+ 分壓；IN+ 接 LED− 分壓並有 390 kΩ 從隔離 3.3 V 提供偏置，以及 **4 × 510 kΩ** 的正回授。OUT 以 10 kΩ 拉高。LED 亮使 OUT 拉低，經 2 × 330 Ω 驅動 EL357N(B)(TA)-G；其電晶體端隔離回到 MCU，10 kΩ 上拉及 1 nF 濾波，狀態 active-low。
 
-Keep external cable strain on an enclosure clamp, not on the PCB connector. Motherboard-side 2.54 mm connector series and exact harness length remain TBD until target board headers are confirmed.
+390 kΩ 是刻意保留的延伸料：減少串聯拼值元件，並配合共模誤差和遲滯裕度；不是任意可替換為 470 kΩ。100 kΩ／10 kΩ 電阻使用 1% 0603，角落分析額外納入 0.5% 溫度變動額度、隔離電源 ±3%、比較器總輸入誤差 ±14 mV。保守計算的差動觸發範圍為開啟 0.361–1.357 V、關閉 0.216–1.222 V，範圍會隨共模與公差變化；不是單一主機的遲滯寬度。重建結果見 [validation/checks.json](validation/checks.json)。
 
-Manufacturer references: [43045-1000](https://www.molex.com/en-us/products/part-detail/430451000), [43025-1000](https://www.molex.com/en-us/products/part-detail/430251000), [43030-0007](https://www.molex.com/en-us/products/part-detail/430300007), [Belden 9505](https://www.belden.com/products/cable/electronic-wire-cable/multi-pair-cable/9505).
+適配條件：各輸入相對 HOST_REF 在 0–5 V，LED 熄滅差動 ≤0.2 V、亮起 ≥1.4 V。實際主機板要量測；三腳／雙色電源燈或特別的脈衝驅動另行適配。比較器 VCC=0 時允許正輸入電壓；100 kΩ 的 5 V 電阻限流上限約 51 µA/線，另須計入 TVS 漏電。此值是正常條件的支路負載估算，**不是主機板接腳短路保護額定，也不代表掉電回灌已實测為零**。控制器有電而主機沒電時也要量測偏置經網路回到主機的微小電流。
 
-- Four signal pairs plus HOST_REF, with one unused position in a keyed 10-pin connector. This requires a dedicated multi-conductor harness, not an unmodified 8-conductor Ethernet patch cable.
-- Use labeled 2.54 mm motherboard leads only inside the enclosure, with strain relief and a secured pass-through adapter.
-- Initial 1–3 m harness length is a prototype test target, not a supported maximum. Assess EMI, ESD, disconnect behavior and LED pulse capture with actual harnesses.
-- If longer runs are required, move sensing/control to an active local adapter and redesign the cable as a differential communications link. RS-485 topology and termination must be designed; do not create an unbuffered long star bus.
-- Separate dedicated J01–J10 harness connectors from the real Ethernet LAN jack.
+EL357N 的 B 級 CTR 最低值是在 IF=5 mA、VCE=5 V、25°C 定義；本電路的 IF 約數 mA、集極負載約 0.33 mA。低溫／低 IF／飽和條件不能直接套用標示 CTR，需用實物確認 MCU 低準位與短脈波延遲。初版驗收 LED 脈波 ≥1 ms 的捕捉率。
 
-## Controller blocks
+每台 4 顆 PESD5V0S2BT 保護八條信號，pin1／2 為雙向 I/O，pin3 只接該台 HOST_REF。十台 HOST_REF 不在控制板連在一起，也不接主控 GND。主機機殼或既有保護接地可能在設備外相連；本板不增加信號地回路。
 
-ESP32-S3, W5500 with magnetics, three MCP23S17 expanders (48 I/O total), 20 photorelays, 20 LED sensing channels with isolated returns, ten host-domain isolated power supplies, independent external power and onboard regulators. All part numbers are candidates. Do not order a full BOM from the visual model.
+## 自訂十芯接頭與線束
 
-The 40 functional signals fit the three expanders. The final assignment must also account for interrupt handling and pulse capture; HDD activity should be stretched or latched if ordinary polling would miss it. HDD LED activity is not a drive health or OS health metric.
+| Pin | 訊號 | Belden 9505 線芯 |
+|---|---|---|
+| 1 / 2 | PWR_A / PWR_B | 第 1 對 紅／黑 |
+| 3 / 4 | RST_A / RST_B | 第 2 對 白／黑 |
+| 5 / 6 | PLED+ / PLED− | 第 3 對 綠／黑 |
+| 7 / 8 | HDD+ / HDD− | 第 4 對 藍／黑 |
+| 9 | HOST_REF | 第 5 對 黑 |
+| 10 | NC | 第 5 對 黃，兩端封存且不裝端子 |
 
-Long-press POWER is motherboard soft-power control, not removal of AC or standby power. Actual AC power cycling would be a separate PDU function.
+上表是訊號編號，**不是主機板 F_PANEL 實體孔位圖**。J01–J10 均採 JST S10B-PHDSS(LF)(SN)，線端 PHDR-10VS，SPHD-001T-P0.5 端子。B.1 取代 A.2 的 Molex Micro-Fit，因指定 JST 料號有經濟型代貼庫存、體積與價格較適合。它們不互插。JST 2 mm PHD 也不等於主機板常見的 2.54 mm 排針。
 
-## Validation before PCB manufacture
+全套十台：20 個 PCB 插座、20 個線端膠殼、180 個裝入端子＋備品、10 段 Belden 9505。9505 是真實五對 24 AWG 屏蔽線；單芯絕緣外徑約 1.1 mm，落在端子規格內。線束是訂製壓接件，沒有單一現成線組料號。1–3 m 只是原型線長驗收目標。屏蔽／排流線另接中央機殼單端，PC 端絕緣，不能代替 HOST_REF；此接法也需做 EMI／ESD 驗證。
 
-1. Confirm each motherboard's actual switch and LED pinout, LED polarity and operating voltage/current.
-2. Verify original buttons and LED brightness with the controller on, off, rebooting and disconnected.
-3. Measure powered and unpowered sensor loading, backfeed, isolation, and branch-short behavior.
-4. Verify power/reset pulse timing and hardware release after MCU or I/O failure.
-5. Check short activity pulses and actual cable lengths under representative rack noise.
-6. Complete electrical rule checks, power/thermal budget, connector orientation review, PCB design rule checks and physical fit checks.
+分接板 JA1 接長線；JA2–JA5 接主機板四組信號，JA6–JA9 接原機殼同名插頭，JA10 pin1 接經確認的本機 GND，pin2 空。所有同名功能對直接接通。主機板端仍需依手冊訂製帶功能標籤的 2.54 mm 母頭跳線，不應壓成未核對的通用 9-pin F_PANEL 插頭。原機殼按鈕／LED 的直通功能不依賴控制器供電，但不是任意線纜短路故障下仍保證正常。
 
-## Primary references
+## PCB 與下一階段驗收
 
-- [PiKVM pass-through ATX board](https://docs.pikvm.org/atx_board/)
-- [Toshiba TLP3122A](https://toshiba.semicon-storage.com/ap-en/semiconductor/product/isolators-solid-state-relays/photorelay-mosfet-output/detail.TLP3122A.html)
-- [WIZnet W5500](https://docs.wiznet.io/Product/Chip/Ethernet/W5500)
-- [Microchip MCP23S17 family data sheet](https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ProductDocuments/DataSheets/MCP23017-Data-Sheet-DS20001952.pdf)
-- [TI difference-amplifier input impedance](https://e2e.ti.com/blogs_/archives/b/precisionhub/posts/overlooking-the-obvious-the-input-impedance-of-a-difference-amplifier)
+主控板目標外形 200 × 160 mm、4 層 FR-4、元件單面組裝；層數是 PCB 銅層數，與 PCBA 單／雙面收費分開。這仍是空間預算，需佈線後確認。USB 90 Ω 與 Ethernet MDI 100 Ω 差動、QFN散熱焊盤、buck 回路、各主機隔離銅區及爬電距離都要另做 layout/DRC；隔離區不能鋪連續共地平面。
+
+完成：KiCad 10 ERC 零違規；原理圖匯出 netlist 的 1887 個主板腳位及 28 個分接板腳位核對；BOM 數量核對；十路隔離界面檢查；上述 DC 角落計算。ERC 不會驗證供應商腳位、IC類比行為或 PCB實體隔離。
+
+待完成：五類未指派焊盤（TLP3122A、EL357N、隔離模組、電感、輸入端子）及其餘候選焊盤圖面審核；PCB 與外殼、CPL/Gerber；主機板真實針位；有／無電負載與 LED 亮度；拔插和分支故障；timer 靜態卡死與反覆觸發；1–3 m 線束干擾、ESD、溫升／PPTC降額。先做單路台架測試，再接十台。
+
+來源、選料與計價：[JLCPCB.md](JLCPCB.md)、[SOURCES.md](SOURCES.md)。

@@ -1,0 +1,46 @@
+{
+  "id": "C9006",
+  "mpn": "X322525MOB4SI",
+  "manufacturer": "YXC Crystal Oscillators",
+  "package": "SMD3225-4P",
+  "classification": "Basic",
+  "assembly": "SMT Assembly",
+  "pcba_type": "Economic and Standard",
+  "stock": 181710,
+  "loss": 4,
+  "prices": [
+    {
+      "min_qty": 1,
+      "max_qty": 49,
+      "usd": 0.0948
+    },
+    {
+      "min_qty": 50,
+      "max_qty": 149,
+      "usd": 0.0759
+    },
+    {
+      "min_qty": 150,
+      "max_qty": 499,
+      "usd": 0.0661
+    },
+    {
+      "min_qty": 500,
+      "max_qty": 2999,
+      "usd": 0.0581
+    },
+    {
+      "min_qty": 3000,
+      "max_qty": 5999,
+      "usd": 0.0498
+    },
+    {
+      "min_qty": 6000,
+      "max_qty": -1,
+      "usd": 0.048
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/C9006",
+  "checked_at": "2026-10-13T15:18:09.304055+00:00",
+  "status": "public JLC page observed; recheck at ordering"
+}

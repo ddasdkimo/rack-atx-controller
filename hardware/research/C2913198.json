@@ -1,0 +1,42 @@
+{
+  "id": "C2913198",
+  "mpn": "ESP32-S3-WROOM-1-N8",
+  "manufacturer": "Espressif Systems",
+  "package": "SMD,25.5x18mm",
+  "classification": "Extended",
+  "assembly": "SMT Assembly",
+  "pcba_type": "Standard Only",
+  "stock": 1300,
+  "minimum": "$undefined",
+  "loss": 0,
+  "prices": [
+    {
+      "min_qty": 10,
+      "max_qty": 29,
+      "usd": 4.2324
+    },
+    {
+      "min_qty": 30,
+      "max_qty": 99,
+      "usd": 3.8312
+    },
+    {
+      "min_qty": 100,
+      "max_qty": 649,
+      "usd": 3.4235
+    },
+    {
+      "min_qty": 650,
+      "max_qty": 1299,
+      "usd": 3.2375
+    },
+    {
+      "min_qty": 1300,
+      "max_qty": -1,
+      "usd": 3.1527
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/C2913198",
+  "checked_at": "2026-10-13T15:10:19.807890+00:00",
+  "status": "public JLC page observed; recheck at ordering"
+}

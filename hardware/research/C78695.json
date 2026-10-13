@@ -1,0 +1,46 @@
+{
+  "id": "C78695",
+  "mpn": "MF-MSMF150/24X-2",
+  "manufacturer": "BOURNS",
+  "package": "1812",
+  "classification": "Extended",
+  "assembly": "SMT Assembly",
+  "pcba_type": "Economic and Standard",
+  "stock": 6223,
+  "loss": 2,
+  "prices": [
+    {
+      "min_qty": 1,
+      "max_qty": 49,
+      "usd": 0.1971
+    },
+    {
+      "min_qty": 50,
+      "max_qty": 149,
+      "usd": 0.1566
+    },
+    {
+      "min_qty": 150,
+      "max_qty": 1499,
+      "usd": 0.1364
+    },
+    {
+      "min_qty": 1500,
+      "max_qty": 2999,
+      "usd": 0.1212
+    },
+    {
+      "min_qty": 3000,
+      "max_qty": 4499,
+      "usd": 0.109
+    },
+    {
+      "min_qty": 4500,
+      "max_qty": -1,
+      "usd": 0.103
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/C78695",
+  "checked_at": "2026-10-13T15:22:31.648916+00:00",
+  "status": "public JLC page observed; recheck at ordering"
+}

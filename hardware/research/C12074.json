@@ -1,0 +1,46 @@
+{
+  "id": "C12074",
+  "mpn": "HR911105A",
+  "manufacturer": "HANRUN(Zhongshan HanRun Elec)",
+  "package": "Plugin",
+  "classification": "Extended",
+  "assembly": "Wave Soldering",
+  "pcba_type": "Economic and Standard",
+  "stock": 48875,
+  "loss": 0,
+  "prices": [
+    {
+      "min_qty": 1,
+      "max_qty": 9,
+      "usd": 1.7191
+    },
+    {
+      "min_qty": 10,
+      "max_qty": 30,
+      "usd": 1.45
+    },
+    {
+      "min_qty": 31,
+      "max_qty": 92,
+      "usd": 1.207
+    },
+    {
+      "min_qty": 93,
+      "max_qty": 495,
+      "usd": 1.0162
+    },
+    {
+      "min_qty": 496,
+      "max_qty": 991,
+      "usd": 0.9395
+    },
+    {
+      "min_qty": 992,
+      "max_qty": -1,
+      "usd": 0.9004
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/C12074",
+  "checked_at": "2026-10-13T15:10:20.801373+00:00",
+  "status": "public JLC page observed; recheck at ordering"
+}

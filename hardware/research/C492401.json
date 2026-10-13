@@ -1,0 +1,46 @@
+{
+  "id": "C492401",
+  "mpn": "PZ254V-11-02P",
+  "manufacturer": "XFCN",
+  "package": "Plugin,P=2.54mm",
+  "classification": "Extended",
+  "assembly": "Wave Soldering",
+  "pcba_type": "Economic and Standard",
+  "stock": 1143383,
+  "loss": 0,
+  "prices": [
+    {
+      "min_qty": 1,
+      "max_qty": 499,
+      "usd": 0.0186
+    },
+    {
+      "min_qty": 500,
+      "max_qty": 1999,
+      "usd": 0.0149
+    },
+    {
+      "min_qty": 2000,
+      "max_qty": 3999,
+      "usd": 0.013
+    },
+    {
+      "min_qty": 4000,
+      "max_qty": 23999,
+      "usd": 0.0118
+    },
+    {
+      "min_qty": 24000,
+      "max_qty": 49999,
+      "usd": 0.0113
+    },
+    {
+      "min_qty": 50000,
+      "max_qty": -1,
+      "usd": 0.011
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/C492401",
+  "checked_at": "2026-10-13T15:31:20.503576+00:00",
+  "status": "public JLC page observed; recheck at ordering"
+}

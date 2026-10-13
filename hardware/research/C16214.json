@@ -1,0 +1,46 @@
+{
+  "id": "C16214",
+  "mpn": "DC-005 2.0",
+  "manufacturer": "BOOMELE(Boom Precision Elec)",
+  "package": "Plugin",
+  "classification": "Extended",
+  "assembly": "Wave Soldering",
+  "pcba_type": "Economic and Standard",
+  "stock": 78884,
+  "loss": 1,
+  "prices": [
+    {
+      "min_qty": 1,
+      "max_qty": 99,
+      "usd": 0.0563
+    },
+    {
+      "min_qty": 100,
+      "max_qty": 499,
+      "usd": 0.0452
+    },
+    {
+      "min_qty": 500,
+      "max_qty": 999,
+      "usd": 0.0358
+    },
+    {
+      "min_qty": 1000,
+      "max_qty": 4999,
+      "usd": 0.0317
+    },
+    {
+      "min_qty": 5000,
+      "max_qty": 9999,
+      "usd": 0.0284
+    },
+    {
+      "min_qty": 10000,
+      "max_qty": -1,
+      "usd": 0.0268
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/C16214",
+  "checked_at": "2026-10-13T15:18:10.384180+00:00",
+  "status": "public JLC page observed; recheck at ordering"
+}

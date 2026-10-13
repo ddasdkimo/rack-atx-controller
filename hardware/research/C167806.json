@@ -1,0 +1,46 @@
+{
+  "id": "C167806",
+  "mpn": "FNR4018S4R7MT",
+  "manufacturer": "cjiang (Changjiang Microelectronics Tech)",
+  "package": "SMD,4x4mm",
+  "classification": "Extended",
+  "assembly": "SMT Assembly",
+  "pcba_type": "Economic and Standard",
+  "stock": 7188,
+  "loss": 4,
+  "prices": [
+    {
+      "min_qty": 1,
+      "max_qty": 99,
+      "usd": 0.0459
+    },
+    {
+      "min_qty": 100,
+      "max_qty": 299,
+      "usd": 0.0361
+    },
+    {
+      "min_qty": 300,
+      "max_qty": 2999,
+      "usd": 0.031
+    },
+    {
+      "min_qty": 3000,
+      "max_qty": 5999,
+      "usd": 0.0257
+    },
+    {
+      "min_qty": 6000,
+      "max_qty": 8999,
+      "usd": 0.0227
+    },
+    {
+      "min_qty": 9000,
+      "max_qty": -1,
+      "usd": 0.0213
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/C167806",
+  "checked_at": "2026-10-13T15:18:09.856125+00:00",
+  "status": "public JLC page observed; recheck at ordering"
+}

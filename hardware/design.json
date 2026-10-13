@@ -1,18 +1,18 @@
 {
   "project": "Rack ATX Controller",
-  "revision": "A.2",
-  "date": "2026-10-13",
-  "stage": "concept",
+  "revision": "B.1",
+  "date": "2026-10-14",
+  "stage": "schematic-review",
   "host_count": 10,
   "controller_outline_mm": [
-    280,
-    220,
+    200,
+    160,
     1.6
   ],
-  "outline_status": "illustrative envelope, not mechanically validated",
+  "outline_status": "Placement study only; no routed PCB, production footprints or enclosure approval",
   "connector": {
     "name": "J01–J10",
-    "type": "Molex Micro-Fit 3.0, 43045-1000 PCB header + 43025-1000 receptacle housing; candidate",
+    "type": "JST PHD 2.0 mm: S10B-PHDSS(LF)(SN) right-angle PCB header + PHDR-10VS housing",
     "view": "Signal allocation only. Physical cavity order and mating-face orientation must be verified from manufacturer drawing before fabrication.",
     "pins": [
       {
@@ -171,49 +171,49 @@
   ],
   "blocks": [
     {
-      "name": "ESP32-S3 module",
+      "name": "ESP32-S3FN8 wired-only MCU",
       "qty": 1,
-      "status": "candidate"
+      "status": "Selected; KiCad schematic B.1; layout and hardware validation pending"
     },
     {
-      "name": "W5500 Ethernet interface and magnetics",
+      "name": "W5500 Ethernet + HR911105A",
       "qty": 1,
-      "status": "candidate"
+      "status": "Selected; KiCad schematic B.1; layout and hardware validation pending"
     },
     {
-      "name": "MCP23S17 16-bit I/O expander",
+      "name": "74HC595D 8-bit output latch",
       "qty": 3,
-      "status": "candidate"
+      "status": "Selected; KiCad schematic B.1; layout and hardware validation pending"
     },
     {
       "name": "TLP3122A normally-open photorelay",
       "qty": 20,
-      "status": "candidate, not final footprint"
+      "status": "Selected; KiCad schematic B.1; layout and hardware validation pending"
     },
     {
-      "name": "High-impedance differential LED sensing channel",
+      "name": "LM393 differential LED sensing channel",
       "qty": 20,
-      "status": "circuit values and protection TBD"
+      "status": "Selected; KiCad schematic B.1; layout and hardware validation pending"
     },
     {
-      "name": "Isolated LED status return channel",
+      "name": "EL357N(B) isolated status return",
       "qty": 20,
-      "status": "candidate optocoupler"
+      "status": "Selected; KiCad schematic B.1; layout and hardware validation pending"
     },
     {
-      "name": "Host-domain isolated DC/DC supply with regulation",
+      "name": "B0505S-1WR3L + HT7533-1 isolated regulated host supply",
       "qty": 10,
-      "status": "part and load budget TBD"
+      "status": "Selected; KiCad schematic B.1; layout and hardware validation pending"
     },
     {
-      "name": "Hardware watchdog and bounded button timing",
+      "name": "TLC555 shared output-rail monostable",
       "qty": 1,
-      "status": "circuit TBD"
+      "status": "Selected; KiCad schematic B.1; layout and hardware validation pending"
     },
     {
       "name": "Passive case pass-through adapter",
       "qty": 10,
-      "status": "mechanical and pinout concept"
+      "status": "Selected; KiCad schematic B.1; layout and hardware validation pending"
     }
   ],
   "constraints": {
@@ -228,55 +228,227 @@
     "cable_status": "prototype validation target only, not a supported maximum",
     "cable": "Belden 9505 candidate; four signal pairs + host reference; fifth yellow conductor insulated and parked at both ends, pin 10 unpopulated. Shield/drain separate from all signal pins.",
     "ethernet": "LAN port only; electrically distinct from J01–J10",
-    "manufacturing_ready": false
+    "manufacturing_ready": false,
+    "input_power": "External regulated 5V +/-5%, 2A, WJ500V-5.08-2P terminal, pin1 +5V pin2 GND",
+    "temperature_target_c": [
+      0,
+      70
+    ],
+    "led_input_envelope": "Each lead 0..5V relative to local HOST_REF; OFF <=0.2V differential; ON >=1.4V. Verify actual motherboard."
   },
   "physical_parts": [
     {
       "role": "兩端 PCB 插座",
-      "part": "Molex 43045-1000",
-      "spec": "Micro-Fit 3.0 · 10 pin · 直角通孔",
-      "url": "https://www.molex.com/en-us/products/part-detail/430451000",
+      "part": "JST S10B-PHDSS(LF)(SN)",
+      "spec": "PHD · 2 mm · 2×5 pin · 直角通孔 · C161672",
+      "url": "https://jlcpcb.com/partdetail/C161672",
       "qty_full_10_hosts": 20,
-      "lcsc_id": null,
-      "jlc_assembly_verified": false,
-      "status": "candidate, manufacturer specifications checked; assembly unverified"
+      "lcsc_id": "C161672",
+      "jlc_assembly_verified": true,
+      "status": "JLC Economic/Standard, Wave Soldering, stock observed 2026-10-13; footprint sample review pending"
     },
     {
       "role": "線端膠殼",
-      "part": "Molex 43025-1000",
-      "spec": "雙排 10 pin · 防反插／鎖扣",
-      "url": "https://www.molex.com/en-us/products/part-detail/430251000",
+      "part": "JST PHDR-10VS",
+      "spec": "10 pin 防反插膠殼；另購及壓接",
+      "url": "https://www.jst-mfg.com/product/pdf/eng/ePHD.pdf",
       "qty_full_10_hosts": 20,
       "lcsc_id": null,
       "jlc_assembly_verified": false,
-      "status": "candidate, manufacturer specifications checked; assembly unverified"
+      "status": "External harness item, manufacturer mating series selected"
     },
     {
       "role": "壓接端子",
-      "part": "Molex 43030-0007",
-      "spec": "母端子 · 24–20 AWG · 鍍錫",
-      "url": "https://www.molex.com/en-us/products/part-detail/430300007",
+      "part": "JST SPHD-001T-P0.5",
+      "spec": "26–22 AWG · 絕緣外徑 1.0–1.5 mm",
+      "url": "https://www.jst-mfg.com/product/pdf/eng/ePHD.pdf",
       "qty_full_10_hosts": 180,
       "lcsc_id": null,
       "jlc_assembly_verified": false,
-      "status": "candidate, manufacturer specifications checked; assembly unverified"
+      "status": "External harness item; tooling and pull test pending"
     },
     {
       "role": "機櫃間線材",
       "part": "Belden 9505",
-      "spec": "5 對／10 芯 · 24 AWG 絞線 · 總屏蔽 · 外徑 7.34 mm",
+      "spec": "5 對／10 芯 · 24 AWG · 總屏蔽 · 外徑 7.34 mm",
       "url": "https://www.belden.com/products/cable/electronic-wire-cable/multi-pair-cable/9505",
-      "qty_full_10_hosts": "cut to length",
+      "qty_full_10_hosts": "10 runs, cut to measured length",
       "lcsc_id": null,
       "jlc_assembly_verified": false,
-      "status": "candidate, manufacturer specifications checked; assembly unverified"
+      "status": "External custom harness; 1–3 m is prototype test target only"
     }
   ],
   "manufacturing": {
     "preferred_fabricator": "JLCPCB",
     "prefer_assembly_catalog_parts": true,
-    "stock_verified": false,
+    "stock_verified": true,
     "fabrication_ready": false,
-    "notes": "Verify exact LCSC ID, package, assembly support and current stock before release."
+    "notes": "All populated PCB MPNs have observed JLC Economic support and stock. No reservation. Single-side assembly plan; five land-pattern families unassigned pending review, no PCB/CPL/Gerber.",
+    "stock_check_date": "2026-10-13"
+  },
+  "electronics": [
+    {
+      "role": "主控／USB燒錄",
+      "mpn": "ESP32-S3FN8",
+      "code": "C2913196",
+      "qty": 1,
+      "url": "https://jlcpcb.com/partdetail/C2913196"
+    },
+    {
+      "role": "有線網路",
+      "mpn": "W5500",
+      "code": "C32843",
+      "qty": 1,
+      "url": "https://jlcpcb.com/partdetail/C32843"
+    },
+    {
+      "role": "網路插座／磁性元件",
+      "mpn": "HR911105A",
+      "code": "C12074",
+      "qty": 1,
+      "url": "https://jlcpcb.com/partdetail/C12074"
+    },
+    {
+      "role": "按鍵輸出暫存",
+      "mpn": "74HC595D,118",
+      "code": "C5947",
+      "qty": 3,
+      "url": "https://jlcpcb.com/partdetail/C5947"
+    },
+    {
+      "role": "POWER／RESET 接點",
+      "mpn": "TLP3122A(TPL,E",
+      "code": "C4153843",
+      "qty": 20,
+      "url": "https://jlcpcb.com/partdetail/C4153843"
+    },
+    {
+      "role": "LED 差動比較器",
+      "mpn": "LM393DR",
+      "code": "C67470",
+      "qty": 10,
+      "url": "https://jlcpcb.com/partdetail/C67470"
+    },
+    {
+      "role": "LED 狀態隔離回傳",
+      "mpn": "EL357N(B)(TA)-G",
+      "code": "C42381015",
+      "qty": 20,
+      "url": "https://jlcpcb.com/partdetail/C42381015"
+    },
+    {
+      "role": "每台隔離供電",
+      "mpn": "B0505S-1WR3L",
+      "code": "C20622559",
+      "qty": 10,
+      "url": "https://jlcpcb.com/partdetail/C20622559"
+    },
+    {
+      "role": "隔離側 3.3V 穩壓",
+      "mpn": "HT7533-1",
+      "code": "C14289",
+      "qty": 10,
+      "url": "https://jlcpcb.com/partdetail/C14289"
+    },
+    {
+      "role": "硬體限時",
+      "mpn": "TLC555CDR",
+      "code": "C6986",
+      "qty": 1,
+      "url": "https://jlcpcb.com/partdetail/C6986"
+    },
+    {
+      "role": "3.3V 主穩壓",
+      "mpn": "AP63203WU-7",
+      "code": "C780769",
+      "qty": 1,
+      "url": "https://jlcpcb.com/partdetail/C780769"
+    },
+    {
+      "role": "主機訊號 ESD",
+      "mpn": "PESD5V0S2BT",
+      "code": "C2841440",
+      "qty": 40,
+      "url": "https://jlcpcb.com/partdetail/C2841440"
+    }
+  ],
+  "costs": {
+    "revision": "B.1",
+    "currency": "USD",
+    "catalog_checked_date": "2026-10-13",
+    "fee_source": "https://jlcpcb.com/help/article/pcb-assembly-price",
+    "fee_source_updated": "2026-09-09",
+    "quote": false,
+    "components_per_controller": 694,
+    "unique_part_numbers": 48,
+    "basic_skus": 27,
+    "extended_smt_skus": 16,
+    "extended_all_skus": 21,
+    "smt_joints_estimate_per_board": 1731,
+    "manual_joints_estimate_per_board": 160,
+    "batches": [
+      {
+        "boards": 2,
+        "parts_total_usd": 97.58,
+        "parts_per_board_usd": 48.79,
+        "assembly_labor_total_usd": 10.79,
+        "setup_stencil_confirmation_manual_setup_usd": 13.74,
+        "feeder_usd_range": [
+          49.12,
+          64.47
+        ],
+        "xray_usd_range": [
+          3.28,
+          9.84
+        ],
+        "subtotal_range_usd": [
+          174.51,
+          196.42
+        ],
+        "per_controller_range_usd": [
+          87.26,
+          98.21
+        ]
+      },
+      {
+        "boards": 5,
+        "parts_total_usd": 224.27,
+        "parts_per_board_usd": 44.85,
+        "assembly_labor_total_usd": 26.97,
+        "setup_stencil_confirmation_manual_setup_usd": 13.74,
+        "feeder_usd_range": [
+          49.12,
+          64.47
+        ],
+        "xray_usd_range": [
+          8.2,
+          12.3
+        ],
+        "subtotal_range_usd": [
+          322.3,
+          341.75
+        ],
+        "per_controller_range_usd": [
+          64.46,
+          68.35
+        ]
+      }
+    ],
+    "ten_passive_adapters_parts_only_usd": 6.4,
+    "exclusions": [
+      "PCB fabrication, rails/panelization, DFM-driven extra operations",
+      "component attrition/MOQ and price changes",
+      "extra pre-reflow, fixtures, freight, taxes",
+      "ten adapter bare PCBs and hand labor",
+      "custom harnesses, crimp contacts/housings, motherboard patch leads",
+      "external 5V supply and enclosure"
+    ],
+    "assumptions": [
+      "One-side Economic PCBA; final board/stock acceptance pending",
+      "Loading lower case: SMT Extended only; upper case: all Extended including through-hole",
+      "No promotional coupons assumed",
+      "X-ray counts 1..3 components per board; final classified parts are supplier decision",
+      "Selected generic footprints are candidates; no CPL or PCB quote exists"
+    ]
   }
 }

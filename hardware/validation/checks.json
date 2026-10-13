@@ -1,0 +1,38 @@
+{
+  "revision": "B.1",
+  "method": "KiCad exported netlist + bounded DC calculations; no physical test / SPICE",
+  "controller": {
+    "components": 694,
+    "pins_checked_against_KiCad": 1887,
+    "erc_violations": 0
+  },
+  "adapter": {
+    "components": 10,
+    "pins_checked_against_KiCad": 28,
+    "erc_violations": 0
+  },
+  "unassigned_footprints": [
+    "ssr",
+    "opto",
+    "iso",
+    "ind",
+    "barrel"
+  ],
+  "isolation_topology": "PASS: controller and ten host domains remain separate through defined barriers",
+  "led_threshold_V": {
+    "turn_on": [
+      0.361,
+      1.357
+    ],
+    "turn_off": [
+      0.216,
+      1.222
+    ]
+  },
+  "led_input_loading_bound_uA": 50.51,
+  "led_conditions": "0..5V on each input, OFF differential <=0.2V, ON >=1.4V; resistor effective 1.5% including temperature allowance, host rail +/-3%, combined comparator input error +/-14mV. Motherboard envelope must be measured.",
+  "photorelay_if_min_mA": 5.626,
+  "photorelay_if_max_mA": 9.757,
+  "timer_nominal_s": 16.81,
+  "timer_note": "Timing capacitance under DC bias and temperature is unmeasured; 8..25s is a qualification target, not a guaranteed bound. Static stall releases; repeated edges can trigger further windows."
+}

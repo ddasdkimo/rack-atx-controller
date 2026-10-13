@@ -1,0 +1,46 @@
+{
+  "id": "C8465",
+  "mpn": "WJ500V-5.08-2P",
+  "manufacturer": "Ningbo Kangnex Elec",
+  "package": "Plugin,P=5.08mm",
+  "classification": "Extended",
+  "assembly": "Wave Soldering",
+  "pcba_type": "Economic and Standard",
+  "stock": 261906,
+  "loss": 0,
+  "prices": [
+    {
+      "min_qty": 1,
+      "max_qty": 49,
+      "usd": 0.1341
+    },
+    {
+      "min_qty": 50,
+      "max_qty": 149,
+      "usd": 0.108
+    },
+    {
+      "min_qty": 150,
+      "max_qty": 499,
+      "usd": 0.0946
+    },
+    {
+      "min_qty": 500,
+      "max_qty": 2499,
+      "usd": 0.0842
+    },
+    {
+      "min_qty": 2500,
+      "max_qty": 4999,
+      "usd": 0.0805
+    },
+    {
+      "min_qty": 5000,
+      "max_qty": -1,
+      "usd": 0.0778
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/C8465",
+  "checked_at": "2026-10-13T15:48:15.997975+00:00",
+  "status": "public JLC page observed; recheck at ordering"
+}

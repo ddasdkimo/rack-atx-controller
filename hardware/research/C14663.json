@@ -1,0 +1,46 @@
+{
+  "id": "C14663",
+  "mpn": "CC0603KRX7R9BB104",
+  "manufacturer": "YAGEO",
+  "package": "0603",
+  "classification": "Basic",
+  "assembly": "SMT Assembly",
+  "pcba_type": "Economic and Standard",
+  "stock": 53307896,
+  "loss": 10,
+  "prices": [
+    {
+      "min_qty": 1,
+      "max_qty": 499,
+      "usd": 0.014
+    },
+    {
+      "min_qty": 500,
+      "max_qty": 1499,
+      "usd": 0.0106
+    },
+    {
+      "min_qty": 1500,
+      "max_qty": 3999,
+      "usd": 0.0091
+    },
+    {
+      "min_qty": 4000,
+      "max_qty": 23999,
+      "usd": 0.0076
+    },
+    {
+      "min_qty": 24000,
+      "max_qty": 47999,
+      "usd": 0.0071
+    },
+    {
+      "min_qty": 48000,
+      "max_qty": -1,
+      "usd": 0.0068
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/C14663",
+  "checked_at": "2026-10-13T15:20:39.536320+00:00",
+  "status": "public JLC page observed; recheck at ordering"
+}
