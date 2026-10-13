@@ -1,0 +1,12 @@
+.DS_Store
+__pycache__/
+node_modules/
+.venv/
+.cache/
+*.log
+.env
+.env.*
+!.env.example
+artifacts/local/
+dist/
+*.tar.gz

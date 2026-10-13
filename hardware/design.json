@@ -1,0 +1,282 @@
+{
+  "project": "Rack ATX Controller",
+  "revision": "A.2",
+  "date": "2026-10-13",
+  "stage": "concept",
+  "host_count": 10,
+  "controller_outline_mm": [
+    280,
+    220,
+    1.6
+  ],
+  "outline_status": "illustrative envelope, not mechanically validated",
+  "connector": {
+    "name": "J01–J10",
+    "type": "Molex Micro-Fit 3.0, 43045-1000 PCB header + 43025-1000 receptacle housing; candidate",
+    "view": "Signal allocation only. Physical cavity order and mating-face orientation must be verified from manufacturer drawing before fabrication.",
+    "pins": [
+      {
+        "pin": 1,
+        "signal": "PWR_A",
+        "group": "power",
+        "destination": "PWR_SW contact A",
+        "polarity": "none",
+        "conductor": "紅／第1對"
+      },
+      {
+        "pin": 2,
+        "signal": "PWR_B",
+        "group": "power",
+        "destination": "PWR_SW contact B",
+        "polarity": "none",
+        "conductor": "黑／第1對"
+      },
+      {
+        "pin": 3,
+        "signal": "RST_A",
+        "group": "reset",
+        "destination": "RESET_SW contact A",
+        "polarity": "none",
+        "conductor": "白／第2對"
+      },
+      {
+        "pin": 4,
+        "signal": "RST_B",
+        "group": "reset",
+        "destination": "RESET_SW contact B",
+        "polarity": "none",
+        "conductor": "黑／第2對"
+      },
+      {
+        "pin": 5,
+        "signal": "PLED+",
+        "group": "pled",
+        "destination": "Power LED positive",
+        "polarity": "+",
+        "conductor": "綠／第3對"
+      },
+      {
+        "pin": 6,
+        "signal": "PLED−",
+        "group": "pled",
+        "destination": "Power LED negative",
+        "polarity": "−",
+        "conductor": "黑／第3對"
+      },
+      {
+        "pin": 7,
+        "signal": "HDD+",
+        "group": "hdd",
+        "destination": "HDD LED positive",
+        "polarity": "+",
+        "conductor": "藍／第4對"
+      },
+      {
+        "pin": 8,
+        "signal": "HDD−",
+        "group": "hdd",
+        "destination": "HDD LED negative",
+        "polarity": "−",
+        "conductor": "黑／第4對"
+      },
+      {
+        "pin": 9,
+        "signal": "HOST_REF",
+        "group": "reference",
+        "destination": "Verified ground on THIS motherboard",
+        "polarity": "reference",
+        "conductor": "黑／第5對"
+      },
+      {
+        "pin": 10,
+        "signal": "NC",
+        "group": "unused",
+        "destination": "Not connected",
+        "polarity": "none",
+        "conductor": "黃／第5對，封存"
+      }
+    ]
+  },
+  "hosts": [
+    {
+      "id": "PC-01",
+      "port": 1,
+      "adapter": "A01",
+      "role": "simulated Linux PC",
+      "motherboard": "generic illustrative model; header mapping unverified"
+    },
+    {
+      "id": "PC-02",
+      "port": 2,
+      "adapter": "A02",
+      "role": "simulated Linux PC",
+      "motherboard": "generic illustrative model; header mapping unverified"
+    }
+  ],
+  "functions": [
+    {
+      "id": "power",
+      "label": "POWER 按鈕",
+      "pair": [
+        1,
+        2
+      ],
+      "series": 1,
+      "method": "parallel normally-open isolated switch",
+      "signal": "PWR_SW"
+    },
+    {
+      "id": "reset",
+      "label": "RESET 按鈕",
+      "pair": [
+        3,
+        4
+      ],
+      "series": 2,
+      "method": "parallel normally-open isolated switch",
+      "signal": "RESET_SW"
+    },
+    {
+      "id": "pled",
+      "label": "電源燈",
+      "pair": [
+        5,
+        6
+      ],
+      "series": 3,
+      "method": "high-impedance differential sense with isolated supply and return",
+      "signal": "PLED"
+    },
+    {
+      "id": "hdd",
+      "label": "硬碟燈",
+      "pair": [
+        7,
+        8
+      ],
+      "series": 4,
+      "method": "high-impedance differential sense with isolated supply and return",
+      "signal": "HDD_LED"
+    },
+    {
+      "id": "reference",
+      "label": "主機參考地",
+      "pair": [
+        9
+      ],
+      "series": 5,
+      "method": "reference for this host isolated sensing domain only",
+      "signal": "HOST_REF"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "ESP32-S3 module",
+      "qty": 1,
+      "status": "candidate"
+    },
+    {
+      "name": "W5500 Ethernet interface and magnetics",
+      "qty": 1,
+      "status": "candidate"
+    },
+    {
+      "name": "MCP23S17 16-bit I/O expander",
+      "qty": 3,
+      "status": "candidate"
+    },
+    {
+      "name": "TLP3122A normally-open photorelay",
+      "qty": 20,
+      "status": "candidate, not final footprint"
+    },
+    {
+      "name": "High-impedance differential LED sensing channel",
+      "qty": 20,
+      "status": "circuit values and protection TBD"
+    },
+    {
+      "name": "Isolated LED status return channel",
+      "qty": 20,
+      "status": "candidate optocoupler"
+    },
+    {
+      "name": "Host-domain isolated DC/DC supply with regulation",
+      "qty": 10,
+      "status": "part and load budget TBD"
+    },
+    {
+      "name": "Hardware watchdog and bounded button timing",
+      "qty": 1,
+      "status": "circuit TBD"
+    },
+    {
+      "name": "Passive case pass-through adapter",
+      "qty": 10,
+      "status": "mechanical and pinout concept"
+    }
+  ],
+  "constraints": {
+    "original_buttons_preserved": true,
+    "original_leds_preserved": true,
+    "all_host_domains_isolated": true,
+    "original_paths_need_controller_power": false,
+    "cable_target_m": [
+      1,
+      3
+    ],
+    "cable_status": "prototype validation target only, not a supported maximum",
+    "cable": "Belden 9505 candidate; four signal pairs + host reference; fifth yellow conductor insulated and parked at both ends, pin 10 unpopulated. Shield/drain separate from all signal pins.",
+    "ethernet": "LAN port only; electrically distinct from J01–J10",
+    "manufacturing_ready": false
+  },
+  "physical_parts": [
+    {
+      "role": "兩端 PCB 插座",
+      "part": "Molex 43045-1000",
+      "spec": "Micro-Fit 3.0 · 10 pin · 直角通孔",
+      "url": "https://www.molex.com/en-us/products/part-detail/430451000",
+      "qty_full_10_hosts": 20,
+      "lcsc_id": null,
+      "jlc_assembly_verified": false,
+      "status": "candidate, manufacturer specifications checked; assembly unverified"
+    },
+    {
+      "role": "線端膠殼",
+      "part": "Molex 43025-1000",
+      "spec": "雙排 10 pin · 防反插／鎖扣",
+      "url": "https://www.molex.com/en-us/products/part-detail/430251000",
+      "qty_full_10_hosts": 20,
+      "lcsc_id": null,
+      "jlc_assembly_verified": false,
+      "status": "candidate, manufacturer specifications checked; assembly unverified"
+    },
+    {
+      "role": "壓接端子",
+      "part": "Molex 43030-0007",
+      "spec": "母端子 · 24–20 AWG · 鍍錫",
+      "url": "https://www.molex.com/en-us/products/part-detail/430300007",
+      "qty_full_10_hosts": 180,
+      "lcsc_id": null,
+      "jlc_assembly_verified": false,
+      "status": "candidate, manufacturer specifications checked; assembly unverified"
+    },
+    {
+      "role": "機櫃間線材",
+      "part": "Belden 9505",
+      "spec": "5 對／10 芯 · 24 AWG 絞線 · 總屏蔽 · 外徑 7.34 mm",
+      "url": "https://www.belden.com/products/cable/electronic-wire-cable/multi-pair-cable/9505",
+      "qty_full_10_hosts": "cut to length",
+      "lcsc_id": null,
+      "jlc_assembly_verified": false,
+      "status": "candidate, manufacturer specifications checked; assembly unverified"
+    }
+  ],
+  "manufacturing": {
+    "preferred_fabricator": "JLCPCB",
+    "prefer_assembly_catalog_parts": true,
+    "stock_verified": false,
+    "fabrication_ready": false,
+    "notes": "Verify exact LCSC ID, package, assembly support and current stock before release."
+  }
+}
