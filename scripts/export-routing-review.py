@@ -27,6 +27,6 @@ svg=(R/'hardware/layout-S2-review.svg').read_text();tracks='<g id="routed-copper
 for t in segments:
  a,z=t['a'],t['b'];tracks+=f'<path d="M{a[0]},{a[1]} L{z[0]},{z[1]}" stroke-width="{t["width_mm"]}"><title>{html.escape(t["net"])} / F.Cu</title></path>'
 tracks+='</g>'
-svg=svg.replace('<g><title>',tracks+'<g><title>',1).replace('S.2 / 200 x 170 mm / PLACEMENT REVIEW - NO ROUTES','R.0 / 200 x 170 mm / LOCAL ROUTING ONLY - INCOMPLETE')
+svg=svg.replace('</svg>',tracks+'</svg>').replace('S.2 / 200 x 170 mm / PLACEMENT REVIEW - NO ROUTES','R.0 / 200 x 170 mm / LOCAL ROUTING ONLY - INCOMPLETE')
 (R/'hardware/routing-R0.svg').write_text(svg)
 print('Verified:',len(segments),'actual F.Cu tracks;',r['total_track_length_mm'],'mm; unchanged placements/nets; DRC 0; incomplete connectivity')
