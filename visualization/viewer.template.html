@@ -27,7 +27,7 @@
     @media(max-width:500px) { #rack-atx-3d .rack-space { height:420px; } #rack-atx-3d .rack-heading { padding-right:70px; } }
   </style>
   <div class="rack-heading"><h2>10 路機櫃控制板</h2><span class="text-small text-muted" data-revision></span></div>
-  <div class="rack-detail"><strong>目前：一片控制十台。</strong>R.2 佈線版：<span data-routing-summary></span>。100×110 mm、兩層。原生 DRC／未連接均為 0；尚未製造放行。 <a href="https://rack-atx-controller-ddasdkimo.raidavid.chatgpt.site/layout.html" target="_blank" rel="noopener">查看可放大布局與擺放理由 →</a></div>
+  <div class="rack-detail"><strong>目前：一片控制十台。</strong>R.3 佈線版：<span data-routing-summary></span>。100×110 mm、兩層。原生 DRC／未連接均為 0；尚未製造放行。 <a href="https://rack-atx-controller-ddasdkimo.raidavid.chatgpt.site/layout.html" target="_blank" rel="noopener">查看可放大布局與擺放理由 →</a></div>
   <div class="rack-detail text-small">十路改為兩排各五路；300 個電氣元件均有焊盤，四個 M3 固定孔、隔離禁佈區與指定電源腳去耦位置已納入。焊盤圖面覆核不代表已完成實物／製造驗證。</div>
   <div class="rack-detail">中央：1 塊主控板　／　每台電腦：1 片免供電接線分接板（可改 Y 型線束）</div>
   <div class="viz-controls" aria-label="3D 觀察位置">
@@ -41,7 +41,7 @@
     <div class="rack-labels"></div>
     <div class="rack-error text-destructive" role="alert">3D 資源無法載入；下方接線圖仍可檢視。</div>
   </div>
-  <div class="rack-caption text-small text-muted"><span>拖曳旋轉 · 滾輪／雙指縮放</span><span>R.2 原生座標 · 雙面銅箔與過孔</span></div>
+  <div class="rack-caption text-small text-muted"><span>拖曳旋轉 · 滾輪／雙指縮放</span><span>R.3 原生座標 · 雙面銅箔與過孔</span></div>
   <div class="rack-detail text-small" aria-live="polite" data-scene-detail>J01 → PC-01 · J02 → PC-02 · J03–J10 預留</div>
   <hr>
   <div class="rack-detail"><strong>控制板燈號示意</strong> · <a href="https://rack-atx-controller-ddasdkimo.raidavid.chatgpt.site/indicator-layout-R2.svg" target="_blank" rel="noopener">查看實際燈號位置 ↗</a> · 下列選項只展示燈號，不會操作任何電腦。</div>
@@ -74,16 +74,16 @@
   <div class="text-small">每片支援 10 台。新版 100×110 mm 裸板費待報價，以下明確分開零件與組裝，不把未知板費當成零。</div>
   <div class="table-responsive"><table class="table table-sm tabular-nums"><thead><tr><th scope="col">上板數量</th><th scope="col">裸板</th><th scope="col">零件</th><th scope="col">零件＋組裝小計<br><span class="text-small">尚須加裸板、運稅</span></th></tr></thead><tbody data-costs></tbody></table></div>
   <div class="rack-detail text-small" data-pcb-cost-note></div>
-  <div class="text-small">五片零件約 US$162.53，相較 B.1 的 US$224.27 約少 28%。零件價格不含耗損／MOQ；散料另向通路購買。組裝估算含開單、鋼網、上料、SMT、通孔焊接與 X-ray，未含板費及燒錄測試。</div>
+  <div class="text-small">五片零件約 US$162.38，相較 B.1 的 US$224.27 約少 28%。零件價格不含耗損／MOQ；散料另向通路購買。組裝估算含開單、鋼網、上料、SMT、通孔焊接與 X-ray，未含板費及燒錄測試。</div>
   <details class="rack-detail"><summary>展開 B.2 費用明細（2／5 片成板）</summary><div class="table-responsive"><table class="table table-sm tabular-nums"><thead><tr><th scope="col">整批費用</th><th scope="col">2 片成板</th><th scope="col">5 片成板</th></tr></thead><tbody data-cost-breakdown></tbody></table></div></details>
   <div class="rack-detail">含運到手總價：待正式報價</div>
   <div class="text-small">到手總價＝全部焊好製作合計＋耗損／MOQ／工藝追加＋運費＋稅金。這些未確認金額尚未計入，不代表 $0；目前不是工廠正式報價。單面 Economic PCBA，實際代貼工序與費用以工廠審核為準。</div>
   <div class="rack-detail text-small">兩種方案都只比較中央主控板，未含 10 片分接板、線束、外殼、外接電源。已焊好的板子仍需燒錄、接線與測試，才是可用的機櫃控制設備。</div>
   <div class="rack-detail text-small" data-cost-note></div>
   <div class="rack-detail text-small">原理圖：<a href="https://github.com/ddasdkimo/rack-atx-controller/blob/main/hardware/release/controller-schematic.pdf" target="_blank" rel="noopener noreferrer">主控板 PDF</a> · <a href="https://github.com/ddasdkimo/rack-atx-controller/blob/main/hardware/release/adapter-schematic.pdf" target="_blank" rel="noopener noreferrer">免供電分接板 PDF</a> · <a href="https://github.com/ddasdkimo/rack-atx-controller/tree/main/hardware/cad/B2" target="_blank" rel="noopener noreferrer">KiCad 原始檔</a></div>
-  <div class="rack-detail text-small">縮板評估：<a href="https://github.com/ddasdkimo/rack-atx-controller/blob/main/hardware/COMPACT-STUDY.md" target="_blank" rel="noopener noreferrer">兩層可行性與限制</a> · <a href="https://github.com/ddasdkimo/rack-atx-controller/blob/main/hardware/cad/B2/rack-atx-controller.kicad_pcb" target="_blank" rel="noopener noreferrer">KiCad R.2 佈線</a> · <a href="https://github.com/ddasdkimo/rack-atx-controller/tree/main/hardware/research" target="_blank" rel="noopener noreferrer">JLC 實際試算截圖</a></div>
+  <div class="rack-detail text-small">縮板評估：<a href="https://github.com/ddasdkimo/rack-atx-controller/blob/main/hardware/COMPACT-STUDY.md" target="_blank" rel="noopener noreferrer">兩層可行性與限制</a> · <a href="https://github.com/ddasdkimo/rack-atx-controller/blob/main/hardware/cad/B2/rack-atx-controller.kicad_pcb" target="_blank" rel="noopener noreferrer">KiCad R.3 佈線</a> · <a href="https://github.com/ddasdkimo/rack-atx-controller/tree/main/hardware/research" target="_blank" rel="noopener noreferrer">JLC 實際試算截圖</a></div>
   <div class="rack-detail text-small">採購：<a href="https://github.com/ddasdkimo/rack-atx-controller/tree/main/hardware/bom" target="_blank" rel="noopener noreferrer">完整 BOM／批量成本表</a> · <a href="https://github.com/ddasdkimo/rack-atx-controller/blob/main/hardware/JLCPCB.md" target="_blank" rel="noopener noreferrer">收費與選料依據</a></div>
-  <div class="rack-detail text-small">B.2 電路／R.2 佈線 · 兩板 ERC、DRC、未連接均為 0。USB／Ethernet 阻抗與回流、工廠 DFM 及實機尚未驗證；行為模擬不等同實測。</div>
+  <div class="rack-detail text-small">B.2 電路／R.3 佈線 · 兩板 ERC、DRC、未連接均為 0。USB／Ethernet 幾何回流複查通過；工廠 DFM、阻抗與實機尚未驗證；行為模擬不等同實測。</div>
   <div class="rack-detail text-small"><a href="https://github.com/ddasdkimo/rack-atx-controller" target="_blank" rel="noopener noreferrer">GitHub 設計紀錄</a></div>
   <script type="application/json" data-design>__DESIGN_JSON__</script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.min.js"></script>
@@ -103,7 +103,7 @@
     normalize();
     const groupIndex=id=>design.functions.find(f=>f.id===id)?.series||1;
     const cssSeries=id=>'var(--viz-series-'+groupIndex(id)+')';
-    qs('[data-revision]').textContent='Rev '+design.revision+' · R.2 佈線完成／打樣前審閱';
+    qs('[data-revision]').textContent='Rev '+design.revision+' · R.3 佈線完成／打樣前審閱';
     qs('[data-routing-summary]').textContent='300 個元件、'+design.routing_study.track_segments+' 段走線、'+design.routing_study.vias+' 個過孔';
     qs('[data-parts]').innerHTML=(design.physical_parts||[]).map(p=>'<tr><td>'+p.role+'</td><td><a target="_blank" rel="noopener noreferrer" href="'+p.url+'">'+p.part+'</a></td><td>'+p.spec+'</td></tr>').join('');
     qs('[data-electronics]').innerHTML=design.electronics.map(p=>'<tr><td>'+p.role+'</td><td><a target="_blank" rel="noopener noreferrer" href="'+p.url+'">'+p.mpn+' · '+p.code+'</a></td><td>'+p.qty+'</td></tr>').join('');
@@ -241,7 +241,7 @@
       if(['mcu','rj45','barrel'].includes(c.key))tag(({mcu:'ESP32-S3',rj45:'LAN / W5500',barrel:'5V 輸入'})[c.key],[x-1,2.7,z],['controller']);
     }
     applyLamp3D=()=>{for(const [ref,item] of lampMats){const on=indicatorOn(ref),color=item.green?(on?0x42d77d:0x183b25):(on?0xf5705e:0x512821);item.mat.color.setHex(color);item.mat.emissive.setHex(on?color:0);item.mat.emissiveIntensity=on?.55:0;}};refreshIndicators();
-    tag('100 × 110 mm · R.2 已連通',[cx,3,-10],['overview'],1);
+    tag('100 × 110 mm · R.3 已連通',[cx,3,-10],['overview'],1);
     tag('300 個元件 · 0 未連接',[cx,3,-9],['controller'],1);
     const controllerShell=box(cx,2.8,0,boardW+1,5.6,boardD+1,material('--foreground',{transparent:true,opacity:.06,depthWrite:false}));shells.push(controllerShell);
     path([peripherals.rj45,[peripherals.rj45[0],1,-12],[-37,1,-12],[-38,1,-14]],material('--border'),.2);

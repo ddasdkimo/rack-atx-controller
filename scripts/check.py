@@ -66,10 +66,11 @@ assert d['constraints']['remote_led_sensing'] is False
 assert d['constraints']['routing_requires_user_layout_approval'] is False
 assert layout['user_approval']==audit['user_approval']=='routing_authorized'
 route=d['routing_study']
-assert route['track_segments']==len(route['segments'])==2754
-assert route['vias']==len(route['via_geometry'])==185
+assert route['track_segments']==len(route['segments'])
+assert route['vias']==len(route['via_geometry'])
 assert route['ground_zones']==11 and route['native_unrouted']==0
-checks=json.loads((root/'hardware/validation/routing-R2-checks.json').read_text())
+checks=json.loads((root/'hardware/validation/routing-R3-checks.json').read_text())
+assert route['revision']=='R.3' and route['track_segments']==checks['controller']['track_segments'] and route['vias']==checks['controller']['vias']
 assert all(checks[n]['native_unrouted']==checks[n]['drc_violations']==0 for n in ['controller','adapter'])
 assert checks['controller']['pcb_sha256']==route['pcb_sha256']
 assert d['adapter_geometry']['pcb_sha256']==checks['adapter']['pcb_sha256']
@@ -84,4 +85,4 @@ assert route['pcb_sha256']==hashlib.sha256((root/'hardware/cad/B2/rack-atx-contr
 assert checks['adapter']['pcb_sha256']==hashlib.sha256((root/'hardware/cad/B2/adapter.kicad_pcb').read_bytes()).hexdigest()
 assert cost['pcb_fabrication_estimate']['total_usd'] is None
 assert all(b['assembled_total_range_usd'] is None for b in cost['batches'])
-print('PASS: B.2 simulation hash, S.3 baseline + R.2 routed native hashes, no LED sensing, both boards DRC/unrouted zero; current PCB pricing stays unknown.')
+print('PASS: B.2 simulation hash, S.3 baseline + R.3 routed native hashes, no LED sensing, both boards DRC/unrouted zero; current PCB pricing stays unknown.')

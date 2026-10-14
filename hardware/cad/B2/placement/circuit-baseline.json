@@ -1,0 +1,7327 @@
+{
+  "revision": "B.2",
+  "parts": {
+    "R33": {
+      "key": "R33",
+      "code": "C23140",
+      "value": "33 1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": [
+        [
+          "1",
+          "~",
+          "passive"
+        ],
+        [
+          "2",
+          "~",
+          "passive"
+        ]
+      ],
+      "kind": "r",
+      "note": "",
+      "catalog": {
+        "id": "C23140",
+        "mpn": "0603WAF330JT5E",
+        "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+        "package": "0603",
+        "classification": "Basic",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 5175876,
+        "loss": 10,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 999,
+            "usd": 0.0025
+          },
+          {
+            "min_qty": 1000,
+            "max_qty": 4999,
+            "usd": 0.002
+          },
+          {
+            "min_qty": 5000,
+            "max_qty": 9999,
+            "usd": 0.0017
+          },
+          {
+            "min_qty": 10000,
+            "max_qty": 49999,
+            "usd": 0.0015
+          },
+          {
+            "min_qty": 50000,
+            "max_qty": 50199,
+            "usd": 0.0013
+          },
+          {
+            "min_qty": 50200,
+            "max_qty": -1,
+            "usd": 0.0013
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C23140",
+        "checked_at": "2026-10-13T15:41:21.024471+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "R0": {
+      "key": "R0",
+      "code": "C21189",
+      "value": "0 1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": [
+        [
+          "1",
+          "~",
+          "passive"
+        ],
+        [
+          "2",
+          "~",
+          "passive"
+        ]
+      ],
+      "kind": "r",
+      "note": "",
+      "catalog": {
+        "id": "C21189",
+        "mpn": "0603WAF0000T5E",
+        "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+        "package": "0603",
+        "classification": "Basic",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 24624745,
+        "loss": 10,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 999,
+            "usd": 0.0022
+          },
+          {
+            "min_qty": 1000,
+            "max_qty": 4999,
+            "usd": 0.0017
+          },
+          {
+            "min_qty": 5000,
+            "max_qty": 9999,
+            "usd": 0.0015
+          },
+          {
+            "min_qty": 10000,
+            "max_qty": 49999,
+            "usd": 0.0013
+          },
+          {
+            "min_qty": 50000,
+            "max_qty": 50199,
+            "usd": 0.0012
+          },
+          {
+            "min_qty": 50200,
+            "max_qty": -1,
+            "usd": 0.0012
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C21189",
+        "checked_at": "2026-10-13T15:20:39.483336+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "R47": {
+      "key": "R47",
+      "code": "C23182",
+      "value": "47 1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": [
+        [
+          "1",
+          "~",
+          "passive"
+        ],
+        [
+          "2",
+          "~",
+          "passive"
+        ]
+      ],
+      "kind": "r",
+      "note": "",
+      "catalog": {
+        "id": "C23182",
+        "mpn": "0603WAF470JT5E",
+        "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+        "package": "0603",
+        "classification": "Basic",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 971973,
+        "loss": 10,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 999,
+            "usd": 0.004
+          },
+          {
+            "min_qty": 1000,
+            "max_qty": 4999,
+            "usd": 0.003
+          },
+          {
+            "min_qty": 5000,
+            "max_qty": 9999,
+            "usd": 0.0025
+          },
+          {
+            "min_qty": 10000,
+            "max_qty": 49999,
+            "usd": 0.0022
+          },
+          {
+            "min_qty": 50000,
+            "max_qty": 50199,
+            "usd": 0.0019
+          },
+          {
+            "min_qty": 50200,
+            "max_qty": -1,
+            "usd": 0.0019
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C23182",
+        "checked_at": "2026-10-13T15:11:27.450515+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "R49.9": {
+      "key": "R49.9",
+      "code": "C23185",
+      "value": "49.9 1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": [
+        [
+          "1",
+          "~",
+          "passive"
+        ],
+        [
+          "2",
+          "~",
+          "passive"
+        ]
+      ],
+      "kind": "r",
+      "note": "",
+      "catalog": {
+        "id": "C23185",
+        "mpn": "0603WAF499JT5E",
+        "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+        "package": "0603",
+        "classification": "Basic",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 1972323,
+        "loss": 10,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 999,
+            "usd": 0.0021
+          },
+          {
+            "min_qty": 1000,
+            "max_qty": 4999,
+            "usd": 0.0016
+          },
+          {
+            "min_qty": 5000,
+            "max_qty": 9999,
+            "usd": 0.0014
+          },
+          {
+            "min_qty": 10000,
+            "max_qty": 49999,
+            "usd": 0.0012
+          },
+          {
+            "min_qty": 50000,
+            "max_qty": 50199,
+            "usd": 0.001
+          },
+          {
+            "min_qty": 50200,
+            "max_qty": -1,
+            "usd": 0.001
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C23185",
+        "checked_at": "2026-10-13T15:24:51.215319+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "R220": {
+      "key": "R220",
+      "code": "C22962",
+      "value": "220 1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": [
+        [
+          "1",
+          "~",
+          "passive"
+        ],
+        [
+          "2",
+          "~",
+          "passive"
+        ]
+      ],
+      "kind": "r",
+      "note": "",
+      "catalog": {
+        "id": "C22962",
+        "mpn": "0603WAF2200T5E",
+        "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+        "package": "0603",
+        "classification": "Basic",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 2129597,
+        "loss": 10,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 999,
+            "usd": 0.0035
+          },
+          {
+            "min_qty": 1000,
+            "max_qty": 4999,
+            "usd": 0.0027
+          },
+          {
+            "min_qty": 5000,
+            "max_qty": 9999,
+            "usd": 0.0023
+          },
+          {
+            "min_qty": 10000,
+            "max_qty": 49999,
+            "usd": 0.0021
+          },
+          {
+            "min_qty": 50000,
+            "max_qty": 50199,
+            "usd": 0.0018
+          },
+          {
+            "min_qty": 50200,
+            "max_qty": -1,
+            "usd": 0.0018
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C22962",
+        "checked_at": "2026-10-13T15:12:43.320139+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "R330": {
+      "key": "R330",
+      "code": "C23138",
+      "value": "330 1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": [
+        [
+          "1",
+          "~",
+          "passive"
+        ],
+        [
+          "2",
+          "~",
+          "passive"
+        ]
+      ],
+      "kind": "r",
+      "note": "",
+      "catalog": {
+        "id": "C23138",
+        "mpn": "0603WAF3300T5E",
+        "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+        "package": "0603",
+        "classification": "Basic",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 3627090,
+        "loss": 10,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 999,
+            "usd": 0.0022
+          },
+          {
+            "min_qty": 1000,
+            "max_qty": 4999,
+            "usd": 0.0017
+          },
+          {
+            "min_qty": 5000,
+            "max_qty": 9999,
+            "usd": 0.0014
+          },
+          {
+            "min_qty": 10000,
+            "max_qty": 49999,
+            "usd": 0.0012
+          },
+          {
+            "min_qty": 50000,
+            "max_qty": 50199,
+            "usd": 0.001
+          },
+          {
+            "min_qty": 50200,
+            "max_qty": -1,
+            "usd": 0.001
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C23138",
+        "checked_at": "2026-10-13T15:12:44.845004+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "R1.5k": {
+      "key": "R1.5k",
+      "code": "C22843",
+      "value": "1.5k 1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": [
+        [
+          "1",
+          "~",
+          "passive"
+        ],
+        [
+          "2",
+          "~",
+          "passive"
+        ]
+      ],
+      "kind": "r",
+      "note": "",
+      "catalog": {
+        "id": "C22843",
+        "mpn": "0603WAF1501T5E",
+        "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+        "package": "0603",
+        "classification": "Basic",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 4314656,
+        "loss": 10,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 999,
+            "usd": 0.002
+          },
+          {
+            "min_qty": 1000,
+            "max_qty": 4999,
+            "usd": 0.0015
+          },
+          {
+            "min_qty": 5000,
+            "max_qty": 9999,
+            "usd": 0.0013
+          },
+          {
+            "min_qty": 10000,
+            "max_qty": 49999,
+            "usd": 0.0011
+          },
+          {
+            "min_qty": 50000,
+            "max_qty": 50199,
+            "usd": 0.001
+          },
+          {
+            "min_qty": 50200,
+            "max_qty": -1,
+            "usd": 0.001
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C22843",
+        "checked_at": "2026-10-13T15:11:28.820502+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "R5.1k": {
+      "key": "R5.1k",
+      "code": "C23186",
+      "value": "5.1k 1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": [
+        [
+          "1",
+          "~",
+          "passive"
+        ],
+        [
+          "2",
+          "~",
+          "passive"
+        ]
+      ],
+      "kind": "r",
+      "note": "",
+      "catalog": {
+        "id": "C23186",
+        "mpn": "0603WAF5101T5E",
+        "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+        "package": "0603",
+        "classification": "Basic",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 24076196,
+        "loss": 10,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 999,
+            "usd": 0.0015
+          },
+          {
+            "min_qty": 1000,
+            "max_qty": 4999,
+            "usd": 0.0012
+          },
+          {
+            "min_qty": 5000,
+            "max_qty": 9999,
+            "usd": 0.001
+          },
+          {
+            "min_qty": 10000,
+            "max_qty": 49999,
+            "usd": 0.0008
+          },
+          {
+            "min_qty": 50000,
+            "max_qty": 50199,
+            "usd": 0.0008
+          },
+          {
+            "min_qty": 50200,
+            "max_qty": -1,
+            "usd": 0.0008
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C23186",
+        "checked_at": "2026-10-13T15:22:33.103748+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "R10k": {
+      "key": "R10k",
+      "code": "C25804",
+      "value": "10k 1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": [
+        [
+          "1",
+          "~",
+          "passive"
+        ],
+        [
+          "2",
+          "~",
+          "passive"
+        ]
+      ],
+      "kind": "r",
+      "note": "",
+      "catalog": {
+        "id": "C25804",
+        "mpn": "0603WAF1002T5E",
+        "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+        "package": "0603",
+        "classification": "Basic",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 31975394,
+        "loss": 10,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 999,
+            "usd": 0.0022
+          },
+          {
+            "min_qty": 1000,
+            "max_qty": 4999,
+            "usd": 0.0018
+          },
+          {
+            "min_qty": 5000,
+            "max_qty": 9999,
+            "usd": 0.0016
+          },
+          {
+            "min_qty": 10000,
+            "max_qty": 49999,
+            "usd": 0.0015
+          },
+          {
+            "min_qty": 50000,
+            "max_qty": 50199,
+            "usd": 0.0014
+          },
+          {
+            "min_qty": 50200,
+            "max_qty": -1,
+            "usd": 0.0014
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C25804",
+        "checked_at": "2026-10-13T15:10:20.790070+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "R12.4k": {
+      "key": "R12.4k",
+      "code": "C22865",
+      "value": "12.4k 1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": [
+        [
+          "1",
+          "~",
+          "passive"
+        ],
+        [
+          "2",
+          "~",
+          "passive"
+        ]
+      ],
+      "kind": "r",
+      "note": "",
+      "catalog": {
+        "id": "C22865",
+        "mpn": "0603WAF1242T5E",
+        "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+        "package": "0603",
+        "classification": "Extended",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 199175,
+        "loss": 10,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 999,
+            "usd": 0.0015
+          },
+          {
+            "min_qty": 1000,
+            "max_qty": 4999,
+            "usd": 0.0012
+          },
+          {
+            "min_qty": 5000,
+            "max_qty": 9999,
+            "usd": 0.001
+          },
+          {
+            "min_qty": 10000,
+            "max_qty": 49999,
+            "usd": 0.0009
+          },
+          {
+            "min_qty": 50000,
+            "max_qty": 50199,
+            "usd": 0.0008
+          },
+          {
+            "min_qty": 50200,
+            "max_qty": -1,
+            "usd": 0.0008
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C22865",
+        "checked_at": "2026-10-13T15:22:32.998707+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "R100k": {
+      "key": "R100k",
+      "code": "C25803",
+      "value": "100k 1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pins": [
+        [
+          "1",
+          "~",
+          "passive"
+        ],
+        [
+          "2",
+          "~",
+          "passive"
+        ]
+      ],
+      "kind": "r",
+      "note": "",
+      "catalog": {
+        "id": "C25803",
+        "mpn": "0603WAF1003T5E",
+        "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+        "package": "0603",
+        "classification": "Basic",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 20296056,
+        "loss": 10,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 999,
+            "usd": 0.0031
+          },
+          {
+            "min_qty": 1000,
+            "max_qty": 4999,
+            "usd": 0.0024
+          },
+          {
+            "min_qty": 5000,
+            "max_qty": 9999,
+            "usd": 0.0021
+          },
+          {
+            "min_qty": 10000,
+            "max_qty": 49999,
+            "usd": 0.0017
+          },
+          {
+            "min_qty": 50000,
+            "max_qty": 50199,
+            "usd": 0.0016
+          },
+          {
+            "min_qty": 50200,
+            "max_qty": -1,
+            "usd": 0.0016
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C25803",
+        "checked_at": "2026-10-13T15:11:26.198973+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "C100n": {
+      "key": "C100n",
+      "code": "C14663",
+      "value": "100n",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": [
+        [
+          "1",
+          "~",
+          "passive"
+        ],
+        [
+          "2",
+          "~",
+          "passive"
+        ]
+      ],
+      "kind": "c",
+      "note": "",
+      "catalog": {
+        "id": "C14663",
+        "mpn": "CC0603KRX7R9BB104",
+        "manufacturer": "YAGEO",
+        "package": "0603",
+        "classification": "Basic",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 53307896,
+        "loss": 10,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 499,
+            "usd": 0.014
+          },
+          {
+            "min_qty": 500,
+            "max_qty": 1499,
+            "usd": 0.0106
+          },
+          {
+            "min_qty": 1500,
+            "max_qty": 3999,
+            "usd": 0.0091
+          },
+          {
+            "min_qty": 4000,
+            "max_qty": 23999,
+            "usd": 0.0076
+          },
+          {
+            "min_qty": 24000,
+            "max_qty": 47999,
+            "usd": 0.0071
+          },
+          {
+            "min_qty": 48000,
+            "max_qty": -1,
+            "usd": 0.0068
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C14663",
+        "checked_at": "2026-10-13T15:20:39.536320+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "C1n": {
+      "key": "C1n",
+      "code": "C163508",
+      "value": "1n",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": [
+        [
+          "1",
+          "~",
+          "passive"
+        ],
+        [
+          "2",
+          "~",
+          "passive"
+        ]
+      ],
+      "kind": "c",
+      "note": "",
+      "catalog": {
+        "id": "C163508",
+        "mpn": "CL10C102JB8NNNC",
+        "manufacturer": "Samsung Electro-Mechanics",
+        "package": "0603",
+        "classification": "Extended",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 483260,
+        "loss": 10,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 499,
+            "usd": 0.0083
+          },
+          {
+            "min_qty": 500,
+            "max_qty": 1499,
+            "usd": 0.0065
+          },
+          {
+            "min_qty": 1500,
+            "max_qty": 3999,
+            "usd": 0.0055
+          },
+          {
+            "min_qty": 4000,
+            "max_qty": 23999,
+            "usd": 0.0049
+          },
+          {
+            "min_qty": 24000,
+            "max_qty": 47999,
+            "usd": 0.0043
+          },
+          {
+            "min_qty": 48000,
+            "max_qty": -1,
+            "usd": 0.004
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C163508",
+        "checked_at": "2026-10-14T08:48:03.275930+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "C10n": {
+      "key": "C10n",
+      "code": "C57112",
+      "value": "10n",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": [
+        [
+          "1",
+          "~",
+          "passive"
+        ],
+        [
+          "2",
+          "~",
+          "passive"
+        ]
+      ],
+      "kind": "c",
+      "note": "",
+      "catalog": {
+        "id": "C57112",
+        "mpn": "0603B103K500NT",
+        "manufacturer": "FH (Guangdong Fenghua Advanced Tech)",
+        "package": "0603",
+        "classification": "Basic",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 6247556,
+        "loss": 10,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 499,
+            "usd": 0.0101
+          },
+          {
+            "min_qty": 500,
+            "max_qty": 1499,
+            "usd": 0.008
+          },
+          {
+            "min_qty": 1500,
+            "max_qty": 3999,
+            "usd": 0.007
+          },
+          {
+            "min_qty": 4000,
+            "max_qty": 23999,
+            "usd": 0.0062
+          },
+          {
+            "min_qty": 24000,
+            "max_qty": 47999,
+            "usd": 0.0059
+          },
+          {
+            "min_qty": 48000,
+            "max_qty": -1,
+            "usd": 0.0057
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C57112",
+        "checked_at": "2026-10-13T15:22:34.255431+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "C6.8n": {
+      "key": "C6.8n",
+      "code": "C1631",
+      "value": "6.8n",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": [
+        [
+          "1",
+          "~",
+          "passive"
+        ],
+        [
+          "2",
+          "~",
+          "passive"
+        ]
+      ],
+      "kind": "c",
+      "note": "",
+      "catalog": {
+        "id": "C1631",
+        "mpn": "0603B682K500NT",
+        "manufacturer": "FH (Guangdong Fenghua Advanced Tech)",
+        "package": "0603",
+        "classification": "Basic",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 196089,
+        "loss": 10,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 999,
+            "usd": 0.0073
+          },
+          {
+            "min_qty": 1000,
+            "max_qty": 3999,
+            "usd": 0.0058
+          },
+          {
+            "min_qty": 4000,
+            "max_qty": 7999,
+            "usd": 0.0047
+          },
+          {
+            "min_qty": 8000,
+            "max_qty": 47999,
+            "usd": 0.0043
+          },
+          {
+            "min_qty": 48000,
+            "max_qty": 99999,
+            "usd": 0.0039
+          },
+          {
+            "min_qty": 100000,
+            "max_qty": -1,
+            "usd": 0.0037
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C1631",
+        "checked_at": "2026-10-13T15:24:50.480062+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "C22n": {
+      "key": "C22n",
+      "code": "C1729",
+      "value": "22n",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": [
+        [
+          "1",
+          "~",
+          "passive"
+        ],
+        [
+          "2",
+          "~",
+          "passive"
+        ]
+      ],
+      "kind": "c",
+      "note": "",
+      "catalog": {
+        "id": "C1729",
+        "mpn": "CL21B223KBANNNC",
+        "manufacturer": "Samsung Electro-Mechanics",
+        "package": "0805",
+        "classification": "Basic",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 325000,
+        "loss": 10,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 999,
+            "usd": 0.0084
+          },
+          {
+            "min_qty": 1000,
+            "max_qty": 3999,
+            "usd": 0.0068
+          },
+          {
+            "min_qty": 4000,
+            "max_qty": 7999,
+            "usd": 0.0059
+          },
+          {
+            "min_qty": 8000,
+            "max_qty": 47999,
+            "usd": 0.0054
+          },
+          {
+            "min_qty": 48000,
+            "max_qty": 99999,
+            "usd": 0.0049
+          },
+          {
+            "min_qty": 100000,
+            "max_qty": -1,
+            "usd": 0.0047
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C1729",
+        "checked_at": "2026-10-13T15:24:52.121389+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "C20p": {
+      "key": "C20p",
+      "code": "C1648",
+      "value": "20p",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": [
+        [
+          "1",
+          "~",
+          "passive"
+        ],
+        [
+          "2",
+          "~",
+          "passive"
+        ]
+      ],
+      "kind": "c",
+      "note": "",
+      "catalog": {
+        "id": "C1648",
+        "mpn": "CL10C200JB8NNNC",
+        "manufacturer": "Samsung Electro-Mechanics",
+        "package": "0603",
+        "classification": "Basic",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 1984484,
+        "loss": 10,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 499,
+            "usd": 0.0092
+          },
+          {
+            "min_qty": 500,
+            "max_qty": 1499,
+            "usd": 0.007
+          },
+          {
+            "min_qty": 1500,
+            "max_qty": 3999,
+            "usd": 0.006
+          },
+          {
+            "min_qty": 4000,
+            "max_qty": 23999,
+            "usd": 0.0053
+          },
+          {
+            "min_qty": 24000,
+            "max_qty": 47999,
+            "usd": 0.005
+          },
+          {
+            "min_qty": 48000,
+            "max_qty": -1,
+            "usd": 0.0048
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C1648",
+        "checked_at": "2026-10-13T15:22:34.155368+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "C1u": {
+      "key": "C1u",
+      "code": "C15849",
+      "value": "1u",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": [
+        [
+          "1",
+          "~",
+          "passive"
+        ],
+        [
+          "2",
+          "~",
+          "passive"
+        ]
+      ],
+      "kind": "c",
+      "note": "",
+      "catalog": {
+        "id": "C15849",
+        "mpn": "CL10A105KB8NNNC",
+        "manufacturer": "Samsung Electro-Mechanics",
+        "package": "0603",
+        "classification": "Basic",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 10311730,
+        "loss": 10,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 499,
+            "usd": 0.0158
+          },
+          {
+            "min_qty": 500,
+            "max_qty": 1499,
+            "usd": 0.0123
+          },
+          {
+            "min_qty": 1500,
+            "max_qty": 3999,
+            "usd": 0.0108
+          },
+          {
+            "min_qty": 4000,
+            "max_qty": 23999,
+            "usd": 0.0096
+          },
+          {
+            "min_qty": 24000,
+            "max_qty": 47999,
+            "usd": 0.0092
+          },
+          {
+            "min_qty": 48000,
+            "max_qty": -1,
+            "usd": 0.0088
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C15849",
+        "checked_at": "2026-10-13T15:46:51.366149+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "C4.7u": {
+      "key": "C4.7u",
+      "code": "C19666",
+      "value": "4.7u",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": [
+        [
+          "1",
+          "~",
+          "passive"
+        ],
+        [
+          "2",
+          "~",
+          "passive"
+        ]
+      ],
+      "kind": "c",
+      "note": "",
+      "catalog": {
+        "id": "C19666",
+        "mpn": "CL10A475KO8NNNC",
+        "manufacturer": "Samsung Electro-Mechanics",
+        "package": "0603",
+        "classification": "Basic",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 3207024,
+        "loss": 10,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 99,
+            "usd": 0.0296
+          },
+          {
+            "min_qty": 100,
+            "max_qty": 299,
+            "usd": 0.0213
+          },
+          {
+            "min_qty": 300,
+            "max_qty": 999,
+            "usd": 0.0175
+          },
+          {
+            "min_qty": 1000,
+            "max_qty": 3999,
+            "usd": 0.0146
+          },
+          {
+            "min_qty": 4000,
+            "max_qty": 7999,
+            "usd": 0.0135
+          },
+          {
+            "min_qty": 8000,
+            "max_qty": -1,
+            "usd": 0.0128
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C19666",
+        "checked_at": "2026-10-13T15:24:52.182713+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "C10u": {
+      "key": "C10u",
+      "code": "C15850",
+      "value": "10u",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": [
+        [
+          "1",
+          "~",
+          "passive"
+        ],
+        [
+          "2",
+          "~",
+          "passive"
+        ]
+      ],
+      "kind": "c",
+      "note": "",
+      "catalog": {
+        "id": "C15850",
+        "mpn": "CL21A106KAYNNNE",
+        "manufacturer": "Samsung Electro-Mechanics",
+        "package": "0805",
+        "classification": "Basic",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 4003857,
+        "loss": 10,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 199,
+            "usd": 0.0689
+          },
+          {
+            "min_qty": 200,
+            "max_qty": 599,
+            "usd": 0.0508
+          },
+          {
+            "min_qty": 600,
+            "max_qty": 1999,
+            "usd": 0.0416
+          },
+          {
+            "min_qty": 2000,
+            "max_qty": 9999,
+            "usd": 0.034
+          },
+          {
+            "min_qty": 10000,
+            "max_qty": 19999,
+            "usd": 0.0312
+          },
+          {
+            "min_qty": 20000,
+            "max_qty": -1,
+            "usd": 0.0294
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C15850",
+        "checked_at": "2026-10-13T15:20:39.544599+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "C22u": {
+      "key": "C22u",
+      "code": "C45783",
+      "value": "22u",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": [
+        [
+          "1",
+          "~",
+          "passive"
+        ],
+        [
+          "2",
+          "~",
+          "passive"
+        ]
+      ],
+      "kind": "c",
+      "note": "",
+      "catalog": {
+        "id": "C45783",
+        "mpn": "CL21A226MAQNNNE",
+        "manufacturer": "Samsung Electro-Mechanics",
+        "package": "0805",
+        "classification": "Basic",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 3454275,
+        "loss": 0,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 199,
+            "usd": 0.2372
+          },
+          {
+            "min_qty": 200,
+            "max_qty": 599,
+            "usd": 0.1806
+          },
+          {
+            "min_qty": 600,
+            "max_qty": 1999,
+            "usd": 0.153
+          },
+          {
+            "min_qty": 2000,
+            "max_qty": 9999,
+            "usd": 0.1284
+          },
+          {
+            "min_qty": 10000,
+            "max_qty": 19999,
+            "usd": 0.1216
+          },
+          {
+            "min_qty": 20000,
+            "max_qty": -1,
+            "usd": 0.1175
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C45783",
+        "checked_at": "2026-10-13T15:15:59.158144+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "npn": {
+      "key": "npn",
+      "code": "C20526",
+      "value": "MMBT3904",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "pins": [
+        [
+          "1",
+          "B",
+          "passive"
+        ],
+        [
+          "2",
+          "E",
+          "passive"
+        ],
+        [
+          "3",
+          "C",
+          "passive"
+        ]
+      ],
+      "kind": "ic",
+      "note": "",
+      "catalog": {
+        "id": "C20526",
+        "mpn": "MMBT3904(RANGE:100-300)",
+        "manufacturer": "Jiangsu Changjing Electronics Technology Co., Ltd.",
+        "package": "SOT-23",
+        "classification": "Basic",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 605058,
+        "loss": 5,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 499,
+            "usd": 0.0116
+          },
+          {
+            "min_qty": 500,
+            "max_qty": 2999,
+            "usd": 0.0092
+          },
+          {
+            "min_qty": 3000,
+            "max_qty": 5999,
+            "usd": 0.0081
+          },
+          {
+            "min_qty": 6000,
+            "max_qty": 23999,
+            "usd": 0.0073
+          },
+          {
+            "min_qty": 24000,
+            "max_qty": 50999,
+            "usd": 0.007
+          },
+          {
+            "min_qty": 51000,
+            "max_qty": -1,
+            "usd": 0.0068
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C20526",
+        "checked_at": "2026-10-13T15:24:52.145924+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "pmos": {
+      "key": "pmos",
+      "code": "C15127",
+      "value": "AO3401A",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "pins": [
+        [
+          "1",
+          "G",
+          "passive"
+        ],
+        [
+          "2",
+          "S",
+          "passive"
+        ],
+        [
+          "3",
+          "D",
+          "passive"
+        ]
+      ],
+      "kind": "ic",
+      "note": "",
+      "catalog": {
+        "id": "C15127",
+        "mpn": "AO3401A",
+        "manufacturer": "Alpha & Omega Semicon",
+        "package": "SOT-23",
+        "classification": "Basic",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 631158,
+        "loss": 4,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 49,
+            "usd": 0.102
+          },
+          {
+            "min_qty": 50,
+            "max_qty": 149,
+            "usd": 0.0824
+          },
+          {
+            "min_qty": 150,
+            "max_qty": 499,
+            "usd": 0.0723
+          },
+          {
+            "min_qty": 500,
+            "max_qty": 2999,
+            "usd": 0.064
+          },
+          {
+            "min_qty": 3000,
+            "max_qty": 5999,
+            "usd": 0.061
+          },
+          {
+            "min_qty": 6000,
+            "max_qty": -1,
+            "usd": 0.0591
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C15127",
+        "checked_at": "2026-10-13T15:24:52.156424+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "ledred": {
+      "key": "ledred",
+      "code": "C2286",
+      "value": "KT-0603R / RED",
+      "footprint": "RackATX:LED_0603_1608Metric_CathodeSilk",
+      "pins": [
+        [
+          "1",
+          "K",
+          "passive"
+        ],
+        [
+          "2",
+          "A",
+          "passive"
+        ]
+      ],
+      "kind": "diode",
+      "note": "Local driver indication only, not contact feedback. Basic library; verify brightness and cathode mark in prototype.",
+      "catalog": {
+        "id": "C2286",
+        "mpn": "KT-0603R",
+        "manufacturer": "Hubei KENTO Elec",
+        "package": "0603",
+        "classification": "Basic",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 7949222,
+        "loss": 10,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 999,
+            "usd": 0.0076
+          },
+          {
+            "min_qty": 1000,
+            "max_qty": 3999,
+            "usd": 0.0058
+          },
+          {
+            "min_qty": 4000,
+            "max_qty": 7999,
+            "usd": 0.0046
+          },
+          {
+            "min_qty": 8000,
+            "max_qty": 47999,
+            "usd": 0.004
+          },
+          {
+            "min_qty": 48000,
+            "max_qty": 99999,
+            "usd": 0.0037
+          },
+          {
+            "min_qty": 100000,
+            "max_qty": -1,
+            "usd": 0.0036
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C2286",
+        "checked_at": "2026-10-14T15:04:10.920701+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "ledgreen": {
+      "key": "ledgreen",
+      "code": "C2297",
+      "value": "KT-0805G / GREEN",
+      "footprint": "RackATX:LED_0805_2012Metric_CathodeSilk",
+      "pins": [
+        [
+          "1",
+          "K",
+          "passive"
+        ],
+        [
+          "2",
+          "A",
+          "passive"
+        ]
+      ],
+      "kind": "diode",
+      "note": "Controller power / output-enable indicator, not host power state. Basic library; verify brightness and cathode mark in prototype.",
+      "catalog": {
+        "id": "C2297",
+        "mpn": "KT-0805G",
+        "manufacturer": "Hubei KENTO Elec",
+        "package": "0805",
+        "classification": "Basic",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 2784392,
+        "loss": 10,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 499,
+            "usd": 0.0164
+          },
+          {
+            "min_qty": 500,
+            "max_qty": 2999,
+            "usd": 0.0127
+          },
+          {
+            "min_qty": 3000,
+            "max_qty": 5999,
+            "usd": 0.0101
+          },
+          {
+            "min_qty": 6000,
+            "max_qty": 23999,
+            "usd": 0.0089
+          },
+          {
+            "min_qty": 24000,
+            "max_qty": 50999,
+            "usd": 0.0084
+          },
+          {
+            "min_qty": 51000,
+            "max_qty": -1,
+            "usd": 0.008
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C2297",
+        "checked_at": "2026-10-14T15:04:11.076033+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "ssr": {
+      "key": "ssr",
+      "code": "C4153843",
+      "value": "TLP3122A(TPL,E",
+      "footprint": "RackATX:TLP3122A_11-4M1S",
+      "pins": [
+        [
+          "1",
+          "A",
+          "passive"
+        ],
+        [
+          "3",
+          "K",
+          "passive"
+        ],
+        [
+          "4",
+          "OUT",
+          "passive"
+        ],
+        [
+          "6",
+          "OUT",
+          "passive"
+        ]
+      ],
+      "kind": "ic",
+      "note": "Drawing/library candidate used in S.3; physical footprint and assembly DFM qualification pending.",
+      "catalog": {
+        "id": "C4153843",
+        "mpn": "TLP3122A(TPL,E",
+        "manufacturer": "TOSHIBA",
+        "package": "SOP-4",
+        "classification": "Extended",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 4136,
+        "loss": 0,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 9,
+            "usd": 0.9525
+          },
+          {
+            "min_qty": 10,
+            "max_qty": 29,
+            "usd": 0.8563
+          },
+          {
+            "min_qty": 30,
+            "max_qty": 99,
+            "usd": 0.8041
+          },
+          {
+            "min_qty": 100,
+            "max_qty": 499,
+            "usd": 0.7454
+          },
+          {
+            "min_qty": 500,
+            "max_qty": 999,
+            "usd": 0.7193
+          },
+          {
+            "min_qty": 1000,
+            "max_qty": -1,
+            "usd": 0.7063
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C4153843",
+        "checked_at": "2026-10-13T15:20:39.507893+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "port": {
+      "key": "port",
+      "code": "C161672",
+      "value": "S10B-PHDSS(LF)(SN)",
+      "footprint": "Connector_JST:JST_PHD_S10B-PHDSS_2x05_P2.00mm_Horizontal",
+      "pins": [
+        [
+          "1",
+          "PWR_A",
+          "passive"
+        ],
+        [
+          "2",
+          "PWR_B",
+          "passive"
+        ],
+        [
+          "3",
+          "RST_A",
+          "passive"
+        ],
+        [
+          "4",
+          "RST_B",
+          "passive"
+        ],
+        [
+          "5",
+          "NC5",
+          "passive"
+        ],
+        [
+          "6",
+          "NC6",
+          "passive"
+        ],
+        [
+          "7",
+          "NC7",
+          "passive"
+        ],
+        [
+          "8",
+          "NC8",
+          "passive"
+        ],
+        [
+          "9",
+          "HOST_REF",
+          "passive"
+        ],
+        [
+          "10",
+          "NC10",
+          "passive"
+        ]
+      ],
+      "kind": "ic",
+      "note": "",
+      "catalog": {
+        "id": "C161672",
+        "mpn": "S10B-PHDSS(LF)(SN)",
+        "manufacturer": "JST",
+        "package": "Push-Pull,P=2mm",
+        "classification": "Extended",
+        "assembly": "Wave Soldering",
+        "pcba_type": "Economic and Standard",
+        "stock": 9875,
+        "loss": 0,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 49,
+            "usd": 0.4727
+          },
+          {
+            "min_qty": 50,
+            "max_qty": 149,
+            "usd": 0.3678
+          },
+          {
+            "min_qty": 150,
+            "max_qty": 499,
+            "usd": 0.3228
+          },
+          {
+            "min_qty": 500,
+            "max_qty": 2499,
+            "usd": 0.2667
+          },
+          {
+            "min_qty": 2500,
+            "max_qty": 4999,
+            "usd": 0.2418
+          },
+          {
+            "min_qty": 5000,
+            "max_qty": -1,
+            "usd": 0.2268
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C161672",
+        "checked_at": "2026-10-13T15:20:39.554597+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "esd": {
+      "key": "esd",
+      "code": "C2841440",
+      "value": "PESD5V0S2BT",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "pins": [
+        [
+          "1",
+          "IO1",
+          "passive"
+        ],
+        [
+          "2",
+          "IO2",
+          "passive"
+        ],
+        [
+          "3",
+          "GND",
+          "passive"
+        ]
+      ],
+      "kind": "ic",
+      "note": "TECH PUBLIC bidirectional dual TVS; verify pin 3 common on vendor drawing.",
+      "catalog": {
+        "id": "C2841440",
+        "mpn": "PESD5V0S2BT",
+        "manufacturer": "TECH PUBLIC",
+        "package": "SOT-23",
+        "classification": "Extended",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 2806,
+        "loss": 4,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 99,
+            "usd": 0.0429
+          },
+          {
+            "min_qty": 100,
+            "max_qty": 299,
+            "usd": 0.0343
+          },
+          {
+            "min_qty": 300,
+            "max_qty": 2999,
+            "usd": 0.0299
+          },
+          {
+            "min_qty": 3000,
+            "max_qty": 5999,
+            "usd": 0.0257
+          },
+          {
+            "min_qty": 6000,
+            "max_qty": 8999,
+            "usd": 0.023
+          },
+          {
+            "min_qty": 9000,
+            "max_qty": -1,
+            "usd": 0.0217
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C2841440",
+        "checked_at": "2026-10-13T15:22:35.277548+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "hc595": {
+      "key": "hc595",
+      "code": "C5947",
+      "value": "74HC595D,118",
+      "footprint": "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm",
+      "pins": [
+        [
+          "1",
+          "QB",
+          "output"
+        ],
+        [
+          "2",
+          "QC",
+          "output"
+        ],
+        [
+          "3",
+          "QD",
+          "output"
+        ],
+        [
+          "4",
+          "QE",
+          "output"
+        ],
+        [
+          "5",
+          "QF",
+          "output"
+        ],
+        [
+          "6",
+          "QG",
+          "output"
+        ],
+        [
+          "7",
+          "QH",
+          "output"
+        ],
+        [
+          "8",
+          "GND",
+          "power_in"
+        ],
+        [
+          "9",
+          "QH_SER",
+          "output"
+        ],
+        [
+          "10",
+          "MR_N",
+          "input"
+        ],
+        [
+          "11",
+          "SHCP",
+          "input"
+        ],
+        [
+          "12",
+          "STCP",
+          "input"
+        ],
+        [
+          "13",
+          "OE_N",
+          "input"
+        ],
+        [
+          "14",
+          "DS",
+          "input"
+        ],
+        [
+          "15",
+          "QA",
+          "output"
+        ],
+        [
+          "16",
+          "VCC",
+          "power_in"
+        ]
+      ],
+      "kind": "ic",
+      "note": "",
+      "catalog": {
+        "id": "C5947",
+        "mpn": "74HC595D,118",
+        "manufacturer": "Nexperia",
+        "package": "SOIC-16",
+        "classification": "Basic",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 296051,
+        "loss": 0,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 49,
+            "usd": 0.1132
+          },
+          {
+            "min_qty": 50,
+            "max_qty": 149,
+            "usd": 0.0899
+          },
+          {
+            "min_qty": 150,
+            "max_qty": 499,
+            "usd": 0.0778
+          },
+          {
+            "min_qty": 500,
+            "max_qty": 2499,
+            "usd": 0.0681
+          },
+          {
+            "min_qty": 2500,
+            "max_qty": 4999,
+            "usd": 0.0645
+          },
+          {
+            "min_qty": 5000,
+            "max_qty": -1,
+            "usd": 0.0622
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C5947",
+        "checked_at": "2026-10-13T15:20:39.527642+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "timer": {
+      "key": "timer",
+      "code": "C7292",
+      "value": "MC14541BDR2G",
+      "footprint": "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm",
+      "pins": [
+        [
+          "1",
+          "RTC",
+          "output"
+        ],
+        [
+          "2",
+          "CTC",
+          "output"
+        ],
+        [
+          "3",
+          "RS",
+          "input"
+        ],
+        [
+          "4",
+          "NC",
+          "passive"
+        ],
+        [
+          "5",
+          "AR",
+          "input"
+        ],
+        [
+          "6",
+          "MR",
+          "input"
+        ],
+        [
+          "7",
+          "GND",
+          "power_in"
+        ],
+        [
+          "8",
+          "Q",
+          "output"
+        ],
+        [
+          "9",
+          "QSEL",
+          "input"
+        ],
+        [
+          "10",
+          "MODE",
+          "input"
+        ],
+        [
+          "11",
+          "NC",
+          "passive"
+        ],
+        [
+          "12",
+          "A",
+          "input"
+        ],
+        [
+          "13",
+          "B",
+          "input"
+        ],
+        [
+          "14",
+          "VDD",
+          "power_in"
+        ]
+      ],
+      "kind": "ic",
+      "note": "",
+      "catalog": {
+        "id": "C7292",
+        "mpn": "MC14541BDR2G",
+        "manufacturer": "onsemi",
+        "package": "SOIC-14",
+        "classification": "Extended",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 4597,
+        "loss": 0,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 49,
+            "usd": 0.3017
+          },
+          {
+            "min_qty": 50,
+            "max_qty": 149,
+            "usd": 0.2403
+          },
+          {
+            "min_qty": 150,
+            "max_qty": 499,
+            "usd": 0.2141
+          },
+          {
+            "min_qty": 500,
+            "max_qty": 2499,
+            "usd": 0.1815
+          },
+          {
+            "min_qty": 2500,
+            "max_qty": 4999,
+            "usd": 0.1668
+          },
+          {
+            "min_qty": 5000,
+            "max_qty": -1,
+            "usd": 0.1581
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C7292",
+        "checked_at": "2026-10-14T08:46:45.997803+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "buck": {
+      "key": "buck",
+      "code": "C780769",
+      "value": "AP63203WU-7",
+      "footprint": "Package_TO_SOT_SMD:TSOT-23-6",
+      "pins": [
+        [
+          "1",
+          "FB",
+          "input"
+        ],
+        [
+          "2",
+          "EN",
+          "input"
+        ],
+        [
+          "3",
+          "VIN",
+          "power_in"
+        ],
+        [
+          "4",
+          "GND",
+          "power_in"
+        ],
+        [
+          "5",
+          "SW",
+          "power_out"
+        ],
+        [
+          "6",
+          "BST",
+          "passive"
+        ]
+      ],
+      "kind": "ic",
+      "note": "",
+      "catalog": {
+        "id": "C780769",
+        "mpn": "AP63203WU-7",
+        "manufacturer": "Diodes Incorporated",
+        "package": "TSOT-23-6",
+        "classification": "Extended",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 8099,
+        "loss": 0,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 9,
+            "usd": 1.1825
+          },
+          {
+            "min_qty": 10,
+            "max_qty": 29,
+            "usd": 1.0569
+          },
+          {
+            "min_qty": 30,
+            "max_qty": 99,
+            "usd": 0.9362
+          },
+          {
+            "min_qty": 100,
+            "max_qty": 499,
+            "usd": 0.8482
+          },
+          {
+            "min_qty": 500,
+            "max_qty": 999,
+            "usd": 0.778
+          },
+          {
+            "min_qty": 1000,
+            "max_qty": -1,
+            "usd": 0.7601
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C780769",
+        "checked_at": "2026-10-13T15:15:58.092399+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "ind": {
+      "key": "ind",
+      "code": "C167806",
+      "value": "4.7uH FNR4018S4R7MT",
+      "footprint": "Inductor_SMD:L_Changjiang_FNR4018S",
+      "pins": [
+        [
+          "1",
+          "~",
+          "passive"
+        ],
+        [
+          "2",
+          "~",
+          "passive"
+        ]
+      ],
+      "kind": "l",
+      "note": "Drawing/library candidate used in S.3; physical footprint and assembly DFM qualification pending.",
+      "catalog": {
+        "id": "C167806",
+        "mpn": "FNR4018S4R7MT",
+        "manufacturer": "cjiang (Changjiang Microelectronics Tech)",
+        "package": "SMD,4x4mm",
+        "classification": "Extended",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 7188,
+        "loss": 4,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 99,
+            "usd": 0.0459
+          },
+          {
+            "min_qty": 100,
+            "max_qty": 299,
+            "usd": 0.0361
+          },
+          {
+            "min_qty": 300,
+            "max_qty": 2999,
+            "usd": 0.031
+          },
+          {
+            "min_qty": 3000,
+            "max_qty": 5999,
+            "usd": 0.0257
+          },
+          {
+            "min_qty": 6000,
+            "max_qty": 8999,
+            "usd": 0.0227
+          },
+          {
+            "min_qty": 9000,
+            "max_qty": -1,
+            "usd": 0.0213
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C167806",
+        "checked_at": "2026-10-13T15:18:09.856125+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "fuse": {
+      "key": "fuse",
+      "code": "C78695",
+      "value": "MF-MSMF150/24X-2 1.5A",
+      "footprint": "Fuse:Fuse_1812_4532Metric",
+      "pins": [
+        [
+          "1",
+          "~",
+          "passive"
+        ],
+        [
+          "2",
+          "~",
+          "passive"
+        ]
+      ],
+      "kind": "r",
+      "note": "",
+      "catalog": {
+        "id": "C78695",
+        "mpn": "MF-MSMF150/24X-2",
+        "manufacturer": "BOURNS",
+        "package": "1812",
+        "classification": "Extended",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 6223,
+        "loss": 2,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 49,
+            "usd": 0.1971
+          },
+          {
+            "min_qty": 50,
+            "max_qty": 149,
+            "usd": 0.1566
+          },
+          {
+            "min_qty": 150,
+            "max_qty": 1499,
+            "usd": 0.1364
+          },
+          {
+            "min_qty": 1500,
+            "max_qty": 2999,
+            "usd": 0.1212
+          },
+          {
+            "min_qty": 3000,
+            "max_qty": 4499,
+            "usd": 0.109
+          },
+          {
+            "min_qty": 4500,
+            "max_qty": -1,
+            "usd": 0.103
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C78695",
+        "checked_at": "2026-10-13T15:22:31.648916+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "barrel": {
+      "key": "barrel",
+      "code": "C8465",
+      "value": "WJ500V-5.08-2P",
+      "footprint": "RackATX:WJ500V_5.08_2P",
+      "pins": [
+        [
+          "1",
+          "+5V",
+          "passive"
+        ],
+        [
+          "2",
+          "GND",
+          "passive"
+        ]
+      ],
+      "kind": "ic",
+      "note": "Drawing/library candidate used in S.3; physical footprint and assembly DFM qualification pending.",
+      "catalog": {
+        "id": "C8465",
+        "mpn": "WJ500V-5.08-2P",
+        "manufacturer": "Ningbo Kangnex Elec",
+        "package": "Plugin,P=5.08mm",
+        "classification": "Extended",
+        "assembly": "Wave Soldering",
+        "pcba_type": "Economic and Standard",
+        "stock": 261906,
+        "loss": 0,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 49,
+            "usd": 0.1341
+          },
+          {
+            "min_qty": 50,
+            "max_qty": 149,
+            "usd": 0.108
+          },
+          {
+            "min_qty": 150,
+            "max_qty": 499,
+            "usd": 0.0946
+          },
+          {
+            "min_qty": 500,
+            "max_qty": 2499,
+            "usd": 0.0842
+          },
+          {
+            "min_qty": 2500,
+            "max_qty": 4999,
+            "usd": 0.0805
+          },
+          {
+            "min_qty": 5000,
+            "max_qty": -1,
+            "usd": 0.0778
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C8465",
+        "checked_at": "2026-10-13T15:48:15.997975+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "xtal40": {
+      "key": "xtal40",
+      "code": "C18214314",
+      "value": "40MHz CL12pF",
+      "footprint": "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm",
+      "pins": [
+        [
+          "1",
+          "X1",
+          "passive"
+        ],
+        [
+          "2",
+          "GND",
+          "passive"
+        ],
+        [
+          "3",
+          "X2",
+          "passive"
+        ],
+        [
+          "4",
+          "GND",
+          "passive"
+        ]
+      ],
+      "kind": "ic",
+      "note": "",
+      "catalog": {
+        "id": "C18214314",
+        "mpn": "XL2EL89COI-111YLC-40M",
+        "manufacturer": "YXC Crystal Oscillators",
+        "package": "SMD3225-4P",
+        "classification": "Extended",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 31425,
+        "loss": 4,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 49,
+            "usd": 0.0816
+          },
+          {
+            "min_qty": 50,
+            "max_qty": 149,
+            "usd": 0.0651
+          },
+          {
+            "min_qty": 150,
+            "max_qty": 499,
+            "usd": 0.057
+          },
+          {
+            "min_qty": 500,
+            "max_qty": 2999,
+            "usd": 0.0508
+          },
+          {
+            "min_qty": 3000,
+            "max_qty": 5999,
+            "usd": 0.0459
+          },
+          {
+            "min_qty": 6000,
+            "max_qty": -1,
+            "usd": 0.0434
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C18214314",
+        "checked_at": "2026-10-13T15:20:35.889069+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "xtal25": {
+      "key": "xtal25",
+      "code": "C9006",
+      "value": "25MHz CL12pF",
+      "footprint": "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm",
+      "pins": [
+        [
+          "1",
+          "X1",
+          "passive"
+        ],
+        [
+          "2",
+          "GND",
+          "passive"
+        ],
+        [
+          "3",
+          "X2",
+          "passive"
+        ],
+        [
+          "4",
+          "GND",
+          "passive"
+        ]
+      ],
+      "kind": "ic",
+      "note": "",
+      "catalog": {
+        "id": "C9006",
+        "mpn": "X322525MOB4SI",
+        "manufacturer": "YXC Crystal Oscillators",
+        "package": "SMD3225-4P",
+        "classification": "Basic",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 181710,
+        "loss": 4,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 49,
+            "usd": 0.0948
+          },
+          {
+            "min_qty": 50,
+            "max_qty": 149,
+            "usd": 0.0759
+          },
+          {
+            "min_qty": 150,
+            "max_qty": 499,
+            "usd": 0.0661
+          },
+          {
+            "min_qty": 500,
+            "max_qty": 2999,
+            "usd": 0.0581
+          },
+          {
+            "min_qty": 3000,
+            "max_qty": 5999,
+            "usd": 0.0498
+          },
+          {
+            "min_qty": 6000,
+            "max_qty": -1,
+            "usd": 0.048
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C9006",
+        "checked_at": "2026-10-13T15:18:09.304055+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "bead": {
+      "key": "bead",
+      "code": "C12391",
+      "value": "120R@100MHz GZ1608D121TF",
+      "footprint": "Inductor_SMD:L_0603_1608Metric",
+      "pins": [
+        [
+          "1",
+          "~",
+          "passive"
+        ],
+        [
+          "2",
+          "~",
+          "passive"
+        ]
+      ],
+      "kind": "l",
+      "note": "",
+      "catalog": {
+        "id": "C12391",
+        "mpn": "GZ1608D121TF",
+        "manufacturer": "Sunlord",
+        "package": "0603",
+        "classification": "Extended",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 211674,
+        "loss": 10,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 199,
+            "usd": 0.0099
+          },
+          {
+            "min_qty": 200,
+            "max_qty": 599,
+            "usd": 0.008
+          },
+          {
+            "min_qty": 600,
+            "max_qty": 3999,
+            "usd": 0.0069
+          },
+          {
+            "min_qty": 4000,
+            "max_qty": 7999,
+            "usd": 0.0063
+          },
+          {
+            "min_qty": 8000,
+            "max_qty": 19999,
+            "usd": 0.0057
+          },
+          {
+            "min_qty": 20000,
+            "max_qty": -1,
+            "usd": 0.0054
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C12391",
+        "checked_at": "2026-10-13T15:31:21.203168+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "usb": {
+      "key": "usb",
+      "code": "C165948",
+      "value": "TYPE-C-31-M-12",
+      "footprint": "Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12",
+      "pins": [
+        [
+          "A1",
+          "A1",
+          "passive"
+        ],
+        [
+          "A4",
+          "A4",
+          "passive"
+        ],
+        [
+          "A5",
+          "A5",
+          "passive"
+        ],
+        [
+          "A6",
+          "A6",
+          "passive"
+        ],
+        [
+          "A7",
+          "A7",
+          "passive"
+        ],
+        [
+          "A8",
+          "A8",
+          "passive"
+        ],
+        [
+          "A9",
+          "A9",
+          "passive"
+        ],
+        [
+          "A12",
+          "A12",
+          "passive"
+        ],
+        [
+          "B1",
+          "B1",
+          "passive"
+        ],
+        [
+          "B4",
+          "B4",
+          "passive"
+        ],
+        [
+          "B5",
+          "B5",
+          "passive"
+        ],
+        [
+          "B6",
+          "B6",
+          "passive"
+        ],
+        [
+          "B7",
+          "B7",
+          "passive"
+        ],
+        [
+          "B8",
+          "B8",
+          "passive"
+        ],
+        [
+          "B9",
+          "B9",
+          "passive"
+        ],
+        [
+          "B12",
+          "B12",
+          "passive"
+        ],
+        [
+          "SH",
+          "SH",
+          "passive"
+        ]
+      ],
+      "kind": "ic",
+      "note": "",
+      "catalog": {
+        "id": "C165948",
+        "mpn": "TYPE-C-31-M-12",
+        "manufacturer": "Korean Hroparts Elec",
+        "package": "SMD",
+        "classification": "Extended",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 398485,
+        "loss": 0,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 49,
+            "usd": 0.1863
+          },
+          {
+            "min_qty": 50,
+            "max_qty": 149,
+            "usd": 0.1472
+          },
+          {
+            "min_qty": 150,
+            "max_qty": 999,
+            "usd": 0.1279
+          },
+          {
+            "min_qty": 1000,
+            "max_qty": 1999,
+            "usd": 0.1038
+          },
+          {
+            "min_qty": 2000,
+            "max_qty": 4999,
+            "usd": 0.0991
+          },
+          {
+            "min_qty": 5000,
+            "max_qty": -1,
+            "usd": 0.0963
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C165948",
+        "checked_at": "2026-10-13T15:11:33.015832+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "usbesd": {
+      "key": "usbesd",
+      "code": "C12333",
+      "value": "PRTR5V0U2X,215",
+      "footprint": "Package_TO_SOT_SMD:SOT-143",
+      "pins": [
+        [
+          "1",
+          "GND",
+          "passive"
+        ],
+        [
+          "2",
+          "IO1",
+          "passive"
+        ],
+        [
+          "3",
+          "IO2",
+          "passive"
+        ],
+        [
+          "4",
+          "VCC",
+          "passive"
+        ]
+      ],
+      "kind": "ic",
+      "note": "",
+      "catalog": {
+        "id": "C12333",
+        "mpn": "PRTR5V0U2X,215",
+        "manufacturer": "Nexperia",
+        "package": "SOT-143",
+        "classification": "Extended",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 23665,
+        "loss": 0,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 9,
+            "usd": 0.4306
+          },
+          {
+            "min_qty": 10,
+            "max_qty": 29,
+            "usd": 0.3377
+          },
+          {
+            "min_qty": 30,
+            "max_qty": 99,
+            "usd": 0.2969
+          },
+          {
+            "min_qty": 100,
+            "max_qty": 499,
+            "usd": 0.2463
+          },
+          {
+            "min_qty": 500,
+            "max_qty": 999,
+            "usd": 0.2235
+          },
+          {
+            "min_qty": 1000,
+            "max_qty": -1,
+            "usd": 0.2104
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C12333",
+        "checked_at": "2026-10-13T15:24:52.166312+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "rj45": {
+      "key": "rj45",
+      "code": "C12074",
+      "value": "HR911105A",
+      "footprint": "Connector_RJ:RJ45_Hanrun_HR911105A_Horizontal",
+      "pins": [
+        [
+          "1",
+          "TD+",
+          "passive"
+        ],
+        [
+          "2",
+          "TD-",
+          "passive"
+        ],
+        [
+          "3",
+          "RD+",
+          "passive"
+        ],
+        [
+          "4",
+          "TCT",
+          "passive"
+        ],
+        [
+          "5",
+          "RCT",
+          "passive"
+        ],
+        [
+          "6",
+          "RD-",
+          "passive"
+        ],
+        [
+          "7",
+          "NC",
+          "passive"
+        ],
+        [
+          "8",
+          "CHS_GND",
+          "passive"
+        ],
+        [
+          "9",
+          "LED_G_A",
+          "passive"
+        ],
+        [
+          "10",
+          "LED_G_K",
+          "passive"
+        ],
+        [
+          "11",
+          "LED_Y_K",
+          "passive"
+        ],
+        [
+          "12",
+          "LED_Y_A",
+          "passive"
+        ],
+        [
+          "SH",
+          "SHIELD",
+          "passive"
+        ]
+      ],
+      "kind": "ic",
+      "note": "",
+      "catalog": {
+        "id": "C12074",
+        "mpn": "HR911105A",
+        "manufacturer": "HANRUN(Zhongshan HanRun Elec)",
+        "package": "Plugin",
+        "classification": "Extended",
+        "assembly": "Wave Soldering",
+        "pcba_type": "Economic and Standard",
+        "stock": 48875,
+        "loss": 0,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 9,
+            "usd": 1.7191
+          },
+          {
+            "min_qty": 10,
+            "max_qty": 30,
+            "usd": 1.45
+          },
+          {
+            "min_qty": 31,
+            "max_qty": 92,
+            "usd": 1.207
+          },
+          {
+            "min_qty": 93,
+            "max_qty": 495,
+            "usd": 1.0162
+          },
+          {
+            "min_qty": 496,
+            "max_qty": 991,
+            "usd": 0.9395
+          },
+          {
+            "min_qty": 992,
+            "max_qty": -1,
+            "usd": 0.9004
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C12074",
+        "checked_at": "2026-10-13T15:10:20.801373+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "mcu": {
+      "key": "mcu",
+      "code": "C2913196",
+      "value": "ESP32-S3FN8",
+      "footprint": "Package_DFN_QFN:QFN-56-1EP_7x7mm_P0.4mm_EP4x4mm",
+      "pins": [
+        [
+          "36",
+          "SPICLK_N",
+          "bidirectional"
+        ],
+        [
+          "45",
+          "MTDO",
+          "bidirectional"
+        ],
+        [
+          "51",
+          "GPIO45",
+          "bidirectional"
+        ],
+        [
+          "56",
+          "VDDA",
+          "passive"
+        ],
+        [
+          "1",
+          "LNA_IN",
+          "bidirectional"
+        ],
+        [
+          "2",
+          "VDD3P3",
+          "power_in"
+        ],
+        [
+          "3",
+          "VDD3P3",
+          "passive"
+        ],
+        [
+          "4",
+          "CHIP_PU",
+          "input"
+        ],
+        [
+          "5",
+          "GPIO0",
+          "bidirectional"
+        ],
+        [
+          "6",
+          "GPIO1",
+          "bidirectional"
+        ],
+        [
+          "7",
+          "GPIO2",
+          "bidirectional"
+        ],
+        [
+          "8",
+          "GPIO3",
+          "bidirectional"
+        ],
+        [
+          "9",
+          "GPIO4",
+          "bidirectional"
+        ],
+        [
+          "10",
+          "GPIO5",
+          "bidirectional"
+        ],
+        [
+          "11",
+          "GPIO6",
+          "bidirectional"
+        ],
+        [
+          "12",
+          "GPIO7",
+          "bidirectional"
+        ],
+        [
+          "13",
+          "GPIO8",
+          "bidirectional"
+        ],
+        [
+          "14",
+          "GPIO9",
+          "bidirectional"
+        ],
+        [
+          "15",
+          "GPIO10",
+          "bidirectional"
+        ],
+        [
+          "16",
+          "GPIO11",
+          "bidirectional"
+        ],
+        [
+          "17",
+          "GPIO12",
+          "bidirectional"
+        ],
+        [
+          "18",
+          "GPIO13",
+          "bidirectional"
+        ],
+        [
+          "19",
+          "GPIO14",
+          "bidirectional"
+        ],
+        [
+          "20",
+          "VDD3P3_RTC",
+          "power_in"
+        ],
+        [
+          "21",
+          "XTAL_32K_P",
+          "passive"
+        ],
+        [
+          "22",
+          "XTAL_32K_N",
+          "passive"
+        ],
+        [
+          "23",
+          "GPIO17",
+          "bidirectional"
+        ],
+        [
+          "24",
+          "GPIO18",
+          "bidirectional"
+        ],
+        [
+          "25",
+          "GPIO19/USB_D-",
+          "bidirectional"
+        ],
+        [
+          "26",
+          "GPIO20/USB_D+",
+          "bidirectional"
+        ],
+        [
+          "27",
+          "GPIO21",
+          "bidirectional"
+        ],
+        [
+          "28",
+          "SPICS1",
+          "bidirectional"
+        ],
+        [
+          "29",
+          "VDD_SPI",
+          "power_out"
+        ],
+        [
+          "30",
+          "SPIHD",
+          "bidirectional"
+        ],
+        [
+          "31",
+          "SPIWP",
+          "bidirectional"
+        ],
+        [
+          "32",
+          "SPICS0",
+          "bidirectional"
+        ],
+        [
+          "33",
+          "SPICLK",
+          "bidirectional"
+        ],
+        [
+          "34",
+          "SPIQ",
+          "bidirectional"
+        ],
+        [
+          "35",
+          "SPID",
+          "bidirectional"
+        ],
+        [
+          "37",
+          "SPICLK_P",
+          "bidirectional"
+        ],
+        [
+          "38",
+          "GPIO33",
+          "bidirectional"
+        ],
+        [
+          "39",
+          "GPIO34",
+          "bidirectional"
+        ],
+        [
+          "40",
+          "GPIO35",
+          "bidirectional"
+        ],
+        [
+          "41",
+          "GPIO36",
+          "bidirectional"
+        ],
+        [
+          "42",
+          "GPIO37",
+          "bidirectional"
+        ],
+        [
+          "43",
+          "GPIO38",
+          "bidirectional"
+        ],
+        [
+          "44",
+          "MTCK",
+          "bidirectional"
+        ],
+        [
+          "46",
+          "VDD3P3_CPU",
+          "power_in"
+        ],
+        [
+          "47",
+          "MTDI",
+          "bidirectional"
+        ],
+        [
+          "48",
+          "MTMS",
+          "bidirectional"
+        ],
+        [
+          "49",
+          "U0TXD",
+          "bidirectional"
+        ],
+        [
+          "50",
+          "U0RXD",
+          "bidirectional"
+        ],
+        [
+          "52",
+          "GPIO46",
+          "bidirectional"
+        ],
+        [
+          "53",
+          "XTAL_N",
+          "output"
+        ],
+        [
+          "54",
+          "XTAL_P",
+          "input"
+        ],
+        [
+          "55",
+          "VDDA",
+          "power_in"
+        ],
+        [
+          "57",
+          "GND",
+          "power_in"
+        ]
+      ],
+      "kind": "ic",
+      "note": "",
+      "catalog": {
+        "id": "C2913196",
+        "mpn": "ESP32-S3FN8",
+        "manufacturer": "Espressif Systems",
+        "package": "QFN-56-EP(7x7)",
+        "classification": "Extended",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 2345,
+        "loss": 0,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 9,
+            "usd": 3.337
+          },
+          {
+            "min_qty": 10,
+            "max_qty": 29,
+            "usd": 2.988
+          },
+          {
+            "min_qty": 30,
+            "max_qty": 99,
+            "usd": 2.7809
+          },
+          {
+            "min_qty": 100,
+            "max_qty": 499,
+            "usd": 2.608
+          },
+          {
+            "min_qty": 500,
+            "max_qty": 999,
+            "usd": 2.4922
+          },
+          {
+            "min_qty": 1000,
+            "max_qty": -1,
+            "usd": 2.4384
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C2913196",
+        "checked_at": "2026-10-13T15:12:40.649680+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "eth": {
+      "key": "eth",
+      "code": "C32843",
+      "value": "W5500",
+      "footprint": "Package_QFP:LQFP-48_7x7mm_P0.5mm",
+      "pins": [
+        [
+          "1",
+          "TXN",
+          "output"
+        ],
+        [
+          "2",
+          "TXP",
+          "output"
+        ],
+        [
+          "3",
+          "AGND",
+          "power_in"
+        ],
+        [
+          "4",
+          "AVDD",
+          "power_in"
+        ],
+        [
+          "5",
+          "RXN",
+          "input"
+        ],
+        [
+          "6",
+          "RXP",
+          "input"
+        ],
+        [
+          "7",
+          "DNC",
+          "passive"
+        ],
+        [
+          "8",
+          "AVDD",
+          "power_in"
+        ],
+        [
+          "9",
+          "AGND",
+          "power_in"
+        ],
+        [
+          "10",
+          "EXRES1",
+          "passive"
+        ],
+        [
+          "11",
+          "AVDD",
+          "power_in"
+        ],
+        [
+          "12",
+          "NC",
+          "passive"
+        ],
+        [
+          "13",
+          "NC",
+          "passive"
+        ],
+        [
+          "14",
+          "AGND",
+          "power_in"
+        ],
+        [
+          "15",
+          "AVDD",
+          "power_in"
+        ],
+        [
+          "16",
+          "AGND",
+          "power_in"
+        ],
+        [
+          "17",
+          "AVDD",
+          "power_in"
+        ],
+        [
+          "18",
+          "VBG",
+          "output"
+        ],
+        [
+          "19",
+          "AGND",
+          "power_in"
+        ],
+        [
+          "20",
+          "TOCAP",
+          "output"
+        ],
+        [
+          "21",
+          "AVDD",
+          "power_in"
+        ],
+        [
+          "22",
+          "1V2O",
+          "output"
+        ],
+        [
+          "23",
+          "RSVD",
+          "input"
+        ],
+        [
+          "24",
+          "SPDLED",
+          "output"
+        ],
+        [
+          "25",
+          "LINKLED",
+          "output"
+        ],
+        [
+          "26",
+          "DUPLED",
+          "output"
+        ],
+        [
+          "27",
+          "ACTLED",
+          "output"
+        ],
+        [
+          "28",
+          "VDD",
+          "power_in"
+        ],
+        [
+          "29",
+          "GND",
+          "power_in"
+        ],
+        [
+          "30",
+          "XI",
+          "input"
+        ],
+        [
+          "31",
+          "XO",
+          "output"
+        ],
+        [
+          "32",
+          "CS_N",
+          "input"
+        ],
+        [
+          "33",
+          "SCLK",
+          "input"
+        ],
+        [
+          "34",
+          "MISO",
+          "tri_state"
+        ],
+        [
+          "35",
+          "MOSI",
+          "input"
+        ],
+        [
+          "36",
+          "INT_N",
+          "open_collector"
+        ],
+        [
+          "37",
+          "RST_N",
+          "input"
+        ],
+        [
+          "38",
+          "RSVD",
+          "passive"
+        ],
+        [
+          "39",
+          "RSVD",
+          "passive"
+        ],
+        [
+          "40",
+          "RSVD",
+          "passive"
+        ],
+        [
+          "41",
+          "RSVD",
+          "passive"
+        ],
+        [
+          "42",
+          "RSVD",
+          "passive"
+        ],
+        [
+          "43",
+          "PMODE2",
+          "input"
+        ],
+        [
+          "44",
+          "PMODE1",
+          "input"
+        ],
+        [
+          "45",
+          "PMODE0",
+          "input"
+        ],
+        [
+          "46",
+          "NC",
+          "passive"
+        ],
+        [
+          "47",
+          "NC",
+          "passive"
+        ],
+        [
+          "48",
+          "AGND",
+          "power_in"
+        ]
+      ],
+      "kind": "ic",
+      "note": "",
+      "catalog": {
+        "id": "C32843",
+        "mpn": "W5500",
+        "manufacturer": "WIZNET",
+        "package": "LQFP-48_7x7",
+        "classification": "Extended",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 15204,
+        "loss": 0,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 9,
+            "usd": 2.8249
+          },
+          {
+            "min_qty": 10,
+            "max_qty": 29,
+            "usd": 2.4596
+          },
+          {
+            "min_qty": 30,
+            "max_qty": 99,
+            "usd": 2.2019
+          },
+          {
+            "min_qty": 100,
+            "max_qty": 499,
+            "usd": 1.967
+          },
+          {
+            "min_qty": 500,
+            "max_qty": 999,
+            "usd": 1.8577
+          },
+          {
+            "min_qty": 1000,
+            "max_qty": -1,
+            "usd": 1.8137
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C32843",
+        "checked_at": "2026-10-13T15:20:39.517626+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "flag": {
+      "key": "flag",
+      "code": null,
+      "value": "POWER SOURCE",
+      "footprint": "",
+      "pins": [
+        [
+          "1",
+          "PWR",
+          "power_out"
+        ]
+      ],
+      "kind": "flag",
+      "note": "",
+      "catalog": {}
+    },
+    "header2": {
+      "key": "header2",
+      "code": "C492401",
+      "value": "PZ254V-11-02P",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "pins": [
+        [
+          "1",
+          "1",
+          "passive"
+        ],
+        [
+          "2",
+          "2",
+          "passive"
+        ]
+      ],
+      "kind": "ic",
+      "note": "",
+      "catalog": {
+        "id": "C492401",
+        "mpn": "PZ254V-11-02P",
+        "manufacturer": "XFCN",
+        "package": "Plugin,P=2.54mm",
+        "classification": "Extended",
+        "assembly": "Wave Soldering",
+        "pcba_type": "Economic and Standard",
+        "stock": 1143383,
+        "loss": 0,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 499,
+            "usd": 0.0186
+          },
+          {
+            "min_qty": 500,
+            "max_qty": 1999,
+            "usd": 0.0149
+          },
+          {
+            "min_qty": 2000,
+            "max_qty": 3999,
+            "usd": 0.013
+          },
+          {
+            "min_qty": 4000,
+            "max_qty": 23999,
+            "usd": 0.0118
+          },
+          {
+            "min_qty": 24000,
+            "max_qty": 49999,
+            "usd": 0.0113
+          },
+          {
+            "min_qty": 50000,
+            "max_qty": -1,
+            "usd": 0.011
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C492401",
+        "checked_at": "2026-10-13T15:31:20.503576+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    }
+  },
+  "components": [
+    {
+      "ref": "J101",
+      "key": "barrel",
+      "sheet": "power",
+      "nets": {
+        "1": "5V_JACK",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "F1",
+      "key": "fuse",
+      "sheet": "power",
+      "nets": {
+        "1": "5V_JACK",
+        "2": "5V_FUSED"
+      },
+      "section": ""
+    },
+    {
+      "ref": "Q1",
+      "key": "pmos",
+      "sheet": "power",
+      "nets": {
+        "1": "GND_CTRL",
+        "2": "5V",
+        "3": "5V_FUSED"
+      },
+      "section": ""
+    },
+    {
+      "ref": "#FLG1",
+      "key": "flag",
+      "sheet": "power",
+      "nets": {
+        "1": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "#FLG2",
+      "key": "flag",
+      "sheet": "power",
+      "nets": {
+        "1": "5V_JACK"
+      },
+      "section": ""
+    },
+    {
+      "ref": "#FLG3",
+      "key": "flag",
+      "sheet": "power",
+      "nets": {
+        "1": "5V_FUSED"
+      },
+      "section": ""
+    },
+    {
+      "ref": "#FLG4",
+      "key": "flag",
+      "sheet": "power",
+      "nets": {
+        "1": "5V"
+      },
+      "section": ""
+    },
+    {
+      "ref": "#FLG5",
+      "key": "flag",
+      "sheet": "power",
+      "nets": {
+        "1": "3V3"
+      },
+      "section": ""
+    },
+    {
+      "ref": "C1",
+      "key": "C10u",
+      "sheet": "power",
+      "nets": {
+        "1": "5V",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "C2",
+      "key": "C100n",
+      "sheet": "power",
+      "nets": {
+        "1": "5V",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "U1",
+      "key": "buck",
+      "sheet": "power",
+      "nets": {
+        "1": "3V3",
+        "2": "5V",
+        "3": "5V",
+        "4": "GND_CTRL",
+        "5": "BUCK_SW",
+        "6": "BUCK_BST"
+      },
+      "section": ""
+    },
+    {
+      "ref": "C3",
+      "key": "C100n",
+      "sheet": "power",
+      "nets": {
+        "1": "BUCK_BST",
+        "2": "BUCK_SW"
+      },
+      "section": ""
+    },
+    {
+      "ref": "L1",
+      "key": "ind",
+      "sheet": "power",
+      "nets": {
+        "1": "BUCK_SW",
+        "2": "3V3"
+      },
+      "section": ""
+    },
+    {
+      "ref": "C4",
+      "key": "C22u",
+      "sheet": "power",
+      "nets": {
+        "1": "3V3",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "C5",
+      "key": "C22u",
+      "sheet": "power",
+      "nets": {
+        "1": "3V3",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "U2",
+      "key": "mcu",
+      "sheet": "processor_1",
+      "nets": {
+        "36": "ETH_RST_N",
+        "45": "SPI_MOSI_RAW",
+        "51": "STRAP45",
+        "56": "3V3",
+        "1": null,
+        "2": "3V3",
+        "3": "3V3",
+        "4": "EN",
+        "5": "BOOT_N",
+        "6": null,
+        "7": null,
+        "8": null,
+        "9": "TIMER_ARM",
+        "10": null,
+        "11": "OUT_OE_N",
+        "12": "OUT_LATCH",
+        "13": null,
+        "14": null,
+        "15": null,
+        "16": null,
+        "17": null,
+        "18": null,
+        "19": null,
+        "20": "3V3",
+        "21": null,
+        "22": null,
+        "23": null,
+        "24": null,
+        "25": "USB_DM_MCU",
+        "26": "USB_DP_MCU",
+        "27": null,
+        "28": null,
+        "29": "VDD_SPI",
+        "30": null,
+        "31": null,
+        "32": null,
+        "33": null,
+        "34": null,
+        "35": null,
+        "37": "ETH_INT_N",
+        "38": "USB_VBUS_SENSE",
+        "39": null,
+        "40": null,
+        "41": null,
+        "42": null,
+        "43": null,
+        "44": "SPI_SCK_RAW",
+        "46": "3V3",
+        "47": "SPI_MISO",
+        "48": "ETH_CS_N",
+        "49": null,
+        "50": null,
+        "52": "STRAP46",
+        "53": "MCU_XN",
+        "54": "MCU_XP",
+        "55": "3V3",
+        "57": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "C6",
+      "key": "C100n",
+      "sheet": "processor_1",
+      "nets": {
+        "1": "VDD_SPI",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "C7",
+      "key": "C1u",
+      "sheet": "processor_1",
+      "nets": {
+        "1": "VDD_SPI",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "C8",
+      "key": "C100n",
+      "sheet": "processor_1",
+      "nets": {
+        "1": "3V3",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "C9",
+      "key": "C100n",
+      "sheet": "processor_1",
+      "nets": {
+        "1": "3V3",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "C10",
+      "key": "C100n",
+      "sheet": "processor_1",
+      "nets": {
+        "1": "3V3",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "C11",
+      "key": "C100n",
+      "sheet": "processor_1",
+      "nets": {
+        "1": "3V3",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "C12",
+      "key": "C100n",
+      "sheet": "processor_1",
+      "nets": {
+        "1": "3V3",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "C13",
+      "key": "C100n",
+      "sheet": "processor_1",
+      "nets": {
+        "1": "3V3",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "C14",
+      "key": "C10u",
+      "sheet": "processor_2",
+      "nets": {
+        "1": "3V3",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "C15",
+      "key": "C10u",
+      "sheet": "processor_2",
+      "nets": {
+        "1": "3V3",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R1",
+      "key": "R10k",
+      "sheet": "processor_2",
+      "nets": {
+        "1": "3V3",
+        "2": "EN"
+      },
+      "section": ""
+    },
+    {
+      "ref": "C16",
+      "key": "C1u",
+      "sheet": "processor_2",
+      "nets": {
+        "1": "EN",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R2",
+      "key": "R10k",
+      "sheet": "processor_2",
+      "nets": {
+        "1": "3V3",
+        "2": "BOOT_N"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R3",
+      "key": "R10k",
+      "sheet": "processor_2",
+      "nets": {
+        "1": "STRAP45",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R4",
+      "key": "R10k",
+      "sheet": "processor_2",
+      "nets": {
+        "1": "STRAP46",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "J102",
+      "key": "header2",
+      "sheet": "processor_2",
+      "nets": {
+        "1": "EN",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "J103",
+      "key": "header2",
+      "sheet": "processor_2",
+      "nets": {
+        "1": "BOOT_N",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "Y1",
+      "key": "xtal40",
+      "sheet": "processor_2",
+      "nets": {
+        "1": "MCU_XP_CR",
+        "2": "GND_CTRL",
+        "3": "MCU_XN",
+        "4": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R5",
+      "key": "R0",
+      "sheet": "processor_2",
+      "nets": {
+        "1": "MCU_XP",
+        "2": "MCU_XP_CR"
+      },
+      "section": ""
+    },
+    {
+      "ref": "C17",
+      "key": "C20p",
+      "sheet": "processor_2",
+      "nets": {
+        "1": "MCU_XP_CR",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "C18",
+      "key": "C20p",
+      "sheet": "processor_2",
+      "nets": {
+        "1": "MCU_XN",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R6",
+      "key": "R47",
+      "sheet": "processor_2",
+      "nets": {
+        "1": "SPI_SCK_RAW",
+        "2": "SPI_SCK"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R7",
+      "key": "R47",
+      "sheet": "processor_2",
+      "nets": {
+        "1": "SPI_MOSI_RAW",
+        "2": "SPI_MOSI"
+      },
+      "section": ""
+    },
+    {
+      "ref": "J104",
+      "key": "usb",
+      "sheet": "processor_1",
+      "nets": {
+        "A1": "GND_CTRL",
+        "A4": "USB_VBUS",
+        "A5": "USB_CC1",
+        "A6": "USB_DP",
+        "A7": "USB_DM",
+        "A8": null,
+        "A9": "USB_VBUS",
+        "A12": "GND_CTRL",
+        "B1": "GND_CTRL",
+        "B4": "USB_VBUS",
+        "B5": "USB_CC2",
+        "B6": "USB_DP",
+        "B7": "USB_DM",
+        "B8": null,
+        "B9": "USB_VBUS",
+        "B12": "GND_CTRL",
+        "SH": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D1",
+      "key": "usbesd",
+      "sheet": "processor_2",
+      "nets": {
+        "1": "GND_CTRL",
+        "2": "USB_DM",
+        "3": "USB_DP",
+        "4": "USB_VBUS"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R8",
+      "key": "R5.1k",
+      "sheet": "processor_2",
+      "nets": {
+        "1": "USB_CC1",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R9",
+      "key": "R5.1k",
+      "sheet": "processor_2",
+      "nets": {
+        "1": "USB_CC2",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R10",
+      "key": "R33",
+      "sheet": "processor_2",
+      "nets": {
+        "1": "USB_DM",
+        "2": "USB_DM_MCU"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R11",
+      "key": "R33",
+      "sheet": "processor_2",
+      "nets": {
+        "1": "USB_DP",
+        "2": "USB_DP_MCU"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R12",
+      "key": "R100k",
+      "sheet": "processor_2",
+      "nets": {
+        "1": "USB_VBUS",
+        "2": "USB_VBUS_SENSE"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R13",
+      "key": "R100k",
+      "sheet": "processor_2",
+      "nets": {
+        "1": "USB_VBUS_SENSE",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "U3",
+      "key": "eth",
+      "sheet": "ethernet_1",
+      "nets": {
+        "1": "ETH_TXN",
+        "2": "ETH_TXP",
+        "3": "GND_CTRL",
+        "4": "3V3_ETH_A",
+        "5": "ETH_RXN",
+        "6": "ETH_RXP",
+        "7": null,
+        "8": "3V3_ETH_A",
+        "9": "GND_CTRL",
+        "10": "ETH_EXRES",
+        "11": "3V3_ETH_A",
+        "12": null,
+        "13": null,
+        "14": "GND_CTRL",
+        "15": "3V3_ETH_A",
+        "16": "GND_CTRL",
+        "17": "3V3_ETH_A",
+        "18": null,
+        "19": "GND_CTRL",
+        "20": "ETH_TOCAP",
+        "21": "3V3_ETH_A",
+        "22": "ETH_1V2",
+        "23": "GND_CTRL",
+        "24": null,
+        "25": "ETH_LINK_N",
+        "26": null,
+        "27": "ETH_ACT_N",
+        "28": "3V3",
+        "29": "GND_CTRL",
+        "30": "ETH_XI",
+        "31": "ETH_XO",
+        "32": "ETH_CS_N",
+        "33": "SPI_SCK",
+        "34": "SPI_MISO",
+        "35": "SPI_MOSI",
+        "36": "ETH_INT_N",
+        "37": "ETH_RST_N",
+        "38": null,
+        "39": null,
+        "40": null,
+        "41": null,
+        "42": null,
+        "43": "3V3",
+        "44": "3V3",
+        "45": "3V3",
+        "46": null,
+        "47": null,
+        "48": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "L2",
+      "key": "bead",
+      "sheet": "ethernet_1",
+      "nets": {
+        "1": "3V3",
+        "2": "3V3_ETH_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "#FLG6",
+      "key": "flag",
+      "sheet": "ethernet_1",
+      "nets": {
+        "1": "3V3_ETH_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R14",
+      "key": "R12.4k",
+      "sheet": "ethernet_1",
+      "nets": {
+        "1": "ETH_EXRES",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "C19",
+      "key": "C4.7u",
+      "sheet": "ethernet_1",
+      "nets": {
+        "1": "ETH_TOCAP",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "C20",
+      "key": "C10n",
+      "sheet": "ethernet_1",
+      "nets": {
+        "1": "ETH_1V2",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "C21",
+      "key": "C100n",
+      "sheet": "ethernet_1",
+      "nets": {
+        "1": "3V3_ETH_A",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "C22",
+      "key": "C100n",
+      "sheet": "ethernet_1",
+      "nets": {
+        "1": "3V3_ETH_A",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "C23",
+      "key": "C100n",
+      "sheet": "ethernet_1",
+      "nets": {
+        "1": "3V3_ETH_A",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "C24",
+      "key": "C100n",
+      "sheet": "ethernet_2",
+      "nets": {
+        "1": "3V3_ETH_A",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "C25",
+      "key": "C100n",
+      "sheet": "ethernet_2",
+      "nets": {
+        "1": "3V3_ETH_A",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "C26",
+      "key": "C100n",
+      "sheet": "ethernet_2",
+      "nets": {
+        "1": "3V3_ETH_A",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "C27",
+      "key": "C10u",
+      "sheet": "ethernet_2",
+      "nets": {
+        "1": "3V3_ETH_A",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "C28",
+      "key": "C100n",
+      "sheet": "ethernet_2",
+      "nets": {
+        "1": "3V3",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "C29",
+      "key": "C10u",
+      "sheet": "ethernet_2",
+      "nets": {
+        "1": "3V3",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R15",
+      "key": "R10k",
+      "sheet": "ethernet_2",
+      "nets": {
+        "1": "3V3",
+        "2": "ETH_CS_N"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R16",
+      "key": "R10k",
+      "sheet": "ethernet_2",
+      "nets": {
+        "1": "3V3",
+        "2": "ETH_INT_N"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R17",
+      "key": "R10k",
+      "sheet": "ethernet_2",
+      "nets": {
+        "1": "3V3",
+        "2": "ETH_RST_N"
+      },
+      "section": ""
+    },
+    {
+      "ref": "C30",
+      "key": "C1u",
+      "sheet": "ethernet_2",
+      "nets": {
+        "1": "ETH_RST_N",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "Y2",
+      "key": "xtal25",
+      "sheet": "ethernet_2",
+      "nets": {
+        "1": "ETH_XI",
+        "2": "GND_CTRL",
+        "3": "ETH_XO",
+        "4": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "C31",
+      "key": "C20p",
+      "sheet": "ethernet_2",
+      "nets": {
+        "1": "ETH_XI",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "C32",
+      "key": "C20p",
+      "sheet": "ethernet_2",
+      "nets": {
+        "1": "ETH_XO",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R18",
+      "key": "R49.9",
+      "sheet": "ethernet_2",
+      "nets": {
+        "1": "ETH_TXP",
+        "2": "3V3_ETH_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R19",
+      "key": "R49.9",
+      "sheet": "ethernet_2",
+      "nets": {
+        "1": "ETH_TXN",
+        "2": "3V3_ETH_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R20",
+      "key": "R49.9",
+      "sheet": "ethernet_2",
+      "nets": {
+        "1": "ETH_RXP",
+        "2": "ETH_RX_TERM"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R21",
+      "key": "R49.9",
+      "sheet": "ethernet_2",
+      "nets": {
+        "1": "ETH_RXN",
+        "2": "ETH_RX_TERM"
+      },
+      "section": ""
+    },
+    {
+      "ref": "C33",
+      "key": "C10n",
+      "sheet": "ethernet_2",
+      "nets": {
+        "1": "ETH_RX_TERM",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "C34",
+      "key": "C6.8n",
+      "sheet": "ethernet_2",
+      "nets": {
+        "1": "ETH_RXP",
+        "2": "RJ_RD_P"
+      },
+      "section": ""
+    },
+    {
+      "ref": "C35",
+      "key": "C6.8n",
+      "sheet": "ethernet_2",
+      "nets": {
+        "1": "ETH_RXN",
+        "2": "RJ_RD_N"
+      },
+      "section": ""
+    },
+    {
+      "ref": "C36",
+      "key": "C22n",
+      "sheet": "ethernet_2",
+      "nets": {
+        "1": "RJ_TX_CT",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R22",
+      "key": "R330",
+      "sheet": "ethernet_2",
+      "nets": {
+        "1": "3V3",
+        "2": "RJ_LED_G_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R23",
+      "key": "R330",
+      "sheet": "ethernet_2",
+      "nets": {
+        "1": "3V3",
+        "2": "RJ_LED_Y_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "J105",
+      "key": "rj45",
+      "sheet": "ethernet_2",
+      "nets": {
+        "1": "ETH_TXP",
+        "2": "ETH_TXN",
+        "3": "RJ_RD_P",
+        "4": "RJ_TX_CT",
+        "5": "ETH_RX_TERM",
+        "6": "RJ_RD_N",
+        "7": null,
+        "8": "GND_CTRL",
+        "9": "RJ_LED_G_A",
+        "10": "ETH_LINK_N",
+        "11": "ETH_ACT_N",
+        "12": "RJ_LED_Y_A",
+        "SH": "CHASSIS"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R24",
+      "key": "R0",
+      "sheet": "ethernet_3",
+      "nets": {
+        "1": "CHASSIS",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "U4",
+      "key": "hc595",
+      "sheet": "outputs_1",
+      "nets": {
+        "1": "DRV_02",
+        "2": "DRV_03",
+        "3": "DRV_04",
+        "4": "DRV_05",
+        "5": "DRV_06",
+        "6": "DRV_07",
+        "7": "DRV_08",
+        "8": "GND_CTRL",
+        "9": "SHIFT_1",
+        "10": "EN",
+        "11": "SPI_SCK",
+        "12": "OUT_LATCH",
+        "13": "OUT_OE_N",
+        "14": "SPI_MOSI",
+        "15": "DRV_01",
+        "16": "3V3"
+      },
+      "section": ""
+    },
+    {
+      "ref": "C37",
+      "key": "C100n",
+      "sheet": "outputs_1",
+      "nets": {
+        "1": "3V3",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "U5",
+      "key": "hc595",
+      "sheet": "outputs_1",
+      "nets": {
+        "1": "DRV_10",
+        "2": "DRV_11",
+        "3": "DRV_12",
+        "4": "DRV_13",
+        "5": "DRV_14",
+        "6": "DRV_15",
+        "7": "DRV_16",
+        "8": "GND_CTRL",
+        "9": "SHIFT_2",
+        "10": "EN",
+        "11": "SPI_SCK",
+        "12": "OUT_LATCH",
+        "13": "OUT_OE_N",
+        "14": "SHIFT_1",
+        "15": "DRV_09",
+        "16": "3V3"
+      },
+      "section": ""
+    },
+    {
+      "ref": "C38",
+      "key": "C100n",
+      "sheet": "outputs_1",
+      "nets": {
+        "1": "3V3",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "U6",
+      "key": "hc595",
+      "sheet": "outputs_1",
+      "nets": {
+        "1": "DRV_18",
+        "2": "DRV_19",
+        "3": "DRV_20",
+        "4": null,
+        "5": null,
+        "6": null,
+        "7": null,
+        "8": "GND_CTRL",
+        "9": null,
+        "10": "EN",
+        "11": "SPI_SCK",
+        "12": "OUT_LATCH",
+        "13": "OUT_OE_N",
+        "14": "SHIFT_2",
+        "15": "DRV_17",
+        "16": "3V3"
+      },
+      "section": ""
+    },
+    {
+      "ref": "C39",
+      "key": "C100n",
+      "sheet": "outputs_1",
+      "nets": {
+        "1": "3V3",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R25",
+      "key": "R10k",
+      "sheet": "outputs_1",
+      "nets": {
+        "1": "3V3",
+        "2": "OUT_OE_N"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R26",
+      "key": "R100k",
+      "sheet": "outputs_1",
+      "nets": {
+        "1": "OUT_LATCH",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R27",
+      "key": "R10k",
+      "sheet": "outputs_1",
+      "nets": {
+        "1": "TIMER_ARM",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R28",
+      "key": "R10k",
+      "sheet": "outputs_1",
+      "nets": {
+        "1": "TIMER_ARM",
+        "2": "ARM_RESET_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R29",
+      "key": "R100k",
+      "sheet": "outputs_1",
+      "nets": {
+        "1": "ARM_RESET_B",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "Q2",
+      "key": "npn",
+      "sheet": "outputs_1",
+      "nets": {
+        "1": "ARM_RESET_B",
+        "2": "GND_CTRL",
+        "3": "TIMER_MR"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R30",
+      "key": "R10k",
+      "sheet": "outputs_1",
+      "nets": {
+        "1": "5V",
+        "2": "TIMER_MR"
+      },
+      "section": ""
+    },
+    {
+      "ref": "U7",
+      "key": "timer",
+      "sheet": "outputs_1",
+      "nets": {
+        "1": "TIMER_RTC",
+        "2": "TIMER_CTC",
+        "3": "TIMER_RS",
+        "4": null,
+        "5": "5V",
+        "6": "TIMER_MR",
+        "7": "GND_CTRL",
+        "8": "TIMER_OUT",
+        "9": "5V",
+        "10": "GND_CTRL",
+        "11": null,
+        "12": "5V",
+        "13": "5V",
+        "14": "5V"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R31",
+      "key": "R100k",
+      "sheet": "outputs_1",
+      "nets": {
+        "1": "TIMER_RTC",
+        "2": "RTC_MID"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R32",
+      "key": "R100k",
+      "sheet": "outputs_1",
+      "nets": {
+        "1": "RTC_MID",
+        "2": "OSC_RC"
+      },
+      "section": ""
+    },
+    {
+      "ref": "RT1",
+      "key": "R100k",
+      "sheet": "outputs_1",
+      "nets": {
+        "1": "TIMER_RS",
+        "2": "RS1"
+      },
+      "section": ""
+    },
+    {
+      "ref": "RT2",
+      "key": "R100k",
+      "sheet": "outputs_1",
+      "nets": {
+        "1": "RS1",
+        "2": "RS2"
+      },
+      "section": ""
+    },
+    {
+      "ref": "RT3",
+      "key": "R100k",
+      "sheet": "outputs_1",
+      "nets": {
+        "1": "RS2",
+        "2": "RS3"
+      },
+      "section": ""
+    },
+    {
+      "ref": "RT4",
+      "key": "R100k",
+      "sheet": "outputs_1",
+      "nets": {
+        "1": "RS3",
+        "2": "OSC_RC"
+      },
+      "section": ""
+    },
+    {
+      "ref": "C40",
+      "key": "C1n",
+      "sheet": "outputs_1",
+      "nets": {
+        "1": "TIMER_CTC",
+        "2": "OSC_RC"
+      },
+      "section": ""
+    },
+    {
+      "ref": "C42",
+      "key": "C100n",
+      "sheet": "outputs_1",
+      "nets": {
+        "1": "5V",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R33",
+      "key": "R10k",
+      "sheet": "outputs_1",
+      "nets": {
+        "1": "TIMER_OUT",
+        "2": "GATE_BASE"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R34",
+      "key": "R100k",
+      "sheet": "outputs_1",
+      "nets": {
+        "1": "GATE_BASE",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "Q3",
+      "key": "npn",
+      "sheet": "outputs_2",
+      "nets": {
+        "1": "GATE_BASE",
+        "2": "ARM_SINK",
+        "3": "PHOTO_GATE"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R37",
+      "key": "R10k",
+      "sheet": "outputs_2",
+      "nets": {
+        "1": "TIMER_ARM",
+        "2": "ARM_GATE_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R38",
+      "key": "R100k",
+      "sheet": "outputs_2",
+      "nets": {
+        "1": "ARM_GATE_B",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "Q200",
+      "key": "npn",
+      "sheet": "outputs_2",
+      "nets": {
+        "1": "ARM_GATE_B",
+        "2": "GND_CTRL",
+        "3": "ARM_SINK"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R35",
+      "key": "R10k",
+      "sheet": "outputs_2",
+      "nets": {
+        "1": "PHOTO_GATE",
+        "2": "5V"
+      },
+      "section": ""
+    },
+    {
+      "ref": "Q4",
+      "key": "pmos",
+      "sheet": "outputs_2",
+      "nets": {
+        "1": "PHOTO_GATE",
+        "2": "5V",
+        "3": "PHOTO_5V"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R36",
+      "key": "R10k",
+      "sheet": "outputs_2",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "#FLG7",
+      "key": "flag",
+      "sheet": "outputs_2",
+      "nets": {
+        "1": "PHOTO_5V"
+      },
+      "section": ""
+    },
+    {
+      "ref": "J01",
+      "key": "port",
+      "sheet": "host01",
+      "nets": {
+        "1": "H01_PWR_A",
+        "2": "H01_PWR_B",
+        "3": "H01_RST_A",
+        "4": "H01_RST_B",
+        "5": null,
+        "6": null,
+        "7": null,
+        "8": null,
+        "9": "H01_GND",
+        "10": null
+      },
+      "section": ""
+    },
+    {
+      "ref": "R39",
+      "key": "R1.5k",
+      "sheet": "host01",
+      "nets": {
+        "1": "DRV_01",
+        "2": "CTRL_H01_PWR_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R40",
+      "key": "R100k",
+      "sheet": "host01",
+      "nets": {
+        "1": "CTRL_H01_PWR_B",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "Q5",
+      "key": "npn",
+      "sheet": "host01",
+      "nets": {
+        "1": "CTRL_H01_PWR_B",
+        "2": "GND_CTRL",
+        "3": "CTRL_H01_PWR_K"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R41",
+      "key": "R220",
+      "sheet": "host01",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H01_PWR_R"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R42",
+      "key": "R220",
+      "sheet": "host01",
+      "nets": {
+        "1": "CTRL_H01_PWR_R",
+        "2": "CTRL_H01_PWR_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "U8",
+      "key": "ssr",
+      "sheet": "host01",
+      "nets": {
+        "1": "CTRL_H01_PWR_A",
+        "3": "CTRL_H01_PWR_K",
+        "4": "H01_PWR_A",
+        "6": "H01_PWR_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R301",
+      "key": "R1.5k",
+      "sheet": "host01",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H01_PWR_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D101",
+      "key": "ledred",
+      "sheet": "host01",
+      "nets": {
+        "1": "CTRL_H01_PWR_K",
+        "2": "CTRL_H01_PWR_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R43",
+      "key": "R1.5k",
+      "sheet": "host01",
+      "nets": {
+        "1": "DRV_02",
+        "2": "CTRL_H01_RST_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R44",
+      "key": "R100k",
+      "sheet": "host01",
+      "nets": {
+        "1": "CTRL_H01_RST_B",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "Q6",
+      "key": "npn",
+      "sheet": "host01",
+      "nets": {
+        "1": "CTRL_H01_RST_B",
+        "2": "GND_CTRL",
+        "3": "CTRL_H01_RST_K"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R45",
+      "key": "R220",
+      "sheet": "host01",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H01_RST_R"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R46",
+      "key": "R220",
+      "sheet": "host01",
+      "nets": {
+        "1": "CTRL_H01_RST_R",
+        "2": "CTRL_H01_RST_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "U9",
+      "key": "ssr",
+      "sheet": "host01",
+      "nets": {
+        "1": "CTRL_H01_RST_A",
+        "3": "CTRL_H01_RST_K",
+        "4": "H01_RST_A",
+        "6": "H01_RST_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R302",
+      "key": "R1.5k",
+      "sheet": "host01",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H01_RST_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D102",
+      "key": "ledred",
+      "sheet": "host01",
+      "nets": {
+        "1": "CTRL_H01_RST_K",
+        "2": "CTRL_H01_RST_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D2",
+      "key": "esd",
+      "sheet": "host01",
+      "nets": {
+        "1": "H01_PWR_A",
+        "2": "H01_PWR_B",
+        "3": "H01_GND"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D3",
+      "key": "esd",
+      "sheet": "host01",
+      "nets": {
+        "1": "H01_RST_A",
+        "2": "H01_RST_B",
+        "3": "H01_GND"
+      },
+      "section": ""
+    },
+    {
+      "ref": "J02",
+      "key": "port",
+      "sheet": "host02",
+      "nets": {
+        "1": "H02_PWR_A",
+        "2": "H02_PWR_B",
+        "3": "H02_RST_A",
+        "4": "H02_RST_B",
+        "5": null,
+        "6": null,
+        "7": null,
+        "8": null,
+        "9": "H02_GND",
+        "10": null
+      },
+      "section": ""
+    },
+    {
+      "ref": "R47",
+      "key": "R1.5k",
+      "sheet": "host02",
+      "nets": {
+        "1": "DRV_03",
+        "2": "CTRL_H02_PWR_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R48",
+      "key": "R100k",
+      "sheet": "host02",
+      "nets": {
+        "1": "CTRL_H02_PWR_B",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "Q7",
+      "key": "npn",
+      "sheet": "host02",
+      "nets": {
+        "1": "CTRL_H02_PWR_B",
+        "2": "GND_CTRL",
+        "3": "CTRL_H02_PWR_K"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R49",
+      "key": "R220",
+      "sheet": "host02",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H02_PWR_R"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R50",
+      "key": "R220",
+      "sheet": "host02",
+      "nets": {
+        "1": "CTRL_H02_PWR_R",
+        "2": "CTRL_H02_PWR_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "U10",
+      "key": "ssr",
+      "sheet": "host02",
+      "nets": {
+        "1": "CTRL_H02_PWR_A",
+        "3": "CTRL_H02_PWR_K",
+        "4": "H02_PWR_A",
+        "6": "H02_PWR_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R303",
+      "key": "R1.5k",
+      "sheet": "host02",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H02_PWR_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D103",
+      "key": "ledred",
+      "sheet": "host02",
+      "nets": {
+        "1": "CTRL_H02_PWR_K",
+        "2": "CTRL_H02_PWR_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R51",
+      "key": "R1.5k",
+      "sheet": "host02",
+      "nets": {
+        "1": "DRV_04",
+        "2": "CTRL_H02_RST_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R52",
+      "key": "R100k",
+      "sheet": "host02",
+      "nets": {
+        "1": "CTRL_H02_RST_B",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "Q8",
+      "key": "npn",
+      "sheet": "host02",
+      "nets": {
+        "1": "CTRL_H02_RST_B",
+        "2": "GND_CTRL",
+        "3": "CTRL_H02_RST_K"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R53",
+      "key": "R220",
+      "sheet": "host02",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H02_RST_R"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R54",
+      "key": "R220",
+      "sheet": "host02",
+      "nets": {
+        "1": "CTRL_H02_RST_R",
+        "2": "CTRL_H02_RST_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "U11",
+      "key": "ssr",
+      "sheet": "host02",
+      "nets": {
+        "1": "CTRL_H02_RST_A",
+        "3": "CTRL_H02_RST_K",
+        "4": "H02_RST_A",
+        "6": "H02_RST_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R304",
+      "key": "R1.5k",
+      "sheet": "host02",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H02_RST_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D104",
+      "key": "ledred",
+      "sheet": "host02",
+      "nets": {
+        "1": "CTRL_H02_RST_K",
+        "2": "CTRL_H02_RST_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D4",
+      "key": "esd",
+      "sheet": "host02",
+      "nets": {
+        "1": "H02_PWR_A",
+        "2": "H02_PWR_B",
+        "3": "H02_GND"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D5",
+      "key": "esd",
+      "sheet": "host02",
+      "nets": {
+        "1": "H02_RST_A",
+        "2": "H02_RST_B",
+        "3": "H02_GND"
+      },
+      "section": ""
+    },
+    {
+      "ref": "J03",
+      "key": "port",
+      "sheet": "host03",
+      "nets": {
+        "1": "H03_PWR_A",
+        "2": "H03_PWR_B",
+        "3": "H03_RST_A",
+        "4": "H03_RST_B",
+        "5": null,
+        "6": null,
+        "7": null,
+        "8": null,
+        "9": "H03_GND",
+        "10": null
+      },
+      "section": ""
+    },
+    {
+      "ref": "R55",
+      "key": "R1.5k",
+      "sheet": "host03",
+      "nets": {
+        "1": "DRV_05",
+        "2": "CTRL_H03_PWR_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R56",
+      "key": "R100k",
+      "sheet": "host03",
+      "nets": {
+        "1": "CTRL_H03_PWR_B",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "Q9",
+      "key": "npn",
+      "sheet": "host03",
+      "nets": {
+        "1": "CTRL_H03_PWR_B",
+        "2": "GND_CTRL",
+        "3": "CTRL_H03_PWR_K"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R57",
+      "key": "R220",
+      "sheet": "host03",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H03_PWR_R"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R58",
+      "key": "R220",
+      "sheet": "host03",
+      "nets": {
+        "1": "CTRL_H03_PWR_R",
+        "2": "CTRL_H03_PWR_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "U12",
+      "key": "ssr",
+      "sheet": "host03",
+      "nets": {
+        "1": "CTRL_H03_PWR_A",
+        "3": "CTRL_H03_PWR_K",
+        "4": "H03_PWR_A",
+        "6": "H03_PWR_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R305",
+      "key": "R1.5k",
+      "sheet": "host03",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H03_PWR_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D105",
+      "key": "ledred",
+      "sheet": "host03",
+      "nets": {
+        "1": "CTRL_H03_PWR_K",
+        "2": "CTRL_H03_PWR_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R59",
+      "key": "R1.5k",
+      "sheet": "host03",
+      "nets": {
+        "1": "DRV_06",
+        "2": "CTRL_H03_RST_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R60",
+      "key": "R100k",
+      "sheet": "host03",
+      "nets": {
+        "1": "CTRL_H03_RST_B",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "Q10",
+      "key": "npn",
+      "sheet": "host03",
+      "nets": {
+        "1": "CTRL_H03_RST_B",
+        "2": "GND_CTRL",
+        "3": "CTRL_H03_RST_K"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R61",
+      "key": "R220",
+      "sheet": "host03",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H03_RST_R"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R62",
+      "key": "R220",
+      "sheet": "host03",
+      "nets": {
+        "1": "CTRL_H03_RST_R",
+        "2": "CTRL_H03_RST_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "U13",
+      "key": "ssr",
+      "sheet": "host03",
+      "nets": {
+        "1": "CTRL_H03_RST_A",
+        "3": "CTRL_H03_RST_K",
+        "4": "H03_RST_A",
+        "6": "H03_RST_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R306",
+      "key": "R1.5k",
+      "sheet": "host03",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H03_RST_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D106",
+      "key": "ledred",
+      "sheet": "host03",
+      "nets": {
+        "1": "CTRL_H03_RST_K",
+        "2": "CTRL_H03_RST_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D6",
+      "key": "esd",
+      "sheet": "host03",
+      "nets": {
+        "1": "H03_PWR_A",
+        "2": "H03_PWR_B",
+        "3": "H03_GND"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D7",
+      "key": "esd",
+      "sheet": "host03",
+      "nets": {
+        "1": "H03_RST_A",
+        "2": "H03_RST_B",
+        "3": "H03_GND"
+      },
+      "section": ""
+    },
+    {
+      "ref": "J04",
+      "key": "port",
+      "sheet": "host04",
+      "nets": {
+        "1": "H04_PWR_A",
+        "2": "H04_PWR_B",
+        "3": "H04_RST_A",
+        "4": "H04_RST_B",
+        "5": null,
+        "6": null,
+        "7": null,
+        "8": null,
+        "9": "H04_GND",
+        "10": null
+      },
+      "section": ""
+    },
+    {
+      "ref": "R63",
+      "key": "R1.5k",
+      "sheet": "host04",
+      "nets": {
+        "1": "DRV_07",
+        "2": "CTRL_H04_PWR_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R64",
+      "key": "R100k",
+      "sheet": "host04",
+      "nets": {
+        "1": "CTRL_H04_PWR_B",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "Q11",
+      "key": "npn",
+      "sheet": "host04",
+      "nets": {
+        "1": "CTRL_H04_PWR_B",
+        "2": "GND_CTRL",
+        "3": "CTRL_H04_PWR_K"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R65",
+      "key": "R220",
+      "sheet": "host04",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H04_PWR_R"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R66",
+      "key": "R220",
+      "sheet": "host04",
+      "nets": {
+        "1": "CTRL_H04_PWR_R",
+        "2": "CTRL_H04_PWR_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "U14",
+      "key": "ssr",
+      "sheet": "host04",
+      "nets": {
+        "1": "CTRL_H04_PWR_A",
+        "3": "CTRL_H04_PWR_K",
+        "4": "H04_PWR_A",
+        "6": "H04_PWR_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R307",
+      "key": "R1.5k",
+      "sheet": "host04",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H04_PWR_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D107",
+      "key": "ledred",
+      "sheet": "host04",
+      "nets": {
+        "1": "CTRL_H04_PWR_K",
+        "2": "CTRL_H04_PWR_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R67",
+      "key": "R1.5k",
+      "sheet": "host04",
+      "nets": {
+        "1": "DRV_08",
+        "2": "CTRL_H04_RST_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R68",
+      "key": "R100k",
+      "sheet": "host04",
+      "nets": {
+        "1": "CTRL_H04_RST_B",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "Q12",
+      "key": "npn",
+      "sheet": "host04",
+      "nets": {
+        "1": "CTRL_H04_RST_B",
+        "2": "GND_CTRL",
+        "3": "CTRL_H04_RST_K"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R69",
+      "key": "R220",
+      "sheet": "host04",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H04_RST_R"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R70",
+      "key": "R220",
+      "sheet": "host04",
+      "nets": {
+        "1": "CTRL_H04_RST_R",
+        "2": "CTRL_H04_RST_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "U15",
+      "key": "ssr",
+      "sheet": "host04",
+      "nets": {
+        "1": "CTRL_H04_RST_A",
+        "3": "CTRL_H04_RST_K",
+        "4": "H04_RST_A",
+        "6": "H04_RST_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R308",
+      "key": "R1.5k",
+      "sheet": "host04",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H04_RST_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D108",
+      "key": "ledred",
+      "sheet": "host04",
+      "nets": {
+        "1": "CTRL_H04_RST_K",
+        "2": "CTRL_H04_RST_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D8",
+      "key": "esd",
+      "sheet": "host04",
+      "nets": {
+        "1": "H04_PWR_A",
+        "2": "H04_PWR_B",
+        "3": "H04_GND"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D9",
+      "key": "esd",
+      "sheet": "host04",
+      "nets": {
+        "1": "H04_RST_A",
+        "2": "H04_RST_B",
+        "3": "H04_GND"
+      },
+      "section": ""
+    },
+    {
+      "ref": "J05",
+      "key": "port",
+      "sheet": "host05",
+      "nets": {
+        "1": "H05_PWR_A",
+        "2": "H05_PWR_B",
+        "3": "H05_RST_A",
+        "4": "H05_RST_B",
+        "5": null,
+        "6": null,
+        "7": null,
+        "8": null,
+        "9": "H05_GND",
+        "10": null
+      },
+      "section": ""
+    },
+    {
+      "ref": "R71",
+      "key": "R1.5k",
+      "sheet": "host05",
+      "nets": {
+        "1": "DRV_09",
+        "2": "CTRL_H05_PWR_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R72",
+      "key": "R100k",
+      "sheet": "host05",
+      "nets": {
+        "1": "CTRL_H05_PWR_B",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "Q13",
+      "key": "npn",
+      "sheet": "host05",
+      "nets": {
+        "1": "CTRL_H05_PWR_B",
+        "2": "GND_CTRL",
+        "3": "CTRL_H05_PWR_K"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R73",
+      "key": "R220",
+      "sheet": "host05",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H05_PWR_R"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R74",
+      "key": "R220",
+      "sheet": "host05",
+      "nets": {
+        "1": "CTRL_H05_PWR_R",
+        "2": "CTRL_H05_PWR_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "U16",
+      "key": "ssr",
+      "sheet": "host05",
+      "nets": {
+        "1": "CTRL_H05_PWR_A",
+        "3": "CTRL_H05_PWR_K",
+        "4": "H05_PWR_A",
+        "6": "H05_PWR_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R309",
+      "key": "R1.5k",
+      "sheet": "host05",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H05_PWR_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D109",
+      "key": "ledred",
+      "sheet": "host05",
+      "nets": {
+        "1": "CTRL_H05_PWR_K",
+        "2": "CTRL_H05_PWR_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R75",
+      "key": "R1.5k",
+      "sheet": "host05",
+      "nets": {
+        "1": "DRV_10",
+        "2": "CTRL_H05_RST_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R76",
+      "key": "R100k",
+      "sheet": "host05",
+      "nets": {
+        "1": "CTRL_H05_RST_B",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "Q14",
+      "key": "npn",
+      "sheet": "host05",
+      "nets": {
+        "1": "CTRL_H05_RST_B",
+        "2": "GND_CTRL",
+        "3": "CTRL_H05_RST_K"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R77",
+      "key": "R220",
+      "sheet": "host05",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H05_RST_R"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R78",
+      "key": "R220",
+      "sheet": "host05",
+      "nets": {
+        "1": "CTRL_H05_RST_R",
+        "2": "CTRL_H05_RST_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "U17",
+      "key": "ssr",
+      "sheet": "host05",
+      "nets": {
+        "1": "CTRL_H05_RST_A",
+        "3": "CTRL_H05_RST_K",
+        "4": "H05_RST_A",
+        "6": "H05_RST_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R310",
+      "key": "R1.5k",
+      "sheet": "host05",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H05_RST_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D110",
+      "key": "ledred",
+      "sheet": "host05",
+      "nets": {
+        "1": "CTRL_H05_RST_K",
+        "2": "CTRL_H05_RST_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D10",
+      "key": "esd",
+      "sheet": "host05",
+      "nets": {
+        "1": "H05_PWR_A",
+        "2": "H05_PWR_B",
+        "3": "H05_GND"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D11",
+      "key": "esd",
+      "sheet": "host05",
+      "nets": {
+        "1": "H05_RST_A",
+        "2": "H05_RST_B",
+        "3": "H05_GND"
+      },
+      "section": ""
+    },
+    {
+      "ref": "J06",
+      "key": "port",
+      "sheet": "host06",
+      "nets": {
+        "1": "H06_PWR_A",
+        "2": "H06_PWR_B",
+        "3": "H06_RST_A",
+        "4": "H06_RST_B",
+        "5": null,
+        "6": null,
+        "7": null,
+        "8": null,
+        "9": "H06_GND",
+        "10": null
+      },
+      "section": ""
+    },
+    {
+      "ref": "R79",
+      "key": "R1.5k",
+      "sheet": "host06",
+      "nets": {
+        "1": "DRV_11",
+        "2": "CTRL_H06_PWR_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R80",
+      "key": "R100k",
+      "sheet": "host06",
+      "nets": {
+        "1": "CTRL_H06_PWR_B",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "Q15",
+      "key": "npn",
+      "sheet": "host06",
+      "nets": {
+        "1": "CTRL_H06_PWR_B",
+        "2": "GND_CTRL",
+        "3": "CTRL_H06_PWR_K"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R81",
+      "key": "R220",
+      "sheet": "host06",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H06_PWR_R"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R82",
+      "key": "R220",
+      "sheet": "host06",
+      "nets": {
+        "1": "CTRL_H06_PWR_R",
+        "2": "CTRL_H06_PWR_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "U18",
+      "key": "ssr",
+      "sheet": "host06",
+      "nets": {
+        "1": "CTRL_H06_PWR_A",
+        "3": "CTRL_H06_PWR_K",
+        "4": "H06_PWR_A",
+        "6": "H06_PWR_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R311",
+      "key": "R1.5k",
+      "sheet": "host06",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H06_PWR_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D111",
+      "key": "ledred",
+      "sheet": "host06",
+      "nets": {
+        "1": "CTRL_H06_PWR_K",
+        "2": "CTRL_H06_PWR_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R83",
+      "key": "R1.5k",
+      "sheet": "host06",
+      "nets": {
+        "1": "DRV_12",
+        "2": "CTRL_H06_RST_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R84",
+      "key": "R100k",
+      "sheet": "host06",
+      "nets": {
+        "1": "CTRL_H06_RST_B",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "Q16",
+      "key": "npn",
+      "sheet": "host06",
+      "nets": {
+        "1": "CTRL_H06_RST_B",
+        "2": "GND_CTRL",
+        "3": "CTRL_H06_RST_K"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R85",
+      "key": "R220",
+      "sheet": "host06",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H06_RST_R"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R86",
+      "key": "R220",
+      "sheet": "host06",
+      "nets": {
+        "1": "CTRL_H06_RST_R",
+        "2": "CTRL_H06_RST_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "U19",
+      "key": "ssr",
+      "sheet": "host06",
+      "nets": {
+        "1": "CTRL_H06_RST_A",
+        "3": "CTRL_H06_RST_K",
+        "4": "H06_RST_A",
+        "6": "H06_RST_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R312",
+      "key": "R1.5k",
+      "sheet": "host06",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H06_RST_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D112",
+      "key": "ledred",
+      "sheet": "host06",
+      "nets": {
+        "1": "CTRL_H06_RST_K",
+        "2": "CTRL_H06_RST_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D12",
+      "key": "esd",
+      "sheet": "host06",
+      "nets": {
+        "1": "H06_PWR_A",
+        "2": "H06_PWR_B",
+        "3": "H06_GND"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D13",
+      "key": "esd",
+      "sheet": "host06",
+      "nets": {
+        "1": "H06_RST_A",
+        "2": "H06_RST_B",
+        "3": "H06_GND"
+      },
+      "section": ""
+    },
+    {
+      "ref": "J07",
+      "key": "port",
+      "sheet": "host07",
+      "nets": {
+        "1": "H07_PWR_A",
+        "2": "H07_PWR_B",
+        "3": "H07_RST_A",
+        "4": "H07_RST_B",
+        "5": null,
+        "6": null,
+        "7": null,
+        "8": null,
+        "9": "H07_GND",
+        "10": null
+      },
+      "section": ""
+    },
+    {
+      "ref": "R87",
+      "key": "R1.5k",
+      "sheet": "host07",
+      "nets": {
+        "1": "DRV_13",
+        "2": "CTRL_H07_PWR_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R88",
+      "key": "R100k",
+      "sheet": "host07",
+      "nets": {
+        "1": "CTRL_H07_PWR_B",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "Q17",
+      "key": "npn",
+      "sheet": "host07",
+      "nets": {
+        "1": "CTRL_H07_PWR_B",
+        "2": "GND_CTRL",
+        "3": "CTRL_H07_PWR_K"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R89",
+      "key": "R220",
+      "sheet": "host07",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H07_PWR_R"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R90",
+      "key": "R220",
+      "sheet": "host07",
+      "nets": {
+        "1": "CTRL_H07_PWR_R",
+        "2": "CTRL_H07_PWR_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "U20",
+      "key": "ssr",
+      "sheet": "host07",
+      "nets": {
+        "1": "CTRL_H07_PWR_A",
+        "3": "CTRL_H07_PWR_K",
+        "4": "H07_PWR_A",
+        "6": "H07_PWR_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R313",
+      "key": "R1.5k",
+      "sheet": "host07",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H07_PWR_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D113",
+      "key": "ledred",
+      "sheet": "host07",
+      "nets": {
+        "1": "CTRL_H07_PWR_K",
+        "2": "CTRL_H07_PWR_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R91",
+      "key": "R1.5k",
+      "sheet": "host07",
+      "nets": {
+        "1": "DRV_14",
+        "2": "CTRL_H07_RST_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R92",
+      "key": "R100k",
+      "sheet": "host07",
+      "nets": {
+        "1": "CTRL_H07_RST_B",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "Q18",
+      "key": "npn",
+      "sheet": "host07",
+      "nets": {
+        "1": "CTRL_H07_RST_B",
+        "2": "GND_CTRL",
+        "3": "CTRL_H07_RST_K"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R93",
+      "key": "R220",
+      "sheet": "host07",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H07_RST_R"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R94",
+      "key": "R220",
+      "sheet": "host07",
+      "nets": {
+        "1": "CTRL_H07_RST_R",
+        "2": "CTRL_H07_RST_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "U21",
+      "key": "ssr",
+      "sheet": "host07",
+      "nets": {
+        "1": "CTRL_H07_RST_A",
+        "3": "CTRL_H07_RST_K",
+        "4": "H07_RST_A",
+        "6": "H07_RST_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R314",
+      "key": "R1.5k",
+      "sheet": "host07",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H07_RST_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D114",
+      "key": "ledred",
+      "sheet": "host07",
+      "nets": {
+        "1": "CTRL_H07_RST_K",
+        "2": "CTRL_H07_RST_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D14",
+      "key": "esd",
+      "sheet": "host07",
+      "nets": {
+        "1": "H07_PWR_A",
+        "2": "H07_PWR_B",
+        "3": "H07_GND"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D15",
+      "key": "esd",
+      "sheet": "host07",
+      "nets": {
+        "1": "H07_RST_A",
+        "2": "H07_RST_B",
+        "3": "H07_GND"
+      },
+      "section": ""
+    },
+    {
+      "ref": "J08",
+      "key": "port",
+      "sheet": "host08",
+      "nets": {
+        "1": "H08_PWR_A",
+        "2": "H08_PWR_B",
+        "3": "H08_RST_A",
+        "4": "H08_RST_B",
+        "5": null,
+        "6": null,
+        "7": null,
+        "8": null,
+        "9": "H08_GND",
+        "10": null
+      },
+      "section": ""
+    },
+    {
+      "ref": "R95",
+      "key": "R1.5k",
+      "sheet": "host08",
+      "nets": {
+        "1": "DRV_15",
+        "2": "CTRL_H08_PWR_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R96",
+      "key": "R100k",
+      "sheet": "host08",
+      "nets": {
+        "1": "CTRL_H08_PWR_B",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "Q19",
+      "key": "npn",
+      "sheet": "host08",
+      "nets": {
+        "1": "CTRL_H08_PWR_B",
+        "2": "GND_CTRL",
+        "3": "CTRL_H08_PWR_K"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R97",
+      "key": "R220",
+      "sheet": "host08",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H08_PWR_R"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R98",
+      "key": "R220",
+      "sheet": "host08",
+      "nets": {
+        "1": "CTRL_H08_PWR_R",
+        "2": "CTRL_H08_PWR_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "U22",
+      "key": "ssr",
+      "sheet": "host08",
+      "nets": {
+        "1": "CTRL_H08_PWR_A",
+        "3": "CTRL_H08_PWR_K",
+        "4": "H08_PWR_A",
+        "6": "H08_PWR_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R315",
+      "key": "R1.5k",
+      "sheet": "host08",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H08_PWR_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D115",
+      "key": "ledred",
+      "sheet": "host08",
+      "nets": {
+        "1": "CTRL_H08_PWR_K",
+        "2": "CTRL_H08_PWR_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R99",
+      "key": "R1.5k",
+      "sheet": "host08",
+      "nets": {
+        "1": "DRV_16",
+        "2": "CTRL_H08_RST_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R100",
+      "key": "R100k",
+      "sheet": "host08",
+      "nets": {
+        "1": "CTRL_H08_RST_B",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "Q20",
+      "key": "npn",
+      "sheet": "host08",
+      "nets": {
+        "1": "CTRL_H08_RST_B",
+        "2": "GND_CTRL",
+        "3": "CTRL_H08_RST_K"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R101",
+      "key": "R220",
+      "sheet": "host08",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H08_RST_R"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R102",
+      "key": "R220",
+      "sheet": "host08",
+      "nets": {
+        "1": "CTRL_H08_RST_R",
+        "2": "CTRL_H08_RST_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "U23",
+      "key": "ssr",
+      "sheet": "host08",
+      "nets": {
+        "1": "CTRL_H08_RST_A",
+        "3": "CTRL_H08_RST_K",
+        "4": "H08_RST_A",
+        "6": "H08_RST_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R316",
+      "key": "R1.5k",
+      "sheet": "host08",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H08_RST_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D116",
+      "key": "ledred",
+      "sheet": "host08",
+      "nets": {
+        "1": "CTRL_H08_RST_K",
+        "2": "CTRL_H08_RST_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D16",
+      "key": "esd",
+      "sheet": "host08",
+      "nets": {
+        "1": "H08_PWR_A",
+        "2": "H08_PWR_B",
+        "3": "H08_GND"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D17",
+      "key": "esd",
+      "sheet": "host08",
+      "nets": {
+        "1": "H08_RST_A",
+        "2": "H08_RST_B",
+        "3": "H08_GND"
+      },
+      "section": ""
+    },
+    {
+      "ref": "J09",
+      "key": "port",
+      "sheet": "host09",
+      "nets": {
+        "1": "H09_PWR_A",
+        "2": "H09_PWR_B",
+        "3": "H09_RST_A",
+        "4": "H09_RST_B",
+        "5": null,
+        "6": null,
+        "7": null,
+        "8": null,
+        "9": "H09_GND",
+        "10": null
+      },
+      "section": ""
+    },
+    {
+      "ref": "R103",
+      "key": "R1.5k",
+      "sheet": "host09",
+      "nets": {
+        "1": "DRV_17",
+        "2": "CTRL_H09_PWR_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R104",
+      "key": "R100k",
+      "sheet": "host09",
+      "nets": {
+        "1": "CTRL_H09_PWR_B",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "Q21",
+      "key": "npn",
+      "sheet": "host09",
+      "nets": {
+        "1": "CTRL_H09_PWR_B",
+        "2": "GND_CTRL",
+        "3": "CTRL_H09_PWR_K"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R105",
+      "key": "R220",
+      "sheet": "host09",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H09_PWR_R"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R106",
+      "key": "R220",
+      "sheet": "host09",
+      "nets": {
+        "1": "CTRL_H09_PWR_R",
+        "2": "CTRL_H09_PWR_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "U24",
+      "key": "ssr",
+      "sheet": "host09",
+      "nets": {
+        "1": "CTRL_H09_PWR_A",
+        "3": "CTRL_H09_PWR_K",
+        "4": "H09_PWR_A",
+        "6": "H09_PWR_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R317",
+      "key": "R1.5k",
+      "sheet": "host09",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H09_PWR_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D117",
+      "key": "ledred",
+      "sheet": "host09",
+      "nets": {
+        "1": "CTRL_H09_PWR_K",
+        "2": "CTRL_H09_PWR_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R107",
+      "key": "R1.5k",
+      "sheet": "host09",
+      "nets": {
+        "1": "DRV_18",
+        "2": "CTRL_H09_RST_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R108",
+      "key": "R100k",
+      "sheet": "host09",
+      "nets": {
+        "1": "CTRL_H09_RST_B",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "Q22",
+      "key": "npn",
+      "sheet": "host09",
+      "nets": {
+        "1": "CTRL_H09_RST_B",
+        "2": "GND_CTRL",
+        "3": "CTRL_H09_RST_K"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R109",
+      "key": "R220",
+      "sheet": "host09",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H09_RST_R"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R110",
+      "key": "R220",
+      "sheet": "host09",
+      "nets": {
+        "1": "CTRL_H09_RST_R",
+        "2": "CTRL_H09_RST_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "U25",
+      "key": "ssr",
+      "sheet": "host09",
+      "nets": {
+        "1": "CTRL_H09_RST_A",
+        "3": "CTRL_H09_RST_K",
+        "4": "H09_RST_A",
+        "6": "H09_RST_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R318",
+      "key": "R1.5k",
+      "sheet": "host09",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H09_RST_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D118",
+      "key": "ledred",
+      "sheet": "host09",
+      "nets": {
+        "1": "CTRL_H09_RST_K",
+        "2": "CTRL_H09_RST_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D18",
+      "key": "esd",
+      "sheet": "host09",
+      "nets": {
+        "1": "H09_PWR_A",
+        "2": "H09_PWR_B",
+        "3": "H09_GND"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D19",
+      "key": "esd",
+      "sheet": "host09",
+      "nets": {
+        "1": "H09_RST_A",
+        "2": "H09_RST_B",
+        "3": "H09_GND"
+      },
+      "section": ""
+    },
+    {
+      "ref": "J10",
+      "key": "port",
+      "sheet": "host10",
+      "nets": {
+        "1": "H10_PWR_A",
+        "2": "H10_PWR_B",
+        "3": "H10_RST_A",
+        "4": "H10_RST_B",
+        "5": null,
+        "6": null,
+        "7": null,
+        "8": null,
+        "9": "H10_GND",
+        "10": null
+      },
+      "section": ""
+    },
+    {
+      "ref": "R111",
+      "key": "R1.5k",
+      "sheet": "host10",
+      "nets": {
+        "1": "DRV_19",
+        "2": "CTRL_H10_PWR_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R112",
+      "key": "R100k",
+      "sheet": "host10",
+      "nets": {
+        "1": "CTRL_H10_PWR_B",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "Q23",
+      "key": "npn",
+      "sheet": "host10",
+      "nets": {
+        "1": "CTRL_H10_PWR_B",
+        "2": "GND_CTRL",
+        "3": "CTRL_H10_PWR_K"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R113",
+      "key": "R220",
+      "sheet": "host10",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H10_PWR_R"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R114",
+      "key": "R220",
+      "sheet": "host10",
+      "nets": {
+        "1": "CTRL_H10_PWR_R",
+        "2": "CTRL_H10_PWR_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "U26",
+      "key": "ssr",
+      "sheet": "host10",
+      "nets": {
+        "1": "CTRL_H10_PWR_A",
+        "3": "CTRL_H10_PWR_K",
+        "4": "H10_PWR_A",
+        "6": "H10_PWR_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R319",
+      "key": "R1.5k",
+      "sheet": "host10",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H10_PWR_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D119",
+      "key": "ledred",
+      "sheet": "host10",
+      "nets": {
+        "1": "CTRL_H10_PWR_K",
+        "2": "CTRL_H10_PWR_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R115",
+      "key": "R1.5k",
+      "sheet": "host10",
+      "nets": {
+        "1": "DRV_20",
+        "2": "CTRL_H10_RST_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R116",
+      "key": "R100k",
+      "sheet": "host10",
+      "nets": {
+        "1": "CTRL_H10_RST_B",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "Q24",
+      "key": "npn",
+      "sheet": "host10",
+      "nets": {
+        "1": "CTRL_H10_RST_B",
+        "2": "GND_CTRL",
+        "3": "CTRL_H10_RST_K"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R117",
+      "key": "R220",
+      "sheet": "host10",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H10_RST_R"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R118",
+      "key": "R220",
+      "sheet": "host10",
+      "nets": {
+        "1": "CTRL_H10_RST_R",
+        "2": "CTRL_H10_RST_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "U27",
+      "key": "ssr",
+      "sheet": "host10",
+      "nets": {
+        "1": "CTRL_H10_RST_A",
+        "3": "CTRL_H10_RST_K",
+        "4": "H10_RST_A",
+        "6": "H10_RST_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R320",
+      "key": "R1.5k",
+      "sheet": "host10",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H10_RST_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D120",
+      "key": "ledred",
+      "sheet": "host10",
+      "nets": {
+        "1": "CTRL_H10_RST_K",
+        "2": "CTRL_H10_RST_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D20",
+      "key": "esd",
+      "sheet": "host10",
+      "nets": {
+        "1": "H10_PWR_A",
+        "2": "H10_PWR_B",
+        "3": "H10_GND"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D21",
+      "key": "esd",
+      "sheet": "host10",
+      "nets": {
+        "1": "H10_RST_A",
+        "2": "H10_RST_B",
+        "3": "H10_GND"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R321",
+      "key": "R330",
+      "sheet": "indicators",
+      "nets": {
+        "1": "3V3",
+        "2": "PWR_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D201",
+      "key": "ledgreen",
+      "sheet": "indicators",
+      "nets": {
+        "1": "GND_CTRL",
+        "2": "PWR_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R322",
+      "key": "R330",
+      "sheet": "indicators",
+      "nets": {
+        "1": "3V3",
+        "2": "EN_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D202",
+      "key": "ledgreen",
+      "sheet": "indicators",
+      "nets": {
+        "1": "OUT_OE_N",
+        "2": "EN_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "JA1",
+      "key": "port",
+      "sheet": "adapter",
+      "nets": {
+        "1": "PWR_A",
+        "2": "PWR_B",
+        "3": "RST_A",
+        "4": "RST_B",
+        "5": null,
+        "6": null,
+        "7": null,
+        "8": null,
+        "9": "HOST_REF",
+        "10": null
+      },
+      "section": ""
+    },
+    {
+      "ref": "JA2",
+      "key": "header2",
+      "sheet": "adapter",
+      "nets": {
+        "1": "PWR_A",
+        "2": "PWR_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "JA4",
+      "key": "header2",
+      "sheet": "adapter",
+      "nets": {
+        "1": "PWR_A",
+        "2": "PWR_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "JA3",
+      "key": "header2",
+      "sheet": "adapter",
+      "nets": {
+        "1": "RST_A",
+        "2": "RST_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "JA5",
+      "key": "header2",
+      "sheet": "adapter",
+      "nets": {
+        "1": "RST_A",
+        "2": "RST_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "JA6",
+      "key": "header2",
+      "sheet": "adapter",
+      "nets": {
+        "1": "HOST_REF",
+        "2": null
+      },
+      "section": ""
+    }
+  ],
+  "gpio": {
+    "0": "BOOT_N",
+    "4": "TIMER_ARM",
+    "6": "OUT_OE_N",
+    "7": "OUT_LATCH",
+    "19": "USB_DM_MCU",
+    "20": "USB_DP_MCU",
+    "33": "USB_VBUS_SENSE",
+    "39": "SPI_SCK_RAW",
+    "40": "SPI_MOSI_RAW",
+    "41": "SPI_MISO",
+    "42": "ETH_CS_N",
+    "45": "STRAP45",
+    "46": "STRAP46",
+    "47": "ETH_RST_N",
+    "48": "ETH_INT_N"
+  },
+  "sheets": {
+    "power": {
+      "title": "5 V input, protection and 3.3 V buck",
+      "notes": "Regulated 5 V +/-5%, 2 A, terminal 1 positive. USB VBUS is NOT a power input.\nCheck PCB thermal/current loops and external PSU before energizing."
+    },
+    "processor_1": {
+      "title": "ESP32-S3FN8 / USB programming (1/2)",
+      "notes": "Wired Ethernet only. Leave LNA_IN open and never initialize Wi-Fi/BLE.\nGPIO26..32 used by internal quad flash: do not route. GPIO45 pulled low selects 3.3 V flash."
+    },
+    "processor_2": {
+      "title": "ESP32-S3FN8 / USB programming (2/2)",
+      "notes": "Wired Ethernet only. Leave LNA_IN open and never initialize Wi-Fi/BLE.\nGPIO26..32 used by internal quad flash: do not route. GPIO45 pulled low selects 3.3 V flash."
+    },
+    "ethernet_1": {
+      "title": "W5500 / HR911105A Ethernet (1/3)",
+      "notes": "WIZnet RJ45 reference topology. HR911105A pin numbering differs from J1B1211CCD.\n100-ohm differential MDI routing; crystal load caps need final frequency measurement."
+    },
+    "ethernet_2": {
+      "title": "W5500 / HR911105A Ethernet (2/3)",
+      "notes": "WIZnet RJ45 reference topology. HR911105A pin numbering differs from J1B1211CCD.\n100-ohm differential MDI routing; crystal load caps need final frequency measurement."
+    },
+    "ethernet_3": {
+      "title": "W5500 / HR911105A Ethernet (3/3)",
+      "notes": "WIZnet RJ45 reference topology. HR911105A pin numbering differs from J1B1211CCD.\n100-ohm differential MDI routing; crystal load caps need final frequency measurement."
+    },
+    "outputs_1": {
+      "title": "Output latches / counted timeout (1/2)",
+      "notes": "Default: ARM low, OE high, latches cleared before enabling. GPIO4/6/7 avoid boot UART pulls and GPIO1/2 glitches.\nMC14541B: AR=1 disables automatic reset; MR pulled high until ARM. MODE=0, QSEL=1, A=B=1.\n200k / 1nF C0G oscillator ~2174 Hz; 32768-count timeout ~15.07s. Release ARM immediately ends output.\nARM must be low >=10ms between commands. Hardware output requires both ARM and timer Q. No LED sensing."
+    },
+    "outputs_2": {
+      "title": "Output latches / counted timeout (2/2)",
+      "notes": "Default: ARM low, OE high, latches cleared before enabling. GPIO4/6/7 avoid boot UART pulls and GPIO1/2 glitches.\nMC14541B: AR=1 disables automatic reset; MR pulled high until ARM. MODE=0, QSEL=1, A=B=1.\n200k / 1nF C0G oscillator ~2174 Hz; 32768-count timeout ~15.07s. Release ARM immediately ends output.\nARM must be low >=10ms between commands. Hardware output requires both ARM and timer Q. No LED sensing."
+    },
+    "host01": {
+      "title": "Host 01: POWER / RESET only",
+      "notes": "Two isolated normally-open contacts parallel the original case buttons.\nNo host LED sensing or isolated supply. Pin 9 remains this host reference for button ESD protection ONLY.\nDo not join host references to controller ground or to one another. Pins 5..8 and 10 are NC.\nUse verified motherboard signal names, not a universal F_PANEL physical pin map."
+    },
+    "host02": {
+      "title": "Host 02: POWER / RESET only",
+      "notes": "Two isolated normally-open contacts parallel the original case buttons.\nNo host LED sensing or isolated supply. Pin 9 remains this host reference for button ESD protection ONLY.\nDo not join host references to controller ground or to one another. Pins 5..8 and 10 are NC.\nUse verified motherboard signal names, not a universal F_PANEL physical pin map."
+    },
+    "host03": {
+      "title": "Host 03: POWER / RESET only",
+      "notes": "Two isolated normally-open contacts parallel the original case buttons.\nNo host LED sensing or isolated supply. Pin 9 remains this host reference for button ESD protection ONLY.\nDo not join host references to controller ground or to one another. Pins 5..8 and 10 are NC.\nUse verified motherboard signal names, not a universal F_PANEL physical pin map."
+    },
+    "host04": {
+      "title": "Host 04: POWER / RESET only",
+      "notes": "Two isolated normally-open contacts parallel the original case buttons.\nNo host LED sensing or isolated supply. Pin 9 remains this host reference for button ESD protection ONLY.\nDo not join host references to controller ground or to one another. Pins 5..8 and 10 are NC.\nUse verified motherboard signal names, not a universal F_PANEL physical pin map."
+    },
+    "host05": {
+      "title": "Host 05: POWER / RESET only",
+      "notes": "Two isolated normally-open contacts parallel the original case buttons.\nNo host LED sensing or isolated supply. Pin 9 remains this host reference for button ESD protection ONLY.\nDo not join host references to controller ground or to one another. Pins 5..8 and 10 are NC.\nUse verified motherboard signal names, not a universal F_PANEL physical pin map."
+    },
+    "host06": {
+      "title": "Host 06: POWER / RESET only",
+      "notes": "Two isolated normally-open contacts parallel the original case buttons.\nNo host LED sensing or isolated supply. Pin 9 remains this host reference for button ESD protection ONLY.\nDo not join host references to controller ground or to one another. Pins 5..8 and 10 are NC.\nUse verified motherboard signal names, not a universal F_PANEL physical pin map."
+    },
+    "host07": {
+      "title": "Host 07: POWER / RESET only",
+      "notes": "Two isolated normally-open contacts parallel the original case buttons.\nNo host LED sensing or isolated supply. Pin 9 remains this host reference for button ESD protection ONLY.\nDo not join host references to controller ground or to one another. Pins 5..8 and 10 are NC.\nUse verified motherboard signal names, not a universal F_PANEL physical pin map."
+    },
+    "host08": {
+      "title": "Host 08: POWER / RESET only",
+      "notes": "Two isolated normally-open contacts parallel the original case buttons.\nNo host LED sensing or isolated supply. Pin 9 remains this host reference for button ESD protection ONLY.\nDo not join host references to controller ground or to one another. Pins 5..8 and 10 are NC.\nUse verified motherboard signal names, not a universal F_PANEL physical pin map."
+    },
+    "host09": {
+      "title": "Host 09: POWER / RESET only",
+      "notes": "Two isolated normally-open contacts parallel the original case buttons.\nNo host LED sensing or isolated supply. Pin 9 remains this host reference for button ESD protection ONLY.\nDo not join host references to controller ground or to one another. Pins 5..8 and 10 are NC.\nUse verified motherboard signal names, not a universal F_PANEL physical pin map."
+    },
+    "host10": {
+      "title": "Host 10: POWER / RESET only",
+      "notes": "Two isolated normally-open contacts parallel the original case buttons.\nNo host LED sensing or isolated supply. Pin 9 remains this host reference for button ESD protection ONLY.\nDo not join host references to controller ground or to one another. Pins 5..8 and 10 are NC.\nUse verified motherboard signal names, not a universal F_PANEL physical pin map."
+    },
+    "indicators": {
+      "title": "Controller power and output-enable indicators",
+      "notes": "PWR: 3V3 present. EN: OUT_OE_N low, output latches enabled.\nPer-host red PWR/RST indicators follow the photorelay driver AND PHOTO_5V.\nThese indicate driver state, NOT actual contact closure or host power state.\nRJ45 built-in LINK/ACT LEDs retained. All indicators use controller ground."
+    },
+    "adapter": {
+      "title": "Passive POWER / RESET adapter",
+      "notes": "Build 10 copies; no active components or power supply.\nPOWER and RESET each pass through to original case switch with a parallel remote branch.\nOriginal PLED/HDD cables stay directly on the motherboard and do not enter this adapter.\nPin 9: separately verified motherboard ground for button ESD. Pins 5..8 and 10 unused."
+    }
+  }
+}

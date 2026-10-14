@@ -7,7 +7,7 @@ from pathlib import Path
 import wx
 app=wx.App(False)
 import pcbnew as p
-R=Path(__file__).resolve().parents[1];C=json.loads((R/'hardware/circuit.json').read_text())
+R=Path(__file__).resolve().parents[1];C=json.loads((R/'hardware/cad/B2/placement/circuit-baseline.json').read_text())
 LIB=Path('/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints')
 LOCAL=R/'hardware/cad/RackATX.pretty';LOCAL.mkdir(exist_ok=True)
 B=p.BOARD();B.SetCopperLayerCount(2);B.GetDesignSettings().SetBoardThickness(p.FromMM(1.6))

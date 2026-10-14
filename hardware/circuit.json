@@ -925,72 +925,6 @@
         "status": "public JLC page observed; recheck at ordering"
       }
     },
-    "C6.8n": {
-      "key": "C6.8n",
-      "code": "C1631",
-      "value": "6.8n",
-      "footprint": "Capacitor_SMD:C_0603_1608Metric",
-      "pins": [
-        [
-          "1",
-          "~",
-          "passive"
-        ],
-        [
-          "2",
-          "~",
-          "passive"
-        ]
-      ],
-      "kind": "c",
-      "note": "",
-      "catalog": {
-        "id": "C1631",
-        "mpn": "0603B682K500NT",
-        "manufacturer": "FH (Guangdong Fenghua Advanced Tech)",
-        "package": "0603",
-        "classification": "Basic",
-        "assembly": "SMT Assembly",
-        "pcba_type": "Economic and Standard",
-        "stock": 196089,
-        "loss": 10,
-        "prices": [
-          {
-            "min_qty": 1,
-            "max_qty": 999,
-            "usd": 0.0073
-          },
-          {
-            "min_qty": 1000,
-            "max_qty": 3999,
-            "usd": 0.0058
-          },
-          {
-            "min_qty": 4000,
-            "max_qty": 7999,
-            "usd": 0.0047
-          },
-          {
-            "min_qty": 8000,
-            "max_qty": 47999,
-            "usd": 0.0043
-          },
-          {
-            "min_qty": 48000,
-            "max_qty": 99999,
-            "usd": 0.0039
-          },
-          {
-            "min_qty": 100000,
-            "max_qty": -1,
-            "usd": 0.0037
-          }
-        ],
-        "source": "https://jlcpcb.com/partdetail/C1631",
-        "checked_at": "2026-10-13T15:24:50.480062+00:00",
-        "status": "public JLC page observed; recheck at ordering"
-      }
-    },
     "C22n": {
       "key": "C22n",
       "code": "C1729",
@@ -3020,7 +2954,7 @@
       "key": "mcu",
       "code": "C2913196",
       "value": "ESP32-S3FN8",
-      "footprint": "Package_DFN_QFN:QFN-56-1EP_7x7mm_P0.4mm_EP4x4mm",
+      "footprint": "RackATX:ESP32_S3_QFN56_EP4_16Window",
       "pins": [
         [
           "36",
@@ -3734,6 +3668,270 @@
         "checked_at": "2026-10-13T15:31:20.503576+00:00",
         "status": "public JLC page observed; recheck at ordering"
       }
+    },
+    "C100n_0402": {
+      "key": "C100n_0402",
+      "code": "C1525",
+      "value": "100n",
+      "footprint": "Capacitor_SMD:C_0402_1005Metric",
+      "pins": [
+        [
+          "1",
+          "~",
+          "passive"
+        ],
+        [
+          "2",
+          "~",
+          "passive"
+        ]
+      ],
+      "kind": "c",
+      "note": "R.3 compact Ethernet group; nominal value unchanged. Factory DFM and prototype verification pending.",
+      "catalog": {
+        "id": "C1525",
+        "mpn": "CL05B104KO5NNNC",
+        "manufacturer": "Samsung Electro-Mechanics",
+        "package": "0402",
+        "classification": "Basic",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 22967367,
+        "loss": 10,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 999,
+            "usd": 0.0046
+          },
+          {
+            "min_qty": 1000,
+            "max_qty": 2999,
+            "usd": 0.0035
+          },
+          {
+            "min_qty": 3000,
+            "max_qty": 9999,
+            "usd": 0.003
+          },
+          {
+            "min_qty": 10000,
+            "max_qty": 49999,
+            "usd": 0.0026
+          },
+          {
+            "min_qty": 50000,
+            "max_qty": 99999,
+            "usd": 0.0024
+          },
+          {
+            "min_qty": 100000,
+            "max_qty": -1,
+            "usd": 0.0023
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C1525",
+        "checked_at": "2026-10-14T16:55:03.091408+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "C10n_0402": {
+      "key": "C10n_0402",
+      "code": "C15195",
+      "value": "10n",
+      "footprint": "Capacitor_SMD:C_0402_1005Metric",
+      "pins": [
+        [
+          "1",
+          "~",
+          "passive"
+        ],
+        [
+          "2",
+          "~",
+          "passive"
+        ]
+      ],
+      "kind": "c",
+      "note": "R.3 compact Ethernet group; nominal value unchanged. Factory DFM and prototype verification pending.",
+      "catalog": {
+        "id": "C15195",
+        "mpn": "CL05B103KB5NNNC",
+        "manufacturer": "Samsung Electro-Mechanics",
+        "package": "0402",
+        "classification": "Basic",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 6391726,
+        "loss": 10,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 999,
+            "usd": 0.0041
+          },
+          {
+            "min_qty": 1000,
+            "max_qty": 2999,
+            "usd": 0.0031
+          },
+          {
+            "min_qty": 3000,
+            "max_qty": 9999,
+            "usd": 0.0027
+          },
+          {
+            "min_qty": 10000,
+            "max_qty": 49999,
+            "usd": 0.0024
+          },
+          {
+            "min_qty": 50000,
+            "max_qty": 99999,
+            "usd": 0.0023
+          },
+          {
+            "min_qty": 100000,
+            "max_qty": -1,
+            "usd": 0.0022
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C15195",
+        "checked_at": "2026-10-14T17:10:24.486349+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "C6.8n_0402": {
+      "key": "C6.8n_0402",
+      "code": "C318580",
+      "value": "6.8n",
+      "footprint": "Capacitor_SMD:C_0402_1005Metric",
+      "pins": [
+        [
+          "1",
+          "~",
+          "passive"
+        ],
+        [
+          "2",
+          "~",
+          "passive"
+        ]
+      ],
+      "kind": "c",
+      "note": "R.3 compact Ethernet group; nominal value unchanged. Factory DFM and prototype verification pending.",
+      "catalog": {
+        "id": "C318580",
+        "mpn": "CL05B682KB5NNNC",
+        "manufacturer": "Samsung Electro-Mechanics",
+        "package": "0402",
+        "classification": "Extended",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 17120,
+        "loss": 10,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 999,
+            "usd": 0.0094
+          },
+          {
+            "min_qty": 1000,
+            "max_qty": 2999,
+            "usd": 0.0078
+          },
+          {
+            "min_qty": 3000,
+            "max_qty": 9999,
+            "usd": 0.007
+          },
+          {
+            "min_qty": 10000,
+            "max_qty": 49999,
+            "usd": 0.0064
+          },
+          {
+            "min_qty": 50000,
+            "max_qty": 99999,
+            "usd": 0.006
+          },
+          {
+            "min_qty": 100000,
+            "max_qty": -1,
+            "usd": 0.0057
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C318580",
+        "checked_at": "2026-10-14T17:24:25.757374+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "R49.9_0402": {
+      "key": "R49.9_0402",
+      "code": "C25120",
+      "value": "49.9 1%",
+      "footprint": "Resistor_SMD:R_0402_1005Metric",
+      "pins": [
+        [
+          "1",
+          "~",
+          "passive"
+        ],
+        [
+          "2",
+          "~",
+          "passive"
+        ]
+      ],
+      "kind": "r",
+      "note": "R.3 compact Ethernet group; nominal value unchanged. Factory DFM and prototype verification pending.",
+      "catalog": {
+        "id": "C25120",
+        "mpn": "0402WGF499JTCE",
+        "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+        "package": "0402",
+        "classification": "Basic",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 1309179,
+        "loss": 10,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 999,
+            "usd": 0.0023
+          },
+          {
+            "min_qty": 1000,
+            "max_qty": 2999,
+            "usd": 0.0017
+          },
+          {
+            "min_qty": 3000,
+            "max_qty": 9999,
+            "usd": 0.0015
+          },
+          {
+            "min_qty": 10000,
+            "max_qty": 49999,
+            "usd": 0.0013
+          },
+          {
+            "min_qty": 50000,
+            "max_qty": 50199,
+            "usd": 0.0011
+          },
+          {
+            "min_qty": 50200,
+            "max_qty": -1,
+            "usd": 0.0011
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C25120",
+        "checked_at": "2026-10-14T16:55:02.995713+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
     }
   },
   "components": [
@@ -4388,7 +4586,7 @@
     },
     {
       "ref": "C21",
-      "key": "C100n",
+      "key": "C100n_0402",
       "sheet": "ethernet_1",
       "nets": {
         "1": "3V3_ETH_A",
@@ -4398,7 +4596,7 @@
     },
     {
       "ref": "C22",
-      "key": "C100n",
+      "key": "C100n_0402",
       "sheet": "ethernet_1",
       "nets": {
         "1": "3V3_ETH_A",
@@ -4408,7 +4606,7 @@
     },
     {
       "ref": "C23",
-      "key": "C100n",
+      "key": "C100n_0402",
       "sheet": "ethernet_1",
       "nets": {
         "1": "3V3_ETH_A",
@@ -4570,7 +4768,7 @@
     },
     {
       "ref": "R20",
-      "key": "R49.9",
+      "key": "R49.9_0402",
       "sheet": "ethernet_2",
       "nets": {
         "1": "ETH_RXP",
@@ -4580,7 +4778,7 @@
     },
     {
       "ref": "R21",
-      "key": "R49.9",
+      "key": "R49.9_0402",
       "sheet": "ethernet_2",
       "nets": {
         "1": "ETH_RXN",
@@ -4590,7 +4788,7 @@
     },
     {
       "ref": "C33",
-      "key": "C10n",
+      "key": "C10n_0402",
       "sheet": "ethernet_2",
       "nets": {
         "1": "ETH_RX_TERM",
@@ -4600,7 +4798,7 @@
     },
     {
       "ref": "C34",
-      "key": "C6.8n",
+      "key": "C6.8n_0402",
       "sheet": "ethernet_2",
       "nets": {
         "1": "ETH_RXP",
@@ -4610,7 +4808,7 @@
     },
     {
       "ref": "C35",
-      "key": "C6.8n",
+      "key": "C6.8n_0402",
       "sheet": "ethernet_2",
       "nets": {
         "1": "ETH_RXN",

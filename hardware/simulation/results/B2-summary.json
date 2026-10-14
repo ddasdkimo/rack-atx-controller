@@ -1,11 +1,11 @@
 {
   "revision": "B.2",
-  "date": "2026-10-14",
+  "date": "2026-10-15",
   "method": "ngspice datasheet-fitted aggregate counter and transistor/photorelay behavioral models",
   "vendor_model": false,
   "hardware_correlated": false,
   "pass": true,
-  "circuit_sha256": "ad8ae88b83cd768a886921e554e22fc8aa85f66a2e4c8c526c976daa6c427cc4",
+  "circuit_sha256": "b3a777e74da47f35ede1a157c647bd9f833b7b381058343f84b508699f1d6ebe",
   "nominal_timeout_s": 15.073279999999999,
   "timer_pulse_range_s": [
     11.2598,

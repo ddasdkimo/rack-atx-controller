@@ -522,7 +522,7 @@
   "limits": [
     "Straight-line pad proximity is not routed inductance/return-path verification.",
     "1 mm is a low-voltage functional separation design rule, not a mains/safety-isolation rating.",
-    "This immutable placement baseline is separate from the routed R.2 board. See routing-R2-checks.json for copper checks."
+    "This immutable placement baseline is separate from the routed R.3 board. See routing-R3-checks.json for copper checks."
   ],
   "pcb_sha256": "51cdf1514a7268b548e96e7baa8fc32115fd8c5a0a0d9b6bcb96a4dbf5900632"
 }

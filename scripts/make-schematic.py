@@ -22,7 +22,7 @@ part('pmos','C15127','AO3401A','Package_TO_SOT_SMD:SOT-23',pins('G,S,D'))
 part('diode','C2128','1N4148WS','Diode_SMD:D_SOD-323',pins('K,A'),'diode')
 part('ledred','C2286','KT-0603R / RED','RackATX:LED_0603_1608Metric_CathodeSilk',pins('K,A'),'diode',note='Local driver indication only, not contact feedback. Basic library; verify brightness and cathode mark in prototype.')
 part('ledgreen','C2297','KT-0805G / GREEN','RackATX:LED_0805_2012Metric_CathodeSilk',pins('K,A'),'diode',note='Controller power / output-enable indicator, not host power state. Basic library; verify brightness and cathode mark in prototype.')
-part('ssr','C4153843','TLP3122A(TPL,E','',[('1','A','passive'),('3','K','passive'),('4','OUT','passive'),('6','OUT','passive')],note='Toshiba 4-pin SO6; NOT generic SOP4. Land pattern pending manufacturer drawing review.')
+part('ssr','C4153843','TLP3122A(TPL,E','',[('1','A','passive'),('3','K','passive'),('4','OUT','passive'),('6','OUT','passive')],note='Toshiba 4-pin SO6; NOT generic SOP4. Nominal land pattern matches Toshiba 4pin SO6 drawing; physical assembly qualification pending.')
 part('opto','C42381015','EL357N(B)(TA)-G','Package_SO:SO-4_4.4x2.3mm_P1.27mm',pins('A,K,E,C'),note='Verify actual SOP4 2.54mm pin pitch against package drawing before PCB layout.')
 # Correct the pin pitch for the 357 package (2.54 mm, body ~4.4 x 2.6); custom footprint pending dimensional review.
 P['opto']['footprint']='';P['opto']['note']='Everlight pin map 1=A, 2=K, 3=E, 4=C; CTR B bin. Qualified input current/temperature margin needs prototype.'
@@ -47,7 +47,7 @@ part('rj45','C12074','HR911105A','Connector_RJ:RJ45_Hanrun_HR911105A_Horizontal'
 s=Path('/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols/MCU_Espressif.kicad_sym').read_text();i=s.index('(symbol "ESP32-S3"');j=s.index('\n\t(symbol ',i+10)
 mpins=[(num,name,typ) for typ,name,num in re.findall(r'\(pin (\w+) .*?\(name "([^"]+)".*?\(number "([^"]+)"',s[i:j],re.S)]
 mpins=[(n,nm,'power_out' if n=='29' else t) for n,nm,t in mpins]
-part('mcu','C2913196','ESP32-S3FN8','Package_DFN_QFN:QFN-56-1EP_7x7mm_P0.4mm_EP4x4mm',mpins)
+part('mcu','C2913196','ESP32-S3FN8','RackATX:ESP32_S3_QFN56_EP4_16Window',mpins)
 wnames='TXN,TXP,AGND,AVDD,RXN,RXP,DNC,AVDD,AGND,EXRES1,AVDD,NC,NC,AGND,AVDD,AGND,AVDD,VBG,AGND,TOCAP,AVDD,1V2O,RSVD,SPDLED,LINKLED,DUPLED,ACTLED,VDD,GND,XI,XO,CS_N,SCLK,MISO,MOSI,INT_N,RST_N,RSVD,RSVD,RSVD,RSVD,RSVD,PMODE2,PMODE1,PMODE0,NC,NC,AGND'
 wp=pins(wnames,{**{str(i):'power_in' for i in [3,4,8,9,11,14,15,16,17,19,21,28,29,48]},**{str(i):'input' for i in [5,6,23,30,32,33,35,37,43,44,45]},**{str(i):'output' for i in [1,2,18,20,22,24,25,26,27,31]},'34':'tri_state','36':'open_collector'})
 part('eth','C32843','W5500','Package_QFP:LQFP-48_7x7mm_P0.5mm',wp)
@@ -149,6 +149,16 @@ add('port',['PWR_A','PWR_B','RST_A','RST_B',None,None,None,None,'HOST_REF',None]
 for idx,(a,b) in enumerate([('PWR_A','PWR_B'),('RST_A','RST_B')]):
  add('header2',[a,b],ref='JA'+str(idx+2));add('header2',[a,b],ref='JA'+str(idx+4))
 add('header2',['HOST_REF',None],ref='JA6')
+# R.3 local package reductions preserve all pin nets and nominal values.
+for key,code,value,fid,kind in [
+ ('C100n_0402','C1525','100n','Capacitor_SMD:C_0402_1005Metric','c'),
+ ('C10n_0402','C15195','10n','Capacitor_SMD:C_0402_1005Metric','c'),
+ ('C6.8n_0402','C318580','6.8n','Capacitor_SMD:C_0402_1005Metric','c'),
+ ('R49.9_0402','C25120','49.9 1%','Resistor_SMD:R_0402_1005Metric','r')]:
+ part(key,code,value,fid,pins('~,~'),kind,note='R.3 compact Ethernet group; nominal value unchanged. Factory DFM and prototype verification pending.')
+package_updates={**{r:'C100n_0402' for r in ['C21','C22','C23']},'C33':'C10n_0402','C34':'C6.8n_0402','C35':'C6.8n_0402','R20':'R49.9_0402','R21':'R49.9_0402'}
+for c in components:
+ if c['ref'] in package_updates:c['key']=package_updates[c['ref']]
 P={k:v for k,v in P.items() if k in {c['key'] for c in components}}
 assert len({c['ref'] for c in components})==len(components)
 
@@ -243,7 +253,7 @@ for project in ['rack-atx-controller','adapter']:
 (OUT/'fp-lib-table').write_text('(fp_lib_table (lib (name "RackATX")(type "KiCad")(uri "${KIPRJMOD}/../RackATX.pretty")(options "")(descr "Drawing-transcribed candidates")))\n')
 # Root hierarchy, separate adapter schematic is not included in central-board BOM/netlist.
 root=f'(kicad_sch(version 20250114)(generator "eeschema")(uuid {rootid})(paper "A3")(title_block(title "10-host rack ATX controller")(rev "B.2")(comment 1 "B.2 circuit - prototype review, not a manufacturing release"))(lib_symbols)'
-root+='(text "B.2: ten hosts, POWER / RESET only. Original case LEDs remain on motherboard.\\n5 V input -> 3.3 V logic; ESP32-S3FN8 + W5500 -> 74HC595 -> twenty isolated dry contacts\\nMC14541B counted timeout + independent ARM gate; no LED sensing or isolated DC/DC\\nS.3 compact layout; routing authorized after placement checks; no fabrication release" (at 15 18 0)(effects(font(size 2 2))(justify left))(uuid '+uid('rootnote')+'))'
+root+='(text "B.2: ten hosts, POWER / RESET only. Original case LEDs remain on motherboard.\\n5 V input -> 3.3 V logic; ESP32-S3FN8 + W5500 -> 74HC595 -> twenty isolated dry contacts\\nMC14541B counted timeout + independent ARM gate; no LED sensing or isolated DC/DC\\nS.3 baseline / R.3 routing and package updates; factory DFM and prototype verification pending" (at 15 18 0)(effects(font(size 2 2))(justify left))(uuid '+uid('rootnote')+'))'
 for idx,(name,(meta,_)) in enumerate((x for x in finals.items() if x[0]!='adapter')):
  x=15+(idx%4)*100;y=52+(idx//4)*23
  root+=f'(sheet(at {x} {y})(size 85 14)(stroke(width .254)(type default))(fill(color 0 0 0 0))(uuid {uid("sheet:"+name)})(property "Sheetname" {q(meta["title"])}(at {x} {y-2} 0)(effects(font(size 1 1))(justify left)))(property "Sheetfile" {q(name+".kicad_sch")}(at {x} {y+16} 0)(effects(font(size 1 1))(justify left)))(instances(project "rack-atx-controller"(path "/{rootid}"(page "{idx+2}")))))'

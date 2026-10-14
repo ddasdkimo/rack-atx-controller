@@ -7,7 +7,7 @@ app=wx.App(False)
 import pcbnew as p
 R=Path(__file__).resolve().parents[1]
 B=p.LoadBoard(str(R/'hardware/cad/B2/placement/rack-atx-controller.kicad_pcb'))
-C=json.loads((R/'hardware/circuit.json').read_text());L=json.loads((R/'hardware/placement-S3.json').read_text())
+C=json.loads((R/'hardware/cad/B2/placement/circuit-baseline.json').read_text());L=json.loads((R/'hardware/placement-S3.json').read_text())
 parts={c['ref']:c for c in C['components'] if c['sheet']!='adapter' and c['key']!='flag'}
 assert len(parts)==300
 fps={f.GetReference():f for f in B.GetFootprints()}
@@ -22,7 +22,7 @@ for ref,c in parts.items():
  f=fps[ref];assert len(list(f.Pads()))>0,ref
  expected_path='/'+ '/'.join(str(uuid.uuid5(uuid.NAMESPACE_URL,'rack-atx/B2/'+key)) for key in ['root','sheet:'+c['sheet'],ref])
  assert f.GetPath().AsString()==expected_path,(ref,'schematic UUID link')
- assert str(f.GetFPID().GetLibNickname())+':'+str(f.GetFPID().GetLibItemName())==C['parts'][c['key']]['footprint'],(ref,'footprint assignment')
+ assert str(f.GetFPID().GetLibNickname())+':'+str(f.GetFPID().GetLibItemName())==C['parts'][c['key']]['footprint'],(ref,'historical baseline footprint assignment')
  for pin,net in c['nets'].items():
   if not net:continue
   candidates=[d for d in f.Pads() if d.GetNumber()==pin];assert candidates,(ref,pin)
@@ -47,7 +47,7 @@ def pair(a,ap,b,bp,limit,label):
 pair('C40',1,'U7',2,3,'C0G oscillator capacitor')
 for cap,pin in [('C14',2),('C15',3)]:pair(cap,1,'U2',pin,10,'MCU bulk capacitor')
 assert all(c['pass'] for c in L['placement_constraints'])
-report={'revision':'S.3','electrical_components':300,'mounting_holes':4,'pad_free_placeholders':0,'net_pin_mapping':'all connected schematic pins present with matching PCB nets','tracks':0,'inter_domain_pad_bbox_minimum_mm':round(minimum[0],4),'inter_domain_violations':0,'critical_proximity_checks':L['placement_constraints']+proximity,'manufacturing_ready':False,'user_approval':'routing_authorized','limits':['Straight-line pad proximity is not routed inductance/return-path verification.','1 mm is a low-voltage functional separation design rule, not a mains/safety-isolation rating.','This immutable placement baseline is separate from the routed R.2 board. See routing-R2-checks.json for copper checks.']}
+report={'revision':'S.3','electrical_components':300,'mounting_holes':4,'pad_free_placeholders':0,'net_pin_mapping':'all connected schematic pins present with matching PCB nets','tracks':0,'inter_domain_pad_bbox_minimum_mm':round(minimum[0],4),'inter_domain_violations':0,'critical_proximity_checks':L['placement_constraints']+proximity,'manufacturing_ready':False,'user_approval':'routing_authorized','limits':['Straight-line pad proximity is not routed inductance/return-path verification.','1 mm is a low-voltage functional separation design rule, not a mains/safety-isolation rating.','This immutable placement baseline is separate from the routed R.3 board. See routing-R3-checks.json for copper checks.']}
 report['pcb_sha256']=hashlib.sha256((R/'hardware/cad/B2/placement/rack-atx-controller.kicad_pcb').read_bytes()).hexdigest()
 previous=json.loads((R/'hardware/layout-S3-checks.json').read_text()) if (R/'hardware/layout-S3-checks.json').exists() else {}
 if previous.get('pcb_sha256')==report['pcb_sha256'] and 'kicad_drc' in previous:report['kicad_drc']=previous['kicad_drc']

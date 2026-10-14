@@ -1,0 +1,278 @@
+{
+  "revision": "R.3",
+  "schematic_revision": "B.2",
+  "controller": {
+    "pcb_sha256": "dc11db34e1fdc40dc28c1a720e67c3c4d41d7476043c9e2d3163f699f1b92802",
+    "kicad_version": "10.0.0",
+    "native_unrouted": 0,
+    "drc_violations": 0,
+    "drc_unconnected_items": 0,
+    "ignored_checks": [
+      {
+        "description": "Footprint has no courtyard defined",
+        "key": "missing_courtyard"
+      },
+      {
+        "description": "Track endpoint not centered on via",
+        "key": "track_not_centered_on_via"
+      },
+      {
+        "description": "Tuning profile track geometries",
+        "key": "tuning_profile_track_geometries"
+      },
+      {
+        "description": "Footprint doesn't match symbol's footprint filters",
+        "key": "footprint_filters_mismatch"
+      },
+      {
+        "description": "Footprint component type doesn't match footprint pads",
+        "key": "footprint_type_mismatch"
+      }
+    ],
+    "pins_checked": 956,
+    "electrical_components": 300,
+    "track_segments": 3855,
+    "vias": 252,
+    "copper_layers": 2,
+    "key_net_metrics": {
+      "BUCK_SW": {
+        "total_copper_length_mm": 6.605,
+        "vias": 0,
+        "layers": [
+          "F.Cu"
+        ]
+      },
+      "BUCK_BST": {
+        "total_copper_length_mm": 2.086,
+        "vias": 0,
+        "layers": [
+          "F.Cu"
+        ]
+      },
+      "MCU_XN": {
+        "total_copper_length_mm": 7.905,
+        "vias": 0,
+        "layers": [
+          "F.Cu"
+        ]
+      },
+      "MCU_XP": {
+        "total_copper_length_mm": 4.871,
+        "vias": 0,
+        "layers": [
+          "F.Cu"
+        ]
+      },
+      "MCU_XP_CR": {
+        "total_copper_length_mm": 8.53,
+        "vias": 0,
+        "layers": [
+          "F.Cu"
+        ]
+      },
+      "ETH_XI": {
+        "total_copper_length_mm": 8.986,
+        "vias": 0,
+        "layers": [
+          "F.Cu"
+        ]
+      },
+      "ETH_XO": {
+        "total_copper_length_mm": 9.746,
+        "vias": 0,
+        "layers": [
+          "F.Cu"
+        ]
+      },
+      "USB_DP": {
+        "total_copper_length_mm": 58.901,
+        "vias": 0,
+        "layers": [
+          "F.Cu"
+        ]
+      },
+      "USB_DM": {
+        "total_copper_length_mm": 58.299,
+        "vias": 0,
+        "layers": [
+          "F.Cu"
+        ]
+      },
+      "ETH_TXP": {
+        "total_copper_length_mm": 16.931,
+        "vias": 0,
+        "layers": [
+          "F.Cu"
+        ]
+      },
+      "ETH_TXN": {
+        "total_copper_length_mm": 11.854,
+        "vias": 0,
+        "layers": [
+          "F.Cu"
+        ]
+      },
+      "ETH_RXP": {
+        "total_copper_length_mm": 7.575,
+        "vias": 0,
+        "layers": [
+          "F.Cu"
+        ]
+      },
+      "ETH_RXN": {
+        "total_copper_length_mm": 6.515,
+        "vias": 0,
+        "layers": [
+          "F.Cu"
+        ]
+      }
+    },
+    "schematic_validation": "Component set, all defined pin nets (including NC), footprint IDs and symbol UUID paths match circuit.json; circuit.json is separately checked against native KiCad XML/ERC."
+  },
+  "adapter": {
+    "pcb_sha256": "abeb6f9e242a3652a62dade6b7242a9ac3bdc3016d7cb7d71c7d64891c93ad6b",
+    "kicad_version": "10.0.0",
+    "native_unrouted": 0,
+    "drc_violations": 0,
+    "drc_unconnected_items": 0,
+    "ignored_checks": [
+      {
+        "description": "Footprint has no courtyard defined",
+        "key": "missing_courtyard"
+      },
+      {
+        "description": "Track endpoint not centered on via",
+        "key": "track_not_centered_on_via"
+      },
+      {
+        "description": "Tuning profile track geometries",
+        "key": "tuning_profile_track_geometries"
+      },
+      {
+        "description": "Footprint doesn't match symbol's footprint filters",
+        "key": "footprint_filters_mismatch"
+      },
+      {
+        "description": "Footprint component type doesn't match footprint pads",
+        "key": "footprint_type_mismatch"
+      }
+    ],
+    "pins_checked": 20,
+    "electrical_components": 6,
+    "track_segments": 30,
+    "vias": 0,
+    "copper_layers": 2,
+    "key_net_metrics": {},
+    "schematic_validation": "Component set, all defined pin nets (including NC), footprint IDs and symbol UUID paths match circuit.json; circuit.json is separately checked against native KiCad XML/ERC."
+  },
+  "power": {
+    "board": "rack-atx-controller.kicad_pcb",
+    "pcb_sha256": "dc11db34e1fdc40dc28c1a720e67c3c4d41d7476043c9e2d3163f699f1b92802",
+    "copper_um": 35,
+    "copper_temperature_c": 60,
+    "via_resistance_ohm": 0.002,
+    "limits": "Conservative one-path supply copper only; excludes regulator tolerance, connectors, fuse, MOSFET, ground return and transient response. No temperature-rise or field validation.",
+    "paths": [
+      {
+        "target": "U2.2",
+        "resistance_ohm": 0.16074,
+        "assumed_current_a": 0.65,
+        "drop_v": 0.1045,
+        "path_mm": 78.18,
+        "path_below_0_4mm_width_mm": 78.18,
+        "net": "3V3",
+        "source": "L1.2"
+      },
+      {
+        "target": "U2.3",
+        "resistance_ohm": 0.16074,
+        "assumed_current_a": 0.65,
+        "drop_v": 0.1045,
+        "path_mm": 78.18,
+        "path_below_0_4mm_width_mm": 78.18,
+        "net": "3V3",
+        "source": "L1.2"
+      },
+      {
+        "target": "U2.20",
+        "resistance_ohm": 0.12305,
+        "assumed_current_a": 0.65,
+        "drop_v": 0.08,
+        "path_mm": 60.21,
+        "path_below_0_4mm_width_mm": 60.21,
+        "net": "3V3",
+        "source": "L1.2"
+      },
+      {
+        "target": "U2.46",
+        "resistance_ohm": 0.08149,
+        "assumed_current_a": 0.65,
+        "drop_v": 0.053,
+        "path_mm": 40.45,
+        "path_below_0_4mm_width_mm": 40.45,
+        "net": "3V3",
+        "source": "L1.2"
+      },
+      {
+        "target": "U2.55",
+        "resistance_ohm": 0.16631,
+        "assumed_current_a": 0.65,
+        "drop_v": 0.1081,
+        "path_mm": 80.58,
+        "path_below_0_4mm_width_mm": 80.58,
+        "net": "3V3",
+        "source": "L1.2"
+      },
+      {
+        "target": "U2.56",
+        "resistance_ohm": 0.16517,
+        "assumed_current_a": 0.65,
+        "drop_v": 0.1074,
+        "path_mm": 80.18,
+        "path_below_0_4mm_width_mm": 80.18,
+        "net": "3V3",
+        "source": "L1.2"
+      },
+      {
+        "target": "U1.2",
+        "resistance_ohm": 0.09949,
+        "assumed_current_a": 0.5,
+        "drop_v": 0.0497,
+        "path_mm": 52.36,
+        "path_below_0_4mm_width_mm": 52.36,
+        "net": "5V",
+        "source": "Q1.2"
+      },
+      {
+        "target": "F1.1",
+        "resistance_ohm": 0.01993,
+        "assumed_current_a": 1,
+        "drop_v": 0.0199,
+        "path_mm": 10.49,
+        "path_below_0_4mm_width_mm": 10.49,
+        "net": "5V_JACK",
+        "source": "J101.1"
+      },
+      {
+        "target": "Q1.3",
+        "resistance_ohm": 0.00823,
+        "assumed_current_a": 1,
+        "drop_v": 0.0082,
+        "path_mm": 4.33,
+        "path_below_0_4mm_width_mm": 4.33,
+        "net": "5V_FUSED",
+        "source": "F1.2"
+      }
+    ],
+    "mcu_max_nominal_copper_drop_v": 0.1081,
+    "mcu_width_minus_20pct_drop_upper_bound_v": 0.1351,
+    "review_copper_drop_budget_v": 0.15
+  },
+  "manufacturing_ready": false,
+  "limits": [
+    "DRC applies the committed two-layer, 1 oz, 0.15 mm trace/clearance profile; default ignored checks are listed explicitly.",
+    "Total copper lengths include branches; they are not differential-pair skew measurements. USB/Ethernet impedance and return continuity are not qualified.",
+    "Copper-only DC estimate excludes ground return, component drops and transients; not a temperature-rise test.",
+    "Footprint/factory DFM, ESD/EMC, real timer behavior and host compatibility still require physical qualification."
+  ]
+}

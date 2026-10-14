@@ -40,13 +40,13 @@ prototype_page=(ROOT/'visualization/prototype.template.html').read_text().replac
 for directory in ('docs','dist'):
  (ROOT/directory/'prototype.html').write_text(prototype_page)
 
-layout_svg=(ROOT/'hardware/routing-R2.svg').read_text()
+layout_svg=(ROOT/'hardware/routing-R3.svg').read_text()
 audit=json.loads((ROOT/'hardware/layout-S3-checks.json').read_text())
-audit['routing']=json.loads((ROOT/'hardware/validation/routing-R2-checks.json').read_text())
+audit['routing']=json.loads((ROOT/'hardware/validation/routing-R3-checks.json').read_text())
 layout_page=(ROOT/'visualization/layout.template.html').read_text().replace('__LAYOUT_SVG__',layout_svg).replace('__AUDIT_JSON__',json.dumps(audit,ensure_ascii=False).replace('<','\\u003c'))
 for directory in ('docs','dist'):
  (ROOT/directory/'layout.html').write_text(layout_page)
- (ROOT/directory/'routing-R2.svg').write_text(layout_svg)
+ (ROOT/directory/'routing-R3.svg').write_text(layout_svg)
  (ROOT/directory/'layout-S3-review.svg').write_text((ROOT/'hardware/layout-S3-review.svg').read_text())
  (ROOT/directory/'adapter-B2.svg').write_text((ROOT/'hardware/adapter-B2.svg').read_text())
 

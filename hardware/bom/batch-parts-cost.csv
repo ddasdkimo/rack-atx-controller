@@ -3,7 +3,7 @@ WJ500V-5.08-2P,C8465,Extended,1,0.1341,0.1341,https://jlcpcb.com/partdetail/C846
 MF-MSMF150/24X-2,C78695,Extended,1,0.1971,0.1971,https://jlcpcb.com/partdetail/C78695
 AO3401A,C15127,Basic,2,0.102,0.102,https://jlcpcb.com/partdetail/C15127
 CL21A106KAYNNNE,C15850,Basic,5,0.0689,0.0689,https://jlcpcb.com/partdetail/C15850
-CC0603KRX7R9BB104,C14663,Basic,20,0.014,0.014,https://jlcpcb.com/partdetail/C14663
+CC0603KRX7R9BB104,C14663,Basic,17,0.014,0.014,https://jlcpcb.com/partdetail/C14663
 AP63203WU-7,C780769,Extended,1,1.1825,1.1825,https://jlcpcb.com/partdetail/C780769
 FNR4018S4R7MT,C167806,Extended,1,0.0459,0.0459,https://jlcpcb.com/partdetail/C167806
 CL21A226MAQNNNE,C45783,Basic,2,0.2372,0.2372,https://jlcpcb.com/partdetail/C45783
@@ -24,10 +24,13 @@ W5500,C32843,Extended,1,2.8249,2.8249,https://jlcpcb.com/partdetail/C32843
 GZ1608D121TF,C12391,Extended,1,0.0099,0.0099,https://jlcpcb.com/partdetail/C12391
 0603WAF1242T5E,C22865,Extended,1,0.0015,0.0015,https://jlcpcb.com/partdetail/C22865
 CL10A475KO8NNNC,C19666,Basic,1,0.0296,0.0296,https://jlcpcb.com/partdetail/C19666
-0603B103K500NT,C57112,Basic,2,0.0101,0.0101,https://jlcpcb.com/partdetail/C57112
+0603B103K500NT,C57112,Basic,1,0.0101,0.0101,https://jlcpcb.com/partdetail/C57112
+CL05B104KO5NNNC,C1525,Basic,3,0.0046,0.0046,https://jlcpcb.com/partdetail/C1525
 X322525MOB4SI,C9006,Basic,1,0.0948,0.0948,https://jlcpcb.com/partdetail/C9006
-0603WAF499JT5E,C23185,Basic,4,0.0021,0.0021,https://jlcpcb.com/partdetail/C23185
-0603B682K500NT,C1631,Basic,2,0.0073,0.0073,https://jlcpcb.com/partdetail/C1631
+0603WAF499JT5E,C23185,Basic,2,0.0021,0.0021,https://jlcpcb.com/partdetail/C23185
+0402WGF499JTCE,C25120,Basic,2,0.0023,0.0023,https://jlcpcb.com/partdetail/C25120
+CL05B103KB5NNNC,C15195,Basic,1,0.0041,0.0041,https://jlcpcb.com/partdetail/C15195
+CL05B682KB5NNNC,C318580,Extended,2,0.0094,0.0094,https://jlcpcb.com/partdetail/C318580
 CL21B223KBANNNC,C1729,Basic,1,0.0084,0.0084,https://jlcpcb.com/partdetail/C1729
 0603WAF3300T5E,C23138,Basic,4,0.0022,0.0022,https://jlcpcb.com/partdetail/C23138
 HR911105A,C12074,Extended,1,1.7191,1.7191,https://jlcpcb.com/partdetail/C12074

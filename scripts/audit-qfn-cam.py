@@ -30,14 +30,14 @@ for o in pastes:
  for h in holes:
   dx=max(x0-h.x,0,h.x-x1);dy=max(y0-h.y,0,h.y-y1);assert math.hypot(dx,dy)>.15
 assert top[0].bounding_box(MM)==ep
-report=dict(status='pass local EPAD CAM geometry only',parser='gerbonara',paste_windows=len(pastes),conservative_paste_bbox_to_hole_gap_mm=min(math.hypot(max(o.bounding_box(MM)[0][0]-h.x,0,h.x-o.bounding_box(MM)[1][0]),max(o.bounding_box(MM)[0][1]-h.y,0,h.y-o.bounding_box(MM)[1][1]))-.15 for o in pastes for h in holes),paste_bbox_mm=[.75,.75],drills=len(holes),drill_mm=.3,top_mask_ep_opening_mm=[4,4],bottom_mask_apertures_under_ep=len(bottom),holes_do_not_overlap_paste=True,parser_warnings=warning_messages,limitations=['Bottom tenting is not resin filling or copper capping.','Native DRC checks geometry; fabrication and assembly DFM remain pending.','This partially routed local trial is not a submission candidate.'],sha256={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(D.iterdir()) if p.is_file()})
+report=dict(status='pass local EPAD CAM geometry only',parser='gerbonara',paste_windows=len(pastes),conservative_paste_bbox_to_hole_gap_mm=min(math.hypot(max(o.bounding_box(MM)[0][0]-h.x,0,h.x-o.bounding_box(MM)[1][0]),max(o.bounding_box(MM)[0][1]-h.y,0,h.y-o.bounding_box(MM)[1][1]))-.15 for o in pastes for h in holes),paste_bbox_mm=[.75,.75],drills=len(holes),drill_mm=.3,top_mask_ep_opening_mm=[4,4],bottom_mask_apertures_under_ep=len(bottom),holes_do_not_overlap_paste=True,parser_warnings=warning_messages,limitations=['Bottom tenting is not resin filling or copper capping.','Native DRC checks geometry; fabrication and assembly DFM remain pending.','CAM geometry alone does not constitute factory release.'],sha256={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(D.iterdir()) if p.is_file()})
 report['source_board']={'name':args.source_board.name,'sha256':hashlib.sha256(args.source_board.read_bytes()).hexdigest()}
 args.output.write_text(json.dumps(report,indent=2)+'\n')
 # Render actual parsed CAM data with aligned drill overlay, not a hand-drawn approximation.
 root=ET.Element('svg',xmlns='http://www.w3.org/2000/svg',width='1800',height='800',viewBox='0 0 1800 800');ET.SubElement(root,'rect',width='1800',height='800',fill='white')
 def label(x,y,text,size=25):
  t=ET.SubElement(root,'text',x=str(x),y=str(y),fill='#142c3a',**{'font-family':'sans-serif','font-size':str(size)});t.text=text
-label(40,50,'Local QFN process trial — actual Gerber / Excellon data',32)
+label(40,50,'QFN process geometry — actual Gerber / Excellon data',32)
 for i,(key,title,color) in enumerate([('paste','F.Paste + drill: 16 EP windows / 9 EP holes','#0c9b94'),('top_mask','F.Mask + drill: exposed top EPAD','#e2bd63'),('bottom_mask','B.Mask: no openings below EPAD','#28a65c')]):
  x=40+i*590;label(x,110,title,22)
  for layer,fg in [(files[key],color)]+([] if key=='bottom_mask' else [(drill,'#d23535')]):
