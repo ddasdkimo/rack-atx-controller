@@ -1,5 +1,7 @@
 # 2026-10-14 — B.2 circuit / S.3 placement / R.2 routed prototype candidate
 
+- Added an annotated status-LED position map from native placement, explicitly showing the mirrored lower bank; no electrical or PCB position changes.
+
 - Removed host LED sensing and isolated supplies; retained 20 POWER/RESET photorelays and independent host-local button ESD references. Original buttons connect in parallel; original LEDs remain on the motherboard.
 - Added 20 red drive-state LEDs, green 3V3/EN LEDs and labeled per-host PWR/RST positions. Existing RJ45 LINK/ACT remains. LEDs indicate drive state, not physical contact or host power feedback.
 - Fixed timer/startup behavior: MC14541B, C0G counted timeout, independent ARM gate, GPIO4/6/7 and external defaults. Native XML/ERC verifies 300 controller parts/956 pins and 6 adapter parts/20 pins. ERC zero on both.

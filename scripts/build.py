@@ -49,3 +49,6 @@ for directory in ('docs','dist'):
  (ROOT/directory/'routing-R2.svg').write_text(layout_svg)
  (ROOT/directory/'layout-S3-review.svg').write_text((ROOT/'hardware/layout-S3-review.svg').read_text())
  (ROOT/directory/'adapter-B2.svg').write_text((ROOT/'hardware/adapter-B2.svg').read_text())
+
+for directory in ('docs','dist'):
+ (ROOT/directory/'indicator-layout-R2.svg').write_text((ROOT/'hardware/indicator-layout-R2.svg').read_text())

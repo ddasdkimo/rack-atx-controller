@@ -14,7 +14,7 @@
 <section class="card"><h2>③ 主控與網路靠左</h2><p>RJ45／USB 朝板外，W5500、ESP32 與各自晶振成組。去耦電容逐一對應電源腳，SPI 與輸出鎖存安排在中央。</p></section>
 <section class="card"><h2>④ 電源與限時靠右</h2><p>右側 5 V 端子接保護及降壓區；計數式限時器和獨立 ARM 閘控集中在右中。四個固定孔避開接頭及元件，裝殼仍須實物確認。</p></section>
 </div>
-<h2>主機端被動轉接板：26 × 34 mm</h2><p>30 段走線、0 過孔，DRC 與未連接均為 0。JA1 是 JST 10 pin；JA2／JA4 並聯 POWER，JA3／JA5 並聯 RESET；JA6 pin 1 接本機 GND、pin 2 不接。五組 2.54 mm 排針可接杜邦端子。</p><a href="adapter-B2.svg" target="_blank"><img src="adapter-B2.svg" alt="主機端轉接板實際焊盤和銅箔" style="width:300px;max-width:100%"></a><h2>控制板狀態燈</h2><p>每台各一對紅色 PWR／RST 燈，位於對應繼電器的中央側，顯示隔離開關驅動狀態。綠色 3V3／EN 位於左側網路座上方；連線與活動沿用 RJ45 內建燈。啟用待命時 EN 亮而操作燈全熄；操作時對應紅燈亮。沒有新增主機偵測線，不回讀接點或主機電源狀態。</p><p><a href="/">到 3D 頁切換燈號示意 →</a></p>
+<h2>主機端被動轉接板：26 × 34 mm</h2><p>30 段走線、0 過孔，DRC 與未連接均為 0。JA1 是 JST 10 pin；JA2／JA4 並聯 POWER，JA3／JA5 並聯 RESET；JA6 pin 1 接本機 GND、pin 2 不接。五組 2.54 mm 排針可接杜邦端子。</p><a href="adapter-B2.svg" target="_blank"><img src="adapter-B2.svg" alt="主機端轉接板實際焊盤和銅箔" style="width:300px;max-width:100%"></a><h2 id="indicators">控制板狀態燈</h2><p><a href="indicator-layout-R2.svg" target="_blank">放大燈號位置圖 ↗</a> · 下排目前採鏡像，從此俯視方向看為 RST 左、PWR 右。</p><a href="indicator-layout-R2.svg" target="_blank"><img src="indicator-layout-R2.svg" alt="R.2 狀態燈位置：上排及下排各十顆紅燈，RJ45 上方兩顆綠燈" style="width:100%;height:auto"></a><p>每台各一對紅色 PWR／RST 燈，位於對應繼電器的中央側，顯示隔離開關驅動狀態。綠色 3V3／EN 位於左側網路座上方；連線與活動沿用 RJ45 內建燈。啟用待命時 EN 亮而操作燈全熄；操作時對應紅燈亮。沒有新增主機偵測線，不回讀接點或主機電源狀態。</p><p><a href="/">到 3D 頁切換燈號示意 →</a></p>
 <h2>模擬發現的問題如何處理</h2>
 <p>LED 感測誤判的支路已完整移除。TLC555 大容量計時電容改成 MC14541B＋1 nF C0G，以計數產生約 15 秒的上限；ARM／OE／LATCH 移到 GPIO4／6／7，加入外部預設電位及獨立 ARM 閘控，避免重置時輸出誤啟動。</p>
 <p>新版 ngspice 行為模型通過 16 組角落與 9 種狀態檢查；模型脈寬範圍 11.26–21.46 秒。這包含振盪器 ±25% 的研究假設，<b>不是廠商保證或實機量測</b>；仍須量測供電／溫度下的計時、ESD 與主機相容性。</p>
