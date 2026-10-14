@@ -1,0 +1,63 @@
+{
+ "revision": "R.2",
+ "board_mm": [
+  100.1,
+  110.1
+ ],
+ "footprints": 304,
+ "side": {
+  "F": 304
+ },
+ "mount": {
+  "SMD": 289,
+  "THT": 15
+ },
+ "footprint_assignment_mismatches": 0,
+ "courtyard_overlaps": 0,
+ "courtyard_gap_under_0p25mm_pairs": 45,
+ "smallest_courtyard_gap_mm": 0.23,
+ "closest_courtyard_to_edge": [
+  [
+   0.56,
+   "MH1",
+   "MountingHole_3.2mm_M3"
+  ],
+  [
+   0.56,
+   "MH2",
+   "MountingHole_3.2mm_M3"
+  ],
+  [
+   0.56,
+   "MH3",
+   "MountingHole_3.2mm_M3"
+  ],
+  [
+   0.56,
+   "MH4",
+   "MountingHole_3.2mm_M3"
+  ],
+  [
+   0.8,
+   "J101",
+   "WJ500V_5.08_2P"
+  ],
+  [
+   0.83,
+   "J104",
+   "USB_C_Receptacle_HRO_TYPE-C-"
+  ]
+ ],
+ "mounting_holes": [
+  "MH4",
+  "MH3",
+  "MH1",
+  "MH2"
+ ],
+ "jst_courtyard_mm": [
+  12.99,
+  10.69
+ ],
+ "jst_pitch_mm": 18.0,
+ "note": "Courtyard-based geometry audit only; DRC/ERC/parity run separately with kicad-cli. Not a manufacturing release."
+}

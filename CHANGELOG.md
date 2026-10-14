@@ -1,3 +1,17 @@
+# 2026-10-15 送件前工程檢查接續
+
+- 已收到 CLI 初審交接；初審不是製造放行。後續固定送件候選仍須由同一位複查者獨立檢查。
+- 對照 Toshiba 原廠 4pin SO6 land-pattern 圖並逐一量測原生 PCB 的 20 個 TLP3122A footprint：0.8×1.2 mm 焊盤、2.54 mm 節距、6.3 mm 列中心距相符，附可重跑的 pre-release-audit.py 與來源。
+- 明確列出未結案項：ETH_TXP/TXN 各有兩個訊號 via，RJ_RD_P/N 各有一個，USB 亦尚待差分對、參考面及阻抗確認。局部試改未通過檢查，不取代現行 R.2。
+- 計時器 ±25% 仍是模擬假設；原廠不同測試條件的個別變化率不能直接當作完整組合條件的保證範圍。
+- 原理圖、BOM、正式 PCB 與公開 3D 沒有改版；製造檔、正式報價與最終複查仍待完成。
+
+# 2026-10-15 R.2 獨立複核
+
+- 以 kicad-cli 獨立重跑 R.2 DRC（0 違規、0 未連線）、B.2 ERC（0）與原理圖一致性（只有 LCSC 欄位未同步、NC 腳位與四個固定孔，無電氣差異）；重跑 run-b2.py 得到相同的 11.26–21.46 s。
+- 核對 MC14541B datasheet 真值表：Q/Q̄ Select=1 為「重置後輸出初始為高」，與 B.2 接法及模擬模型一致；振盪器規格 ±2% 溫度／±20% 供電／±3% 製程，模擬的 ±25% 假設可涵蓋。
+- 新增 scripts/audit-r2-placement.py 與 hardware/validation/r2-placement-audit.json：304 個 footprint 全在正面、封裝指派與 circuit.json 一致、courtyard 無重疊、最小 courtyard 間距 0.23 mm（45 對）、十個 JST 接頭 18 mm 節距留 5 mm 間隔、固定孔到最近零件 courtyard 4 mm 以上。TLP3122A 自訂焊盤尚未與 Toshiba 建議 land pattern 圖面逐一比對。
+
 # 2026-10-14 — B.2 circuit / S.3 placement / R.2 routed prototype candidate
 
 - Added an annotated status-LED position map from native placement, explicitly showing the mirrored lower bank; no electrical or PCB position changes.

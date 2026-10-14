@@ -1,0 +1,175 @@
+{
+  "checked_at": "2026-10-15",
+  "pcb_sha256": "966f77b030529bbf6868ab86affc43631635f10d3e06f61d7d62895b3ba8262e",
+  "tlp3122a_land_pattern": {
+    "status": "pass drawing and actual PCB pad geometry",
+    "checked_instances": [
+      "U10",
+      "U11",
+      "U12",
+      "U13",
+      "U14",
+      "U15",
+      "U16",
+      "U17",
+      "U18",
+      "U19",
+      "U20",
+      "U21",
+      "U22",
+      "U23",
+      "U24",
+      "U25",
+      "U26",
+      "U27",
+      "U8",
+      "U9"
+    ],
+    "pad_mm": [
+      0.8,
+      1.2
+    ],
+    "same_row_pitch_mm": 2.54,
+    "opposing_row_centers_mm": 6.3,
+    "pin_assignment": {
+      "1": "anode",
+      "3": "cathode",
+      "4": "drain",
+      "6": "drain"
+    },
+    "source": "https://toshiba.semicon-storage.com/us/semiconductor/design-development/package/detail.4pin%20SO6.html",
+    "drawing": "https://toshiba.semicon-storage.com/content/dam/toshiba-ss-v3/master/en/semiconductor/design-development/package-detail/Pkg_paddim/4pinSO6_paddim.gif",
+    "method": "Original maker land-pattern drawing visually inspected in browser; pad geometry checked in all 20 native footprints. Not assembly process qualification."
+  },
+  "highspeed_nets": [
+    {
+      "net": "USB_DP",
+      "total_copper_mm": 61.2426,
+      "vias": 2,
+      "widths_mm": [
+        0.15
+      ],
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ]
+    },
+    {
+      "net": "USB_DM",
+      "total_copper_mm": 58.0332,
+      "vias": 2,
+      "widths_mm": [
+        0.15
+      ],
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ]
+    },
+    {
+      "net": "USB_DP_MCU",
+      "total_copper_mm": 4.0792,
+      "vias": 0,
+      "widths_mm": [
+        0.15
+      ],
+      "layers": [
+        "F.Cu"
+      ]
+    },
+    {
+      "net": "USB_DM_MCU",
+      "total_copper_mm": 3.9491,
+      "vias": 0,
+      "widths_mm": [
+        0.15
+      ],
+      "layers": [
+        "F.Cu"
+      ]
+    },
+    {
+      "net": "ETH_TXP",
+      "total_copper_mm": 26.2675,
+      "vias": 2,
+      "widths_mm": [
+        0.15
+      ],
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ]
+    },
+    {
+      "net": "ETH_TXN",
+      "total_copper_mm": 14.6155,
+      "vias": 2,
+      "widths_mm": [
+        0.15
+      ],
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ]
+    },
+    {
+      "net": "ETH_RXP",
+      "total_copper_mm": 12.5103,
+      "vias": 0,
+      "widths_mm": [
+        0.15
+      ],
+      "layers": [
+        "F.Cu"
+      ]
+    },
+    {
+      "net": "ETH_RXN",
+      "total_copper_mm": 11.0631,
+      "vias": 0,
+      "widths_mm": [
+        0.15
+      ],
+      "layers": [
+        "F.Cu"
+      ]
+    },
+    {
+      "net": "RJ_RD_P",
+      "total_copper_mm": 19.8679,
+      "vias": 1,
+      "widths_mm": [
+        0.2
+      ],
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ]
+    },
+    {
+      "net": "RJ_RD_N",
+      "total_copper_mm": 25.826,
+      "vias": 1,
+      "widths_mm": [
+        0.2
+      ],
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ]
+    }
+  ],
+  "blocking_findings": [
+    {
+      "id": "HS-01",
+      "description": "Ethernet TX has two vias per net; WIZnet MDI guide prohibits via/layer changes. RX connector-side pair must also be inspected, not just ETH_RX* segment.",
+      "source": "https://docs.wiznet.io/Design-Guide/hardware_design_guide"
+    },
+    {
+      "id": "HS-02",
+      "description": "USB and MDI runs have no established impedance geometry or complete reference continuity. Total net copper lengths include branches and must not be used as pair skew.",
+      "source": "https://docs.espressif.com/projects/esp-hardware-design-guidelines/en/latest/esp32s3/pcb-layout-design.html"
+    }
+  ],
+  "manufacturing_ready": false
+}
