@@ -1,0 +1,165 @@
+{
+  "source": "https://jlcpcb.com/help/article/minimum-spacing-for-smd-components",
+  "pcb_sha256": "74162e7dd94063431016074a687541d7aa0350f4d6781f5bfc4b95f865c30060",
+  "method": "Conservative union of pad and F.Fab bounding boxes; near pairs require exact geometry verification.",
+  "classified_components": 663,
+  "unclassified_components": [
+    "D2",
+    "F1",
+    "J01",
+    "J02",
+    "J03",
+    "J04",
+    "J05",
+    "J06",
+    "J07",
+    "J08",
+    "J09",
+    "J10",
+    "J101",
+    "J102",
+    "J103",
+    "J104",
+    "J105",
+    "L1",
+    "L2",
+    "U15",
+    "U22",
+    "U29",
+    "U36",
+    "U43",
+    "U50",
+    "U57",
+    "U64",
+    "U71",
+    "U8",
+    "Y1",
+    "Y2"
+  ],
+  "pairs_screened": 219453,
+  "candidates": [
+    {
+      "a": "R13",
+      "b": "U2",
+      "packages": [
+        "0603",
+        "QFN"
+      ],
+      "bbox_gap_mm": 0.925,
+      "recommended_mm": 1,
+      "status": "needs_exact_review"
+    },
+    {
+      "a": "C12",
+      "b": "U2",
+      "packages": [
+        "0603",
+        "QFN"
+      ],
+      "bbox_gap_mm": 0.925,
+      "recommended_mm": 1,
+      "status": "needs_exact_review"
+    },
+    {
+      "a": "U2",
+      "b": "R6",
+      "packages": [
+        "QFN",
+        "0603"
+      ],
+      "bbox_gap_mm": 0.925,
+      "recommended_mm": 1,
+      "status": "needs_exact_review"
+    },
+    {
+      "a": "U2",
+      "b": "R7",
+      "packages": [
+        "QFN",
+        "0603"
+      ],
+      "bbox_gap_mm": 0.925,
+      "recommended_mm": 1,
+      "status": "needs_exact_review"
+    },
+    {
+      "a": "U2",
+      "b": "C13",
+      "packages": [
+        "QFN",
+        "0603"
+      ],
+      "bbox_gap_mm": 0.925,
+      "recommended_mm": 1,
+      "status": "needs_exact_review"
+    },
+    {
+      "a": "U2",
+      "b": "C10",
+      "packages": [
+        "QFN",
+        "0603"
+      ],
+      "bbox_gap_mm": 0.925,
+      "recommended_mm": 1,
+      "status": "needs_exact_review"
+    },
+    {
+      "a": "U2",
+      "b": "R10",
+      "packages": [
+        "QFN",
+        "0603"
+      ],
+      "bbox_gap_mm": 0.925,
+      "recommended_mm": 1,
+      "status": "needs_exact_review"
+    },
+    {
+      "a": "U2",
+      "b": "R11",
+      "packages": [
+        "QFN",
+        "0603"
+      ],
+      "bbox_gap_mm": 0.925,
+      "recommended_mm": 1,
+      "status": "needs_exact_review"
+    },
+    {
+      "a": "U2",
+      "b": "C11",
+      "packages": [
+        "QFN",
+        "0603"
+      ],
+      "bbox_gap_mm": 0.925,
+      "recommended_mm": 1,
+      "status": "needs_exact_review"
+    },
+    {
+      "a": "U2",
+      "b": "C7",
+      "packages": [
+        "QFN",
+        "0603"
+      ],
+      "bbox_gap_mm": 0.925,
+      "recommended_mm": 1,
+      "status": "needs_exact_review"
+    },
+    {
+      "a": "U2",
+      "b": "C6",
+      "packages": [
+        "QFN",
+        "0603"
+      ],
+      "bbox_gap_mm": 0.925,
+      "recommended_mm": 1,
+      "status": "needs_exact_review"
+    }
+  ],
+  "ipc_compliance_verified": false,
+  "routing_gate": "not_passed"
+}

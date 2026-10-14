@@ -22,7 +22,7 @@
     @media(max-width:500px) { #rack-atx-3d .rack-space { height:420px; } #rack-atx-3d .rack-heading { padding-right:70px; } }
   </style>
   <div class="rack-heading"><h2>10 路機櫃控制板</h2><span class="text-small text-muted" data-revision></span></div>
-  <div class="rack-detail"><strong>目前：一片控制十台。</strong>S.2 元件布局待你確認；200×170 mm、兩層候選。尚未佈線，不能下單製造。 <a href="https://rack-atx-controller-ddasdkimo.raidavid.chatgpt.site/layout.html" target="_blank" rel="noopener">查看可放大布局與擺放理由 →</a></div>
+  <div class="rack-detail"><strong>目前：一片控制十台。</strong>S.2 規範檢查尚未全數通過；200×170 mm、兩層候選。尚未佈線，不能下單製造。 <a href="https://rack-atx-controller-ddasdkimo.raidavid.chatgpt.site/layout.html" target="_blank" rel="noopener">查看可放大布局與擺放理由 →</a></div>
   <div class="rack-detail text-small">十路改為兩排各五路；694 個電氣元件均有焊盤，四角固定孔、隔離禁佈區與指定電源腳去耦位置已納入。焊盤圖面覆核不代表已完成實物／製造驗證。</div>
   <div class="rack-detail">中央：1 塊主控板　／　每台電腦：1 片免供電接線分接板（可改 Y 型線束）</div>
   <div class="viz-controls" aria-label="3D 觀察位置">
@@ -10968,7 +10968,7 @@
         "barrier_y": 122
       }
     },
-    "user_approval": "pending"
+    "user_approval": "authorized_after_standards_audit"
   },
   "procurement_preference": "一般交期、單面 Economic PCBA、不加急；可等較便宜運送方式，運費待結帳確認。",
   "bom_review": [
@@ -11619,7 +11619,14 @@
     "reference_design": "B.1 electrical / S.1 placement",
     "selected": false
   },
-  "active_strategy": "integrated_10_host"
+  "active_strategy": "integrated_10_host",
+  "standards_audit": {
+    "reference": "IPC-2221C",
+    "status": "not_passed",
+    "report": "hardware/STANDARDS-AUDIT.md",
+    "routing_authorized_after_pass": true,
+    "full_normative_text_available": false
+  }
 }</script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.min.js"></script>
   <script>
@@ -11638,7 +11645,7 @@
     normalize();
     const groupIndex=id=>design.functions.find(f=>f.id===id)?.series||1;
     const cssSeries=id=>'var(--viz-series-'+groupIndex(id)+')';
-    qs('[data-revision]').textContent='Rev '+design.revision+' · S.2 布局待確認';
+    qs('[data-revision]').textContent='Rev '+design.revision+' · S.2 規範審查中';
     qs('[data-parts]').innerHTML=(design.physical_parts||[]).map(p=>'<tr><td>'+p.role+'</td><td><a target="_blank" rel="noopener noreferrer" href="'+p.url+'">'+p.part+'</a></td><td>'+p.spec+'</td></tr>').join('');
     qs('[data-electronics]').innerHTML=design.electronics.map(p=>'<tr><td>'+p.role+'</td><td><a target="_blank" rel="noopener noreferrer" href="'+p.url+'">'+p.mpn+' · '+p.code+'</a></td><td>'+p.qty+'</td></tr>').join('');
     const money=n=>'$'+n.toFixed(2),range=a=>a.map(money).join('–');
@@ -11759,8 +11766,8 @@
       if(['rj45','barrel'].includes(c.key))peripherals[c.key]=[x,.34+c.z/20,c.key==='rj45'?-boardD/2-.2:boardD/2+.2];
       if(['mcu','rj45','barrel'].includes(c.key))tag(({mcu:'ESP32-S3',rj45:'LAN / W5500',barrel:'5V 輸入'})[c.key],[x-1,2.7,z],['controller']);
     }
-    tag('200 × 170 mm · 布局待確認',[cx,3,-10],['overview'],1);
-    tag('694 個有焊盤元件 · 待確認',[cx,3,-9],['controller'],1);
+    tag('200 × 170 mm · 規範審查中',[cx,3,-10],['overview'],1);
+    tag('694 個有焊盤元件 · 尚未佈線',[cx,3,-9],['controller'],1);
     const controllerShell=box(cx,2.8,0,boardW+1,5.6,boardD+1,material('--foreground',{transparent:true,opacity:.06,depthWrite:false}));shells.push(controllerShell);
     path([peripherals.rj45,[peripherals.rj45[0],1,-12],[-37,1,-12],[-38,1,-14]],material('--border'),.2);
     path([peripherals.barrel,[peripherals.barrel[0],1,12],[-37,1,12],[-38,1,14]],material('--muted-foreground'),.15);

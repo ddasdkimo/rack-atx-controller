@@ -10896,7 +10896,7 @@
         "barrier_y": 122
       }
     },
-    "user_approval": "pending"
+    "user_approval": "authorized_after_standards_audit"
   },
   "procurement_preference": "一般交期、單面 Economic PCBA、不加急；可等較便宜運送方式，運費待結帳確認。",
   "bom_review": [
@@ -11547,5 +11547,12 @@
     "reference_design": "B.1 electrical / S.1 placement",
     "selected": false
   },
-  "active_strategy": "integrated_10_host"
+  "active_strategy": "integrated_10_host",
+  "standards_audit": {
+    "reference": "IPC-2221C",
+    "status": "not_passed",
+    "report": "hardware/STANDARDS-AUDIT.md",
+    "routing_authorized_after_pass": true,
+    "full_normative_text_available": false
+  }
 }

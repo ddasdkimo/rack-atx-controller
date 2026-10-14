@@ -28,7 +28,7 @@ def pad(f,n,x,y,w,h,drill=0):
 def custom(name,body,pads,courtyard):
  f=p.FOOTPRINT(B);f.SetFPID(p.LIB_ID('RackATX',name));rect(f,*body);rect(f,*courtyard,p.F_CrtYd)
  for row in pads:pad(f,*row)
- f.SetAttributes(p.FP_THROUGH_HOLE if any(len(row)==7 for row in pads) else p.FP_SMD)
+ f.SetAttributes(p.FP_THROUGH_HOLE if any(len(row)==6 and row[-1]>0 for row in pads) else p.FP_SMD)
  p.PCB_IO_KICAD_SEXPR().FootprintSave(str(LOCAL),f)
  return 'RackATX:'+name
 # Toshiba land-pattern drawing: pitch 2.54; opposing pad centres 6.3; pads .8 x 1.2.
@@ -219,7 +219,7 @@ for ref,o in objs.items():
  z={'iso':10.1,'ssr':2.1,'opto':2,'ind':1.8,'barrel':14,'port':6,'rj45':13.5,'usb':3.2,'ldo':1.8}.get(k,.8 if k.startswith(('R','C')) else 1.5)
  records.append(dict(ref=ref,key=k,sheet=o['c']['sheet'],x=round(x,4),y=round(y,4),w=round(w,4),h=round(h,4),z=z,rotation=f.GetOrientationDegrees(),footprint=o['fid'],qualified=False))
 B.BuildConnectivity();p.SaveBoard(str(R/'hardware/cad/layout-S2-review.kicad_pcb'),B)
-out=dict(revision='S.2',schematic_revision=C['revision'],outline_mm=[W,H,1.6],layers=2,status='Net-informed placement for user review; no routed traces or production approval',footprint_count=694,mechanical_holes=4,unqualified_envelope_count=0,unqualified_families=[],routing_feasibility_verified=False,envelope_overlap_count=0,components=records,placement_constraints=constraints,regions=regions,user_approval='pending')
+out=dict(revision='S.2',schematic_revision=C['revision'],outline_mm=[W,H,1.6],layers=2,status='Net-informed placement for user review; no routed traces or production approval',footprint_count=694,mechanical_holes=4,unqualified_envelope_count=0,unqualified_families=[],routing_feasibility_verified=False,envelope_overlap_count=0,components=records,placement_constraints=constraints,regions=regions,user_approval='authorized_after_standards_audit')
 (R/'hardware/placement-study.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n')
 assert all(c['pass'] for c in constraints),[c for c in constraints if not c['pass']]
 print('S.2 PASS:',len(placed),'populated footprints;',len(constraints),'pin-proximity checks; 0 tracks; pending user review')

@@ -2,6 +2,14 @@
 
 此版供使用者確認元件位置，尚未佈線、尚非可製造版本。B.1 電路與用料不變；尺寸改為 200×170×1.6 mm，兩層仍是待走線驗證的候選。S.1 的 160×110 mm 是舊的純空間塞放研究，不再是目前布局。
 
+## 採用的規範層級（尚非 IPC／IEC 合規簽核）
+
+1. **原廠元件資料優先**：Toshiba／Everlight／HENIPER／Cjiang／Kangnex 的尺寸與焊盤圖，用於補齊本地封裝；Espressif、WIZnet、Diodes 的 layout 指南用於分區、去耦、晶振、接地與電源迴路安排。原廠建議中涉及走線、過孔、覆銅與實機測試的條件尚未完成。
+2. **KiCad 封裝庫與預設 DRC**：檢查現有焊盤、courtyard、孔位、禁佈區等幾何關係。庫內封裝不是本案已經通過 IPC 合規審核的證明。預設停用項目與大量未連線仍存在，詳見檢查 JSON。
+3. **專案自訂的布局篩選條件**：跨主機／控制電氣域的焊盤包圍盒間距至少 1.0 mm；比較器及多數 IC 的 100 nF 電源腳距離目標 3 mm，密集 W5500 類比電源區目標 4 mm；晶振／串阻／bulk／DC-DC 依用途另設接近程度門檻。精確目標與量測值逐項記錄在 JSON。這些距離是本案工程取捨，用於找出明顯不合理的位置，**不是原廠統一上限、IPC 保證值或高速／電源完整性的充分條件**。
+
+目前沒有宣稱符合某一版 IPC 土地圖／板級設計標準，也未依 IEC 安規絕緣條件完成爬電與電氣間隙認證。1 mm 僅作低電壓功能隔離目標，不能把元件 datasheet 的隔離耐壓直接當成整板額定耐壓。正確狀態是「依原廠資料與自訂條件調整後的布局審閱版」。
+
 ## 擺放理由
 
 | 區域 | 安排與理由 |
@@ -36,6 +44,6 @@ S.1 的 52 個無焊盤佔位已用有焊盤的封裝替換：四個自建封裝
 3. 不同主機、主機與控制側的焊盤包圍盒間距至少 1.0 mm。這是低電壓功能隔離設計規則，不是安規、高壓耐受或爬電距離認證。
 4. 尚無走線，因此不能用以上檢查宣稱回流、阻抗、熱、EMI 或整板電氣功能已通過。KiCad 未連線報告必然仍有大量項目。
 
-依據：[Espressif 布局指南](https://docs.espressif.com/projects/esp-hardware-design-guidelines/en/latest/esp32s3/pcb-layout-design.html)、[WIZnet 布局指南](https://docs.wiznet.io/Design-Guide/hardware_design_guide)、[AP63203 原廠評估板指南](https://www.diodes.com/assets/Evaluation-Boards/AP63203-EVB-User-Guide.pdf)。兩層能否在維持接地與隔離的條件下完成，須實際佈線後判定。使用者確認本次布局前不進入佈線。
+依據：[Espressif 布局指南](https://docs.espressif.com/projects/esp-hardware-design-guidelines/en/latest/esp32s3/pcb-layout-design.html)、[WIZnet 布局指南](https://docs.wiznet.io/Design-Guide/hardware_design_guide)、[AP63203 原廠評估板指南](https://www.diodes.com/assets/Evaluation-Boards/AP63203-EVB-User-Guide.pdf)。兩層能否在維持接地與隔離的條件下完成，須實際佈線後判定。使用者已授權規範檢查通過後直接佈線；目前檢查尚未完成，見 [規範審查](STANDARDS-AUDIT.md)。
 
-目前幾何 DRC 使用 KiCad 預設檢查設定；檢查停用項目與未連線項數記錄於 `layout-review-checks.json`。原理圖／PCB 的完整 KiCad parity 尚未執行，不把這個 DRC 結果寫成製造放行。
+目前幾何 DRC 已加入 JLC 工艺條件並重新開啟通孔／SMT 屬性與 courtyard 檢查；檢查停用項目與未連線項數記錄於 `layout-review-checks.json`。原理圖／PCB 的完整 KiCad parity 尚未執行，不把這個 DRC 結果寫成製造放行。

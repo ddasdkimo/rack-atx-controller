@@ -1810,7 +1810,7 @@ html&gt;body{padding:0}&lt;/style&gt;
     @media(max-width:500px) { #rack-atx-3d .rack-space { height:420px; } #rack-atx-3d .rack-heading { padding-right:70px; } }
   &lt;/style&gt;
   &lt;div class=&quot;rack-heading&quot;&gt;&lt;h2&gt;10 路機櫃控制板&lt;/h2&gt;&lt;span class=&quot;text-small text-muted&quot; data-revision&gt;&lt;/span&gt;&lt;/div&gt;
-  &lt;div class=&quot;rack-detail&quot;&gt;&lt;strong&gt;目前：一片控制十台。&lt;/strong&gt;S.2 元件布局待你確認；200×170 mm、兩層候選。尚未佈線，不能下單製造。 &lt;a href=&quot;https://rack-atx-controller-ddasdkimo.raidavid.chatgpt.site/layout.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;查看可放大布局與擺放理由 →&lt;/a&gt;&lt;/div&gt;
+  &lt;div class=&quot;rack-detail&quot;&gt;&lt;strong&gt;目前：一片控制十台。&lt;/strong&gt;S.2 規範檢查尚未全數通過；200×170 mm、兩層候選。尚未佈線，不能下單製造。 &lt;a href=&quot;https://rack-atx-controller-ddasdkimo.raidavid.chatgpt.site/layout.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;查看可放大布局與擺放理由 →&lt;/a&gt;&lt;/div&gt;
   &lt;div class=&quot;rack-detail text-small&quot;&gt;十路改為兩排各五路；694 個電氣元件均有焊盤，四角固定孔、隔離禁佈區與指定電源腳去耦位置已納入。焊盤圖面覆核不代表已完成實物／製造驗證。&lt;/div&gt;
   &lt;div class=&quot;rack-detail&quot;&gt;中央：1 塊主控板　／　每台電腦：1 片免供電接線分接板（可改 Y 型線束）&lt;/div&gt;
   &lt;div class=&quot;viz-controls&quot; aria-label=&quot;3D 觀察位置&quot;&gt;
@@ -12756,7 +12756,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         &quot;barrier_y&quot;: 122
       }
     },
-    &quot;user_approval&quot;: &quot;pending&quot;
+    &quot;user_approval&quot;: &quot;authorized_after_standards_audit&quot;
   },
   &quot;procurement_preference&quot;: &quot;一般交期、單面 Economic PCBA、不加急；可等較便宜運送方式，運費待結帳確認。&quot;,
   &quot;bom_review&quot;: [
@@ -13407,7 +13407,14 @@ html&gt;body{padding:0}&lt;/style&gt;
     &quot;reference_design&quot;: &quot;B.1 electrical / S.1 placement&quot;,
     &quot;selected&quot;: false
   },
-  &quot;active_strategy&quot;: &quot;integrated_10_host&quot;
+  &quot;active_strategy&quot;: &quot;integrated_10_host&quot;,
+  &quot;standards_audit&quot;: {
+    &quot;reference&quot;: &quot;IPC-2221C&quot;,
+    &quot;status&quot;: &quot;not_passed&quot;,
+    &quot;report&quot;: &quot;hardware/STANDARDS-AUDIT.md&quot;,
+    &quot;routing_authorized_after_pass&quot;: true,
+    &quot;full_normative_text_available&quot;: false
+  }
 }&lt;/script&gt;
   &lt;script src=&quot;https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.min.js&quot;&gt;&lt;/script&gt;
   &lt;script&gt;
@@ -13426,7 +13433,7 @@ html&gt;body{padding:0}&lt;/style&gt;
     normalize();
     const groupIndex=id=&gt;design.functions.find(f=&gt;f.id===id)?.series||1;
     const cssSeries=id=&gt;&#x27;var(--viz-series-&#x27;+groupIndex(id)+&#x27;)&#x27;;
-    qs(&#x27;[data-revision]&#x27;).textContent=&#x27;Rev &#x27;+design.revision+&#x27; · S.2 布局待確認&#x27;;
+    qs(&#x27;[data-revision]&#x27;).textContent=&#x27;Rev &#x27;+design.revision+&#x27; · S.2 規範審查中&#x27;;
     qs(&#x27;[data-parts]&#x27;).innerHTML=(design.physical_parts||[]).map(p=&gt;&#x27;&lt;tr&gt;&lt;td&gt;&#x27;+p.role+&#x27;&lt;/td&gt;&lt;td&gt;&lt;a target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; href=&quot;&#x27;+p.url+&#x27;&quot;&gt;&#x27;+p.part+&#x27;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&#x27;+p.spec+&#x27;&lt;/td&gt;&lt;/tr&gt;&#x27;).join(&#x27;&#x27;);
     qs(&#x27;[data-electronics]&#x27;).innerHTML=design.electronics.map(p=&gt;&#x27;&lt;tr&gt;&lt;td&gt;&#x27;+p.role+&#x27;&lt;/td&gt;&lt;td&gt;&lt;a target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; href=&quot;&#x27;+p.url+&#x27;&quot;&gt;&#x27;+p.mpn+&#x27; · &#x27;+p.code+&#x27;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&#x27;+p.qty+&#x27;&lt;/td&gt;&lt;/tr&gt;&#x27;).join(&#x27;&#x27;);
     const money=n=&gt;&#x27;$&#x27;+n.toFixed(2),range=a=&gt;a.map(money).join(&#x27;–&#x27;);
@@ -13547,8 +13554,8 @@ html&gt;body{padding:0}&lt;/style&gt;
       if([&#x27;rj45&#x27;,&#x27;barrel&#x27;].includes(c.key))peripherals[c.key]=[x,.34+c.z/20,c.key===&#x27;rj45&#x27;?-boardD/2-.2:boardD/2+.2];
       if([&#x27;mcu&#x27;,&#x27;rj45&#x27;,&#x27;barrel&#x27;].includes(c.key))tag(({mcu:&#x27;ESP32-S3&#x27;,rj45:&#x27;LAN / W5500&#x27;,barrel:&#x27;5V 輸入&#x27;})[c.key],[x-1,2.7,z],[&#x27;controller&#x27;]);
     }
-    tag(&#x27;200 × 170 mm · 布局待確認&#x27;,[cx,3,-10],[&#x27;overview&#x27;],1);
-    tag(&#x27;694 個有焊盤元件 · 待確認&#x27;,[cx,3,-9],[&#x27;controller&#x27;],1);
+    tag(&#x27;200 × 170 mm · 規範審查中&#x27;,[cx,3,-10],[&#x27;overview&#x27;],1);
+    tag(&#x27;694 個有焊盤元件 · 尚未佈線&#x27;,[cx,3,-9],[&#x27;controller&#x27;],1);
     const controllerShell=box(cx,2.8,0,boardW+1,5.6,boardD+1,material(&#x27;--foreground&#x27;,{transparent:true,opacity:.06,depthWrite:false}));shells.push(controllerShell);
     path([peripherals.rj45,[peripherals.rj45[0],1,-12],[-37,1,-12],[-38,1,-14]],material(&#x27;--border&#x27;),.2);
     path([peripherals.barrel,[peripherals.barrel[0],1,12],[-37,1,12],[-38,1,14]],material(&#x27;--muted-foreground&#x27;),.15);

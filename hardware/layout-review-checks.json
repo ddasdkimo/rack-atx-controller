@@ -1043,25 +1043,21 @@
     }
   ],
   "manufacturing_ready": false,
-  "user_approval": "pending",
+  "user_approval": "authorized_after_standards_audit",
   "limits": [
     "Straight-line pad proximity is not routed inductance/return-path verification.",
     "1 mm is a low-voltage functional separation design rule, not a mains/safety-isolation rating.",
     "Copper pours, thermal vias, signal integrity, assembly DFM and physical prototype tests remain pending."
   ],
-  "pcb_sha256": "63e49b8a2e0964418c820402325e78f51b36a9ffd679143e92377cef00c03df6",
+  "pcb_sha256": "74162e7dd94063431016074a687541d7aa0350f4d6781f5bfc4b95f865c30060",
   "kicad_drc": {
-    "version": "10.0.0",
     "violations": 0,
     "unconnected_items": 499,
+    "profile": "JLC geometry with footprint-type and courtyard checks enabled",
     "ignored_checks": [
-      "missing_courtyard",
-      "track_not_centered_on_via",
-      "tuning_profile_track_geometries",
       "footprint_filters_mismatch",
-      "footprint_type_mismatch"
+      "tuning_profile_track_geometries"
     ],
-    "schematic_parity_checked": false,
-    "note": "Default KiCad placement/clearance checks only; unrouted items remain. Custom script checks schematic pin/net mapping separately."
+    "full_schematic_parity": false
   }
 }
