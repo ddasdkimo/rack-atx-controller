@@ -169,7 +169,74 @@
       "id": "HS-02",
       "description": "USB and MDI runs have no established impedance geometry or complete reference continuity. Total net copper lengths include branches and must not be used as pair skew.",
       "source": "https://docs.espressif.com/projects/esp-hardware-design-guidelines/en/latest/esp32s3/pcb-layout-design.html"
+    },
+    {
+      "id": "DFM-01",
+      "description": "U2 exposed pad lacks the recommended nine direct ground vias. Add vias and coordinate paste windows/via treatment; do not rely on a thin surface ground trace."
+    },
+    {
+      "id": "HS-03",
+      "description": "Non-ground B.Cu traces run under the ESP32 exposed pad and split its reference copper. Reserve continuous ground beneath MCU and oscillator during routing repair."
     }
   ],
-  "manufacturing_ready": false
+  "manufacturing_ready": false,
+  "qfn_process": {
+    "ref": "U2",
+    "mpn": "ESP32-S3FN8",
+    "copper_ep_mm": [
+      4.0,
+      4.0
+    ],
+    "peripheral_pitch_mm": 0.4,
+    "thermal_vias_inside_ep": 0,
+    "recommended_minimum_vias": 9,
+    "paste_windows": 9,
+    "paste_coverage_percent": 61.383,
+    "non_ground_bottom_tracks_under_ep": [
+      {
+        "net": "3V3",
+        "start_mm": [
+          48.6508,
+          52.6851
+        ],
+        "end_mm": [
+          60.9532,
+          52.6851
+        ],
+        "width_mm": 0.3
+      },
+      {
+        "net": "SPI_MOSI",
+        "start_mm": [
+          61.0863,
+          53.1061
+        ],
+        "end_mm": [
+          41.801,
+          53.1061
+        ],
+        "width_mm": 0.15
+      },
+      {
+        "net": "USB_VBUS_SENSE",
+        "start_mm": [
+          58.5749,
+          54.853
+        ],
+        "end_mm": [
+          55.7441,
+          57.6838
+        ],
+        "width_mm": 0.15
+      }
+    ],
+    "guide": "https://docs.espressif.com/projects/esp-hardware-design-guidelines/en/latest/esp32s3/pcb-layout-design.html",
+    "package_drawing": "https://documentation.espressif.com/esp32-s3_datasheet_en.pdf",
+    "qualification": "Geometry inspection only. Paste, via treatment, finish and stencil must be agreed with assembler; not solder-joint validation."
+  },
+  "two_layer_impedance": {
+    "factory_controlled_impedance": false,
+    "source": "https://jlcpcb.com/capabilities/pcb-capabilities/",
+    "note": "Published controlled-impedance service begins at four layers. Two-layer prototype routing targets are not a factory impedance guarantee; use estimated geometry plus physical link/USB testing."
+  }
 }
