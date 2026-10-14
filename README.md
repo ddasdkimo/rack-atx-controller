@@ -1,10 +1,10 @@
 # Rack ATX Controller
 
-**目前方向：一片控制十台主機，S.2 元件布局待使用者確認。** B.1 電路搭配 200×170 mm、兩層候選布局，全部 694 個電氣元件已有焊盤；尚未佈線，不能送製造。[布局理由](hardware/LAYOUT-S2.md) · [公開審閱圖](https://rack-atx-controller-ddasdkimo.raidavid.chatgpt.site/layout.html)。S.1 縮板與 P.0 拆板研究保留為歷史參考。
+**目前方向：一片控制十台主機，R.0 已開始局部佈線。** B.1 電路搭配 200×170 mm、兩層候選布局，全部 694 個電氣元件已有焊盤；已完成 524 段局部走線，尚未全板連通，不能送製造。[R.0 進度](hardware/ROUTING-R0.md)。[布局理由](hardware/LAYOUT-S2.md) · [公開審閱圖](https://rack-atx-controller-ddasdkimo.raidavid.chatgpt.site/layout.html)。S.1 縮板與 P.0 拆板研究保留為歷史參考。
 
 10 台電腦的機櫃遠端電源控制硬體規劃，保留原機殼 POWER／RESET 按鈕、電源燈與硬碟燈。
 
-**目前版本：B.1 · 原理圖審閱版。** 已有 JLC 選料、完整電路定值、KiCad 原理圖、BOM 與批量成本。ERC／連線及 DC 角落計算已檢查；尚無 PCB 佈線、CPL／Gerber 或實機驗證。目前 S.2 依實際焊盤與電路關係重新布局；3D 與俯視審閱頁均由同一份 PCB 位置資料生成。
+**目前版本：B.1 · 原理圖審閱版。** 已有 JLC 選料、完整電路定值、KiCad 原理圖、BOM 與批量成本。ERC／連線及 DC 角落計算已檢查；PCB 已進入 R.0 局部佈線；尚無完成的 PCB、CPL／Gerber 或實機驗證。目前 S.2 依實際焊盤與電路關係重新布局；3D 與俯視審閱頁均由同一份 PCB 位置資料生成。
 
 - 公開討論網頁：[3D 控制板與兩台電腦接線](https://rack-atx-controller-ddasdkimo.raidavid.chatgpt.site)
 - [硬體架構與接線](hardware/HARDWARE.md)

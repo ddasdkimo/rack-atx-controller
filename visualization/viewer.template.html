@@ -22,7 +22,7 @@
     @media(max-width:500px) { #rack-atx-3d .rack-space { height:420px; } #rack-atx-3d .rack-heading { padding-right:70px; } }
   </style>
   <div class="rack-heading"><h2>10 路機櫃控制板</h2><span class="text-small text-muted" data-revision></span></div>
-  <div class="rack-detail"><strong>目前：一片控制十台。</strong>S.2 規範檢查尚未全數通過；200×170 mm、兩層候選。尚未佈線，不能下單製造。 <a href="https://rack-atx-controller-ddasdkimo.raidavid.chatgpt.site/layout.html" target="_blank" rel="noopener">查看可放大布局與擺放理由 →</a></div>
+  <div class="rack-detail"><strong>目前：一片控制十台。</strong>R.0 已開始局部佈線：524 段銅箔，200×170 mm、兩層候選。尚未全板連通，不能下單製造。 <a href="https://rack-atx-controller-ddasdkimo.raidavid.chatgpt.site/layout.html" target="_blank" rel="noopener">查看可放大布局與擺放理由 →</a></div>
   <div class="rack-detail text-small">十路改為兩排各五路；694 個電氣元件均有焊盤，四角固定孔、隔離禁佈區與指定電源腳去耦位置已納入。焊盤圖面覆核不代表已完成實物／製造驗證。</div>
   <div class="rack-detail">中央：1 塊主控板　／　每台電腦：1 片免供電接線分接板（可改 Y 型線束）</div>
   <div class="viz-controls" aria-label="3D 觀察位置">
@@ -36,7 +36,7 @@
     <div class="rack-labels"></div>
     <div class="rack-error text-destructive" role="alert">3D 資源無法載入；下方接線圖仍可檢視。</div>
   </div>
-  <div class="rack-caption text-small text-muted"><span>拖曳旋轉 · 滾輪／雙指縮放</span><span>S.2 零件布局審閱 · 非佈線／製造圖</span></div>
+  <div class="rack-caption text-small text-muted"><span>拖曳旋轉 · 滾輪／雙指縮放</span><span>R.0 局部銅箔示意 · 尚非製造圖</span></div>
   <div class="rack-detail text-small" aria-live="polite" data-scene-detail>J01 → PC-01 · J02 → PC-02 · J03–J10 預留</div>
   <hr>
   <div class="viz-controls">
@@ -66,9 +66,9 @@
   <div class="rack-detail text-small">兩種方案都只比較中央主控板，未含 10 片分接板、線束、外殼、外接電源。已焊好的板子仍需燒錄、接線與測試，才是可用的機櫃控制設備。</div>
   <div class="rack-detail text-small" data-cost-note></div>
   <div class="rack-detail text-small">原理圖：<a href="https://github.com/ddasdkimo/rack-atx-controller/blob/main/hardware/release/controller-schematic.pdf" target="_blank" rel="noopener noreferrer">主控板 PDF</a> · <a href="https://github.com/ddasdkimo/rack-atx-controller/blob/main/hardware/release/adapter-schematic.pdf" target="_blank" rel="noopener noreferrer">免供電分接板 PDF</a> · <a href="https://github.com/ddasdkimo/rack-atx-controller/tree/main/hardware/cad" target="_blank" rel="noopener noreferrer">KiCad 原始檔</a></div>
-  <div class="rack-detail text-small">縮板評估：<a href="https://github.com/ddasdkimo/rack-atx-controller/blob/main/hardware/COMPACT-STUDY.md" target="_blank" rel="noopener noreferrer">兩層可行性與限制</a> · <a href="https://github.com/ddasdkimo/rack-atx-controller/blob/main/hardware/cad/layout-S2-review.kicad_pcb" target="_blank" rel="noopener noreferrer">KiCad S.2 布局</a> · <a href="https://github.com/ddasdkimo/rack-atx-controller/tree/main/hardware/research" target="_blank" rel="noopener noreferrer">JLC 實際試算截圖</a></div>
+  <div class="rack-detail text-small">縮板評估：<a href="https://github.com/ddasdkimo/rack-atx-controller/blob/main/hardware/COMPACT-STUDY.md" target="_blank" rel="noopener noreferrer">兩層可行性與限制</a> · <a href="https://github.com/ddasdkimo/rack-atx-controller/blob/main/hardware/cad/routing-R0.kicad_pcb" target="_blank" rel="noopener noreferrer">KiCad R.0 走線</a> · <a href="https://github.com/ddasdkimo/rack-atx-controller/tree/main/hardware/research" target="_blank" rel="noopener noreferrer">JLC 實際試算截圖</a></div>
   <div class="rack-detail text-small">採購：<a href="https://github.com/ddasdkimo/rack-atx-controller/tree/main/hardware/bom" target="_blank" rel="noopener noreferrer">完整 BOM／批量成本表</a> · <a href="https://github.com/ddasdkimo/rack-atx-controller/blob/main/hardware/JLCPCB.md" target="_blank" rel="noopener noreferrer">收費與選料依據</a></div>
-  <div class="rack-detail text-small">B.1 原理圖＋S.2 布局審閱 · 原理圖 ERC 與連線檢查完成 · 配置佔位檢查不等於 PCB DRC／佈線完成</div>
+  <div class="rack-detail text-small">B.1 原理圖＋R.0 局部佈線 · 既有走線幾何 DRC 0 違規 · 全板連通、回流與實機驗證尚未完成</div>
   <div class="rack-detail text-small"><a href="https://github.com/ddasdkimo/rack-atx-controller" target="_blank" rel="noopener noreferrer">GitHub 設計紀錄</a></div>
   <script type="application/json" data-design>__DESIGN_JSON__</script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.min.js"></script>
@@ -88,7 +88,7 @@
     normalize();
     const groupIndex=id=>design.functions.find(f=>f.id===id)?.series||1;
     const cssSeries=id=>'var(--viz-series-'+groupIndex(id)+')';
-    qs('[data-revision]').textContent='Rev '+design.revision+' · S.2 規範審查中';
+    qs('[data-revision]').textContent='Rev '+design.revision+' · R.0 局部佈線';
     qs('[data-parts]').innerHTML=(design.physical_parts||[]).map(p=>'<tr><td>'+p.role+'</td><td><a target="_blank" rel="noopener noreferrer" href="'+p.url+'">'+p.part+'</a></td><td>'+p.spec+'</td></tr>').join('');
     qs('[data-electronics]').innerHTML=design.electronics.map(p=>'<tr><td>'+p.role+'</td><td><a target="_blank" rel="noopener noreferrer" href="'+p.url+'">'+p.mpn+' · '+p.code+'</a></td><td>'+p.qty+'</td></tr>').join('');
     const money=n=>'$'+n.toFixed(2),range=a=>a.map(money).join('–');
@@ -193,6 +193,9 @@
     const boardMesh=new T.Mesh(new T.ExtrudeGeometry(outline,{depth:.16,bevelEnabled:false}),pcb);boardMesh.rotation.x=-Math.PI/2;boardMesh.position.set(cx,.17,cz);scene.add(boardMesh);
     for(const yy of [48,122]){const xx=cx+boardW/2-yy/10;box(xx,.339,cz,.1,.008,19,functionMats.reset);}
 
+    // Copper centre lines come from the saved R.0 KiCad board; unfinished nets are not drawn.
+    const copperMat=new T.LineBasicMaterial({color:0xff8e8e});
+    for(const s of design.routing_study.segments){const points=[s.a,s.b].map(([x,y])=>new T.Vector3(cx+boardW/2-y/10,.345,cz-boardD/2+x/10));scene.add(new T.Line(new T.BufferGeometry().setFromPoints(points),copperMat));}
     const ports=[],peripherals={},placement=design.layout_study.components;
     for(const c of placement){
       const x=cx+boardW/2-(c.y+c.h/2)/10,z=-boardD/2+(c.x+c.w/2)/10;
@@ -209,8 +212,8 @@
       if(['rj45','barrel'].includes(c.key))peripherals[c.key]=[x,.34+c.z/20,c.key==='rj45'?-boardD/2-.2:boardD/2+.2];
       if(['mcu','rj45','barrel'].includes(c.key))tag(({mcu:'ESP32-S3',rj45:'LAN / W5500',barrel:'5V 輸入'})[c.key],[x-1,2.7,z],['controller']);
     }
-    tag('200 × 170 mm · 規範審查中',[cx,3,-10],['overview'],1);
-    tag('694 個有焊盤元件 · 尚未佈線',[cx,3,-9],['controller'],1);
+    tag('200 × 170 mm · 局部佈線',[cx,3,-10],['overview'],1);
+    tag('524 段實際銅箔 · 尚未全板連通',[cx,3,-9],['controller'],1);
     const controllerShell=box(cx,2.8,0,boardW+1,5.6,boardD+1,material('--foreground',{transparent:true,opacity:.06,depthWrite:false}));shells.push(controllerShell);
     path([peripherals.rj45,[peripherals.rj45[0],1,-12],[-37,1,-12],[-38,1,-14]],material('--border'),.2);
     path([peripherals.barrel,[peripherals.barrel[0],1,12],[-37,1,12],[-38,1,14]],material('--muted-foreground'),.15);

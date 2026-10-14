@@ -40,9 +40,10 @@ prototype_page=(ROOT/'visualization/prototype.template.html').read_text().replac
 for directory in ('docs','dist'):
  (ROOT/directory/'prototype.html').write_text(prototype_page)
 
-layout_svg=(ROOT/'hardware/layout-S2-review.svg').read_text()
+layout_svg=(ROOT/'hardware/routing-R0.svg').read_text()
 audit=json.loads((ROOT/'hardware/layout-review-checks.json').read_text())
 layout_page=(ROOT/'visualization/layout.template.html').read_text().replace('__LAYOUT_SVG__',layout_svg).replace('__AUDIT_JSON__',json.dumps(audit,ensure_ascii=False).replace('<','\\u003c'))
 for directory in ('docs','dist'):
  (ROOT/directory/'layout.html').write_text(layout_page)
- (ROOT/directory/'layout-S2-review.svg').write_text(layout_svg)
+ (ROOT/directory/'routing-R0.svg').write_text(layout_svg)
+ (ROOT/directory/'layout-S2-review.svg').write_text((ROOT/'hardware/layout-S2-review.svg').read_text())

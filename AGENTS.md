@@ -35,4 +35,8 @@ The user returned to one integrated controller for ten hosts (B.1 electrical / S
 
 ## S.2 placement confirmation gate
 
-Current layout: 200x170 mm S.2, two banks of five hosts, all 694 electrical footprints have pads plus four M3 mounting holes. The five previous envelope families are now drawing-transcribed or library footprints; not factory-qualified. Preserve S.1 as historical only. Regenerate with make-layout-review.py and audit with check-layout-review.py in KiCad Python. Sync layout-review-checks.json, layout SVG, design.layout_study, viewer and layout.html. The user now authorizes routing automatically once the standards-based pre-routing audit passes. Unverified or failed checks must not be marked passed to bypass this condition. One-board parts budget is separate; do not apply the old S.1 PCB price to S.2.
+Current layout: 200x170 mm S.2, two banks of five hosts, all 694 electrical footprints have pads plus four M3 mounting holes. The five previous envelope families are now drawing-transcribed or library footprints; not factory-qualified. Preserve S.1 as historical only. Regenerate with make-layout-review.py and audit with check-layout-review.py in KiCad Python. Sync layout-review-checks.json, layout SVG, design.layout_study, viewer and layout.html. The user now authorizes routing after a practical high-level placement review, without formal IPC compliance as a gate. Keep explicit DFM deviations and manufacturing limitations visible. One-board parts budget is separate; do not apply the old S.1 PCB price to S.2.
+
+## R.0 routing work
+
+Current working routing file is hardware/cad/routing-R0.kicad_pcb; S.2 is an immutable placement reference with zero tracks. R.0 contains a partial local routing pass only. Preserve unfinished connectivity, power/ground and high-speed routing status. Do not regenerate R.0 over later manual edits. Sync native track geometry to routing-R0.json, SVG, 3D and public layout page using export-routing-review.py.

@@ -161,5 +161,6 @@
     }
   ],
   "ipc_compliance_verified": false,
-  "routing_gate": "not_passed"
+  "routing_gate": "superseded_by_practical_review",
+  "practical_disposition": "11 proximity candidates retained as explicit assembly DFM follow-ups; no overlap or electrical short indicated; routing authorized by practical review."
 }

@@ -56,3 +56,11 @@ audit=json.loads((root/"hardware/layout-review-checks.json").read_text())
 assert all(x.get("pass",x.get("passed",False)) for x in audit["critical_proximity_checks"])
 assert audit["tracks"]==0 and audit["inter_domain_violations"]==0
 assert (root/"docs/layout.html").read_text()==(root/"dist/layout.html").read_text()
+
+# Copper geometry provenance: the public/3D model must match the audited native R.0 export.
+route=json.loads((root/'hardware/routing-R0.json').read_text())
+assert route['track_segments']==len(route['segments'])>0 and route['drc']['violations']==0
+assert d['routing_study']['segments']==route['segments']
+assert (root/'docs/routing-R0.svg').read_text()==(root/'hardware/routing-R0.svg').read_text()
+assert route['manufacturing_ready'] is False and route['status']=='partial_local_routing'
+print('PASS: R.0 partial copper geometry, public view and 3D agree; manufacturing remains unapproved.')

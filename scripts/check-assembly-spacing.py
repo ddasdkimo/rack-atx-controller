@@ -34,6 +34,6 @@ for i,(ra,ka,a) in enumerate(known):
   x,y=sorted((order.index(ka),order.index(kb)));limit=rows[x][y-x]
   gap=math.hypot(max(0,a[0]-c[2],c[0]-a[2]),max(0,a[1]-c[3],c[1]-a[3]));count+=1
   if gap<limit-1e-6:findings.append(dict(a=ra,b=rb,packages=[ka,kb],bbox_gap_mm=round(gap,4),recommended_mm=limit,status='needs_exact_review'))
-report=dict(source='https://jlcpcb.com/help/article/minimum-spacing-for-smd-components',pcb_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),method='Conservative union of pad and F.Fab bounding boxes; near pairs require exact geometry verification.',classified_components=len(known),unclassified_components=unknown,pairs_screened=count,candidates=findings,ipc_compliance_verified=False,routing_gate='not_passed')
+report=dict(source='https://jlcpcb.com/help/article/minimum-spacing-for-smd-components',pcb_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),method='Conservative union of pad and F.Fab bounding boxes; near pairs require exact geometry verification.',classified_components=len(known),unclassified_components=unknown,pairs_screened=count,candidates=findings,ipc_compliance_verified=False,routing_gate='superseded_by_practical_review',practical_disposition='Proximity candidates remain assembly DFM follow-ups; practical review permits initial routing.')
 (R/'hardware/assembly-spacing-checks.json').write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps(dict(classified=len(known),unclassified=len(unknown),candidate_count=len(findings),candidates=findings[:12]),indent=2))
