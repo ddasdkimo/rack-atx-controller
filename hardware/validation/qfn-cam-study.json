@@ -1,0 +1,37 @@
+{
+  "status": "pass local EPAD CAM geometry only",
+  "parser": "gerbonara",
+  "paste_windows": 16,
+  "conservative_paste_bbox_to_hole_gap_mm": 0.0267766952966369,
+  "paste_bbox_mm": [
+    0.75,
+    0.75
+  ],
+  "drills": 9,
+  "drill_mm": 0.3,
+  "top_mask_ep_opening_mm": [
+    4,
+    4
+  ],
+  "bottom_mask_apertures_under_ep": 0,
+  "holes_do_not_overlap_paste": true,
+  "parser_warnings": [
+    "32 \"G90\": G90 header statement found after end of header"
+  ],
+  "limitations": [
+    "Bottom tenting is not resin filling or copper capping.",
+    "Native DRC checks geometry; fabrication and assembly DFM remain pending.",
+    "This partially routed local trial is not a submission candidate."
+  ],
+  "sha256": {
+    "R3-RX-grouped-B_Mask.gbs": "0b24161caaec50ba008197159b17932473d3ffc63b0edfc86e4b3ac825527085",
+    "R3-RX-grouped-F_Mask.gts": "bcafe623df79dfbd90e5b39c95f3c0f5238275f84b27b19d10a9c8b4c42c7e77",
+    "R3-RX-grouped-F_Paste.gtp": "fcc77f06f54b8fb64c7db39a58add1944c189f7514cc2ce2a4ace1e735bfbae0",
+    "R3-RX-grouped-job.gbrjob": "9f005a1aef9f7ca27f303c3effad3dcb94fb3503ef1df46d9b4cbf1cef481148",
+    "R3-RX-grouped.drl": "50dd6be3facd6f6706f6775ebb570511c787a464ff229384411c7cde78b897ff"
+  },
+  "source_board": {
+    "name": "R3-RX-grouped.kicad_pcb",
+    "sha256": "4dd0975224af4071cdad0c04673a2f2f960f16b6c8c1887292dcf335cada1c71"
+  }
+}

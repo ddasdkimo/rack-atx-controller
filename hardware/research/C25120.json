@@ -1,0 +1,46 @@
+{
+  "id": "C25120",
+  "mpn": "0402WGF499JTCE",
+  "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "classification": "Basic",
+  "assembly": "SMT Assembly",
+  "pcba_type": "Economic and Standard",
+  "stock": 1309179,
+  "loss": 10,
+  "prices": [
+    {
+      "min_qty": 1,
+      "max_qty": 999,
+      "usd": 0.0023
+    },
+    {
+      "min_qty": 1000,
+      "max_qty": 2999,
+      "usd": 0.0017
+    },
+    {
+      "min_qty": 3000,
+      "max_qty": 9999,
+      "usd": 0.0015
+    },
+    {
+      "min_qty": 10000,
+      "max_qty": 49999,
+      "usd": 0.0013
+    },
+    {
+      "min_qty": 50000,
+      "max_qty": 50199,
+      "usd": 0.0011
+    },
+    {
+      "min_qty": 50200,
+      "max_qty": -1,
+      "usd": 0.0011
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/C25120",
+  "checked_at": "2026-10-14T16:55:02.995713+00:00",
+  "status": "public JLC page observed; recheck at ordering"
+}

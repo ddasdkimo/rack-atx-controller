@@ -1,0 +1,46 @@
+{
+  "id": "C318580",
+  "mpn": "CL05B682KB5NNNC",
+  "manufacturer": "Samsung Electro-Mechanics",
+  "package": "0402",
+  "classification": "Extended",
+  "assembly": "SMT Assembly",
+  "pcba_type": "Economic and Standard",
+  "stock": 17120,
+  "loss": 10,
+  "prices": [
+    {
+      "min_qty": 1,
+      "max_qty": 999,
+      "usd": 0.0094
+    },
+    {
+      "min_qty": 1000,
+      "max_qty": 2999,
+      "usd": 0.0078
+    },
+    {
+      "min_qty": 3000,
+      "max_qty": 9999,
+      "usd": 0.007
+    },
+    {
+      "min_qty": 10000,
+      "max_qty": 49999,
+      "usd": 0.0064
+    },
+    {
+      "min_qty": 50000,
+      "max_qty": 99999,
+      "usd": 0.006
+    },
+    {
+      "min_qty": 100000,
+      "max_qty": -1,
+      "usd": 0.0057
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/C318580",
+  "checked_at": "2026-10-14T17:24:25.757374+00:00",
+  "status": "public JLC page observed; recheck at ordering"
+}

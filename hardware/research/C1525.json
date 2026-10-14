@@ -1,0 +1,46 @@
+{
+  "id": "C1525",
+  "mpn": "CL05B104KO5NNNC",
+  "manufacturer": "Samsung Electro-Mechanics",
+  "package": "0402",
+  "classification": "Basic",
+  "assembly": "SMT Assembly",
+  "pcba_type": "Economic and Standard",
+  "stock": 22967367,
+  "loss": 10,
+  "prices": [
+    {
+      "min_qty": 1,
+      "max_qty": 999,
+      "usd": 0.0046
+    },
+    {
+      "min_qty": 1000,
+      "max_qty": 2999,
+      "usd": 0.0035
+    },
+    {
+      "min_qty": 3000,
+      "max_qty": 9999,
+      "usd": 0.003
+    },
+    {
+      "min_qty": 10000,
+      "max_qty": 49999,
+      "usd": 0.0026
+    },
+    {
+      "min_qty": 50000,
+      "max_qty": 99999,
+      "usd": 0.0024
+    },
+    {
+      "min_qty": 100000,
+      "max_qty": -1,
+      "usd": 0.0023
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/C1525",
+  "checked_at": "2026-10-14T16:55:03.091408+00:00",
+  "status": "public JLC page observed; recheck at ordering"
+}
