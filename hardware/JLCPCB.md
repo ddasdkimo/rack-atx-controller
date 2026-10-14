@@ -1,5 +1,7 @@
 # JLCPCB 選料與成本 — B.1
 
+> 目前布局為 S.2（200×170 mm），待使用者確認，尚未佈線。以下 S.1 尺寸／費用／52 個佔位敘述為歷史紀錄；S.2 已補焊盤，詳見 [布局審閱](LAYOUT-S2.md)。舊尺寸報價不適用於 S.2。
+
 2026-10-13 逐項讀取 **JLCPCB 自身代貼庫**，48 種實際上板料號皆顯示 Economic and Standard 且有庫存；已記錄確切 MPN、C 編號、封裝、分類、組裝方式、查詢時間與階梯單價。[完整主板 BOM](bom/controller-bom.csv)有 694 個元件；[分接板 BOM](bom/adapter-bom.csv)每板 10 個元件。庫存是當時觀察值，不是保留庫存或下單承諾。
 
 [controller-jlc-bom.csv](bom/controller-jlc-bom.csv) 和 [adapter-jlc-bom.csv](bom/adapter-jlc-bom.csv) 使用 JLC 的四欄格式。目前可作選料／詢價基礎；**沒有對應 CPL、佈線及 Gerber，不能當整套生產資料**。Footprint 欄有候選庫名稱或供應商封裝名，最後下單需以經審核的 PCB footprint/CPL 重匯。

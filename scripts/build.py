@@ -39,3 +39,10 @@ prototype_cost=json.loads((ROOT/'hardware/prototype-cost.json').read_text())
 prototype_page=(ROOT/'visualization/prototype.template.html').read_text().replace('__PROTO_JSON__',json.dumps(prototype,ensure_ascii=False).replace('<','\\u003c')).replace('__P0_COST_JSON__',json.dumps(prototype_cost,ensure_ascii=False).replace('<','\\u003c'))
 for directory in ('docs','dist'):
  (ROOT/directory/'prototype.html').write_text(prototype_page)
+
+layout_svg=(ROOT/'hardware/layout-S2-review.svg').read_text()
+audit=json.loads((ROOT/'hardware/layout-review-checks.json').read_text())
+layout_page=(ROOT/'visualization/layout.template.html').read_text().replace('__LAYOUT_SVG__',layout_svg).replace('__AUDIT_JSON__',json.dumps(audit,ensure_ascii=False).replace('<','\\u003c'))
+for directory in ('docs','dist'):
+ (ROOT/directory/'layout.html').write_text(layout_page)
+ (ROOT/directory/'layout-S2-review.svg').write_text(layout_svg)

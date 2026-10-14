@@ -32,3 +32,7 @@ The user is not in a hurry. Prefer normal lead time, one-side Economic PCBA and 
 ## Current architecture decision
 
 The user returned to one integrated controller for ten hosts (B.1 electrical / S.1 placement). P.0 external-ESP32 breakaway research is archived, not selected. Retain its cost evidence and mark prototype-plan.json and design.next_prototype consistently. S.1 has zero routed tracks and still needs qualified footprints, routing and DRC; do not claim two-layer routing success.
+
+## S.2 placement confirmation gate
+
+Current layout: 200x170 mm S.2, two banks of five hosts, all 694 electrical footprints have pads plus four M3 mounting holes. The five previous envelope families are now drawing-transcribed or library footprints; not factory-qualified. Preserve S.1 as historical only. Regenerate with make-layout-review.py and audit with check-layout-review.py in KiCad Python. Sync layout-review-checks.json, layout SVG, design.layout_study, viewer and layout.html. The user explicitly requests confirmation after layout adjustment: do not route before that confirmation. One-board parts budget is separate; do not apply the old S.1 PCB price to S.2.

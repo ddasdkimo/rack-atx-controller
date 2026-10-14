@@ -1,0 +1,1067 @@
+{
+  "revision": "S.2",
+  "electrical_components": 694,
+  "mounting_holes": 4,
+  "pad_free_placeholders": 0,
+  "net_pin_mapping": "all connected schematic pins present with matching PCB nets",
+  "tracks": 0,
+  "inter_domain_pad_bbox_minimum_mm": 1.04,
+  "inter_domain_violations": 0,
+  "critical_proximity_checks": [
+    {
+      "ref": "C49",
+      "target_xy": [
+        27.475,
+        26.095
+      ],
+      "pin": "1",
+      "distance_mm": 2.105,
+      "limit_mm": 3,
+      "pass": true
+    },
+    {
+      "ref": "C46",
+      "target_xy": [
+        12.0,
+        49.27
+      ],
+      "pin": "1",
+      "distance_mm": 5.109,
+      "limit_mm": 8,
+      "pass": true
+    },
+    {
+      "ref": "C48",
+      "target_xy": [
+        18.05,
+        38.5
+      ],
+      "pin": "1",
+      "distance_mm": 2.1,
+      "limit_mm": 3.5,
+      "pass": true
+    },
+    {
+      "ref": "C47",
+      "target_xy": [
+        12.0,
+        44.19
+      ],
+      "pin": "1",
+      "distance_mm": 3.74,
+      "limit_mm": 5,
+      "pass": true
+    },
+    {
+      "ref": "C59",
+      "target_xy": [
+        65.475,
+        26.095
+      ],
+      "pin": "1",
+      "distance_mm": 2.105,
+      "limit_mm": 3,
+      "pass": true
+    },
+    {
+      "ref": "C56",
+      "target_xy": [
+        50.0,
+        49.27
+      ],
+      "pin": "1",
+      "distance_mm": 5.109,
+      "limit_mm": 8,
+      "pass": true
+    },
+    {
+      "ref": "C58",
+      "target_xy": [
+        56.05,
+        38.5
+      ],
+      "pin": "1",
+      "distance_mm": 2.1,
+      "limit_mm": 3.5,
+      "pass": true
+    },
+    {
+      "ref": "C57",
+      "target_xy": [
+        50.0,
+        44.19
+      ],
+      "pin": "1",
+      "distance_mm": 3.74,
+      "limit_mm": 5,
+      "pass": true
+    },
+    {
+      "ref": "C69",
+      "target_xy": [
+        103.475,
+        26.095
+      ],
+      "pin": "1",
+      "distance_mm": 2.105,
+      "limit_mm": 3,
+      "pass": true
+    },
+    {
+      "ref": "C66",
+      "target_xy": [
+        88.0,
+        49.27
+      ],
+      "pin": "1",
+      "distance_mm": 5.109,
+      "limit_mm": 8,
+      "pass": true
+    },
+    {
+      "ref": "C68",
+      "target_xy": [
+        94.05,
+        38.5
+      ],
+      "pin": "1",
+      "distance_mm": 2.1,
+      "limit_mm": 3.5,
+      "pass": true
+    },
+    {
+      "ref": "C67",
+      "target_xy": [
+        88.0,
+        44.19
+      ],
+      "pin": "1",
+      "distance_mm": 3.74,
+      "limit_mm": 5,
+      "pass": true
+    },
+    {
+      "ref": "C79",
+      "target_xy": [
+        141.475,
+        26.095
+      ],
+      "pin": "1",
+      "distance_mm": 2.105,
+      "limit_mm": 3,
+      "pass": true
+    },
+    {
+      "ref": "C76",
+      "target_xy": [
+        126.0,
+        49.27
+      ],
+      "pin": "1",
+      "distance_mm": 5.109,
+      "limit_mm": 8,
+      "pass": true
+    },
+    {
+      "ref": "C78",
+      "target_xy": [
+        132.05,
+        38.5
+      ],
+      "pin": "1",
+      "distance_mm": 2.1,
+      "limit_mm": 3.5,
+      "pass": true
+    },
+    {
+      "ref": "C77",
+      "target_xy": [
+        126.0,
+        44.19
+      ],
+      "pin": "1",
+      "distance_mm": 3.74,
+      "limit_mm": 5,
+      "pass": true
+    },
+    {
+      "ref": "C89",
+      "target_xy": [
+        179.475,
+        26.095
+      ],
+      "pin": "1",
+      "distance_mm": 2.105,
+      "limit_mm": 3,
+      "pass": true
+    },
+    {
+      "ref": "C86",
+      "target_xy": [
+        164.0,
+        49.27
+      ],
+      "pin": "1",
+      "distance_mm": 5.109,
+      "limit_mm": 8,
+      "pass": true
+    },
+    {
+      "ref": "C88",
+      "target_xy": [
+        170.05,
+        38.5
+      ],
+      "pin": "1",
+      "distance_mm": 2.1,
+      "limit_mm": 3.5,
+      "pass": true
+    },
+    {
+      "ref": "C87",
+      "target_xy": [
+        164.0,
+        44.19
+      ],
+      "pin": "1",
+      "distance_mm": 3.74,
+      "limit_mm": 5,
+      "pass": true
+    },
+    {
+      "ref": "C99",
+      "target_xy": [
+        20.525,
+        143.905
+      ],
+      "pin": "1",
+      "distance_mm": 2.105,
+      "limit_mm": 3,
+      "pass": true
+    },
+    {
+      "ref": "C96",
+      "target_xy": [
+        36.0,
+        120.73
+      ],
+      "pin": "1",
+      "distance_mm": 5.109,
+      "limit_mm": 8,
+      "pass": true
+    },
+    {
+      "ref": "C98",
+      "target_xy": [
+        29.95,
+        131.5
+      ],
+      "pin": "1",
+      "distance_mm": 2.1,
+      "limit_mm": 3.5,
+      "pass": true
+    },
+    {
+      "ref": "C97",
+      "target_xy": [
+        36.0,
+        125.81
+      ],
+      "pin": "1",
+      "distance_mm": 3.74,
+      "limit_mm": 5,
+      "pass": true
+    },
+    {
+      "ref": "C109",
+      "target_xy": [
+        58.525,
+        143.905
+      ],
+      "pin": "1",
+      "distance_mm": 2.105,
+      "limit_mm": 3,
+      "pass": true
+    },
+    {
+      "ref": "C106",
+      "target_xy": [
+        74.0,
+        120.73
+      ],
+      "pin": "1",
+      "distance_mm": 5.109,
+      "limit_mm": 8,
+      "pass": true
+    },
+    {
+      "ref": "C108",
+      "target_xy": [
+        67.95,
+        131.5
+      ],
+      "pin": "1",
+      "distance_mm": 2.1,
+      "limit_mm": 3.5,
+      "pass": true
+    },
+    {
+      "ref": "C107",
+      "target_xy": [
+        74.0,
+        125.81
+      ],
+      "pin": "1",
+      "distance_mm": 3.74,
+      "limit_mm": 5,
+      "pass": true
+    },
+    {
+      "ref": "C119",
+      "target_xy": [
+        96.525,
+        143.905
+      ],
+      "pin": "1",
+      "distance_mm": 2.105,
+      "limit_mm": 3,
+      "pass": true
+    },
+    {
+      "ref": "C116",
+      "target_xy": [
+        112.0,
+        120.73
+      ],
+      "pin": "1",
+      "distance_mm": 5.109,
+      "limit_mm": 8,
+      "pass": true
+    },
+    {
+      "ref": "C118",
+      "target_xy": [
+        105.95,
+        131.5
+      ],
+      "pin": "1",
+      "distance_mm": 2.1,
+      "limit_mm": 3.5,
+      "pass": true
+    },
+    {
+      "ref": "C117",
+      "target_xy": [
+        112.0,
+        125.81
+      ],
+      "pin": "1",
+      "distance_mm": 3.74,
+      "limit_mm": 5,
+      "pass": true
+    },
+    {
+      "ref": "C129",
+      "target_xy": [
+        134.525,
+        143.905
+      ],
+      "pin": "1",
+      "distance_mm": 2.105,
+      "limit_mm": 3,
+      "pass": true
+    },
+    {
+      "ref": "C126",
+      "target_xy": [
+        150.0,
+        120.73
+      ],
+      "pin": "1",
+      "distance_mm": 5.109,
+      "limit_mm": 8,
+      "pass": true
+    },
+    {
+      "ref": "C128",
+      "target_xy": [
+        143.95,
+        131.5
+      ],
+      "pin": "1",
+      "distance_mm": 2.1,
+      "limit_mm": 3.5,
+      "pass": true
+    },
+    {
+      "ref": "C127",
+      "target_xy": [
+        150.0,
+        125.81
+      ],
+      "pin": "1",
+      "distance_mm": 3.74,
+      "limit_mm": 5,
+      "pass": true
+    },
+    {
+      "ref": "C139",
+      "target_xy": [
+        172.525,
+        143.905
+      ],
+      "pin": "1",
+      "distance_mm": 2.105,
+      "limit_mm": 3,
+      "pass": true
+    },
+    {
+      "ref": "C136",
+      "target_xy": [
+        188.0,
+        120.73
+      ],
+      "pin": "1",
+      "distance_mm": 5.109,
+      "limit_mm": 8,
+      "pass": true
+    },
+    {
+      "ref": "C138",
+      "target_xy": [
+        181.95,
+        131.5
+      ],
+      "pin": "1",
+      "distance_mm": 2.1,
+      "limit_mm": 3.5,
+      "pass": true
+    },
+    {
+      "ref": "C137",
+      "target_xy": [
+        188.0,
+        125.81
+      ],
+      "pin": "1",
+      "distance_mm": 3.74,
+      "limit_mm": 5,
+      "pass": true
+    },
+    {
+      "ref": "C21",
+      "target_xy": [
+        32.8375,
+        74.75
+      ],
+      "pin": "1",
+      "distance_mm": 2.412,
+      "limit_mm": 4,
+      "pass": true
+    },
+    {
+      "ref": "C22",
+      "target_xy": [
+        32.8375,
+        76.75
+      ],
+      "pin": "1",
+      "distance_mm": 2.412,
+      "limit_mm": 4,
+      "pass": true
+    },
+    {
+      "ref": "C23",
+      "target_xy": [
+        32.8375,
+        78.25
+      ],
+      "pin": "1",
+      "distance_mm": 2.195,
+      "limit_mm": 4,
+      "pass": true
+    },
+    {
+      "ref": "R14",
+      "target_xy": [
+        32.8375,
+        77.75
+      ],
+      "pin": "1",
+      "distance_mm": 2.667,
+      "limit_mm": 4,
+      "pass": true
+    },
+    {
+      "ref": "C24",
+      "target_xy": [
+        35.25,
+        80.1625
+      ],
+      "pin": "1",
+      "distance_mm": 3.438,
+      "limit_mm": 4,
+      "pass": true
+    },
+    {
+      "ref": "C25",
+      "target_xy": [
+        36.25,
+        80.1625
+      ],
+      "pin": "1",
+      "distance_mm": 2.705,
+      "limit_mm": 4,
+      "pass": true
+    },
+    {
+      "ref": "C19",
+      "target_xy": [
+        37.75,
+        80.1625
+      ],
+      "pin": "1",
+      "distance_mm": 2.412,
+      "limit_mm": 4,
+      "pass": true
+    },
+    {
+      "ref": "C26",
+      "target_xy": [
+        38.25,
+        80.1625
+      ],
+      "pin": "1",
+      "distance_mm": 2.078,
+      "limit_mm": 4,
+      "pass": true
+    },
+    {
+      "ref": "C20",
+      "target_xy": [
+        38.75,
+        80.1625
+      ],
+      "pin": "1",
+      "distance_mm": 2.705,
+      "limit_mm": 4,
+      "pass": true
+    },
+    {
+      "ref": "C2",
+      "target_xy": [
+        181.8625,
+        78.95
+      ],
+      "pin": "1",
+      "distance_mm": 1.78,
+      "limit_mm": 3,
+      "pass": true
+    },
+    {
+      "ref": "C1",
+      "target_xy": [
+        181.8625,
+        78.95
+      ],
+      "pin": "1",
+      "distance_mm": 2.363,
+      "limit_mm": 5,
+      "pass": true
+    },
+    {
+      "ref": "C3",
+      "target_xy": [
+        184.1375,
+        77.05
+      ],
+      "pin": "1",
+      "distance_mm": 2.052,
+      "limit_mm": 3,
+      "pass": true
+    },
+    {
+      "ref": "C6",
+      "target_xy": [
+        37.45,
+        99.6
+      ],
+      "pin": "1",
+      "distance_mm": 1.778,
+      "limit_mm": 3,
+      "pass": true
+    },
+    {
+      "ref": "C8",
+      "target_xy": [
+        30.55,
+        94.8
+      ],
+      "pin": "1",
+      "distance_mm": 2.284,
+      "limit_mm": 3,
+      "pass": true
+    },
+    {
+      "ref": "C9",
+      "target_xy": [
+        30.55,
+        95.2
+      ],
+      "pin": "1",
+      "distance_mm": 2.901,
+      "limit_mm": 4,
+      "pass": true
+    },
+    {
+      "ref": "C10",
+      "target_xy": [
+        33.4,
+        100.45
+      ],
+      "pin": "1",
+      "distance_mm": 1.778,
+      "limit_mm": 3,
+      "pass": true
+    },
+    {
+      "ref": "C11",
+      "target_xy": [
+        35.4,
+        93.55
+      ],
+      "pin": "1",
+      "distance_mm": 1.778,
+      "limit_mm": 3,
+      "pass": true
+    },
+    {
+      "ref": "C12",
+      "target_xy": [
+        31.8,
+        93.55
+      ],
+      "pin": "1",
+      "distance_mm": 1.786,
+      "limit_mm": 3,
+      "pass": true
+    },
+    {
+      "ref": "C13",
+      "target_xy": [
+        31.4,
+        93.55
+      ],
+      "pin": "1",
+      "distance_mm": 2.261,
+      "limit_mm": 4,
+      "pass": true
+    },
+    {
+      "ref": "C28",
+      "target_xy": [
+        41.1625,
+        77.25
+      ],
+      "pin": "1",
+      "distance_mm": 2.078,
+      "limit_mm": 3,
+      "pass": true
+    },
+    {
+      "ref": "C37",
+      "target_xy": [
+        73.475,
+        76.555
+      ],
+      "pin": "1",
+      "distance_mm": 2.065,
+      "limit_mm": 3,
+      "pass": true
+    },
+    {
+      "ref": "C38",
+      "target_xy": [
+        108.475,
+        76.555
+      ],
+      "pin": "1",
+      "distance_mm": 2.065,
+      "limit_mm": 3,
+      "pass": true
+    },
+    {
+      "ref": "C39",
+      "target_xy": [
+        143.475,
+        76.555
+      ],
+      "pin": "1",
+      "distance_mm": 2.065,
+      "limit_mm": 3,
+      "pass": true
+    },
+    {
+      "ref": "C42",
+      "target_xy": [
+        164.475,
+        94.095
+      ],
+      "pin": "1",
+      "distance_mm": 2.105,
+      "limit_mm": 3,
+      "pass": true
+    },
+    {
+      "ref": "R5",
+      "target_xy": [
+        32.2,
+        93.55
+      ],
+      "pin": "1",
+      "distance_mm": 4.262,
+      "limit_mm": 5,
+      "pass": true
+    },
+    {
+      "ref": "Y1",
+      "target_xy": [
+        32.2,
+        93.55
+      ],
+      "pin": "1",
+      "distance_mm": 5.452,
+      "limit_mm": 12,
+      "pass": true
+    },
+    {
+      "ref": "C17",
+      "target_xy": [
+        32.35,
+        88.1
+      ],
+      "pin": "1",
+      "distance_mm": 2.157,
+      "limit_mm": 3,
+      "pass": true
+    },
+    {
+      "ref": "C18",
+      "target_xy": [
+        30.65,
+        85.9
+      ],
+      "pin": "1",
+      "distance_mm": 2.13,
+      "limit_mm": 3,
+      "pass": true
+    },
+    {
+      "ref": "C31",
+      "target_xy": [
+        46.9,
+        80.85
+      ],
+      "pin": "1",
+      "distance_mm": 2.13,
+      "limit_mm": 3,
+      "pass": true
+    },
+    {
+      "ref": "C32",
+      "target_xy": [
+        49.1,
+        79.15
+      ],
+      "pin": "1",
+      "distance_mm": 2.13,
+      "limit_mm": 3,
+      "pass": true
+    },
+    {
+      "ref": "R10",
+      "target_xy": [
+        35.4,
+        100.45
+      ],
+      "pin": "1",
+      "distance_mm": 1.728,
+      "limit_mm": 4,
+      "pass": true
+    },
+    {
+      "ref": "R11",
+      "target_xy": [
+        35.8,
+        100.45
+      ],
+      "pin": "1",
+      "distance_mm": 2.422,
+      "limit_mm": 4,
+      "pass": true
+    },
+    {
+      "ref": "R6",
+      "target_xy": [
+        36.2,
+        93.55
+      ],
+      "pin": "1",
+      "distance_mm": 2.16,
+      "limit_mm": 4,
+      "pass": true
+    },
+    {
+      "ref": "R7",
+      "target_xy": [
+        35.8,
+        93.55
+      ],
+      "pin": "1",
+      "distance_mm": 3.405,
+      "limit_mm": 4,
+      "pass": true
+    },
+    {
+      "ref": "L1",
+      "target_xy": [
+        184.1375,
+        78.0
+      ],
+      "pin": "1",
+      "distance_mm": 3.295,
+      "limit_mm": 6,
+      "pass": true
+    },
+    {
+      "ref": "C4",
+      "target_xy": [
+        185.5,
+        84.0
+      ],
+      "pin": "1",
+      "distance_mm": 2.5,
+      "limit_mm": 4,
+      "pass": true
+    },
+    {
+      "ref": "C5",
+      "target_xy": [
+        185.5,
+        84.0
+      ],
+      "pin": "1",
+      "distance_mm": 4.0,
+      "limit_mm": 6,
+      "pass": true
+    },
+    {
+      "ref": "D1",
+      "target_xy": [
+        9.02,
+        100.25
+      ],
+      "pin": "2",
+      "distance_mm": 2.488,
+      "limit_mm": 6,
+      "pass": true
+    },
+    {
+      "ref": "C14",
+      "target_xy": [
+        30.55,
+        94.8
+      ],
+      "pin": "1",
+      "distance_mm": 4.956,
+      "limit_mm": 8,
+      "pass": true
+    },
+    {
+      "ref": "C15",
+      "target_xy": [
+        30.55,
+        95.2
+      ],
+      "pin": "1",
+      "distance_mm": 5.334,
+      "limit_mm": 8,
+      "pass": true
+    },
+    {
+      "ref": "C29",
+      "target_xy": [
+        36.25,
+        71.8375
+      ],
+      "pin": "1",
+      "distance_mm": 2.346,
+      "limit_mm": 5,
+      "pass": true
+    },
+    {
+      "ref": "R25",
+      "target_xy": [
+        73.475,
+        80.365
+      ],
+      "pin": "1",
+      "distance_mm": 2.204,
+      "limit_mm": 5,
+      "pass": true
+    },
+    {
+      "ref": "R26",
+      "target_xy": [
+        73.475,
+        81.635
+      ],
+      "pin": "1",
+      "distance_mm": 2.364,
+      "limit_mm": 5,
+      "pass": true
+    },
+    {
+      "label": "Comparator decoupling",
+      "a": "C49",
+      "b": "U14",
+      "distance_mm": 2.105,
+      "limit_mm": 3,
+      "passed": true
+    },
+    {
+      "label": "Comparator decoupling",
+      "a": "C59",
+      "b": "U21",
+      "distance_mm": 2.105,
+      "limit_mm": 3,
+      "passed": true
+    },
+    {
+      "label": "Comparator decoupling",
+      "a": "C69",
+      "b": "U28",
+      "distance_mm": 2.105,
+      "limit_mm": 3,
+      "passed": true
+    },
+    {
+      "label": "Comparator decoupling",
+      "a": "C79",
+      "b": "U35",
+      "distance_mm": 2.105,
+      "limit_mm": 3,
+      "passed": true
+    },
+    {
+      "label": "Comparator decoupling",
+      "a": "C89",
+      "b": "U42",
+      "distance_mm": 2.105,
+      "limit_mm": 3,
+      "passed": true
+    },
+    {
+      "label": "Comparator decoupling",
+      "a": "C99",
+      "b": "U49",
+      "distance_mm": 2.105,
+      "limit_mm": 3,
+      "passed": true
+    },
+    {
+      "label": "Comparator decoupling",
+      "a": "C109",
+      "b": "U56",
+      "distance_mm": 2.105,
+      "limit_mm": 3,
+      "passed": true
+    },
+    {
+      "label": "Comparator decoupling",
+      "a": "C119",
+      "b": "U63",
+      "distance_mm": 2.105,
+      "limit_mm": 3,
+      "passed": true
+    },
+    {
+      "label": "Comparator decoupling",
+      "a": "C129",
+      "b": "U70",
+      "distance_mm": 2.105,
+      "limit_mm": 3,
+      "passed": true
+    },
+    {
+      "label": "Comparator decoupling",
+      "a": "C139",
+      "b": "U77",
+      "distance_mm": 2.105,
+      "limit_mm": 3,
+      "passed": true
+    },
+    {
+      "label": "Timer RC cluster",
+      "a": "C43",
+      "b": "U7",
+      "distance_mm": 3.686,
+      "limit_mm": 8,
+      "passed": true
+    },
+    {
+      "label": "Timer RC cluster",
+      "a": "C44",
+      "b": "U7",
+      "distance_mm": 2.894,
+      "limit_mm": 8,
+      "passed": true
+    },
+    {
+      "label": "Timer RC cluster",
+      "a": "C45",
+      "b": "U7",
+      "distance_mm": 5.546,
+      "limit_mm": 8,
+      "passed": true
+    },
+    {
+      "label": "MCU bulk capacitor",
+      "a": "C14",
+      "b": "U2",
+      "distance_mm": 4.956,
+      "limit_mm": 10,
+      "passed": true
+    },
+    {
+      "label": "MCU bulk capacitor",
+      "a": "C15",
+      "b": "U2",
+      "distance_mm": 5.334,
+      "limit_mm": 10,
+      "passed": true
+    }
+  ],
+  "manufacturing_ready": false,
+  "user_approval": "pending",
+  "limits": [
+    "Straight-line pad proximity is not routed inductance/return-path verification.",
+    "1 mm is a low-voltage functional separation design rule, not a mains/safety-isolation rating.",
+    "Copper pours, thermal vias, signal integrity, assembly DFM and physical prototype tests remain pending."
+  ],
+  "pcb_sha256": "63e49b8a2e0964418c820402325e78f51b36a9ffd679143e92377cef00c03df6",
+  "kicad_drc": {
+    "version": "10.0.0",
+    "violations": 0,
+    "unconnected_items": 499,
+    "ignored_checks": [
+      "missing_courtyard",
+      "track_not_centered_on_via",
+      "tuning_profile_track_geometries",
+      "footprint_filters_mismatch",
+      "footprint_type_mismatch"
+    ],
+    "schematic_parity_checked": false,
+    "note": "Default KiCad placement/clearance checks only; unrouted items remain. Custom script checks schematic pin/net mapping separately."
+  }
+}

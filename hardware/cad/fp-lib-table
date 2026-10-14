@@ -1,0 +1,3 @@
+(fp_lib_table
+ (lib (name "RackATX")(type "KiCad")(uri "${KIPRJMOD}/RackATX.pretty")(options "")(descr "S.2 drawing-transcribed review footprints"))
+)

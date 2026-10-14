@@ -1,5 +1,7 @@
 # KiCad schematic review — B.1
 
+> 目前布局為 S.2（200×170 mm），待使用者確認，尚未佈線。以下 S.1 尺寸／費用／52 個佔位敘述為歷史紀錄；S.2 已補焊盤，詳見 [布局審閱](../LAYOUT-S2.md)。舊尺寸報價不適用於 S.2。
+
 Open `rack-atx-controller.kicad_pro` with KiCad 10, then its root schematic. The controller has a root index and 38 child sheets; the ten host channels have distinct references and isolated net names. Open `adapter.kicad_pro` separately for the identical passive adapter built ten times. Do not include adapter parts in the central-board placement file.
 
 Native symbols and global net labels are electrically connected. `Rack.kicad_sym` and `sym-lib-table` are included; the schematic caches its symbols too. These are functional pin blocks, not simulated device models. PDF copies are under `../release/`.
