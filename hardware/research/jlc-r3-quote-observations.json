@@ -1,9 +1,9 @@
 {
   "date": "2026-10-15",
   "source": "https://cart.jlcpcb.com/quote",
-  "status": "Observed interactive calculator after Gerber upload; no accepted DFM or PCBA quote",
-  "uploaded_pcb_sha256": "dc11db34e1fdc40dc28c1a720e67c3c4d41d7476043c9e2d3163f699f1b92802",
-  "current_candidate_change": "Only 18 user-label silkscreen texts added after upload; final ZIP must be re-uploaded before quote acceptance. Copper/drills unchanged.",
+  "status": "Authenticated normal Economic quote observed; supplier placement calibration and QFN DFM not accepted",
+  "uploaded_pcb_sha256": "3351fc01286a8f864a5495cbc13865fb3866de1b18c28b6d9712be0e0d33f4f3",
+  "current_candidate_change": "Final Gerber ZIP re-uploaded; CPL native origins/rotations require separate JLC calibration. PCB copper/placement unchanged.",
   "configuration": {
     "quantity": 5,
     "size_mm": [
@@ -49,12 +49,54 @@
     "filled_capped_additional": 52.35,
     "horizontal_plating_additional": 3.44
   },
-  "pcba_quote": null,
+  "pcba_quote": {
+    "observed_at": "2026-10-15T07:23:00+08:00",
+    "quantity": 5,
+    "assembly_type": "Economic, Top",
+    "finish": "ENIG 1uin",
+    "vias": "tented; QFN via-in-pad DFM pending",
+    "parts_skus": 46,
+    "parts_per_board": 300,
+    "pcb_usd": 28.25,
+    "parts_usd": 169.19,
+    "parts_and_pcb_usd": 197.44,
+    "assembly_related_usd": 78.37,
+    "pcba_with_parts_usd": 247.56,
+    "total_ex_shipping_tax_usd": 275.81,
+    "per_board_ex_shipping_tax_usd": 55.162,
+    "pcb_breakdown_usd": {
+      "engineering": 4,
+      "boards": 5.3,
+      "enig": 17.9,
+      "production_file_confirmation": 1.05
+    },
+    "assembly_breakdown_usd": {
+      "engineering": 8.24,
+      "stencil": 1.55,
+      "panel": 0,
+      "large_size": 0,
+      "extended_loading": 46.35,
+      "smt": 7.36,
+      "placement_confirmation": 0.45,
+      "manual_setup": 3.61,
+      "manual_assembly": 9.9,
+      "nitrogen_reflow": 0.91
+    },
+    "pcb_lead_time_display": "24 hours, $0 extra",
+    "assembly_lead_time_display": "2–3 days, $0 extra",
+    "factory_qualified": false,
+    "order_placed": false,
+    "evidence_screenshot": "jlc-r3-economic-5pcs-20261015.png"
+  },
   "freight_tax": null,
   "notes": [
-    "The UI auto-default US destination/freight is not this user delivery quote.",
-    "QFN process selection remains pending; lowest calculator option is not yet manufacturing-qualified.",
-    "Full PCBA flow pending user action-time agreement to JLC Assembly Service terms; no order placed."
+    "Current quote includes all 46 matched SKUs and through-hole manual assembly charges. No order/cart/production release.",
+    "Parts include UI purchase quantities and overage; remaining MOQ/price changes/DFM adjustments require recheck.",
+    "Freight, taxes, passive adapters, harnesses, enclosure, external PSU and firmware commissioning are excluded.",
+    "Native CPL is not supplier-calibrated: connector centres and library zero angles need correction; preview remains a release blocker.",
+    "QFN exposed-pad vias/stencil/finish still require factory DFM. Lower HASL option remains unqualified.",
+    "Historical bare-board options omit the optional $1.05 production-file confirmation included in the current quote."
   ],
-  "enig_evidence_screenshot": "jlc-r3-enig-5pcs-2026-10-15.jpg"
+  "enig_evidence_screenshot": "jlc-r3-enig-5pcs-2026-10-15.jpg",
+  "uploaded_zip_sha256": "5889b5ac30e8356325cf1c621aad55c91804ac3576ae8a3140f41c26c6e6b75b"
 }

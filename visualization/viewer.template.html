@@ -70,16 +70,22 @@
   <hr>
   <div class="rack-detail">主控板代貼零件 · 每片支援 10 台 · <a href="https://rack-atx-controller-ddasdkimo.raidavid.chatgpt.site/bom.html" target="_blank" rel="noopener noreferrer">開啟完整 BOM 與每項價格 →</a></div>
   <div class="table-responsive"><table class="table table-sm"><thead><tr><th>功能</th><th>選定料號／JLC 編號</th><th>數量</th></tr></thead><tbody data-electronics></tbody></table></div>
-  <div class="rack-detail" id="cost-comparison">B.2 新版零件與組裝預算 · USD</div>
-  <div class="text-small">每片支援 10 台。已上傳 Gerber 取得五片裸板試算；QFN 孔處理仍待工廠確認，下面列出不同工藝的成本。</div>
+  <div class="rack-detail" id="cost-comparison">5 片中央板 · JLC 網頁完整估價 · USD</div>
+  <div class="text-small">2026-10-15 已上傳最新版 Gerber、BOM 與 300 個座標；46 種零件全部配對。Economic 單面、ENIG、一般交期，不加急。</div>
+  <div class="table-responsive"><table class="table table-sm tabular-nums"><thead><tr><th>5 片 PCB</th><th>5 片零件</th><th>組裝及相關費</th><th>全部焊好合計</th></tr></thead><tbody data-live-quote></tbody></table></div>
+  <div class="text-small">板＋零件 US$197.44；全代工 US$275.81，平均每片 US$55.16。未含運稅、主機端轉接板、線束、電源、外殼與燒錄測試。零件費已含頁面列出的採購餘量；最終仍可能因工廠審核調整。</div>
+  <div class="text-small"><b>尚未送製造：</b>CPL 的 JLC 定位中心／旋轉角正在校正，QFN 孔處理與鋼網仍待工廠確認。取得估價不等於工藝通過。已開啟生產檔與元件位置人工確認，不自動放行。</div>
+  <details class="rack-detail"><summary>本次實際費用拆項</summary><div class="table-responsive"><table class="table table-sm"><tbody data-live-breakdown></tbody></table></div></details>
+  <details class="rack-detail"><summary>較少數量與其他板面工藝：先前估算，非本次完整報價</summary>
   <div class="table-responsive"><table class="table table-sm tabular-nums"><thead><tr><th scope="col">上板數量</th><th scope="col">裸板</th><th scope="col">零件</th><th scope="col">零件＋組裝小計<br><span class="text-small">尚須加裸板、運稅</span></th></tr></thead><tbody data-costs></tbody></table></div>
   <div class="rack-detail text-small" data-pcb-cost-note></div>
   <div class="table-responsive"><table class="table table-sm tabular-nums"><thead><tr><th>五片工藝試算</th><th>裸板</th><th>板＋零件</th><th>全部焊好估算<br><span class="text-small">未含運稅／追加</span></th></tr></thead><tbody data-board-options></tbody></table></div>
   <div class="text-small text-muted">2026-10-15 JLCPCB 網頁試算，正常交期。三種工藝均尚未通過本板 QFN DFM；焊好金額＝網頁裸板試算＋零件／組裝模型，不是已接受的 PCBA 報價。蓋油不等於填孔。</div>
   <div class="text-small">五片零件約 US$162.38，相較 B.1 的 US$224.27 約少 28%。零件價格不含耗損／MOQ；散料另向通路購買。組裝估算含開單、鋼網、上料、SMT、通孔焊接與 X-ray，未含板費及燒錄測試。</div>
   <details class="rack-detail"><summary>展開 B.2 費用明細（2／5 片成板）</summary><div class="table-responsive"><table class="table table-sm tabular-nums"><thead><tr><th scope="col">整批費用</th><th scope="col">2 片成板</th><th scope="col">5 片成板</th></tr></thead><tbody data-cost-breakdown></tbody></table></div></details>
-  <div class="rack-detail">含運到手總價：待正式報價</div>
-  <div class="text-small">到手總價＝全部焊好製作合計＋耗損／MOQ／工藝追加＋運費＋稅金。這些未確認金額尚未計入，不代表 $0；目前不是工廠正式報價。單面 Economic PCBA，實際代貼工序與費用以工廠審核為準。</div>
+  </details>
+  <div class="rack-detail">運費／稅金：尚未報價</div>
+  <div class="text-small">上述完整網頁估價尚未包含運稅與未定的工藝追加。未確認不代表 $0；正式生產前仍需完成貼裝方向與工廠審核。</div>
   <div class="rack-detail text-small">兩種方案都只比較中央主控板，未含 10 片分接板、線束、外殼、外接電源。已焊好的板子仍需燒錄、接線與測試，才是可用的機櫃控制設備。</div>
   <div class="rack-detail text-small" data-cost-note></div>
   <div class="rack-detail text-small">原理圖：<a href="https://github.com/ddasdkimo/rack-atx-controller/blob/main/hardware/release/controller-schematic.pdf" target="_blank" rel="noopener noreferrer">主控板 PDF</a> · <a href="https://github.com/ddasdkimo/rack-atx-controller/blob/main/hardware/release/adapter-schematic.pdf" target="_blank" rel="noopener noreferrer">免供電分接板 PDF</a> · <a href="https://github.com/ddasdkimo/rack-atx-controller/tree/main/hardware/cad/B2" target="_blank" rel="noopener noreferrer">KiCad 原始檔</a></div>
@@ -110,6 +116,10 @@
     qs('[data-parts]').innerHTML=(design.physical_parts||[]).map(p=>'<tr><td>'+p.role+'</td><td><a target="_blank" rel="noopener noreferrer" href="'+p.url+'">'+p.part+'</a></td><td>'+p.spec+'</td></tr>').join('');
     qs('[data-electronics]').innerHTML=design.electronics.map(p=>'<tr><td>'+p.role+'</td><td><a target="_blank" rel="noopener noreferrer" href="'+p.url+'">'+p.mpn+' · '+p.code+'</a></td><td>'+p.qty+'</td></tr>').join('');
     const money=n=>n===null?'待報價':'$'+n.toFixed(2),range=a=>a?a.map(money).join('–'):'待報價';
+    const actual=design.costs.observed_quote;
+    qs('[data-live-quote]').innerHTML='<tr>'+[actual.pcb_usd,actual.parts_usd,actual.assembly_related_usd,actual.total_ex_shipping_tax_usd].map(n=>'<td>'+money(n)+'</td>').join('')+'</tr>';
+    const liveFees=[['PCB（含 $1.05 生產檔確認）',actual.pcb_usd],['46 種零件（含頁面採購餘量）',actual.parts_usd],['組裝工程費',8.24],['鋼網',1.55],['延伸料上料',46.35],['SMT 焊接',7.36],['元件位置確認',0.45],['手焊開工',3.61],['手動組裝',9.90],['氮氣回焊',0.91],['全部焊好合計（未含運稅）',actual.total_ex_shipping_tax_usd]];
+    qs('[data-live-breakdown]').innerHTML=liveFees.map(([label,v])=>'<tr><th>'+label+'</th><td>'+money(v)+'</td></tr>').join('');
     qs('[data-costs]').innerHTML=design.costs.batches.map(b=>'<tr><th scope="row">'+b.boards+' 片</th><td>見下方五片工藝</td><td>'+money(b.parts_total_usd)+'</td><td>'+range(b.subtotal_range_usd)+'</td></tr>').join('');
     qs('[data-pcb-cost-note]').textContent='只先做一片的零件預算 '+money(design.costs.one_board_parts_usd)+'；代貼以兩片／五片比較。五片裸板試算 $9.30／$27.20／$82.99，最後採用哪種工藝仍待 DFM。';
     qs('[data-board-options]').innerHTML=design.costs.board_options.map(o=>'<tr><th scope="row">'+o.label+'</th><td>'+money(o.bare_pcb_usd)+'</td><td>'+money(o.five_board_materials_usd)+'</td><td>'+range(o.five_board_assembled_estimate_usd)+'</td></tr>').join('');

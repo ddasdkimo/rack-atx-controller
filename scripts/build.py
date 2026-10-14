@@ -28,7 +28,7 @@ if args.inline_output:
     args.inline_output.write_text(fragment)
 print(f'Built revision {design["revision"]}: inline viewer + docs/index.html + dist/index.html')
 
-bom_data={'total':next(b for b in design['costs']['batches'] if b['boards']==5)['parts_total_usd'],'rows':design['bom_review'],'costs':design['costs'],'revision':design['revision']}
+bom_data={'total':design['costs']['observed_quote']['parts_usd'],'rows':design['bom_review'],'costs':design['costs'],'revision':design['revision']}
 bom_page=(ROOT/'visualization/bom.template.html').read_text().replace('__BOM_JSON__',json.dumps(bom_data,ensure_ascii=False).replace('<','\\u003c'))
 for directory in ('docs','dist'):
  (ROOT/directory/'bom.html').write_text(bom_page)

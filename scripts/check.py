@@ -42,7 +42,11 @@ assert layout["outline_mm"]==d["controller_outline_mm"]
 assert len(layout["components"])==300 and layout["unqualified_envelope_count"]==0
 assert {x["ref"] for x in layout["components"]}=={x["ref"] for x in c["components"] if x["sheet"]!="adapter" and x["key"]!="flag"}
 assert len(d["bom_review"])==cost["unique_part_numbers"]
-assert round(sum(x["batch_total_usd"] for x in d["bom_review"]),2)==cost["batches"][1]["parts_total_usd"]
+quote=cost['observed_quote']
+assert round(sum(x["batch_total_usd"] for x in d["bom_review"]),2)==quote['parts_usd']
+assert round(sum(quote['assembly_breakdown_usd'].values()),2)==quote['assembly_related_usd']
+assert round(quote['pcb_usd']+quote['parts_usd']+quote['assembly_related_usd'],2)==quote['total_ex_shipping_tax_usd']
+assert all(x['purchased_for_five']>=5*x['quantity_per_board'] for x in d['bom_review'])
 assert (root / "docs/bom.html").read_text()==(root / "dist/bom.html").read_text()
 print("PASS: S.3 placement, BOM totals and public BOM page agree.")
 prototype=json.loads((root/'hardware/prototype-plan.json').read_text())

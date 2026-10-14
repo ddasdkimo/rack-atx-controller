@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-15",
+  "status": "partial visual preview; NOT FOR PRODUCTION",
+  "trial": "4",
+  "trial_cpl_sha256": "a3b8cf7fc6a0e52f8075bc01206815f0c2ff7f0bdf80c15d7fe7be2d5877d393",
+  "native_board_unchanged": true,
+  "native_board_sha256": "3351fc01286a8f864a5495cbc13865fb3866de1b18c28b6d9712be0e0d33f4f3",
+  "exported_references": 300,
+  "BOM_SKUs": 46,
+  "corrected_references": 47,
+  "selected_supplier_SKUs": 46,
+  "reproducible_exporter": "scripts/export-jlc-cpl-preview.py",
+  "calibration": "hardware/research/jlc-r3-cpl-calibration.json",
+  "visual_checks": [
+    "U1 pin1 upper-left, 6 leads on pads",
+    "U2 pin1 left-upper; restored native0 rather than generic IC offset",
+    "U3 pin1 left-upper; -90 per-MPN correction",
+    "U4/U5/U6 long axis and pin1 lower-left; -90 correction",
+    "U7 pin1 upper-left, -90 correction",
+    "D1 large pin1 upper-left, +180 correction",
+    "Q4 AO3401A pin1 lower-right; Q2 MMBT3904 pin1 upper-right; +180 correction",
+    "Y1 pin1 upper-left; Y2 lower-left; native angles",
+    "TLP top U10 pin1 lower-left, bottom U21 upper-right; native angles",
+    "Red D101 K left, D113/D114 K right; green D201/D202 K left; native angles",
+    "J01–J10 opposite rows mate outward; numbered-pad-bbox centre and +180 correction",
+    "J102/J103 pins centred on holes; corrected midpoint and -90 angle",
+    "J104 USB-C visible leads overlap pads after +1.4975mm X correction; native270 rotation"
+  ],
+  "limitations": [
+    "A supplier model preview is not a dimensional/factory acceptance test",
+    "C2841440 D2–D21 shows only checker placeholder; no qualified supplier rotation, native angles retained",
+    "J105 connector full pin/anchor correspondence and Economic manual assembly remain factory checks",
+    "Not every one of300parts has been individually certified in supplier preview",
+    "QFN via/stencil/finish DFM pending",
+    "Same CLI independent review in progress; previous native-parity review does not approve these corrections"
+  ],
+  "manufacturing_ready": false
+}

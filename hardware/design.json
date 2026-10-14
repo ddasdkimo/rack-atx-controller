@@ -420,7 +420,7 @@
       "Loading lower case: SMT Extended only; upper case: all Extended including through-hole",
       "No promotional coupons assumed",
       "X-ray counts 1..3 components per board; final classified parts are supplier decision",
-      "Gerber/CPL candidate exported and independently parsed; factory placement/DFM and full PCBA quote pending. Qualified bare-PCB price remains unselected.",
+      "Native Gerber/CPL review passes; JLC preview revealed connector-origin and library-angle differences. Supplier CPL calibration and QFN DFM remain release blockers. Full Economic quote is recorded separately from these planning estimates.",
       "Materials-only uses JLC component catalog prices as a comparison baseline, not an offer to ship loose parts; separate distributor prices, MOQ and freight may differ.",
       "Both batches buy five bare PCBs; allocate the complete PCB bill over the number of populated controllers.",
       "Surface finish and thermal via process require the actual factory quote; compare ENIG with factory-qualified HASL rather than assume a finish price."
@@ -484,6 +484,45 @@
       }
     ],
     "board_options_observed_date": "2026-10-15",
+    "observed_quote": {
+      "observed_at": "2026-10-15T07:23:00+08:00",
+      "quantity": 5,
+      "assembly_type": "Economic, Top",
+      "finish": "ENIG 1uin",
+      "vias": "tented; QFN via-in-pad DFM pending",
+      "parts_skus": 46,
+      "parts_per_board": 300,
+      "pcb_usd": 28.25,
+      "parts_usd": 169.19,
+      "parts_and_pcb_usd": 197.44,
+      "assembly_related_usd": 78.37,
+      "pcba_with_parts_usd": 247.56,
+      "total_ex_shipping_tax_usd": 275.81,
+      "per_board_ex_shipping_tax_usd": 55.162,
+      "pcb_breakdown_usd": {
+        "engineering": 4,
+        "boards": 5.3,
+        "enig": 17.9,
+        "production_file_confirmation": 1.05
+      },
+      "assembly_breakdown_usd": {
+        "engineering": 8.24,
+        "stencil": 1.55,
+        "panel": 0,
+        "large_size": 0,
+        "extended_loading": 46.35,
+        "smt": 7.36,
+        "placement_confirmation": 0.45,
+        "manual_setup": 3.61,
+        "manual_assembly": 9.9,
+        "nitrogen_reflow": 0.91
+      },
+      "pcb_lead_time_display": "24 hours, $0 extra",
+      "assembly_lead_time_display": "2–3 days, $0 extra",
+      "factory_qualified": false,
+      "order_placed": false,
+      "evidence_screenshot": "jlc-r3-economic-5pcs-20261015.png"
+    },
     "one_board_parts_usd": 35.91,
     "procurement_preference": "Normal lead time, one-sided Economic assembly, no expedite; choose cheaper available freight at checkout. No time-based discount assumed."
   },
@@ -5075,10 +5114,13 @@
       "value": "TLP3122A(TPL,E",
       "classification": "Extended",
       "quantity_per_board": 20,
-      "unit_usd": 0.7454,
-      "per_board_usd": 14.908,
-      "batch_total_usd": 74.53999999999999,
-      "source": "https://jlcpcb.com/partdetail/C4153843"
+      "unit_usd": 0.7994,
+      "per_board_usd": 15.988,
+      "batch_total_usd": 79.94,
+      "source": "https://jlcpcb.com/partdetail/C4153843",
+      "purchased_for_five": 100,
+      "extra_quantity": 0,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
     },
     {
       "key": "port",
@@ -5088,10 +5130,13 @@
       "value": "S10B-PHDSS(LF)(SN)",
       "classification": "Extended",
       "quantity_per_board": 10,
-      "unit_usd": 0.3678,
-      "per_board_usd": 3.678,
-      "batch_total_usd": 18.39,
-      "source": "https://jlcpcb.com/partdetail/C161672"
+      "unit_usd": 0.3679,
+      "per_board_usd": 3.679,
+      "batch_total_usd": 18.395,
+      "source": "https://jlcpcb.com/partdetail/C161672",
+      "purchased_for_five": 50,
+      "extra_quantity": 0,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
     },
     {
       "key": "mcu",
@@ -5101,10 +5146,13 @@
       "value": "ESP32-S3FN8",
       "classification": "Extended",
       "quantity_per_board": 1,
-      "unit_usd": 3.337,
-      "per_board_usd": 3.337,
-      "batch_total_usd": 16.685000000000002,
-      "source": "https://jlcpcb.com/partdetail/C2913196"
+      "unit_usd": 3.3377000000000003,
+      "per_board_usd": 3.3377000000000003,
+      "batch_total_usd": 16.6885,
+      "source": "https://jlcpcb.com/partdetail/C2913196",
+      "purchased_for_five": 5,
+      "extra_quantity": 0,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
     },
     {
       "key": "eth",
@@ -5114,10 +5162,13 @@
       "value": "W5500",
       "classification": "Extended",
       "quantity_per_board": 1,
-      "unit_usd": 2.8249,
-      "per_board_usd": 2.8249,
-      "batch_total_usd": 14.1245,
-      "source": "https://jlcpcb.com/partdetail/C32843"
+      "unit_usd": 2.7994,
+      "per_board_usd": 2.7994,
+      "batch_total_usd": 13.997,
+      "source": "https://jlcpcb.com/partdetail/C32843",
+      "purchased_for_five": 5,
+      "extra_quantity": 0,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
     },
     {
       "key": "rj45",
@@ -5127,10 +5178,13 @@
       "value": "HR911105A",
       "classification": "Extended",
       "quantity_per_board": 1,
-      "unit_usd": 1.7191,
-      "per_board_usd": 1.7191,
-      "batch_total_usd": 8.595500000000001,
-      "source": "https://jlcpcb.com/partdetail/C12074"
+      "unit_usd": 1.7195,
+      "per_board_usd": 1.7195,
+      "batch_total_usd": 8.5975,
+      "source": "https://jlcpcb.com/partdetail/C12074",
+      "purchased_for_five": 5,
+      "extra_quantity": 0,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
     },
     {
       "key": "buck",
@@ -5140,10 +5194,13 @@
       "value": "AP63203WU-7",
       "classification": "Extended",
       "quantity_per_board": 1,
-      "unit_usd": 1.1825,
-      "per_board_usd": 1.1825,
-      "batch_total_usd": 5.9125000000000005,
-      "source": "https://jlcpcb.com/partdetail/C780769"
+      "unit_usd": 1.1827999999999999,
+      "per_board_usd": 1.1827999999999999,
+      "batch_total_usd": 5.914,
+      "source": "https://jlcpcb.com/partdetail/C780769",
+      "purchased_for_five": 5,
+      "extra_quantity": 0,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
     },
     {
       "key": "esd",
@@ -5153,10 +5210,13 @@
       "value": "PESD5V0S2BT",
       "classification": "Extended",
       "quantity_per_board": 20,
-      "unit_usd": 0.0343,
-      "per_board_usd": 0.6859999999999999,
-      "batch_total_usd": 3.4299999999999997,
-      "source": "https://jlcpcb.com/partdetail/C2841440"
+      "unit_usd": 0.034300000000000004,
+      "per_board_usd": 0.7134400000000001,
+      "batch_total_usd": 3.5672,
+      "source": "https://jlcpcb.com/partdetail/C2841440",
+      "purchased_for_five": 104,
+      "extra_quantity": 4,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
     },
     {
       "key": "C22u",
@@ -5169,7 +5229,10 @@
       "unit_usd": 0.2372,
       "per_board_usd": 0.4744,
       "batch_total_usd": 2.372,
-      "source": "https://jlcpcb.com/partdetail/C45783"
+      "source": "https://jlcpcb.com/partdetail/C45783",
+      "purchased_for_five": 10,
+      "extra_quantity": 0,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
     },
     {
       "key": "usbesd",
@@ -5179,10 +5242,13 @@
       "value": "PRTR5V0U2X,215",
       "classification": "Extended",
       "quantity_per_board": 1,
-      "unit_usd": 0.4306,
-      "per_board_usd": 0.4306,
-      "batch_total_usd": 2.153,
-      "source": "https://jlcpcb.com/partdetail/C12333"
+      "unit_usd": 0.4079,
+      "per_board_usd": 0.4079,
+      "batch_total_usd": 2.0395,
+      "source": "https://jlcpcb.com/partdetail/C12333",
+      "purchased_for_five": 5,
+      "extra_quantity": 0,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
     },
     {
       "key": "C10u",
@@ -5193,9 +5259,12 @@
       "classification": "Basic",
       "quantity_per_board": 5,
       "unit_usd": 0.0689,
-      "per_board_usd": 0.34450000000000003,
-      "batch_total_usd": 1.7225000000000001,
-      "source": "https://jlcpcb.com/partdetail/C15850"
+      "per_board_usd": 0.3445,
+      "batch_total_usd": 1.7225,
+      "source": "https://jlcpcb.com/partdetail/C15850",
+      "purchased_for_five": 25,
+      "extra_quantity": 0,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
     },
     {
       "key": "hc595",
@@ -5205,10 +5274,13 @@
       "value": "74HC595D,118",
       "classification": "Basic",
       "quantity_per_board": 3,
-      "unit_usd": 0.1132,
-      "per_board_usd": 0.3396,
-      "batch_total_usd": 1.698,
-      "source": "https://jlcpcb.com/partdetail/C5947"
+      "unit_usd": 0.1133,
+      "per_board_usd": 0.3399,
+      "batch_total_usd": 1.6995,
+      "source": "https://jlcpcb.com/partdetail/C5947",
+      "purchased_for_five": 15,
+      "extra_quantity": 0,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
     },
     {
       "key": "timer",
@@ -5218,49 +5290,13 @@
       "value": "MC14541BDR2G",
       "classification": "Extended",
       "quantity_per_board": 1,
-      "unit_usd": 0.3017,
-      "per_board_usd": 0.3017,
-      "batch_total_usd": 1.5085000000000002,
-      "source": "https://jlcpcb.com/partdetail/C7292"
-    },
-    {
-      "key": "npn",
-      "description": "其他元件",
-      "mpn": "MMBT3904(RANGE:100-300)",
-      "code": "C20526",
-      "value": "MMBT3904",
-      "classification": "Basic",
-      "quantity_per_board": 23,
-      "unit_usd": 0.0116,
-      "per_board_usd": 0.2668,
-      "batch_total_usd": 1.3339999999999999,
-      "source": "https://jlcpcb.com/partdetail/C20526"
-    },
-    {
-      "key": "C100n",
-      "description": "電容",
-      "mpn": "CC0603KRX7R9BB104",
-      "code": "C14663",
-      "value": "100n",
-      "classification": "Basic",
-      "quantity_per_board": 17,
-      "unit_usd": 0.014,
-      "per_board_usd": 0.23800000000000002,
-      "batch_total_usd": 1.1900000000000002,
-      "source": "https://jlcpcb.com/partdetail/C14663"
-    },
-    {
-      "key": "pmos",
-      "description": "其他元件",
-      "mpn": "AO3401A",
-      "code": "C15127",
-      "value": "AO3401A",
-      "classification": "Basic",
-      "quantity_per_board": 2,
-      "unit_usd": 0.102,
-      "per_board_usd": 0.204,
-      "batch_total_usd": 1.02,
-      "source": "https://jlcpcb.com/partdetail/C15127"
+      "unit_usd": 0.30169999999999997,
+      "per_board_usd": 0.30169999999999997,
+      "batch_total_usd": 1.5085,
+      "source": "https://jlcpcb.com/partdetail/C7292",
+      "purchased_for_five": 5,
+      "extra_quantity": 0,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
     },
     {
       "key": "fuse",
@@ -5271,9 +5307,60 @@
       "classification": "Extended",
       "quantity_per_board": 1,
       "unit_usd": 0.1971,
-      "per_board_usd": 0.1971,
-      "batch_total_usd": 0.9855,
-      "source": "https://jlcpcb.com/partdetail/C78695"
+      "per_board_usd": 0.27593999999999996,
+      "batch_total_usd": 1.3797,
+      "source": "https://jlcpcb.com/partdetail/C78695",
+      "purchased_for_five": 7,
+      "extra_quantity": 2,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
+    },
+    {
+      "key": "npn",
+      "description": "其他元件",
+      "mpn": "MMBT3904(RANGE:100-300)",
+      "code": "C20526",
+      "value": "MMBT3904",
+      "classification": "Basic",
+      "quantity_per_board": 23,
+      "unit_usd": 0.011600000000000001,
+      "per_board_usd": 0.26680000000000004,
+      "batch_total_usd": 1.334,
+      "source": "https://jlcpcb.com/partdetail/C20526",
+      "purchased_for_five": 115,
+      "extra_quantity": 0,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
+    },
+    {
+      "key": "C100n",
+      "description": "電容",
+      "mpn": "CC0603KRX7R9BB104",
+      "code": "C14663",
+      "value": "100n",
+      "classification": "Basic",
+      "quantity_per_board": 17,
+      "unit_usd": 0.013999999999999999,
+      "per_board_usd": 0.238,
+      "batch_total_usd": 1.19,
+      "source": "https://jlcpcb.com/partdetail/C14663",
+      "purchased_for_five": 85,
+      "extra_quantity": 0,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
+    },
+    {
+      "key": "pmos",
+      "description": "其他元件",
+      "mpn": "AO3401A",
+      "code": "C15127",
+      "value": "AO3401A",
+      "classification": "Basic",
+      "quantity_per_board": 2,
+      "unit_usd": 0.10200000000000001,
+      "per_board_usd": 0.20400000000000001,
+      "batch_total_usd": 1.02,
+      "source": "https://jlcpcb.com/partdetail/C15127",
+      "purchased_for_five": 10,
+      "extra_quantity": 0,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
     },
     {
       "key": "usb",
@@ -5286,7 +5373,10 @@
       "unit_usd": 0.1863,
       "per_board_usd": 0.1863,
       "batch_total_usd": 0.9315,
-      "source": "https://jlcpcb.com/partdetail/C165948"
+      "source": "https://jlcpcb.com/partdetail/C165948",
+      "purchased_for_five": 5,
+      "extra_quantity": 0,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
     },
     {
       "key": "ledred",
@@ -5299,7 +5389,26 @@
       "unit_usd": 0.0076,
       "per_board_usd": 0.152,
       "batch_total_usd": 0.76,
-      "source": "https://jlcpcb.com/partdetail/C2286"
+      "source": "https://jlcpcb.com/partdetail/C2286",
+      "purchased_for_five": 100,
+      "extra_quantity": 0,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
+    },
+    {
+      "key": "xtal40",
+      "description": "其他元件",
+      "mpn": "XL2EL89COI-111YLC-40M",
+      "code": "C18214314",
+      "value": "40MHz CL12pF",
+      "classification": "Extended",
+      "quantity_per_board": 1,
+      "unit_usd": 0.0816,
+      "per_board_usd": 0.14688,
+      "batch_total_usd": 0.7344,
+      "source": "https://jlcpcb.com/partdetail/C18214314",
+      "purchased_for_five": 9,
+      "extra_quantity": 4,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
     },
     {
       "key": "R220",
@@ -5309,10 +5418,13 @@
       "value": "220 1%",
       "classification": "Basic",
       "quantity_per_board": 40,
-      "unit_usd": 0.0035,
-      "per_board_usd": 0.14,
-      "batch_total_usd": 0.7000000000000001,
-      "source": "https://jlcpcb.com/partdetail/C22962"
+      "unit_usd": 0.0034999999999999996,
+      "per_board_usd": 0.13999999999999999,
+      "batch_total_usd": 0.7,
+      "source": "https://jlcpcb.com/partdetail/C22962",
+      "purchased_for_five": 200,
+      "extra_quantity": 0,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
     },
     {
       "key": "barrel",
@@ -5325,7 +5437,10 @@
       "unit_usd": 0.1341,
       "per_board_usd": 0.1341,
       "batch_total_usd": 0.6705,
-      "source": "https://jlcpcb.com/partdetail/C8465"
+      "source": "https://jlcpcb.com/partdetail/C8465",
+      "purchased_for_five": 5,
+      "extra_quantity": 0,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
     },
     {
       "key": "R100k",
@@ -5338,7 +5453,10 @@
       "unit_usd": 0.0031,
       "per_board_usd": 0.0992,
       "batch_total_usd": 0.496,
-      "source": "https://jlcpcb.com/partdetail/C25803"
+      "source": "https://jlcpcb.com/partdetail/C25803",
+      "purchased_for_five": 160,
+      "extra_quantity": 0,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
     },
     {
       "key": "xtal25",
@@ -5351,20 +5469,26 @@
       "unit_usd": 0.0948,
       "per_board_usd": 0.0948,
       "batch_total_usd": 0.474,
-      "source": "https://jlcpcb.com/partdetail/C9006"
+      "source": "https://jlcpcb.com/partdetail/C9006",
+      "purchased_for_five": 5,
+      "extra_quantity": 0,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
     },
     {
-      "key": "xtal40",
+      "key": "ind",
       "description": "其他元件",
-      "mpn": "XL2EL89COI-111YLC-40M",
-      "code": "C18214314",
-      "value": "40MHz CL12pF",
+      "mpn": "FNR4018S4R7MT",
+      "code": "C167806",
+      "value": "4.7uH FNR4018S4R7MT",
       "classification": "Extended",
       "quantity_per_board": 1,
-      "unit_usd": 0.0816,
-      "per_board_usd": 0.0816,
-      "batch_total_usd": 0.40800000000000003,
-      "source": "https://jlcpcb.com/partdetail/C18214314"
+      "unit_usd": 0.0459,
+      "per_board_usd": 0.08262,
+      "batch_total_usd": 0.4131,
+      "source": "https://jlcpcb.com/partdetail/C167806",
+      "purchased_for_five": 9,
+      "extra_quantity": 4,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
     },
     {
       "key": "R1.5k",
@@ -5377,7 +5501,26 @@
       "unit_usd": 0.002,
       "per_board_usd": 0.08,
       "batch_total_usd": 0.4,
-      "source": "https://jlcpcb.com/partdetail/C22843"
+      "source": "https://jlcpcb.com/partdetail/C22843",
+      "purchased_for_five": 200,
+      "extra_quantity": 0,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
+    },
+    {
+      "key": "R10k",
+      "description": "電阻",
+      "mpn": "0603WAF1002T5E",
+      "code": "C25804",
+      "value": "10k 1%",
+      "classification": "Basic",
+      "quantity_per_board": 15,
+      "unit_usd": 0.0052,
+      "per_board_usd": 0.078,
+      "batch_total_usd": 0.39,
+      "source": "https://jlcpcb.com/partdetail/C25804",
+      "purchased_for_five": 75,
+      "extra_quantity": 0,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
     },
     {
       "key": "C1u",
@@ -5387,23 +5530,45 @@
       "value": "1u",
       "classification": "Basic",
       "quantity_per_board": 3,
-      "unit_usd": 0.0158,
-      "per_board_usd": 0.047400000000000005,
-      "batch_total_usd": 0.23700000000000002,
-      "source": "https://jlcpcb.com/partdetail/C15849"
+      "unit_usd": 0.0151,
+      "per_board_usd": 0.0453,
+      "batch_total_usd": 0.2265,
+      "source": "https://jlcpcb.com/partdetail/C15849",
+      "purchased_for_five": 15,
+      "extra_quantity": 0,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
     },
     {
-      "key": "ind",
+      "key": "bead",
       "description": "其他元件",
-      "mpn": "FNR4018S4R7MT",
-      "code": "C167806",
-      "value": "4.7uH FNR4018S4R7MT",
+      "mpn": "GZ1608D121TF",
+      "code": "C12391",
+      "value": "120R@100MHz GZ1608D121TF",
       "classification": "Extended",
       "quantity_per_board": 1,
-      "unit_usd": 0.0459,
-      "per_board_usd": 0.0459,
-      "batch_total_usd": 0.2295,
-      "source": "https://jlcpcb.com/partdetail/C167806"
+      "unit_usd": 0.0099,
+      "per_board_usd": 0.0396,
+      "batch_total_usd": 0.198,
+      "source": "https://jlcpcb.com/partdetail/C12391",
+      "purchased_for_five": 20,
+      "extra_quantity": 15,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
+    },
+    {
+      "key": "C6.8n_0402",
+      "description": "電容",
+      "mpn": "CL05B682KB5NNNC",
+      "code": "C318580",
+      "value": "6.8n",
+      "classification": "Extended",
+      "quantity_per_board": 2,
+      "unit_usd": 0.0094,
+      "per_board_usd": 0.0376,
+      "batch_total_usd": 0.188,
+      "source": "https://jlcpcb.com/partdetail/C318580",
+      "purchased_for_five": 20,
+      "extra_quantity": 10,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
     },
     {
       "key": "header2",
@@ -5416,7 +5581,10 @@
       "unit_usd": 0.0186,
       "per_board_usd": 0.0372,
       "batch_total_usd": 0.186,
-      "source": "https://jlcpcb.com/partdetail/C492401"
+      "source": "https://jlcpcb.com/partdetail/C492401",
+      "purchased_for_five": 10,
+      "extra_quantity": 0,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
     },
     {
       "key": "C20p",
@@ -5429,20 +5597,26 @@
       "unit_usd": 0.0092,
       "per_board_usd": 0.0368,
       "batch_total_usd": 0.184,
-      "source": "https://jlcpcb.com/partdetail/C1648"
+      "source": "https://jlcpcb.com/partdetail/C1648",
+      "purchased_for_five": 20,
+      "extra_quantity": 0,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
     },
     {
-      "key": "R10k",
-      "description": "電阻",
-      "mpn": "0603WAF1002T5E",
-      "code": "C25804",
-      "value": "10k 1%",
-      "classification": "Basic",
-      "quantity_per_board": 15,
-      "unit_usd": 0.0022,
-      "per_board_usd": 0.033,
-      "batch_total_usd": 0.165,
-      "source": "https://jlcpcb.com/partdetail/C25804"
+      "key": "C1n",
+      "description": "電容",
+      "mpn": "CL10C102JB8NNNC",
+      "code": "C163508",
+      "value": "1n",
+      "classification": "Extended",
+      "quantity_per_board": 1,
+      "unit_usd": 0.0083,
+      "per_board_usd": 0.0332,
+      "batch_total_usd": 0.166,
+      "source": "https://jlcpcb.com/partdetail/C163508",
+      "purchased_for_five": 20,
+      "extra_quantity": 15,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
     },
     {
       "key": "ledgreen",
@@ -5455,7 +5629,10 @@
       "unit_usd": 0.0164,
       "per_board_usd": 0.0328,
       "batch_total_usd": 0.164,
-      "source": "https://jlcpcb.com/partdetail/C2297"
+      "source": "https://jlcpcb.com/partdetail/C2297",
+      "purchased_for_five": 10,
+      "extra_quantity": 0,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
     },
     {
       "key": "C4.7u",
@@ -5465,23 +5642,13 @@
       "value": "4.7u",
       "classification": "Basic",
       "quantity_per_board": 1,
-      "unit_usd": 0.0296,
-      "per_board_usd": 0.0296,
-      "batch_total_usd": 0.14800000000000002,
-      "source": "https://jlcpcb.com/partdetail/C19666"
-    },
-    {
-      "key": "C6.8n_0402",
-      "description": "電容",
-      "mpn": "CL05B682KB5NNNC",
-      "code": "C318580",
-      "value": "6.8n",
-      "classification": "Extended",
-      "quantity_per_board": 2,
-      "unit_usd": 0.0094,
-      "per_board_usd": 0.0188,
-      "batch_total_usd": 0.094,
-      "source": "https://jlcpcb.com/partdetail/C318580"
+      "unit_usd": 0.029599999999999998,
+      "per_board_usd": 0.029599999999999998,
+      "batch_total_usd": 0.148,
+      "source": "https://jlcpcb.com/partdetail/C19666",
+      "purchased_for_five": 5,
+      "extra_quantity": 0,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
     },
     {
       "key": "C100n_0402",
@@ -5491,10 +5658,13 @@
       "value": "100n",
       "classification": "Basic",
       "quantity_per_board": 3,
-      "unit_usd": 0.0046,
-      "per_board_usd": 0.0138,
-      "batch_total_usd": 0.069,
-      "source": "https://jlcpcb.com/partdetail/C1525"
+      "unit_usd": 0.0043,
+      "per_board_usd": 0.0129,
+      "batch_total_usd": 0.0645,
+      "source": "https://jlcpcb.com/partdetail/C1525",
+      "purchased_for_five": 15,
+      "extra_quantity": 0,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
     },
     {
       "key": "C10n",
@@ -5504,23 +5674,13 @@
       "value": "10n",
       "classification": "Basic",
       "quantity_per_board": 1,
-      "unit_usd": 0.0101,
-      "per_board_usd": 0.0101,
-      "batch_total_usd": 0.050499999999999996,
-      "source": "https://jlcpcb.com/partdetail/C57112"
-    },
-    {
-      "key": "bead",
-      "description": "其他元件",
-      "mpn": "GZ1608D121TF",
-      "code": "C12391",
-      "value": "120R@100MHz GZ1608D121TF",
-      "classification": "Extended",
-      "quantity_per_board": 1,
-      "unit_usd": 0.0099,
-      "per_board_usd": 0.0099,
-      "batch_total_usd": 0.0495,
-      "source": "https://jlcpcb.com/partdetail/C12391"
+      "unit_usd": 0.010100000000000001,
+      "per_board_usd": 0.010100000000000001,
+      "batch_total_usd": 0.0505,
+      "source": "https://jlcpcb.com/partdetail/C57112",
+      "purchased_for_five": 5,
+      "extra_quantity": 0,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
     },
     {
       "key": "R330",
@@ -5530,10 +5690,13 @@
       "value": "330 1%",
       "classification": "Basic",
       "quantity_per_board": 4,
-      "unit_usd": 0.0022,
-      "per_board_usd": 0.0088,
-      "batch_total_usd": 0.044000000000000004,
-      "source": "https://jlcpcb.com/partdetail/C23138"
+      "unit_usd": 0.0021999999999999997,
+      "per_board_usd": 0.008799999999999999,
+      "batch_total_usd": 0.044,
+      "source": "https://jlcpcb.com/partdetail/C23138",
+      "purchased_for_five": 20,
+      "extra_quantity": 0,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
     },
     {
       "key": "C22n",
@@ -5543,23 +5706,13 @@
       "value": "22n",
       "classification": "Basic",
       "quantity_per_board": 1,
-      "unit_usd": 0.0084,
-      "per_board_usd": 0.0084,
-      "batch_total_usd": 0.041999999999999996,
-      "source": "https://jlcpcb.com/partdetail/C1729"
-    },
-    {
-      "key": "C1n",
-      "description": "電容",
-      "mpn": "CL10C102JB8NNNC",
-      "code": "C163508",
-      "value": "1n",
-      "classification": "Extended",
-      "quantity_per_board": 1,
-      "unit_usd": 0.0083,
-      "per_board_usd": 0.0083,
-      "batch_total_usd": 0.0415,
-      "source": "https://jlcpcb.com/partdetail/C163508"
+      "unit_usd": 0.008400000000000001,
+      "per_board_usd": 0.008400000000000001,
+      "batch_total_usd": 0.042,
+      "source": "https://jlcpcb.com/partdetail/C1729",
+      "purchased_for_five": 5,
+      "extra_quantity": 0,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
     },
     {
       "key": "R47",
@@ -5572,7 +5725,26 @@
       "unit_usd": 0.004,
       "per_board_usd": 0.008,
       "batch_total_usd": 0.04,
-      "source": "https://jlcpcb.com/partdetail/C23182"
+      "source": "https://jlcpcb.com/partdetail/C23182",
+      "purchased_for_five": 10,
+      "extra_quantity": 0,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
+    },
+    {
+      "key": "R12.4k",
+      "description": "電阻",
+      "mpn": "0603WAF1242T5E",
+      "code": "C22865",
+      "value": "12.4k 1%",
+      "classification": "Extended",
+      "quantity_per_board": 1,
+      "unit_usd": 0.0015,
+      "per_board_usd": 0.006,
+      "batch_total_usd": 0.03,
+      "source": "https://jlcpcb.com/partdetail/C22865",
+      "purchased_for_five": 20,
+      "extra_quantity": 15,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
     },
     {
       "key": "R33",
@@ -5585,7 +5757,10 @@
       "unit_usd": 0.0025,
       "per_board_usd": 0.005,
       "batch_total_usd": 0.025,
-      "source": "https://jlcpcb.com/partdetail/C23140"
+      "source": "https://jlcpcb.com/partdetail/C23140",
+      "purchased_for_five": 10,
+      "extra_quantity": 0,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
     },
     {
       "key": "R49.9_0402",
@@ -5598,7 +5773,10 @@
       "unit_usd": 0.0023,
       "per_board_usd": 0.0046,
       "batch_total_usd": 0.023,
-      "source": "https://jlcpcb.com/partdetail/C25120"
+      "source": "https://jlcpcb.com/partdetail/C25120",
+      "purchased_for_five": 10,
+      "extra_quantity": 0,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
     },
     {
       "key": "R0",
@@ -5608,10 +5786,13 @@
       "value": "0 1%",
       "classification": "Basic",
       "quantity_per_board": 2,
-      "unit_usd": 0.0022,
-      "per_board_usd": 0.0044,
-      "batch_total_usd": 0.022000000000000002,
-      "source": "https://jlcpcb.com/partdetail/C21189"
+      "unit_usd": 0.0021999999999999997,
+      "per_board_usd": 0.004399999999999999,
+      "batch_total_usd": 0.022,
+      "source": "https://jlcpcb.com/partdetail/C21189",
+      "purchased_for_five": 10,
+      "extra_quantity": 0,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
     },
     {
       "key": "R49.9",
@@ -5621,10 +5802,13 @@
       "value": "49.9 1%",
       "classification": "Basic",
       "quantity_per_board": 2,
-      "unit_usd": 0.0021,
-      "per_board_usd": 0.0042,
-      "batch_total_usd": 0.020999999999999998,
-      "source": "https://jlcpcb.com/partdetail/C23185"
+      "unit_usd": 0.0021000000000000003,
+      "per_board_usd": 0.004200000000000001,
+      "batch_total_usd": 0.021,
+      "source": "https://jlcpcb.com/partdetail/C23185",
+      "purchased_for_five": 10,
+      "extra_quantity": 0,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
     },
     {
       "key": "C10n_0402",
@@ -5637,7 +5821,10 @@
       "unit_usd": 0.0041,
       "per_board_usd": 0.0041,
       "batch_total_usd": 0.0205,
-      "source": "https://jlcpcb.com/partdetail/C15195"
+      "source": "https://jlcpcb.com/partdetail/C15195",
+      "purchased_for_five": 5,
+      "extra_quantity": 0,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
     },
     {
       "key": "R5.1k",
@@ -5650,20 +5837,10 @@
       "unit_usd": 0.0015,
       "per_board_usd": 0.003,
       "batch_total_usd": 0.015,
-      "source": "https://jlcpcb.com/partdetail/C23186"
-    },
-    {
-      "key": "R12.4k",
-      "description": "電阻",
-      "mpn": "0603WAF1242T5E",
-      "code": "C22865",
-      "value": "12.4k 1%",
-      "classification": "Extended",
-      "quantity_per_board": 1,
-      "unit_usd": 0.0015,
-      "per_board_usd": 0.0015,
-      "batch_total_usd": 0.0075,
-      "source": "https://jlcpcb.com/partdetail/C22865"
+      "source": "https://jlcpcb.com/partdetail/C23186",
+      "purchased_for_five": 10,
+      "extra_quantity": 0,
+      "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
     }
   ],
   "next_prototype": {

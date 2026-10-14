@@ -37,6 +37,8 @@ report['assumptions'][-1]='Gerber/CPL candidate exported and independently parse
 report['assumptions'].extend(['Materials-only uses JLC component catalog prices as a comparison baseline, not an offer to ship loose parts; separate distributor prices, MOQ and freight may differ.','Both batches buy five bare PCBs; allocate the complete PCB bill over the number of populated controllers.','Surface finish and thermal via process require the actual factory quote; compare ENIG with factory-qualified HASL rather than assume a finish price.'])
 report['board_options']=json.loads((R/'hardware/research/jlc-r3-quote-observations.json').read_text())['options']
 report['board_options_observed_date']='2026-10-15'
+report['observed_quote']=json.loads((R/'hardware/research/jlc-r3-quote-observations.json').read_text())['pcba_quote']
+report['assumptions'][-4]='Native Gerber/CPL review passes; JLC preview revealed connector-origin and library-angle differences. Supplier CPL calibration and QFN DFM remain release blockers. Full Economic quote is recorded separately from these planning estimates.'
 for option in report['board_options']:
  option['quantity']=5
  option['five_board_materials_usd']=round(rows[1]['parts_total_usd']+option['bare_pcb_usd'],2)
@@ -56,6 +58,14 @@ for k,n in counts.items():
  p=parts[k];d=p['catalog'];unit=price(p,n*5)
  description={'ledred':'每台 POWER／RESET 驅動狀態燈','ledgreen':'3.3V 電源／輸出啟用燈','ssr':'按鍵隔離開關','iso':'各主機隔離電源','port':'主機線束接頭','mcu':'主控 MCU','eth':'Ethernet 控制器','rj45':'含磁性元件網路座','esd':'訊號 ESD 保護','ldo':'各主機隔離側穩壓','opto':'LED 狀態光耦合器','cmp':'LED 差動比較器','hc595':'按鍵輸出鎖存','buck':'主控電源降壓','barrel':'5 V 電源端子','timer':'按鍵最長動作計時器'}.get(k,'電阻' if k.startswith('R') else '電容' if k.startswith('C') else '其他元件')
  review.append(dict(key=k,description=description,mpn=d['mpn'],code=p['code'],value=p['value'],classification=d['classification'],quantity_per_board=n,unit_usd=unit,per_board_usd=n*unit,batch_total_usd=n*unit*5,source=d['source']))
+review.sort(key=lambda p:-p['batch_total_usd'])
+live=json.loads((R/'hardware/research/jlc-r3-bom-quote.json').read_text())
+live_by_code={p['code']:p for p in live['parts']}
+assert set(live_by_code)=={p['code'] for p in review}
+for p in review:
+ q=live_by_code[p['code']]
+ assert p['quantity_per_board']==q['installed_per_board']
+ p.update(purchased_for_five=q['purchased_for_five'],extra_quantity=q['extra_quantity'],unit_usd=q['total_usd']/q['purchased_for_five'],per_board_usd=q['total_usd']/5,batch_total_usd=q['total_usd'],price_basis='JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage')
 review.sort(key=lambda p:-p['batch_total_usd'])
 design_path=R/'hardware/design.json'
 design=json.loads(design_path.read_text());design['costs']=report;design['bom_review']=review

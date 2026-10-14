@@ -94,7 +94,7 @@
     "Loading lower case: SMT Extended only; upper case: all Extended including through-hole",
     "No promotional coupons assumed",
     "X-ray counts 1..3 components per board; final classified parts are supplier decision",
-    "Gerber/CPL candidate exported and independently parsed; factory placement/DFM and full PCBA quote pending. Qualified bare-PCB price remains unselected.",
+    "Native Gerber/CPL review passes; JLC preview revealed connector-origin and library-angle differences. Supplier CPL calibration and QFN DFM remain release blockers. Full Economic quote is recorded separately from these planning estimates.",
     "Materials-only uses JLC component catalog prices as a comparison baseline, not an offer to ship loose parts; separate distributor prices, MOQ and freight may differ.",
     "Both batches buy five bare PCBs; allocate the complete PCB bill over the number of populated controllers.",
     "Surface finish and thermal via process require the actual factory quote; compare ENIG with factory-qualified HASL rather than assume a finish price."
@@ -158,6 +158,45 @@
     }
   ],
   "board_options_observed_date": "2026-10-15",
+  "observed_quote": {
+    "observed_at": "2026-10-15T07:23:00+08:00",
+    "quantity": 5,
+    "assembly_type": "Economic, Top",
+    "finish": "ENIG 1uin",
+    "vias": "tented; QFN via-in-pad DFM pending",
+    "parts_skus": 46,
+    "parts_per_board": 300,
+    "pcb_usd": 28.25,
+    "parts_usd": 169.19,
+    "parts_and_pcb_usd": 197.44,
+    "assembly_related_usd": 78.37,
+    "pcba_with_parts_usd": 247.56,
+    "total_ex_shipping_tax_usd": 275.81,
+    "per_board_ex_shipping_tax_usd": 55.162,
+    "pcb_breakdown_usd": {
+      "engineering": 4,
+      "boards": 5.3,
+      "enig": 17.9,
+      "production_file_confirmation": 1.05
+    },
+    "assembly_breakdown_usd": {
+      "engineering": 8.24,
+      "stencil": 1.55,
+      "panel": 0,
+      "large_size": 0,
+      "extended_loading": 46.35,
+      "smt": 7.36,
+      "placement_confirmation": 0.45,
+      "manual_setup": 3.61,
+      "manual_assembly": 9.9,
+      "nitrogen_reflow": 0.91
+    },
+    "pcb_lead_time_display": "24 hours, $0 extra",
+    "assembly_lead_time_display": "2–3 days, $0 extra",
+    "factory_qualified": false,
+    "order_placed": false,
+    "evidence_screenshot": "jlc-r3-economic-5pcs-20261015.png"
+  },
   "one_board_parts_usd": 35.91,
   "procurement_preference": "Normal lead time, one-sided Economic assembly, no expedite; choose cheaper available freight at checkout. No time-based discount assumed."
 }

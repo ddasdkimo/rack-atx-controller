@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-15",
+  "pages": [
+    "index.html cost section",
+    "bom.html"
+  ],
+  "viewports": [
+    "default desktop",
+    "390x844"
+  ],
+  "observed_quote": {
+    "pcb": 28.25,
+    "parts": 169.19,
+    "assembly": 78.37,
+    "total": 275.81
+  },
+  "checks": [
+    "Desktop/mobile cost table readable",
+    "Desktop/mobile BOM summary readable",
+    "All46rows with purchase-overage quantities",
+    "No console errors observed",
+    "Build and scripts/check.py passed"
+  ],
+  "native_circuit_or_3d_geometry_changed": false,
+  "manufacturing_ready": false
+}

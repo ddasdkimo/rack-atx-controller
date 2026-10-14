@@ -1,0 +1,346 @@
+{
+  "status": "PREVIEW TRIAL 4 — NOT FOR PRODUCTION",
+  "date": "2026-10-15",
+  "manufacturing_ready": false,
+  "board_sha256": "3351fc01286a8f864a5495cbc13865fb3866de1b18c28b6d9712be0e0d33f4f3",
+  "native_cpl_sha256": "96895275459a239e20f3f6fd5eea72e89943231fbe581a3e2f0048159b3ef91d",
+  "origin_note": "J01–J10/J101/J102/J103/J104/J105 trial XY uses bbox centre of numbered pad centres (including numbered shield pads). Native CAD is unchanged. Other references retain native anchors. Supplier review remains required.",
+  "rotation_note": "Per-MPN visual calibration. U2 restored to native0; U1/U3/U4/U5/U6/U7 minus90; D1 plus180. Not a universal KiCad/JLC rule.",
+  "corrections": [
+    {
+      "ref": "D1",
+      "code": "C12333",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "J01",
+      "code": "C161672",
+      "dx_mm": -4.0,
+      "dy_mm": 1.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "J02",
+      "code": "C161672",
+      "dx_mm": -4.0,
+      "dy_mm": 1.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "J03",
+      "code": "C161672",
+      "dx_mm": -4.0,
+      "dy_mm": 1.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "J04",
+      "code": "C161672",
+      "dx_mm": -4.0,
+      "dy_mm": 1.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "J05",
+      "code": "C161672",
+      "dx_mm": -4.0,
+      "dy_mm": 1.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "J06",
+      "code": "C161672",
+      "dx_mm": 4.0,
+      "dy_mm": -1.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "J07",
+      "code": "C161672",
+      "dx_mm": 4.0,
+      "dy_mm": -1.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "J08",
+      "code": "C161672",
+      "dx_mm": 4.0,
+      "dy_mm": -1.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "J09",
+      "code": "C161672",
+      "dx_mm": 4.0,
+      "dy_mm": -1.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "J10",
+      "code": "C161672",
+      "dx_mm": 4.0,
+      "dy_mm": -1.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "J101",
+      "code": "C8465",
+      "dx_mm": 0.0,
+      "dy_mm": -2.54,
+      "rotation_delta_deg": 0.0
+    },
+    {
+      "ref": "J102",
+      "code": "C492401",
+      "dx_mm": 1.27,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 270.0
+    },
+    {
+      "ref": "J103",
+      "code": "C492401",
+      "dx_mm": 0.0,
+      "dy_mm": -1.27,
+      "rotation_delta_deg": 270.0
+    },
+    {
+      "ref": "J105",
+      "code": "C12074",
+      "dx_mm": -4.36,
+      "dy_mm": -4.44,
+      "rotation_delta_deg": 0.0
+    },
+    {
+      "ref": "Q1",
+      "code": "C15127",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "Q2",
+      "code": "C20526",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "Q3",
+      "code": "C20526",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "Q4",
+      "code": "C15127",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "Q5",
+      "code": "C20526",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "Q6",
+      "code": "C20526",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "Q7",
+      "code": "C20526",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "Q8",
+      "code": "C20526",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "Q9",
+      "code": "C20526",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "Q10",
+      "code": "C20526",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "Q11",
+      "code": "C20526",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "Q12",
+      "code": "C20526",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "Q13",
+      "code": "C20526",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "Q14",
+      "code": "C20526",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "Q15",
+      "code": "C20526",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "Q16",
+      "code": "C20526",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "Q17",
+      "code": "C20526",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "Q18",
+      "code": "C20526",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "Q19",
+      "code": "C20526",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "Q20",
+      "code": "C20526",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "Q21",
+      "code": "C20526",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "Q22",
+      "code": "C20526",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "Q23",
+      "code": "C20526",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "Q24",
+      "code": "C20526",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "Q200",
+      "code": "C20526",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "U1",
+      "code": "C780769",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 270.0
+    },
+    {
+      "ref": "U3",
+      "code": "C32843",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 270.0
+    },
+    {
+      "ref": "U4",
+      "code": "C5947",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 270.0
+    },
+    {
+      "ref": "U5",
+      "code": "C5947",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 270.0
+    },
+    {
+      "ref": "U6",
+      "code": "C5947",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 270.0
+    },
+    {
+      "ref": "U7",
+      "code": "C7292",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 270.0
+    },
+    {
+      "ref": "J104",
+      "code": "C165948",
+      "dx_mm": 1.4975,
+      "dy_mm": 0,
+      "rotation_delta_deg": 0
+    }
+  ],
+  "pending": [
+    "C2841440 D2–D21 has a checker-placeholder model in JLC preview: no per-MPN orientation evidence. Removed unverified SOT-23 +180 trial; retained native angles pending supplier confirmation. Pin3 must face the host-reference pad; pins1/2 face isolated switch lines.",
+    "Complete all supplier pad/pin1/polarity preview checks",
+    "Independent review of frozen corrected export",
+    "QFN factory DFM acceptance"
+  ]
+}
