@@ -55,5 +55,6 @@
     "The UI auto-default US destination/freight is not this user delivery quote.",
     "QFN process selection remains pending; lowest calculator option is not yet manufacturing-qualified.",
     "Full PCBA flow pending user action-time agreement to JLC Assembly Service terms; no order placed."
-  ]
+  ],
+  "enig_evidence_screenshot": "jlc-r3-enig-5pcs-2026-10-15.jpg"
 }

@@ -27,3 +27,7 @@ S.3 原始未佈線基準保留不動；目前的實際位置／封裝以原生 
 正式 Gerber／鑽孔、貼片座標與 BOM 一致性檢查、完整 CAM 獨立檢視、JLCPCB 一般 Economic 報價與 QFN 製程確認、固定送件包的最後獨立複查。上電、USB／Ethernet、計時、ESD／EMC、主機相容性與機構裝配均需實板驗證。
 
 主要依據：[Espressif ESP32-S3 PCB 指南](https://docs.espressif.com/projects/esp-hardware-design-guidelines/en/latest/esp32s3/pcb-layout-design.html)、[WIZnet 硬體指南](https://docs.wiznet.io/Design-Guide/hardware_design_guide)、[JLCPCB 能力](https://jlcpcb.com/capabilities/pcb-capabilities)、[JLCPCB 孔處理](https://jlcpcb.com/help/article/pcb-via-covering)。
+
+## 加工檔複查
+
+兩板 Gerber、鑽孔、BOM/CPL 已產生並通過獨立 CAM 與指定 CLI 固定包複查，詳見 `manufacturing/R3-candidate` 及 `validation/r3-manufacturing-peer-review.json`。剩餘製造條件為 JLC 料庫旋轉／極性預覽、QFN 孔與鋼網工藝、Economic 通孔資格和完整報價；這些尚未通過。PCB、Gerber 和 CPL 不得因報告為零而直接放行生產。
