@@ -10,3 +10,10 @@ node_modules/
 artifacts/local/
 dist/
 *.tar.gz
+
+# KiCad workstation state / locks / recovery
+*.kicad_prl
+*.lck
+_autosave-*
+*-backups/
+.history/

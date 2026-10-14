@@ -1,0 +1,46 @@
+{
+  "id": "C194898",
+  "mpn": "KAQY212S",
+  "manufacturer": "Cosmo Electronics",
+  "package": "SOP-4-2.54mm",
+  "classification": "Extended",
+  "assembly": "SMT Assembly",
+  "pcba_type": "Economic and Standard",
+  "stock": 0,
+  "loss": 0,
+  "prices": [
+    {
+      "min_qty": 1,
+      "max_qty": 9,
+      "usd": 0.7651
+    },
+    {
+      "min_qty": 10,
+      "max_qty": 29,
+      "usd": 0.7651
+    },
+    {
+      "min_qty": 30,
+      "max_qty": 99,
+      "usd": 0.6738
+    },
+    {
+      "min_qty": 100,
+      "max_qty": 499,
+      "usd": 0.5824
+    },
+    {
+      "min_qty": 500,
+      "max_qty": 999,
+      "usd": 0.4894
+    },
+    {
+      "min_qty": 1000,
+      "max_qty": -1,
+      "usd": 0.4617
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/C194898",
+  "checked_at": "2026-10-14T02:18:30.032318+00:00",
+  "status": "public JLC page observed; recheck at ordering"
+}

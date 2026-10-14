@@ -1,0 +1,46 @@
+{
+  "id": "C146273",
+  "mpn": "TLP222A-2(LF1,F)",
+  "manufacturer": "TOSHIBA",
+  "package": "SMD-8P",
+  "classification": "Extended",
+  "assembly": "SMT Assembly",
+  "pcba_type": "Economic and Standard",
+  "stock": 0,
+  "loss": 0,
+  "prices": [
+    {
+      "min_qty": 1,
+      "max_qty": 9,
+      "usd": 7.2676
+    },
+    {
+      "min_qty": 10,
+      "max_qty": 49,
+      "usd": 6.3883
+    },
+    {
+      "min_qty": 50,
+      "max_qty": 99,
+      "usd": 5.8516
+    },
+    {
+      "min_qty": 100,
+      "max_qty": 101,
+      "usd": 5.4014
+    },
+    {
+      "min_qty": 102,
+      "max_qty": 103,
+      "usd": 5.4014
+    },
+    {
+      "min_qty": 104,
+      "max_qty": -1,
+      "usd": 5.4014
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/C146273",
+  "checked_at": "2026-10-14T02:18:29.480084+00:00",
+  "status": "public JLC page observed; recheck at ordering"
+}

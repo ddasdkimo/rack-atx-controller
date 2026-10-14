@@ -24,3 +24,11 @@ The user requests considering JLCPCB PCB fabrication / PCBA and its available pa
 ## Current release scope
 
 Revision B.1 includes native KiCad schematics, catalog-backed BOM and analytical checks. No routed PCB, Gerbers, CPL, qualified footprints, SPICE run or physical prototype validation exists. Keep this boundary visible. Regenerate circuit/BOM via scripts/make-schematic.py, export both native KiCad netlists and ERC reports, run scripts/check-circuit.py and scripts/cost.py; update the cost summary in hardware/design.json and PDFs with the same circuit revision before rebuilding the viewer. Never publish raw KiCad netlists with absolute workstation paths.
+
+## S.1 placement and purchasing
+
+The user is not in a hurry. Prefer normal lead time, one-side Economic PCBA and economical available shipping; do not assume waiting creates an automatic discount. S.1 adds a spatial study, not a fabrication PCB. Preserve the 5-family/52-envelope limitation and distinguish bounding-box checks from DRC and isolation approval. Sync placement-study.json into design.json when regenerating. Keep the full BOM review page current with cost data; distinguish one controller from five.
+
+## Current architecture decision
+
+The user returned to one integrated controller for ten hosts (B.1 electrical / S.1 placement). P.0 external-ESP32 breakaway research is archived, not selected. Retain its cost evidence and mark prototype-plan.json and design.next_prototype consistently. S.1 has zero routed tracks and still needs qualified footprints, routing and DRC; do not claim two-layer routing success.

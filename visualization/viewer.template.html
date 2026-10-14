@@ -22,6 +22,8 @@
     @media(max-width:500px) { #rack-atx-3d .rack-space { height:420px; } #rack-atx-3d .rack-heading { padding-right:70px; } }
   </style>
   <div class="rack-heading"><h2>10 路機櫃控制板</h2><span class="text-small text-muted" data-revision></span></div>
+  <div class="rack-detail"><strong>目前：一片控制十台。</strong>S.1 是兩層 160×110 mm 配置草稿，尚未佈線（0 條走線），未通過 PCB DRC，不能下單製造。P.0 拆板研究已暫停。</div>
+  <div class="rack-detail text-small">S.1：160 × 110 mm、兩層候選，面積減少 45%。694 個零件佔位已納入；未完成走線、隔離間距與固定孔設計。淡色外框為尚未核定的封裝預留。</div>
   <div class="rack-detail">中央：1 塊主控板　／　每台電腦：1 片免供電接線分接板（可改 Y 型線束）</div>
   <div class="viz-controls" aria-label="3D 觀察位置">
     <button type="button" class="btn" data-view="overview" aria-pressed="true">整體配置</button>
@@ -34,7 +36,7 @@
     <div class="rack-labels"></div>
     <div class="rack-error text-destructive" role="alert">3D 資源無法載入；下方接線圖仍可檢視。</div>
   </div>
-  <div class="rack-caption text-small text-muted"><span>拖曳旋轉 · 滾輪／雙指縮放</span><span>機構示意 · 非 PCB 佈線／製造圖</span></div>
+  <div class="rack-caption text-small text-muted"><span>拖曳旋轉 · 滾輪／雙指縮放</span><span>S.1 零件佔位示意 · 非佈線／製造圖</span></div>
   <div class="rack-detail text-small" aria-live="polite" data-scene-detail>J01 → PC-01 · J02 → PC-02 · J03–J10 預留</div>
   <hr>
   <div class="viz-controls">
@@ -51,21 +53,22 @@
   <div class="table-responsive"><table class="table table-sm"><thead><tr><th>位置</th><th>型號</th><th>規格</th></tr></thead><tbody data-parts></tbody></table></div>
   <div class="text-small text-muted">線束需訂製；圖中色彩表示訊號功能，實際導體配色見上方 pin 表。3D 為簡化外形。</div>
   <hr>
-  <div class="rack-detail">主控板代貼零件 · 每片支援 10 台</div>
+  <div class="rack-detail">主控板代貼零件 · 每片支援 10 台 · <a href="https://rack-atx-controller-ddasdkimo.raidavid.chatgpt.site/bom.html" target="_blank" rel="noopener noreferrer">開啟完整 BOM 與每項價格 →</a></div>
   <div class="table-responsive"><table class="table table-sm"><thead><tr><th>功能</th><th>選定料號／JLC 編號</th><th>數量</th></tr></thead><tbody data-electronics></tbody></table></div>
-  <div class="rack-detail" id="cost-comparison">兩種買法比較 · 主控板 · USD</div>
-  <div class="text-small">每片主控板支援 10 台電腦；以下金額已含裸 PCB。大字為整批製作合計，下行為平均每片。</div>
-  <div class="table-responsive"><table class="table table-sm tabular-nums"><thead><tr><th scope="col">成板數量</th><th scope="col">① 板子＋零件<br><span class="text-small">自己組裝</span></th><th scope="col">② 工廠組裝完成板<br><span class="text-small">含 SMT＋通孔焊接</span></th></tr></thead><tbody data-costs></tbody></table></div>
+  <div class="rack-detail" id="cost-comparison">5 片主控板比較 · USD · 一般交期、不加急</div>
+  <div class="text-small">每片支援 10 台；各列皆為 5 片的整批價格。零件相同，直接比較尺寸與層數。裸板來自 JLC 網頁試算；焊好總價仍為費率估算。</div>
+  <div class="table-responsive"><table class="table table-sm tabular-nums"><thead><tr><th scope="col">方案</th><th scope="col">裸板 5 片</th><th scope="col">零件 5 份</th><th scope="col">全部焊好 5 片<br><span class="text-small">含板＋料＋組裝</span></th></tr></thead><tbody data-costs></tbody></table></div>
   <div class="rack-detail text-small" data-pcb-cost-note></div>
-  <div class="text-small">① 只計材料、不含自行焊接工時與工具；散料須另向通路採購，這不是 JLC 散件套裝售價。② 含材料、開單、鋼網、上料、焊接與 X-ray 試算費用，寄來時主控板零件已焊好；韌體燒錄及功能驗證另計。</div>
-  <details class="rack-detail"><summary>展開製作費用明細</summary><div class="table-responsive"><table class="table table-sm tabular-nums"><thead><tr><th scope="col">整批費用</th><th scope="col">2 片成板</th><th scope="col">5 片成板</th></tr></thead><tbody data-cost-breakdown></tbody></table></div></details>
+  <div class="text-small">自己焊接：裸板＋零件，兩層縮板共 US$238.27／5 片，不含工具與工時。散料須另向通路採購，這不是 JLC 散件套裝售價。全部焊好包含材料、開單、鋼網、上料、SMT＋通孔焊接與 X-ray 估算，韌體燒錄及功能驗證另計。</div>
+  <details class="rack-detail"><summary>展開兩層縮板費用明細（2／5 片成板）</summary><div class="table-responsive"><table class="table table-sm tabular-nums"><thead><tr><th scope="col">整批費用</th><th scope="col">2 片成板</th><th scope="col">5 片成板</th></tr></thead><tbody data-cost-breakdown></tbody></table></div></details>
   <div class="rack-detail">含運到手總價：待正式報價</div>
-  <div class="text-small">到手總價＝② 製作合計＋耗損／MOQ／工藝追加＋運費＋稅金。這些未確認金額尚未計入，不代表 $0；目前不是工廠正式報價。單面 Economic PCBA，實際代貼工序與費用以工廠審核為準。</div>
+  <div class="text-small">到手總價＝全部焊好製作合計＋耗損／MOQ／工藝追加＋運費＋稅金。這些未確認金額尚未計入，不代表 $0；目前不是工廠正式報價。單面 Economic PCBA，實際代貼工序與費用以工廠審核為準。</div>
   <div class="rack-detail text-small">兩種方案都只比較中央主控板，未含 10 片分接板、線束、外殼、外接電源。已焊好的板子仍需燒錄、接線與測試，才是可用的機櫃控制設備。</div>
   <div class="rack-detail text-small" data-cost-note></div>
   <div class="rack-detail text-small">原理圖：<a href="https://github.com/ddasdkimo/rack-atx-controller/blob/main/hardware/release/controller-schematic.pdf" target="_blank" rel="noopener noreferrer">主控板 PDF</a> · <a href="https://github.com/ddasdkimo/rack-atx-controller/blob/main/hardware/release/adapter-schematic.pdf" target="_blank" rel="noopener noreferrer">免供電分接板 PDF</a> · <a href="https://github.com/ddasdkimo/rack-atx-controller/tree/main/hardware/cad" target="_blank" rel="noopener noreferrer">KiCad 原始檔</a></div>
+  <div class="rack-detail text-small">縮板評估：<a href="https://github.com/ddasdkimo/rack-atx-controller/blob/main/hardware/COMPACT-STUDY.md" target="_blank" rel="noopener noreferrer">兩層可行性與限制</a> · <a href="https://github.com/ddasdkimo/rack-atx-controller/blob/main/hardware/cad/compact-S1-placement.kicad_pcb" target="_blank" rel="noopener noreferrer">KiCad 配置草稿</a> · <a href="https://github.com/ddasdkimo/rack-atx-controller/tree/main/hardware/research" target="_blank" rel="noopener noreferrer">JLC 實際試算截圖</a></div>
   <div class="rack-detail text-small">採購：<a href="https://github.com/ddasdkimo/rack-atx-controller/tree/main/hardware/bom" target="_blank" rel="noopener noreferrer">完整 BOM／批量成本表</a> · <a href="https://github.com/ddasdkimo/rack-atx-controller/blob/main/hardware/JLCPCB.md" target="_blank" rel="noopener noreferrer">收費與選料依據</a></div>
-  <div class="rack-detail text-small">B.1 原理圖審閱版 · ERC 與連線檢查完成 · 焊盤審核、PCB 佈線與實機驗證尚未完成</div>
+  <div class="rack-detail text-small">B.1 原理圖＋S.1 配置草稿 · 原理圖 ERC 與連線檢查完成 · 配置佔位檢查不等於 PCB DRC／佈線完成</div>
   <div class="rack-detail text-small"><a href="https://github.com/ddasdkimo/rack-atx-controller" target="_blank" rel="noopener noreferrer">GitHub 設計紀錄</a></div>
   <script type="application/json" data-design>__DESIGN_JSON__</script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.min.js"></script>
@@ -85,13 +88,13 @@
     normalize();
     const groupIndex=id=>design.functions.find(f=>f.id===id)?.series||1;
     const cssSeries=id=>'var(--viz-series-'+groupIndex(id)+')';
-    qs('[data-revision]').textContent='Rev '+design.revision+' · 原理圖審閱版';
+    qs('[data-revision]').textContent='Rev '+design.revision+' · S.1 縮板配置草稿';
     qs('[data-parts]').innerHTML=(design.physical_parts||[]).map(p=>'<tr><td>'+p.role+'</td><td><a target="_blank" rel="noopener noreferrer" href="'+p.url+'">'+p.part+'</a></td><td>'+p.spec+'</td></tr>').join('');
     qs('[data-electronics]').innerHTML=design.electronics.map(p=>'<tr><td>'+p.role+'</td><td><a target="_blank" rel="noopener noreferrer" href="'+p.url+'">'+p.mpn+' · '+p.code+'</a></td><td>'+p.qty+'</td></tr>').join('');
     const money=n=>'$'+n.toFixed(2),range=a=>a.map(money).join('–');
-    qs('[data-costs]').innerHTML=design.costs.batches.map(b=>'<tr><th scope="row">'+b.boards+' 片</th><td>'+money(b.materials_total_usd)+'<br><span class="text-small">'+money(b.materials_per_controller_usd)+'／片</span></td><td>'+range(b.assembled_total_range_usd)+'<br><span class="text-small">'+range(b.assembled_per_controller_range_usd)+'／片</span></td></tr>').join('');
+    qs('[data-costs]').innerHTML=design.costs.board_options.filter(b=>!b.label.includes('未採用')).map(b=>'<tr><th scope="row">'+b.label+'<br><span class="text-small">'+b.layers+' 層 · '+b.width_mm+' × '+b.height_mm+' mm</span></th><td>'+money(b.total_usd)+'</td><td>'+money(b.parts_total_usd)+'</td><td>'+range(b.assembled_total_range_usd)+'</td></tr>').join('');
     const pcbEstimate=design.costs.pcb_fabrication_estimate;
-    qs('[data-pcb-cost-note]').textContent='裸 PCB 線上估價：'+pcbEstimate.quantity+' 片共 '+money(pcbEstimate.total_usd)+'（'+pcbEstimate.layers+' 層、'+pcbEstimate.width_mm+' × '+pcbEstimate.height_mm+' mm、無鉛噴錫；'+pcbEstimate.checked_date+'）。兩方案皆買 5 片裸板；做 2 片成板時，另剩 3 片裸板，全部打板費已攤入這 2 片。未含定版後工藝追加。';
+    qs('[data-pcb-cost-note]').textContent='目前候選：5 片裸板 US$14.00，5 份零件 US$224.27，5 片全部焊好約 US$336.30–355.75（每片 US$67.26–71.15）。一般製板交期畫面為 2 天，PCBA 與運送時間另計。2026-10-14 查價；未含運稅、耗損、MOQ 與定版工藝追加。';
     const breakdown=[['裸 PCB（5 片）',b=>money(b.pcb_total_usd)],['上板零件',b=>money(b.parts_total_usd)],['① 材料合計',b=>money(b.materials_total_usd)],['開單／鋼網／確認／通孔開工',b=>money(b.setup_stencil_confirmation_manual_setup_usd)],['SMT＋通孔焊接工資',b=>money(b.assembly_labor_total_usd)],['延伸料上料',b=>range(b.feeder_usd_range)],['X-ray',b=>range(b.xray_usd_range)],['② 製作合計',b=>range(b.assembled_total_range_usd)],['運費／稅金／耗損／工藝追加',()=> '待報價']];
     qs('[data-cost-breakdown]').innerHTML=breakdown.map(([label,value])=>'<tr><th scope="row">'+label+'</th>'+design.costs.batches.map(b=>'<td>'+value(b)+'</td>').join('')+'</tr>').join('');
     qs('[data-cost-note]').textContent='庫存核對：'+design.costs.catalog_checked_date+' · '+design.costs.basic_skus+' 種 Basic · '+design.costs.extended_smt_skus+' 種 SMT 延伸料。10 片免供電分接板的接頭零件約 '+money(design.costs.ten_passive_adapters_parts_only_usd)+'，另加裸板及手焊。';
@@ -183,29 +186,30 @@
     function ic(x,y,z,w,d){box(x,y,z,w,.48,d,chip);for(let i=0;i<4;i++){box(x-w/2-.15,y-.08,z-d*.35+i*d*.23,.3,.12,.1,metal);box(x+w/2+.15,y-.08,z-d*.35+i*d*.23,.3,.12,.1,metal);}}
     function header(x,y,z,rows=5){box(x,y,z,1.3,.72,rows*.22+.25,body);for(let j=0;j<rows;j++)for(let k=0;k<2;k++)box(x+(k-.5)*.52,y+.5,z+(j-(rows-1)/2)*.22,.12,.46,.12,pin);box(x-.8,y+.1,z,.16,.45,.55,metal);}
     function jstPhd(x,y,z,dir=1){box(x,y,z,.9,.5,1.19,body);box(x+dir*.46,y,z,.03,.35,1.04,chip);for(let row=0;row<2;row++)for(let col=0;col<5;col++)box(x+dir*.49,y+(row-.5)*.2,z+(col-2)*.2,.08,.06,.06,pin);box(x-.1*dir,y+.28,z,.35,.1,.35,body);}
-    const cx=-27,cz=0,boardW=design.controller_outline_mm[0]/10,boardD=design.controller_outline_mm[1]/10;
-    box(cx,.25,cz,boardW,.18,boardD,pcb);box(cx,.17,cz,boardW,.08,boardD,boardEdge);
-    for(const x of [cx-boardW/2+.8,cx+boardW/2-.8])for(const z of [-boardD/2+.6,boardD/2-.6]){cyl(x,.39,z,.25,.1,metal);cyl(x,-.2,z,.2,1,body);}
-    box(-35.4,1.1,-4.8,2.1,1.5,1.6,metal);box(-36.5,1.1,-4.8,.08,.95,1.25,chip);ic(-33.2,.65,-4.8,.7,.7);
-    ic(-34.8,.65,-.8,.7,.7);box(-34,.56,.1,.32,.2,.25,metal);box(-36.5,.65,-.8,.73,.35,.9,metal);
-    for(let i=0;i<3;i++){ic(-31.8,.68,-1.8+i*1.5,.6,1);hardwareCounts.shiftRegisters++;}
-    box(-36,1,5.2,1.02,1.3,.92,body);for(let k=0;k<2;k++)cyl(-36,.95,5.2+(k-.5)*.508,.13,.13,metal);ic(-34.6,.65,5.2,.6,.7);ic(-32.7,.65,5.2,.6,.8);
-    tag('控制板 · 10 路',[cx,3,-10],['overview'],1);
-    tag('ESP32-S3FN8',[-35,3,-.1],['controller']);tag('LAN · W5500',[-35,3,-6],['controller']);tag('5V 輸入／穩壓',[-35,3,6.8],['controller']);tag('3 × 74HC595',[-31.8,3,-3],['controller']);tag('隔離電源 ×10',[-29,3,-8],['controller']);tag('TLP3122A ×20',[-26,3,-8],['controller']);tag('LM393／EL357',[-22,3,-8],['controller']);
-    const ports=[];
-    for(let i=0;i<10;i++){
-      const z=-6.75+i*1.5;
-      box(-29.2,.95,z,1.16,1.01,.6,chip);hardwareCounts.isolatedSupplies++;
-      box(-28.1,.55,z,.45,.2,.25,chip);
-      for(let q=0;q<2;q++){box(-26.5+q*1.2,.6,z,.95,.25,.7,body);hardwareCounts.photorelays++;}
-      ic(-23.8,.6,z,.6,.5);for(let q=0;q<2;q++)box(-22.4+q*.8,.6,z,.7,.2,.44,body);
-      for(let q=0;q<4;q++)box(-20.7+q*.45,.46,z,.16,.08,.08,chip);
-      jstPhd(-17.65,.65,z);hardwareCounts.hostPorts++;
-      ports.push([-17.1,.9,z]);
-      trace([[-20,.38,z],[-18.8,.38,z],[-18.2,.38,z+.15]]);
-      tag('J'+String(i+1).padStart(2,'0'),[-15.7,1.3,z],['controller']);
+    // Rotate native PCB axes 90 degrees: its connector edge faces the PCs.
+    const cx=-27,cz=0,boardW=design.controller_outline_mm[1]/10,boardD=design.controller_outline_mm[0]/10;
+    box(cx,.25,cz,boardW,.16,boardD,pcb);box(cx,.17,cz,boardW,.06,boardD,boardEdge);
+    const ports=[],peripherals={},placement=design.layout_study.components;
+    for(const c of placement){
+      const x=cx+boardW/2-(c.y+c.h/2)/10,z=-boardD/2+(c.x+c.w/2)/10;
+      const uncertain=c.footprint==='UNQUALIFIED_ENVELOPE';
+      const mat=uncertain?body:(['rj45','usb'].includes(c.key)?metal:(c.key.startsWith('C')?pin:chip));
+      if(c.key==='port'){
+        jstPhd(x,.68,z);hardwareCounts.hostPorts++;ports[Number(c.ref.slice(1))-1]=[cx+boardW/2+.2,.9,z];
+        tag(c.ref,[cx+boardW/2+1.2,1.3,z],['controller']);
+      }else box(x,.34+c.z/20,z,c.h/10,c.z/10,c.w/10,mat);
+      if(c.key==='iso')hardwareCounts.isolatedSupplies++;
+      if(c.key==='ssr')hardwareCounts.photorelays++;
+      if(c.key==='hc595')hardwareCounts.shiftRegisters++;
+      if(['rj45','barrel'].includes(c.key))peripherals[c.key]=[x-c.h/20,.34+c.z/20,z];
+      if(['mcu','rj45','barrel'].includes(c.key))tag(({mcu:'ESP32-S3',rj45:'LAN / W5500',barrel:'5V 輸入'})[c.key],[x-1,2.7,z],['controller']);
     }
+    tag('160 × 110 mm · 兩層候選',[cx,3,-10],['overview'],1);
+    tag('694 個佔位 · 尚未佈線',[cx,3,-9],['controller'],1);
     const controllerShell=box(cx,2.8,0,boardW+1,5.6,boardD+1,material('--foreground',{transparent:true,opacity:.06,depthWrite:false}));shells.push(controllerShell);
+    path([peripherals.rj45,[-36,1,-7],[-38,1,-10]],material('--border'),.2);
+    path([peripherals.barrel,[-36,1,7],[-38,1,10]],material('--muted-foreground'),.15);
+    tag('LAN',[-38,2,-11],['controller']);tag('獨立 5V 電源',[-38,2,11],['controller']);
     const controllerObjects=scene.children.filter(o=>!o.isLight),pcObjects=[];
     function makePC(idx,z0){
       const start=scene.children.length;
@@ -253,9 +257,6 @@
       pcObjects[idx]=scene.children.slice(start);
     }
     makePC(0,-21);makePC(1,21);
-    path([[-36.5,1.2,-4.8],[-39,1,-7],[-40,1,-11]],material('--border'),.2);
-    path([[-36,1,5.2],[-39,1,7],[-40,1,10]],material('--muted-foreground'),.15);
-    tag('LAN',[-40,2,-12],['controller']);tag('獨立 5V 電源',[-40,2,11],['controller']);
     let yaw=-.2,pitch=.91,zoom=1,focus=new T.Vector3(-3,0,0),bounds=[90,78],raf=0;
     function render(){
       raf=0;const w=space.clientWidth,h=space.clientHeight;if(!w||!h)return;

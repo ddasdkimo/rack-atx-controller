@@ -6,7 +6,7 @@ Native symbols and global net labels are electrically connected. `Rack.kicad_sym
 
 `../../scripts/make-schematic.py` generates the CAD, `../circuit.json` and both BOM formats. Edit that source when changing connections or values, regenerate and review the diff. Change `../design.json`, notes and the 3D template for the same revision. The generator currently uses the standard macOS KiCad 10 symbol library to read ESP32 pin definitions; other systems should adjust that library path.
 
-Five land-pattern families deliberately have no footprint assigned: TLP3122A, EL357N, B0505S-1WR3L, FNR4018 inductor and WJ500V input terminal. All other assigned footprints are candidates that still need dimensional/polarity review. Empty footprints are a layout release gate, not missing electrical connections. There is no `.kicad_pcb`, Gerber, DRC report or CPL in this release.
+Five land-pattern families deliberately have no footprint assigned: TLP3122A, EL357N, B0505S-1WR3L, FNR4018 inductor and WJ500V input terminal. All other assigned footprints are candidates that still need dimensional/polarity review. Empty footprints are a layout release gate, not missing electrical connections. S.1 now adds `compact-S1-placement.kicad_pcb`: a 160×110 mm, 2-layer spatial packing study. It has 694 placements, including 52 pad-free envelopes for those five families. All assigned footprints remain candidates. There are no routed tracks, ground planes, mounting-hole design, Gerbers, DRC sign-off or CPL. Do not fabricate this file. Reference/net mapping on existing candidate pads is only a visual aid; missing envelopes do not represent electrical connectivity. View F.Fab/F.Courtyard and User.Drawings; crossed envelopes are intentionally incomplete.
 
 Reproduce checks with KiCad 10 CLI (replace `kicad-cli` with its installed absolute path if necessary):
 
@@ -23,3 +23,5 @@ kicad-cli sch export pdf -o hardware/release/adapter-schematic.pdf hardware/cad/
 ```
 
 Execute from the repository root. Local raw netlists/reports are ignored because KiCad embeds absolute source paths. The public validation summary contains no local paths. ERC is run with normal rules, without suppressions; native netlist checks separately test intended pin mapping, connector NCs and isolation boundaries. Passing these checks does not establish motherboard compatibility or manufacturability.
+
+The public 3D uses the same placement JSON (rotated 90° for cable visibility), with bounding boxes rather than qualified component models. See [compact study](../COMPACT-STUDY.md). Regenerate with the bundled KiCad Python and `scripts/make-placement-study.py`, then sync the derived study into `hardware/design.json` before rebuilding. The packing algorithm checks bounding-box overlap and outline only, not routing feasibility.

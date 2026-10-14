@@ -37,9 +37,24 @@ report.update({'comparison_updated_date':'2026-10-14','pcb_fabrication_estimate'
 report['exclusions'][0]='Final PCB rails/panelization, finish/stackup changes and DFM-driven extra operations'
 report['assumptions'][-1]='Candidate footprints only; no Gerber/CPL or accepted PCBA quote. Bare PCB price is a dimensional calculator estimate.'
 report['assumptions'].extend(['Materials-only uses JLC component catalog prices as a comparison baseline, not an offer to ship loose parts; separate distributor prices, MOQ and freight may differ.','Both batches buy five bare PCBs; allocate the complete PCB bill over the number of populated controllers.','LeadFree HASL is a cost-model assumption, pending final QFN and PCB process review.'])
+comparison=json.loads((R/'hardware/research/pcb-comparison-2026-10-14.json').read_text())
+batch5=next(b for b in rows if b['boards']==5)
+report['board_options']=[dict(v,parts_total_usd=batch5['parts_total_usd'],materials_total_usd=round(v['total_usd']+batch5['parts_total_usd'],2),assembled_total_range_usd=[round(v['total_usd']+a,2) for a in batch5['subtotal_range_usd']]) for v in comparison['variants']]
+report['procurement_preference']='Normal lead time, one-sided Economic assembly, no expedite; choose cheaper available freight at checkout. No time-based discount assumed.'
 (R/'hardware/bom/cost-model.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
 with (R/'hardware/bom/batch-parts-cost.csv').open('w',newline='') as f:
  w=csv.writer(f);w.writerow(['MPN','LCSC','Class','Quantity per controller','Unit USD at 2 boards','Unit USD at 5 boards','Source'])
  for k,n in counts.items():
   p=parts[k];d=p['catalog'];w.writerow([d['mpn'],p['code'],d['classification'],n,price(p,n*2),price(p,n*5),d['source']])
 print(json.dumps(report,ensure_ascii=False,indent=2))
+
+# Human review view, derived from the same exact batch pricing as the model.
+review=[]
+for k,n in counts.items():
+ p=parts[k];d=p['catalog'];unit=price(p,n*5)
+ description={'ssr':'按鍵隔離開關','iso':'各主機隔離電源','port':'主機線束接頭','mcu':'主控 MCU','eth':'Ethernet 控制器','rj45':'含磁性元件網路座','esd':'訊號 ESD 保護','ldo':'各主機隔離側穩壓','opto':'LED 狀態光耦合器','cmp':'LED 差動比較器','hc595':'按鍵輸出鎖存','buck':'主控電源降壓','barrel':'5 V 電源端子','timer':'按鍵最長動作計時器'}.get(k,'電阻' if k.startswith('R') else '電容' if k.startswith('C') else '其他元件')
+ review.append(dict(key=k,description=description,mpn=d['mpn'],code=p['code'],value=p['value'],classification=d['classification'],quantity_per_board=n,unit_usd=unit,per_board_usd=n*unit,batch_total_usd=n*unit*5,source=d['source']))
+review.sort(key=lambda p:-p['batch_total_usd'])
+design_path=R/'hardware/design.json'
+design=json.loads(design_path.read_text());design['costs']=report;design['bom_review']=review
+design_path.write_text(json.dumps(design,ensure_ascii=False,indent=2)+'\n')

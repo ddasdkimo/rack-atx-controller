@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-14",
+  "source": "https://cart.jlcpcb.com/hk/quote",
+  "scope": "Dimensional single-design calculator only, not P.0 mixed panel quote",
+  "currency": "USD",
+  "width_mm": 80,
+  "height_mm": 80,
+  "layers": 2,
+  "thickness_mm": 1.6,
+  "finish": "LeadFree HASL",
+  "via_cover": "Tented",
+  "lead_time": "2 days normal",
+  "variants": [
+    {
+      "quantity": 5,
+      "offer_usd": 4,
+      "finish_usd": 1.2,
+      "total_usd": 5.2
+    },
+    {
+      "quantity": 10,
+      "offer_usd": 5,
+      "finish_usd": 1.4,
+      "total_usd": 6.4
+    }
+  ],
+  "excludes": [
+    "Mixed designs, mouse-bite panelization and rails",
+    "PCBA and parts",
+    "Freight and taxes"
+  ],
+  "jlc_one_extra_discount_used": false
+}
