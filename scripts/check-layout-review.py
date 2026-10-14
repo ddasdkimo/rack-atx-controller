@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Audit the unrouted S.2 placement; this is not a manufacturing release check."""
-import json,math,html
+import json,math,html,hashlib
 from pathlib import Path
 import wx
 app=wx.App(False)
@@ -48,10 +48,13 @@ for cap in ['C43','C44','C45']:pair(cap,1,'U7',6,8,'Timer RC cluster')
 for cap,pin in [('C14',2),('C15',3)]:pair(cap,1,'U2',pin,10,'MCU bulk capacitor')
 assert all(c['pass'] for c in L['placement_constraints'])
 report={'revision':'S.2','electrical_components':694,'mounting_holes':4,'pad_free_placeholders':0,'net_pin_mapping':'all connected schematic pins present with matching PCB nets','tracks':0,'inter_domain_pad_bbox_minimum_mm':round(minimum[0],4),'inter_domain_violations':0,'critical_proximity_checks':L['placement_constraints']+proximity,'manufacturing_ready':False,'user_approval':'pending','limits':['Straight-line pad proximity is not routed inductance/return-path verification.','1 mm is a low-voltage functional separation design rule, not a mains/safety-isolation rating.','Copper pours, thermal vias, signal integrity, assembly DFM and physical prototype tests remain pending.']}
+report['pcb_sha256']=hashlib.sha256((R/'hardware/cad/layout-S2-review.kicad_pcb').read_bytes()).hexdigest()
+previous=json.loads((R/'hardware/layout-review-checks.json').read_text()) if (R/'hardware/layout-review-checks.json').exists() else {}
+if previous.get('pcb_sha256')==report['pcb_sha256'] and 'kicad_drc' in previous:report['kicad_drc']=previous['kicad_drc']
 (R/'hardware/layout-review-checks.json').write_text(json.dumps(report,indent=2)+'\n')
 # Exact board-coordinate review drawing; pad centres/extents from the actual KiCad file.
 colors={'CTRL':'#73bba1',**{f'H{n:02}':('#eeb868' if n%2 else '#8fbce5') for n in range(1,11)}}
-out=['<svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -8 204 186"><style>text{font-family:monospace} .ref{font-size:1.25px;fill:#e7f5ee} .group{font-size:2.7px;fill:#dceee6}</style><rect width="200" height="170" rx="1" fill="#153c32" stroke="#5b9b7e" stroke-width=".3"/>']
+out=['<svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -8 204 186"><style>text{font-family:monospace} .ref{font-size:1.25px;fill:#e7f5ee} .group{font-size:2.7px;fill:#dceee6}</style><rect x="-2" y="-8" width="204" height="186" fill="#10241e"/><rect width="200" height="170" rx="1" fill="#153c32" stroke="#5b9b7e" stroke-width=".3"/>']
 for i in range(10):
  x=5+(i%5)*38;y=0 if i<5 else 122.5
  out.append(f'<rect x="{x}" y="{y}" width="38" height="47.5" fill="{colors[f"H{i+1:02}"]}" opacity=".08"/><text class="group" x="{x+1}" y="{7 if i<5 else 164}">H{i+1:02}</text>')
