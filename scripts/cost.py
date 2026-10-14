@@ -4,7 +4,7 @@ import json,csv,collections,math
 from pathlib import Path
 R=Path(__file__).resolve().parents[1];x=json.loads((R/'hardware/circuit.json').read_text())
 parts=x['parts'];counts=collections.Counter(c['key'] for c in x['components'] if c['sheet']!='adapter' and c['key']!='flag')
-pcb={'revision':'S.3','quantity':5,'width_mm':100,'height_mm':110,'layers':2,'total_usd':None,'status':'Not yet quoted for this outline; historical S.1 prices do not apply'}
+pcb={'revision':'S.3','quantity':5,'width_mm':100,'height_mm':110,'layers':2,'total_usd':None,'status':'Gerber calculator options observed; qualified QFN process and accepted full quote pending'}
 def price(p,n):
  bands=p['catalog']['prices'];return max((b for b in bands if b['min_qty']<=n),key=lambda b:b['min_qty'])['usd']
 for k in counts:
@@ -33,9 +33,14 @@ ad10=sum(n*10*price(parts[k],n*10) for k,n in ad_counts.items())
 report={'revision':x['revision'],'currency':'USD','catalog_checked_date':'2026-10-13–15','fee_source':'https://jlcpcb.com/help/article/pcb-assembly-price','fee_source_updated':'2026-09-09','quote':False,'components_per_controller':sum(counts.values()),'unique_part_numbers':len(counts),'basic_skus':sum(parts[k]['catalog']['classification']=='Basic' for k in counts),'extended_smt_skus':len(ext_smt),'extended_all_skus':len(ext_all),'smt_joints_estimate_per_board':smt_joints,'manual_joints_estimate_per_board':manual_joints,'batches':rows,'ten_passive_adapters_parts_only_usd':round(ad10,2),'exclusions':['PCB fabrication, rails/panelization, DFM-driven extra operations','component attrition/MOQ and price changes','extra pre-reflow, fixtures, freight, taxes','ten adapter bare PCBs and hand labor','custom harnesses, crimp contacts/housings, motherboard patch leads','external 5V supply and enclosure'],'assumptions':['One-side Economic PCBA; final board/stock acceptance pending','Loading lower case: SMT Extended only; upper case: all Extended including through-hole','No promotional coupons assumed','X-ray counts 1..3 components per board; final classified parts are supplier decision','Selected generic footprints are candidates; no CPL or PCB quote exists']}
 report.update({'comparison_updated_date':'2026-10-15','pcb_fabrication_estimate':pcb,'comparison_scope':'Central controller board only; one populated board supports ten hosts. Materials-only means PCB plus components without assembly. Assembled means all controller SMT and through-hole parts soldered by the factory, not firmware-loaded or functionally commissioned.','delivery':{'destination':None,'freight_usd':None,'tax_usd':None,'status':'Pending final quote and destination; unknown is not zero.'}})
 report['exclusions'][0]='Final PCB rails/panelization, finish/stackup changes and DFM-driven extra operations'
-report['assumptions'][-1]='Candidate footprints only; no Gerber/CPL or accepted PCBA quote. New S.3 bare PCB price is pending; no fabrication cost has been included.'
+report['assumptions'][-1]='Gerber/CPL candidate exported and independently parsed; factory placement/DFM and full PCBA quote pending. Qualified bare-PCB price remains unselected.'
 report['assumptions'].extend(['Materials-only uses JLC component catalog prices as a comparison baseline, not an offer to ship loose parts; separate distributor prices, MOQ and freight may differ.','Both batches buy five bare PCBs; allocate the complete PCB bill over the number of populated controllers.','Surface finish and thermal via process require the actual factory quote; compare ENIG with factory-qualified HASL rather than assume a finish price.'])
-report['board_options']=[]
+report['board_options']=json.loads((R/'hardware/research/jlc-r3-quote-observations.json').read_text())['options']
+report['board_options_observed_date']='2026-10-15'
+for option in report['board_options']:
+ option['quantity']=5
+ option['five_board_materials_usd']=round(rows[1]['parts_total_usd']+option['bare_pcb_usd'],2)
+ option['five_board_assembled_estimate_usd']=[round(v+option['bare_pcb_usd'],2) for v in rows[1]['subtotal_range_usd']]
 report['one_board_parts_usd']=round(sum(counts[k]*price(parts[k],counts[k]) for k in counts),2)
 report['procurement_preference']='Normal lead time, one-sided Economic assembly, no expedite; choose cheaper available freight at checkout. No time-based discount assumed.'
 (R/'hardware/bom/cost-model.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')

@@ -71,9 +71,11 @@
   <div class="rack-detail">主控板代貼零件 · 每片支援 10 台 · <a href="https://rack-atx-controller-ddasdkimo.raidavid.chatgpt.site/bom.html" target="_blank" rel="noopener noreferrer">開啟完整 BOM 與每項價格 →</a></div>
   <div class="table-responsive"><table class="table table-sm"><thead><tr><th>功能</th><th>選定料號／JLC 編號</th><th>數量</th></tr></thead><tbody data-electronics></tbody></table></div>
   <div class="rack-detail" id="cost-comparison">B.2 新版零件與組裝預算 · USD</div>
-  <div class="text-small">每片支援 10 台。新版 100×110 mm 裸板費待報價，以下明確分開零件與組裝，不把未知板費當成零。</div>
+  <div class="text-small">每片支援 10 台。已上傳 Gerber 取得五片裸板試算；QFN 孔處理仍待工廠確認，下面列出不同工藝的成本。</div>
   <div class="table-responsive"><table class="table table-sm tabular-nums"><thead><tr><th scope="col">上板數量</th><th scope="col">裸板</th><th scope="col">零件</th><th scope="col">零件＋組裝小計<br><span class="text-small">尚須加裸板、運稅</span></th></tr></thead><tbody data-costs></tbody></table></div>
   <div class="rack-detail text-small" data-pcb-cost-note></div>
+  <div class="table-responsive"><table class="table table-sm tabular-nums"><thead><tr><th>五片工藝試算</th><th>裸板</th><th>板＋零件</th><th>全部焊好估算<br><span class="text-small">未含運稅／追加</span></th></tr></thead><tbody data-board-options></tbody></table></div>
+  <div class="text-small text-muted">2026-10-15 JLCPCB 網頁試算，正常交期。三種工藝均尚未通過本板 QFN DFM；焊好金額＝網頁裸板試算＋零件／組裝模型，不是已接受的 PCBA 報價。蓋油不等於填孔。</div>
   <div class="text-small">五片零件約 US$162.38，相較 B.1 的 US$224.27 約少 28%。零件價格不含耗損／MOQ；散料另向通路購買。組裝估算含開單、鋼網、上料、SMT、通孔焊接與 X-ray，未含板費及燒錄測試。</div>
   <details class="rack-detail"><summary>展開 B.2 費用明細（2／5 片成板）</summary><div class="table-responsive"><table class="table table-sm tabular-nums"><thead><tr><th scope="col">整批費用</th><th scope="col">2 片成板</th><th scope="col">5 片成板</th></tr></thead><tbody data-cost-breakdown></tbody></table></div></details>
   <div class="rack-detail">含運到手總價：待正式報價</div>
@@ -83,7 +85,7 @@
   <div class="rack-detail text-small">原理圖：<a href="https://github.com/ddasdkimo/rack-atx-controller/blob/main/hardware/release/controller-schematic.pdf" target="_blank" rel="noopener noreferrer">主控板 PDF</a> · <a href="https://github.com/ddasdkimo/rack-atx-controller/blob/main/hardware/release/adapter-schematic.pdf" target="_blank" rel="noopener noreferrer">免供電分接板 PDF</a> · <a href="https://github.com/ddasdkimo/rack-atx-controller/tree/main/hardware/cad/B2" target="_blank" rel="noopener noreferrer">KiCad 原始檔</a></div>
   <div class="rack-detail text-small">縮板評估：<a href="https://github.com/ddasdkimo/rack-atx-controller/blob/main/hardware/COMPACT-STUDY.md" target="_blank" rel="noopener noreferrer">兩層可行性與限制</a> · <a href="https://github.com/ddasdkimo/rack-atx-controller/blob/main/hardware/cad/B2/rack-atx-controller.kicad_pcb" target="_blank" rel="noopener noreferrer">KiCad R.3 佈線</a> · <a href="https://github.com/ddasdkimo/rack-atx-controller/tree/main/hardware/research" target="_blank" rel="noopener noreferrer">JLC 實際試算截圖</a></div>
   <div class="rack-detail text-small">採購：<a href="https://github.com/ddasdkimo/rack-atx-controller/tree/main/hardware/bom" target="_blank" rel="noopener noreferrer">完整 BOM／批量成本表</a> · <a href="https://github.com/ddasdkimo/rack-atx-controller/blob/main/hardware/JLCPCB.md" target="_blank" rel="noopener noreferrer">收費與選料依據</a></div>
-  <div class="rack-detail text-small">B.2 電路／R.3 佈線 · 兩板 ERC、DRC、未連接均為 0。USB／Ethernet 幾何回流複查通過；工廠 DFM、阻抗與實機尚未驗證；行為模擬不等同實測。</div>
+  <div class="rack-detail text-small"><a href="https://github.com/ddasdkimo/rack-atx-controller/tree/main/hardware/manufacturing/R3-candidate" target="_blank" rel="noopener noreferrer">Gerber／鑽孔／BOM／CPL 審閱包</a> · B.2 電路／R.3 佈線 · 兩板 ERC、DRC、未連接均為 0。USB／Ethernet 幾何回流複查通過；工廠 DFM、阻抗與實機尚未驗證；行為模擬不等同實測。</div>
   <div class="rack-detail text-small"><a href="https://github.com/ddasdkimo/rack-atx-controller" target="_blank" rel="noopener noreferrer">GitHub 設計紀錄</a></div>
   <script type="application/json" data-design>__DESIGN_JSON__</script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.min.js"></script>
@@ -108,9 +110,10 @@
     qs('[data-parts]').innerHTML=(design.physical_parts||[]).map(p=>'<tr><td>'+p.role+'</td><td><a target="_blank" rel="noopener noreferrer" href="'+p.url+'">'+p.part+'</a></td><td>'+p.spec+'</td></tr>').join('');
     qs('[data-electronics]').innerHTML=design.electronics.map(p=>'<tr><td>'+p.role+'</td><td><a target="_blank" rel="noopener noreferrer" href="'+p.url+'">'+p.mpn+' · '+p.code+'</a></td><td>'+p.qty+'</td></tr>').join('');
     const money=n=>n===null?'待報價':'$'+n.toFixed(2),range=a=>a?a.map(money).join('–'):'待報價';
-    qs('[data-costs]').innerHTML=design.costs.batches.map(b=>'<tr><th scope="row">'+b.boards+' 片</th><td>新尺寸待報價</td><td>'+money(b.parts_total_usd)+'</td><td>'+range(b.subtotal_range_usd)+'</td></tr>').join('');
-    qs('[data-pcb-cost-note]').textContent='只先做一片的零件預算 '+money(design.costs.one_board_parts_usd)+'；代貼以兩片／五片比較。100×110 mm 新尺寸尚無 Gerber 報價，不沿用舊尺寸板費。';
-    const breakdown=[['裸板（新尺寸）',()=> '待報價'],['上板零件',b=>money(b.parts_total_usd)],['開單／鋼網／確認／通孔開工',b=>money(b.setup_stencil_confirmation_manual_setup_usd)],['SMT＋通孔焊接工資',b=>money(b.assembly_labor_total_usd)],['延伸料上料',b=>range(b.feeder_usd_range)],['X-ray',b=>range(b.xray_usd_range)],['零件＋組裝小計（未含板費）',b=>range(b.subtotal_range_usd)],['運費／稅金／耗損／工藝追加',()=> '待報價']];
+    qs('[data-costs]').innerHTML=design.costs.batches.map(b=>'<tr><th scope="row">'+b.boards+' 片</th><td>見下方五片工藝</td><td>'+money(b.parts_total_usd)+'</td><td>'+range(b.subtotal_range_usd)+'</td></tr>').join('');
+    qs('[data-pcb-cost-note]').textContent='只先做一片的零件預算 '+money(design.costs.one_board_parts_usd)+'；代貼以兩片／五片比較。五片裸板試算 $9.30／$27.20／$82.99，最後採用哪種工藝仍待 DFM。';
+    qs('[data-board-options]').innerHTML=design.costs.board_options.map(o=>'<tr><th scope="row">'+o.label+'</th><td>'+money(o.bare_pcb_usd)+'</td><td>'+money(o.five_board_materials_usd)+'</td><td>'+range(o.five_board_assembled_estimate_usd)+'</td></tr>').join('');
+    const breakdown=[['裸板（工藝待確認）',()=> '見工藝試算'],['上板零件',b=>money(b.parts_total_usd)],['開單／鋼網／確認／通孔開工',b=>money(b.setup_stencil_confirmation_manual_setup_usd)],['SMT＋通孔焊接工資',b=>money(b.assembly_labor_total_usd)],['延伸料上料',b=>range(b.feeder_usd_range)],['X-ray',b=>range(b.xray_usd_range)],['零件＋組裝小計（未含板費）',b=>range(b.subtotal_range_usd)],['運費／稅金／耗損／工藝追加',()=> '待報價']];
     qs('[data-cost-breakdown]').innerHTML=breakdown.map(([label,value])=>'<tr><th scope="row">'+label+'</th>'+design.costs.batches.map(b=>'<td>'+value(b)+'</td>').join('')+'</tr>').join('');
     qs('[data-cost-note]').textContent='庫存核對：'+design.costs.catalog_checked_date+' · '+design.costs.basic_skus+' 種 Basic · '+design.costs.extended_smt_skus+' 種 SMT 延伸料。10 片免供電分接板的接頭零件約 '+money(design.costs.ten_passive_adapters_parts_only_usd)+'，另加裸板及手焊。';
     qs('[data-legend]').innerHTML=design.functions.map(f=>'<span><i style="background:'+cssSeries(f.id)+'"></i>'+f.label+'</span>').join('');
@@ -224,6 +227,8 @@
     const groundMat=new T.MeshBasicMaterial({color:0x436ba3,side:T.DoubleSide});
     const contour=(loop,shape)=>{loop.forEach(([x,y],i)=>shape[i?'lineTo':'moveTo'](boardW/2-y/10,boardD/2-x/10));shape.closePath();return shape;};
     for(const zone of design.routing_study.filled_zones)for(const poly of zone.polygons){const shape=contour(poly.outer,new T.Shape());for(const h of poly.holes)shape.holes.push(contour(h,new T.Path()));const mesh=new T.Mesh(new T.ShapeGeometry(shape),groundMat);mesh.rotation.x=-Math.PI/2;mesh.position.set(cx,zone.layer==='F.Cu'?.342:.162,cz);scene.add(mesh);}
+    // Actual front-side user markings exported from native CAD; font appearance is illustrative.
+    for(const t of design.routing_study.silkscreen_text||[]){if(t.layer!=='F.Silkscreen')continue;const c=document.createElement('canvas');c.width=512;c.height=128;const ctx=c.getContext('2d');ctx.fillStyle='#fff';ctx.font='80px sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(t.text,256,64);const texture=new T.CanvasTexture(c),h=t.font_mm/10*1.6,w=h*4,m=new T.Mesh(new T.PlaneGeometry(w,h),new T.MeshBasicMaterial({map:texture,transparent:true,depthWrite:false,side:T.DoubleSide}));m.quaternion.setFromAxisAngle(new T.Vector3(0,1,0),-Math.PI/2+t.rotation_deg*Math.PI/180);m.quaternion.multiply(new T.Quaternion().setFromAxisAngle(new T.Vector3(1,0,0),-Math.PI/2));m.position.set(cx+boardW/2-t.at[1]/10,.355,cz-boardD/2+t.at[0]/10);scene.add(m);}
     const ports=[],peripherals={},placement=design.layout_study.components.map(c=>(design.routing_study.component_overrides||[]).find(o=>o.ref===c.ref)||c);
     for(const c of placement){
       const x=cx+boardW/2-(c.y+c.h/2)/10,z=-boardD/2+(c.x+c.w/2)/10;

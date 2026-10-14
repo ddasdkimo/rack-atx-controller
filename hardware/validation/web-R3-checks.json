@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-15",
+  "revision": "B.2/R.3",
+  "native_pcb_sha256": "3351fc01286a8f864a5495cbc13865fb3866de1b18c28b6d9712be0e0d33f4f3",
+  "checks": [
+    "Desktop overview/controller/PC1/PC2 and wiring visually checked across this update",
+    "Added native silk labels render without console errors",
+    "New five-board process comparison amounts match cost-model.json",
+    "390px iframe responsive cost table and PC2 inspected; prices wrap without lost columns"
+  ],
+  "browser_console_errors": 0,
+  "limitations": [
+    "IAB viewport override did not resize existing tabs; responsive check used a temporary390px iframe container, removed before publication.",
+    "3D component bodies and text fonts are illustrative; native CAD/CAM is manufacturing reference.",
+    "Factory quote/DFM and prototype tests pending"
+  ]
+}

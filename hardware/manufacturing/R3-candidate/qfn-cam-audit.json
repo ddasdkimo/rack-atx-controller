@@ -1,0 +1,49 @@
+{
+  "status": "pass local EPAD CAM geometry only",
+  "parser": "gerbonara",
+  "paste_windows": 16,
+  "conservative_paste_bbox_to_hole_gap_mm": 0.0267766952966369,
+  "paste_bbox_mm": [
+    0.75,
+    0.75
+  ],
+  "drills": 9,
+  "drill_mm": 0.3,
+  "top_mask_ep_opening_mm": [
+    4,
+    4
+  ],
+  "bottom_mask_apertures_under_ep": 0,
+  "holes_do_not_overlap_paste": true,
+  "parser_warnings": [
+    "26 \"G90\": G90 header statement found after end of header"
+  ],
+  "limitations": [
+    "Bottom tenting is not resin filling or copper capping.",
+    "Native DRC checks geometry; fabrication and assembly DFM remain pending.",
+    "CAM geometry alone does not constitute factory release."
+  ],
+  "sha256": {
+    "controller-bom.csv": "88da58936dfdb3a60b68efbbd333e616b3df40ab214bd0c11cfafbab36933189",
+    "controller-cpl.csv": "96895275459a239e20f3f6fd5eea72e89943231fbe581a3e2f0048159b3ef91d",
+    "native-pos.csv": "d3acd31588961a892acf7c3267245fe1a58604af6807d4230794c6cb46ca08f9",
+    "rack-atx-controller-B_Cu.gbl": "036aaeef8c83fddf713b336435a25c8ff6526c3404cdc0c31e1a9228aa017dc7",
+    "rack-atx-controller-B_Mask.gbs": "8b7dfa0436411a8d6375e748152031a25458a60ad2a5823682b04405fcfc7b47",
+    "rack-atx-controller-B_Silkscreen.gbo": "3088648fd60ad799fdba5703883ff0419960364f2e409101225b5517c14eda11",
+    "rack-atx-controller-Edge_Cuts.gm1": "51ea57acff20f7518c78207cad037c8b978f64dfec91f71a7c7f993678aeefac",
+    "rack-atx-controller-F_Cu.gtl": "c3f3983a69fcc2316009fffd948418588693253ae452e39646ef928536ff3a7b",
+    "rack-atx-controller-F_Mask.gts": "e710e3c639f372e162530386d51f64660bef6b11a202ec2fbf76550f8bab56c4",
+    "rack-atx-controller-F_Paste.gtp": "b054c8e7a8df4f0096982a018b03c5f9e7263b8ef5e52ade6fd3d199d1a7c047",
+    "rack-atx-controller-F_Silkscreen.gto": "09c2f49ec5a89c3fb9bce0c33e8e1221bd0664da76c4602c63f5febb9c662bfb",
+    "rack-atx-controller-NPTH-drl_map.svg": "8537a9f36cc9a5a5b46eb444225bedaa70554d92a61766fd3a46373ba967314b",
+    "rack-atx-controller-NPTH.drl": "9c13e9d97551439dd0e2e627b5dcd8661c735a5ad1a9e41a0e2ebbd5bcd1ef4b",
+    "rack-atx-controller-PTH-drl_map.svg": "0a872e4e95659554479e418c9e6977610204ac1b00eeb1ef3e024caade1119dd",
+    "rack-atx-controller-PTH.drl": "36e9143b6d8863f5ac7b83190642834bedeeade2f3f3b3e74db3f8291361cd3b",
+    "rack-atx-controller-drill.rpt": "bbd9a20e9902b5b7ecf3434c964d100473376d398153326fd40046b52eb57740",
+    "rack-atx-controller-job.gbrjob": "a9f645361c47d2845a37f29c1f2a37e8bb8a684223587ffdd460e992d019c15f"
+  },
+  "source_board": {
+    "name": "rack-atx-controller.kicad_pcb",
+    "sha256": "3351fc01286a8f864a5495cbc13865fb3866de1b18c28b6d9712be0e0d33f4f3"
+  }
+}

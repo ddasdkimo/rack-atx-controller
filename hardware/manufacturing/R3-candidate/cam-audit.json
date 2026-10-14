@@ -1,0 +1,82 @@
+{
+  "status": "pass independent file geometry and coordinate parity; factory acceptance pending",
+  "parser": "Gerbonara",
+  "boards": {
+    "controller": {
+      "pcb_sha256": "3351fc01286a8f864a5495cbc13865fb3866de1b18c28b6d9712be0e0d33f4f3",
+      "outline_mm": [
+        100,
+        110
+      ],
+      "outline_closed": true,
+      "native_round_drills": 380,
+      "native_slots": 4,
+      "drill_coordinate_max_rounding_mm": 0.00070711,
+      "drill_geometry_matches_native": true,
+      "cpl_matches_native": true,
+      "bom_cpl_references": 300,
+      "parsed_layer_objects": {
+        "rack-atx-controller-F_Paste.gtp": 851,
+        "rack-atx-controller-F_Cu.gtl": 4000,
+        "rack-atx-controller-B_Cu.gbl": 1499,
+        "rack-atx-controller-B_Mask.gbs": 132,
+        "rack-atx-controller-Edge_Cuts.gm1": 4,
+        "rack-atx-controller-F_Silkscreen.gto": 3137,
+        "rack-atx-controller-B_Silkscreen.gbo": 307,
+        "rack-atx-controller-F_Mask.gts": 968
+      },
+      "drill_counts": {
+        "NPTH/0.650mm/Flash": 2,
+        "NPTH/3.200mm/Flash": 4,
+        "NPTH/3.250mm/Flash": 2,
+        "PTH/0.300mm/Flash": 252,
+        "PTH/0.750mm/Flash": 100,
+        "PTH/0.890mm/Flash": 8,
+        "PTH/1.000mm/Flash": 4,
+        "PTH/1.020mm/Flash": 4,
+        "PTH/1.200mm/Flash": 2,
+        "PTH/1.630mm/Flash": 2,
+        "PTH/0.600mm/Line": 4
+      },
+      "parser_warnings": [
+        "G90 header statement found after end of header"
+      ]
+    },
+    "adapter": {
+      "pcb_sha256": "abeb6f9e242a3652a62dade6b7242a9ac3bdc3016d7cb7d71c7d64891c93ad6b",
+      "outline_mm": [
+        26,
+        34
+      ],
+      "outline_closed": true,
+      "native_round_drills": 20,
+      "native_slots": 0,
+      "drill_coordinate_max_rounding_mm": 0,
+      "drill_geometry_matches_native": true,
+      "cpl_matches_native": true,
+      "bom_cpl_references": 6,
+      "parsed_layer_objects": {
+        "adapter-F_Mask.gts": 20,
+        "adapter-F_Paste.gtp": 0,
+        "adapter-Edge_Cuts.gm1": 4,
+        "adapter-B_Mask.gbs": 20,
+        "adapter-F_Silkscreen.gto": 385,
+        "adapter-B_Cu.gbl": 38,
+        "adapter-B_Silkscreen.gbo": 20,
+        "adapter-F_Cu.gtl": 32
+      },
+      "drill_counts": {
+        "PTH/0.750mm/Flash": 10,
+        "PTH/1.000mm/Flash": 10
+      },
+      "parser_warnings": [
+        "G90 header statement found after end of header"
+      ]
+    }
+  },
+  "limitations": [
+    "CPL rotations are native KiCad angles, not verified factory library rotations.",
+    "Parser G90/header and rounded macro warnings did not prevent geometry parsing; absent bottom paste is intentional for single-side assembly.",
+    "No solderability, process capability, physical fit or functional qualification implied."
+  ]
+}

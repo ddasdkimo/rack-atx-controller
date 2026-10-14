@@ -16,7 +16,7 @@ Use scripts/make-schematic.py, nativeKiCad export/ERC, scripts/check-circuit.py,
 
 ## Evidence and manufacturing
 
-Prefer actualJLC assembly catalog parts; record exactMPN,C-number,package,classification,assemblymethod,stock/date andsource. LCSC availability alone is not assembly stock. Preserve unknowns; recheck before release. Current footprint candidates have real pads but are not physically/factoryqualified. NoGerber/CPL or acceptedPCBAquote exists. NewS.3 bare-board cost is pending; do not reuse oldS.1/S.2 estimates.
+Prefer actualJLC assembly catalog parts; record exactMPN,C-number,package,classification,assemblymethod,stock/date andsource. LCSC availability alone is not assembly stock. Preserve unknowns; recheck before release. Current footprint candidates have real pads but are not physically/factoryqualified. R.3 Gerber/CPL review package exists at hardware/manufacturing/R3-candidate; independent CAM/native drill and placement parity passes. Full acceptedPCBAquote/DFM and final frozen-package review are pending. Bare-board calculator observations are $9.30/$27.20/$82.99 for5boards dependingfinish/via process; noneisqualifiedyet. Do not reuse oldS.1/S.2 estimates.
 
 User prefers economical normal lead time,one-sideEconomicPCBA,noexpedite andcheaperavailablefreight. Waiting is not an automatic discount. Separate barePCB,parts,assembly,freight/tax andequipmentcosts.
 

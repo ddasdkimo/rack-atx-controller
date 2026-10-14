@@ -1,0 +1,70 @@
+{
+  "revision": "B.2 / R.3",
+  "status": "engineering review package; NOT FOR PRODUCTION",
+  "manufacturing_ready": false,
+  "coordinate_convention": "mm; absolute KiCad origin; X right, Y up (negative on this PCB); all components Top",
+  "rotation_convention": "Native KiCad degrees modulo 360. Supplier placement preview and polarity confirmation required; no unverified generic rotation corrections applied.",
+  "boards": {
+    "controller": {
+      "native_pcb_sha256": "3351fc01286a8f864a5495cbc13865fb3866de1b18c28b6d9712be0e0d33f4f3",
+      "parts": 300,
+      "bom_cpl_reference_parity": true,
+      "native_drc": 0,
+      "native_unconnected": 0,
+      "files": {
+        "controller/controller-bom.csv": "88da58936dfdb3a60b68efbbd333e616b3df40ab214bd0c11cfafbab36933189",
+        "controller/controller-cpl.csv": "96895275459a239e20f3f6fd5eea72e89943231fbe581a3e2f0048159b3ef91d",
+        "controller/native-pos.csv": "d3acd31588961a892acf7c3267245fe1a58604af6807d4230794c6cb46ca08f9",
+        "controller/rack-atx-controller-B_Cu.gbl": "036aaeef8c83fddf713b336435a25c8ff6526c3404cdc0c31e1a9228aa017dc7",
+        "controller/rack-atx-controller-B_Mask.gbs": "8b7dfa0436411a8d6375e748152031a25458a60ad2a5823682b04405fcfc7b47",
+        "controller/rack-atx-controller-B_Silkscreen.gbo": "3088648fd60ad799fdba5703883ff0419960364f2e409101225b5517c14eda11",
+        "controller/rack-atx-controller-Edge_Cuts.gm1": "51ea57acff20f7518c78207cad037c8b978f64dfec91f71a7c7f993678aeefac",
+        "controller/rack-atx-controller-F_Cu.gtl": "c3f3983a69fcc2316009fffd948418588693253ae452e39646ef928536ff3a7b",
+        "controller/rack-atx-controller-F_Mask.gts": "e710e3c639f372e162530386d51f64660bef6b11a202ec2fbf76550f8bab56c4",
+        "controller/rack-atx-controller-F_Paste.gtp": "b054c8e7a8df4f0096982a018b03c5f9e7263b8ef5e52ade6fd3d199d1a7c047",
+        "controller/rack-atx-controller-F_Silkscreen.gto": "09c2f49ec5a89c3fb9bce0c33e8e1221bd0664da76c4602c63f5febb9c662bfb",
+        "controller/rack-atx-controller-NPTH-drl_map.svg": "8537a9f36cc9a5a5b46eb444225bedaa70554d92a61766fd3a46373ba967314b",
+        "controller/rack-atx-controller-NPTH.drl": "9c13e9d97551439dd0e2e627b5dcd8661c735a5ad1a9e41a0e2ebbd5bcd1ef4b",
+        "controller/rack-atx-controller-PTH-drl_map.svg": "0a872e4e95659554479e418c9e6977610204ac1b00eeb1ef3e024caade1119dd",
+        "controller/rack-atx-controller-PTH.drl": "36e9143b6d8863f5ac7b83190642834bedeeade2f3f3b3e74db3f8291361cd3b",
+        "controller/rack-atx-controller-drill.rpt": "bbd9a20e9902b5b7ecf3434c964d100473376d398153326fd40046b52eb57740",
+        "controller/rack-atx-controller-job.gbrjob": "a9f645361c47d2845a37f29c1f2a37e8bb8a684223587ffdd460e992d019c15f"
+      },
+      "gerber_zip_sha256": "5889b5ac30e8356325cf1c621aad55c91804ac3576ae8a3140f41c26c6e6b75b"
+    },
+    "adapter": {
+      "native_pcb_sha256": "abeb6f9e242a3652a62dade6b7242a9ac3bdc3016d7cb7d71c7d64891c93ad6b",
+      "parts": 6,
+      "bom_cpl_reference_parity": true,
+      "native_drc": 0,
+      "native_unconnected": 0,
+      "files": {
+        "adapter/adapter-B_Cu.gbl": "7e854722fff891f0dc8618a186393359f6f53358b5fe8dd884ef729e1b9e4087",
+        "adapter/adapter-B_Mask.gbs": "2068b5d656ceeb803d63fbbdec7e7c5e5a9ebfb928f94a11b65003feb85faca3",
+        "adapter/adapter-B_Silkscreen.gbo": "41275fc6346d9632e985f93780c74493155e11e49980ab997a77567c3534890a",
+        "adapter/adapter-Edge_Cuts.gm1": "86639bec67171dd359e164af77e73856e6d1eb7b1a4ac8bfccca993c4b9939bd",
+        "adapter/adapter-F_Cu.gtl": "ad70f43ec65a8ea4af07dec6c4a2329964267b46225a2c33b8edbd801b5db981",
+        "adapter/adapter-F_Mask.gts": "72af32d5fbaee2dd1c731cb7deb5b6cce466a08f27173cb576cb63a23cec7517",
+        "adapter/adapter-F_Paste.gtp": "f95b6c6a03c74b9c42486b277739a76e48c1332b2cbf10d38877ed29a11f6f32",
+        "adapter/adapter-F_Silkscreen.gto": "ad3f7a49a76947b850e75deb56162197f55ca231c12d449d414ae73aaa9e9550",
+        "adapter/adapter-NPTH-drl_map.svg": "e74976d73c3d8392810e0fe81e2506464f495de0e6c6268a3bdec495e980a469",
+        "adapter/adapter-NPTH.drl": "5e720ab473bf0b701cced9bcc1b4b4d7a48bcee8fa3f7e00b876ebd69dbd3d3b",
+        "adapter/adapter-PTH-drl_map.svg": "655a89f85fdd18a174d5bf5b8f9619c5822ea789e9516cba84578cb51755cd21",
+        "adapter/adapter-PTH.drl": "936eb5d30bff3625572b3e326e4383b14142c9cbfd6c6c4909b4a2fabea5bbb5",
+        "adapter/adapter-bom.csv": "38ac2d99667f5d8767d293c6fe0bf9f679d006f5a890ddc7346ab62c9bdadff2",
+        "adapter/adapter-cpl.csv": "5ece7084fdad39d6130663a0d5b3dfbb5945dda833aee3285569737a7f583789",
+        "adapter/adapter-drill.rpt": "4cb21855ac57e4067adab6fef80ca561c7e31b6501c6d6e6a5169c20f1ca1ee3",
+        "adapter/adapter-job.gbrjob": "d50e6ddf2ede2b0a072d1917275c2891e220094bdfb1f3312e28f60f40dd6ff8",
+        "adapter/native-pos.csv": "5dd210af8cf0e33f696676be9bc5c0a070df166a836d6d9a8c8c011108cfee1c"
+      },
+      "gerber_zip_sha256": "aa09a822aefb4ce1e3da1e49bd87490efef19c2c89dc28ba428c7cf20b5d8d0c"
+    }
+  },
+  "pending": [
+    "JLCPCB full Economic quote and component/placement preview",
+    "QFN via-in-pad process, finish and stencil DFM acceptance",
+    "Final independent frozen-package review",
+    "Prototype functional verification"
+  ],
+  "circuit_sha256": "b3a777e74da47f35ede1a157c647bd9f833b7b381058343f84b508699f1d6ebe"
+}

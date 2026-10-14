@@ -85,4 +85,4 @@ assert route['pcb_sha256']==hashlib.sha256((root/'hardware/cad/B2/rack-atx-contr
 assert checks['adapter']['pcb_sha256']==hashlib.sha256((root/'hardware/cad/B2/adapter.kicad_pcb').read_bytes()).hexdigest()
 assert cost['pcb_fabrication_estimate']['total_usd'] is None
 assert all(b['assembled_total_range_usd'] is None for b in cost['batches'])
-print('PASS: B.2 simulation hash, S.3 baseline + R.3 routed native hashes, no LED sensing, both boards DRC/unrouted zero; current PCB pricing stays unknown.')
+print('PASS: B.2 simulation hash, S.3 baseline + R.3 routed native hashes, no LED sensing, both boards DRC/unrouted zero; qualified PCB process price remains unselected; observed options are separate.')

@@ -2,7 +2,7 @@
   "revision": "R.3",
   "schematic_revision": "B.2",
   "controller": {
-    "pcb_sha256": "dc11db34e1fdc40dc28c1a720e67c3c4d41d7476043c9e2d3163f699f1b92802",
+    "pcb_sha256": "3351fc01286a8f864a5495cbc13865fb3866de1b18c28b6d9712be0e0d33f4f3",
     "kicad_version": "10.0.0",
     "native_unrouted": 0,
     "drc_violations": 0,
@@ -167,7 +167,7 @@
   },
   "power": {
     "board": "rack-atx-controller.kicad_pcb",
-    "pcb_sha256": "dc11db34e1fdc40dc28c1a720e67c3c4d41d7476043c9e2d3163f699f1b92802",
+    "pcb_sha256": "3351fc01286a8f864a5495cbc13865fb3866de1b18c28b6d9712be0e0d33f4f3",
     "copper_um": 35,
     "copper_temperature_c": 60,
     "via_resistance_ohm": 0.002,

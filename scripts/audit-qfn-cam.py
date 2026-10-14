@@ -18,7 +18,9 @@ def hit(o):
  (x0,y0),(x1,y1)=o.bounding_box(MM);return x0<ep[1][0] and x1>ep[0][0] and y0<ep[1][1] and y1>ep[0][1]
 files={k:GerberFile.open(D/f'{args.prefix}-{v}') for k,v in {'paste':'F_Paste.gtp','top_mask':'F_Mask.gts','bottom_mask':'B_Mask.gbs'}.items()}
 with warnings.catch_warnings(record=True) as warn:
- warnings.simplefilter('always');drill=ExcellonFile.open(D/f'{args.prefix}.drl')
+ warnings.simplefilter('always');drill_path=D/f'{args.prefix}-PTH.drl'
+ if not drill_path.exists():drill_path=D/f'{args.prefix}.drl'
+ drill=ExcellonFile.open(drill_path)
 warning_messages=[str(w.message).split(':',1)[-1] for w in warn]
 pastes=[o for o in files['paste'].objects if hit(o)];holes=[o for o in drill.objects if hit(o)];top=[o for o in files['top_mask'].objects if hit(o)];bottom=[o for o in files['bottom_mask'].objects if hit(o)]
 assert len(pastes)==16 and len(holes)==9 and len(top)==1 and len(bottom)==0

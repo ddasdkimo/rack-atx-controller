@@ -1,7 +1,7 @@
 {
   "revision": "R.3",
   "status": "connected_candidate",
-  "pcb_sha256": "dc11db34e1fdc40dc28c1a720e67c3c4d41d7476043c9e2d3163f699f1b92802",
+  "pcb_sha256": "3351fc01286a8f864a5495cbc13865fb3866de1b18c28b6d9712be0e0d33f4f3",
   "track_segments": 3855,
   "vias": 252,
   "ground_zones": 11,
@@ -286207,6 +286207,408 @@
     "Factory stack-up/DFM acceptance and physical USB/Ethernet tests",
     "Assembled power/ground transient and thermal measurements",
     "Assembly DFM and prototype verification"
+  ],
+  "silkscreen_text": [
+    {
+      "text": "USB",
+      "at": [
+        4.7,
+        62.5
+      ],
+      "font_mm": 1.0,
+      "rotation_deg": 0.0,
+      "layer": "F.Silkscreen"
+    },
+    {
+      "text": "3V3",
+      "at": [
+        8.0,
+        36.5
+      ],
+      "font_mm": 1.0,
+      "rotation_deg": 0.0,
+      "layer": "F.Silkscreen"
+    },
+    {
+      "text": "LAN",
+      "at": [
+        10.0,
+        39.5
+      ],
+      "font_mm": 1.0,
+      "rotation_deg": 0.0,
+      "layer": "F.Silkscreen"
+    },
+    {
+      "text": "PWR",
+      "at": [
+        11.0,
+        26.55
+      ],
+      "font_mm": 1.0,
+      "rotation_deg": 0.0,
+      "layer": "F.Silkscreen"
+    },
+    {
+      "text": "EN",
+      "at": [
+        14.0,
+        36.5
+      ],
+      "font_mm": 1.0,
+      "rotation_deg": 0.0,
+      "layer": "F.Silkscreen"
+    },
+    {
+      "text": "RST",
+      "at": [
+        17.0,
+        26.55
+      ],
+      "font_mm": 1.0,
+      "rotation_deg": 0.0,
+      "layer": "F.Silkscreen"
+    },
+    {
+      "text": "PWR",
+      "at": [
+        29.0,
+        26.55
+      ],
+      "font_mm": 1.0,
+      "rotation_deg": 0.0,
+      "layer": "F.Silkscreen"
+    },
+    {
+      "text": "RST",
+      "at": [
+        35.0,
+        26.55
+      ],
+      "font_mm": 1.0,
+      "rotation_deg": 0.0,
+      "layer": "F.Silkscreen"
+    },
+    {
+      "text": "PWR",
+      "at": [
+        47.0,
+        26.55
+      ],
+      "font_mm": 1.0,
+      "rotation_deg": 0.0,
+      "layer": "F.Silkscreen"
+    },
+    {
+      "text": "RST",
+      "at": [
+        53.0,
+        26.55
+      ],
+      "font_mm": 1.0,
+      "rotation_deg": 0.0,
+      "layer": "F.Silkscreen"
+    },
+    {
+      "text": "PWR",
+      "at": [
+        65.0,
+        26.55
+      ],
+      "font_mm": 1.0,
+      "rotation_deg": 0.0,
+      "layer": "F.Silkscreen"
+    },
+    {
+      "text": "RST",
+      "at": [
+        71.0,
+        26.55
+      ],
+      "font_mm": 1.0,
+      "rotation_deg": 0.0,
+      "layer": "F.Silkscreen"
+    },
+    {
+      "text": "PWR",
+      "at": [
+        83.0,
+        26.55
+      ],
+      "font_mm": 1.0,
+      "rotation_deg": 0.0,
+      "layer": "F.Silkscreen"
+    },
+    {
+      "text": "RST",
+      "at": [
+        89.0,
+        26.55
+      ],
+      "font_mm": 1.0,
+      "rotation_deg": 0.0,
+      "layer": "F.Silkscreen"
+    },
+    {
+      "text": "5V IN",
+      "at": [
+        94.0,
+        55.0
+      ],
+      "font_mm": 1.0,
+      "rotation_deg": 0.0,
+      "layer": "F.Silkscreen"
+    },
+    {
+      "text": "RST",
+      "at": [
+        11.0,
+        83.45
+      ],
+      "font_mm": 1.0,
+      "rotation_deg": 180.0,
+      "layer": "F.Silkscreen"
+    },
+    {
+      "text": "PWR",
+      "at": [
+        17.0,
+        83.45
+      ],
+      "font_mm": 1.0,
+      "rotation_deg": 180.0,
+      "layer": "F.Silkscreen"
+    },
+    {
+      "text": "RST",
+      "at": [
+        29.0,
+        83.45
+      ],
+      "font_mm": 1.0,
+      "rotation_deg": 180.0,
+      "layer": "F.Silkscreen"
+    },
+    {
+      "text": "PWR",
+      "at": [
+        35.0,
+        83.45
+      ],
+      "font_mm": 1.0,
+      "rotation_deg": 180.0,
+      "layer": "F.Silkscreen"
+    },
+    {
+      "text": "RST",
+      "at": [
+        47.0,
+        83.45
+      ],
+      "font_mm": 1.0,
+      "rotation_deg": 180.0,
+      "layer": "F.Silkscreen"
+    },
+    {
+      "text": "PWR",
+      "at": [
+        53.0,
+        83.45
+      ],
+      "font_mm": 1.0,
+      "rotation_deg": 180.0,
+      "layer": "F.Silkscreen"
+    },
+    {
+      "text": "RST",
+      "at": [
+        65.0,
+        83.45
+      ],
+      "font_mm": 1.0,
+      "rotation_deg": 180.0,
+      "layer": "F.Silkscreen"
+    },
+    {
+      "text": "PWR",
+      "at": [
+        71.0,
+        83.45
+      ],
+      "font_mm": 1.0,
+      "rotation_deg": 180.0,
+      "layer": "F.Silkscreen"
+    },
+    {
+      "text": "RST",
+      "at": [
+        83.0,
+        83.45
+      ],
+      "font_mm": 1.0,
+      "rotation_deg": 180.0,
+      "layer": "F.Silkscreen"
+    },
+    {
+      "text": "PWR",
+      "at": [
+        89.0,
+        83.45
+      ],
+      "font_mm": 1.0,
+      "rotation_deg": 180.0,
+      "layer": "F.Silkscreen"
+    },
+    {
+      "text": "J01",
+      "at": [
+        14.0,
+        22.0
+      ],
+      "font_mm": 1.2,
+      "rotation_deg": 0.0,
+      "layer": "F.Silkscreen"
+    },
+    {
+      "text": "J06",
+      "at": [
+        14.0,
+        88.0
+      ],
+      "font_mm": 1.2,
+      "rotation_deg": 0.0,
+      "layer": "F.Silkscreen"
+    },
+    {
+      "text": "J02",
+      "at": [
+        32.0,
+        22.0
+      ],
+      "font_mm": 1.2,
+      "rotation_deg": 0.0,
+      "layer": "F.Silkscreen"
+    },
+    {
+      "text": "J07",
+      "at": [
+        32.0,
+        88.0
+      ],
+      "font_mm": 1.2,
+      "rotation_deg": 0.0,
+      "layer": "F.Silkscreen"
+    },
+    {
+      "text": "J03",
+      "at": [
+        50.0,
+        22.0
+      ],
+      "font_mm": 1.2,
+      "rotation_deg": 0.0,
+      "layer": "F.Silkscreen"
+    },
+    {
+      "text": "J08",
+      "at": [
+        50.0,
+        88.0
+      ],
+      "font_mm": 1.2,
+      "rotation_deg": 0.0,
+      "layer": "F.Silkscreen"
+    },
+    {
+      "text": "J04",
+      "at": [
+        68.0,
+        22.0
+      ],
+      "font_mm": 1.2,
+      "rotation_deg": 0.0,
+      "layer": "F.Silkscreen"
+    },
+    {
+      "text": "J09",
+      "at": [
+        68.0,
+        88.0
+      ],
+      "font_mm": 1.2,
+      "rotation_deg": 0.0,
+      "layer": "F.Silkscreen"
+    },
+    {
+      "text": "J05",
+      "at": [
+        86.0,
+        22.0
+      ],
+      "font_mm": 1.2,
+      "rotation_deg": 0.0,
+      "layer": "F.Silkscreen"
+    },
+    {
+      "text": "J10",
+      "at": [
+        86.0,
+        88.0
+      ],
+      "font_mm": 1.2,
+      "rotation_deg": 0.0,
+      "layer": "F.Silkscreen"
+    },
+    {
+      "text": "+",
+      "at": [
+        87.7,
+        58.45
+      ],
+      "font_mm": 1.2,
+      "rotation_deg": 0.0,
+      "layer": "F.Silkscreen"
+    },
+    {
+      "text": "-",
+      "at": [
+        87.7,
+        63.53
+      ],
+      "font_mm": 1.2,
+      "rotation_deg": 0.0,
+      "layer": "F.Silkscreen"
+    },
+    {
+      "text": "BOOT",
+      "at": [
+        49.5,
+        58.5
+      ],
+      "font_mm": 1.0,
+      "rotation_deg": 0.0,
+      "layer": "B.Silkscreen"
+    },
+    {
+      "text": "MCU RST",
+      "at": [
+        65.0,
+        64.599999
+      ],
+      "font_mm": 1.0,
+      "rotation_deg": 0.0,
+      "layer": "B.Silkscreen"
+    },
+    {
+      "text": "RACK ATX R3",
+      "at": [
+        60.0,
+        40.0
+      ],
+      "font_mm": 1.2,
+      "rotation_deg": 0.0,
+      "layer": "B.Silkscreen"
+    }
   ],
   "component_overrides": [
     {

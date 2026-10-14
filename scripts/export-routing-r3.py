@@ -37,6 +37,7 @@ b.BuildConnectivity();unrouted=b.GetConnectivity().GetUnconnectedCount(False)
 validation=json.loads((R/'hardware/validation/routing-R3-checks.json').read_text());assert validation['controller']['pcb_sha256']==hashlib.sha256(path.read_bytes()).hexdigest() and validation['controller']['native_unrouted']==unrouted==0
 drc=json.loads((R/'artifacts/local/b2-controller-final-drc.json').read_text());assert not drc['violations'],collections.Counter(x['type'] for x in drc['violations'])
 report=dict(revision='R.3',status='partial_routing' if unrouted else 'connected_candidate',pcb_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),track_segments=len(segments),vias=len(vias),ground_zones=len({z['net'] for z in zones}),zone_objects=len(zones),native_unrouted=unrouted,total_track_length_mm=round(sum(math.dist(s['a'],s['b']) for s in segments),3),placement_changes=changes,net_pin_mapping='All connected B.2 schematic pins mapped to matching nets',segments=segments,via_geometry=vias,filled_zones=zones,drc=dict(violations=0,unconnected_items_reported=len(drc['unconnected_items']),full_schematic_parity=False,note='Native connectivity is reported separately. DRC report item cap is not a completion percentage.'),manufacturing_ready=False,remaining=['Factory stack-up/DFM acceptance and physical USB/Ethernet tests','Assembled power/ground transient and thermal measurements','Assembly DFM and prototype verification'])
+report['silkscreen_text']=[dict(text=t.GetText(),at=xy(t),font_mm=p.ToMM(t.GetTextSize().y),rotation_deg=t.GetTextAngle().AsDegrees(),layer=b.GetLayerName(t.GetLayer())) for t in b.GetDrawings() if isinstance(t,p.PCB_TEXT)]
 d['routing_study']=report;d['layout_study']=json.loads((R/'hardware/placement-S3.json').read_text());d['stage']='routed-prototype-candidate';d['outline_status']='R.3 native 100 x 110 mm two-layer routed candidate; not a manufacturing release'
 # Keep the immutable placement report, apply explicitly audited overrides to the renderer.
 updated=[]
@@ -79,5 +80,9 @@ for layer,color in [('B.Cu','#75adff'),('F.Cu','#ff9999')]:
  svg.append('</g>')
 svg.append('<g id="copper-vias" fill="#bed1f5" stroke="#162b21" stroke-width=".13">')
 for v in vias:x,y=v['at'];svg.append(f'<circle cx="{x}" cy="{y}" r="{v["diameter_mm"]/2}"><title>{v["net"]} / via</title></circle>')
-svg.append('</g></svg>');(R/'hardware/routing-R3.svg').write_text(''.join(svg))
+svg.append('</g>')
+for t in report['silkscreen_text']:
+ if t['layer']=='F.Silkscreen':
+  x,y=t['at'];svg.append(f'<text x="{x}" y="{y}" text-anchor="middle" dominant-baseline="middle" font-size="{t["font_mm"]}" fill="white" transform="rotate({-t["rotation_deg"]} {x} {y})">{html.escape(t["text"])}</text>')
+svg.append('</svg>');(R/'hardware/routing-R3.svg').write_text(''.join(svg))
 print('R.3:',len(segments),'tracks,',len(vias),'vias,',len(zones),'zones,',unrouted,'native unrouted. DRC zero, not released.')
