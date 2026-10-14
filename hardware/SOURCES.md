@@ -1,3 +1,15 @@
+# B.2 additions — checked 2026-10-14
+
+- [onsemi MC14541B Rev.16](https://www.onsemi.com/pdf/datasheet/mc14541b-d.pdf): pin functions, manual reset at 5 V, RC equation, single-transition counter and output polarity.
+- [MC14541BDR2G JLC C7292](https://jlcpcb.com/partdetail/C7292): Economic/Standard, Extended, observed stock4597, single-unit0.3017USD. Exact tiers/time in research/C7292.json.
+- [Samsung C0G CL10C102JB8NNNC JLC C163508](https://jlcpcb.com/partdetail/C163508): 0603,1nF,±5%,50V,Extended,observedstock483260. Catalog snapshot in research/C163508.json.
+- [Espressif ESP32-S3 datasheet](https://documentation.espressif.com/esp32_s3_datasheet_en.pdf): reset GPIO defaults and glitch notes inform GPIO4/6/7 selection.
+- [JLC assembly fees](https://jlcpcb.com/help/article/pcb-assembly-price): current fee schedule, checked again2026-10-14. Cost-model assumptions remain estimates.
+
+Other research records are historical candidates, not necessarily selected. Current selections are exclusively in hardware/circuit.json and BOM.
+
+---
+
 # 選料與接腳核對來源
 
 查閱日 2026-10-13；B.1 文件完成 2026-10-14。`research/C*.json` 是公開 JLC catalog 欄位的觀察紀錄，含當時庫存及價格；不包含登入資訊或原廠 PDF 的簽名下載連結。供應商 datasheet 保留連結，未將整份第三方文件重新散布。
@@ -23,3 +35,9 @@
 | Belden 線材 | [9505 product](https://www.belden.com/products/cable/electronic-wire-cable/multi-pair-cable/9505)、[技術資料](https://catalog.belden.com/techdata/EN/9505_techdata.pdf)。五對 24 AWG，外徑7.34 mm，單芯絕緣約1.1 mm。 |
 
 JLC：[費率](https://jlcpcb.com/help/article/pcb-assembly-price)、[FAQ](https://jlcpcb.com/help/article/pcb-assembly-faqs)、[BOM 格式](https://jlcpcb.com/help/article/bill-of-materials-for-pcb-assembly)、[KiCad 匯出](https://jlcpcb.com/help/article/how-to-generate-bom-and-centroid-files-from-kicad-8)。所有未列於上表的被動元件，精確品牌／規格／C 編號見完整 BOM 與對應 catalog 記錄。
+
+B.2 local indicators: [JLC C2286 / KT-0603R](https://jlcpcb.com/partdetail/C2286) and [JLC C2297 / KT-0805G](https://jlcpcb.com/partdetail/C2297), checked2026-10-14. Basic SMT for Economic/Standard; 20 red +2 green per controller. Existing RJ45 LINK/ACT remain. LED behavioral voltage drops are analysis assumptions, not vendor SPICE models.
+
+## R.2 manufacturing geometry, 2026-10-14
+
+[JLCPCB capabilities](https://jlcpcb.com/capabilities/pcb-capabilities): reviewed 1/2-layer 1 oz track/space, through-via and silk limits. R.2 uses 0.15 mm track/space, 0.6/0.3 mm vias, 1 mm silk text and 0.15 mm strokes. This is a geometry comparison, not factory DFM acceptance or controlled-impedance qualification. LED cathode-silk footprints preserve KiCad library copper lands; artwork changes are generated in scripts/make-led-footprints.py.

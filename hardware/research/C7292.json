@@ -1,0 +1,46 @@
+{
+  "id": "C7292",
+  "mpn": "MC14541BDR2G",
+  "manufacturer": "onsemi",
+  "package": "SOIC-14",
+  "classification": "Extended",
+  "assembly": "SMT Assembly",
+  "pcba_type": "Economic and Standard",
+  "stock": 4597,
+  "loss": 0,
+  "prices": [
+    {
+      "min_qty": 1,
+      "max_qty": 49,
+      "usd": 0.3017
+    },
+    {
+      "min_qty": 50,
+      "max_qty": 149,
+      "usd": 0.2403
+    },
+    {
+      "min_qty": 150,
+      "max_qty": 499,
+      "usd": 0.2141
+    },
+    {
+      "min_qty": 500,
+      "max_qty": 2499,
+      "usd": 0.1815
+    },
+    {
+      "min_qty": 2500,
+      "max_qty": 4999,
+      "usd": 0.1668
+    },
+    {
+      "min_qty": 5000,
+      "max_qty": -1,
+      "usd": 0.1581
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/C7292",
+  "checked_at": "2026-10-14T08:46:45.997803+00:00",
+  "status": "public JLC page observed; recheck at ordering"
+}

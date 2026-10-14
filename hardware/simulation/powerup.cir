@@ -1,0 +1,95 @@
+B.1 power-up sequence -- 5 V ramp, 3.3 V buck, ESP32-S3 pad reset states, timer rail, one photorelay channel
+* Models the first seconds after power is applied, before firmware configures GPIOs.
+* ESP32-S3 datasheet v2.2 (Table 2-1/2-2): GPIO43 (U0TXD, TIMER_ARM) and GPIO44 (U0RXD,
+* TIMER_FIRE) are "WPU, IE" at and after reset; GPIO2 (OUT_OE_N) has a 60 us low-level
+* glitch during power-up; GPIO1 (OUT_LATCH) likewise (harmless here).
+* Assumptions: internal weak pull-up RWPU (45 k typical), firmware drives both timer
+* pins low at TFW after the 3.3 V rail is valid, the OE glitch occurs at TGL, and the
+* 74HC595 power-up register content is worst-case (output high when enabled).
+* Buck: 3.3 V enabled above 2.9 V input with a 1 ms soft start (behavioral).
+.include models.lib
+.param TRAMP=10m TFW=0.3 TGL=12m RWPU=45k CT=30u KR32=1 KTH=1 KTR=1 VRST=1.1
+.param RLOAD=588 TSTOP=25 IFT=3m TON_TAU=4.4m
+* TFG: time of a hypothetical fast (1 us) 3.3 V edge on TIMER_FIRE during boot (1e6 = never)
+.param TFG=1e6
+
+V5 5V 0 PWL(0 0 {TRAMP} 5)
+Bbt bt 0 V = (V(5V) > 2.9) ? 3.3 : 0
+Rbt bt b3 1k
+Cbt b3 0 1u
+Bv33 3V3 0 V = V(b3)
+
+* firmware takeover flag and OE glitch flag
+Vfw FWCTL 0 PULSE(0 1 {TFW} 1u 1u 1000 2000)
+Bfwn FWCTLN 0 V = 1-V(FWCTL)
+Vgl GLCTL 0 PULSE(0 1 {TGL} 1u 1u 60u 2000)
+.model SWON SW(VT=0.5 VH=0.05 RON=50 ROFF=1e9)
+.model SWPAD SW(VT=0.5 VH=0.05 RON=1 ROFF=1e9)
+
+* TIMER_ARM pad (GPIO43): weak pull-up until TFW, then driven low
+Swa 3V3 wa FWCTLN 0 SWPAD
+Rwa wa ARM {RWPU}
+Sda ARM 0 FWCTL 0 SWON
+R27 ARM 0 100k
+* TIMER_FIRE pad (GPIO44)
+Swf 3V3 wf FWCTLN 0 SWPAD
+Rwf wf FIRE {RWPU}
+Sdf FIRE 0 FWCTL 0 SWON
+R28 FIRE 0 100k
+Vfg FGCTL 0 PULSE(0 1 {TFG} 1u 1u 1m 2000)
+Vfgs fg_src 0 3.3
+Sfg fg_src FIRE FGCTL 0 SWON
+
+* OUT_OE_N (GPIO2): external 10 k pull-up, 60 us low glitch at TGL
+R25 3V3 OE_N 10k
+Sgl OE_N 0 GLCTL 0 SWON
+* 74HC595 channel output: high when enabled (worst case), high-impedance otherwise
+Bdrv drv_i 0 V = V(3V3)
+Soe drv_i DRV 3V3 OE_N SWON
+R38 DRV CTRL_B 1.5k
+R39 CTRL_B 0 100k
+Q5 CTRL_K CTRL_B 0 MMBT3904_TYP
+R40 PHOTO_5V CTRL_R 220
+R41 CTRL_R CTRL_A 220
+XU10 CTRL_A CTRL_K H_PWR_A H_PWR_B TLP3122A params: IFT={IFT} TON_TAU={TON_TAU}
+Vhost HV33 H_PWR_B 3.3
+Rbtn HV33 H_PWR_A 10k
+Rtie H_PWR_B 0 1G
+
+* trigger shaping and monostable
+C40 FIRE TRIG_AC 100n
+R29 TRIG_AC TRIG_BASE 10k
+R30 TRIG_BASE 0 10k
+D2 0 TRIG_BASE D1N4148WS
+Q2 TRIG_N TRIG_BASE 0 MMBT3904_TYP
+R31 5V TRIG_N 10k
+XU7 0 TRIG_N TIMER_OUT ARM TIMER_CTRL TIMER_RC TIMER_RC 5V TLC555 params: KTH={KTH} KTR={KTR} VRST={VRST}
+C41 TIMER_CTRL 0 10n
+C42 5V 0 100n
+R32 5V TIMER_RC {510k*KR32}
+Ct TIMER_RC 0 {CT}
+R33 TIMER_OUT GATE_BASE 10k
+R34 GATE_BASE 0 100k
+Q3 PHOTO_GATE GATE_BASE 0 MMBT3904_TYP
+R35 PHOTO_GATE 5V 10k
+XQ4 PHOTO_GATE 5V PHOTO_5V AO3401A
+R36 PHOTO_5V 0 10k
+Rload PHOTO_5V 0 {RLOAD}
+
+Bon ONFLAG 0 V = (V(PHOTO_5V) > 2.5) ? 1 : 0
+Bcl CLOSED 0 V = (V(H_PWR_A,H_PWR_B) < 1.0) ? 1 : 0
+
+* Gear integration: the trapezoidal default stalls at the slow threshold crossing of the behavioral 555.
+.options method=gear
+.tran 1m {TSTOP}
+.meas tran ARM_MAX MAX V(ARM)
+.meas tran FIRE_MAX MAX V(FIRE)
+.meas tran OE_N_MIN MIN V(OE_N) FROM={TGL-1m} TO={TGL+1m}
+.meas tran RAIL_ON_TOTAL INTEG V(ONFLAG)
+.meas tran RAIL_T_ON WHEN V(PHOTO_5V)=2.5 RISE=1
+.meas tran RAIL_T_OFF WHEN V(PHOTO_5V)=2.5 FALL=LAST
+.meas tran IF_MAX MAX I(V.XU10.VSENS)
+.meas tran IF_TOTAL INTEG I(V.XU10.VSENS)
+.meas tran CLOSED_TOTAL INTEG V(CLOSED)
+.meas tran TRIG_N_MIN MIN V(TRIG_N)
+.end

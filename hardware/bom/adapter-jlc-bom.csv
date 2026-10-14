@@ -1,3 +1,3 @@
 Comment,Designator,Footprint,LCSC Part #
 S10B-PHDSS(LF)(SN),JA1,Connector_JST:JST_PHD_S10B-PHDSS_2x05_P2.00mm_Horizontal,C161672
-PZ254V-11-02P,"JA2,JA6,JA3,JA7,JA4,JA8,JA5,JA9,JA10",Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,C492401
+PZ254V-11-02P,"JA2,JA4,JA3,JA5,JA6",Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,C492401

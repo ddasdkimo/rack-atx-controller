@@ -1,0 +1,46 @@
+{
+  "id": "C2286",
+  "mpn": "KT-0603R",
+  "manufacturer": "Hubei KENTO Elec",
+  "package": "0603",
+  "classification": "Basic",
+  "assembly": "SMT Assembly",
+  "pcba_type": "Economic and Standard",
+  "stock": 7949222,
+  "loss": 10,
+  "prices": [
+    {
+      "min_qty": 1,
+      "max_qty": 999,
+      "usd": 0.0076
+    },
+    {
+      "min_qty": 1000,
+      "max_qty": 3999,
+      "usd": 0.0058
+    },
+    {
+      "min_qty": 4000,
+      "max_qty": 7999,
+      "usd": 0.0046
+    },
+    {
+      "min_qty": 8000,
+      "max_qty": 47999,
+      "usd": 0.004
+    },
+    {
+      "min_qty": 48000,
+      "max_qty": 99999,
+      "usd": 0.0037
+    },
+    {
+      "min_qty": 100000,
+      "max_qty": -1,
+      "usd": 0.0036
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/C2286",
+  "checked_at": "2026-10-14T15:04:10.920701+00:00",
+  "status": "public JLC page observed; recheck at ordering"
+}

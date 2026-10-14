@@ -1,0 +1,46 @@
+{
+  "id": "C880084",
+  "mpn": "TS555IDTTR",
+  "manufacturer": "STMicroelectronics",
+  "package": "SO-8",
+  "classification": "Extended",
+  "assembly": "SMT Assembly",
+  "pcba_type": "Economic and Standard",
+  "stock": 28,
+  "loss": 0,
+  "prices": [
+    {
+      "min_qty": 1,
+      "max_qty": 9,
+      "usd": 1.3459
+    },
+    {
+      "min_qty": 10,
+      "max_qty": 29,
+      "usd": 1.0767
+    },
+    {
+      "min_qty": 30,
+      "max_qty": 99,
+      "usd": 0.9283
+    },
+    {
+      "min_qty": 100,
+      "max_qty": 499,
+      "usd": 0.7619
+    },
+    {
+      "min_qty": 500,
+      "max_qty": 999,
+      "usd": 0.6868
+    },
+    {
+      "min_qty": 1000,
+      "max_qty": -1,
+      "usd": 0.6526
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/C880084",
+  "checked_at": "2026-10-14T08:45:08.506120+00:00",
+  "status": "public JLC page observed; recheck at ordering"
+}

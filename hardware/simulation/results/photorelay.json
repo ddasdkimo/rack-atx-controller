@@ -1,0 +1,74 @@
+{
+ "deck": "photorelay.cir",
+ "nominal": {
+  "i(v.xu10.vsens)": 0.008278,
+  "v(photo_5v)": 5.0,
+  "v(drv)": 3.171,
+  "v(ctrl_b)": 0.7469,
+  "v(ctrl_k)": 0.07105,
+  "v(ctrl_a)": 1.357,
+  "v(h_pwr_a,h_pwr_b)": 8.25e-05,
+  "i(v5)": -0.008778
+ },
+ "corners": {
+  "runs": 128,
+  "if_min_mA": 7.342,
+  "if_min_params": {
+   "V5": 4.75,
+   "VDRV": 2.9,
+   "K220": 1.01,
+   "K1500": 1.01,
+   "VFADJ": 0.13,
+   "NCH": 20,
+   "Q": "LO"
+  },
+  "if_max_mA": 9.298,
+  "if_max_params": {
+   "V5": 5.25,
+   "VDRV": 3.3,
+   "K220": 0.99,
+   "K1500": 0.99,
+   "VFADJ": -0.17,
+   "NCH": 1,
+   "Q": "HI"
+  },
+  "all_closed_with_IFT_3mA": true,
+  "margin_to_IFT_3mA_min_mA": 4.342,
+  "margin_to_IF_abs_max_50mA_mA": 40.7
+ },
+ "off_states": {
+  "drv_low": {
+   "i(v.xu10.vsens)": 9.519e-12,
+   "v(photo_5v)": 5.0,
+   "v(drv)": 3.749e-10,
+   "v(ctrl_b)": 7.404e-09,
+   "v(ctrl_k)": 4.751,
+   "v(ctrl_a)": 5.0,
+   "v(h_pwr_a,h_pwr_b)": 3.3,
+   "i(v5)": -0.0005,
+   "relay_open": true
+  },
+  "drv_tristate_oe_high": {
+   "i(v.xu10.vsens)": 9.519e-12,
+   "v(photo_5v)": 5.0,
+   "v(drv)": 8.11e-07,
+   "v(ctrl_b)": 8.06e-07,
+   "v(ctrl_k)": 4.751,
+   "v(ctrl_a)": 5.0,
+   "v(h_pwr_a,h_pwr_b)": 3.3,
+   "i(v5)": -0.0005,
+   "relay_open": true
+  },
+  "drv_tristate_20ch_rail_loaded": {
+   "i(v.xu10.vsens)": 9.505e-12,
+   "v(photo_5v)": 4.993,
+   "v(drv)": 8.103e-07,
+   "v(ctrl_b)": 8.053e-07,
+   "v(ctrl_k)": 4.744,
+   "v(ctrl_a)": 4.993,
+   "v(h_pwr_a,h_pwr_b)": 3.3,
+   "i(v5)": -0.162,
+   "relay_open": true
+  }
+ }
+}

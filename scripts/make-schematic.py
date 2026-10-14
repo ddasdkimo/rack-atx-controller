@@ -4,9 +4,9 @@ import json,uuid,csv,math,re
 from pathlib import Path
 from collections import defaultdict
 ROOT=Path(__file__).resolve().parents[1]
-OUT=ROOT/'hardware/cad';OUT.mkdir(exist_ok=True)
-REV='B.1'
-def uid(s):return str(uuid.uuid5(uuid.NAMESPACE_URL,'rack-atx/B1/'+s))
+OUT=ROOT/'hardware/cad/B2';OUT.mkdir(parents=True,exist_ok=True)
+REV='B.2'
+def uid(s):return str(uuid.uuid5(uuid.NAMESPACE_URL,'rack-atx/B2/'+s))
 def q(s):return json.dumps(str(s),ensure_ascii=False)
 P={}
 def part(key,code,value,footprint,pins,kind='ic',note=''):
@@ -16,10 +16,12 @@ def part(key,code,value,footprint,pins,kind='ic',note=''):
 def pins(names,types=None):return [(str(i+1),n,(types or {}).get(str(i+1),'passive')) for i,n in enumerate(names.split(','))]
 rfoot='Resistor_SMD:R_0603_1608Metric';cfoot='Capacitor_SMD:C_0603_1608Metric'
 for value,code in [('33','C23140'),('0','C21189'),('47','C23182'),('49.9','C23185'),('220','C22962'),('330','C23138'),('1.5k','C22843'),('5.1k','C23186'),('10k','C25804'),('12.4k','C22865'),('100k','C25803'),('510k','C23192'),('390k','C23150')]:part('R'+value,code,value+' 1%',rfoot,pins('~,~'),'r')
-for value,code,foot in [('100n','C14663',cfoot),('1n','C1588',cfoot),('10n','C57112',cfoot),('6.8n','C1631',cfoot),('22n','C1729','Capacitor_SMD:C_0805_2012Metric'),('20p','C1648',cfoot),('1u','C15849',cfoot),('4.7u','C19666',cfoot),('10u','C15850','Capacitor_SMD:C_0805_2012Metric'),('22u','C45783','Capacitor_SMD:C_0805_2012Metric')]:part('C'+value,code,value,foot,pins('~,~'),'c')
+for value,code,foot in [('100n','C14663',cfoot),('1n','C163508',cfoot),('10n','C57112',cfoot),('6.8n','C1631',cfoot),('22n','C1729','Capacitor_SMD:C_0805_2012Metric'),('20p','C1648',cfoot),('1u','C15849',cfoot),('4.7u','C19666',cfoot),('10u','C15850','Capacitor_SMD:C_0805_2012Metric'),('22u','C45783','Capacitor_SMD:C_0805_2012Metric')]:part('C'+value,code,value,foot,pins('~,~'),'c')
 part('npn','C20526','MMBT3904','Package_TO_SOT_SMD:SOT-23',pins('B,E,C'))
 part('pmos','C15127','AO3401A','Package_TO_SOT_SMD:SOT-23',pins('G,S,D'))
 part('diode','C2128','1N4148WS','Diode_SMD:D_SOD-323',pins('K,A'),'diode')
+part('ledred','C2286','KT-0603R / RED','RackATX:LED_0603_1608Metric_CathodeSilk',pins('K,A'),'diode',note='Local driver indication only, not contact feedback. Basic library; verify brightness and cathode mark in prototype.')
+part('ledgreen','C2297','KT-0805G / GREEN','RackATX:LED_0805_2012Metric_CathodeSilk',pins('K,A'),'diode',note='Controller power / output-enable indicator, not host power state. Basic library; verify brightness and cathode mark in prototype.')
 part('ssr','C4153843','TLP3122A(TPL,E','',[('1','A','passive'),('3','K','passive'),('4','OUT','passive'),('6','OUT','passive')],note='Toshiba 4-pin SO6; NOT generic SOP4. Land pattern pending manufacturer drawing review.')
 part('opto','C42381015','EL357N(B)(TA)-G','Package_SO:SO-4_4.4x2.3mm_P1.27mm',pins('A,K,E,C'),note='Verify actual SOP4 2.54mm pin pitch against package drawing before PCB layout.')
 # Correct the pin pitch for the 357 package (2.54 mm, body ~4.4 x 2.6); custom footprint pending dimensional review.
@@ -27,10 +29,10 @@ P['opto']['footprint']='';P['opto']['note']='Everlight pin map 1=A, 2=K, 3=E, 4=
 part('cmp','C67470','LM393DR','Package_SO:SOIC-8_3.9x4.9mm_P1.27mm',pins('OUT1,IN1-,IN1+,GND,IN2+,IN2-,OUT2,VCC',{'1':'open_collector','7':'open_collector','2':'input','3':'input','5':'input','6':'input','4':'power_in','8':'power_in'}))
 part('iso','C20622559','B0505S-1WR3L','Rack:HENIPER_B0505S-1WR3L',pins('GND_IN,VIN,GND_ISO,VOUT_ISO',{'1':'power_in','2':'power_in','3':'power_out','4':'power_out'}))
 part('ldo','C14289','HT7533-1','Package_TO_SOT_SMD:SOT-89-3',pins('GND,VIN,VOUT',{'1':'power_in','2':'power_in','3':'power_out'}))
-part('port','C161672','S10B-PHDSS(LF)(SN)','Connector_JST:JST_PHD_S10B-PHDSS_2x05_P2.00mm_Horizontal',pins('PWR_A,PWR_B,RST_A,RST_B,PLED+,PLED-,HDD+,HDD-,HOST_REF,NC'))
+part('port','C161672','S10B-PHDSS(LF)(SN)','Connector_JST:JST_PHD_S10B-PHDSS_2x05_P2.00mm_Horizontal',pins('PWR_A,PWR_B,RST_A,RST_B,NC5,NC6,NC7,NC8,HOST_REF,NC10'))
 part('esd','C2841440','PESD5V0S2BT','Package_TO_SOT_SMD:SOT-23',pins('IO1,IO2,GND'),note='TECH PUBLIC bidirectional dual TVS; verify pin 3 common on vendor drawing.')
 part('hc595','C5947','74HC595D,118','Package_SO:SOIC-16_3.9x9.9mm_P1.27mm',pins('QB,QC,QD,QE,QF,QG,QH,GND,QH_SER,MR_N,SHCP,STCP,OE_N,DS,QA,VCC',{**{str(i):'output' for i in [1,2,3,4,5,6,7,9,15]},**{str(i):'input' for i in [10,11,12,13,14]},'8':'power_in','16':'power_in'}))
-part('timer','C6986','TLC555CDR','Package_SO:SOIC-8_3.9x4.9mm_P1.27mm',pins('GND,TRIG,OUT,RESET_N,CTRL,THRESH,DISCH,VCC',{'1':'power_in','2':'input','3':'output','4':'input','5':'passive','6':'input','7':'open_collector','8':'power_in'}))
+part('timer','C7292','MC14541BDR2G','Package_SO:SOIC-14_3.9x8.7mm_P1.27mm',pins('RTC,CTC,RS,NC,AR,MR,GND,Q,QSEL,MODE,NC,A,B,VDD',{'1':'output','2':'output','3':'input','5':'input','6':'input','7':'power_in','8':'output','9':'input','10':'input','12':'input','13':'input','14':'power_in'}))
 part('buck','C780769','AP63203WU-7','Package_TO_SOT_SMD:TSOT-23-6',pins('FB,EN,VIN,GND,SW,BST',{'1':'input','2':'input','3':'power_in','4':'power_in','5':'power_out','6':'passive'}))
 part('ind','C167806','4.7uH FNR4018S4R7MT','Inductor_SMD:L_Sunlord_MWSA0402_4.2x4.0mm',pins('~,~'),'l',note='Confirm FNR4018 pad geometry; assigned footprint is size reference only.')
 part('fuse','C78695','MF-MSMF150/24X-2 1.5A','Fuse:Fuse_1812_4532Metric',pins('~,~'),'r')
@@ -52,18 +54,17 @@ part('eth','C32843','W5500','Package_QFP:LQFP-48_7x7mm_P0.5mm',wp)
 part('flag',None,'POWER SOURCE','', [('1','PWR','power_out')],'flag')
 # Same stocked two-pin header for the controller debug jumpers and passive adapters.
 part('header2','C492401','PZ254V-11-02P','Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical',pins('1,2'))
-# Explicitly leave unreviewed land patterns unassigned. Package/MPN remain in the
-# procurement BOM; assigning a similar but incompatible footprint would be worse.
-for key in ['opto','iso','barrel','ind']:
- P[key]['note'] += ' PCB footprint must be created/reviewed from the manufacturer drawing before layout release.'
- P[key]['footprint']=''
+# S.3 uses drawing-transcribed footprints; these remain candidates pending physical DFM.
+for key,fid in {'ssr':'RackATX:TLP3122A_11-4M1S','barrel':'RackATX:WJ500V_5.08_2P','ind':'Inductor_SMD:L_Changjiang_FNR4018S'}.items():
+ P[key]['footprint']=fid
+ P[key]['note']='Drawing/library candidate used in S.3; physical footprint and assembly DFM qualification pending.'
 
 components=[]; sheets={}; seq=defaultdict(int); sheet=''
 def page(name,title,notes):
  global sheet
  sheet=name;sheets[name]={'title':title,'notes':notes}
 def add(key,nets,ref=None,section=''):
- p=P[key];prefix='R' if p['kind']=='r' and key!='fuse' else 'C' if p['kind']=='c' else 'L' if p['kind']=='l' else 'Q' if key in ['npn','pmos'] else 'D' if key in ['diode','esd','usbesd'] else 'J' if key in ['port','barrel','usb','rj45','header2'] else 'Y' if key.startswith('xtal') else 'F' if key=='fuse' else '#FLG' if key=='flag' else 'U'
+ p=P[key];prefix='R' if p['kind']=='r' and key!='fuse' else 'C' if p['kind']=='c' else 'L' if p['kind']=='l' else 'Q' if key in ['npn','pmos'] else 'D' if key in ['diode','esd','usbesd','ledred','ledgreen'] else 'J' if key in ['port','barrel','usb','rj45','header2'] else 'Y' if key.startswith('xtal') else 'F' if key=='fuse' else '#FLG' if key=='flag' else 'U'
  if ref is None:seq[prefix]+=1;ref=prefix+str(seq[prefix])
  if not isinstance(nets,dict):nets={pn:net for (pn,_,_),net in zip(p['pins'],nets)}
  assert set(nets)=={pn for pn,_,_ in p['pins']},(ref,set(nets),p['pins'])
@@ -82,9 +83,7 @@ mapping={0:5,1:6,2:7,3:8,**{i:i+5 for i in range(4,15)},15:21,16:22,17:23,18:24,
 mn={n:None for n,_,_ in mpins}
 for n in ['2','3','20','46','55','56']:mn[n]=V
 mn['57']=G;mn['4']='EN';mn['29']='VDD_SPI';mn['53']='MCU_XN';mn['54']='MCU_XP'
-gpio={0:'BOOT_N',1:'OUT_LATCH',2:'OUT_OE_N',19:'USB_DM_MCU',20:'USB_DP_MCU',33:'USB_VBUS_SENSE',39:'SPI_SCK_RAW',40:'SPI_MOSI_RAW',41:'SPI_MISO',42:'ETH_CS_N',43:'TIMER_ARM',44:'TIMER_FIRE',45:'STRAP45',46:'STRAP46',47:'ETH_RST_N',48:'ETH_INT_N'}
-ledgp=list(range(4,19))+[21,35,36,37,38]
-for idx,g in enumerate(ledgp):gpio[g]=f'H{idx//2+1:02}_'+('PLED_N' if idx%2==0 else 'HDD_N')
+gpio={0:'BOOT_N',4:'TIMER_ARM',6:'OUT_OE_N',7:'OUT_LATCH',19:'USB_DM_MCU',20:'USB_DP_MCU',33:'USB_VBUS_SENSE',39:'SPI_SCK_RAW',40:'SPI_MOSI_RAW',41:'SPI_MISO',42:'ETH_CS_N',45:'STRAP45',46:'STRAP46',47:'ETH_RST_N',48:'ETH_INT_N'}
 for g,n in gpio.items():mn[str(mapping[g])]=n
 add('mcu',mn);cap('100n','VDD_SPI',G);cap('1u','VDD_SPI',G)
 for _ in range(6):cap('100n',V,G)
@@ -111,40 +110,47 @@ cap('6.8n','ETH_RXP','RJ_RD_P');cap('6.8n','ETH_RXN','RJ_RD_N');cap('22n','RJ_TX
 r('330',V,'RJ_LED_G_A');r('330',V,'RJ_LED_Y_A')
 add('rj45',['ETH_TXP','ETH_TXN','RJ_RD_P','RJ_TX_CT','ETH_RX_TERM','RJ_RD_N',None,G,'RJ_LED_G_A','ETH_LINK_N','ETH_ACT_N','RJ_LED_Y_A','CHASSIS'],ref='J105')
 r('0','CHASSIS',G)
-page('outputs','Output latches / timed drive rail','595 stores 20 output bits; unused 4 outputs not connected. Shift 24 zeros before OE low.\nSPI traffic shifts internal register only; latch ONLY after a complete output frame. Never latch Ethernet data.\nTimer: nominal 16.8 s, qualify 8..25 s with capacitor bias/tolerance. Firmware long press 5 s.\nOne command at a time. Repeated trigger edges can extend a 555 pulse: firmware is not a safety-rated system.')
+page('outputs','Output latches / counted timeout','Default: ARM low, OE high, latches cleared before enabling. GPIO4/6/7 avoid boot UART pulls and GPIO1/2 glitches.\nMC14541B: AR=1 disables automatic reset; MR pulled high until ARM. MODE=0, QSEL=1, A=B=1.\n200k / 1nF C0G oscillator ~2174 Hz; 32768-count timeout ~15.07s. Release ARM immediately ends output.\nARM must be low >=10ms between commands. Hardware output requires both ARM and timer Q. No LED sensing.')
 for bank in range(3):
  base=bank*8;outs=[f'DRV_{n+1:02}' if n<20 else None for n in range(base,base+8)]
  add('hc595',[*outs[1:],G,f'SHIFT_{bank+1}' if bank<2 else None,'EN','SPI_SCK','OUT_LATCH','OUT_OE_N','SPI_MOSI' if bank==0 else f'SHIFT_{bank}',outs[0],V]);cap('100n',V,G)
-r('10k',V,'OUT_OE_N');r('100k','OUT_LATCH',G);r('100k','TIMER_ARM',G);r('100k','TIMER_FIRE',G)
-# AC-coupled trigger cannot remain active merely because the MCU pin is stuck high.
-cap('100n','TIMER_FIRE','TRIG_AC');r('10k','TRIG_AC','TRIG_BASE');r('10k','TRIG_BASE',G);add('diode',['TRIG_BASE',G]);add('npn',['TRIG_BASE',G,'TRIG_N']);r('10k',V5,'TRIG_N')
-add('timer',[G,'TRIG_N','TIMER_OUT','TIMER_ARM','TIMER_CTRL','TIMER_RC','TIMER_RC',V5]);cap('10n','TIMER_CTRL',G);cap('100n',V5,G);r('510k',V5,'TIMER_RC')
-for _ in range(3):cap('10u','TIMER_RC',G)
-r('10k','TIMER_OUT','GATE_BASE');r('100k','GATE_BASE',G);add('npn',['GATE_BASE',G,'PHOTO_GATE']);r('10k','PHOTO_GATE',V5);add('pmos',['PHOTO_GATE',V5,'PHOTO_5V']);r('10k','PHOTO_5V',G);flag('PHOTO_5V')
+r('10k',V,'OUT_OE_N');r('100k','OUT_LATCH',G)
+# A 10k external pulldown defines the default state independently of firmware.
+r('10k','TIMER_ARM',G,ref='R27')
+r('10k','TIMER_ARM','ARM_RESET_B',ref='R28');r('100k','ARM_RESET_B',G,ref='R29')
+add('npn',['ARM_RESET_B',G,'TIMER_MR'],ref='Q2');r('10k',V5,'TIMER_MR',ref='R30')
+add('timer',['TIMER_RTC','TIMER_CTC','TIMER_RS',None,V5,'TIMER_MR',G,'TIMER_OUT',V5,G,None,V5,V5,V5],ref='U7')
+# Rtc=2x100k and Rs=4x100k reuse an existing Basic SKU.
+r('100k','TIMER_RTC','RTC_MID',ref='R31');r('100k','RTC_MID','OSC_RC',ref='R32')
+for i,(a,b) in enumerate(zip(['TIMER_RS','RS1','RS2','RS3'],['RS1','RS2','RS3','OSC_RC'])):r('100k',a,b,ref='RT'+str(i+1))
+cap('1n','TIMER_CTC','OSC_RC',ref='C40');cap('100n',V5,G,ref='C42')
+r('10k','TIMER_OUT','GATE_BASE',ref='R33');r('100k','GATE_BASE',G,ref='R34')
+add('npn',['GATE_BASE','ARM_SINK','PHOTO_GATE'],ref='Q3')
+r('10k','TIMER_ARM','ARM_GATE_B',ref='R37');r('100k','ARM_GATE_B',G,ref='R38');add('npn',['ARM_GATE_B',G,'ARM_SINK'],ref='Q200')
+r('10k','PHOTO_GATE',V5,ref='R35');add('pmos',['PHOTO_GATE',V5,'PHOTO_5V'],ref='Q4');r('10k','PHOTO_5V',G,ref='R36');flag('PHOTO_5V')
+# Reserve reference numbers used explicitly above before creating repeated channels.
+seq['R']=38;seq['C']=42;seq['Q']=4;seq['U']=7
 for h in range(1,11):
- H=f'H{h:02}';HG=H+'_GND';HV=H+'_3V3';HR=H+'_RAW5'
- page('host'+str(h).zfill(2),f'Host {h:02}: isolated controls / LEDs','All HOST_REF and ESD grounds on this sheet belong only to this host.\nCase buttons and LEDs remain straight-through on passive adapter. No host power is supplied on the cable.\nLED input envelope: 0..5 V common-mode; OFF differential <=0.2 V; ON >=1.4 V. Qualify actual motherboard.\nLM393 inputs tolerate positive voltage with VCC=0; 100k series limits signal loading. Not a universal F_PANEL map.')
- ns=[H+'_'+x for x in ['PWR_A','PWR_B','RST_A','RST_B','PLED_P','PLED_M','HDD_P','HDD_M']]+[HG,None]
- add('port',ns,ref='J'+str(h).zfill(2));add('iso',[G,V5,HG,HR]);cap('4.7u',V5,G);cap('10u',HR,HG);add('ldo',[HG,HR,HV]);cap('10u',HV,HG);cap('100n',HV,HG)
- # Modest bleeder ensures the isolated rail discharges and has a defined light load. Module permits 0% load; LDO rated 30V.
- r('10k',HV,HG)
+ H=f'H{h:02}';HG=H+'_GND'
+ page('host'+str(h).zfill(2),f'Host {h:02}: POWER / RESET only','Two isolated normally-open contacts parallel the original case buttons.\nNo host LED sensing or isolated supply. Pin 9 remains this host reference for button ESD protection ONLY.\nDo not join host references to controller ground or to one another. Pins 5..8 and 10 are NC.\nUse verified motherboard signal names, not a universal F_PANEL physical pin map.')
+ ns=[H+'_'+x for x in ['PWR_A','PWR_B','RST_A','RST_B']]+[None]*4+[HG,None]
+ add('port',ns,ref='J'+str(h).zfill(2))
  for k,pair in enumerate([('PWR_A','PWR_B'),('RST_A','RST_B')]):
   pre='CTRL_'+H+('_PWR' if k==0 else '_RST');out=f'DRV_{(h-1)*2+k+1:02}'
   r('1.5k',out,pre+'_B');r('100k',pre+'_B',G);add('npn',[pre+'_B',G,pre+'_K']);r('220','PHOTO_5V',pre+'_R');r('220',pre+'_R',pre+'_A');add('ssr',[pre+'_A',pre+'_K',H+'_'+pair[0],H+'_'+pair[1]])
- for k in range(4):add('esd',[ns[2*k],ns[2*k+1],HG])
- cp=[]
- for sig in ['PLED','HDD']:
-  pre=H+'_'+sig;ip=pre+'_SPLUS';im=pre+'_SMINUS';o=pre+'_CMP'
-  r('100k',pre+'_P',ip);r('10k',ip,HG);cap('1n',ip,HG)
-  r('100k',pre+'_M',im);r('10k',im,HG);cap('1n',im,HG);r('390k',HV,im);r('510k',o,pre+'_FB1');r('510k',pre+'_FB1',pre+'_FB2');r('510k',pre+'_FB2',pre+'_FB3');r('510k',pre+'_FB3',im)
-  r('10k',HV,o);r('330',HV,pre+'_OR');r('330',pre+'_OR',pre+'_OA');add('opto',[pre+'_OA',o,G,pre+'_N']);r('10k',V,pre+'_N');cap('1n',pre+'_N',G)
-  cp.append([o,ip,im])
- add('cmp',[*cp[0],HG,cp[1][2],cp[1][1],cp[1][0],HV])
-page('adapter','Passive host adapter','Build 10 identical copies. This board has no active parts and no power supply.\n2.54 mm pairs are labelled by function, not motherboard physical pin number. Connect by motherboard manual.\nPin 9 goes to separately verified host signal ground. Pin 10 stays NC at both cable ends.\nTo save a separate PCBA setup: order bare PCBs and hand-solder connectors, or substitute a crimped Y harness.')
-add('port',['PWR_A','PWR_B','RST_A','RST_B','PLED_P','PLED_M','HDD_P','HDD_M','HOST_REF',None],ref='JA1')
-for idx,(a,b) in enumerate([('PWR_A','PWR_B'),('RST_A','RST_B'),('PLED_P','PLED_M'),('HDD_P','HDD_M')]):
- add('header2',[a,b],ref='JA'+str(idx+2));add('header2',[a,b],ref='JA'+str(idx+6))
-add('header2',['HOST_REF',None],ref='JA10')
+  idx=(h-1)*2+k+1
+  r('1.5k','PHOTO_5V',pre+'_IND_A',ref='R'+str(300+idx));add('ledred',[pre+'_K',pre+'_IND_A'],ref='D'+str(100+idx))
+ for k in range(2):add('esd',[ns[2*k],ns[2*k+1],HG])
+page('indicators','Controller power and output-enable indicators','PWR: 3V3 present. EN: OUT_OE_N low, output latches enabled.\nPer-host red PWR/RST indicators follow the photorelay driver AND PHOTO_5V.\nThese indicate driver state, NOT actual contact closure or host power state.\nRJ45 built-in LINK/ACT LEDs retained. All indicators use controller ground.')
+r('330',V,'PWR_IND_A',ref='R321');add('ledgreen',[G,'PWR_IND_A'],ref='D201')
+r('330',V,'EN_IND_A',ref='R322');add('ledgreen',['OUT_OE_N','EN_IND_A'],ref='D202')
+page('adapter','Passive POWER / RESET adapter','Build 10 copies; no active components or power supply.\nPOWER and RESET each pass through to original case switch with a parallel remote branch.\nOriginal PLED/HDD cables stay directly on the motherboard and do not enter this adapter.\nPin 9: separately verified motherboard ground for button ESD. Pins 5..8 and 10 unused.')
+add('port',['PWR_A','PWR_B','RST_A','RST_B',None,None,None,None,'HOST_REF',None],ref='JA1')
+for idx,(a,b) in enumerate([('PWR_A','PWR_B'),('RST_A','RST_B')]):
+ add('header2',[a,b],ref='JA'+str(idx+2));add('header2',[a,b],ref='JA'+str(idx+4))
+add('header2',['HOST_REF',None],ref='JA6')
+P={k:v for k,v in P.items() if k in {c['key'] for c in components}}
+assert len({c['ref'] for c in components})==len(components)
 
 # CAD generator: separate, labelled functional sheets. Pin types are preserved for ERC.
 rootid=uid('root');adid=uid('adapter-root')
@@ -232,11 +238,12 @@ for name,(meta,cs) in finals.items():
 # Store the editable project symbol library as well as each sheet's cache.
 (OUT/'Rack.kicad_sym').write_text('(kicad_symbol_lib (version 20241209)(generator "kicad_symbol_editor")\n'+'\n'.join(library(k)[0].replace(q('Rack:'+k),q(k),1) for k in sorted(P))+')\n')
 for project in ['rack-atx-controller','adapter']:
- (OUT/(project+'.kicad_pro')).write_text(json.dumps({'meta':{'filename':project+'.kicad_pro','version':1}},indent=2)+'\n')
+ if not (OUT/(project+'.kicad_pro')).exists():(OUT/(project+'.kicad_pro')).write_text(json.dumps({'meta':{'filename':project+'.kicad_pro','version':1}},indent=2)+'\n')
 (OUT/'sym-lib-table').write_text('(sym_lib_table (lib (name "Rack")(type "KiCad")(uri "${KIPRJMOD}/Rack.kicad_sym")(options "")(descr "Rack ATX schematic symbols")))\n')
+(OUT/'fp-lib-table').write_text('(fp_lib_table (lib (name "RackATX")(type "KiCad")(uri "${KIPRJMOD}/../RackATX.pretty")(options "")(descr "Drawing-transcribed candidates")))\n')
 # Root hierarchy, separate adapter schematic is not included in central-board BOM/netlist.
-root=f'(kicad_sch(version 20250114)(generator "eeschema")(uuid {rootid})(paper "A3")(title_block(title "10-host rack ATX controller")(rev "B.1")(comment 1 "SCHEMATIC REVIEW - no PCB routing or Gerber release"))(lib_symbols)'
-root+='(text "5 V input -> 3.3 V logic / ten isolated host supplies\\nESP32-S3FN8 + W5500 -> three 74HC595 -> twenty isolated dry contacts\\nTwenty differential LED detectors -> twenty isolated returns -> MCU GPIO\\nOriginal case wiring bypasses this controller on passive adapters" (at 15 18 0)(effects(font(size 2 2))(justify left))(uuid '+uid('rootnote')+'))'
+root=f'(kicad_sch(version 20250114)(generator "eeschema")(uuid {rootid})(paper "A3")(title_block(title "10-host rack ATX controller")(rev "B.2")(comment 1 "B.2 circuit - prototype review, not a manufacturing release"))(lib_symbols)'
+root+='(text "B.2: ten hosts, POWER / RESET only. Original case LEDs remain on motherboard.\\n5 V input -> 3.3 V logic; ESP32-S3FN8 + W5500 -> 74HC595 -> twenty isolated dry contacts\\nMC14541B counted timeout + independent ARM gate; no LED sensing or isolated DC/DC\\nS.3 compact layout; routing authorized after placement checks; no fabrication release" (at 15 18 0)(effects(font(size 2 2))(justify left))(uuid '+uid('rootnote')+'))'
 for idx,(name,(meta,_)) in enumerate((x for x in finals.items() if x[0]!='adapter')):
  x=15+(idx%4)*100;y=52+(idx//4)*23
  root+=f'(sheet(at {x} {y})(size 85 14)(stroke(width .254)(type default))(fill(color 0 0 0 0))(uuid {uid("sheet:"+name)})(property "Sheetname" {q(meta["title"])}(at {x} {y-2} 0)(effects(font(size 1 1))(justify left)))(property "Sheetfile" {q(name+".kicad_sch")}(at {x} {y+16} 0)(effects(font(size 1 1))(justify left)))(instances(project "rack-atx-controller"(path "/{rootid}"(page "{idx+2}")))))'
@@ -253,5 +260,5 @@ for board in ['controller','adapter']:
   p=P[key];d=p['catalog'];rows.append([','.join(refs),len(refs),p['value'],d.get('manufacturer',''),d.get('mpn',p['value']),p['code'] or '',d.get('package','2.54mm THT'),p['footprint'],d.get('classification','External / hand assembly'),d.get('assembly','Hand assembly'),d.get('pcba_type',''),d.get('stock',''),d.get('checked_at',''),d.get('source',''),p['note']])
   if p['code']:jrows.append([p['value'],','.join(refs),p['footprint'] or d.get('package',''),p['code']])
  for filename,head,rs in [(f'{board}-bom.csv',['Designator','Quantity per board','Comment','Manufacturer','MPN','LCSC Part #','Package','Footprint candidate','Library class','Assembly','PCBA mode','Observed stock','Checked at UTC','Source','Notes'],rows),(f'{board}-jlc-bom.csv',['Comment','Designator','Footprint','LCSC Part #'],jrows)]:
-  with (ROOT/'hardware/bom'/filename).open('w',newline='') as f:w=csv.writer(f);w.writerow(head);w.writerows(rs)
+  with (ROOT/'hardware/bom'/filename).open('w',newline='') as f:w=csv.writer(f,lineterminator="\n");w.writerow(head);w.writerows(rs)
 print('Generated',len(components),'symbols,',len(finals)+1,'schematic sheets,',len(P),'part definitions')

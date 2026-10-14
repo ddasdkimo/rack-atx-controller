@@ -1,0 +1,52 @@
+B.1 host LED sense channel -- threshold and hysteresis with ideal differential drive
+* One PLED channel of host 01 (R46..R58, C50..C52, U14 half, U12). Host ground = node 0.
+* Controller ground CG is tied to 0 through a 0 V source only so the simulator has a
+* reference; the isolation barrier is not under test in this deck.
+* LED- is held at VCM, LED+ ramps VCM -> VCM+VDMAX -> VCM so both switching points
+* of the comparator are captured. Measured in volts of differential input.
+.include models.lib
+.param HRAIL=3.3 C3V3=3.3
+.param VOS=0 IB=25n IOS=0 RON=100 CTR=1.3
+.param KRP=1 KRG=1 KRM=1 KRMG=1 KRB=1 KRF=1 KRO=1
+.param VCM=0 VDMAX=2.5 TSWEEP=1
+
+Vh3 H3V3 0 {HRAIL}
+Vc3 C3V3 CG {C3V3}
+Vcg CG 0 0
+
+Vm M 0 {VCM}
+Vd P M PWL(0 0 {TSWEEP} {VDMAX} {2*TSWEEP} 0)
+Bvd VDIFF 0 V = V(P)-V(M)
+
+Xesd P M 0 PESD5V0S2BT
+
+R46 P SPLUS {100k*KRP}
+R47 SPLUS 0 {10k*KRG}
+C50 SPLUS 0 1n
+R48 M SMINUS {100k*KRM}
+R49 SMINUS 0 {10k*KRMG}
+C51 SMINUS 0 1n
+R50 H3V3 SMINUS {390k*KRB}
+R51 CMP FB1 {510k*KRF}
+R52 FB1 FB2 {510k*KRF}
+R53 FB2 FB3 {510k*KRF}
+R54 FB3 SMINUS {510k*KRF}
+R55 H3V3 CMP {10k*KRO}
+XU14 SPLUS SMINUS CMP H3V3 0 LM393_CH params: VOS={VOS} IB={IB} IOS={IOS} RON={RON}
+
+R56 H3V3 OR 330
+R57 OR OA 330
+XU12 OA CMP PLEDN CG EL357N params: CTR={CTR}
+R58 C3V3 PLEDN 10k
+C52 PLEDN CG 1n
+
+.tran 0.2m {2*TSWEEP}
+.meas tran VON FIND V(VDIFF) WHEN V(CMP)=1.65 FALL=1
+.meas tran VOFF FIND V(VDIFF) WHEN V(CMP)=1.65 RISE=1
+.meas tran PLEDN_LOW MIN V(PLEDN)
+.meas tran PLEDN_HIGH MAX V(PLEDN)
+.meas tran SPLUS_MAX MAX V(SPLUS)
+.meas tran SMINUS_MAX MAX V(SMINUS)
+.meas tran CMP_LOW MIN V(CMP)
+.meas tran IF_OPTO_MAX MAX I(V.XU12.VS)
+.end

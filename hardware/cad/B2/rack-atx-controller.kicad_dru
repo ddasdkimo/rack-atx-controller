@@ -1,0 +1,12 @@
+(version 1)
+# Low voltage functional separation, not a safety isolation rating.
+(rule "Host 01 separate domain" (condition "A.NetName == 'H01_*' && B.NetName != '' && B.NetName != 'H01_*'") (constraint clearance (min 1mm)))
+(rule "Host 02 separate domain" (condition "A.NetName == 'H02_*' && B.NetName != '' && B.NetName != 'H02_*'") (constraint clearance (min 1mm)))
+(rule "Host 03 separate domain" (condition "A.NetName == 'H03_*' && B.NetName != '' && B.NetName != 'H03_*'") (constraint clearance (min 1mm)))
+(rule "Host 04 separate domain" (condition "A.NetName == 'H04_*' && B.NetName != '' && B.NetName != 'H04_*'") (constraint clearance (min 1mm)))
+(rule "Host 05 separate domain" (condition "A.NetName == 'H05_*' && B.NetName != '' && B.NetName != 'H05_*'") (constraint clearance (min 1mm)))
+(rule "Host 06 separate domain" (condition "A.NetName == 'H06_*' && B.NetName != '' && B.NetName != 'H06_*'") (constraint clearance (min 1mm)))
+(rule "Host 07 separate domain" (condition "A.NetName == 'H07_*' && B.NetName != '' && B.NetName != 'H07_*'") (constraint clearance (min 1mm)))
+(rule "Host 08 separate domain" (condition "A.NetName == 'H08_*' && B.NetName != '' && B.NetName != 'H08_*'") (constraint clearance (min 1mm)))
+(rule "Host 09 separate domain" (condition "A.NetName == 'H09_*' && B.NetName != '' && B.NetName != 'H09_*'") (constraint clearance (min 1mm)))
+(rule "Host 10 separate domain" (condition "A.NetName == 'H10_*' && B.NetName != '' && B.NetName != 'H10_*'") (constraint clearance (min 1mm)))

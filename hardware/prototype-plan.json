@@ -1,6 +1,6 @@
 {
   "revision": "P.0",
-  "status": "Archived feasibility study; current direction is integrated 10-host B.1 / S.1. No P.0 manufacturing package.",
+  "status": "Archived feasibility study; selected architecture B.2 / S.3 integrated ten-host control-only board",
   "manufacturing_ready": false,
   "external_esp32_devboard": true,
   "esp32_model": null,
@@ -17,6 +17,6 @@
   "breakaway": "Routed slots and mouse-bite FR4 tabs; DFM pending",
   "panel_dimensions_mm": null,
   "assembly_preference": "One-side Economic; quote controller SMT + hand-soldered connectors and fully assembled separately",
-  "reference_design": "B.1 electrical / S.1 placement",
+  "reference_design": "Historical B.1 / S.1",
   "selected": false
 }

@@ -1,5 +1,5 @@
 {
-  "revision": "B.1",
+  "revision": "B.2",
   "parts": {
     "R33": {
       "key": "R33",
@@ -727,138 +727,6 @@
         "status": "public JLC page observed; recheck at ordering"
       }
     },
-    "R510k": {
-      "key": "R510k",
-      "code": "C23192",
-      "value": "510k 1%",
-      "footprint": "Resistor_SMD:R_0603_1608Metric",
-      "pins": [
-        [
-          "1",
-          "~",
-          "passive"
-        ],
-        [
-          "2",
-          "~",
-          "passive"
-        ]
-      ],
-      "kind": "r",
-      "note": "",
-      "catalog": {
-        "id": "C23192",
-        "mpn": "0603WAF5103T5E",
-        "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
-        "package": "0603",
-        "classification": "Basic",
-        "assembly": "SMT Assembly",
-        "pcba_type": "Economic and Standard",
-        "stock": 808197,
-        "loss": 10,
-        "prices": [
-          {
-            "min_qty": 1,
-            "max_qty": 999,
-            "usd": 0.0024
-          },
-          {
-            "min_qty": 1000,
-            "max_qty": 4999,
-            "usd": 0.0019
-          },
-          {
-            "min_qty": 5000,
-            "max_qty": 9999,
-            "usd": 0.0016
-          },
-          {
-            "min_qty": 10000,
-            "max_qty": 49999,
-            "usd": 0.0015
-          },
-          {
-            "min_qty": 50000,
-            "max_qty": 50199,
-            "usd": 0.0013
-          },
-          {
-            "min_qty": 50200,
-            "max_qty": -1,
-            "usd": 0.0013
-          }
-        ],
-        "source": "https://jlcpcb.com/partdetail/C23192",
-        "checked_at": "2026-10-13T15:12:42.767839+00:00",
-        "status": "public JLC page observed; recheck at ordering"
-      }
-    },
-    "R390k": {
-      "key": "R390k",
-      "code": "C23150",
-      "value": "390k 1%",
-      "footprint": "Resistor_SMD:R_0603_1608Metric",
-      "pins": [
-        [
-          "1",
-          "~",
-          "passive"
-        ],
-        [
-          "2",
-          "~",
-          "passive"
-        ]
-      ],
-      "kind": "r",
-      "note": "",
-      "catalog": {
-        "id": "C23150",
-        "mpn": "0603WAF3903T5E",
-        "manufacturer": "UNI-ROYAL(Uniroyal Elec)",
-        "package": "0603",
-        "classification": "Extended",
-        "assembly": "SMT Assembly",
-        "pcba_type": "Economic and Standard",
-        "stock": 68710,
-        "loss": 10,
-        "prices": [
-          {
-            "min_qty": 1,
-            "max_qty": 999,
-            "usd": 0.0032
-          },
-          {
-            "min_qty": 1000,
-            "max_qty": 4999,
-            "usd": 0.0025
-          },
-          {
-            "min_qty": 5000,
-            "max_qty": 9999,
-            "usd": 0.0022
-          },
-          {
-            "min_qty": 10000,
-            "max_qty": 49999,
-            "usd": 0.0021
-          },
-          {
-            "min_qty": 50000,
-            "max_qty": 50199,
-            "usd": 0.0018
-          },
-          {
-            "min_qty": 50200,
-            "max_qty": -1,
-            "usd": 0.0018
-          }
-        ],
-        "source": "https://jlcpcb.com/partdetail/C23150",
-        "checked_at": "2026-10-13T15:54:44.202957+00:00",
-        "status": "public JLC page observed; recheck at ordering"
-      }
-    },
     "C100n": {
       "key": "C100n",
       "code": "C14663",
@@ -927,7 +795,7 @@
     },
     "C1n": {
       "key": "C1n",
-      "code": "C1588",
+      "code": "C163508",
       "value": "1n",
       "footprint": "Capacitor_SMD:C_0603_1608Metric",
       "pins": [
@@ -945,35 +813,35 @@
       "kind": "c",
       "note": "",
       "catalog": {
-        "id": "C1588",
-        "mpn": "CL10B102KB8NNNC",
+        "id": "C163508",
+        "mpn": "CL10C102JB8NNNC",
         "manufacturer": "Samsung Electro-Mechanics",
         "package": "0603",
-        "classification": "Basic",
+        "classification": "Extended",
         "assembly": "SMT Assembly",
         "pcba_type": "Economic and Standard",
-        "stock": 6760462,
+        "stock": 483260,
         "loss": 10,
         "prices": [
           {
             "min_qty": 1,
             "max_qty": 499,
-            "usd": 0.0089
+            "usd": 0.0083
           },
           {
             "min_qty": 500,
             "max_qty": 1499,
-            "usd": 0.0068
+            "usd": 0.0065
           },
           {
             "min_qty": 1500,
             "max_qty": 3999,
-            "usd": 0.0058
+            "usd": 0.0055
           },
           {
             "min_qty": 4000,
             "max_qty": 23999,
-            "usd": 0.0046
+            "usd": 0.0049
           },
           {
             "min_qty": 24000,
@@ -983,11 +851,11 @@
           {
             "min_qty": 48000,
             "max_qty": -1,
-            "usd": 0.0041
+            "usd": 0.004
           }
         ],
-        "source": "https://jlcpcb.com/partdetail/C1588",
-        "checked_at": "2026-10-13T15:18:08.921398+00:00",
+        "source": "https://jlcpcb.com/partdetail/C163508",
+        "checked_at": "2026-10-14T08:48:03.275930+00:00",
         "status": "public JLC page observed; recheck at ordering"
       }
     },
@@ -1661,11 +1529,11 @@
         "status": "public JLC page observed; recheck at ordering"
       }
     },
-    "diode": {
-      "key": "diode",
-      "code": "C2128",
-      "value": "1N4148WS",
-      "footprint": "Diode_SMD:D_SOD-323",
+    "ledred": {
+      "key": "ledred",
+      "code": "C2286",
+      "value": "KT-0603R / RED",
+      "footprint": "RackATX:LED_0603_1608Metric_CathodeSilk",
       "pins": [
         [
           "1",
@@ -1679,51 +1547,117 @@
         ]
       ],
       "kind": "diode",
-      "note": "",
+      "note": "Local driver indication only, not contact feedback. Basic library; verify brightness and cathode mark in prototype.",
       "catalog": {
-        "id": "C2128",
-        "mpn": "1N4148WS",
-        "manufacturer": "Jiangsu Changjing Electronics Technology Co., Ltd.",
-        "package": "SOD-323",
+        "id": "C2286",
+        "mpn": "KT-0603R",
+        "manufacturer": "Hubei KENTO Elec",
+        "package": "0603",
         "classification": "Basic",
         "assembly": "SMT Assembly",
         "pcba_type": "Economic and Standard",
-        "stock": 2874385,
+        "stock": 7949222,
+        "loss": 10,
+        "prices": [
+          {
+            "min_qty": 1,
+            "max_qty": 999,
+            "usd": 0.0076
+          },
+          {
+            "min_qty": 1000,
+            "max_qty": 3999,
+            "usd": 0.0058
+          },
+          {
+            "min_qty": 4000,
+            "max_qty": 7999,
+            "usd": 0.0046
+          },
+          {
+            "min_qty": 8000,
+            "max_qty": 47999,
+            "usd": 0.004
+          },
+          {
+            "min_qty": 48000,
+            "max_qty": 99999,
+            "usd": 0.0037
+          },
+          {
+            "min_qty": 100000,
+            "max_qty": -1,
+            "usd": 0.0036
+          }
+        ],
+        "source": "https://jlcpcb.com/partdetail/C2286",
+        "checked_at": "2026-10-14T15:04:10.920701+00:00",
+        "status": "public JLC page observed; recheck at ordering"
+      }
+    },
+    "ledgreen": {
+      "key": "ledgreen",
+      "code": "C2297",
+      "value": "KT-0805G / GREEN",
+      "footprint": "RackATX:LED_0805_2012Metric_CathodeSilk",
+      "pins": [
+        [
+          "1",
+          "K",
+          "passive"
+        ],
+        [
+          "2",
+          "A",
+          "passive"
+        ]
+      ],
+      "kind": "diode",
+      "note": "Controller power / output-enable indicator, not host power state. Basic library; verify brightness and cathode mark in prototype.",
+      "catalog": {
+        "id": "C2297",
+        "mpn": "KT-0805G",
+        "manufacturer": "Hubei KENTO Elec",
+        "package": "0805",
+        "classification": "Basic",
+        "assembly": "SMT Assembly",
+        "pcba_type": "Economic and Standard",
+        "stock": 2784392,
         "loss": 10,
         "prices": [
           {
             "min_qty": 1,
             "max_qty": 499,
-            "usd": 0.015
+            "usd": 0.0164
           },
           {
             "min_qty": 500,
             "max_qty": 2999,
-            "usd": 0.0117
+            "usd": 0.0127
           },
           {
             "min_qty": 3000,
             "max_qty": 5999,
-            "usd": 0.0105
+            "usd": 0.0101
           },
           {
             "min_qty": 6000,
             "max_qty": 23999,
-            "usd": 0.0094
+            "usd": 0.0089
           },
           {
             "min_qty": 24000,
             "max_qty": 50999,
-            "usd": 0.009
+            "usd": 0.0084
           },
           {
             "min_qty": 51000,
             "max_qty": -1,
-            "usd": 0.0087
+            "usd": 0.008
           }
         ],
-        "source": "https://jlcpcb.com/partdetail/C2128",
-        "checked_at": "2026-10-13T15:24:52.134325+00:00",
+        "source": "https://jlcpcb.com/partdetail/C2297",
+        "checked_at": "2026-10-14T15:04:11.076033+00:00",
         "status": "public JLC page observed; recheck at ordering"
       }
     },
@@ -1731,7 +1665,7 @@
       "key": "ssr",
       "code": "C4153843",
       "value": "TLP3122A(TPL,E",
-      "footprint": "",
+      "footprint": "RackATX:TLP3122A_11-4M1S",
       "pins": [
         [
           "1",
@@ -1755,7 +1689,7 @@
         ]
       ],
       "kind": "ic",
-      "note": "Toshiba 4-pin SO6; NOT generic SOP4. Land pattern pending manufacturer drawing review.",
+      "note": "Drawing/library candidate used in S.3; physical footprint and assembly DFM qualification pending.",
       "catalog": {
         "id": "C4153843",
         "mpn": "TLP3122A(TPL,E",
@@ -1803,325 +1737,6 @@
         "status": "public JLC page observed; recheck at ordering"
       }
     },
-    "opto": {
-      "key": "opto",
-      "code": "C42381015",
-      "value": "EL357N(B)(TA)-G",
-      "footprint": "",
-      "pins": [
-        [
-          "1",
-          "A",
-          "passive"
-        ],
-        [
-          "2",
-          "K",
-          "passive"
-        ],
-        [
-          "3",
-          "E",
-          "passive"
-        ],
-        [
-          "4",
-          "C",
-          "passive"
-        ]
-      ],
-      "kind": "ic",
-      "note": "Everlight pin map 1=A, 2=K, 3=E, 4=C; CTR B bin. Qualified input current/temperature margin needs prototype. PCB footprint must be created/reviewed from the manufacturer drawing before layout release.",
-      "catalog": {
-        "id": "C42381015",
-        "mpn": "EL357N(B)(TA)-G",
-        "manufacturer": "Everlight Elec",
-        "package": "SOP-4-2.54mm",
-        "classification": "Extended",
-        "assembly": "SMT Assembly",
-        "pcba_type": "Economic and Standard",
-        "stock": 510538,
-        "loss": 1,
-        "prices": [
-          {
-            "min_qty": 1,
-            "max_qty": 99,
-            "usd": 0.0578
-          },
-          {
-            "min_qty": 100,
-            "max_qty": 299,
-            "usd": 0.0456
-          },
-          {
-            "min_qty": 300,
-            "max_qty": 999,
-            "usd": 0.0392
-          },
-          {
-            "min_qty": 1000,
-            "max_qty": 3499,
-            "usd": 0.0341
-          },
-          {
-            "min_qty": 3500,
-            "max_qty": 10499,
-            "usd": 0.0323
-          },
-          {
-            "min_qty": 10500,
-            "max_qty": -1,
-            "usd": 0.031
-          }
-        ],
-        "source": "https://jlcpcb.com/partdetail/C42381015",
-        "checked_at": "2026-10-13T15:15:57.027013+00:00",
-        "status": "public JLC page observed; recheck at ordering"
-      }
-    },
-    "cmp": {
-      "key": "cmp",
-      "code": "C67470",
-      "value": "LM393DR",
-      "footprint": "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm",
-      "pins": [
-        [
-          "1",
-          "OUT1",
-          "open_collector"
-        ],
-        [
-          "2",
-          "IN1-",
-          "input"
-        ],
-        [
-          "3",
-          "IN1+",
-          "input"
-        ],
-        [
-          "4",
-          "GND",
-          "power_in"
-        ],
-        [
-          "5",
-          "IN2+",
-          "input"
-        ],
-        [
-          "6",
-          "IN2-",
-          "input"
-        ],
-        [
-          "7",
-          "OUT2",
-          "open_collector"
-        ],
-        [
-          "8",
-          "VCC",
-          "power_in"
-        ]
-      ],
-      "kind": "ic",
-      "note": "",
-      "catalog": {
-        "id": "C67470",
-        "mpn": "LM393DR",
-        "manufacturer": "Texas Instruments",
-        "package": "SOIC-8",
-        "classification": "Extended",
-        "assembly": "SMT Assembly",
-        "pcba_type": "Economic and Standard",
-        "stock": 208296,
-        "loss": 0,
-        "prices": [
-          {
-            "min_qty": 1,
-            "max_qty": 99,
-            "usd": 0.0635
-          },
-          {
-            "min_qty": 100,
-            "max_qty": 299,
-            "usd": 0.0506
-          },
-          {
-            "min_qty": 300,
-            "max_qty": 2499,
-            "usd": 0.0441
-          },
-          {
-            "min_qty": 2500,
-            "max_qty": 4999,
-            "usd": 0.0385
-          },
-          {
-            "min_qty": 5000,
-            "max_qty": 9999,
-            "usd": 0.0367
-          },
-          {
-            "min_qty": 10000,
-            "max_qty": -1,
-            "usd": 0.0354
-          }
-        ],
-        "source": "https://jlcpcb.com/partdetail/C67470",
-        "checked_at": "2026-10-13T15:10:20.548004+00:00",
-        "status": "public JLC page observed; recheck at ordering"
-      }
-    },
-    "iso": {
-      "key": "iso",
-      "code": "C20622559",
-      "value": "B0505S-1WR3L",
-      "footprint": "",
-      "pins": [
-        [
-          "1",
-          "GND_IN",
-          "power_in"
-        ],
-        [
-          "2",
-          "VIN",
-          "power_in"
-        ],
-        [
-          "3",
-          "GND_ISO",
-          "power_out"
-        ],
-        [
-          "4",
-          "VOUT_ISO",
-          "power_out"
-        ]
-      ],
-      "kind": "ic",
-      "note": " PCB footprint must be created/reviewed from the manufacturer drawing before layout release.",
-      "catalog": {
-        "id": "C20622559",
-        "mpn": "B0505S-1WR3L",
-        "manufacturer": "HENIPER",
-        "package": "SIP,11.6x6mm",
-        "classification": "Extended",
-        "assembly": "Wave Soldering",
-        "pcba_type": "Economic and Standard",
-        "stock": 410,
-        "loss": 0,
-        "prices": [
-          {
-            "min_qty": 1,
-            "max_qty": 9,
-            "usd": 0.8579
-          },
-          {
-            "min_qty": 10,
-            "max_qty": 29,
-            "usd": 0.6883
-          },
-          {
-            "min_qty": 30,
-            "max_qty": 89,
-            "usd": 0.6035
-          },
-          {
-            "min_qty": 90,
-            "max_qty": 509,
-            "usd": 0.5203
-          },
-          {
-            "min_qty": 510,
-            "max_qty": 989,
-            "usd": 0.4698
-          },
-          {
-            "min_qty": 990,
-            "max_qty": -1,
-            "usd": 0.4437
-          }
-        ],
-        "source": "https://jlcpcb.com/partdetail/C20622559",
-        "checked_at": "2026-10-13T15:10:20.765309+00:00",
-        "status": "public JLC page observed; recheck at ordering"
-      }
-    },
-    "ldo": {
-      "key": "ldo",
-      "code": "C14289",
-      "value": "HT7533-1",
-      "footprint": "Package_TO_SOT_SMD:SOT-89-3",
-      "pins": [
-        [
-          "1",
-          "GND",
-          "power_in"
-        ],
-        [
-          "2",
-          "VIN",
-          "power_in"
-        ],
-        [
-          "3",
-          "VOUT",
-          "power_out"
-        ]
-      ],
-      "kind": "ic",
-      "note": "",
-      "catalog": {
-        "id": "C14289",
-        "mpn": "HT7533-1",
-        "manufacturer": "Holtek Semicon",
-        "package": "SOT-89-3",
-        "classification": "Basic",
-        "assembly": "SMT Assembly",
-        "pcba_type": "Economic and Standard",
-        "stock": 58016,
-        "loss": 2,
-        "prices": [
-          {
-            "min_qty": 1,
-            "max_qty": 49,
-            "usd": 0.1436
-          },
-          {
-            "min_qty": 50,
-            "max_qty": 149,
-            "usd": 0.1157
-          },
-          {
-            "min_qty": 150,
-            "max_qty": 999,
-            "usd": 0.1017
-          },
-          {
-            "min_qty": 1000,
-            "max_qty": 1999,
-            "usd": 0.0883
-          },
-          {
-            "min_qty": 2000,
-            "max_qty": 4999,
-            "usd": 0.08
-          },
-          {
-            "min_qty": 5000,
-            "max_qty": -1,
-            "usd": 0.0757
-          }
-        ],
-        "source": "https://jlcpcb.com/partdetail/C14289",
-        "checked_at": "2026-10-13T15:20:39.495943+00:00",
-        "status": "public JLC page observed; recheck at ordering"
-      }
-    },
     "port": {
       "key": "port",
       "code": "C161672",
@@ -2150,22 +1765,22 @@
         ],
         [
           "5",
-          "PLED+",
+          "NC5",
           "passive"
         ],
         [
           "6",
-          "PLED-",
+          "NC6",
           "passive"
         ],
         [
           "7",
-          "HDD+",
+          "NC7",
           "passive"
         ],
         [
           "8",
-          "HDD-",
+          "NC8",
           "passive"
         ],
         [
@@ -2175,7 +1790,7 @@
         ],
         [
           "10",
-          "NC",
+          "NC10",
           "passive"
         ]
       ],
@@ -2437,97 +2052,127 @@
     },
     "timer": {
       "key": "timer",
-      "code": "C6986",
-      "value": "TLC555CDR",
-      "footprint": "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm",
+      "code": "C7292",
+      "value": "MC14541BDR2G",
+      "footprint": "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm",
       "pins": [
         [
           "1",
-          "GND",
-          "power_in"
-        ],
-        [
-          "2",
-          "TRIG",
-          "input"
-        ],
-        [
-          "3",
-          "OUT",
+          "RTC",
           "output"
         ],
         [
-          "4",
-          "RESET_N",
+          "2",
+          "CTC",
+          "output"
+        ],
+        [
+          "3",
+          "RS",
           "input"
         ],
         [
-          "5",
-          "CTRL",
+          "4",
+          "NC",
           "passive"
         ],
         [
+          "5",
+          "AR",
+          "input"
+        ],
+        [
           "6",
-          "THRESH",
+          "MR",
           "input"
         ],
         [
           "7",
-          "DISCH",
-          "open_collector"
+          "GND",
+          "power_in"
         ],
         [
           "8",
-          "VCC",
+          "Q",
+          "output"
+        ],
+        [
+          "9",
+          "QSEL",
+          "input"
+        ],
+        [
+          "10",
+          "MODE",
+          "input"
+        ],
+        [
+          "11",
+          "NC",
+          "passive"
+        ],
+        [
+          "12",
+          "A",
+          "input"
+        ],
+        [
+          "13",
+          "B",
+          "input"
+        ],
+        [
+          "14",
+          "VDD",
           "power_in"
         ]
       ],
       "kind": "ic",
       "note": "",
       "catalog": {
-        "id": "C6986",
-        "mpn": "TLC555CDR",
-        "manufacturer": "Texas Instruments",
-        "package": "SOIC-8",
+        "id": "C7292",
+        "mpn": "MC14541BDR2G",
+        "manufacturer": "onsemi",
+        "package": "SOIC-14",
         "classification": "Extended",
         "assembly": "SMT Assembly",
         "pcba_type": "Economic and Standard",
-        "stock": 87305,
+        "stock": 4597,
         "loss": 0,
         "prices": [
           {
             "min_qty": 1,
             "max_qty": 49,
-            "usd": 0.2326
+            "usd": 0.3017
           },
           {
             "min_qty": 50,
             "max_qty": 149,
-            "usd": 0.1817
+            "usd": 0.2403
           },
           {
             "min_qty": 150,
             "max_qty": 499,
-            "usd": 0.1599
+            "usd": 0.2141
           },
           {
             "min_qty": 500,
             "max_qty": 2499,
-            "usd": 0.1326
+            "usd": 0.1815
           },
           {
             "min_qty": 2500,
             "max_qty": 4999,
-            "usd": 0.1116
+            "usd": 0.1668
           },
           {
             "min_qty": 5000,
             "max_qty": -1,
-            "usd": 0.1043
+            "usd": 0.1581
           }
         ],
-        "source": "https://jlcpcb.com/partdetail/C6986",
-        "checked_at": "2026-10-13T15:48:46.801603+00:00",
+        "source": "https://jlcpcb.com/partdetail/C7292",
+        "checked_at": "2026-10-14T08:46:45.997803+00:00",
         "status": "public JLC page observed; recheck at ordering"
       }
     },
@@ -2621,7 +2266,7 @@
       "key": "ind",
       "code": "C167806",
       "value": "4.7uH FNR4018S4R7MT",
-      "footprint": "",
+      "footprint": "Inductor_SMD:L_Changjiang_FNR4018S",
       "pins": [
         [
           "1",
@@ -2635,7 +2280,7 @@
         ]
       ],
       "kind": "l",
-      "note": "Confirm FNR4018 pad geometry; assigned footprint is size reference only. PCB footprint must be created/reviewed from the manufacturer drawing before layout release.",
+      "note": "Drawing/library candidate used in S.3; physical footprint and assembly DFM qualification pending.",
       "catalog": {
         "id": "C167806",
         "mpn": "FNR4018S4R7MT",
@@ -2753,7 +2398,7 @@
       "key": "barrel",
       "code": "C8465",
       "value": "WJ500V-5.08-2P",
-      "footprint": "",
+      "footprint": "RackATX:WJ500V_5.08_2P",
       "pins": [
         [
           "1",
@@ -2767,7 +2412,7 @@
         ]
       ],
       "kind": "ic",
-      "note": "5 V regulated only, 2 A external supply; screw terminal pin 1 positive, pin 2 GND. Supply separately sourced. PCB footprint must be created/reviewed from the manufacturer drawing before layout release.",
+      "note": "Drawing/library candidate used in S.3; physical footprint and assembly DFM qualification pending.",
       "catalog": {
         "id": "C8465",
         "mpn": "WJ500V-5.08-2P",
@@ -4256,28 +3901,28 @@
         "3": "3V3",
         "4": "EN",
         "5": "BOOT_N",
-        "6": "OUT_LATCH",
-        "7": "OUT_OE_N",
+        "6": null,
+        "7": null,
         "8": null,
-        "9": "H01_PLED_N",
-        "10": "H01_HDD_N",
-        "11": "H02_PLED_N",
-        "12": "H02_HDD_N",
-        "13": "H03_PLED_N",
-        "14": "H03_HDD_N",
-        "15": "H04_PLED_N",
-        "16": "H04_HDD_N",
-        "17": "H05_PLED_N",
-        "18": "H05_HDD_N",
-        "19": "H06_PLED_N",
+        "9": "TIMER_ARM",
+        "10": null,
+        "11": "OUT_OE_N",
+        "12": "OUT_LATCH",
+        "13": null,
+        "14": null,
+        "15": null,
+        "16": null,
+        "17": null,
+        "18": null,
+        "19": null,
         "20": "3V3",
-        "21": "H06_HDD_N",
-        "22": "H07_PLED_N",
-        "23": "H07_HDD_N",
-        "24": "H08_PLED_N",
+        "21": null,
+        "22": null,
+        "23": null,
+        "24": null,
         "25": "USB_DM_MCU",
         "26": "USB_DP_MCU",
-        "27": "H08_HDD_N",
+        "27": null,
         "28": null,
         "29": "VDD_SPI",
         "30": null,
@@ -4289,16 +3934,16 @@
         "37": "ETH_INT_N",
         "38": "USB_VBUS_SENSE",
         "39": null,
-        "40": "H09_PLED_N",
-        "41": "H09_HDD_N",
-        "42": "H10_PLED_N",
-        "43": "H10_HDD_N",
+        "40": null,
+        "41": null,
+        "42": null,
+        "43": null,
         "44": "SPI_SCK_RAW",
         "46": "3V3",
         "47": "SPI_MISO",
         "48": "ETH_CS_N",
-        "49": "TIMER_ARM",
-        "50": "TIMER_FIRE",
+        "49": null,
+        "50": null,
         "52": "STRAP46",
         "53": "MCU_XN",
         "54": "MCU_XP",
@@ -5158,7 +4803,7 @@
     },
     {
       "ref": "R27",
-      "key": "R100k",
+      "key": "R10k",
       "sheet": "outputs_1",
       "nets": {
         "1": "TIMER_ARM",
@@ -5168,50 +4813,20 @@
     },
     {
       "ref": "R28",
-      "key": "R100k",
+      "key": "R10k",
       "sheet": "outputs_1",
       "nets": {
-        "1": "TIMER_FIRE",
-        "2": "GND_CTRL"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C40",
-      "key": "C100n",
-      "sheet": "outputs_1",
-      "nets": {
-        "1": "TIMER_FIRE",
-        "2": "TRIG_AC"
+        "1": "TIMER_ARM",
+        "2": "ARM_RESET_B"
       },
       "section": ""
     },
     {
       "ref": "R29",
-      "key": "R10k",
+      "key": "R100k",
       "sheet": "outputs_1",
       "nets": {
-        "1": "TRIG_AC",
-        "2": "TRIG_BASE"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R30",
-      "key": "R10k",
-      "sheet": "outputs_1",
-      "nets": {
-        "1": "TRIG_BASE",
-        "2": "GND_CTRL"
-      },
-      "section": ""
-    },
-    {
-      "ref": "D2",
-      "key": "diode",
-      "sheet": "outputs_1",
-      "nets": {
-        "1": "TRIG_BASE",
+        "1": "ARM_RESET_B",
         "2": "GND_CTRL"
       },
       "section": ""
@@ -5221,19 +4836,19 @@
       "key": "npn",
       "sheet": "outputs_1",
       "nets": {
-        "1": "TRIG_BASE",
+        "1": "ARM_RESET_B",
         "2": "GND_CTRL",
-        "3": "TRIG_N"
+        "3": "TIMER_MR"
       },
       "section": ""
     },
     {
-      "ref": "R31",
+      "ref": "R30",
       "key": "R10k",
       "sheet": "outputs_1",
       "nets": {
         "1": "5V",
-        "2": "TRIG_N"
+        "2": "TIMER_MR"
       },
       "section": ""
     },
@@ -5242,24 +4857,90 @@
       "key": "timer",
       "sheet": "outputs_1",
       "nets": {
-        "1": "GND_CTRL",
-        "2": "TRIG_N",
-        "3": "TIMER_OUT",
-        "4": "TIMER_ARM",
-        "5": "TIMER_CTRL",
-        "6": "TIMER_RC",
-        "7": "TIMER_RC",
-        "8": "5V"
+        "1": "TIMER_RTC",
+        "2": "TIMER_CTC",
+        "3": "TIMER_RS",
+        "4": null,
+        "5": "5V",
+        "6": "TIMER_MR",
+        "7": "GND_CTRL",
+        "8": "TIMER_OUT",
+        "9": "5V",
+        "10": "GND_CTRL",
+        "11": null,
+        "12": "5V",
+        "13": "5V",
+        "14": "5V"
       },
       "section": ""
     },
     {
-      "ref": "C41",
-      "key": "C10n",
+      "ref": "R31",
+      "key": "R100k",
       "sheet": "outputs_1",
       "nets": {
-        "1": "TIMER_CTRL",
-        "2": "GND_CTRL"
+        "1": "TIMER_RTC",
+        "2": "RTC_MID"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R32",
+      "key": "R100k",
+      "sheet": "outputs_1",
+      "nets": {
+        "1": "RTC_MID",
+        "2": "OSC_RC"
+      },
+      "section": ""
+    },
+    {
+      "ref": "RT1",
+      "key": "R100k",
+      "sheet": "outputs_1",
+      "nets": {
+        "1": "TIMER_RS",
+        "2": "RS1"
+      },
+      "section": ""
+    },
+    {
+      "ref": "RT2",
+      "key": "R100k",
+      "sheet": "outputs_1",
+      "nets": {
+        "1": "RS1",
+        "2": "RS2"
+      },
+      "section": ""
+    },
+    {
+      "ref": "RT3",
+      "key": "R100k",
+      "sheet": "outputs_1",
+      "nets": {
+        "1": "RS2",
+        "2": "RS3"
+      },
+      "section": ""
+    },
+    {
+      "ref": "RT4",
+      "key": "R100k",
+      "sheet": "outputs_1",
+      "nets": {
+        "1": "RS3",
+        "2": "OSC_RC"
+      },
+      "section": ""
+    },
+    {
+      "ref": "C40",
+      "key": "C1n",
+      "sheet": "outputs_1",
+      "nets": {
+        "1": "TIMER_CTC",
+        "2": "OSC_RC"
       },
       "section": ""
     },
@@ -5269,46 +4950,6 @@
       "sheet": "outputs_1",
       "nets": {
         "1": "5V",
-        "2": "GND_CTRL"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R32",
-      "key": "R510k",
-      "sheet": "outputs_1",
-      "nets": {
-        "1": "5V",
-        "2": "TIMER_RC"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C43",
-      "key": "C10u",
-      "sheet": "outputs_1",
-      "nets": {
-        "1": "TIMER_RC",
-        "2": "GND_CTRL"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C44",
-      "key": "C10u",
-      "sheet": "outputs_1",
-      "nets": {
-        "1": "TIMER_RC",
-        "2": "GND_CTRL"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C45",
-      "key": "C10u",
-      "sheet": "outputs_1",
-      "nets": {
-        "1": "TIMER_RC",
         "2": "GND_CTRL"
       },
       "section": ""
@@ -5326,7 +4967,7 @@
     {
       "ref": "R34",
       "key": "R100k",
-      "sheet": "outputs_2",
+      "sheet": "outputs_1",
       "nets": {
         "1": "GATE_BASE",
         "2": "GND_CTRL"
@@ -5339,8 +4980,39 @@
       "sheet": "outputs_2",
       "nets": {
         "1": "GATE_BASE",
-        "2": "GND_CTRL",
+        "2": "ARM_SINK",
         "3": "PHOTO_GATE"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R37",
+      "key": "R10k",
+      "sheet": "outputs_2",
+      "nets": {
+        "1": "TIMER_ARM",
+        "2": "ARM_GATE_B"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R38",
+      "key": "R100k",
+      "sheet": "outputs_2",
+      "nets": {
+        "1": "ARM_GATE_B",
+        "2": "GND_CTRL"
+      },
+      "section": ""
+    },
+    {
+      "ref": "Q200",
+      "key": "npn",
+      "sheet": "outputs_2",
+      "nets": {
+        "1": "ARM_GATE_B",
+        "2": "GND_CTRL",
+        "3": "ARM_SINK"
       },
       "section": ""
     },
@@ -5387,98 +5059,25 @@
     {
       "ref": "J01",
       "key": "port",
-      "sheet": "host01_1",
+      "sheet": "host01",
       "nets": {
         "1": "H01_PWR_A",
         "2": "H01_PWR_B",
         "3": "H01_RST_A",
         "4": "H01_RST_B",
-        "5": "H01_PLED_P",
-        "6": "H01_PLED_M",
-        "7": "H01_HDD_P",
-        "8": "H01_HDD_M",
+        "5": null,
+        "6": null,
+        "7": null,
+        "8": null,
         "9": "H01_GND",
         "10": null
       },
       "section": ""
     },
     {
-      "ref": "U8",
-      "key": "iso",
-      "sheet": "host01_1",
-      "nets": {
-        "1": "GND_CTRL",
-        "2": "5V",
-        "3": "H01_GND",
-        "4": "H01_RAW5"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C46",
-      "key": "C4.7u",
-      "sheet": "host01_1",
-      "nets": {
-        "1": "5V",
-        "2": "GND_CTRL"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C47",
-      "key": "C10u",
-      "sheet": "host01_1",
-      "nets": {
-        "1": "H01_RAW5",
-        "2": "H01_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "U9",
-      "key": "ldo",
-      "sheet": "host01_1",
-      "nets": {
-        "1": "H01_GND",
-        "2": "H01_RAW5",
-        "3": "H01_3V3"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C48",
-      "key": "C10u",
-      "sheet": "host01_1",
-      "nets": {
-        "1": "H01_3V3",
-        "2": "H01_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C49",
-      "key": "C100n",
-      "sheet": "host01_1",
-      "nets": {
-        "1": "H01_3V3",
-        "2": "H01_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R37",
-      "key": "R10k",
-      "sheet": "host01_1",
-      "nets": {
-        "1": "H01_3V3",
-        "2": "H01_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R38",
+      "ref": "R39",
       "key": "R1.5k",
-      "sheet": "host01_1",
+      "sheet": "host01",
       "nets": {
         "1": "DRV_01",
         "2": "CTRL_H01_PWR_B"
@@ -5486,9 +5085,9 @@
       "section": ""
     },
     {
-      "ref": "R39",
+      "ref": "R40",
       "key": "R100k",
-      "sheet": "host01_1",
+      "sheet": "host01",
       "nets": {
         "1": "CTRL_H01_PWR_B",
         "2": "GND_CTRL"
@@ -5498,7 +5097,7 @@
     {
       "ref": "Q5",
       "key": "npn",
-      "sheet": "host01_1",
+      "sheet": "host01",
       "nets": {
         "1": "CTRL_H01_PWR_B",
         "2": "GND_CTRL",
@@ -5507,9 +5106,9 @@
       "section": ""
     },
     {
-      "ref": "R40",
+      "ref": "R41",
       "key": "R220",
-      "sheet": "host01_1",
+      "sheet": "host01",
       "nets": {
         "1": "PHOTO_5V",
         "2": "CTRL_H01_PWR_R"
@@ -5517,9 +5116,9 @@
       "section": ""
     },
     {
-      "ref": "R41",
+      "ref": "R42",
       "key": "R220",
-      "sheet": "host01_1",
+      "sheet": "host01",
       "nets": {
         "1": "CTRL_H01_PWR_R",
         "2": "CTRL_H01_PWR_A"
@@ -5527,9 +5126,9 @@
       "section": ""
     },
     {
-      "ref": "U10",
+      "ref": "U8",
       "key": "ssr",
-      "sheet": "host01_1",
+      "sheet": "host01",
       "nets": {
         "1": "CTRL_H01_PWR_A",
         "3": "CTRL_H01_PWR_K",
@@ -5539,9 +5138,29 @@
       "section": ""
     },
     {
-      "ref": "R42",
+      "ref": "R301",
       "key": "R1.5k",
-      "sheet": "host01_1",
+      "sheet": "host01",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H01_PWR_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D101",
+      "key": "ledred",
+      "sheet": "host01",
+      "nets": {
+        "1": "CTRL_H01_PWR_K",
+        "2": "CTRL_H01_PWR_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R43",
+      "key": "R1.5k",
+      "sheet": "host01",
       "nets": {
         "1": "DRV_02",
         "2": "CTRL_H01_RST_B"
@@ -5549,9 +5168,9 @@
       "section": ""
     },
     {
-      "ref": "R43",
+      "ref": "R44",
       "key": "R100k",
-      "sheet": "host01_1",
+      "sheet": "host01",
       "nets": {
         "1": "CTRL_H01_RST_B",
         "2": "GND_CTRL"
@@ -5561,7 +5180,7 @@
     {
       "ref": "Q6",
       "key": "npn",
-      "sheet": "host01_1",
+      "sheet": "host01",
       "nets": {
         "1": "CTRL_H01_RST_B",
         "2": "GND_CTRL",
@@ -5570,9 +5189,9 @@
       "section": ""
     },
     {
-      "ref": "R44",
+      "ref": "R45",
       "key": "R220",
-      "sheet": "host01_1",
+      "sheet": "host01",
       "nets": {
         "1": "PHOTO_5V",
         "2": "CTRL_H01_RST_R"
@@ -5580,9 +5199,9 @@
       "section": ""
     },
     {
-      "ref": "R45",
+      "ref": "R46",
       "key": "R220",
-      "sheet": "host01_1",
+      "sheet": "host01",
       "nets": {
         "1": "CTRL_H01_RST_R",
         "2": "CTRL_H01_RST_A"
@@ -5590,9 +5209,9 @@
       "section": ""
     },
     {
-      "ref": "U11",
+      "ref": "U9",
       "key": "ssr",
-      "sheet": "host01_1",
+      "sheet": "host01",
       "nets": {
         "1": "CTRL_H01_RST_A",
         "3": "CTRL_H01_RST_K",
@@ -5602,9 +5221,29 @@
       "section": ""
     },
     {
-      "ref": "D3",
+      "ref": "R302",
+      "key": "R1.5k",
+      "sheet": "host01",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H01_RST_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D102",
+      "key": "ledred",
+      "sheet": "host01",
+      "nets": {
+        "1": "CTRL_H01_RST_K",
+        "2": "CTRL_H01_RST_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D2",
       "key": "esd",
-      "sheet": "host01_1",
+      "sheet": "host01",
       "nets": {
         "1": "H01_PWR_A",
         "2": "H01_PWR_B",
@@ -5613,9 +5252,9 @@
       "section": ""
     },
     {
-      "ref": "D4",
+      "ref": "D3",
       "key": "esd",
-      "sheet": "host01_1",
+      "sheet": "host01",
       "nets": {
         "1": "H01_RST_A",
         "2": "H01_RST_B",
@@ -5624,482 +5263,27 @@
       "section": ""
     },
     {
-      "ref": "D5",
-      "key": "esd",
-      "sheet": "host01_1",
-      "nets": {
-        "1": "H01_PLED_P",
-        "2": "H01_PLED_M",
-        "3": "H01_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "D6",
-      "key": "esd",
-      "sheet": "host01_1",
-      "nets": {
-        "1": "H01_HDD_P",
-        "2": "H01_HDD_M",
-        "3": "H01_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R46",
-      "key": "R100k",
-      "sheet": "host01_2",
-      "nets": {
-        "1": "H01_PLED_P",
-        "2": "H01_PLED_SPLUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R47",
-      "key": "R10k",
-      "sheet": "host01_2",
-      "nets": {
-        "1": "H01_PLED_SPLUS",
-        "2": "H01_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C50",
-      "key": "C1n",
-      "sheet": "host01_2",
-      "nets": {
-        "1": "H01_PLED_SPLUS",
-        "2": "H01_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R48",
-      "key": "R100k",
-      "sheet": "host01_2",
-      "nets": {
-        "1": "H01_PLED_M",
-        "2": "H01_PLED_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R49",
-      "key": "R10k",
-      "sheet": "host01_2",
-      "nets": {
-        "1": "H01_PLED_SMINUS",
-        "2": "H01_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C51",
-      "key": "C1n",
-      "sheet": "host01_2",
-      "nets": {
-        "1": "H01_PLED_SMINUS",
-        "2": "H01_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R50",
-      "key": "R390k",
-      "sheet": "host01_2",
-      "nets": {
-        "1": "H01_3V3",
-        "2": "H01_PLED_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R51",
-      "key": "R510k",
-      "sheet": "host01_2",
-      "nets": {
-        "1": "H01_PLED_CMP",
-        "2": "H01_PLED_FB1"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R52",
-      "key": "R510k",
-      "sheet": "host01_2",
-      "nets": {
-        "1": "H01_PLED_FB1",
-        "2": "H01_PLED_FB2"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R53",
-      "key": "R510k",
-      "sheet": "host01_2",
-      "nets": {
-        "1": "H01_PLED_FB2",
-        "2": "H01_PLED_FB3"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R54",
-      "key": "R510k",
-      "sheet": "host01_2",
-      "nets": {
-        "1": "H01_PLED_FB3",
-        "2": "H01_PLED_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R55",
-      "key": "R10k",
-      "sheet": "host01_2",
-      "nets": {
-        "1": "H01_3V3",
-        "2": "H01_PLED_CMP"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R56",
-      "key": "R330",
-      "sheet": "host01_2",
-      "nets": {
-        "1": "H01_3V3",
-        "2": "H01_PLED_OR"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R57",
-      "key": "R330",
-      "sheet": "host01_2",
-      "nets": {
-        "1": "H01_PLED_OR",
-        "2": "H01_PLED_OA"
-      },
-      "section": ""
-    },
-    {
-      "ref": "U12",
-      "key": "opto",
-      "sheet": "host01_2",
-      "nets": {
-        "1": "H01_PLED_OA",
-        "2": "H01_PLED_CMP",
-        "3": "GND_CTRL",
-        "4": "H01_PLED_N"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R58",
-      "key": "R10k",
-      "sheet": "host01_2",
-      "nets": {
-        "1": "3V3",
-        "2": "H01_PLED_N"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C52",
-      "key": "C1n",
-      "sheet": "host01_2",
-      "nets": {
-        "1": "H01_PLED_N",
-        "2": "GND_CTRL"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R59",
-      "key": "R100k",
-      "sheet": "host01_2",
-      "nets": {
-        "1": "H01_HDD_P",
-        "2": "H01_HDD_SPLUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R60",
-      "key": "R10k",
-      "sheet": "host01_2",
-      "nets": {
-        "1": "H01_HDD_SPLUS",
-        "2": "H01_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C53",
-      "key": "C1n",
-      "sheet": "host01_2",
-      "nets": {
-        "1": "H01_HDD_SPLUS",
-        "2": "H01_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R61",
-      "key": "R100k",
-      "sheet": "host01_2",
-      "nets": {
-        "1": "H01_HDD_M",
-        "2": "H01_HDD_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R62",
-      "key": "R10k",
-      "sheet": "host01_2",
-      "nets": {
-        "1": "H01_HDD_SMINUS",
-        "2": "H01_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C54",
-      "key": "C1n",
-      "sheet": "host01_2",
-      "nets": {
-        "1": "H01_HDD_SMINUS",
-        "2": "H01_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R63",
-      "key": "R390k",
-      "sheet": "host01_2",
-      "nets": {
-        "1": "H01_3V3",
-        "2": "H01_HDD_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R64",
-      "key": "R510k",
-      "sheet": "host01_3",
-      "nets": {
-        "1": "H01_HDD_CMP",
-        "2": "H01_HDD_FB1"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R65",
-      "key": "R510k",
-      "sheet": "host01_3",
-      "nets": {
-        "1": "H01_HDD_FB1",
-        "2": "H01_HDD_FB2"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R66",
-      "key": "R510k",
-      "sheet": "host01_3",
-      "nets": {
-        "1": "H01_HDD_FB2",
-        "2": "H01_HDD_FB3"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R67",
-      "key": "R510k",
-      "sheet": "host01_3",
-      "nets": {
-        "1": "H01_HDD_FB3",
-        "2": "H01_HDD_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R68",
-      "key": "R10k",
-      "sheet": "host01_3",
-      "nets": {
-        "1": "H01_3V3",
-        "2": "H01_HDD_CMP"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R69",
-      "key": "R330",
-      "sheet": "host01_3",
-      "nets": {
-        "1": "H01_3V3",
-        "2": "H01_HDD_OR"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R70",
-      "key": "R330",
-      "sheet": "host01_3",
-      "nets": {
-        "1": "H01_HDD_OR",
-        "2": "H01_HDD_OA"
-      },
-      "section": ""
-    },
-    {
-      "ref": "U13",
-      "key": "opto",
-      "sheet": "host01_3",
-      "nets": {
-        "1": "H01_HDD_OA",
-        "2": "H01_HDD_CMP",
-        "3": "GND_CTRL",
-        "4": "H01_HDD_N"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R71",
-      "key": "R10k",
-      "sheet": "host01_3",
-      "nets": {
-        "1": "3V3",
-        "2": "H01_HDD_N"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C55",
-      "key": "C1n",
-      "sheet": "host01_3",
-      "nets": {
-        "1": "H01_HDD_N",
-        "2": "GND_CTRL"
-      },
-      "section": ""
-    },
-    {
-      "ref": "U14",
-      "key": "cmp",
-      "sheet": "host01_3",
-      "nets": {
-        "1": "H01_PLED_CMP",
-        "2": "H01_PLED_SPLUS",
-        "3": "H01_PLED_SMINUS",
-        "4": "H01_GND",
-        "5": "H01_HDD_SMINUS",
-        "6": "H01_HDD_SPLUS",
-        "7": "H01_HDD_CMP",
-        "8": "H01_3V3"
-      },
-      "section": ""
-    },
-    {
       "ref": "J02",
       "key": "port",
-      "sheet": "host02_1",
+      "sheet": "host02",
       "nets": {
         "1": "H02_PWR_A",
         "2": "H02_PWR_B",
         "3": "H02_RST_A",
         "4": "H02_RST_B",
-        "5": "H02_PLED_P",
-        "6": "H02_PLED_M",
-        "7": "H02_HDD_P",
-        "8": "H02_HDD_M",
+        "5": null,
+        "6": null,
+        "7": null,
+        "8": null,
         "9": "H02_GND",
         "10": null
       },
       "section": ""
     },
     {
-      "ref": "U15",
-      "key": "iso",
-      "sheet": "host02_1",
-      "nets": {
-        "1": "GND_CTRL",
-        "2": "5V",
-        "3": "H02_GND",
-        "4": "H02_RAW5"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C56",
-      "key": "C4.7u",
-      "sheet": "host02_1",
-      "nets": {
-        "1": "5V",
-        "2": "GND_CTRL"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C57",
-      "key": "C10u",
-      "sheet": "host02_1",
-      "nets": {
-        "1": "H02_RAW5",
-        "2": "H02_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "U16",
-      "key": "ldo",
-      "sheet": "host02_1",
-      "nets": {
-        "1": "H02_GND",
-        "2": "H02_RAW5",
-        "3": "H02_3V3"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C58",
-      "key": "C10u",
-      "sheet": "host02_1",
-      "nets": {
-        "1": "H02_3V3",
-        "2": "H02_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C59",
-      "key": "C100n",
-      "sheet": "host02_1",
-      "nets": {
-        "1": "H02_3V3",
-        "2": "H02_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R72",
-      "key": "R10k",
-      "sheet": "host02_1",
-      "nets": {
-        "1": "H02_3V3",
-        "2": "H02_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R73",
+      "ref": "R47",
       "key": "R1.5k",
-      "sheet": "host02_1",
+      "sheet": "host02",
       "nets": {
         "1": "DRV_03",
         "2": "CTRL_H02_PWR_B"
@@ -6107,9 +5291,9 @@
       "section": ""
     },
     {
-      "ref": "R74",
+      "ref": "R48",
       "key": "R100k",
-      "sheet": "host02_1",
+      "sheet": "host02",
       "nets": {
         "1": "CTRL_H02_PWR_B",
         "2": "GND_CTRL"
@@ -6119,7 +5303,7 @@
     {
       "ref": "Q7",
       "key": "npn",
-      "sheet": "host02_1",
+      "sheet": "host02",
       "nets": {
         "1": "CTRL_H02_PWR_B",
         "2": "GND_CTRL",
@@ -6128,9 +5312,9 @@
       "section": ""
     },
     {
-      "ref": "R75",
+      "ref": "R49",
       "key": "R220",
-      "sheet": "host02_1",
+      "sheet": "host02",
       "nets": {
         "1": "PHOTO_5V",
         "2": "CTRL_H02_PWR_R"
@@ -6138,9 +5322,9 @@
       "section": ""
     },
     {
-      "ref": "R76",
+      "ref": "R50",
       "key": "R220",
-      "sheet": "host02_1",
+      "sheet": "host02",
       "nets": {
         "1": "CTRL_H02_PWR_R",
         "2": "CTRL_H02_PWR_A"
@@ -6148,9 +5332,9 @@
       "section": ""
     },
     {
-      "ref": "U17",
+      "ref": "U10",
       "key": "ssr",
-      "sheet": "host02_1",
+      "sheet": "host02",
       "nets": {
         "1": "CTRL_H02_PWR_A",
         "3": "CTRL_H02_PWR_K",
@@ -6160,9 +5344,29 @@
       "section": ""
     },
     {
-      "ref": "R77",
+      "ref": "R303",
       "key": "R1.5k",
-      "sheet": "host02_1",
+      "sheet": "host02",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H02_PWR_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D103",
+      "key": "ledred",
+      "sheet": "host02",
+      "nets": {
+        "1": "CTRL_H02_PWR_K",
+        "2": "CTRL_H02_PWR_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R51",
+      "key": "R1.5k",
+      "sheet": "host02",
       "nets": {
         "1": "DRV_04",
         "2": "CTRL_H02_RST_B"
@@ -6170,9 +5374,9 @@
       "section": ""
     },
     {
-      "ref": "R78",
+      "ref": "R52",
       "key": "R100k",
-      "sheet": "host02_1",
+      "sheet": "host02",
       "nets": {
         "1": "CTRL_H02_RST_B",
         "2": "GND_CTRL"
@@ -6182,7 +5386,7 @@
     {
       "ref": "Q8",
       "key": "npn",
-      "sheet": "host02_1",
+      "sheet": "host02",
       "nets": {
         "1": "CTRL_H02_RST_B",
         "2": "GND_CTRL",
@@ -6191,9 +5395,9 @@
       "section": ""
     },
     {
-      "ref": "R79",
+      "ref": "R53",
       "key": "R220",
-      "sheet": "host02_1",
+      "sheet": "host02",
       "nets": {
         "1": "PHOTO_5V",
         "2": "CTRL_H02_RST_R"
@@ -6201,9 +5405,9 @@
       "section": ""
     },
     {
-      "ref": "R80",
+      "ref": "R54",
       "key": "R220",
-      "sheet": "host02_1",
+      "sheet": "host02",
       "nets": {
         "1": "CTRL_H02_RST_R",
         "2": "CTRL_H02_RST_A"
@@ -6211,9 +5415,9 @@
       "section": ""
     },
     {
-      "ref": "U18",
+      "ref": "U11",
       "key": "ssr",
-      "sheet": "host02_1",
+      "sheet": "host02",
       "nets": {
         "1": "CTRL_H02_RST_A",
         "3": "CTRL_H02_RST_K",
@@ -6223,9 +5427,29 @@
       "section": ""
     },
     {
-      "ref": "D7",
+      "ref": "R304",
+      "key": "R1.5k",
+      "sheet": "host02",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H02_RST_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D104",
+      "key": "ledred",
+      "sheet": "host02",
+      "nets": {
+        "1": "CTRL_H02_RST_K",
+        "2": "CTRL_H02_RST_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D4",
       "key": "esd",
-      "sheet": "host02_1",
+      "sheet": "host02",
       "nets": {
         "1": "H02_PWR_A",
         "2": "H02_PWR_B",
@@ -6234,9 +5458,9 @@
       "section": ""
     },
     {
-      "ref": "D8",
+      "ref": "D5",
       "key": "esd",
-      "sheet": "host02_1",
+      "sheet": "host02",
       "nets": {
         "1": "H02_RST_A",
         "2": "H02_RST_B",
@@ -6245,482 +5469,27 @@
       "section": ""
     },
     {
-      "ref": "D9",
-      "key": "esd",
-      "sheet": "host02_1",
-      "nets": {
-        "1": "H02_PLED_P",
-        "2": "H02_PLED_M",
-        "3": "H02_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "D10",
-      "key": "esd",
-      "sheet": "host02_1",
-      "nets": {
-        "1": "H02_HDD_P",
-        "2": "H02_HDD_M",
-        "3": "H02_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R81",
-      "key": "R100k",
-      "sheet": "host02_2",
-      "nets": {
-        "1": "H02_PLED_P",
-        "2": "H02_PLED_SPLUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R82",
-      "key": "R10k",
-      "sheet": "host02_2",
-      "nets": {
-        "1": "H02_PLED_SPLUS",
-        "2": "H02_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C60",
-      "key": "C1n",
-      "sheet": "host02_2",
-      "nets": {
-        "1": "H02_PLED_SPLUS",
-        "2": "H02_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R83",
-      "key": "R100k",
-      "sheet": "host02_2",
-      "nets": {
-        "1": "H02_PLED_M",
-        "2": "H02_PLED_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R84",
-      "key": "R10k",
-      "sheet": "host02_2",
-      "nets": {
-        "1": "H02_PLED_SMINUS",
-        "2": "H02_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C61",
-      "key": "C1n",
-      "sheet": "host02_2",
-      "nets": {
-        "1": "H02_PLED_SMINUS",
-        "2": "H02_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R85",
-      "key": "R390k",
-      "sheet": "host02_2",
-      "nets": {
-        "1": "H02_3V3",
-        "2": "H02_PLED_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R86",
-      "key": "R510k",
-      "sheet": "host02_2",
-      "nets": {
-        "1": "H02_PLED_CMP",
-        "2": "H02_PLED_FB1"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R87",
-      "key": "R510k",
-      "sheet": "host02_2",
-      "nets": {
-        "1": "H02_PLED_FB1",
-        "2": "H02_PLED_FB2"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R88",
-      "key": "R510k",
-      "sheet": "host02_2",
-      "nets": {
-        "1": "H02_PLED_FB2",
-        "2": "H02_PLED_FB3"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R89",
-      "key": "R510k",
-      "sheet": "host02_2",
-      "nets": {
-        "1": "H02_PLED_FB3",
-        "2": "H02_PLED_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R90",
-      "key": "R10k",
-      "sheet": "host02_2",
-      "nets": {
-        "1": "H02_3V3",
-        "2": "H02_PLED_CMP"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R91",
-      "key": "R330",
-      "sheet": "host02_2",
-      "nets": {
-        "1": "H02_3V3",
-        "2": "H02_PLED_OR"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R92",
-      "key": "R330",
-      "sheet": "host02_2",
-      "nets": {
-        "1": "H02_PLED_OR",
-        "2": "H02_PLED_OA"
-      },
-      "section": ""
-    },
-    {
-      "ref": "U19",
-      "key": "opto",
-      "sheet": "host02_2",
-      "nets": {
-        "1": "H02_PLED_OA",
-        "2": "H02_PLED_CMP",
-        "3": "GND_CTRL",
-        "4": "H02_PLED_N"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R93",
-      "key": "R10k",
-      "sheet": "host02_2",
-      "nets": {
-        "1": "3V3",
-        "2": "H02_PLED_N"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C62",
-      "key": "C1n",
-      "sheet": "host02_2",
-      "nets": {
-        "1": "H02_PLED_N",
-        "2": "GND_CTRL"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R94",
-      "key": "R100k",
-      "sheet": "host02_2",
-      "nets": {
-        "1": "H02_HDD_P",
-        "2": "H02_HDD_SPLUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R95",
-      "key": "R10k",
-      "sheet": "host02_2",
-      "nets": {
-        "1": "H02_HDD_SPLUS",
-        "2": "H02_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C63",
-      "key": "C1n",
-      "sheet": "host02_2",
-      "nets": {
-        "1": "H02_HDD_SPLUS",
-        "2": "H02_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R96",
-      "key": "R100k",
-      "sheet": "host02_2",
-      "nets": {
-        "1": "H02_HDD_M",
-        "2": "H02_HDD_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R97",
-      "key": "R10k",
-      "sheet": "host02_2",
-      "nets": {
-        "1": "H02_HDD_SMINUS",
-        "2": "H02_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C64",
-      "key": "C1n",
-      "sheet": "host02_2",
-      "nets": {
-        "1": "H02_HDD_SMINUS",
-        "2": "H02_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R98",
-      "key": "R390k",
-      "sheet": "host02_2",
-      "nets": {
-        "1": "H02_3V3",
-        "2": "H02_HDD_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R99",
-      "key": "R510k",
-      "sheet": "host02_3",
-      "nets": {
-        "1": "H02_HDD_CMP",
-        "2": "H02_HDD_FB1"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R100",
-      "key": "R510k",
-      "sheet": "host02_3",
-      "nets": {
-        "1": "H02_HDD_FB1",
-        "2": "H02_HDD_FB2"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R101",
-      "key": "R510k",
-      "sheet": "host02_3",
-      "nets": {
-        "1": "H02_HDD_FB2",
-        "2": "H02_HDD_FB3"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R102",
-      "key": "R510k",
-      "sheet": "host02_3",
-      "nets": {
-        "1": "H02_HDD_FB3",
-        "2": "H02_HDD_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R103",
-      "key": "R10k",
-      "sheet": "host02_3",
-      "nets": {
-        "1": "H02_3V3",
-        "2": "H02_HDD_CMP"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R104",
-      "key": "R330",
-      "sheet": "host02_3",
-      "nets": {
-        "1": "H02_3V3",
-        "2": "H02_HDD_OR"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R105",
-      "key": "R330",
-      "sheet": "host02_3",
-      "nets": {
-        "1": "H02_HDD_OR",
-        "2": "H02_HDD_OA"
-      },
-      "section": ""
-    },
-    {
-      "ref": "U20",
-      "key": "opto",
-      "sheet": "host02_3",
-      "nets": {
-        "1": "H02_HDD_OA",
-        "2": "H02_HDD_CMP",
-        "3": "GND_CTRL",
-        "4": "H02_HDD_N"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R106",
-      "key": "R10k",
-      "sheet": "host02_3",
-      "nets": {
-        "1": "3V3",
-        "2": "H02_HDD_N"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C65",
-      "key": "C1n",
-      "sheet": "host02_3",
-      "nets": {
-        "1": "H02_HDD_N",
-        "2": "GND_CTRL"
-      },
-      "section": ""
-    },
-    {
-      "ref": "U21",
-      "key": "cmp",
-      "sheet": "host02_3",
-      "nets": {
-        "1": "H02_PLED_CMP",
-        "2": "H02_PLED_SPLUS",
-        "3": "H02_PLED_SMINUS",
-        "4": "H02_GND",
-        "5": "H02_HDD_SMINUS",
-        "6": "H02_HDD_SPLUS",
-        "7": "H02_HDD_CMP",
-        "8": "H02_3V3"
-      },
-      "section": ""
-    },
-    {
       "ref": "J03",
       "key": "port",
-      "sheet": "host03_1",
+      "sheet": "host03",
       "nets": {
         "1": "H03_PWR_A",
         "2": "H03_PWR_B",
         "3": "H03_RST_A",
         "4": "H03_RST_B",
-        "5": "H03_PLED_P",
-        "6": "H03_PLED_M",
-        "7": "H03_HDD_P",
-        "8": "H03_HDD_M",
+        "5": null,
+        "6": null,
+        "7": null,
+        "8": null,
         "9": "H03_GND",
         "10": null
       },
       "section": ""
     },
     {
-      "ref": "U22",
-      "key": "iso",
-      "sheet": "host03_1",
-      "nets": {
-        "1": "GND_CTRL",
-        "2": "5V",
-        "3": "H03_GND",
-        "4": "H03_RAW5"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C66",
-      "key": "C4.7u",
-      "sheet": "host03_1",
-      "nets": {
-        "1": "5V",
-        "2": "GND_CTRL"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C67",
-      "key": "C10u",
-      "sheet": "host03_1",
-      "nets": {
-        "1": "H03_RAW5",
-        "2": "H03_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "U23",
-      "key": "ldo",
-      "sheet": "host03_1",
-      "nets": {
-        "1": "H03_GND",
-        "2": "H03_RAW5",
-        "3": "H03_3V3"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C68",
-      "key": "C10u",
-      "sheet": "host03_1",
-      "nets": {
-        "1": "H03_3V3",
-        "2": "H03_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C69",
-      "key": "C100n",
-      "sheet": "host03_1",
-      "nets": {
-        "1": "H03_3V3",
-        "2": "H03_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R107",
-      "key": "R10k",
-      "sheet": "host03_1",
-      "nets": {
-        "1": "H03_3V3",
-        "2": "H03_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R108",
+      "ref": "R55",
       "key": "R1.5k",
-      "sheet": "host03_1",
+      "sheet": "host03",
       "nets": {
         "1": "DRV_05",
         "2": "CTRL_H03_PWR_B"
@@ -6728,9 +5497,9 @@
       "section": ""
     },
     {
-      "ref": "R109",
+      "ref": "R56",
       "key": "R100k",
-      "sheet": "host03_1",
+      "sheet": "host03",
       "nets": {
         "1": "CTRL_H03_PWR_B",
         "2": "GND_CTRL"
@@ -6740,7 +5509,7 @@
     {
       "ref": "Q9",
       "key": "npn",
-      "sheet": "host03_1",
+      "sheet": "host03",
       "nets": {
         "1": "CTRL_H03_PWR_B",
         "2": "GND_CTRL",
@@ -6749,9 +5518,9 @@
       "section": ""
     },
     {
-      "ref": "R110",
+      "ref": "R57",
       "key": "R220",
-      "sheet": "host03_1",
+      "sheet": "host03",
       "nets": {
         "1": "PHOTO_5V",
         "2": "CTRL_H03_PWR_R"
@@ -6759,9 +5528,9 @@
       "section": ""
     },
     {
-      "ref": "R111",
+      "ref": "R58",
       "key": "R220",
-      "sheet": "host03_1",
+      "sheet": "host03",
       "nets": {
         "1": "CTRL_H03_PWR_R",
         "2": "CTRL_H03_PWR_A"
@@ -6769,9 +5538,9 @@
       "section": ""
     },
     {
-      "ref": "U24",
+      "ref": "U12",
       "key": "ssr",
-      "sheet": "host03_1",
+      "sheet": "host03",
       "nets": {
         "1": "CTRL_H03_PWR_A",
         "3": "CTRL_H03_PWR_K",
@@ -6781,9 +5550,29 @@
       "section": ""
     },
     {
-      "ref": "R112",
+      "ref": "R305",
       "key": "R1.5k",
-      "sheet": "host03_1",
+      "sheet": "host03",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H03_PWR_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D105",
+      "key": "ledred",
+      "sheet": "host03",
+      "nets": {
+        "1": "CTRL_H03_PWR_K",
+        "2": "CTRL_H03_PWR_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R59",
+      "key": "R1.5k",
+      "sheet": "host03",
       "nets": {
         "1": "DRV_06",
         "2": "CTRL_H03_RST_B"
@@ -6791,9 +5580,9 @@
       "section": ""
     },
     {
-      "ref": "R113",
+      "ref": "R60",
       "key": "R100k",
-      "sheet": "host03_1",
+      "sheet": "host03",
       "nets": {
         "1": "CTRL_H03_RST_B",
         "2": "GND_CTRL"
@@ -6803,7 +5592,7 @@
     {
       "ref": "Q10",
       "key": "npn",
-      "sheet": "host03_1",
+      "sheet": "host03",
       "nets": {
         "1": "CTRL_H03_RST_B",
         "2": "GND_CTRL",
@@ -6812,9 +5601,9 @@
       "section": ""
     },
     {
-      "ref": "R114",
+      "ref": "R61",
       "key": "R220",
-      "sheet": "host03_1",
+      "sheet": "host03",
       "nets": {
         "1": "PHOTO_5V",
         "2": "CTRL_H03_RST_R"
@@ -6822,9 +5611,9 @@
       "section": ""
     },
     {
-      "ref": "R115",
+      "ref": "R62",
       "key": "R220",
-      "sheet": "host03_1",
+      "sheet": "host03",
       "nets": {
         "1": "CTRL_H03_RST_R",
         "2": "CTRL_H03_RST_A"
@@ -6832,9 +5621,9 @@
       "section": ""
     },
     {
-      "ref": "U25",
+      "ref": "U13",
       "key": "ssr",
-      "sheet": "host03_1",
+      "sheet": "host03",
       "nets": {
         "1": "CTRL_H03_RST_A",
         "3": "CTRL_H03_RST_K",
@@ -6844,9 +5633,29 @@
       "section": ""
     },
     {
-      "ref": "D11",
+      "ref": "R306",
+      "key": "R1.5k",
+      "sheet": "host03",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H03_RST_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D106",
+      "key": "ledred",
+      "sheet": "host03",
+      "nets": {
+        "1": "CTRL_H03_RST_K",
+        "2": "CTRL_H03_RST_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D6",
       "key": "esd",
-      "sheet": "host03_1",
+      "sheet": "host03",
       "nets": {
         "1": "H03_PWR_A",
         "2": "H03_PWR_B",
@@ -6855,9 +5664,9 @@
       "section": ""
     },
     {
-      "ref": "D12",
+      "ref": "D7",
       "key": "esd",
-      "sheet": "host03_1",
+      "sheet": "host03",
       "nets": {
         "1": "H03_RST_A",
         "2": "H03_RST_B",
@@ -6866,482 +5675,27 @@
       "section": ""
     },
     {
-      "ref": "D13",
-      "key": "esd",
-      "sheet": "host03_1",
-      "nets": {
-        "1": "H03_PLED_P",
-        "2": "H03_PLED_M",
-        "3": "H03_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "D14",
-      "key": "esd",
-      "sheet": "host03_1",
-      "nets": {
-        "1": "H03_HDD_P",
-        "2": "H03_HDD_M",
-        "3": "H03_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R116",
-      "key": "R100k",
-      "sheet": "host03_2",
-      "nets": {
-        "1": "H03_PLED_P",
-        "2": "H03_PLED_SPLUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R117",
-      "key": "R10k",
-      "sheet": "host03_2",
-      "nets": {
-        "1": "H03_PLED_SPLUS",
-        "2": "H03_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C70",
-      "key": "C1n",
-      "sheet": "host03_2",
-      "nets": {
-        "1": "H03_PLED_SPLUS",
-        "2": "H03_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R118",
-      "key": "R100k",
-      "sheet": "host03_2",
-      "nets": {
-        "1": "H03_PLED_M",
-        "2": "H03_PLED_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R119",
-      "key": "R10k",
-      "sheet": "host03_2",
-      "nets": {
-        "1": "H03_PLED_SMINUS",
-        "2": "H03_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C71",
-      "key": "C1n",
-      "sheet": "host03_2",
-      "nets": {
-        "1": "H03_PLED_SMINUS",
-        "2": "H03_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R120",
-      "key": "R390k",
-      "sheet": "host03_2",
-      "nets": {
-        "1": "H03_3V3",
-        "2": "H03_PLED_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R121",
-      "key": "R510k",
-      "sheet": "host03_2",
-      "nets": {
-        "1": "H03_PLED_CMP",
-        "2": "H03_PLED_FB1"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R122",
-      "key": "R510k",
-      "sheet": "host03_2",
-      "nets": {
-        "1": "H03_PLED_FB1",
-        "2": "H03_PLED_FB2"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R123",
-      "key": "R510k",
-      "sheet": "host03_2",
-      "nets": {
-        "1": "H03_PLED_FB2",
-        "2": "H03_PLED_FB3"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R124",
-      "key": "R510k",
-      "sheet": "host03_2",
-      "nets": {
-        "1": "H03_PLED_FB3",
-        "2": "H03_PLED_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R125",
-      "key": "R10k",
-      "sheet": "host03_2",
-      "nets": {
-        "1": "H03_3V3",
-        "2": "H03_PLED_CMP"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R126",
-      "key": "R330",
-      "sheet": "host03_2",
-      "nets": {
-        "1": "H03_3V3",
-        "2": "H03_PLED_OR"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R127",
-      "key": "R330",
-      "sheet": "host03_2",
-      "nets": {
-        "1": "H03_PLED_OR",
-        "2": "H03_PLED_OA"
-      },
-      "section": ""
-    },
-    {
-      "ref": "U26",
-      "key": "opto",
-      "sheet": "host03_2",
-      "nets": {
-        "1": "H03_PLED_OA",
-        "2": "H03_PLED_CMP",
-        "3": "GND_CTRL",
-        "4": "H03_PLED_N"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R128",
-      "key": "R10k",
-      "sheet": "host03_2",
-      "nets": {
-        "1": "3V3",
-        "2": "H03_PLED_N"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C72",
-      "key": "C1n",
-      "sheet": "host03_2",
-      "nets": {
-        "1": "H03_PLED_N",
-        "2": "GND_CTRL"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R129",
-      "key": "R100k",
-      "sheet": "host03_2",
-      "nets": {
-        "1": "H03_HDD_P",
-        "2": "H03_HDD_SPLUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R130",
-      "key": "R10k",
-      "sheet": "host03_2",
-      "nets": {
-        "1": "H03_HDD_SPLUS",
-        "2": "H03_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C73",
-      "key": "C1n",
-      "sheet": "host03_2",
-      "nets": {
-        "1": "H03_HDD_SPLUS",
-        "2": "H03_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R131",
-      "key": "R100k",
-      "sheet": "host03_2",
-      "nets": {
-        "1": "H03_HDD_M",
-        "2": "H03_HDD_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R132",
-      "key": "R10k",
-      "sheet": "host03_2",
-      "nets": {
-        "1": "H03_HDD_SMINUS",
-        "2": "H03_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C74",
-      "key": "C1n",
-      "sheet": "host03_2",
-      "nets": {
-        "1": "H03_HDD_SMINUS",
-        "2": "H03_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R133",
-      "key": "R390k",
-      "sheet": "host03_2",
-      "nets": {
-        "1": "H03_3V3",
-        "2": "H03_HDD_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R134",
-      "key": "R510k",
-      "sheet": "host03_3",
-      "nets": {
-        "1": "H03_HDD_CMP",
-        "2": "H03_HDD_FB1"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R135",
-      "key": "R510k",
-      "sheet": "host03_3",
-      "nets": {
-        "1": "H03_HDD_FB1",
-        "2": "H03_HDD_FB2"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R136",
-      "key": "R510k",
-      "sheet": "host03_3",
-      "nets": {
-        "1": "H03_HDD_FB2",
-        "2": "H03_HDD_FB3"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R137",
-      "key": "R510k",
-      "sheet": "host03_3",
-      "nets": {
-        "1": "H03_HDD_FB3",
-        "2": "H03_HDD_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R138",
-      "key": "R10k",
-      "sheet": "host03_3",
-      "nets": {
-        "1": "H03_3V3",
-        "2": "H03_HDD_CMP"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R139",
-      "key": "R330",
-      "sheet": "host03_3",
-      "nets": {
-        "1": "H03_3V3",
-        "2": "H03_HDD_OR"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R140",
-      "key": "R330",
-      "sheet": "host03_3",
-      "nets": {
-        "1": "H03_HDD_OR",
-        "2": "H03_HDD_OA"
-      },
-      "section": ""
-    },
-    {
-      "ref": "U27",
-      "key": "opto",
-      "sheet": "host03_3",
-      "nets": {
-        "1": "H03_HDD_OA",
-        "2": "H03_HDD_CMP",
-        "3": "GND_CTRL",
-        "4": "H03_HDD_N"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R141",
-      "key": "R10k",
-      "sheet": "host03_3",
-      "nets": {
-        "1": "3V3",
-        "2": "H03_HDD_N"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C75",
-      "key": "C1n",
-      "sheet": "host03_3",
-      "nets": {
-        "1": "H03_HDD_N",
-        "2": "GND_CTRL"
-      },
-      "section": ""
-    },
-    {
-      "ref": "U28",
-      "key": "cmp",
-      "sheet": "host03_3",
-      "nets": {
-        "1": "H03_PLED_CMP",
-        "2": "H03_PLED_SPLUS",
-        "3": "H03_PLED_SMINUS",
-        "4": "H03_GND",
-        "5": "H03_HDD_SMINUS",
-        "6": "H03_HDD_SPLUS",
-        "7": "H03_HDD_CMP",
-        "8": "H03_3V3"
-      },
-      "section": ""
-    },
-    {
       "ref": "J04",
       "key": "port",
-      "sheet": "host04_1",
+      "sheet": "host04",
       "nets": {
         "1": "H04_PWR_A",
         "2": "H04_PWR_B",
         "3": "H04_RST_A",
         "4": "H04_RST_B",
-        "5": "H04_PLED_P",
-        "6": "H04_PLED_M",
-        "7": "H04_HDD_P",
-        "8": "H04_HDD_M",
+        "5": null,
+        "6": null,
+        "7": null,
+        "8": null,
         "9": "H04_GND",
         "10": null
       },
       "section": ""
     },
     {
-      "ref": "U29",
-      "key": "iso",
-      "sheet": "host04_1",
-      "nets": {
-        "1": "GND_CTRL",
-        "2": "5V",
-        "3": "H04_GND",
-        "4": "H04_RAW5"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C76",
-      "key": "C4.7u",
-      "sheet": "host04_1",
-      "nets": {
-        "1": "5V",
-        "2": "GND_CTRL"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C77",
-      "key": "C10u",
-      "sheet": "host04_1",
-      "nets": {
-        "1": "H04_RAW5",
-        "2": "H04_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "U30",
-      "key": "ldo",
-      "sheet": "host04_1",
-      "nets": {
-        "1": "H04_GND",
-        "2": "H04_RAW5",
-        "3": "H04_3V3"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C78",
-      "key": "C10u",
-      "sheet": "host04_1",
-      "nets": {
-        "1": "H04_3V3",
-        "2": "H04_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C79",
-      "key": "C100n",
-      "sheet": "host04_1",
-      "nets": {
-        "1": "H04_3V3",
-        "2": "H04_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R142",
-      "key": "R10k",
-      "sheet": "host04_1",
-      "nets": {
-        "1": "H04_3V3",
-        "2": "H04_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R143",
+      "ref": "R63",
       "key": "R1.5k",
-      "sheet": "host04_1",
+      "sheet": "host04",
       "nets": {
         "1": "DRV_07",
         "2": "CTRL_H04_PWR_B"
@@ -7349,9 +5703,9 @@
       "section": ""
     },
     {
-      "ref": "R144",
+      "ref": "R64",
       "key": "R100k",
-      "sheet": "host04_1",
+      "sheet": "host04",
       "nets": {
         "1": "CTRL_H04_PWR_B",
         "2": "GND_CTRL"
@@ -7361,7 +5715,7 @@
     {
       "ref": "Q11",
       "key": "npn",
-      "sheet": "host04_1",
+      "sheet": "host04",
       "nets": {
         "1": "CTRL_H04_PWR_B",
         "2": "GND_CTRL",
@@ -7370,9 +5724,9 @@
       "section": ""
     },
     {
-      "ref": "R145",
+      "ref": "R65",
       "key": "R220",
-      "sheet": "host04_1",
+      "sheet": "host04",
       "nets": {
         "1": "PHOTO_5V",
         "2": "CTRL_H04_PWR_R"
@@ -7380,9 +5734,9 @@
       "section": ""
     },
     {
-      "ref": "R146",
+      "ref": "R66",
       "key": "R220",
-      "sheet": "host04_1",
+      "sheet": "host04",
       "nets": {
         "1": "CTRL_H04_PWR_R",
         "2": "CTRL_H04_PWR_A"
@@ -7390,9 +5744,9 @@
       "section": ""
     },
     {
-      "ref": "U31",
+      "ref": "U14",
       "key": "ssr",
-      "sheet": "host04_1",
+      "sheet": "host04",
       "nets": {
         "1": "CTRL_H04_PWR_A",
         "3": "CTRL_H04_PWR_K",
@@ -7402,9 +5756,29 @@
       "section": ""
     },
     {
-      "ref": "R147",
+      "ref": "R307",
       "key": "R1.5k",
-      "sheet": "host04_1",
+      "sheet": "host04",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H04_PWR_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D107",
+      "key": "ledred",
+      "sheet": "host04",
+      "nets": {
+        "1": "CTRL_H04_PWR_K",
+        "2": "CTRL_H04_PWR_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R67",
+      "key": "R1.5k",
+      "sheet": "host04",
       "nets": {
         "1": "DRV_08",
         "2": "CTRL_H04_RST_B"
@@ -7412,9 +5786,9 @@
       "section": ""
     },
     {
-      "ref": "R148",
+      "ref": "R68",
       "key": "R100k",
-      "sheet": "host04_1",
+      "sheet": "host04",
       "nets": {
         "1": "CTRL_H04_RST_B",
         "2": "GND_CTRL"
@@ -7424,7 +5798,7 @@
     {
       "ref": "Q12",
       "key": "npn",
-      "sheet": "host04_1",
+      "sheet": "host04",
       "nets": {
         "1": "CTRL_H04_RST_B",
         "2": "GND_CTRL",
@@ -7433,9 +5807,9 @@
       "section": ""
     },
     {
-      "ref": "R149",
+      "ref": "R69",
       "key": "R220",
-      "sheet": "host04_1",
+      "sheet": "host04",
       "nets": {
         "1": "PHOTO_5V",
         "2": "CTRL_H04_RST_R"
@@ -7443,9 +5817,9 @@
       "section": ""
     },
     {
-      "ref": "R150",
+      "ref": "R70",
       "key": "R220",
-      "sheet": "host04_1",
+      "sheet": "host04",
       "nets": {
         "1": "CTRL_H04_RST_R",
         "2": "CTRL_H04_RST_A"
@@ -7453,9 +5827,9 @@
       "section": ""
     },
     {
-      "ref": "U32",
+      "ref": "U15",
       "key": "ssr",
-      "sheet": "host04_1",
+      "sheet": "host04",
       "nets": {
         "1": "CTRL_H04_RST_A",
         "3": "CTRL_H04_RST_K",
@@ -7465,9 +5839,29 @@
       "section": ""
     },
     {
-      "ref": "D15",
+      "ref": "R308",
+      "key": "R1.5k",
+      "sheet": "host04",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H04_RST_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D108",
+      "key": "ledred",
+      "sheet": "host04",
+      "nets": {
+        "1": "CTRL_H04_RST_K",
+        "2": "CTRL_H04_RST_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D8",
       "key": "esd",
-      "sheet": "host04_1",
+      "sheet": "host04",
       "nets": {
         "1": "H04_PWR_A",
         "2": "H04_PWR_B",
@@ -7476,9 +5870,9 @@
       "section": ""
     },
     {
-      "ref": "D16",
+      "ref": "D9",
       "key": "esd",
-      "sheet": "host04_1",
+      "sheet": "host04",
       "nets": {
         "1": "H04_RST_A",
         "2": "H04_RST_B",
@@ -7487,482 +5881,27 @@
       "section": ""
     },
     {
-      "ref": "D17",
-      "key": "esd",
-      "sheet": "host04_1",
-      "nets": {
-        "1": "H04_PLED_P",
-        "2": "H04_PLED_M",
-        "3": "H04_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "D18",
-      "key": "esd",
-      "sheet": "host04_1",
-      "nets": {
-        "1": "H04_HDD_P",
-        "2": "H04_HDD_M",
-        "3": "H04_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R151",
-      "key": "R100k",
-      "sheet": "host04_2",
-      "nets": {
-        "1": "H04_PLED_P",
-        "2": "H04_PLED_SPLUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R152",
-      "key": "R10k",
-      "sheet": "host04_2",
-      "nets": {
-        "1": "H04_PLED_SPLUS",
-        "2": "H04_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C80",
-      "key": "C1n",
-      "sheet": "host04_2",
-      "nets": {
-        "1": "H04_PLED_SPLUS",
-        "2": "H04_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R153",
-      "key": "R100k",
-      "sheet": "host04_2",
-      "nets": {
-        "1": "H04_PLED_M",
-        "2": "H04_PLED_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R154",
-      "key": "R10k",
-      "sheet": "host04_2",
-      "nets": {
-        "1": "H04_PLED_SMINUS",
-        "2": "H04_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C81",
-      "key": "C1n",
-      "sheet": "host04_2",
-      "nets": {
-        "1": "H04_PLED_SMINUS",
-        "2": "H04_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R155",
-      "key": "R390k",
-      "sheet": "host04_2",
-      "nets": {
-        "1": "H04_3V3",
-        "2": "H04_PLED_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R156",
-      "key": "R510k",
-      "sheet": "host04_2",
-      "nets": {
-        "1": "H04_PLED_CMP",
-        "2": "H04_PLED_FB1"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R157",
-      "key": "R510k",
-      "sheet": "host04_2",
-      "nets": {
-        "1": "H04_PLED_FB1",
-        "2": "H04_PLED_FB2"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R158",
-      "key": "R510k",
-      "sheet": "host04_2",
-      "nets": {
-        "1": "H04_PLED_FB2",
-        "2": "H04_PLED_FB3"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R159",
-      "key": "R510k",
-      "sheet": "host04_2",
-      "nets": {
-        "1": "H04_PLED_FB3",
-        "2": "H04_PLED_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R160",
-      "key": "R10k",
-      "sheet": "host04_2",
-      "nets": {
-        "1": "H04_3V3",
-        "2": "H04_PLED_CMP"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R161",
-      "key": "R330",
-      "sheet": "host04_2",
-      "nets": {
-        "1": "H04_3V3",
-        "2": "H04_PLED_OR"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R162",
-      "key": "R330",
-      "sheet": "host04_2",
-      "nets": {
-        "1": "H04_PLED_OR",
-        "2": "H04_PLED_OA"
-      },
-      "section": ""
-    },
-    {
-      "ref": "U33",
-      "key": "opto",
-      "sheet": "host04_2",
-      "nets": {
-        "1": "H04_PLED_OA",
-        "2": "H04_PLED_CMP",
-        "3": "GND_CTRL",
-        "4": "H04_PLED_N"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R163",
-      "key": "R10k",
-      "sheet": "host04_2",
-      "nets": {
-        "1": "3V3",
-        "2": "H04_PLED_N"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C82",
-      "key": "C1n",
-      "sheet": "host04_2",
-      "nets": {
-        "1": "H04_PLED_N",
-        "2": "GND_CTRL"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R164",
-      "key": "R100k",
-      "sheet": "host04_2",
-      "nets": {
-        "1": "H04_HDD_P",
-        "2": "H04_HDD_SPLUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R165",
-      "key": "R10k",
-      "sheet": "host04_2",
-      "nets": {
-        "1": "H04_HDD_SPLUS",
-        "2": "H04_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C83",
-      "key": "C1n",
-      "sheet": "host04_2",
-      "nets": {
-        "1": "H04_HDD_SPLUS",
-        "2": "H04_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R166",
-      "key": "R100k",
-      "sheet": "host04_2",
-      "nets": {
-        "1": "H04_HDD_M",
-        "2": "H04_HDD_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R167",
-      "key": "R10k",
-      "sheet": "host04_2",
-      "nets": {
-        "1": "H04_HDD_SMINUS",
-        "2": "H04_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C84",
-      "key": "C1n",
-      "sheet": "host04_2",
-      "nets": {
-        "1": "H04_HDD_SMINUS",
-        "2": "H04_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R168",
-      "key": "R390k",
-      "sheet": "host04_2",
-      "nets": {
-        "1": "H04_3V3",
-        "2": "H04_HDD_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R169",
-      "key": "R510k",
-      "sheet": "host04_3",
-      "nets": {
-        "1": "H04_HDD_CMP",
-        "2": "H04_HDD_FB1"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R170",
-      "key": "R510k",
-      "sheet": "host04_3",
-      "nets": {
-        "1": "H04_HDD_FB1",
-        "2": "H04_HDD_FB2"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R171",
-      "key": "R510k",
-      "sheet": "host04_3",
-      "nets": {
-        "1": "H04_HDD_FB2",
-        "2": "H04_HDD_FB3"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R172",
-      "key": "R510k",
-      "sheet": "host04_3",
-      "nets": {
-        "1": "H04_HDD_FB3",
-        "2": "H04_HDD_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R173",
-      "key": "R10k",
-      "sheet": "host04_3",
-      "nets": {
-        "1": "H04_3V3",
-        "2": "H04_HDD_CMP"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R174",
-      "key": "R330",
-      "sheet": "host04_3",
-      "nets": {
-        "1": "H04_3V3",
-        "2": "H04_HDD_OR"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R175",
-      "key": "R330",
-      "sheet": "host04_3",
-      "nets": {
-        "1": "H04_HDD_OR",
-        "2": "H04_HDD_OA"
-      },
-      "section": ""
-    },
-    {
-      "ref": "U34",
-      "key": "opto",
-      "sheet": "host04_3",
-      "nets": {
-        "1": "H04_HDD_OA",
-        "2": "H04_HDD_CMP",
-        "3": "GND_CTRL",
-        "4": "H04_HDD_N"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R176",
-      "key": "R10k",
-      "sheet": "host04_3",
-      "nets": {
-        "1": "3V3",
-        "2": "H04_HDD_N"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C85",
-      "key": "C1n",
-      "sheet": "host04_3",
-      "nets": {
-        "1": "H04_HDD_N",
-        "2": "GND_CTRL"
-      },
-      "section": ""
-    },
-    {
-      "ref": "U35",
-      "key": "cmp",
-      "sheet": "host04_3",
-      "nets": {
-        "1": "H04_PLED_CMP",
-        "2": "H04_PLED_SPLUS",
-        "3": "H04_PLED_SMINUS",
-        "4": "H04_GND",
-        "5": "H04_HDD_SMINUS",
-        "6": "H04_HDD_SPLUS",
-        "7": "H04_HDD_CMP",
-        "8": "H04_3V3"
-      },
-      "section": ""
-    },
-    {
       "ref": "J05",
       "key": "port",
-      "sheet": "host05_1",
+      "sheet": "host05",
       "nets": {
         "1": "H05_PWR_A",
         "2": "H05_PWR_B",
         "3": "H05_RST_A",
         "4": "H05_RST_B",
-        "5": "H05_PLED_P",
-        "6": "H05_PLED_M",
-        "7": "H05_HDD_P",
-        "8": "H05_HDD_M",
+        "5": null,
+        "6": null,
+        "7": null,
+        "8": null,
         "9": "H05_GND",
         "10": null
       },
       "section": ""
     },
     {
-      "ref": "U36",
-      "key": "iso",
-      "sheet": "host05_1",
-      "nets": {
-        "1": "GND_CTRL",
-        "2": "5V",
-        "3": "H05_GND",
-        "4": "H05_RAW5"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C86",
-      "key": "C4.7u",
-      "sheet": "host05_1",
-      "nets": {
-        "1": "5V",
-        "2": "GND_CTRL"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C87",
-      "key": "C10u",
-      "sheet": "host05_1",
-      "nets": {
-        "1": "H05_RAW5",
-        "2": "H05_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "U37",
-      "key": "ldo",
-      "sheet": "host05_1",
-      "nets": {
-        "1": "H05_GND",
-        "2": "H05_RAW5",
-        "3": "H05_3V3"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C88",
-      "key": "C10u",
-      "sheet": "host05_1",
-      "nets": {
-        "1": "H05_3V3",
-        "2": "H05_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C89",
-      "key": "C100n",
-      "sheet": "host05_1",
-      "nets": {
-        "1": "H05_3V3",
-        "2": "H05_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R177",
-      "key": "R10k",
-      "sheet": "host05_1",
-      "nets": {
-        "1": "H05_3V3",
-        "2": "H05_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R178",
+      "ref": "R71",
       "key": "R1.5k",
-      "sheet": "host05_1",
+      "sheet": "host05",
       "nets": {
         "1": "DRV_09",
         "2": "CTRL_H05_PWR_B"
@@ -7970,9 +5909,9 @@
       "section": ""
     },
     {
-      "ref": "R179",
+      "ref": "R72",
       "key": "R100k",
-      "sheet": "host05_1",
+      "sheet": "host05",
       "nets": {
         "1": "CTRL_H05_PWR_B",
         "2": "GND_CTRL"
@@ -7982,7 +5921,7 @@
     {
       "ref": "Q13",
       "key": "npn",
-      "sheet": "host05_1",
+      "sheet": "host05",
       "nets": {
         "1": "CTRL_H05_PWR_B",
         "2": "GND_CTRL",
@@ -7991,9 +5930,9 @@
       "section": ""
     },
     {
-      "ref": "R180",
+      "ref": "R73",
       "key": "R220",
-      "sheet": "host05_1",
+      "sheet": "host05",
       "nets": {
         "1": "PHOTO_5V",
         "2": "CTRL_H05_PWR_R"
@@ -8001,9 +5940,9 @@
       "section": ""
     },
     {
-      "ref": "R181",
+      "ref": "R74",
       "key": "R220",
-      "sheet": "host05_1",
+      "sheet": "host05",
       "nets": {
         "1": "CTRL_H05_PWR_R",
         "2": "CTRL_H05_PWR_A"
@@ -8011,9 +5950,9 @@
       "section": ""
     },
     {
-      "ref": "U38",
+      "ref": "U16",
       "key": "ssr",
-      "sheet": "host05_1",
+      "sheet": "host05",
       "nets": {
         "1": "CTRL_H05_PWR_A",
         "3": "CTRL_H05_PWR_K",
@@ -8023,9 +5962,29 @@
       "section": ""
     },
     {
-      "ref": "R182",
+      "ref": "R309",
       "key": "R1.5k",
-      "sheet": "host05_1",
+      "sheet": "host05",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H05_PWR_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D109",
+      "key": "ledred",
+      "sheet": "host05",
+      "nets": {
+        "1": "CTRL_H05_PWR_K",
+        "2": "CTRL_H05_PWR_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R75",
+      "key": "R1.5k",
+      "sheet": "host05",
       "nets": {
         "1": "DRV_10",
         "2": "CTRL_H05_RST_B"
@@ -8033,9 +5992,9 @@
       "section": ""
     },
     {
-      "ref": "R183",
+      "ref": "R76",
       "key": "R100k",
-      "sheet": "host05_1",
+      "sheet": "host05",
       "nets": {
         "1": "CTRL_H05_RST_B",
         "2": "GND_CTRL"
@@ -8045,7 +6004,7 @@
     {
       "ref": "Q14",
       "key": "npn",
-      "sheet": "host05_1",
+      "sheet": "host05",
       "nets": {
         "1": "CTRL_H05_RST_B",
         "2": "GND_CTRL",
@@ -8054,9 +6013,9 @@
       "section": ""
     },
     {
-      "ref": "R184",
+      "ref": "R77",
       "key": "R220",
-      "sheet": "host05_1",
+      "sheet": "host05",
       "nets": {
         "1": "PHOTO_5V",
         "2": "CTRL_H05_RST_R"
@@ -8064,9 +6023,9 @@
       "section": ""
     },
     {
-      "ref": "R185",
+      "ref": "R78",
       "key": "R220",
-      "sheet": "host05_1",
+      "sheet": "host05",
       "nets": {
         "1": "CTRL_H05_RST_R",
         "2": "CTRL_H05_RST_A"
@@ -8074,9 +6033,9 @@
       "section": ""
     },
     {
-      "ref": "U39",
+      "ref": "U17",
       "key": "ssr",
-      "sheet": "host05_1",
+      "sheet": "host05",
       "nets": {
         "1": "CTRL_H05_RST_A",
         "3": "CTRL_H05_RST_K",
@@ -8086,9 +6045,29 @@
       "section": ""
     },
     {
-      "ref": "D19",
+      "ref": "R310",
+      "key": "R1.5k",
+      "sheet": "host05",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H05_RST_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D110",
+      "key": "ledred",
+      "sheet": "host05",
+      "nets": {
+        "1": "CTRL_H05_RST_K",
+        "2": "CTRL_H05_RST_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D10",
       "key": "esd",
-      "sheet": "host05_1",
+      "sheet": "host05",
       "nets": {
         "1": "H05_PWR_A",
         "2": "H05_PWR_B",
@@ -8097,9 +6076,9 @@
       "section": ""
     },
     {
-      "ref": "D20",
+      "ref": "D11",
       "key": "esd",
-      "sheet": "host05_1",
+      "sheet": "host05",
       "nets": {
         "1": "H05_RST_A",
         "2": "H05_RST_B",
@@ -8108,482 +6087,27 @@
       "section": ""
     },
     {
-      "ref": "D21",
-      "key": "esd",
-      "sheet": "host05_1",
-      "nets": {
-        "1": "H05_PLED_P",
-        "2": "H05_PLED_M",
-        "3": "H05_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "D22",
-      "key": "esd",
-      "sheet": "host05_1",
-      "nets": {
-        "1": "H05_HDD_P",
-        "2": "H05_HDD_M",
-        "3": "H05_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R186",
-      "key": "R100k",
-      "sheet": "host05_2",
-      "nets": {
-        "1": "H05_PLED_P",
-        "2": "H05_PLED_SPLUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R187",
-      "key": "R10k",
-      "sheet": "host05_2",
-      "nets": {
-        "1": "H05_PLED_SPLUS",
-        "2": "H05_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C90",
-      "key": "C1n",
-      "sheet": "host05_2",
-      "nets": {
-        "1": "H05_PLED_SPLUS",
-        "2": "H05_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R188",
-      "key": "R100k",
-      "sheet": "host05_2",
-      "nets": {
-        "1": "H05_PLED_M",
-        "2": "H05_PLED_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R189",
-      "key": "R10k",
-      "sheet": "host05_2",
-      "nets": {
-        "1": "H05_PLED_SMINUS",
-        "2": "H05_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C91",
-      "key": "C1n",
-      "sheet": "host05_2",
-      "nets": {
-        "1": "H05_PLED_SMINUS",
-        "2": "H05_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R190",
-      "key": "R390k",
-      "sheet": "host05_2",
-      "nets": {
-        "1": "H05_3V3",
-        "2": "H05_PLED_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R191",
-      "key": "R510k",
-      "sheet": "host05_2",
-      "nets": {
-        "1": "H05_PLED_CMP",
-        "2": "H05_PLED_FB1"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R192",
-      "key": "R510k",
-      "sheet": "host05_2",
-      "nets": {
-        "1": "H05_PLED_FB1",
-        "2": "H05_PLED_FB2"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R193",
-      "key": "R510k",
-      "sheet": "host05_2",
-      "nets": {
-        "1": "H05_PLED_FB2",
-        "2": "H05_PLED_FB3"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R194",
-      "key": "R510k",
-      "sheet": "host05_2",
-      "nets": {
-        "1": "H05_PLED_FB3",
-        "2": "H05_PLED_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R195",
-      "key": "R10k",
-      "sheet": "host05_2",
-      "nets": {
-        "1": "H05_3V3",
-        "2": "H05_PLED_CMP"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R196",
-      "key": "R330",
-      "sheet": "host05_2",
-      "nets": {
-        "1": "H05_3V3",
-        "2": "H05_PLED_OR"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R197",
-      "key": "R330",
-      "sheet": "host05_2",
-      "nets": {
-        "1": "H05_PLED_OR",
-        "2": "H05_PLED_OA"
-      },
-      "section": ""
-    },
-    {
-      "ref": "U40",
-      "key": "opto",
-      "sheet": "host05_2",
-      "nets": {
-        "1": "H05_PLED_OA",
-        "2": "H05_PLED_CMP",
-        "3": "GND_CTRL",
-        "4": "H05_PLED_N"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R198",
-      "key": "R10k",
-      "sheet": "host05_2",
-      "nets": {
-        "1": "3V3",
-        "2": "H05_PLED_N"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C92",
-      "key": "C1n",
-      "sheet": "host05_2",
-      "nets": {
-        "1": "H05_PLED_N",
-        "2": "GND_CTRL"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R199",
-      "key": "R100k",
-      "sheet": "host05_2",
-      "nets": {
-        "1": "H05_HDD_P",
-        "2": "H05_HDD_SPLUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R200",
-      "key": "R10k",
-      "sheet": "host05_2",
-      "nets": {
-        "1": "H05_HDD_SPLUS",
-        "2": "H05_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C93",
-      "key": "C1n",
-      "sheet": "host05_2",
-      "nets": {
-        "1": "H05_HDD_SPLUS",
-        "2": "H05_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R201",
-      "key": "R100k",
-      "sheet": "host05_2",
-      "nets": {
-        "1": "H05_HDD_M",
-        "2": "H05_HDD_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R202",
-      "key": "R10k",
-      "sheet": "host05_2",
-      "nets": {
-        "1": "H05_HDD_SMINUS",
-        "2": "H05_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C94",
-      "key": "C1n",
-      "sheet": "host05_2",
-      "nets": {
-        "1": "H05_HDD_SMINUS",
-        "2": "H05_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R203",
-      "key": "R390k",
-      "sheet": "host05_2",
-      "nets": {
-        "1": "H05_3V3",
-        "2": "H05_HDD_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R204",
-      "key": "R510k",
-      "sheet": "host05_3",
-      "nets": {
-        "1": "H05_HDD_CMP",
-        "2": "H05_HDD_FB1"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R205",
-      "key": "R510k",
-      "sheet": "host05_3",
-      "nets": {
-        "1": "H05_HDD_FB1",
-        "2": "H05_HDD_FB2"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R206",
-      "key": "R510k",
-      "sheet": "host05_3",
-      "nets": {
-        "1": "H05_HDD_FB2",
-        "2": "H05_HDD_FB3"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R207",
-      "key": "R510k",
-      "sheet": "host05_3",
-      "nets": {
-        "1": "H05_HDD_FB3",
-        "2": "H05_HDD_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R208",
-      "key": "R10k",
-      "sheet": "host05_3",
-      "nets": {
-        "1": "H05_3V3",
-        "2": "H05_HDD_CMP"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R209",
-      "key": "R330",
-      "sheet": "host05_3",
-      "nets": {
-        "1": "H05_3V3",
-        "2": "H05_HDD_OR"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R210",
-      "key": "R330",
-      "sheet": "host05_3",
-      "nets": {
-        "1": "H05_HDD_OR",
-        "2": "H05_HDD_OA"
-      },
-      "section": ""
-    },
-    {
-      "ref": "U41",
-      "key": "opto",
-      "sheet": "host05_3",
-      "nets": {
-        "1": "H05_HDD_OA",
-        "2": "H05_HDD_CMP",
-        "3": "GND_CTRL",
-        "4": "H05_HDD_N"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R211",
-      "key": "R10k",
-      "sheet": "host05_3",
-      "nets": {
-        "1": "3V3",
-        "2": "H05_HDD_N"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C95",
-      "key": "C1n",
-      "sheet": "host05_3",
-      "nets": {
-        "1": "H05_HDD_N",
-        "2": "GND_CTRL"
-      },
-      "section": ""
-    },
-    {
-      "ref": "U42",
-      "key": "cmp",
-      "sheet": "host05_3",
-      "nets": {
-        "1": "H05_PLED_CMP",
-        "2": "H05_PLED_SPLUS",
-        "3": "H05_PLED_SMINUS",
-        "4": "H05_GND",
-        "5": "H05_HDD_SMINUS",
-        "6": "H05_HDD_SPLUS",
-        "7": "H05_HDD_CMP",
-        "8": "H05_3V3"
-      },
-      "section": ""
-    },
-    {
       "ref": "J06",
       "key": "port",
-      "sheet": "host06_1",
+      "sheet": "host06",
       "nets": {
         "1": "H06_PWR_A",
         "2": "H06_PWR_B",
         "3": "H06_RST_A",
         "4": "H06_RST_B",
-        "5": "H06_PLED_P",
-        "6": "H06_PLED_M",
-        "7": "H06_HDD_P",
-        "8": "H06_HDD_M",
+        "5": null,
+        "6": null,
+        "7": null,
+        "8": null,
         "9": "H06_GND",
         "10": null
       },
       "section": ""
     },
     {
-      "ref": "U43",
-      "key": "iso",
-      "sheet": "host06_1",
-      "nets": {
-        "1": "GND_CTRL",
-        "2": "5V",
-        "3": "H06_GND",
-        "4": "H06_RAW5"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C96",
-      "key": "C4.7u",
-      "sheet": "host06_1",
-      "nets": {
-        "1": "5V",
-        "2": "GND_CTRL"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C97",
-      "key": "C10u",
-      "sheet": "host06_1",
-      "nets": {
-        "1": "H06_RAW5",
-        "2": "H06_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "U44",
-      "key": "ldo",
-      "sheet": "host06_1",
-      "nets": {
-        "1": "H06_GND",
-        "2": "H06_RAW5",
-        "3": "H06_3V3"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C98",
-      "key": "C10u",
-      "sheet": "host06_1",
-      "nets": {
-        "1": "H06_3V3",
-        "2": "H06_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C99",
-      "key": "C100n",
-      "sheet": "host06_1",
-      "nets": {
-        "1": "H06_3V3",
-        "2": "H06_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R212",
-      "key": "R10k",
-      "sheet": "host06_1",
-      "nets": {
-        "1": "H06_3V3",
-        "2": "H06_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R213",
+      "ref": "R79",
       "key": "R1.5k",
-      "sheet": "host06_1",
+      "sheet": "host06",
       "nets": {
         "1": "DRV_11",
         "2": "CTRL_H06_PWR_B"
@@ -8591,9 +6115,9 @@
       "section": ""
     },
     {
-      "ref": "R214",
+      "ref": "R80",
       "key": "R100k",
-      "sheet": "host06_1",
+      "sheet": "host06",
       "nets": {
         "1": "CTRL_H06_PWR_B",
         "2": "GND_CTRL"
@@ -8603,7 +6127,7 @@
     {
       "ref": "Q15",
       "key": "npn",
-      "sheet": "host06_1",
+      "sheet": "host06",
       "nets": {
         "1": "CTRL_H06_PWR_B",
         "2": "GND_CTRL",
@@ -8612,9 +6136,9 @@
       "section": ""
     },
     {
-      "ref": "R215",
+      "ref": "R81",
       "key": "R220",
-      "sheet": "host06_1",
+      "sheet": "host06",
       "nets": {
         "1": "PHOTO_5V",
         "2": "CTRL_H06_PWR_R"
@@ -8622,9 +6146,9 @@
       "section": ""
     },
     {
-      "ref": "R216",
+      "ref": "R82",
       "key": "R220",
-      "sheet": "host06_1",
+      "sheet": "host06",
       "nets": {
         "1": "CTRL_H06_PWR_R",
         "2": "CTRL_H06_PWR_A"
@@ -8632,9 +6156,9 @@
       "section": ""
     },
     {
-      "ref": "U45",
+      "ref": "U18",
       "key": "ssr",
-      "sheet": "host06_1",
+      "sheet": "host06",
       "nets": {
         "1": "CTRL_H06_PWR_A",
         "3": "CTRL_H06_PWR_K",
@@ -8644,9 +6168,29 @@
       "section": ""
     },
     {
-      "ref": "R217",
+      "ref": "R311",
       "key": "R1.5k",
-      "sheet": "host06_1",
+      "sheet": "host06",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H06_PWR_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D111",
+      "key": "ledred",
+      "sheet": "host06",
+      "nets": {
+        "1": "CTRL_H06_PWR_K",
+        "2": "CTRL_H06_PWR_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R83",
+      "key": "R1.5k",
+      "sheet": "host06",
       "nets": {
         "1": "DRV_12",
         "2": "CTRL_H06_RST_B"
@@ -8654,9 +6198,9 @@
       "section": ""
     },
     {
-      "ref": "R218",
+      "ref": "R84",
       "key": "R100k",
-      "sheet": "host06_1",
+      "sheet": "host06",
       "nets": {
         "1": "CTRL_H06_RST_B",
         "2": "GND_CTRL"
@@ -8666,7 +6210,7 @@
     {
       "ref": "Q16",
       "key": "npn",
-      "sheet": "host06_1",
+      "sheet": "host06",
       "nets": {
         "1": "CTRL_H06_RST_B",
         "2": "GND_CTRL",
@@ -8675,9 +6219,9 @@
       "section": ""
     },
     {
-      "ref": "R219",
+      "ref": "R85",
       "key": "R220",
-      "sheet": "host06_1",
+      "sheet": "host06",
       "nets": {
         "1": "PHOTO_5V",
         "2": "CTRL_H06_RST_R"
@@ -8685,9 +6229,9 @@
       "section": ""
     },
     {
-      "ref": "R220",
+      "ref": "R86",
       "key": "R220",
-      "sheet": "host06_1",
+      "sheet": "host06",
       "nets": {
         "1": "CTRL_H06_RST_R",
         "2": "CTRL_H06_RST_A"
@@ -8695,9 +6239,9 @@
       "section": ""
     },
     {
-      "ref": "U46",
+      "ref": "U19",
       "key": "ssr",
-      "sheet": "host06_1",
+      "sheet": "host06",
       "nets": {
         "1": "CTRL_H06_RST_A",
         "3": "CTRL_H06_RST_K",
@@ -8707,9 +6251,29 @@
       "section": ""
     },
     {
-      "ref": "D23",
+      "ref": "R312",
+      "key": "R1.5k",
+      "sheet": "host06",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H06_RST_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D112",
+      "key": "ledred",
+      "sheet": "host06",
+      "nets": {
+        "1": "CTRL_H06_RST_K",
+        "2": "CTRL_H06_RST_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D12",
       "key": "esd",
-      "sheet": "host06_1",
+      "sheet": "host06",
       "nets": {
         "1": "H06_PWR_A",
         "2": "H06_PWR_B",
@@ -8718,9 +6282,9 @@
       "section": ""
     },
     {
-      "ref": "D24",
+      "ref": "D13",
       "key": "esd",
-      "sheet": "host06_1",
+      "sheet": "host06",
       "nets": {
         "1": "H06_RST_A",
         "2": "H06_RST_B",
@@ -8729,482 +6293,27 @@
       "section": ""
     },
     {
-      "ref": "D25",
-      "key": "esd",
-      "sheet": "host06_1",
-      "nets": {
-        "1": "H06_PLED_P",
-        "2": "H06_PLED_M",
-        "3": "H06_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "D26",
-      "key": "esd",
-      "sheet": "host06_1",
-      "nets": {
-        "1": "H06_HDD_P",
-        "2": "H06_HDD_M",
-        "3": "H06_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R221",
-      "key": "R100k",
-      "sheet": "host06_2",
-      "nets": {
-        "1": "H06_PLED_P",
-        "2": "H06_PLED_SPLUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R222",
-      "key": "R10k",
-      "sheet": "host06_2",
-      "nets": {
-        "1": "H06_PLED_SPLUS",
-        "2": "H06_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C100",
-      "key": "C1n",
-      "sheet": "host06_2",
-      "nets": {
-        "1": "H06_PLED_SPLUS",
-        "2": "H06_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R223",
-      "key": "R100k",
-      "sheet": "host06_2",
-      "nets": {
-        "1": "H06_PLED_M",
-        "2": "H06_PLED_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R224",
-      "key": "R10k",
-      "sheet": "host06_2",
-      "nets": {
-        "1": "H06_PLED_SMINUS",
-        "2": "H06_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C101",
-      "key": "C1n",
-      "sheet": "host06_2",
-      "nets": {
-        "1": "H06_PLED_SMINUS",
-        "2": "H06_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R225",
-      "key": "R390k",
-      "sheet": "host06_2",
-      "nets": {
-        "1": "H06_3V3",
-        "2": "H06_PLED_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R226",
-      "key": "R510k",
-      "sheet": "host06_2",
-      "nets": {
-        "1": "H06_PLED_CMP",
-        "2": "H06_PLED_FB1"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R227",
-      "key": "R510k",
-      "sheet": "host06_2",
-      "nets": {
-        "1": "H06_PLED_FB1",
-        "2": "H06_PLED_FB2"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R228",
-      "key": "R510k",
-      "sheet": "host06_2",
-      "nets": {
-        "1": "H06_PLED_FB2",
-        "2": "H06_PLED_FB3"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R229",
-      "key": "R510k",
-      "sheet": "host06_2",
-      "nets": {
-        "1": "H06_PLED_FB3",
-        "2": "H06_PLED_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R230",
-      "key": "R10k",
-      "sheet": "host06_2",
-      "nets": {
-        "1": "H06_3V3",
-        "2": "H06_PLED_CMP"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R231",
-      "key": "R330",
-      "sheet": "host06_2",
-      "nets": {
-        "1": "H06_3V3",
-        "2": "H06_PLED_OR"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R232",
-      "key": "R330",
-      "sheet": "host06_2",
-      "nets": {
-        "1": "H06_PLED_OR",
-        "2": "H06_PLED_OA"
-      },
-      "section": ""
-    },
-    {
-      "ref": "U47",
-      "key": "opto",
-      "sheet": "host06_2",
-      "nets": {
-        "1": "H06_PLED_OA",
-        "2": "H06_PLED_CMP",
-        "3": "GND_CTRL",
-        "4": "H06_PLED_N"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R233",
-      "key": "R10k",
-      "sheet": "host06_2",
-      "nets": {
-        "1": "3V3",
-        "2": "H06_PLED_N"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C102",
-      "key": "C1n",
-      "sheet": "host06_2",
-      "nets": {
-        "1": "H06_PLED_N",
-        "2": "GND_CTRL"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R234",
-      "key": "R100k",
-      "sheet": "host06_2",
-      "nets": {
-        "1": "H06_HDD_P",
-        "2": "H06_HDD_SPLUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R235",
-      "key": "R10k",
-      "sheet": "host06_2",
-      "nets": {
-        "1": "H06_HDD_SPLUS",
-        "2": "H06_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C103",
-      "key": "C1n",
-      "sheet": "host06_2",
-      "nets": {
-        "1": "H06_HDD_SPLUS",
-        "2": "H06_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R236",
-      "key": "R100k",
-      "sheet": "host06_2",
-      "nets": {
-        "1": "H06_HDD_M",
-        "2": "H06_HDD_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R237",
-      "key": "R10k",
-      "sheet": "host06_2",
-      "nets": {
-        "1": "H06_HDD_SMINUS",
-        "2": "H06_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C104",
-      "key": "C1n",
-      "sheet": "host06_2",
-      "nets": {
-        "1": "H06_HDD_SMINUS",
-        "2": "H06_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R238",
-      "key": "R390k",
-      "sheet": "host06_2",
-      "nets": {
-        "1": "H06_3V3",
-        "2": "H06_HDD_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R239",
-      "key": "R510k",
-      "sheet": "host06_3",
-      "nets": {
-        "1": "H06_HDD_CMP",
-        "2": "H06_HDD_FB1"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R240",
-      "key": "R510k",
-      "sheet": "host06_3",
-      "nets": {
-        "1": "H06_HDD_FB1",
-        "2": "H06_HDD_FB2"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R241",
-      "key": "R510k",
-      "sheet": "host06_3",
-      "nets": {
-        "1": "H06_HDD_FB2",
-        "2": "H06_HDD_FB3"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R242",
-      "key": "R510k",
-      "sheet": "host06_3",
-      "nets": {
-        "1": "H06_HDD_FB3",
-        "2": "H06_HDD_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R243",
-      "key": "R10k",
-      "sheet": "host06_3",
-      "nets": {
-        "1": "H06_3V3",
-        "2": "H06_HDD_CMP"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R244",
-      "key": "R330",
-      "sheet": "host06_3",
-      "nets": {
-        "1": "H06_3V3",
-        "2": "H06_HDD_OR"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R245",
-      "key": "R330",
-      "sheet": "host06_3",
-      "nets": {
-        "1": "H06_HDD_OR",
-        "2": "H06_HDD_OA"
-      },
-      "section": ""
-    },
-    {
-      "ref": "U48",
-      "key": "opto",
-      "sheet": "host06_3",
-      "nets": {
-        "1": "H06_HDD_OA",
-        "2": "H06_HDD_CMP",
-        "3": "GND_CTRL",
-        "4": "H06_HDD_N"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R246",
-      "key": "R10k",
-      "sheet": "host06_3",
-      "nets": {
-        "1": "3V3",
-        "2": "H06_HDD_N"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C105",
-      "key": "C1n",
-      "sheet": "host06_3",
-      "nets": {
-        "1": "H06_HDD_N",
-        "2": "GND_CTRL"
-      },
-      "section": ""
-    },
-    {
-      "ref": "U49",
-      "key": "cmp",
-      "sheet": "host06_3",
-      "nets": {
-        "1": "H06_PLED_CMP",
-        "2": "H06_PLED_SPLUS",
-        "3": "H06_PLED_SMINUS",
-        "4": "H06_GND",
-        "5": "H06_HDD_SMINUS",
-        "6": "H06_HDD_SPLUS",
-        "7": "H06_HDD_CMP",
-        "8": "H06_3V3"
-      },
-      "section": ""
-    },
-    {
       "ref": "J07",
       "key": "port",
-      "sheet": "host07_1",
+      "sheet": "host07",
       "nets": {
         "1": "H07_PWR_A",
         "2": "H07_PWR_B",
         "3": "H07_RST_A",
         "4": "H07_RST_B",
-        "5": "H07_PLED_P",
-        "6": "H07_PLED_M",
-        "7": "H07_HDD_P",
-        "8": "H07_HDD_M",
+        "5": null,
+        "6": null,
+        "7": null,
+        "8": null,
         "9": "H07_GND",
         "10": null
       },
       "section": ""
     },
     {
-      "ref": "U50",
-      "key": "iso",
-      "sheet": "host07_1",
-      "nets": {
-        "1": "GND_CTRL",
-        "2": "5V",
-        "3": "H07_GND",
-        "4": "H07_RAW5"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C106",
-      "key": "C4.7u",
-      "sheet": "host07_1",
-      "nets": {
-        "1": "5V",
-        "2": "GND_CTRL"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C107",
-      "key": "C10u",
-      "sheet": "host07_1",
-      "nets": {
-        "1": "H07_RAW5",
-        "2": "H07_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "U51",
-      "key": "ldo",
-      "sheet": "host07_1",
-      "nets": {
-        "1": "H07_GND",
-        "2": "H07_RAW5",
-        "3": "H07_3V3"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C108",
-      "key": "C10u",
-      "sheet": "host07_1",
-      "nets": {
-        "1": "H07_3V3",
-        "2": "H07_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C109",
-      "key": "C100n",
-      "sheet": "host07_1",
-      "nets": {
-        "1": "H07_3V3",
-        "2": "H07_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R247",
-      "key": "R10k",
-      "sheet": "host07_1",
-      "nets": {
-        "1": "H07_3V3",
-        "2": "H07_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R248",
+      "ref": "R87",
       "key": "R1.5k",
-      "sheet": "host07_1",
+      "sheet": "host07",
       "nets": {
         "1": "DRV_13",
         "2": "CTRL_H07_PWR_B"
@@ -9212,9 +6321,9 @@
       "section": ""
     },
     {
-      "ref": "R249",
+      "ref": "R88",
       "key": "R100k",
-      "sheet": "host07_1",
+      "sheet": "host07",
       "nets": {
         "1": "CTRL_H07_PWR_B",
         "2": "GND_CTRL"
@@ -9224,7 +6333,7 @@
     {
       "ref": "Q17",
       "key": "npn",
-      "sheet": "host07_1",
+      "sheet": "host07",
       "nets": {
         "1": "CTRL_H07_PWR_B",
         "2": "GND_CTRL",
@@ -9233,9 +6342,9 @@
       "section": ""
     },
     {
-      "ref": "R250",
+      "ref": "R89",
       "key": "R220",
-      "sheet": "host07_1",
+      "sheet": "host07",
       "nets": {
         "1": "PHOTO_5V",
         "2": "CTRL_H07_PWR_R"
@@ -9243,9 +6352,9 @@
       "section": ""
     },
     {
-      "ref": "R251",
+      "ref": "R90",
       "key": "R220",
-      "sheet": "host07_1",
+      "sheet": "host07",
       "nets": {
         "1": "CTRL_H07_PWR_R",
         "2": "CTRL_H07_PWR_A"
@@ -9253,9 +6362,9 @@
       "section": ""
     },
     {
-      "ref": "U52",
+      "ref": "U20",
       "key": "ssr",
-      "sheet": "host07_1",
+      "sheet": "host07",
       "nets": {
         "1": "CTRL_H07_PWR_A",
         "3": "CTRL_H07_PWR_K",
@@ -9265,9 +6374,29 @@
       "section": ""
     },
     {
-      "ref": "R252",
+      "ref": "R313",
       "key": "R1.5k",
-      "sheet": "host07_1",
+      "sheet": "host07",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H07_PWR_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D113",
+      "key": "ledred",
+      "sheet": "host07",
+      "nets": {
+        "1": "CTRL_H07_PWR_K",
+        "2": "CTRL_H07_PWR_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R91",
+      "key": "R1.5k",
+      "sheet": "host07",
       "nets": {
         "1": "DRV_14",
         "2": "CTRL_H07_RST_B"
@@ -9275,9 +6404,9 @@
       "section": ""
     },
     {
-      "ref": "R253",
+      "ref": "R92",
       "key": "R100k",
-      "sheet": "host07_1",
+      "sheet": "host07",
       "nets": {
         "1": "CTRL_H07_RST_B",
         "2": "GND_CTRL"
@@ -9287,7 +6416,7 @@
     {
       "ref": "Q18",
       "key": "npn",
-      "sheet": "host07_1",
+      "sheet": "host07",
       "nets": {
         "1": "CTRL_H07_RST_B",
         "2": "GND_CTRL",
@@ -9296,9 +6425,9 @@
       "section": ""
     },
     {
-      "ref": "R254",
+      "ref": "R93",
       "key": "R220",
-      "sheet": "host07_1",
+      "sheet": "host07",
       "nets": {
         "1": "PHOTO_5V",
         "2": "CTRL_H07_RST_R"
@@ -9306,9 +6435,9 @@
       "section": ""
     },
     {
-      "ref": "R255",
+      "ref": "R94",
       "key": "R220",
-      "sheet": "host07_1",
+      "sheet": "host07",
       "nets": {
         "1": "CTRL_H07_RST_R",
         "2": "CTRL_H07_RST_A"
@@ -9316,9 +6445,9 @@
       "section": ""
     },
     {
-      "ref": "U53",
+      "ref": "U21",
       "key": "ssr",
-      "sheet": "host07_1",
+      "sheet": "host07",
       "nets": {
         "1": "CTRL_H07_RST_A",
         "3": "CTRL_H07_RST_K",
@@ -9328,9 +6457,29 @@
       "section": ""
     },
     {
-      "ref": "D27",
+      "ref": "R314",
+      "key": "R1.5k",
+      "sheet": "host07",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H07_RST_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D114",
+      "key": "ledred",
+      "sheet": "host07",
+      "nets": {
+        "1": "CTRL_H07_RST_K",
+        "2": "CTRL_H07_RST_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D14",
       "key": "esd",
-      "sheet": "host07_1",
+      "sheet": "host07",
       "nets": {
         "1": "H07_PWR_A",
         "2": "H07_PWR_B",
@@ -9339,9 +6488,9 @@
       "section": ""
     },
     {
-      "ref": "D28",
+      "ref": "D15",
       "key": "esd",
-      "sheet": "host07_1",
+      "sheet": "host07",
       "nets": {
         "1": "H07_RST_A",
         "2": "H07_RST_B",
@@ -9350,482 +6499,27 @@
       "section": ""
     },
     {
-      "ref": "D29",
-      "key": "esd",
-      "sheet": "host07_1",
-      "nets": {
-        "1": "H07_PLED_P",
-        "2": "H07_PLED_M",
-        "3": "H07_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "D30",
-      "key": "esd",
-      "sheet": "host07_1",
-      "nets": {
-        "1": "H07_HDD_P",
-        "2": "H07_HDD_M",
-        "3": "H07_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R256",
-      "key": "R100k",
-      "sheet": "host07_2",
-      "nets": {
-        "1": "H07_PLED_P",
-        "2": "H07_PLED_SPLUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R257",
-      "key": "R10k",
-      "sheet": "host07_2",
-      "nets": {
-        "1": "H07_PLED_SPLUS",
-        "2": "H07_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C110",
-      "key": "C1n",
-      "sheet": "host07_2",
-      "nets": {
-        "1": "H07_PLED_SPLUS",
-        "2": "H07_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R258",
-      "key": "R100k",
-      "sheet": "host07_2",
-      "nets": {
-        "1": "H07_PLED_M",
-        "2": "H07_PLED_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R259",
-      "key": "R10k",
-      "sheet": "host07_2",
-      "nets": {
-        "1": "H07_PLED_SMINUS",
-        "2": "H07_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C111",
-      "key": "C1n",
-      "sheet": "host07_2",
-      "nets": {
-        "1": "H07_PLED_SMINUS",
-        "2": "H07_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R260",
-      "key": "R390k",
-      "sheet": "host07_2",
-      "nets": {
-        "1": "H07_3V3",
-        "2": "H07_PLED_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R261",
-      "key": "R510k",
-      "sheet": "host07_2",
-      "nets": {
-        "1": "H07_PLED_CMP",
-        "2": "H07_PLED_FB1"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R262",
-      "key": "R510k",
-      "sheet": "host07_2",
-      "nets": {
-        "1": "H07_PLED_FB1",
-        "2": "H07_PLED_FB2"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R263",
-      "key": "R510k",
-      "sheet": "host07_2",
-      "nets": {
-        "1": "H07_PLED_FB2",
-        "2": "H07_PLED_FB3"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R264",
-      "key": "R510k",
-      "sheet": "host07_2",
-      "nets": {
-        "1": "H07_PLED_FB3",
-        "2": "H07_PLED_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R265",
-      "key": "R10k",
-      "sheet": "host07_2",
-      "nets": {
-        "1": "H07_3V3",
-        "2": "H07_PLED_CMP"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R266",
-      "key": "R330",
-      "sheet": "host07_2",
-      "nets": {
-        "1": "H07_3V3",
-        "2": "H07_PLED_OR"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R267",
-      "key": "R330",
-      "sheet": "host07_2",
-      "nets": {
-        "1": "H07_PLED_OR",
-        "2": "H07_PLED_OA"
-      },
-      "section": ""
-    },
-    {
-      "ref": "U54",
-      "key": "opto",
-      "sheet": "host07_2",
-      "nets": {
-        "1": "H07_PLED_OA",
-        "2": "H07_PLED_CMP",
-        "3": "GND_CTRL",
-        "4": "H07_PLED_N"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R268",
-      "key": "R10k",
-      "sheet": "host07_2",
-      "nets": {
-        "1": "3V3",
-        "2": "H07_PLED_N"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C112",
-      "key": "C1n",
-      "sheet": "host07_2",
-      "nets": {
-        "1": "H07_PLED_N",
-        "2": "GND_CTRL"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R269",
-      "key": "R100k",
-      "sheet": "host07_2",
-      "nets": {
-        "1": "H07_HDD_P",
-        "2": "H07_HDD_SPLUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R270",
-      "key": "R10k",
-      "sheet": "host07_2",
-      "nets": {
-        "1": "H07_HDD_SPLUS",
-        "2": "H07_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C113",
-      "key": "C1n",
-      "sheet": "host07_2",
-      "nets": {
-        "1": "H07_HDD_SPLUS",
-        "2": "H07_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R271",
-      "key": "R100k",
-      "sheet": "host07_2",
-      "nets": {
-        "1": "H07_HDD_M",
-        "2": "H07_HDD_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R272",
-      "key": "R10k",
-      "sheet": "host07_2",
-      "nets": {
-        "1": "H07_HDD_SMINUS",
-        "2": "H07_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C114",
-      "key": "C1n",
-      "sheet": "host07_2",
-      "nets": {
-        "1": "H07_HDD_SMINUS",
-        "2": "H07_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R273",
-      "key": "R390k",
-      "sheet": "host07_2",
-      "nets": {
-        "1": "H07_3V3",
-        "2": "H07_HDD_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R274",
-      "key": "R510k",
-      "sheet": "host07_3",
-      "nets": {
-        "1": "H07_HDD_CMP",
-        "2": "H07_HDD_FB1"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R275",
-      "key": "R510k",
-      "sheet": "host07_3",
-      "nets": {
-        "1": "H07_HDD_FB1",
-        "2": "H07_HDD_FB2"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R276",
-      "key": "R510k",
-      "sheet": "host07_3",
-      "nets": {
-        "1": "H07_HDD_FB2",
-        "2": "H07_HDD_FB3"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R277",
-      "key": "R510k",
-      "sheet": "host07_3",
-      "nets": {
-        "1": "H07_HDD_FB3",
-        "2": "H07_HDD_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R278",
-      "key": "R10k",
-      "sheet": "host07_3",
-      "nets": {
-        "1": "H07_3V3",
-        "2": "H07_HDD_CMP"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R279",
-      "key": "R330",
-      "sheet": "host07_3",
-      "nets": {
-        "1": "H07_3V3",
-        "2": "H07_HDD_OR"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R280",
-      "key": "R330",
-      "sheet": "host07_3",
-      "nets": {
-        "1": "H07_HDD_OR",
-        "2": "H07_HDD_OA"
-      },
-      "section": ""
-    },
-    {
-      "ref": "U55",
-      "key": "opto",
-      "sheet": "host07_3",
-      "nets": {
-        "1": "H07_HDD_OA",
-        "2": "H07_HDD_CMP",
-        "3": "GND_CTRL",
-        "4": "H07_HDD_N"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R281",
-      "key": "R10k",
-      "sheet": "host07_3",
-      "nets": {
-        "1": "3V3",
-        "2": "H07_HDD_N"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C115",
-      "key": "C1n",
-      "sheet": "host07_3",
-      "nets": {
-        "1": "H07_HDD_N",
-        "2": "GND_CTRL"
-      },
-      "section": ""
-    },
-    {
-      "ref": "U56",
-      "key": "cmp",
-      "sheet": "host07_3",
-      "nets": {
-        "1": "H07_PLED_CMP",
-        "2": "H07_PLED_SPLUS",
-        "3": "H07_PLED_SMINUS",
-        "4": "H07_GND",
-        "5": "H07_HDD_SMINUS",
-        "6": "H07_HDD_SPLUS",
-        "7": "H07_HDD_CMP",
-        "8": "H07_3V3"
-      },
-      "section": ""
-    },
-    {
       "ref": "J08",
       "key": "port",
-      "sheet": "host08_1",
+      "sheet": "host08",
       "nets": {
         "1": "H08_PWR_A",
         "2": "H08_PWR_B",
         "3": "H08_RST_A",
         "4": "H08_RST_B",
-        "5": "H08_PLED_P",
-        "6": "H08_PLED_M",
-        "7": "H08_HDD_P",
-        "8": "H08_HDD_M",
+        "5": null,
+        "6": null,
+        "7": null,
+        "8": null,
         "9": "H08_GND",
         "10": null
       },
       "section": ""
     },
     {
-      "ref": "U57",
-      "key": "iso",
-      "sheet": "host08_1",
-      "nets": {
-        "1": "GND_CTRL",
-        "2": "5V",
-        "3": "H08_GND",
-        "4": "H08_RAW5"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C116",
-      "key": "C4.7u",
-      "sheet": "host08_1",
-      "nets": {
-        "1": "5V",
-        "2": "GND_CTRL"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C117",
-      "key": "C10u",
-      "sheet": "host08_1",
-      "nets": {
-        "1": "H08_RAW5",
-        "2": "H08_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "U58",
-      "key": "ldo",
-      "sheet": "host08_1",
-      "nets": {
-        "1": "H08_GND",
-        "2": "H08_RAW5",
-        "3": "H08_3V3"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C118",
-      "key": "C10u",
-      "sheet": "host08_1",
-      "nets": {
-        "1": "H08_3V3",
-        "2": "H08_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C119",
-      "key": "C100n",
-      "sheet": "host08_1",
-      "nets": {
-        "1": "H08_3V3",
-        "2": "H08_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R282",
-      "key": "R10k",
-      "sheet": "host08_1",
-      "nets": {
-        "1": "H08_3V3",
-        "2": "H08_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R283",
+      "ref": "R95",
       "key": "R1.5k",
-      "sheet": "host08_1",
+      "sheet": "host08",
       "nets": {
         "1": "DRV_15",
         "2": "CTRL_H08_PWR_B"
@@ -9833,9 +6527,9 @@
       "section": ""
     },
     {
-      "ref": "R284",
+      "ref": "R96",
       "key": "R100k",
-      "sheet": "host08_1",
+      "sheet": "host08",
       "nets": {
         "1": "CTRL_H08_PWR_B",
         "2": "GND_CTRL"
@@ -9845,7 +6539,7 @@
     {
       "ref": "Q19",
       "key": "npn",
-      "sheet": "host08_1",
+      "sheet": "host08",
       "nets": {
         "1": "CTRL_H08_PWR_B",
         "2": "GND_CTRL",
@@ -9854,9 +6548,9 @@
       "section": ""
     },
     {
-      "ref": "R285",
+      "ref": "R97",
       "key": "R220",
-      "sheet": "host08_1",
+      "sheet": "host08",
       "nets": {
         "1": "PHOTO_5V",
         "2": "CTRL_H08_PWR_R"
@@ -9864,9 +6558,9 @@
       "section": ""
     },
     {
-      "ref": "R286",
+      "ref": "R98",
       "key": "R220",
-      "sheet": "host08_1",
+      "sheet": "host08",
       "nets": {
         "1": "CTRL_H08_PWR_R",
         "2": "CTRL_H08_PWR_A"
@@ -9874,9 +6568,9 @@
       "section": ""
     },
     {
-      "ref": "U59",
+      "ref": "U22",
       "key": "ssr",
-      "sheet": "host08_1",
+      "sheet": "host08",
       "nets": {
         "1": "CTRL_H08_PWR_A",
         "3": "CTRL_H08_PWR_K",
@@ -9886,9 +6580,29 @@
       "section": ""
     },
     {
-      "ref": "R287",
+      "ref": "R315",
       "key": "R1.5k",
-      "sheet": "host08_1",
+      "sheet": "host08",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H08_PWR_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D115",
+      "key": "ledred",
+      "sheet": "host08",
+      "nets": {
+        "1": "CTRL_H08_PWR_K",
+        "2": "CTRL_H08_PWR_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R99",
+      "key": "R1.5k",
+      "sheet": "host08",
       "nets": {
         "1": "DRV_16",
         "2": "CTRL_H08_RST_B"
@@ -9896,9 +6610,9 @@
       "section": ""
     },
     {
-      "ref": "R288",
+      "ref": "R100",
       "key": "R100k",
-      "sheet": "host08_1",
+      "sheet": "host08",
       "nets": {
         "1": "CTRL_H08_RST_B",
         "2": "GND_CTRL"
@@ -9908,7 +6622,7 @@
     {
       "ref": "Q20",
       "key": "npn",
-      "sheet": "host08_1",
+      "sheet": "host08",
       "nets": {
         "1": "CTRL_H08_RST_B",
         "2": "GND_CTRL",
@@ -9917,9 +6631,9 @@
       "section": ""
     },
     {
-      "ref": "R289",
+      "ref": "R101",
       "key": "R220",
-      "sheet": "host08_1",
+      "sheet": "host08",
       "nets": {
         "1": "PHOTO_5V",
         "2": "CTRL_H08_RST_R"
@@ -9927,9 +6641,9 @@
       "section": ""
     },
     {
-      "ref": "R290",
+      "ref": "R102",
       "key": "R220",
-      "sheet": "host08_1",
+      "sheet": "host08",
       "nets": {
         "1": "CTRL_H08_RST_R",
         "2": "CTRL_H08_RST_A"
@@ -9937,9 +6651,9 @@
       "section": ""
     },
     {
-      "ref": "U60",
+      "ref": "U23",
       "key": "ssr",
-      "sheet": "host08_1",
+      "sheet": "host08",
       "nets": {
         "1": "CTRL_H08_RST_A",
         "3": "CTRL_H08_RST_K",
@@ -9949,9 +6663,29 @@
       "section": ""
     },
     {
-      "ref": "D31",
+      "ref": "R316",
+      "key": "R1.5k",
+      "sheet": "host08",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H08_RST_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D116",
+      "key": "ledred",
+      "sheet": "host08",
+      "nets": {
+        "1": "CTRL_H08_RST_K",
+        "2": "CTRL_H08_RST_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D16",
       "key": "esd",
-      "sheet": "host08_1",
+      "sheet": "host08",
       "nets": {
         "1": "H08_PWR_A",
         "2": "H08_PWR_B",
@@ -9960,9 +6694,9 @@
       "section": ""
     },
     {
-      "ref": "D32",
+      "ref": "D17",
       "key": "esd",
-      "sheet": "host08_1",
+      "sheet": "host08",
       "nets": {
         "1": "H08_RST_A",
         "2": "H08_RST_B",
@@ -9971,482 +6705,27 @@
       "section": ""
     },
     {
-      "ref": "D33",
-      "key": "esd",
-      "sheet": "host08_1",
-      "nets": {
-        "1": "H08_PLED_P",
-        "2": "H08_PLED_M",
-        "3": "H08_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "D34",
-      "key": "esd",
-      "sheet": "host08_1",
-      "nets": {
-        "1": "H08_HDD_P",
-        "2": "H08_HDD_M",
-        "3": "H08_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R291",
-      "key": "R100k",
-      "sheet": "host08_2",
-      "nets": {
-        "1": "H08_PLED_P",
-        "2": "H08_PLED_SPLUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R292",
-      "key": "R10k",
-      "sheet": "host08_2",
-      "nets": {
-        "1": "H08_PLED_SPLUS",
-        "2": "H08_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C120",
-      "key": "C1n",
-      "sheet": "host08_2",
-      "nets": {
-        "1": "H08_PLED_SPLUS",
-        "2": "H08_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R293",
-      "key": "R100k",
-      "sheet": "host08_2",
-      "nets": {
-        "1": "H08_PLED_M",
-        "2": "H08_PLED_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R294",
-      "key": "R10k",
-      "sheet": "host08_2",
-      "nets": {
-        "1": "H08_PLED_SMINUS",
-        "2": "H08_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C121",
-      "key": "C1n",
-      "sheet": "host08_2",
-      "nets": {
-        "1": "H08_PLED_SMINUS",
-        "2": "H08_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R295",
-      "key": "R390k",
-      "sheet": "host08_2",
-      "nets": {
-        "1": "H08_3V3",
-        "2": "H08_PLED_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R296",
-      "key": "R510k",
-      "sheet": "host08_2",
-      "nets": {
-        "1": "H08_PLED_CMP",
-        "2": "H08_PLED_FB1"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R297",
-      "key": "R510k",
-      "sheet": "host08_2",
-      "nets": {
-        "1": "H08_PLED_FB1",
-        "2": "H08_PLED_FB2"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R298",
-      "key": "R510k",
-      "sheet": "host08_2",
-      "nets": {
-        "1": "H08_PLED_FB2",
-        "2": "H08_PLED_FB3"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R299",
-      "key": "R510k",
-      "sheet": "host08_2",
-      "nets": {
-        "1": "H08_PLED_FB3",
-        "2": "H08_PLED_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R300",
-      "key": "R10k",
-      "sheet": "host08_2",
-      "nets": {
-        "1": "H08_3V3",
-        "2": "H08_PLED_CMP"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R301",
-      "key": "R330",
-      "sheet": "host08_2",
-      "nets": {
-        "1": "H08_3V3",
-        "2": "H08_PLED_OR"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R302",
-      "key": "R330",
-      "sheet": "host08_2",
-      "nets": {
-        "1": "H08_PLED_OR",
-        "2": "H08_PLED_OA"
-      },
-      "section": ""
-    },
-    {
-      "ref": "U61",
-      "key": "opto",
-      "sheet": "host08_2",
-      "nets": {
-        "1": "H08_PLED_OA",
-        "2": "H08_PLED_CMP",
-        "3": "GND_CTRL",
-        "4": "H08_PLED_N"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R303",
-      "key": "R10k",
-      "sheet": "host08_2",
-      "nets": {
-        "1": "3V3",
-        "2": "H08_PLED_N"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C122",
-      "key": "C1n",
-      "sheet": "host08_2",
-      "nets": {
-        "1": "H08_PLED_N",
-        "2": "GND_CTRL"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R304",
-      "key": "R100k",
-      "sheet": "host08_2",
-      "nets": {
-        "1": "H08_HDD_P",
-        "2": "H08_HDD_SPLUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R305",
-      "key": "R10k",
-      "sheet": "host08_2",
-      "nets": {
-        "1": "H08_HDD_SPLUS",
-        "2": "H08_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C123",
-      "key": "C1n",
-      "sheet": "host08_2",
-      "nets": {
-        "1": "H08_HDD_SPLUS",
-        "2": "H08_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R306",
-      "key": "R100k",
-      "sheet": "host08_2",
-      "nets": {
-        "1": "H08_HDD_M",
-        "2": "H08_HDD_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R307",
-      "key": "R10k",
-      "sheet": "host08_2",
-      "nets": {
-        "1": "H08_HDD_SMINUS",
-        "2": "H08_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C124",
-      "key": "C1n",
-      "sheet": "host08_2",
-      "nets": {
-        "1": "H08_HDD_SMINUS",
-        "2": "H08_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R308",
-      "key": "R390k",
-      "sheet": "host08_2",
-      "nets": {
-        "1": "H08_3V3",
-        "2": "H08_HDD_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R309",
-      "key": "R510k",
-      "sheet": "host08_3",
-      "nets": {
-        "1": "H08_HDD_CMP",
-        "2": "H08_HDD_FB1"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R310",
-      "key": "R510k",
-      "sheet": "host08_3",
-      "nets": {
-        "1": "H08_HDD_FB1",
-        "2": "H08_HDD_FB2"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R311",
-      "key": "R510k",
-      "sheet": "host08_3",
-      "nets": {
-        "1": "H08_HDD_FB2",
-        "2": "H08_HDD_FB3"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R312",
-      "key": "R510k",
-      "sheet": "host08_3",
-      "nets": {
-        "1": "H08_HDD_FB3",
-        "2": "H08_HDD_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R313",
-      "key": "R10k",
-      "sheet": "host08_3",
-      "nets": {
-        "1": "H08_3V3",
-        "2": "H08_HDD_CMP"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R314",
-      "key": "R330",
-      "sheet": "host08_3",
-      "nets": {
-        "1": "H08_3V3",
-        "2": "H08_HDD_OR"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R315",
-      "key": "R330",
-      "sheet": "host08_3",
-      "nets": {
-        "1": "H08_HDD_OR",
-        "2": "H08_HDD_OA"
-      },
-      "section": ""
-    },
-    {
-      "ref": "U62",
-      "key": "opto",
-      "sheet": "host08_3",
-      "nets": {
-        "1": "H08_HDD_OA",
-        "2": "H08_HDD_CMP",
-        "3": "GND_CTRL",
-        "4": "H08_HDD_N"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R316",
-      "key": "R10k",
-      "sheet": "host08_3",
-      "nets": {
-        "1": "3V3",
-        "2": "H08_HDD_N"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C125",
-      "key": "C1n",
-      "sheet": "host08_3",
-      "nets": {
-        "1": "H08_HDD_N",
-        "2": "GND_CTRL"
-      },
-      "section": ""
-    },
-    {
-      "ref": "U63",
-      "key": "cmp",
-      "sheet": "host08_3",
-      "nets": {
-        "1": "H08_PLED_CMP",
-        "2": "H08_PLED_SPLUS",
-        "3": "H08_PLED_SMINUS",
-        "4": "H08_GND",
-        "5": "H08_HDD_SMINUS",
-        "6": "H08_HDD_SPLUS",
-        "7": "H08_HDD_CMP",
-        "8": "H08_3V3"
-      },
-      "section": ""
-    },
-    {
       "ref": "J09",
       "key": "port",
-      "sheet": "host09_1",
+      "sheet": "host09",
       "nets": {
         "1": "H09_PWR_A",
         "2": "H09_PWR_B",
         "3": "H09_RST_A",
         "4": "H09_RST_B",
-        "5": "H09_PLED_P",
-        "6": "H09_PLED_M",
-        "7": "H09_HDD_P",
-        "8": "H09_HDD_M",
+        "5": null,
+        "6": null,
+        "7": null,
+        "8": null,
         "9": "H09_GND",
         "10": null
       },
       "section": ""
     },
     {
-      "ref": "U64",
-      "key": "iso",
-      "sheet": "host09_1",
-      "nets": {
-        "1": "GND_CTRL",
-        "2": "5V",
-        "3": "H09_GND",
-        "4": "H09_RAW5"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C126",
-      "key": "C4.7u",
-      "sheet": "host09_1",
-      "nets": {
-        "1": "5V",
-        "2": "GND_CTRL"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C127",
-      "key": "C10u",
-      "sheet": "host09_1",
-      "nets": {
-        "1": "H09_RAW5",
-        "2": "H09_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "U65",
-      "key": "ldo",
-      "sheet": "host09_1",
-      "nets": {
-        "1": "H09_GND",
-        "2": "H09_RAW5",
-        "3": "H09_3V3"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C128",
-      "key": "C10u",
-      "sheet": "host09_1",
-      "nets": {
-        "1": "H09_3V3",
-        "2": "H09_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C129",
-      "key": "C100n",
-      "sheet": "host09_1",
-      "nets": {
-        "1": "H09_3V3",
-        "2": "H09_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R317",
-      "key": "R10k",
-      "sheet": "host09_1",
-      "nets": {
-        "1": "H09_3V3",
-        "2": "H09_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R318",
+      "ref": "R103",
       "key": "R1.5k",
-      "sheet": "host09_1",
+      "sheet": "host09",
       "nets": {
         "1": "DRV_17",
         "2": "CTRL_H09_PWR_B"
@@ -10454,9 +6733,9 @@
       "section": ""
     },
     {
-      "ref": "R319",
+      "ref": "R104",
       "key": "R100k",
-      "sheet": "host09_1",
+      "sheet": "host09",
       "nets": {
         "1": "CTRL_H09_PWR_B",
         "2": "GND_CTRL"
@@ -10466,7 +6745,7 @@
     {
       "ref": "Q21",
       "key": "npn",
-      "sheet": "host09_1",
+      "sheet": "host09",
       "nets": {
         "1": "CTRL_H09_PWR_B",
         "2": "GND_CTRL",
@@ -10475,9 +6754,9 @@
       "section": ""
     },
     {
-      "ref": "R320",
+      "ref": "R105",
       "key": "R220",
-      "sheet": "host09_1",
+      "sheet": "host09",
       "nets": {
         "1": "PHOTO_5V",
         "2": "CTRL_H09_PWR_R"
@@ -10485,9 +6764,9 @@
       "section": ""
     },
     {
-      "ref": "R321",
+      "ref": "R106",
       "key": "R220",
-      "sheet": "host09_1",
+      "sheet": "host09",
       "nets": {
         "1": "CTRL_H09_PWR_R",
         "2": "CTRL_H09_PWR_A"
@@ -10495,9 +6774,9 @@
       "section": ""
     },
     {
-      "ref": "U66",
+      "ref": "U24",
       "key": "ssr",
-      "sheet": "host09_1",
+      "sheet": "host09",
       "nets": {
         "1": "CTRL_H09_PWR_A",
         "3": "CTRL_H09_PWR_K",
@@ -10507,9 +6786,29 @@
       "section": ""
     },
     {
-      "ref": "R322",
+      "ref": "R317",
       "key": "R1.5k",
-      "sheet": "host09_1",
+      "sheet": "host09",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H09_PWR_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D117",
+      "key": "ledred",
+      "sheet": "host09",
+      "nets": {
+        "1": "CTRL_H09_PWR_K",
+        "2": "CTRL_H09_PWR_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R107",
+      "key": "R1.5k",
+      "sheet": "host09",
       "nets": {
         "1": "DRV_18",
         "2": "CTRL_H09_RST_B"
@@ -10517,9 +6816,9 @@
       "section": ""
     },
     {
-      "ref": "R323",
+      "ref": "R108",
       "key": "R100k",
-      "sheet": "host09_1",
+      "sheet": "host09",
       "nets": {
         "1": "CTRL_H09_RST_B",
         "2": "GND_CTRL"
@@ -10529,7 +6828,7 @@
     {
       "ref": "Q22",
       "key": "npn",
-      "sheet": "host09_1",
+      "sheet": "host09",
       "nets": {
         "1": "CTRL_H09_RST_B",
         "2": "GND_CTRL",
@@ -10538,9 +6837,9 @@
       "section": ""
     },
     {
-      "ref": "R324",
+      "ref": "R109",
       "key": "R220",
-      "sheet": "host09_1",
+      "sheet": "host09",
       "nets": {
         "1": "PHOTO_5V",
         "2": "CTRL_H09_RST_R"
@@ -10548,9 +6847,9 @@
       "section": ""
     },
     {
-      "ref": "R325",
+      "ref": "R110",
       "key": "R220",
-      "sheet": "host09_1",
+      "sheet": "host09",
       "nets": {
         "1": "CTRL_H09_RST_R",
         "2": "CTRL_H09_RST_A"
@@ -10558,9 +6857,9 @@
       "section": ""
     },
     {
-      "ref": "U67",
+      "ref": "U25",
       "key": "ssr",
-      "sheet": "host09_1",
+      "sheet": "host09",
       "nets": {
         "1": "CTRL_H09_RST_A",
         "3": "CTRL_H09_RST_K",
@@ -10570,9 +6869,29 @@
       "section": ""
     },
     {
-      "ref": "D35",
+      "ref": "R318",
+      "key": "R1.5k",
+      "sheet": "host09",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H09_RST_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D118",
+      "key": "ledred",
+      "sheet": "host09",
+      "nets": {
+        "1": "CTRL_H09_RST_K",
+        "2": "CTRL_H09_RST_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D18",
       "key": "esd",
-      "sheet": "host09_1",
+      "sheet": "host09",
       "nets": {
         "1": "H09_PWR_A",
         "2": "H09_PWR_B",
@@ -10581,9 +6900,9 @@
       "section": ""
     },
     {
-      "ref": "D36",
+      "ref": "D19",
       "key": "esd",
-      "sheet": "host09_1",
+      "sheet": "host09",
       "nets": {
         "1": "H09_RST_A",
         "2": "H09_RST_B",
@@ -10592,482 +6911,27 @@
       "section": ""
     },
     {
-      "ref": "D37",
-      "key": "esd",
-      "sheet": "host09_1",
-      "nets": {
-        "1": "H09_PLED_P",
-        "2": "H09_PLED_M",
-        "3": "H09_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "D38",
-      "key": "esd",
-      "sheet": "host09_1",
-      "nets": {
-        "1": "H09_HDD_P",
-        "2": "H09_HDD_M",
-        "3": "H09_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R326",
-      "key": "R100k",
-      "sheet": "host09_2",
-      "nets": {
-        "1": "H09_PLED_P",
-        "2": "H09_PLED_SPLUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R327",
-      "key": "R10k",
-      "sheet": "host09_2",
-      "nets": {
-        "1": "H09_PLED_SPLUS",
-        "2": "H09_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C130",
-      "key": "C1n",
-      "sheet": "host09_2",
-      "nets": {
-        "1": "H09_PLED_SPLUS",
-        "2": "H09_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R328",
-      "key": "R100k",
-      "sheet": "host09_2",
-      "nets": {
-        "1": "H09_PLED_M",
-        "2": "H09_PLED_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R329",
-      "key": "R10k",
-      "sheet": "host09_2",
-      "nets": {
-        "1": "H09_PLED_SMINUS",
-        "2": "H09_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C131",
-      "key": "C1n",
-      "sheet": "host09_2",
-      "nets": {
-        "1": "H09_PLED_SMINUS",
-        "2": "H09_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R330",
-      "key": "R390k",
-      "sheet": "host09_2",
-      "nets": {
-        "1": "H09_3V3",
-        "2": "H09_PLED_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R331",
-      "key": "R510k",
-      "sheet": "host09_2",
-      "nets": {
-        "1": "H09_PLED_CMP",
-        "2": "H09_PLED_FB1"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R332",
-      "key": "R510k",
-      "sheet": "host09_2",
-      "nets": {
-        "1": "H09_PLED_FB1",
-        "2": "H09_PLED_FB2"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R333",
-      "key": "R510k",
-      "sheet": "host09_2",
-      "nets": {
-        "1": "H09_PLED_FB2",
-        "2": "H09_PLED_FB3"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R334",
-      "key": "R510k",
-      "sheet": "host09_2",
-      "nets": {
-        "1": "H09_PLED_FB3",
-        "2": "H09_PLED_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R335",
-      "key": "R10k",
-      "sheet": "host09_2",
-      "nets": {
-        "1": "H09_3V3",
-        "2": "H09_PLED_CMP"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R336",
-      "key": "R330",
-      "sheet": "host09_2",
-      "nets": {
-        "1": "H09_3V3",
-        "2": "H09_PLED_OR"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R337",
-      "key": "R330",
-      "sheet": "host09_2",
-      "nets": {
-        "1": "H09_PLED_OR",
-        "2": "H09_PLED_OA"
-      },
-      "section": ""
-    },
-    {
-      "ref": "U68",
-      "key": "opto",
-      "sheet": "host09_2",
-      "nets": {
-        "1": "H09_PLED_OA",
-        "2": "H09_PLED_CMP",
-        "3": "GND_CTRL",
-        "4": "H09_PLED_N"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R338",
-      "key": "R10k",
-      "sheet": "host09_2",
-      "nets": {
-        "1": "3V3",
-        "2": "H09_PLED_N"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C132",
-      "key": "C1n",
-      "sheet": "host09_2",
-      "nets": {
-        "1": "H09_PLED_N",
-        "2": "GND_CTRL"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R339",
-      "key": "R100k",
-      "sheet": "host09_2",
-      "nets": {
-        "1": "H09_HDD_P",
-        "2": "H09_HDD_SPLUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R340",
-      "key": "R10k",
-      "sheet": "host09_2",
-      "nets": {
-        "1": "H09_HDD_SPLUS",
-        "2": "H09_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C133",
-      "key": "C1n",
-      "sheet": "host09_2",
-      "nets": {
-        "1": "H09_HDD_SPLUS",
-        "2": "H09_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R341",
-      "key": "R100k",
-      "sheet": "host09_2",
-      "nets": {
-        "1": "H09_HDD_M",
-        "2": "H09_HDD_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R342",
-      "key": "R10k",
-      "sheet": "host09_2",
-      "nets": {
-        "1": "H09_HDD_SMINUS",
-        "2": "H09_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C134",
-      "key": "C1n",
-      "sheet": "host09_2",
-      "nets": {
-        "1": "H09_HDD_SMINUS",
-        "2": "H09_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R343",
-      "key": "R390k",
-      "sheet": "host09_2",
-      "nets": {
-        "1": "H09_3V3",
-        "2": "H09_HDD_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R344",
-      "key": "R510k",
-      "sheet": "host09_3",
-      "nets": {
-        "1": "H09_HDD_CMP",
-        "2": "H09_HDD_FB1"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R345",
-      "key": "R510k",
-      "sheet": "host09_3",
-      "nets": {
-        "1": "H09_HDD_FB1",
-        "2": "H09_HDD_FB2"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R346",
-      "key": "R510k",
-      "sheet": "host09_3",
-      "nets": {
-        "1": "H09_HDD_FB2",
-        "2": "H09_HDD_FB3"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R347",
-      "key": "R510k",
-      "sheet": "host09_3",
-      "nets": {
-        "1": "H09_HDD_FB3",
-        "2": "H09_HDD_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R348",
-      "key": "R10k",
-      "sheet": "host09_3",
-      "nets": {
-        "1": "H09_3V3",
-        "2": "H09_HDD_CMP"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R349",
-      "key": "R330",
-      "sheet": "host09_3",
-      "nets": {
-        "1": "H09_3V3",
-        "2": "H09_HDD_OR"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R350",
-      "key": "R330",
-      "sheet": "host09_3",
-      "nets": {
-        "1": "H09_HDD_OR",
-        "2": "H09_HDD_OA"
-      },
-      "section": ""
-    },
-    {
-      "ref": "U69",
-      "key": "opto",
-      "sheet": "host09_3",
-      "nets": {
-        "1": "H09_HDD_OA",
-        "2": "H09_HDD_CMP",
-        "3": "GND_CTRL",
-        "4": "H09_HDD_N"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R351",
-      "key": "R10k",
-      "sheet": "host09_3",
-      "nets": {
-        "1": "3V3",
-        "2": "H09_HDD_N"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C135",
-      "key": "C1n",
-      "sheet": "host09_3",
-      "nets": {
-        "1": "H09_HDD_N",
-        "2": "GND_CTRL"
-      },
-      "section": ""
-    },
-    {
-      "ref": "U70",
-      "key": "cmp",
-      "sheet": "host09_3",
-      "nets": {
-        "1": "H09_PLED_CMP",
-        "2": "H09_PLED_SPLUS",
-        "3": "H09_PLED_SMINUS",
-        "4": "H09_GND",
-        "5": "H09_HDD_SMINUS",
-        "6": "H09_HDD_SPLUS",
-        "7": "H09_HDD_CMP",
-        "8": "H09_3V3"
-      },
-      "section": ""
-    },
-    {
       "ref": "J10",
       "key": "port",
-      "sheet": "host10_1",
+      "sheet": "host10",
       "nets": {
         "1": "H10_PWR_A",
         "2": "H10_PWR_B",
         "3": "H10_RST_A",
         "4": "H10_RST_B",
-        "5": "H10_PLED_P",
-        "6": "H10_PLED_M",
-        "7": "H10_HDD_P",
-        "8": "H10_HDD_M",
+        "5": null,
+        "6": null,
+        "7": null,
+        "8": null,
         "9": "H10_GND",
         "10": null
       },
       "section": ""
     },
     {
-      "ref": "U71",
-      "key": "iso",
-      "sheet": "host10_1",
-      "nets": {
-        "1": "GND_CTRL",
-        "2": "5V",
-        "3": "H10_GND",
-        "4": "H10_RAW5"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C136",
-      "key": "C4.7u",
-      "sheet": "host10_1",
-      "nets": {
-        "1": "5V",
-        "2": "GND_CTRL"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C137",
-      "key": "C10u",
-      "sheet": "host10_1",
-      "nets": {
-        "1": "H10_RAW5",
-        "2": "H10_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "U72",
-      "key": "ldo",
-      "sheet": "host10_1",
-      "nets": {
-        "1": "H10_GND",
-        "2": "H10_RAW5",
-        "3": "H10_3V3"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C138",
-      "key": "C10u",
-      "sheet": "host10_1",
-      "nets": {
-        "1": "H10_3V3",
-        "2": "H10_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C139",
-      "key": "C100n",
-      "sheet": "host10_1",
-      "nets": {
-        "1": "H10_3V3",
-        "2": "H10_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R352",
-      "key": "R10k",
-      "sheet": "host10_1",
-      "nets": {
-        "1": "H10_3V3",
-        "2": "H10_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R353",
+      "ref": "R111",
       "key": "R1.5k",
-      "sheet": "host10_1",
+      "sheet": "host10",
       "nets": {
         "1": "DRV_19",
         "2": "CTRL_H10_PWR_B"
@@ -11075,9 +6939,9 @@
       "section": ""
     },
     {
-      "ref": "R354",
+      "ref": "R112",
       "key": "R100k",
-      "sheet": "host10_1",
+      "sheet": "host10",
       "nets": {
         "1": "CTRL_H10_PWR_B",
         "2": "GND_CTRL"
@@ -11087,7 +6951,7 @@
     {
       "ref": "Q23",
       "key": "npn",
-      "sheet": "host10_1",
+      "sheet": "host10",
       "nets": {
         "1": "CTRL_H10_PWR_B",
         "2": "GND_CTRL",
@@ -11096,9 +6960,9 @@
       "section": ""
     },
     {
-      "ref": "R355",
+      "ref": "R113",
       "key": "R220",
-      "sheet": "host10_1",
+      "sheet": "host10",
       "nets": {
         "1": "PHOTO_5V",
         "2": "CTRL_H10_PWR_R"
@@ -11106,9 +6970,9 @@
       "section": ""
     },
     {
-      "ref": "R356",
+      "ref": "R114",
       "key": "R220",
-      "sheet": "host10_1",
+      "sheet": "host10",
       "nets": {
         "1": "CTRL_H10_PWR_R",
         "2": "CTRL_H10_PWR_A"
@@ -11116,9 +6980,9 @@
       "section": ""
     },
     {
-      "ref": "U73",
+      "ref": "U26",
       "key": "ssr",
-      "sheet": "host10_1",
+      "sheet": "host10",
       "nets": {
         "1": "CTRL_H10_PWR_A",
         "3": "CTRL_H10_PWR_K",
@@ -11128,9 +6992,29 @@
       "section": ""
     },
     {
-      "ref": "R357",
+      "ref": "R319",
       "key": "R1.5k",
-      "sheet": "host10_1",
+      "sheet": "host10",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H10_PWR_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D119",
+      "key": "ledred",
+      "sheet": "host10",
+      "nets": {
+        "1": "CTRL_H10_PWR_K",
+        "2": "CTRL_H10_PWR_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "R115",
+      "key": "R1.5k",
+      "sheet": "host10",
       "nets": {
         "1": "DRV_20",
         "2": "CTRL_H10_RST_B"
@@ -11138,9 +7022,9 @@
       "section": ""
     },
     {
-      "ref": "R358",
+      "ref": "R116",
       "key": "R100k",
-      "sheet": "host10_1",
+      "sheet": "host10",
       "nets": {
         "1": "CTRL_H10_RST_B",
         "2": "GND_CTRL"
@@ -11150,7 +7034,7 @@
     {
       "ref": "Q24",
       "key": "npn",
-      "sheet": "host10_1",
+      "sheet": "host10",
       "nets": {
         "1": "CTRL_H10_RST_B",
         "2": "GND_CTRL",
@@ -11159,9 +7043,9 @@
       "section": ""
     },
     {
-      "ref": "R359",
+      "ref": "R117",
       "key": "R220",
-      "sheet": "host10_1",
+      "sheet": "host10",
       "nets": {
         "1": "PHOTO_5V",
         "2": "CTRL_H10_RST_R"
@@ -11169,9 +7053,9 @@
       "section": ""
     },
     {
-      "ref": "R360",
+      "ref": "R118",
       "key": "R220",
-      "sheet": "host10_1",
+      "sheet": "host10",
       "nets": {
         "1": "CTRL_H10_RST_R",
         "2": "CTRL_H10_RST_A"
@@ -11179,9 +7063,9 @@
       "section": ""
     },
     {
-      "ref": "U74",
+      "ref": "U27",
       "key": "ssr",
-      "sheet": "host10_1",
+      "sheet": "host10",
       "nets": {
         "1": "CTRL_H10_RST_A",
         "3": "CTRL_H10_RST_K",
@@ -11191,9 +7075,29 @@
       "section": ""
     },
     {
-      "ref": "D39",
+      "ref": "R320",
+      "key": "R1.5k",
+      "sheet": "host10",
+      "nets": {
+        "1": "PHOTO_5V",
+        "2": "CTRL_H10_RST_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D120",
+      "key": "ledred",
+      "sheet": "host10",
+      "nets": {
+        "1": "CTRL_H10_RST_K",
+        "2": "CTRL_H10_RST_IND_A"
+      },
+      "section": ""
+    },
+    {
+      "ref": "D20",
       "key": "esd",
-      "sheet": "host10_1",
+      "sheet": "host10",
       "nets": {
         "1": "H10_PWR_A",
         "2": "H10_PWR_B",
@@ -11202,9 +7106,9 @@
       "section": ""
     },
     {
-      "ref": "D40",
+      "ref": "D21",
       "key": "esd",
-      "sheet": "host10_1",
+      "sheet": "host10",
       "nets": {
         "1": "H10_RST_A",
         "2": "H10_RST_B",
@@ -11213,384 +7117,42 @@
       "section": ""
     },
     {
-      "ref": "D41",
-      "key": "esd",
-      "sheet": "host10_1",
-      "nets": {
-        "1": "H10_PLED_P",
-        "2": "H10_PLED_M",
-        "3": "H10_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "D42",
-      "key": "esd",
-      "sheet": "host10_1",
-      "nets": {
-        "1": "H10_HDD_P",
-        "2": "H10_HDD_M",
-        "3": "H10_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R361",
-      "key": "R100k",
-      "sheet": "host10_2",
-      "nets": {
-        "1": "H10_PLED_P",
-        "2": "H10_PLED_SPLUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R362",
-      "key": "R10k",
-      "sheet": "host10_2",
-      "nets": {
-        "1": "H10_PLED_SPLUS",
-        "2": "H10_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C140",
-      "key": "C1n",
-      "sheet": "host10_2",
-      "nets": {
-        "1": "H10_PLED_SPLUS",
-        "2": "H10_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R363",
-      "key": "R100k",
-      "sheet": "host10_2",
-      "nets": {
-        "1": "H10_PLED_M",
-        "2": "H10_PLED_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R364",
-      "key": "R10k",
-      "sheet": "host10_2",
-      "nets": {
-        "1": "H10_PLED_SMINUS",
-        "2": "H10_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C141",
-      "key": "C1n",
-      "sheet": "host10_2",
-      "nets": {
-        "1": "H10_PLED_SMINUS",
-        "2": "H10_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R365",
-      "key": "R390k",
-      "sheet": "host10_2",
-      "nets": {
-        "1": "H10_3V3",
-        "2": "H10_PLED_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R366",
-      "key": "R510k",
-      "sheet": "host10_2",
-      "nets": {
-        "1": "H10_PLED_CMP",
-        "2": "H10_PLED_FB1"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R367",
-      "key": "R510k",
-      "sheet": "host10_2",
-      "nets": {
-        "1": "H10_PLED_FB1",
-        "2": "H10_PLED_FB2"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R368",
-      "key": "R510k",
-      "sheet": "host10_2",
-      "nets": {
-        "1": "H10_PLED_FB2",
-        "2": "H10_PLED_FB3"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R369",
-      "key": "R510k",
-      "sheet": "host10_2",
-      "nets": {
-        "1": "H10_PLED_FB3",
-        "2": "H10_PLED_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R370",
-      "key": "R10k",
-      "sheet": "host10_2",
-      "nets": {
-        "1": "H10_3V3",
-        "2": "H10_PLED_CMP"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R371",
+      "ref": "R321",
       "key": "R330",
-      "sheet": "host10_2",
-      "nets": {
-        "1": "H10_3V3",
-        "2": "H10_PLED_OR"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R372",
-      "key": "R330",
-      "sheet": "host10_2",
-      "nets": {
-        "1": "H10_PLED_OR",
-        "2": "H10_PLED_OA"
-      },
-      "section": ""
-    },
-    {
-      "ref": "U75",
-      "key": "opto",
-      "sheet": "host10_2",
-      "nets": {
-        "1": "H10_PLED_OA",
-        "2": "H10_PLED_CMP",
-        "3": "GND_CTRL",
-        "4": "H10_PLED_N"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R373",
-      "key": "R10k",
-      "sheet": "host10_2",
+      "sheet": "indicators",
       "nets": {
         "1": "3V3",
-        "2": "H10_PLED_N"
+        "2": "PWR_IND_A"
       },
       "section": ""
     },
     {
-      "ref": "C142",
-      "key": "C1n",
-      "sheet": "host10_2",
+      "ref": "D201",
+      "key": "ledgreen",
+      "sheet": "indicators",
       "nets": {
-        "1": "H10_PLED_N",
-        "2": "GND_CTRL"
+        "1": "GND_CTRL",
+        "2": "PWR_IND_A"
       },
       "section": ""
     },
     {
-      "ref": "R374",
-      "key": "R100k",
-      "sheet": "host10_2",
-      "nets": {
-        "1": "H10_HDD_P",
-        "2": "H10_HDD_SPLUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R375",
-      "key": "R10k",
-      "sheet": "host10_2",
-      "nets": {
-        "1": "H10_HDD_SPLUS",
-        "2": "H10_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C143",
-      "key": "C1n",
-      "sheet": "host10_2",
-      "nets": {
-        "1": "H10_HDD_SPLUS",
-        "2": "H10_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R376",
-      "key": "R100k",
-      "sheet": "host10_2",
-      "nets": {
-        "1": "H10_HDD_M",
-        "2": "H10_HDD_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R377",
-      "key": "R10k",
-      "sheet": "host10_2",
-      "nets": {
-        "1": "H10_HDD_SMINUS",
-        "2": "H10_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "C144",
-      "key": "C1n",
-      "sheet": "host10_2",
-      "nets": {
-        "1": "H10_HDD_SMINUS",
-        "2": "H10_GND"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R378",
-      "key": "R390k",
-      "sheet": "host10_2",
-      "nets": {
-        "1": "H10_3V3",
-        "2": "H10_HDD_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R379",
-      "key": "R510k",
-      "sheet": "host10_3",
-      "nets": {
-        "1": "H10_HDD_CMP",
-        "2": "H10_HDD_FB1"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R380",
-      "key": "R510k",
-      "sheet": "host10_3",
-      "nets": {
-        "1": "H10_HDD_FB1",
-        "2": "H10_HDD_FB2"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R381",
-      "key": "R510k",
-      "sheet": "host10_3",
-      "nets": {
-        "1": "H10_HDD_FB2",
-        "2": "H10_HDD_FB3"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R382",
-      "key": "R510k",
-      "sheet": "host10_3",
-      "nets": {
-        "1": "H10_HDD_FB3",
-        "2": "H10_HDD_SMINUS"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R383",
-      "key": "R10k",
-      "sheet": "host10_3",
-      "nets": {
-        "1": "H10_3V3",
-        "2": "H10_HDD_CMP"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R384",
+      "ref": "R322",
       "key": "R330",
-      "sheet": "host10_3",
-      "nets": {
-        "1": "H10_3V3",
-        "2": "H10_HDD_OR"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R385",
-      "key": "R330",
-      "sheet": "host10_3",
-      "nets": {
-        "1": "H10_HDD_OR",
-        "2": "H10_HDD_OA"
-      },
-      "section": ""
-    },
-    {
-      "ref": "U76",
-      "key": "opto",
-      "sheet": "host10_3",
-      "nets": {
-        "1": "H10_HDD_OA",
-        "2": "H10_HDD_CMP",
-        "3": "GND_CTRL",
-        "4": "H10_HDD_N"
-      },
-      "section": ""
-    },
-    {
-      "ref": "R386",
-      "key": "R10k",
-      "sheet": "host10_3",
+      "sheet": "indicators",
       "nets": {
         "1": "3V3",
-        "2": "H10_HDD_N"
+        "2": "EN_IND_A"
       },
       "section": ""
     },
     {
-      "ref": "C145",
-      "key": "C1n",
-      "sheet": "host10_3",
+      "ref": "D202",
+      "key": "ledgreen",
+      "sheet": "indicators",
       "nets": {
-        "1": "H10_HDD_N",
-        "2": "GND_CTRL"
-      },
-      "section": ""
-    },
-    {
-      "ref": "U77",
-      "key": "cmp",
-      "sheet": "host10_3",
-      "nets": {
-        "1": "H10_PLED_CMP",
-        "2": "H10_PLED_SPLUS",
-        "3": "H10_PLED_SMINUS",
-        "4": "H10_GND",
-        "5": "H10_HDD_SMINUS",
-        "6": "H10_HDD_SPLUS",
-        "7": "H10_HDD_CMP",
-        "8": "H10_3V3"
+        "1": "OUT_OE_N",
+        "2": "EN_IND_A"
       },
       "section": ""
     },
@@ -11603,10 +7165,10 @@
         "2": "PWR_B",
         "3": "RST_A",
         "4": "RST_B",
-        "5": "PLED_P",
-        "6": "PLED_M",
-        "7": "HDD_P",
-        "8": "HDD_M",
+        "5": null,
+        "6": null,
+        "7": null,
+        "8": null,
         "9": "HOST_REF",
         "10": null
       },
@@ -11623,7 +7185,7 @@
       "section": ""
     },
     {
-      "ref": "JA6",
+      "ref": "JA4",
       "key": "header2",
       "sheet": "adapter",
       "nets": {
@@ -11643,7 +7205,7 @@
       "section": ""
     },
     {
-      "ref": "JA7",
+      "ref": "JA5",
       "key": "header2",
       "sheet": "adapter",
       "nets": {
@@ -11653,47 +7215,7 @@
       "section": ""
     },
     {
-      "ref": "JA4",
-      "key": "header2",
-      "sheet": "adapter",
-      "nets": {
-        "1": "PLED_P",
-        "2": "PLED_M"
-      },
-      "section": ""
-    },
-    {
-      "ref": "JA8",
-      "key": "header2",
-      "sheet": "adapter",
-      "nets": {
-        "1": "PLED_P",
-        "2": "PLED_M"
-      },
-      "section": ""
-    },
-    {
-      "ref": "JA5",
-      "key": "header2",
-      "sheet": "adapter",
-      "nets": {
-        "1": "HDD_P",
-        "2": "HDD_M"
-      },
-      "section": ""
-    },
-    {
-      "ref": "JA9",
-      "key": "header2",
-      "sheet": "adapter",
-      "nets": {
-        "1": "HDD_P",
-        "2": "HDD_M"
-      },
-      "section": ""
-    },
-    {
-      "ref": "JA10",
+      "ref": "JA6",
       "key": "header2",
       "sheet": "adapter",
       "nets": {
@@ -11705,8 +7227,9 @@
   ],
   "gpio": {
     "0": "BOOT_N",
-    "1": "OUT_LATCH",
-    "2": "OUT_OE_N",
+    "4": "TIMER_ARM",
+    "6": "OUT_OE_N",
+    "7": "OUT_LATCH",
     "19": "USB_DM_MCU",
     "20": "USB_DP_MCU",
     "33": "USB_VBUS_SENSE",
@@ -11714,32 +7237,10 @@
     "40": "SPI_MOSI_RAW",
     "41": "SPI_MISO",
     "42": "ETH_CS_N",
-    "43": "TIMER_ARM",
-    "44": "TIMER_FIRE",
     "45": "STRAP45",
     "46": "STRAP46",
     "47": "ETH_RST_N",
-    "48": "ETH_INT_N",
-    "4": "H01_PLED_N",
-    "5": "H01_HDD_N",
-    "6": "H02_PLED_N",
-    "7": "H02_HDD_N",
-    "8": "H03_PLED_N",
-    "9": "H03_HDD_N",
-    "10": "H04_PLED_N",
-    "11": "H04_HDD_N",
-    "12": "H05_PLED_N",
-    "13": "H05_HDD_N",
-    "14": "H06_PLED_N",
-    "15": "H06_HDD_N",
-    "16": "H07_PLED_N",
-    "17": "H07_HDD_N",
-    "18": "H08_PLED_N",
-    "21": "H08_HDD_N",
-    "35": "H09_PLED_N",
-    "36": "H09_HDD_N",
-    "37": "H10_PLED_N",
-    "38": "H10_HDD_N"
+    "48": "ETH_INT_N"
   },
   "sheets": {
     "power": {
@@ -11767,136 +7268,60 @@
       "notes": "WIZnet RJ45 reference topology. HR911105A pin numbering differs from J1B1211CCD.\n100-ohm differential MDI routing; crystal load caps need final frequency measurement."
     },
     "outputs_1": {
-      "title": "Output latches / timed drive rail (1/2)",
-      "notes": "595 stores 20 output bits; unused 4 outputs not connected. Shift 24 zeros before OE low.\nSPI traffic shifts internal register only; latch ONLY after a complete output frame. Never latch Ethernet data.\nTimer: nominal 16.8 s, qualify 8..25 s with capacitor bias/tolerance. Firmware long press 5 s.\nOne command at a time. Repeated trigger edges can extend a 555 pulse: firmware is not a safety-rated system."
+      "title": "Output latches / counted timeout (1/2)",
+      "notes": "Default: ARM low, OE high, latches cleared before enabling. GPIO4/6/7 avoid boot UART pulls and GPIO1/2 glitches.\nMC14541B: AR=1 disables automatic reset; MR pulled high until ARM. MODE=0, QSEL=1, A=B=1.\n200k / 1nF C0G oscillator ~2174 Hz; 32768-count timeout ~15.07s. Release ARM immediately ends output.\nARM must be low >=10ms between commands. Hardware output requires both ARM and timer Q. No LED sensing."
     },
     "outputs_2": {
-      "title": "Output latches / timed drive rail (2/2)",
-      "notes": "595 stores 20 output bits; unused 4 outputs not connected. Shift 24 zeros before OE low.\nSPI traffic shifts internal register only; latch ONLY after a complete output frame. Never latch Ethernet data.\nTimer: nominal 16.8 s, qualify 8..25 s with capacitor bias/tolerance. Firmware long press 5 s.\nOne command at a time. Repeated trigger edges can extend a 555 pulse: firmware is not a safety-rated system."
+      "title": "Output latches / counted timeout (2/2)",
+      "notes": "Default: ARM low, OE high, latches cleared before enabling. GPIO4/6/7 avoid boot UART pulls and GPIO1/2 glitches.\nMC14541B: AR=1 disables automatic reset; MR pulled high until ARM. MODE=0, QSEL=1, A=B=1.\n200k / 1nF C0G oscillator ~2174 Hz; 32768-count timeout ~15.07s. Release ARM immediately ends output.\nARM must be low >=10ms between commands. Hardware output requires both ARM and timer Q. No LED sensing."
     },
-    "host01_1": {
-      "title": "Host 01: isolated controls / LEDs (1/3)",
-      "notes": "All HOST_REF and ESD grounds on this sheet belong only to this host.\nCase buttons and LEDs remain straight-through on passive adapter. No host power is supplied on the cable.\nLED input envelope: 0..5 V common-mode; OFF differential <=0.2 V; ON >=1.4 V. Qualify actual motherboard.\nLM393 inputs tolerate positive voltage with VCC=0; 100k series limits signal loading. Not a universal F_PANEL map."
+    "host01": {
+      "title": "Host 01: POWER / RESET only",
+      "notes": "Two isolated normally-open contacts parallel the original case buttons.\nNo host LED sensing or isolated supply. Pin 9 remains this host reference for button ESD protection ONLY.\nDo not join host references to controller ground or to one another. Pins 5..8 and 10 are NC.\nUse verified motherboard signal names, not a universal F_PANEL physical pin map."
     },
-    "host01_2": {
-      "title": "Host 01: isolated controls / LEDs (2/3)",
-      "notes": "All HOST_REF and ESD grounds on this sheet belong only to this host.\nCase buttons and LEDs remain straight-through on passive adapter. No host power is supplied on the cable.\nLED input envelope: 0..5 V common-mode; OFF differential <=0.2 V; ON >=1.4 V. Qualify actual motherboard.\nLM393 inputs tolerate positive voltage with VCC=0; 100k series limits signal loading. Not a universal F_PANEL map."
+    "host02": {
+      "title": "Host 02: POWER / RESET only",
+      "notes": "Two isolated normally-open contacts parallel the original case buttons.\nNo host LED sensing or isolated supply. Pin 9 remains this host reference for button ESD protection ONLY.\nDo not join host references to controller ground or to one another. Pins 5..8 and 10 are NC.\nUse verified motherboard signal names, not a universal F_PANEL physical pin map."
     },
-    "host01_3": {
-      "title": "Host 01: isolated controls / LEDs (3/3)",
-      "notes": "All HOST_REF and ESD grounds on this sheet belong only to this host.\nCase buttons and LEDs remain straight-through on passive adapter. No host power is supplied on the cable.\nLED input envelope: 0..5 V common-mode; OFF differential <=0.2 V; ON >=1.4 V. Qualify actual motherboard.\nLM393 inputs tolerate positive voltage with VCC=0; 100k series limits signal loading. Not a universal F_PANEL map."
+    "host03": {
+      "title": "Host 03: POWER / RESET only",
+      "notes": "Two isolated normally-open contacts parallel the original case buttons.\nNo host LED sensing or isolated supply. Pin 9 remains this host reference for button ESD protection ONLY.\nDo not join host references to controller ground or to one another. Pins 5..8 and 10 are NC.\nUse verified motherboard signal names, not a universal F_PANEL physical pin map."
     },
-    "host02_1": {
-      "title": "Host 02: isolated controls / LEDs (1/3)",
-      "notes": "All HOST_REF and ESD grounds on this sheet belong only to this host.\nCase buttons and LEDs remain straight-through on passive adapter. No host power is supplied on the cable.\nLED input envelope: 0..5 V common-mode; OFF differential <=0.2 V; ON >=1.4 V. Qualify actual motherboard.\nLM393 inputs tolerate positive voltage with VCC=0; 100k series limits signal loading. Not a universal F_PANEL map."
+    "host04": {
+      "title": "Host 04: POWER / RESET only",
+      "notes": "Two isolated normally-open contacts parallel the original case buttons.\nNo host LED sensing or isolated supply. Pin 9 remains this host reference for button ESD protection ONLY.\nDo not join host references to controller ground or to one another. Pins 5..8 and 10 are NC.\nUse verified motherboard signal names, not a universal F_PANEL physical pin map."
     },
-    "host02_2": {
-      "title": "Host 02: isolated controls / LEDs (2/3)",
-      "notes": "All HOST_REF and ESD grounds on this sheet belong only to this host.\nCase buttons and LEDs remain straight-through on passive adapter. No host power is supplied on the cable.\nLED input envelope: 0..5 V common-mode; OFF differential <=0.2 V; ON >=1.4 V. Qualify actual motherboard.\nLM393 inputs tolerate positive voltage with VCC=0; 100k series limits signal loading. Not a universal F_PANEL map."
+    "host05": {
+      "title": "Host 05: POWER / RESET only",
+      "notes": "Two isolated normally-open contacts parallel the original case buttons.\nNo host LED sensing or isolated supply. Pin 9 remains this host reference for button ESD protection ONLY.\nDo not join host references to controller ground or to one another. Pins 5..8 and 10 are NC.\nUse verified motherboard signal names, not a universal F_PANEL physical pin map."
     },
-    "host02_3": {
-      "title": "Host 02: isolated controls / LEDs (3/3)",
-      "notes": "All HOST_REF and ESD grounds on this sheet belong only to this host.\nCase buttons and LEDs remain straight-through on passive adapter. No host power is supplied on the cable.\nLED input envelope: 0..5 V common-mode; OFF differential <=0.2 V; ON >=1.4 V. Qualify actual motherboard.\nLM393 inputs tolerate positive voltage with VCC=0; 100k series limits signal loading. Not a universal F_PANEL map."
+    "host06": {
+      "title": "Host 06: POWER / RESET only",
+      "notes": "Two isolated normally-open contacts parallel the original case buttons.\nNo host LED sensing or isolated supply. Pin 9 remains this host reference for button ESD protection ONLY.\nDo not join host references to controller ground or to one another. Pins 5..8 and 10 are NC.\nUse verified motherboard signal names, not a universal F_PANEL physical pin map."
     },
-    "host03_1": {
-      "title": "Host 03: isolated controls / LEDs (1/3)",
-      "notes": "All HOST_REF and ESD grounds on this sheet belong only to this host.\nCase buttons and LEDs remain straight-through on passive adapter. No host power is supplied on the cable.\nLED input envelope: 0..5 V common-mode; OFF differential <=0.2 V; ON >=1.4 V. Qualify actual motherboard.\nLM393 inputs tolerate positive voltage with VCC=0; 100k series limits signal loading. Not a universal F_PANEL map."
+    "host07": {
+      "title": "Host 07: POWER / RESET only",
+      "notes": "Two isolated normally-open contacts parallel the original case buttons.\nNo host LED sensing or isolated supply. Pin 9 remains this host reference for button ESD protection ONLY.\nDo not join host references to controller ground or to one another. Pins 5..8 and 10 are NC.\nUse verified motherboard signal names, not a universal F_PANEL physical pin map."
     },
-    "host03_2": {
-      "title": "Host 03: isolated controls / LEDs (2/3)",
-      "notes": "All HOST_REF and ESD grounds on this sheet belong only to this host.\nCase buttons and LEDs remain straight-through on passive adapter. No host power is supplied on the cable.\nLED input envelope: 0..5 V common-mode; OFF differential <=0.2 V; ON >=1.4 V. Qualify actual motherboard.\nLM393 inputs tolerate positive voltage with VCC=0; 100k series limits signal loading. Not a universal F_PANEL map."
+    "host08": {
+      "title": "Host 08: POWER / RESET only",
+      "notes": "Two isolated normally-open contacts parallel the original case buttons.\nNo host LED sensing or isolated supply. Pin 9 remains this host reference for button ESD protection ONLY.\nDo not join host references to controller ground or to one another. Pins 5..8 and 10 are NC.\nUse verified motherboard signal names, not a universal F_PANEL physical pin map."
     },
-    "host03_3": {
-      "title": "Host 03: isolated controls / LEDs (3/3)",
-      "notes": "All HOST_REF and ESD grounds on this sheet belong only to this host.\nCase buttons and LEDs remain straight-through on passive adapter. No host power is supplied on the cable.\nLED input envelope: 0..5 V common-mode; OFF differential <=0.2 V; ON >=1.4 V. Qualify actual motherboard.\nLM393 inputs tolerate positive voltage with VCC=0; 100k series limits signal loading. Not a universal F_PANEL map."
+    "host09": {
+      "title": "Host 09: POWER / RESET only",
+      "notes": "Two isolated normally-open contacts parallel the original case buttons.\nNo host LED sensing or isolated supply. Pin 9 remains this host reference for button ESD protection ONLY.\nDo not join host references to controller ground or to one another. Pins 5..8 and 10 are NC.\nUse verified motherboard signal names, not a universal F_PANEL physical pin map."
     },
-    "host04_1": {
-      "title": "Host 04: isolated controls / LEDs (1/3)",
-      "notes": "All HOST_REF and ESD grounds on this sheet belong only to this host.\nCase buttons and LEDs remain straight-through on passive adapter. No host power is supplied on the cable.\nLED input envelope: 0..5 V common-mode; OFF differential <=0.2 V; ON >=1.4 V. Qualify actual motherboard.\nLM393 inputs tolerate positive voltage with VCC=0; 100k series limits signal loading. Not a universal F_PANEL map."
+    "host10": {
+      "title": "Host 10: POWER / RESET only",
+      "notes": "Two isolated normally-open contacts parallel the original case buttons.\nNo host LED sensing or isolated supply. Pin 9 remains this host reference for button ESD protection ONLY.\nDo not join host references to controller ground or to one another. Pins 5..8 and 10 are NC.\nUse verified motherboard signal names, not a universal F_PANEL physical pin map."
     },
-    "host04_2": {
-      "title": "Host 04: isolated controls / LEDs (2/3)",
-      "notes": "All HOST_REF and ESD grounds on this sheet belong only to this host.\nCase buttons and LEDs remain straight-through on passive adapter. No host power is supplied on the cable.\nLED input envelope: 0..5 V common-mode; OFF differential <=0.2 V; ON >=1.4 V. Qualify actual motherboard.\nLM393 inputs tolerate positive voltage with VCC=0; 100k series limits signal loading. Not a universal F_PANEL map."
-    },
-    "host04_3": {
-      "title": "Host 04: isolated controls / LEDs (3/3)",
-      "notes": "All HOST_REF and ESD grounds on this sheet belong only to this host.\nCase buttons and LEDs remain straight-through on passive adapter. No host power is supplied on the cable.\nLED input envelope: 0..5 V common-mode; OFF differential <=0.2 V; ON >=1.4 V. Qualify actual motherboard.\nLM393 inputs tolerate positive voltage with VCC=0; 100k series limits signal loading. Not a universal F_PANEL map."
-    },
-    "host05_1": {
-      "title": "Host 05: isolated controls / LEDs (1/3)",
-      "notes": "All HOST_REF and ESD grounds on this sheet belong only to this host.\nCase buttons and LEDs remain straight-through on passive adapter. No host power is supplied on the cable.\nLED input envelope: 0..5 V common-mode; OFF differential <=0.2 V; ON >=1.4 V. Qualify actual motherboard.\nLM393 inputs tolerate positive voltage with VCC=0; 100k series limits signal loading. Not a universal F_PANEL map."
-    },
-    "host05_2": {
-      "title": "Host 05: isolated controls / LEDs (2/3)",
-      "notes": "All HOST_REF and ESD grounds on this sheet belong only to this host.\nCase buttons and LEDs remain straight-through on passive adapter. No host power is supplied on the cable.\nLED input envelope: 0..5 V common-mode; OFF differential <=0.2 V; ON >=1.4 V. Qualify actual motherboard.\nLM393 inputs tolerate positive voltage with VCC=0; 100k series limits signal loading. Not a universal F_PANEL map."
-    },
-    "host05_3": {
-      "title": "Host 05: isolated controls / LEDs (3/3)",
-      "notes": "All HOST_REF and ESD grounds on this sheet belong only to this host.\nCase buttons and LEDs remain straight-through on passive adapter. No host power is supplied on the cable.\nLED input envelope: 0..5 V common-mode; OFF differential <=0.2 V; ON >=1.4 V. Qualify actual motherboard.\nLM393 inputs tolerate positive voltage with VCC=0; 100k series limits signal loading. Not a universal F_PANEL map."
-    },
-    "host06_1": {
-      "title": "Host 06: isolated controls / LEDs (1/3)",
-      "notes": "All HOST_REF and ESD grounds on this sheet belong only to this host.\nCase buttons and LEDs remain straight-through on passive adapter. No host power is supplied on the cable.\nLED input envelope: 0..5 V common-mode; OFF differential <=0.2 V; ON >=1.4 V. Qualify actual motherboard.\nLM393 inputs tolerate positive voltage with VCC=0; 100k series limits signal loading. Not a universal F_PANEL map."
-    },
-    "host06_2": {
-      "title": "Host 06: isolated controls / LEDs (2/3)",
-      "notes": "All HOST_REF and ESD grounds on this sheet belong only to this host.\nCase buttons and LEDs remain straight-through on passive adapter. No host power is supplied on the cable.\nLED input envelope: 0..5 V common-mode; OFF differential <=0.2 V; ON >=1.4 V. Qualify actual motherboard.\nLM393 inputs tolerate positive voltage with VCC=0; 100k series limits signal loading. Not a universal F_PANEL map."
-    },
-    "host06_3": {
-      "title": "Host 06: isolated controls / LEDs (3/3)",
-      "notes": "All HOST_REF and ESD grounds on this sheet belong only to this host.\nCase buttons and LEDs remain straight-through on passive adapter. No host power is supplied on the cable.\nLED input envelope: 0..5 V common-mode; OFF differential <=0.2 V; ON >=1.4 V. Qualify actual motherboard.\nLM393 inputs tolerate positive voltage with VCC=0; 100k series limits signal loading. Not a universal F_PANEL map."
-    },
-    "host07_1": {
-      "title": "Host 07: isolated controls / LEDs (1/3)",
-      "notes": "All HOST_REF and ESD grounds on this sheet belong only to this host.\nCase buttons and LEDs remain straight-through on passive adapter. No host power is supplied on the cable.\nLED input envelope: 0..5 V common-mode; OFF differential <=0.2 V; ON >=1.4 V. Qualify actual motherboard.\nLM393 inputs tolerate positive voltage with VCC=0; 100k series limits signal loading. Not a universal F_PANEL map."
-    },
-    "host07_2": {
-      "title": "Host 07: isolated controls / LEDs (2/3)",
-      "notes": "All HOST_REF and ESD grounds on this sheet belong only to this host.\nCase buttons and LEDs remain straight-through on passive adapter. No host power is supplied on the cable.\nLED input envelope: 0..5 V common-mode; OFF differential <=0.2 V; ON >=1.4 V. Qualify actual motherboard.\nLM393 inputs tolerate positive voltage with VCC=0; 100k series limits signal loading. Not a universal F_PANEL map."
-    },
-    "host07_3": {
-      "title": "Host 07: isolated controls / LEDs (3/3)",
-      "notes": "All HOST_REF and ESD grounds on this sheet belong only to this host.\nCase buttons and LEDs remain straight-through on passive adapter. No host power is supplied on the cable.\nLED input envelope: 0..5 V common-mode; OFF differential <=0.2 V; ON >=1.4 V. Qualify actual motherboard.\nLM393 inputs tolerate positive voltage with VCC=0; 100k series limits signal loading. Not a universal F_PANEL map."
-    },
-    "host08_1": {
-      "title": "Host 08: isolated controls / LEDs (1/3)",
-      "notes": "All HOST_REF and ESD grounds on this sheet belong only to this host.\nCase buttons and LEDs remain straight-through on passive adapter. No host power is supplied on the cable.\nLED input envelope: 0..5 V common-mode; OFF differential <=0.2 V; ON >=1.4 V. Qualify actual motherboard.\nLM393 inputs tolerate positive voltage with VCC=0; 100k series limits signal loading. Not a universal F_PANEL map."
-    },
-    "host08_2": {
-      "title": "Host 08: isolated controls / LEDs (2/3)",
-      "notes": "All HOST_REF and ESD grounds on this sheet belong only to this host.\nCase buttons and LEDs remain straight-through on passive adapter. No host power is supplied on the cable.\nLED input envelope: 0..5 V common-mode; OFF differential <=0.2 V; ON >=1.4 V. Qualify actual motherboard.\nLM393 inputs tolerate positive voltage with VCC=0; 100k series limits signal loading. Not a universal F_PANEL map."
-    },
-    "host08_3": {
-      "title": "Host 08: isolated controls / LEDs (3/3)",
-      "notes": "All HOST_REF and ESD grounds on this sheet belong only to this host.\nCase buttons and LEDs remain straight-through on passive adapter. No host power is supplied on the cable.\nLED input envelope: 0..5 V common-mode; OFF differential <=0.2 V; ON >=1.4 V. Qualify actual motherboard.\nLM393 inputs tolerate positive voltage with VCC=0; 100k series limits signal loading. Not a universal F_PANEL map."
-    },
-    "host09_1": {
-      "title": "Host 09: isolated controls / LEDs (1/3)",
-      "notes": "All HOST_REF and ESD grounds on this sheet belong only to this host.\nCase buttons and LEDs remain straight-through on passive adapter. No host power is supplied on the cable.\nLED input envelope: 0..5 V common-mode; OFF differential <=0.2 V; ON >=1.4 V. Qualify actual motherboard.\nLM393 inputs tolerate positive voltage with VCC=0; 100k series limits signal loading. Not a universal F_PANEL map."
-    },
-    "host09_2": {
-      "title": "Host 09: isolated controls / LEDs (2/3)",
-      "notes": "All HOST_REF and ESD grounds on this sheet belong only to this host.\nCase buttons and LEDs remain straight-through on passive adapter. No host power is supplied on the cable.\nLED input envelope: 0..5 V common-mode; OFF differential <=0.2 V; ON >=1.4 V. Qualify actual motherboard.\nLM393 inputs tolerate positive voltage with VCC=0; 100k series limits signal loading. Not a universal F_PANEL map."
-    },
-    "host09_3": {
-      "title": "Host 09: isolated controls / LEDs (3/3)",
-      "notes": "All HOST_REF and ESD grounds on this sheet belong only to this host.\nCase buttons and LEDs remain straight-through on passive adapter. No host power is supplied on the cable.\nLED input envelope: 0..5 V common-mode; OFF differential <=0.2 V; ON >=1.4 V. Qualify actual motherboard.\nLM393 inputs tolerate positive voltage with VCC=0; 100k series limits signal loading. Not a universal F_PANEL map."
-    },
-    "host10_1": {
-      "title": "Host 10: isolated controls / LEDs (1/3)",
-      "notes": "All HOST_REF and ESD grounds on this sheet belong only to this host.\nCase buttons and LEDs remain straight-through on passive adapter. No host power is supplied on the cable.\nLED input envelope: 0..5 V common-mode; OFF differential <=0.2 V; ON >=1.4 V. Qualify actual motherboard.\nLM393 inputs tolerate positive voltage with VCC=0; 100k series limits signal loading. Not a universal F_PANEL map."
-    },
-    "host10_2": {
-      "title": "Host 10: isolated controls / LEDs (2/3)",
-      "notes": "All HOST_REF and ESD grounds on this sheet belong only to this host.\nCase buttons and LEDs remain straight-through on passive adapter. No host power is supplied on the cable.\nLED input envelope: 0..5 V common-mode; OFF differential <=0.2 V; ON >=1.4 V. Qualify actual motherboard.\nLM393 inputs tolerate positive voltage with VCC=0; 100k series limits signal loading. Not a universal F_PANEL map."
-    },
-    "host10_3": {
-      "title": "Host 10: isolated controls / LEDs (3/3)",
-      "notes": "All HOST_REF and ESD grounds on this sheet belong only to this host.\nCase buttons and LEDs remain straight-through on passive adapter. No host power is supplied on the cable.\nLED input envelope: 0..5 V common-mode; OFF differential <=0.2 V; ON >=1.4 V. Qualify actual motherboard.\nLM393 inputs tolerate positive voltage with VCC=0; 100k series limits signal loading. Not a universal F_PANEL map."
+    "indicators": {
+      "title": "Controller power and output-enable indicators",
+      "notes": "PWR: 3V3 present. EN: OUT_OE_N low, output latches enabled.\nPer-host red PWR/RST indicators follow the photorelay driver AND PHOTO_5V.\nThese indicate driver state, NOT actual contact closure or host power state.\nRJ45 built-in LINK/ACT LEDs retained. All indicators use controller ground."
     },
     "adapter": {
-      "title": "Passive host adapter",
-      "notes": "Build 10 identical copies. This board has no active parts and no power supply.\n2.54 mm pairs are labelled by function, not motherboard physical pin number. Connect by motherboard manual.\nPin 9 goes to separately verified host signal ground. Pin 10 stays NC at both cable ends.\nTo save a separate PCBA setup: order bare PCBs and hand-solder connectors, or substitute a crimped Y harness."
+      "title": "Passive POWER / RESET adapter",
+      "notes": "Build 10 copies; no active components or power supply.\nPOWER and RESET each pass through to original case switch with a parallel remote branch.\nOriginal PLED/HDD cables stay directly on the motherboard and do not enter this adapter.\nPin 9: separately verified motherboard ground for button ESD. Pins 5..8 and 10 unused."
     }
   }
 }

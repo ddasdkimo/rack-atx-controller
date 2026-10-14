@@ -1,0 +1,64 @@
+B.1 host LED sense channel -- dynamic response with assumed motherboard driver and case LED
+* Motherboard model is an ASSUMPTION (MOBO_LED in models.lib): rail VRAIL through RS,
+* open-drain low-side (MODE=0) or high-side (MODE=1) switch driven by CTL.
+* Case LED in parallel with the sense branch; cable capacitance 100 pF/m per lead.
+* CTL pulse: starts at TD, width PW, period PER. Host ground = node 0.
+.include models.lib
+.param HRAIL=3.3 C3V3=3.3
+.param VOS=0 IB=25n IOS=0 RON=100 CTR=1.3
+.param VRAIL=5 RS=330 MODE=0 LEDG=1 LEDB=0 CABLE_M=3
+.param TD=1m PW=1m PER=20m TSTOP=5m
+* RPU: what-if pull-up from LED- sense input to LED+ (not in B.1; 1e12 = absent)
+.param RPU=1e12
+
+Vh3 H3V3 0 {HRAIL}
+Vc3 C3V3 CG {C3V3}
+Vcg CG 0 0
+
+Vctl CTL 0 PULSE(0 1 {TD} 1u 1u {PW} {PER})
+Xmobo P M 0 CTL MOBO_LED params: VRAIL={VRAIL} RS={RS} MODE={MODE}
+Xcase P M CASE_LED params: PRESENT_G={LEDG} PRESENT_B={LEDB}
+Ccp P 0 {CABLE_M*100p}
+Ccm M 0 {CABLE_M*100p}
+Rpu P M {RPU}
+Bvd VDIFF 0 V = V(P)-V(M)
+
+Xesd P M 0 PESD5V0S2BT
+
+R46 P SPLUS 100k
+R47 SPLUS 0 10k
+C50 SPLUS 0 1n
+R48 M SMINUS 100k
+R49 SMINUS 0 10k
+C51 SMINUS 0 1n
+R50 H3V3 SMINUS 390k
+R51 CMP FB1 510k
+R52 FB1 FB2 510k
+R53 FB2 FB3 510k
+R54 FB3 SMINUS 510k
+R55 H3V3 CMP 10k
+XU14 SPLUS SMINUS CMP H3V3 0 LM393_CH params: VOS={VOS} IB={IB} IOS={IOS} RON={RON}
+
+R56 H3V3 OR 330
+R57 OR OA 330
+XU12 OA CMP PLEDN CG EL357N params: CTR={CTR}
+R58 C3V3 PLEDN 10k
+C52 PLEDN CG 1n
+
+.tran 2u {TSTOP}
+.meas tran T_FALL WHEN V(PLEDN)=0.825 FALL=1
+.meas tran T_RISE WHEN V(PLEDN)=2.475 RISE=1
+.meas tran PLEDN_MIN MIN V(PLEDN)
+.meas tran PLEDN_MAX MAX V(PLEDN)
+.meas tran VDIFF_ON AVG V(VDIFF) FROM={TD+PW*0.5} TO={TD+PW*0.9}
+.meas tran VDIFF_OFF AVG V(VDIFF) FROM={TD*0.5} TO={TD*0.9}
+.meas tran ILED_ON AVG I(V.XMOBO.VR) FROM={TD+PW*0.5} TO={TD+PW*0.9}
+.meas tran VP_ON AVG V(P) FROM={TD+PW*0.5} TO={TD+PW*0.9}
+.meas tran VM_ON AVG V(M) FROM={TD+PW*0.5} TO={TD+PW*0.9}
+.meas tran PLEDN_OFF AVG V(PLEDN) FROM={TD*0.5} TO={TD*0.9}
+.meas tran PLEDN_ON AVG V(PLEDN) FROM={TD+PW*0.5} TO={TD+PW*0.9}
+.meas tran SPLUS_MAX MAX V(SPLUS)
+.meas tran SMINUS_MAX MAX V(SMINUS)
+.meas tran PLEDN_TOGGLE_LOW INTEG V(TOGGLE)
+Btg TOGGLE 0 V = (V(PLEDN) < 0.825) ? 1 : 0
+.end

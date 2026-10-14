@@ -19,11 +19,16 @@
     #rack-atx-3d .rack-pinitem { display:flex; justify-content:space-between; gap:8px; padding:4px 0; border-bottom:1px solid var(--border); }
     #rack-atx-3d .rack-detail { min-height:1.6em; margin:8px 0; }
     #rack-atx-3d .rack-error { display:none; }
+    #rack-atx-3d .indicator-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:8px; margin:10px 0; }
+    #rack-atx-3d .indicator-cell { padding:8px; border:1px solid var(--border); border-radius:5px; }
+    #rack-atx-3d .indicator-dot { display:inline-block; width:9px; height:9px; border-radius:50%; background:#473a3a; margin-right:4px; }
+    #rack-atx-3d .indicator-dot.on { background:#ed604f; box-shadow:0 0 5px #e95450; }
+    @media(max-width:600px) { #rack-atx-3d .indicator-grid { grid-template-columns:repeat(2,1fr); } }
     @media(max-width:500px) { #rack-atx-3d .rack-space { height:420px; } #rack-atx-3d .rack-heading { padding-right:70px; } }
   </style>
   <div class="rack-heading"><h2>10 路機櫃控制板</h2><span class="text-small text-muted" data-revision></span></div>
-  <div class="rack-detail"><strong>目前：一片控制十台。</strong>R.0 已開始局部佈線：524 段銅箔，200×170 mm、兩層候選。尚未全板連通，不能下單製造。 <a href="https://rack-atx-controller-ddasdkimo.raidavid.chatgpt.site/layout.html" target="_blank" rel="noopener">查看可放大布局與擺放理由 →</a></div>
-  <div class="rack-detail text-small">十路改為兩排各五路；694 個電氣元件均有焊盤，四角固定孔、隔離禁佈區與指定電源腳去耦位置已納入。焊盤圖面覆核不代表已完成實物／製造驗證。</div>
+  <div class="rack-detail"><strong>目前：一片控制十台。</strong>R.2 佈線版：<span data-routing-summary></span>。100×110 mm、兩層。原生 DRC／未連接均為 0；尚未製造放行。 <a href="https://rack-atx-controller-ddasdkimo.raidavid.chatgpt.site/layout.html" target="_blank" rel="noopener">查看可放大布局與擺放理由 →</a></div>
+  <div class="rack-detail text-small">十路改為兩排各五路；300 個電氣元件均有焊盤，四個 M3 固定孔、隔離禁佈區與指定電源腳去耦位置已納入。焊盤圖面覆核不代表已完成實物／製造驗證。</div>
   <div class="rack-detail">中央：1 塊主控板　／　每台電腦：1 片免供電接線分接板（可改 Y 型線束）</div>
   <div class="viz-controls" aria-label="3D 觀察位置">
     <button type="button" class="btn" data-view="overview" aria-pressed="true">整體配置</button>
@@ -32,43 +37,53 @@
     <button type="button" class="btn" data-view="pc2" aria-pressed="false">電腦 2</button>
     <label class="form-check"><input type="checkbox" class="form-check-input" data-shell><span class="form-check-label">顯示外殼</span></label>
   </div>
-  <div class="rack-space" role="img" aria-label="可旋轉的十路控制板及兩台開蓋電腦。J01 連接電腦 1，J02 連接電腦 2，其他八路未接線。每台透過直通轉接板保留原機殼按鈕和燈號。">
+  <div class="rack-space" role="img" aria-label="可旋轉的十路控制板及兩台開蓋電腦。J01 連接電腦 1，J02 連接電腦 2，其他八路未接線。原按鈕透過被動分接板保留，原燈號直接接主機板。">
     <div class="rack-labels"></div>
     <div class="rack-error text-destructive" role="alert">3D 資源無法載入；下方接線圖仍可檢視。</div>
   </div>
-  <div class="rack-caption text-small text-muted"><span>拖曳旋轉 · 滾輪／雙指縮放</span><span>R.0 局部銅箔示意 · 尚非製造圖</span></div>
+  <div class="rack-caption text-small text-muted"><span>拖曳旋轉 · 滾輪／雙指縮放</span><span>R.2 原生座標 · 雙面銅箔與過孔</span></div>
   <div class="rack-detail text-small" aria-live="polite" data-scene-detail>J01 → PC-01 · J02 → PC-02 · J03–J10 預留</div>
+  <hr>
+  <div class="rack-detail"><strong>控制板燈號示意</strong> · 下列選項只展示燈號，不會操作任何電腦。</div>
+  <div class="viz-controls">
+    <label class="form-label">狀態<select class="form-select" data-demo-mode><option value="ready">已啟用／待命</option><option value="power">POWER 正在驅動</option><option value="reset">RESET 正在驅動</option><option value="disabled">未啟用</option><option value="off">控制板未供電</option></select></label>
+    <label class="form-label">操作通道<select class="form-select" data-demo-host></select></label>
+  </div>
+  <div class="rack-detail text-small" data-indicator-summary aria-live="polite"></div>
+  <div class="indicator-grid text-small" data-indicator-grid></div>
+  <div class="text-small text-muted">綠色 3V3＝主控電源；綠色 EN＝輸出已啟用。RJ45 原有 LINK／ACT＝實體網路連線／活動。每路紅色 PWR／RST＝隔離開關正在驅動；熄滅＝未驅動。這不代表接點實際回讀或主機開關機狀態。</div>
   <hr>
   <div class="viz-controls">
     <label class="form-label">接線主機<select class="form-select" data-host><option value="0">PC-01／J01</option><option value="1">PC-02／J02</option></select></label>
-    <label class="form-label">訊號路徑<select class="form-select" data-signal><option value="all">全部四組＋參考地</option><option value="power">POWER 按鈕</option><option value="reset">RESET 按鈕</option><option value="pled">電源燈 PLED</option><option value="hdd">硬碟燈 HDD</option><option value="reference">HOST_REF 參考地</option></select></label>
+    <label class="form-label">訊號路徑<select class="form-select" data-signal><option value="all">POWER／RESET＋參考地</option><option value="power">POWER 按鈕</option><option value="reset">RESET 按鈕</option><option value="reference">HOST_REF 參考地</option></select></label>
   </div>
   <div class="rack-legend text-small" data-legend></div>
   <svg class="rack-wiring" role="img" aria-label="原線直通及旁路接線圖"></svg>
   <div class="rack-detail text-small" data-wire-detail aria-live="polite"></div>
+  <div class="table-responsive"><table class="table table-sm"><thead><tr><th>主機端轉接板</th><th>杜邦線／線束接到哪裡</th></tr></thead><tbody><tr><td>JA1 · JST 10 pin</td><td>中央板對應 J01～J10，只使用 1、2、3、4、9</td></tr><tr><td>JA2／JA4 · 各 2 pin</td><td>主機板 POWER SW／原機殼 POWER 按鈕，兩組直接並聯</td></tr><tr><td>JA3／JA5 · 各 2 pin</td><td>主機板 RESET SW／原機殼 RESET 按鈕，兩組直接並聯</td></tr><tr><td>JA6 · 2 pin</td><td>Pin 1 接該台主機 GND；pin 2 不接</td></tr></tbody></table></div>
   <div class="rack-pinlist text-small tabular-nums" data-pinlist></div>
   <div class="text-small text-muted">上表為訊號編號，非插孔位置圖；實際接頭方向須依原廠圖面確認。主機板端依各板手冊辨識訊號。</div>
   <hr>
-  <div class="rack-detail">接頭與線束 · B.1 選料</div>
+  <div class="rack-detail">接頭與線束 · B.2 選料</div>
   <div class="table-responsive"><table class="table table-sm"><thead><tr><th>位置</th><th>型號</th><th>規格</th></tr></thead><tbody data-parts></tbody></table></div>
   <div class="text-small text-muted">線束需訂製；圖中色彩表示訊號功能，實際導體配色見上方 pin 表。3D 為簡化外形。</div>
   <hr>
   <div class="rack-detail">主控板代貼零件 · 每片支援 10 台 · <a href="https://rack-atx-controller-ddasdkimo.raidavid.chatgpt.site/bom.html" target="_blank" rel="noopener noreferrer">開啟完整 BOM 與每項價格 →</a></div>
   <div class="table-responsive"><table class="table table-sm"><thead><tr><th>功能</th><th>選定料號／JLC 編號</th><th>數量</th></tr></thead><tbody data-electronics></tbody></table></div>
-  <div class="rack-detail" id="cost-comparison">歷史尺寸估價 · USD · S.2 新尺寸待重估</div>
-  <div class="text-small">每片支援 10 台；各列皆為 5 片的整批價格。零件相同，直接比較尺寸與層數。裸板來自 JLC 網頁試算；焊好總價仍為費率估算。</div>
-  <div class="table-responsive"><table class="table table-sm tabular-nums"><thead><tr><th scope="col">方案</th><th scope="col">裸板 5 片</th><th scope="col">零件 5 份</th><th scope="col">全部焊好 5 片<br><span class="text-small">含板＋料＋組裝</span></th></tr></thead><tbody data-costs></tbody></table></div>
+  <div class="rack-detail" id="cost-comparison">B.2 新版零件與組裝預算 · USD</div>
+  <div class="text-small">每片支援 10 台。新版 100×110 mm 裸板費待報價，以下明確分開零件與組裝，不把未知板費當成零。</div>
+  <div class="table-responsive"><table class="table table-sm tabular-nums"><thead><tr><th scope="col">上板數量</th><th scope="col">裸板</th><th scope="col">零件</th><th scope="col">零件＋組裝小計<br><span class="text-small">尚須加裸板、運稅</span></th></tr></thead><tbody data-costs></tbody></table></div>
   <div class="rack-detail text-small" data-pcb-cost-note></div>
-  <div class="text-small">舊 S.1 自己焊接：裸板＋零件共 US$238.27／5 片，不含工具與工時。散料須另向通路採購，這不是 JLC 散件套裝售價。全部焊好包含材料、開單、鋼網、上料、SMT＋通孔焊接與 X-ray 估算，韌體燒錄及功能驗證另計。</div>
-  <details class="rack-detail"><summary>展開舊 S.1 費用明細（2／5 片成板）</summary><div class="table-responsive"><table class="table table-sm tabular-nums"><thead><tr><th scope="col">整批費用</th><th scope="col">2 片成板</th><th scope="col">5 片成板</th></tr></thead><tbody data-cost-breakdown></tbody></table></div></details>
+  <div class="text-small">五片零件約 US$162.53，相較 B.1 的 US$224.27 約少 28%。零件價格不含耗損／MOQ；散料另向通路購買。組裝估算含開單、鋼網、上料、SMT、通孔焊接與 X-ray，未含板費及燒錄測試。</div>
+  <details class="rack-detail"><summary>展開 B.2 費用明細（2／5 片成板）</summary><div class="table-responsive"><table class="table table-sm tabular-nums"><thead><tr><th scope="col">整批費用</th><th scope="col">2 片成板</th><th scope="col">5 片成板</th></tr></thead><tbody data-cost-breakdown></tbody></table></div></details>
   <div class="rack-detail">含運到手總價：待正式報價</div>
   <div class="text-small">到手總價＝全部焊好製作合計＋耗損／MOQ／工藝追加＋運費＋稅金。這些未確認金額尚未計入，不代表 $0；目前不是工廠正式報價。單面 Economic PCBA，實際代貼工序與費用以工廠審核為準。</div>
   <div class="rack-detail text-small">兩種方案都只比較中央主控板，未含 10 片分接板、線束、外殼、外接電源。已焊好的板子仍需燒錄、接線與測試，才是可用的機櫃控制設備。</div>
   <div class="rack-detail text-small" data-cost-note></div>
-  <div class="rack-detail text-small">原理圖：<a href="https://github.com/ddasdkimo/rack-atx-controller/blob/main/hardware/release/controller-schematic.pdf" target="_blank" rel="noopener noreferrer">主控板 PDF</a> · <a href="https://github.com/ddasdkimo/rack-atx-controller/blob/main/hardware/release/adapter-schematic.pdf" target="_blank" rel="noopener noreferrer">免供電分接板 PDF</a> · <a href="https://github.com/ddasdkimo/rack-atx-controller/tree/main/hardware/cad" target="_blank" rel="noopener noreferrer">KiCad 原始檔</a></div>
-  <div class="rack-detail text-small">縮板評估：<a href="https://github.com/ddasdkimo/rack-atx-controller/blob/main/hardware/COMPACT-STUDY.md" target="_blank" rel="noopener noreferrer">兩層可行性與限制</a> · <a href="https://github.com/ddasdkimo/rack-atx-controller/blob/main/hardware/cad/routing-R0.kicad_pcb" target="_blank" rel="noopener noreferrer">KiCad R.0 走線</a> · <a href="https://github.com/ddasdkimo/rack-atx-controller/tree/main/hardware/research" target="_blank" rel="noopener noreferrer">JLC 實際試算截圖</a></div>
+  <div class="rack-detail text-small">原理圖：<a href="https://github.com/ddasdkimo/rack-atx-controller/blob/main/hardware/release/controller-schematic.pdf" target="_blank" rel="noopener noreferrer">主控板 PDF</a> · <a href="https://github.com/ddasdkimo/rack-atx-controller/blob/main/hardware/release/adapter-schematic.pdf" target="_blank" rel="noopener noreferrer">免供電分接板 PDF</a> · <a href="https://github.com/ddasdkimo/rack-atx-controller/tree/main/hardware/cad/B2" target="_blank" rel="noopener noreferrer">KiCad 原始檔</a></div>
+  <div class="rack-detail text-small">縮板評估：<a href="https://github.com/ddasdkimo/rack-atx-controller/blob/main/hardware/COMPACT-STUDY.md" target="_blank" rel="noopener noreferrer">兩層可行性與限制</a> · <a href="https://github.com/ddasdkimo/rack-atx-controller/blob/main/hardware/cad/B2/rack-atx-controller.kicad_pcb" target="_blank" rel="noopener noreferrer">KiCad R.2 佈線</a> · <a href="https://github.com/ddasdkimo/rack-atx-controller/tree/main/hardware/research" target="_blank" rel="noopener noreferrer">JLC 實際試算截圖</a></div>
   <div class="rack-detail text-small">採購：<a href="https://github.com/ddasdkimo/rack-atx-controller/tree/main/hardware/bom" target="_blank" rel="noopener noreferrer">完整 BOM／批量成本表</a> · <a href="https://github.com/ddasdkimo/rack-atx-controller/blob/main/hardware/JLCPCB.md" target="_blank" rel="noopener noreferrer">收費與選料依據</a></div>
-  <div class="rack-detail text-small">B.1 原理圖＋R.0 局部佈線 · 既有走線幾何 DRC 0 違規 · 全板連通、回流與實機驗證尚未完成</div>
+  <div class="rack-detail text-small">B.2 電路／R.2 佈線 · 兩板 ERC、DRC、未連接均為 0。USB／Ethernet 阻抗與回流、工廠 DFM 及實機尚未驗證；行為模擬不等同實測。</div>
   <div class="rack-detail text-small"><a href="https://github.com/ddasdkimo/rack-atx-controller" target="_blank" rel="noopener noreferrer">GitHub 設計紀錄</a></div>
   <script type="application/json" data-design>__DESIGN_JSON__</script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.min.js"></script>
@@ -88,14 +103,14 @@
     normalize();
     const groupIndex=id=>design.functions.find(f=>f.id===id)?.series||1;
     const cssSeries=id=>'var(--viz-series-'+groupIndex(id)+')';
-    qs('[data-revision]').textContent='Rev '+design.revision+' · R.0 局部佈線';
+    qs('[data-revision]').textContent='Rev '+design.revision+' · R.2 佈線完成／打樣前審閱';
+    qs('[data-routing-summary]').textContent='300 個元件、'+design.routing_study.track_segments+' 段走線、'+design.routing_study.vias+' 個過孔';
     qs('[data-parts]').innerHTML=(design.physical_parts||[]).map(p=>'<tr><td>'+p.role+'</td><td><a target="_blank" rel="noopener noreferrer" href="'+p.url+'">'+p.part+'</a></td><td>'+p.spec+'</td></tr>').join('');
     qs('[data-electronics]').innerHTML=design.electronics.map(p=>'<tr><td>'+p.role+'</td><td><a target="_blank" rel="noopener noreferrer" href="'+p.url+'">'+p.mpn+' · '+p.code+'</a></td><td>'+p.qty+'</td></tr>').join('');
-    const money=n=>'$'+n.toFixed(2),range=a=>a.map(money).join('–');
-    qs('[data-costs]').innerHTML=design.costs.board_options.filter(b=>!b.label.includes('未採用')).map(b=>'<tr><th scope="row">'+b.label+'<br><span class="text-small">'+b.layers+' 層 · '+b.width_mm+' × '+b.height_mm+' mm</span></th><td>'+money(b.total_usd)+'</td><td>'+money(b.parts_total_usd)+'</td><td>'+range(b.assembled_total_range_usd)+'</td></tr>').join('');
-    const pcbEstimate=design.costs.pcb_fabrication_estimate;
-    qs('[data-pcb-cost-note]').textContent='S.2 已改成 200×170 mm，以下舊尺寸試算不適用。單片上板零件約 US$49.84；JLC 原型代貼官方最低 2 片。一片自焊還須加裸板最低批量與工具；目前兩片／五片零件分別為 US$97.58／224.27，組裝及新裸板費另計。';
-    const breakdown=[['裸 PCB（5 片）',b=>money(b.pcb_total_usd)],['上板零件',b=>money(b.parts_total_usd)],['① 材料合計',b=>money(b.materials_total_usd)],['開單／鋼網／確認／通孔開工',b=>money(b.setup_stencil_confirmation_manual_setup_usd)],['SMT＋通孔焊接工資',b=>money(b.assembly_labor_total_usd)],['延伸料上料',b=>range(b.feeder_usd_range)],['X-ray',b=>range(b.xray_usd_range)],['② 製作合計',b=>range(b.assembled_total_range_usd)],['運費／稅金／耗損／工藝追加',()=> '待報價']];
+    const money=n=>n===null?'待報價':'$'+n.toFixed(2),range=a=>a?a.map(money).join('–'):'待報價';
+    qs('[data-costs]').innerHTML=design.costs.batches.map(b=>'<tr><th scope="row">'+b.boards+' 片</th><td>新尺寸待報價</td><td>'+money(b.parts_total_usd)+'</td><td>'+range(b.subtotal_range_usd)+'</td></tr>').join('');
+    qs('[data-pcb-cost-note]').textContent='只先做一片的零件預算 '+money(design.costs.one_board_parts_usd)+'；代貼以兩片／五片比較。100×110 mm 新尺寸尚無 Gerber 報價，不沿用舊尺寸板費。';
+    const breakdown=[['裸板（新尺寸）',()=> '待報價'],['上板零件',b=>money(b.parts_total_usd)],['開單／鋼網／確認／通孔開工',b=>money(b.setup_stencil_confirmation_manual_setup_usd)],['SMT＋通孔焊接工資',b=>money(b.assembly_labor_total_usd)],['延伸料上料',b=>range(b.feeder_usd_range)],['X-ray',b=>range(b.xray_usd_range)],['零件＋組裝小計（未含板費）',b=>range(b.subtotal_range_usd)],['運費／稅金／耗損／工藝追加',()=> '待報價']];
     qs('[data-cost-breakdown]').innerHTML=breakdown.map(([label,value])=>'<tr><th scope="row">'+label+'</th>'+design.costs.batches.map(b=>'<td>'+value(b)+'</td>').join('')+'</tr>').join('');
     qs('[data-cost-note]').textContent='庫存核對：'+design.costs.catalog_checked_date+' · '+design.costs.basic_skus+' 種 Basic · '+design.costs.extended_smt_skus+' 種 SMT 延伸料。10 片免供電分接板的接頭零件約 '+money(design.costs.ten_passive_adapters_parts_only_usd)+'，另加裸板及手焊。';
     qs('[data-legend]').innerHTML=design.functions.map(f=>'<span><i style="background:'+cssSeries(f.id)+'"></i>'+f.label+'</span>').join('');
@@ -106,7 +121,7 @@
     function drawWiring(){
       const svg=qs('.rack-wiring'), w=Math.max(280,svg.clientWidth), mobile=w<560;
       const selected=state.signal==='all'?design.functions:design.functions.filter(f=>f.id===state.signal);
-      const h=mobile?selected.length*190+180:Math.max(295,selected.length*70+154);
+      const h=mobile?selected.length*190+250:Math.max(340,selected.length*70+230);
       svg.setAttribute('viewBox','0 0 '+w+' '+h);svg.replaceChildren();
       const add=(tag,a,t)=>{const n=svgEl(tag,a,t);svg.appendChild(n);return n;};
       add('title',{},design.hosts[state.host].id+' 原機殼直通與控制板旁路');
@@ -115,19 +130,19 @@
       const rect=(x,y,ww,hh)=>add('rect',{x,y,width:ww,height:hh,rx:4,fill:'var(--muted)',stroke:'var(--border)','stroke-width':1});
       const ctrl=design.hosts[state.host].port===1?'J01':'J02';
       if(!mobile){
-        const a=80,b=w*.48,c=w-88, ctlY=h-62;
+        const a=80,b=w*.48,c=w-88, ctlY=h-145;
         text(a,25,'主機板');text(b,25,design.hosts[state.host].adapter+' 分接板（免供電）');text(c,25,'原機殼前面板');
         selected.forEach((f,i)=>{
           const y=58+i*70,col=cssSeries(f.id),active=f.id!=='reference';
           rect(a-65,y-16,130,32);text(a,y+5,f.signal);
           if(active){rect(c-65,y-16,130,32);text(c,y+5,f.label);line(a+65,y,c-65,y,col);}
-          else {line(a+65,y,b,y,col);text(c,y+4,'僅該台隔離區','middle','wire-secondary');}
+          else {line(a+65,y,b,y,col);text(c,y+4,'僅該台按鍵 ESD','middle','wire-secondary');}
           add('circle',{cx:b,cy:y,r:4,fill:col});
           const lane=b+40+i*18;
           add('path',{d:'M '+b+' '+y+' L '+lane+' '+(y+19)+' L '+lane+' '+ctlY,stroke:col,'stroke-width':1.8,fill:'none'});
           text(a,y+31,'自訂線纜 pin '+f.pair.join(' / '),'middle','wire-secondary');
         });
-        rect(b-88,ctlY,230,42);text(b+27,ctlY+26,ctrl+' 控制／偵測（隔離）');
+        rect(b-88,ctlY,230,42);text(b+27,ctlY+26,ctrl+' 按鍵接點（隔離）');
       } else {
         text(w/2,22,design.hosts[state.host].id+' · '+ctrl+' 專用線纜');
         selected.forEach((f,i)=>{
@@ -139,15 +154,22 @@
           add('circle',{cx:m,cy:y+28,r:4,fill:col});line(m,y+28,m,y+91,col);
           text(m+10,y+70,design.hosts[state.host].adapter+' 分接','start','wire-secondary');
           rect(m-112,y+91,224,34);text(m,y+113,ctrl+' pin '+f.pair.join(' / ')+' · 隔離支路');
-          text(m,y+149,f.id==='reference'?'只接該台已確認的 GND':f.id==='power'||f.id==='reset'?'原按鈕直通；遠端接點並聯':'原 LED 直通；旁路高阻抗讀取','middle','wire-secondary');
+          text(m,y+149,f.id==='reference'?'只接該台已確認的 GND':f.id==='power'||f.id==='reset'?'原按鈕直通；遠端接點並聯':'原 LED 直接接主機板','middle','wire-secondary');
         });
       }
+      if(!mobile){const y=h-65;rect(15,y-16,185,32);text(107,y+5,'主機板 PLED／HDD');rect(w-200,y-16,185,32);text(w-107,y+5,'原機殼 LED');line(200,y,w-200,y,'var(--viz-series-3)');text(w/2,y-22,'原線直連，不經分接板','middle','wire-secondary');}
+      else {const y=h-85;rect(8,y-20,w-16,42);text(w/2,y-4,'主機板 PLED／HDD ↔ 原機殼 LED');text(w/2,y+13,'原線直連，不經分接板','middle','wire-secondary');}
       const pinY=h-4;
-      text(w/2,pinY,'LED 保留極性；HOST_REF 不接中央控制器 GND','middle','wire-secondary');
-      const details={all:'4 組原線直通；9 條支線回控制板。Pin 10 不接線。',power:'Pin 1 / 2：並聯 PWR_SW 兩端，原 POWER 按鈕保留；接點不分正負。',reset:'Pin 3 / 4：並聯 RESET_SW 兩端；主機板無 RESET 接腳時留空。',pled:'Pin 5 + / 6 −：跨接原電源 LED 兩端，經限流保護、高阻抗差動偵測及隔離回傳。',hdd:'Pin 7 + / 8 −：跨接原 HDD LED 兩端；讀取活動脈波，不能據此判定硬碟健康。',reference:'Pin 9：接該台主機已確認的 GND，只供該台隔離偵測區參考；不與其他主機或主控 GND 相連。'};
+      text(w/2,pinY,'原燈號直接接主機板；不接控制板','middle','wire-secondary');
+      const details={all:'原 POWER／RESET 按鈕被動直通；5 芯接中央板。原電源燈與硬碟燈直接留在主機板，完全不接分接板。',power:'Pin 1 / 2：並聯 PWR_SW 兩端，原 POWER 按鈕保留；隔離接點不分正負。',reset:'Pin 3 / 4：並聯 RESET_SW 兩端；主機板無 RESET 接腳時留空。',reference:'Pin 9：接本機已確認的 GND，只供該台按鍵 TVS 保護。不與主控或其他主機地相連。'};
       qs('[data-wire-detail]').textContent=details[state.signal];updatePins();
     }
-    let draw3D=()=>{},setView=()=>{},sync3D=()=>{};
+    let draw3D=()=>{},setView=()=>{},sync3D=()=>{},applyLamp3D=()=>{};
+    const lampMats=new Map();
+    qs('[data-demo-host]').innerHTML=Array.from({length:10},(_,i)=>'<option value="'+(i+1)+'">J'+String(i+1).padStart(2,'0')+'</option>').join('');
+    function indicatorOn(ref){const mode=qs('[data-demo-mode]').value,host=+qs('[data-demo-host]').value;if(ref==='D201')return mode!=='off';if(ref==='D202')return !['off','disabled'].includes(mode);return (mode==='power'||mode==='reset')&&+ref.slice(1)===100+(host-1)*2+(mode==='power'?1:2);}
+    function refreshIndicators(){const mode=qs('[data-demo-mode]').value;qs('[data-indicator-summary]').textContent='3V3：'+(mode==='off'?'熄滅':'亮')+'　EN：'+(['off','disabled'].includes(mode)?'熄滅／未啟用':'亮／已啟用')+'　LINK：示意連線'+(mode==='off'?'中斷':'已建立');qs('[data-indicator-grid]').innerHTML=Array.from({length:10},(_,i)=>'<div class="indicator-cell">J'+String(i+1).padStart(2,'0')+'<br>'+['PWR','RST'].map((v,k)=>'<span><i class="indicator-dot '+(indicatorOn('D'+(101+i*2+k))?'on':'')+'"></i>'+v+'</span>').join('　')+'</div>').join('');applyLamp3D();draw3D();}
+    qs('[data-demo-mode]').addEventListener('change',refreshIndicators);qs('[data-demo-host]').addEventListener('change',refreshIndicators);refreshIndicators();
     const save=()=>{window.openai?.setWidgetState?.({modelContent:{revision:design.revision,selectedHost:design.hosts[state.host].id,signal:state.signal,view:state.view},privateContent:{...state}})?.catch(()=>{});};
     function syncUI(){
       root.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===state.view)));
@@ -189,14 +211,20 @@
     // Rotate native PCB axes 90 degrees: its connector edge faces the PCs.
     const cx=-27,cz=0,boardW=design.controller_outline_mm[1]/10,boardD=design.controller_outline_mm[0]/10;
     const outline=new T.Shape();outline.moveTo(-boardW/2,-boardD/2);outline.lineTo(boardW/2,-boardD/2);outline.lineTo(boardW/2,boardD/2);outline.lineTo(-boardW/2,boardD/2);outline.closePath();
-    for(const [mx,my] of [[4,4],[196,4],[4,166],[196,166]]){const hole=new T.Path();hole.absarc(boardW/2-my/10,boardD/2-mx/10,.16,0,Math.PI*2,true);outline.holes.push(hole);}
+    for(const [mx,my] of design.layout_study.mounting_hole_centres_mm){const hole=new T.Path();hole.absarc(boardW/2-my/10,boardD/2-mx/10,.16,0,Math.PI*2,true);outline.holes.push(hole);}
     const boardMesh=new T.Mesh(new T.ExtrudeGeometry(outline,{depth:.16,bevelEnabled:false}),pcb);boardMesh.rotation.x=-Math.PI/2;boardMesh.position.set(cx,.17,cz);scene.add(boardMesh);
-    for(const yy of [48,122]){const xx=cx+boardW/2-yy/10;box(xx,.339,cz,.1,.008,19,functionMats.reset);}
+    for(const yy of [22,design.controller_outline_mm[1]-22]){const xx=cx+boardW/2-yy/10;box(xx,.339,cz,.1,.008,9,functionMats.reset);}
 
-    // Copper centre lines come from the saved R.0 KiCad board; unfinished nets are not drawn.
-    const copperMat=new T.LineBasicMaterial({color:0xff8e8e});
-    for(const s of design.routing_study.segments){const points=[s.a,s.b].map(([x,y])=>new T.Vector3(cx+boardW/2-y/10,.345,cz-boardD/2+x/10));scene.add(new T.Line(new T.BufferGeometry().setFromPoints(points),copperMat));}
-    const ports=[],peripherals={},placement=design.layout_study.components;
+    // Native copper layers and actual filled ground polygons, not conceptual routes.
+    const copperMats={'F.Cu':new T.LineBasicMaterial({color:0xff9999}),'B.Cu':new T.LineBasicMaterial({color:0x75adff})};
+    // Batch thousands of native segments into two draw calls for mobile rotation.
+    for(const layer of ['F.Cu','B.Cu']){const points=[];for(const s of design.routing_study.segments){if(s.layer!==layer)continue;const yy=layer==='F.Cu'?.345:.16;for(const [x,y] of [s.a,s.b])points.push(cx+boardW/2-y/10,yy,cz-boardD/2+x/10);}const g=new T.BufferGeometry();g.setAttribute('position',new T.Float32BufferAttribute(points,3));scene.add(new T.LineSegments(g,copperMats[layer]));}
+    const viaMat=new T.MeshStandardMaterial({color:0xb6c7d8,metalness:.5,roughness:.4});
+    const viaGeometry=new T.CylinderGeometry(1,1,1,12),viaInstances=new T.InstancedMesh(viaGeometry,viaMat,design.routing_study.via_geometry.length),viaTransform=new T.Object3D();design.routing_study.via_geometry.forEach((v,i)=>{const [x,y]=v.at;viaTransform.position.set(cx+boardW/2-y/10,.255,cz-boardD/2+x/10);viaTransform.scale.set(v.diameter_mm/20,.19,v.diameter_mm/20);viaTransform.updateMatrix();viaInstances.setMatrixAt(i,viaTransform.matrix);});scene.add(viaInstances);
+    const groundMat=new T.MeshBasicMaterial({color:0x436ba3,side:T.DoubleSide});
+    const contour=(loop,shape)=>{loop.forEach(([x,y],i)=>shape[i?'lineTo':'moveTo'](boardW/2-y/10,boardD/2-x/10));shape.closePath();return shape;};
+    for(const zone of design.routing_study.filled_zones)for(const poly of zone.polygons){const shape=contour(poly.outer,new T.Shape());for(const h of poly.holes)shape.holes.push(contour(h,new T.Path()));const mesh=new T.Mesh(new T.ShapeGeometry(shape),groundMat);mesh.rotation.x=-Math.PI/2;mesh.position.set(cx,zone.layer==='F.Cu'?.342:.162,cz);scene.add(mesh);}
+    const ports=[],peripherals={},placement=design.layout_study.components.map(c=>(design.routing_study.component_overrides||[]).find(o=>o.ref===c.ref)||c);
     for(const c of placement){
       const x=cx+boardW/2-(c.y+c.h/2)/10,z=-boardD/2+(c.x+c.w/2)/10;
       const uncertain=c.footprint==='UNQUALIFIED_ENVELOPE';
@@ -205,15 +233,16 @@
         const side=c.y<design.controller_outline_mm[1]/2?1:-1;
         jstPhd(x,.68,z,side);hardwareCounts.hostPorts++;ports[Number(c.ref.slice(1))-1]=[cx+side*(boardW/2+.2),.9,z];
         tag(c.ref,[cx+side*(boardW/2+1.2),1.3,z],['controller']);
-      }else box(x,.34+c.z/20,z,c.h/10,c.z/10,c.w/10,mat);
+      }else if(c.key==='ledred'||c.key==='ledgreen'){const ledmat=new T.MeshStandardMaterial({color:c.key==='ledred'?0x6d2720:0x1b6138,roughness:.4});box(x,.34+c.z/20,z,c.h/10,c.z/10,c.w/10,ledmat);lampMats.set(c.ref,{mat:ledmat,green:c.key==='ledgreen'});}else box(x,.34+c.z/20,z,c.h/10,c.z/10,c.w/10,mat);
       if(c.key==='iso')hardwareCounts.isolatedSupplies++;
       if(c.key==='ssr')hardwareCounts.photorelays++;
       if(c.key==='hc595')hardwareCounts.shiftRegisters++;
       if(['rj45','barrel'].includes(c.key))peripherals[c.key]=[x,.34+c.z/20,c.key==='rj45'?-boardD/2-.2:boardD/2+.2];
       if(['mcu','rj45','barrel'].includes(c.key))tag(({mcu:'ESP32-S3',rj45:'LAN / W5500',barrel:'5V 輸入'})[c.key],[x-1,2.7,z],['controller']);
     }
-    tag('200 × 170 mm · 局部佈線',[cx,3,-10],['overview'],1);
-    tag('524 段實際銅箔 · 尚未全板連通',[cx,3,-9],['controller'],1);
+    applyLamp3D=()=>{for(const [ref,item] of lampMats){const on=indicatorOn(ref),color=item.green?(on?0x42d77d:0x183b25):(on?0xf5705e:0x512821);item.mat.color.setHex(color);item.mat.emissive.setHex(on?color:0);item.mat.emissiveIntensity=on?.55:0;}};refreshIndicators();
+    tag('100 × 110 mm · R.2 已連通',[cx,3,-10],['overview'],1);
+    tag('300 個元件 · 0 未連接',[cx,3,-9],['controller'],1);
     const controllerShell=box(cx,2.8,0,boardW+1,5.6,boardD+1,material('--foreground',{transparent:true,opacity:.06,depthWrite:false}));shells.push(controllerShell);
     path([peripherals.rj45,[peripherals.rj45[0],1,-12],[-37,1,-12],[-38,1,-14]],material('--border'),.2);
     path([peripherals.barrel,[peripherals.barrel[0],1,12],[-37,1,12],[-38,1,14]],material('--muted-foreground'),.15);
@@ -234,33 +263,50 @@
       box(x0-8,2,z0-10,7,2.7,3.2,metal);
       box(x0+9,2,z0-10,5.5,3,5.5,metal);
       const mb=[x0-8,1.1,z0+9],ad=[x0-12.2,1,z0+9];
-      box(ad[0],.8,ad[2],3.2,.2,5.8,pcb);
-      for(let f=0;f<4;f++){header(mb[0],mb[1],mb[2]-2+f*1.05,1);header(ad[0]-.7,ad[1],ad[2]-2+f*1.05,1);header(ad[0]+.7,ad[1],ad[2]-2+f*1.05,1);}
-      jstPhd(ad[0],ad[1],ad[2]+2.3,-1);
+      // Passive adapter coordinates and copper come from its routed native PCB.
+      box(ad[0],.8,ad[2],2.6,.16,3.4,pcb);
+      const adPoint=([x,y],height=1.55)=>[ad[0]+(x-13)/10,height,ad[2]+(y-17)/10];
+      const adapterPads={};
+      for(const c of design.adapter_geometry.components){
+        const [bx,by,bw,bh]=c.bbox_mm,cp=adPoint([bx+bw/2,by+bh/2],1.12);
+        box(cp[0],cp[1],cp[2],bw/10,.48,bh/10,body);
+        adapterPads[c.ref]=c.pads.map(p=>adPoint(p.at));
+        for(const pad of c.pads){const q=adPoint(pad.at,1.5);box(q[0],q[1],q[2],.064,.5,.064,pin);}
+      }
+      for(const s of design.adapter_geometry.segments){const a=adPoint(s.a,.89),b=adPoint(s.b,.89);trace([a,b]);}
+      const adJack=adPoint([13,2],1.4);
+      for(let f=0;f<2;f++)header(mb[0],mb[1],mb[2]-2+f*1.05,1);
       const p=ports[idx];
-      path([[p[0],1.45,p[2]],[-8,2,p[2]],[0,3,z0+12],[ad[0]-1.7,1.5,ad[2]+2.3]],material('--muted-foreground'),.33);
+      path([[p[0],1.45,p[2]],[-8,2,p[2]],[0,3,z0+12],adJack],material('--muted-foreground'),.33);
       design.functions.forEach((f,fi)=>{
         const col=functionMats[f.id],dz=-2+fi*1.05;
-        if(fi<4){
+        if(fi<2){
           const pairOffsets=[-.16,.16];
           pairOffsets.forEach((o,n)=>{
-            path([[mb[0]+o,1.65,mb[2]+dz],[mb[0]-1.8+o,2.1,mb[2]+dz],[ad[0]+.7+o,1.65,ad[2]+dz]],col,.065,{host:idx,group:f.id,kind:'straight'});
-            path([[ad[0]-.7+o,1.65,ad[2]+dz],[ad[0]-1.2,2.4,ad[2]+dz],[x0-5+o,2.5,z0+12.4+fi*.23],[x0+12+o,2.2,z0+12.4+fi*.23],[x0+15.1,3+o,z0+(-5+fi*3.2)]],col,.065,{host:idx,group:f.id,kind:'case'});
+            path([[mb[0]+o,1.65,mb[2]+dz],[mb[0]-1.8+o,2.1,mb[2]+dz],adapterPads[fi===0?'JA2':'JA3'][n]],col,.065,{host:idx,group:f.id,kind:'straight'});
+            path([adapterPads[fi===0?'JA4':'JA5'][n],[ad[0]-1.2,2.4,ad[2]+dz],[x0-5+o,2.5,z0+12.4+fi*.23],[x0+12+o,2.2,z0+12.4+fi*.23],[x0+15.1,3+o,z0+(-5+fi*3.2)]],col,.065,{host:idx,group:f.id,kind:'case'});
           });
           const front=box(x0+16.7,3,z0+(-5+fi*3.2),.55,fi<2?1.2:.65,fi<2?1.2:.65,col);front.userData={host:idx,group:f.id};signalObjects.push(front);
         }else{
-          path([[mb[0]+1.5,1.5,mb[2]+2.3],[mb[0],2,mb[2]+3.4],[ad[0],1.6,ad[2]+2.3]],col,.07,{host:idx,group:f.id,kind:'reference'});
+          path([[mb[0]+1.5,1.5,mb[2]+2.3],[mb[0],2,mb[2]+3.4],adapterPads.JA6[0]],col,.07,{host:idx,group:f.id,kind:'reference'});
         }
         const o=(fi-2)*.16;
-        path([[p[0],1.55+o,p[2]],[p[0]+2,2.6+o,p[2]],[0,3.45+o,z0+12],[ad[0]-1.7,1.75+o,ad[2]+2.3]],col,.06,{host:idx,group:f.id,kind:'cable'});
+        path([[p[0],1.55+o,p[2]],[p[0]+2,2.6+o,p[2]],[0,3.45+o,z0+12],[adJack[0],adJack[1]+o,adJack[2]]],col,.06,{host:idx,group:f.id,kind:'cable'});
       });
+      ['PLED','HDD LED'].forEach((name,i)=>{
+        const col=material(i?'--viz-series-4':'--viz-series-3');
+        header(mb[0],mb[1],mb[2]+.7+i*1.1,1);
+        for(const o of [-.13,.13])path([[mb[0]+o,1.65,mb[2]+.7+i*1.1],[x0-5+o,2.1,z0+11+i*.5],[x0+13+o,2.4,z0+11+i*.5],[x0+15.1,3+o,z0+3+i*3]],col,.065,{host:idx,group:'localled',kind:'direct'});
+        box(x0+16.7,3,z0+3+i*3,.55,.65,.65,col);
+      });
+      tag('原 LED 直接接主機板',[x0+5,4,z0+12],['pc'+(idx+1)]);
       tag(host.id,[x0,6,z0-15.5],['overview'],1);
       tag('CPU／散熱器',[x0-4,5,z0-4],['pc'+(idx+1)]);
       tag('RAM',[x0+4,5,z0-4],['pc'+(idx+1)]);
       tag('前面板接腳（示意）',[mb[0]+1,3,z0+7],['pc'+(idx+1)]);
-      tag(host.adapter+' 分接板（免供電）',[ad[0]-2,3,ad[2]+5.5],['pc'+(idx+1)]);
+      tag(host.adapter+' 26×34 mm 分接板（免供電）',[ad[0]-2,3,ad[2]+5.5],['pc'+(idx+1)]);
       tag('原 POWER／RESET／LED',[x0+16,7,z0],['pc'+(idx+1)]);
-      tag('專用 9 芯線 → J0'+(idx+1),[0,5,z0+12],['pc'+(idx+1)]);
+      tag('專用 5 芯接線 → J0'+(idx+1),[0,5,z0+12],['pc'+(idx+1)]);
       const shell=box(x0,4.8,z0,33,10,29,material('--foreground',{transparent:true,opacity:.045,depthWrite:false}));shells.push(shell);
       pcObjects[idx]=scene.children.slice(start);
     }
@@ -283,10 +329,10 @@
     draw3D=()=>{if(!raf)raf=requestAnimationFrame(render);};
     setView=()=>{
       yaw=-.2;pitch=.91;zoom=1;
-      if(state.view==='controller'){focus.set(-28,0,0);bounds=[32,25];pitch=1.05;}
+      if(state.view==='controller'){focus.set(-28,0,0);bounds=[19,17];pitch=1.05;}
       else if(state.view==='pc1'||state.view==='pc2'){focus.set(16,1,state.view==='pc1'?-21:21);bounds=[48,42];yaw=-.25;pitch=1.05;}
       else{focus.set(-3,0,0);bounds=[90,78];}
-      const msg={overview:'J01 → PC-01 · J02 → PC-02 · J03–J10 預留',controller:design.controller_outline_mm.slice(0,2).join(' × ')+' mm 示意外形 · 20 隔離開關 · 20 LED 偵測 · 10 隔離區',pc1:'PC-01：主機板 → A01 免供電分接板 → 原機殼；旁路線 → J01',pc2:'PC-02：主機板 → A02 免供電分接板 → 原機殼；旁路線 → J02'};
+      const msg={overview:'J01 → PC-01 · J02 → PC-02 · J03–J10 預留',controller:design.controller_outline_mm.slice(0,2).join(' × ')+' mm 示意外形 · 20 隔離按鍵 · 無 LED 偵測 · 10 隔離區',pc1:'PC-01：主機板 → A01 免供電分接板 → 原機殼；旁路線 → J01',pc2:'PC-02：主機板 → A02 免供電分接板 → 原機殼；旁路線 → J02'};
       qs('[data-scene-detail]').textContent=msg[state.view];draw3D();
     };
     sync3D=()=>{
@@ -308,7 +354,7 @@
     });
     ['pointerup','pointercancel'].forEach(type=>renderer.domElement.addEventListener(type,e=>{pointers.delete(e.pointerId);lastPinch=0;}));
     renderer.domElement.addEventListener('wheel',e=>{e.preventDefault();zoom=Math.max(.35,Math.min(2.6,zoom*Math.exp(e.deltaY*.001)));draw3D();},{passive:false});
-    function refreshTheme(){mats.forEach(m=>m.color.copy(colorOf(m.userData.token)));signalObjects.forEach(o=>{if(o.userData.group)o.material.color.copy(colorOf('--viz-series-'+groupIndex(o.userData.group)));});traceMat.color.copy(colorOf('--border'));draw3D();}
+    function refreshTheme(){mats.forEach(m=>m.color.copy(colorOf(m.userData.token)));signalObjects.forEach(o=>{if(o.userData.group&&o.userData.group!=='localled')o.material.color.copy(colorOf('--viz-series-'+groupIndex(o.userData.group)));});traceMat.color.copy(colorOf('--border'));draw3D();}
     new MutationObserver(refreshTheme).observe(document.documentElement,{attributes:true,attributeFilter:['class','style','data-theme']});
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',refreshTheme);
     window.rackViewer={revision:design.revision,hardwareCounts,getState:()=>({...state}),getCamera:()=>({yaw,pitch,zoom}),render:draw3D};

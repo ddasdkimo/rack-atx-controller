@@ -1,65 +1,38 @@
-# Rack ATX Controller
+# Rack ATX Controller · B.2 / R.2
 
-**目前方向：一片控制十台主機，R.0 已開始局部佈線。** B.1 電路搭配 200×170 mm、兩層候選布局，全部 694 個電氣元件已有焊盤；已完成 524 段局部走線，尚未全板連通，不能送製造。[R.0 進度](hardware/ROUTING-R0.md)。[布局理由](hardware/LAYOUT-S2.md) · [公開審閱圖](https://rack-atx-controller-ddasdkimo.raidavid.chatgpt.site/layout.html)。S.1 縮板與 P.0 拆板研究保留為歷史參考。
+十台 Linux 主機共用一塊 POWER／RESET 遠端按鍵控制板。**100×110 mm、兩層的 R.2 佈線版已連通；中央板與轉接板 DRC／未連接均為 0。尚未製造放行。**
 
-10 台電腦的機櫃遠端電源控制硬體規劃，保留原機殼 POWER／RESET 按鈕、電源燈與硬碟燈。
+[公開佈局](https://rack-atx-controller-ddasdkimo.raidavid.chatgpt.site/layout.html) · [3D／兩台主機接線](https://rack-atx-controller-ddasdkimo.raidavid.chatgpt.site/) · [BOM](https://rack-atx-controller-ddasdkimo.raidavid.chatgpt.site/bom.html)
 
-**目前版本：B.1 · 原理圖審閱版。** 已有 JLC 選料、完整電路定值、KiCad 原理圖、BOM 與批量成本。ERC／連線及 DC 角落計算已檢查；PCB 已進入 R.0 局部佈線；尚無完成的 PCB、CPL／Gerber 或實機驗證。目前 S.2 依實際焊盤與電路關係重新布局；3D 與俯視審閱頁均由同一份 PCB 位置資料生成。
+## 本版變更
 
-- 公開討論網頁：[3D 控制板與兩台電腦接線](https://rack-atx-controller-ddasdkimo.raidavid.chatgpt.site)
-- [硬體架構與接線](hardware/HARDWARE.md)
-- [接頭與設計資料來源](hardware/design.json)
-- [JLCPCB 製造與選料方向](hardware/JLCPCB.md)
-- [KiCad 原始檔](hardware/cad/) · [主控板原理圖 PDF](hardware/release/controller-schematic.pdf) · [分接板 PDF](hardware/release/adapter-schematic.pdf)
-- [完整 BOM 與 JLC 格式](hardware/bom/) · [驗證結果](hardware/validation/checks.json) · [原廠依據](hardware/SOURCES.md)
-- [修改紀錄](CHANGELOG.md)
+- 移除全部 LED 偵測及十組隔離電源，保留二十個 TLP3122A 雙向隔離接點。原 POWER／RESET 按鈕經被動分接板並聯；原機殼 LED 直接留在主機板上。
+- 原理圖／BOM 為 B.2；R.2 原生 PCB 有 300 個電氣元件、4 個固定孔、2,754 段走線與 185 個過孔。較 S.2 的 200×170 mm 面積減少約 68%。
+- 修正模擬發現的計時與開機預設電位問題：MC14541B 計數式限時、1 nF C0G、獨立 ARM 閘控，GPIO 改為 4／6／7。
+- 兩板 ERC／DRC／未連接均為 0。26×34 mm 被動轉接板為 6 個元件、30 段走線。16 組角落與 9 種狀態的 ngspice 行為模型通過，模型脈寬 11.26–21.46 秒。USB／Ethernet 的配對阻抗及回流尚未完成資格驗證，還需工廠 DFM 和實機驗證；無 Gerber、CPL 或製造放行。
 
-## 3D 圖可以查看什麼
+## 設計檔
 
-- 完整控制板：10 個主機接頭、20 個隔離按鍵開關、20 路 LED 偵測、10 組隔離供電、MCU、有線網路、I/O 與電源區。
-- 兩台虛擬電腦：CPU、記憶體、儲存元件、前面板訊號、直通轉接板、原按鈕及燈號。
-- PC-01 接 J01、PC-02 接 J02，其他八路預留。
-- 滑鼠旋轉、滾輪／雙指縮放、觀察位置切換、外殼顯示，以及逐組訊號追線。
-- 下方接線圖直接呈現原線直通與控制支路；訊號編號表列出全部腳位及實際線芯配色，不冒充原廠插孔位置圖。
-- B.1 連接器：JST PHD（S10B-PHDSS(LF)(SN)／PHDR-10VS／SPHD-001T-P0.5）；線材候選：Belden 9505。均為真實型號，但線束需要訂製、壓接及實物驗證。
+- [B.2 KiCad 原理圖與 R.2 PCB](hardware/cad/B2/)
+- [主控原理圖 PDF](hardware/release/controller-schematic.pdf)／[被動分接板 PDF](hardware/release/adapter-schematic.pdf)
+- [硬體與接線](hardware/HARDWARE.md)／[佈局理由](hardware/LAYOUT-S3.md)／[R.2 佈線檢查與限制](hardware/ROUTING-R2.md)
+- [BOM 與成本](hardware/bom/)／[費率假設](hardware/JLCPCB.md)
+- [模擬方法與限制](hardware/simulation/README.md)／[B.2 結果](hardware/simulation/results/B2-summary.json)
 
-## 核心原則
+J01–J10 是自訂 JST PHD 10 pin，**不是主機板通用 F_PANEL 或 Ethernet**。只接 pin 1/2 POWER、3/4 RESET、9 本機按鍵 ESD 參考地；5–8、10 不接。每台 HOST_REF 僅屬該台，與主控及其他主機保持隔離。線束與主機板跳線按實際手冊逐台核對。
 
-原按鈕與 LED 的路徑走轉接板的被動直通銅箔，不依賴控制器供電。POWER／RESET 以常開隔離開關並聯；LED 用有限負載的高阻抗差動偵測與隔離回傳。每台主機的參考地只連到它自己的隔離偵測區。
+## 成本範圍
 
-**J01–J10 是本專案自訂接頭，不是通用的主機板 F_PANEL 針位，也不是 Ethernet。** 主機板端使用分開的標籤插頭，依實際主機板手冊接線。沒有 RESET／HDD LED 的主機可留空該組；雙色或三腳電源燈需要另外適配。
+五片中央板零件 US$162.53，約 US$32.51／片；B.1 同批量 US$224.27，減少約 28%。五片零件＋組裝估算 US$244.01–260.39，**還須加新尺寸裸板、運稅、耗損／MOQ**。不是含運成品價。採一般交期、單面 Economic、不加急；待佈局／工藝確認後重新報價。
 
-## 本機重建與檢視
-
-需要 Python 3。3D 使用固定版本 Three.js 0.160.1，從 jsDelivr 載入；沒有資料上傳或遠端主機控制功能。
+## 重建
 
 ```sh
 python3 scripts/build.py
 python3 scripts/check.py
-python3 -m http.server 8080 --directory docs
+python3 -m http.server 8766 --directory dist
 ```
 
-瀏覽 `http://localhost:8080`。`docs/index.html` 可直接下載開啟，但需要網路載入 Three.js。
+電路與原生 PCB 的完整重建方式見 [CAD 說明](hardware/cad/README.md)。3D 使用固定版本 Three.js，元件本體為簡化外形，但中央板與轉接板尺寸／位置／銅箔來自原生 KiCad；兩台主機為接線示意。網站沒有操作真實主機或上傳私密資訊的功能。
 
-`visualization/viewer.template.html` 是互動圖原始碼，`hardware/design.json` 是接頭／數量／版本資料來源。`visualization/standalone-shell.template.html` 是由 Codex visualization exporter 產生的可獨立執行容器；它提供主題、控制項樣式與本機互動狀態保存。`scripts/build.py` 將相同的視覺內容產生至 `docs/` 與部署用 `dist/`。
-
-## 後續維護
-
-使用者已要求：**每次完善電路板時，都要同步更新 3D 與接線圖。** 詳見 [AGENTS.md](AGENTS.md)。電路、腳位、線材、隔離邊界、尺寸或元件位置有改動時，必須同時修改設計資料、圖面、硬體文件與 changelog，重建、驗證後更新公開網頁與此 repository。
-
-## S.1 歷史縮板估價（不適用 S.2）
-
-| 方案（5 片） | 裸板 | 零件 | 工廠全部焊好，含板＋料＋組裝 |
-|---|---:|---:|---:|
-| 原四層 200×160 | $50.60 | $224.27 | $372.90–392.35 |
-| 原尺寸改兩層 200×160 | $21.20 | $224.27 | $343.50–362.95 |
-| S.1 兩層縮板候選 160×110 | $14.00 | $224.27 | $336.30–355.75 |
-| S.1 四層縮板備案 160×110 | $41.30 | $224.27 | $363.60–383.05 |
-
-先前的兩層 160×110 mm 研究候選，面積減少 45%；四層同尺寸為備案。5 片自己焊接材料共 $238.27，工廠焊好約 $336.30–355.75。**單片零件約 $44.85，$224.27 是 5 片合計。** 裸板為 JLC 網頁尺寸試算，組裝為費率估算，均非已接受的生產報價。未含運稅、耗損／MOQ、工藝追加、分接板、線束、電源、外殼及韌體。
-
-採購偏好：**可以等待，優先一般交期、單面 Economic PCBA、不加急及較便宜物流**。等待本身不保證折扣；物流費待地址與包裹確定。
-
-[完整縮板分析](hardware/COMPACT-STUDY.md) · [KiCad 配置草稿](hardware/cad/compact-S1-placement.kicad_pcb) · [可讀 BOM](https://rack-atx-controller-ddasdkimo.raidavid.chatgpt.site/bom.html) · [成本明細](hardware/JLCPCB.md)
-
-未完成：五類未指派焊盤與其餘候選焊盤審核、PCB layout／DRC／製造檔、實際主機板針位、掉電負載及回灌、timer 公差與故障釋放、線長／EMI、溫升與實機驗證。模型中的線路只表達功能，不構成 SPICE 或硬體測試。
+每次硬體變動須同步原理圖、BOM、3D、接線圖與公開網頁，見 [AGENTS.md](AGENTS.md)。B.1／S.2／R.0／R.1 資料與本機走線檢查點保留為歷史，不能繼續當作現行電路。

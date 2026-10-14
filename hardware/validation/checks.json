@@ -1,38 +1,53 @@
 {
-  "revision": "B.1",
-  "method": "KiCad exported netlist + bounded DC calculations; no physical test / SPICE",
+  "revision": "B.2",
+  "method": "KiCad exported netlist + bounded DC calculations; simulation reported separately; no physical test",
   "controller": {
-    "components": 694,
-    "pins_checked_against_KiCad": 1887,
+    "components": 300,
+    "pins_checked_against_KiCad": 956,
     "erc_violations": 0
   },
   "adapter": {
-    "components": 10,
-    "pins_checked_against_KiCad": 28,
+    "components": 6,
+    "pins_checked_against_KiCad": 20,
     "erc_violations": 0
   },
-  "unassigned_footprints": [
-    "ssr",
-    "opto",
-    "iso",
-    "ind",
-    "barrel"
-  ],
+  "unassigned_footprints": [],
   "isolation_topology": "PASS: controller and ten host domains remain separate through defined barriers",
-  "led_threshold_V": {
-    "turn_on": [
-      0.361,
-      1.357
-    ],
-    "turn_off": [
-      0.216,
-      1.222
+  "local_indicators": "20 driver LEDs + 3V3 + active-low output-enable; existing RJ45 LINK/ACT; not physical contact feedback",
+  "control_only_topology": "PASS: 20 dry contacts, no LED sensing/supplies, ten separate host ESD references",
+  "boot_gpio": {
+    "ARM": 4,
+    "OE_N": 6,
+    "LATCH": 7,
+    "removed_uart_timer_assignments": [
+      43,
+      44
     ]
   },
-  "led_input_loading_bound_uA": 50.51,
-  "led_conditions": "0..5V on each input, OFF differential <=0.2V, ON >=1.4V; resistor effective 1.5% including temperature allowance, host rail +/-3%, combined comparator input error +/-14mV. Motherboard envelope must be measured.",
   "photorelay_if_min_mA": 5.626,
   "photorelay_if_max_mA": 9.757,
-  "timer_nominal_s": 16.81,
-  "timer_note": "Timing capacitance under DC bias and temperature is unmeasured; 8..25s is a qualification target, not a guaranteed bound. Static stall releases; repeated edges can trigger further windows."
+  "timer_nominal_s": 15.07328,
+  "timer_note": "MC14541B single-transition, AR=1, MR high default, QSEL=1, A=B=1. 200k/1nF C0G, Rs=400k. ARM gates the output independently. Clock tolerance/model and physical qualification are reported separately.",
+  "spice_simulation": {
+    "revision": "B.2",
+    "method": "ngspice datasheet-fitted aggregate counter and transistor/photorelay behavioral models",
+    "circuit_sha256": "ad8ae88b83cd768a886921e554e22fc8aa85f66a2e4c8c526c976daa6c427cc4",
+    "vendor_model": false,
+    "hardware_correlated": false,
+    "pass": true,
+    "nominal_timeout_s": 15.073279999999999,
+    "timer_pulse_range_s": [
+      11.2598,
+      21.46
+    ],
+    "oscillator_bound_is_model_assumption": true,
+    "limitations": [
+      "Clock aggregated using datasheet RC equation; physical oscillator and exact IC behavior are not vendor modeled.",
+      "Bench-qualify timeout over power and operating temperature before manufacturing release.",
+      "Repeated ARM low/high transitions start new windows; not a safety-rated anti-malicious-firmware interlock.",
+      "USB/Ethernet SI, ESD, EMC, load transients and PCB behavior not covered."
+    ],
+    "corner_count": 16,
+    "functional_case_count": 9
+  }
 }

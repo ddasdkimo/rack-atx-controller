@@ -1,0 +1,61 @@
+{
+  "id": "C140950",
+  "mpn": "C0603C102J5GAC7867",
+  "manufacturer": "KEMET",
+  "package": "0603",
+  "classification": "Extended",
+  "assembly": "SMT Assembly",
+  "pcba_type": "Economic and Standard",
+  "stock": 849,
+  "loss": 10,
+  "prices": [
+    {
+      "min_qty": 1,
+      "max_qty": 0,
+      "usd": 0.0213
+    },
+    {
+      "min_qty": 1,
+      "max_qty": 499,
+      "usd": 0.0213
+    },
+    {
+      "min_qty": 500,
+      "max_qty": 1499,
+      "usd": 0.017
+    },
+    {
+      "min_qty": 1500,
+      "max_qty": 3999,
+      "usd": 0.0147
+    },
+    {
+      "min_qty": 4000,
+      "max_qty": 23999,
+      "usd": 0.0132
+    },
+    {
+      "min_qty": 24000,
+      "max_qty": 47999,
+      "usd": 0.012
+    },
+    {
+      "min_qty": 48000,
+      "max_qty": 99999,
+      "usd": 0.0113
+    },
+    {
+      "min_qty": 100000,
+      "max_qty": 199999,
+      "usd": 0.0112
+    },
+    {
+      "min_qty": 200000,
+      "max_qty": -1,
+      "usd": 0.0111
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/C140950",
+  "checked_at": "2026-10-14T08:48:03.035612+00:00",
+  "status": "public JLC page observed; recheck at ordering"
+}

@@ -1,0 +1,46 @@
+{
+  "id": "C2297",
+  "mpn": "KT-0805G",
+  "manufacturer": "Hubei KENTO Elec",
+  "package": "0805",
+  "classification": "Basic",
+  "assembly": "SMT Assembly",
+  "pcba_type": "Economic and Standard",
+  "stock": 2784392,
+  "loss": 10,
+  "prices": [
+    {
+      "min_qty": 1,
+      "max_qty": 499,
+      "usd": 0.0164
+    },
+    {
+      "min_qty": 500,
+      "max_qty": 2999,
+      "usd": 0.0127
+    },
+    {
+      "min_qty": 3000,
+      "max_qty": 5999,
+      "usd": 0.0101
+    },
+    {
+      "min_qty": 6000,
+      "max_qty": 23999,
+      "usd": 0.0089
+    },
+    {
+      "min_qty": 24000,
+      "max_qty": 50999,
+      "usd": 0.0084
+    },
+    {
+      "min_qty": 51000,
+      "max_qty": -1,
+      "usd": 0.008
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/C2297",
+  "checked_at": "2026-10-14T15:04:11.076033+00:00",
+  "status": "public JLC page observed; recheck at ordering"
+}

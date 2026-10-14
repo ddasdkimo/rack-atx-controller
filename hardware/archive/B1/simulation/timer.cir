@@ -1,0 +1,57 @@
+B.1 shared output-rail monostable -- TLC555, trigger shaping and PHOTO_5V gate (transient)
+* outputs_1 / outputs_2 sheets: R27..R36, C40..C45, D2, Q2, Q3, Q4, U7.
+* TIMER_ARM (555 RESET) and TIMER_FIRE are MCU GPIO drives modeled as 3.3 V pulses.
+* RLOAD represents the photorelay LED load on PHOTO_5V (588 ohm = one channel,
+* 29 ohm = all twenty channels at 8.5 mA).
+* CT is the total timing capacitance (3 x 10 uF nominal); KR32 scales R32.
+.include models.lib
+.param V5=5 KR32=1 CT=30u KTH=1 KTR=1 VRST=1.1 RLOAD=588
+.param ARM_T=10m ARM_PW=1000 FIRE_T=50m FIRE_PW=5m FIRE_PER=1000 TSTOP=40
+
+V5 5V 0 {V5}
+Varm ARM 0 PULSE(0 3.3 {ARM_T} 10n 10n {ARM_PW} 2000)
+Vfire FIRE 0 PULSE(0 3.3 {FIRE_T} 10n 10n {FIRE_PW} {FIRE_PER})
+R27 ARM 0 100k
+R28 FIRE 0 100k
+
+C40 FIRE TRIG_AC 100n
+R29 TRIG_AC TRIG_BASE 10k
+R30 TRIG_BASE 0 10k
+D2 0 TRIG_BASE D1N4148WS
+Q2 TRIG_N TRIG_BASE 0 MMBT3904_TYP
+R31 5V TRIG_N 10k
+
+XU7 0 TRIG_N TIMER_OUT ARM TIMER_CTRL TIMER_RC TIMER_RC 5V TLC555 params: KTH={KTH} KTR={KTR} VRST={VRST}
+C41 TIMER_CTRL 0 10n
+C42 5V 0 100n
+R32 5V TIMER_RC {510k*KR32}
+Ct TIMER_RC 0 {CT}
+
+R33 TIMER_OUT GATE_BASE 10k
+R34 GATE_BASE 0 100k
+Q3 PHOTO_GATE GATE_BASE 0 MMBT3904_TYP
+R35 PHOTO_GATE 5V 10k
+XQ4 PHOTO_GATE 5V PHOTO_5V AO3401A
+R36 PHOTO_5V 0 10k
+Rload PHOTO_5V 0 {RLOAD}
+
+Bon ONFLAG 0 V = (V(PHOTO_5V) > 2.5) ? 1 : 0
+
+* Gear integration: the trapezoidal default stalls at the slow threshold crossing of the behavioral 555.
+.options method=gear
+.tran 1m {TSTOP}
+.meas tran TRIG_FALL WHEN V(TRIG_N)=2.5 FALL=1
+.meas tran TRIG_RISE WHEN V(TRIG_N)=2.5 RISE=1
+.meas tran TRIG_PW PARAM='TRIG_RISE-TRIG_FALL'
+.meas tran TRIG_N_MIN MIN V(TRIG_N)
+.meas tran TRIG_BASE_MIN MIN V(TRIG_BASE)
+.meas tran T_ON WHEN V(PHOTO_5V)=2.5 RISE=1
+.meas tran T_OFF WHEN V(PHOTO_5V)=2.5 FALL=1
+.meas tran PULSE_W PARAM='T_OFF-T_ON'
+.meas tran T_LAST_OFF WHEN V(PHOTO_5V)=2.5 FALL=LAST
+.meas tran T_LAST_ON WHEN V(PHOTO_5V)=2.5 RISE=LAST
+.meas tran ON_TOTAL INTEG V(ONFLAG)
+.meas tran PHOTO_5V_MAX MAX V(PHOTO_5V)
+.meas tran PHOTO_5V_OFF MAX V(PHOTO_5V) FROM=0 TO={FIRE_T}
+.meas tran RC_MAX MAX V(TIMER_RC)
+.end

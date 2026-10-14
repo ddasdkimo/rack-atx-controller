@@ -1,0 +1,56 @@
+B.1 host LED sense channel -- power-off loading and backfeed (operating point)
+* Same channel as led-dynamic.cir. Zero-volt sources VIP / VIM measure the current
+* flowing from the motherboard pins into the controller cable (positive = into the
+* controller side). Scenarios are selected with parameters:
+*   VRAIL  motherboard LED rail (5, 3.3 or 0 = host unpowered)
+*   CTL    1 = motherboard driver asserts LED on, 0 = off
+*   HRAIL  isolated host-domain 3.3 V rail (3.3 = controller powered, 0 = unpowered)
+*   C3V3   controller MCU rail (3.3 or 0)
+*   LEDG / LEDB  case LED present (green / blue) or 0 = no case LED
+*   RLEAK_ESD  TVS leakage model resistance (5 Meg = 1 uA at 5 V assumption)
+* The motherboard model is an assumption; see README.md.
+.include models.lib
+.param HRAIL=3.3 C3V3=3.3
+.param VOS=0 IB=25n IOS=0 RON=100 CTR=1.3
+.param VRAIL=5 RS=330 MODE=0 LEDG=1 LEDB=0 CTL=1 RLEAK_ESD=5meg
+* RPU: what-if pull-up from LED- sense input to LED+ (not in B.1; 1e12 = absent)
+.param RPU=1e12
+
+Vh3 H3V3 0 {HRAIL}
+Vc3 C3V3 CG {C3V3}
+Vcg CG 0 0
+
+Vctl CTL 0 {CTL}
+Xmobo PMB MMB 0 CTL MOBO_LED params: VRAIL={VRAIL} RS={RS} MODE={MODE}
+Xcase PMB MMB CASE_LED params: PRESENT_G={LEDG} PRESENT_B={LEDB}
+VIP PMB P 0
+VIM MMB M 0
+Rpu P M {RPU}
+
+Xesd P M 0 PESD5V0S2BT params: RLEAK={RLEAK_ESD}
+
+R46 P SPLUS 100k
+R47 SPLUS 0 10k
+C50 SPLUS 0 1n
+R48 M SMINUS 100k
+R49 SMINUS 0 10k
+C51 SMINUS 0 1n
+R50 H3V3 SMINUS 390k
+R51 CMP FB1 510k
+R52 FB1 FB2 510k
+R53 FB2 FB3 510k
+R54 FB3 SMINUS 510k
+R55 H3V3 CMP 10k
+XU14 SPLUS SMINUS CMP H3V3 0 LM393_CH params: VOS={VOS} IB={IB} IOS={IOS} RON={RON}
+
+R56 H3V3 OR 330
+R57 OR OA 330
+XU12 OA CMP PLEDN CG EL357N params: CTR={CTR}
+R58 C3V3 PLEDN 10k
+C52 PLEDN CG 1n
+
+.control
+op
+print i(vip) i(vim) v(p) v(m) v(splus) v(sminus) v(cmp) v(pledn) i(v.xmobo.vr) i(v.xu12.vs)
+.endc
+.end

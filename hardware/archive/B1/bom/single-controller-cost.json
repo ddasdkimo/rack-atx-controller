@@ -1,0 +1,353 @@
+{
+  "date": "2026-10-14",
+  "catalog_date": "2026-10-13",
+  "parts_one_controller_usd": 49.84,
+  "quote": false,
+  "factory_assembly_one_board_available": false,
+  "minimum_assembled_boards_reference": 2,
+  "minimum_source": "https://jlcpcb.com/solutions/pcb-prototype-assembly",
+  "pcb_current_outline_quote_usd": null,
+  "notes": [
+    "S.2 outline changed; prior $14 PCB quote for 160x110 must not be applied.",
+    "One-board parts are catalog comparison only, not a loose-parts offer; MOQ, loss, tools, freight and tax excluded.",
+    "Do not estimate a one-board factory total by dividing the five-board bill."
+  ],
+  "rows": [
+    {
+      "mpn": "WJ500V-5.08-2P",
+      "lcsc": "C8465",
+      "quantity": 1,
+      "unit_usd": 0.1341,
+      "total_usd": 0.1341
+    },
+    {
+      "mpn": "MF-MSMF150/24X-2 1.5A",
+      "lcsc": "C78695",
+      "quantity": 1,
+      "unit_usd": 0.1971,
+      "total_usd": 0.1971
+    },
+    {
+      "mpn": "AO3401A",
+      "lcsc": "C15127",
+      "quantity": 2,
+      "unit_usd": 0.102,
+      "total_usd": 0.204
+    },
+    {
+      "mpn": "10u",
+      "lcsc": "C15850",
+      "quantity": 28,
+      "unit_usd": 0.0689,
+      "total_usd": 1.9292
+    },
+    {
+      "mpn": "100n",
+      "lcsc": "C14663",
+      "quantity": 31,
+      "unit_usd": 0.014,
+      "total_usd": 0.434
+    },
+    {
+      "mpn": "AP63203WU-7",
+      "lcsc": "C780769",
+      "quantity": 1,
+      "unit_usd": 1.1825,
+      "total_usd": 1.1825
+    },
+    {
+      "mpn": "4.7uH FNR4018S4R7MT",
+      "lcsc": "C167806",
+      "quantity": 1,
+      "unit_usd": 0.0459,
+      "total_usd": 0.0459
+    },
+    {
+      "mpn": "22u",
+      "lcsc": "C45783",
+      "quantity": 2,
+      "unit_usd": 0.2372,
+      "total_usd": 0.4744
+    },
+    {
+      "mpn": "ESP32-S3FN8",
+      "lcsc": "C2913196",
+      "quantity": 1,
+      "unit_usd": 3.337,
+      "total_usd": 3.337
+    },
+    {
+      "mpn": "1u",
+      "lcsc": "C15849",
+      "quantity": 3,
+      "unit_usd": 0.0158,
+      "total_usd": 0.0474
+    },
+    {
+      "mpn": "10k 1%",
+      "lcsc": "C25804",
+      "quantity": 104,
+      "unit_usd": 0.0022,
+      "total_usd": 0.2288
+    },
+    {
+      "mpn": "PZ254V-11-02P",
+      "lcsc": "C492401",
+      "quantity": 2,
+      "unit_usd": 0.0186,
+      "total_usd": 0.0372
+    },
+    {
+      "mpn": "40MHz CL12pF",
+      "lcsc": "C18214314",
+      "quantity": 1,
+      "unit_usd": 0.0816,
+      "total_usd": 0.0816
+    },
+    {
+      "mpn": "0 1%",
+      "lcsc": "C21189",
+      "quantity": 2,
+      "unit_usd": 0.0022,
+      "total_usd": 0.0044
+    },
+    {
+      "mpn": "20p",
+      "lcsc": "C1648",
+      "quantity": 4,
+      "unit_usd": 0.0092,
+      "total_usd": 0.0368
+    },
+    {
+      "mpn": "47 1%",
+      "lcsc": "C23182",
+      "quantity": 2,
+      "unit_usd": 0.004,
+      "total_usd": 0.008
+    },
+    {
+      "mpn": "TYPE-C-31-M-12",
+      "lcsc": "C165948",
+      "quantity": 1,
+      "unit_usd": 0.1863,
+      "total_usd": 0.1863
+    },
+    {
+      "mpn": "PRTR5V0U2X,215",
+      "lcsc": "C12333",
+      "quantity": 1,
+      "unit_usd": 0.4306,
+      "total_usd": 0.4306
+    },
+    {
+      "mpn": "5.1k 1%",
+      "lcsc": "C23186",
+      "quantity": 2,
+      "unit_usd": 0.0015,
+      "total_usd": 0.003
+    },
+    {
+      "mpn": "33 1%",
+      "lcsc": "C23140",
+      "quantity": 2,
+      "unit_usd": 0.0025,
+      "total_usd": 0.005
+    },
+    {
+      "mpn": "100k 1%",
+      "lcsc": "C25803",
+      "quantity": 66,
+      "unit_usd": 0.0031,
+      "total_usd": 0.2046
+    },
+    {
+      "mpn": "W5500",
+      "lcsc": "C32843",
+      "quantity": 1,
+      "unit_usd": 2.8249,
+      "total_usd": 2.8249
+    },
+    {
+      "mpn": "120R@100MHz GZ1608D121TF",
+      "lcsc": "C12391",
+      "quantity": 1,
+      "unit_usd": 0.0099,
+      "total_usd": 0.0099
+    },
+    {
+      "mpn": "12.4k 1%",
+      "lcsc": "C22865",
+      "quantity": 1,
+      "unit_usd": 0.0015,
+      "total_usd": 0.0015
+    },
+    {
+      "mpn": "4.7u",
+      "lcsc": "C19666",
+      "quantity": 11,
+      "unit_usd": 0.0296,
+      "total_usd": 0.3256
+    },
+    {
+      "mpn": "10n",
+      "lcsc": "C57112",
+      "quantity": 3,
+      "unit_usd": 0.0101,
+      "total_usd": 0.0303
+    },
+    {
+      "mpn": "25MHz CL12pF",
+      "lcsc": "C9006",
+      "quantity": 1,
+      "unit_usd": 0.0948,
+      "total_usd": 0.0948
+    },
+    {
+      "mpn": "49.9 1%",
+      "lcsc": "C23185",
+      "quantity": 4,
+      "unit_usd": 0.0021,
+      "total_usd": 0.0084
+    },
+    {
+      "mpn": "6.8n",
+      "lcsc": "C1631",
+      "quantity": 2,
+      "unit_usd": 0.0073,
+      "total_usd": 0.0146
+    },
+    {
+      "mpn": "22n",
+      "lcsc": "C1729",
+      "quantity": 1,
+      "unit_usd": 0.0084,
+      "total_usd": 0.0084
+    },
+    {
+      "mpn": "330 1%",
+      "lcsc": "C23138",
+      "quantity": 42,
+      "unit_usd": 0.0022,
+      "total_usd": 0.0924
+    },
+    {
+      "mpn": "HR911105A",
+      "lcsc": "C12074",
+      "quantity": 1,
+      "unit_usd": 1.7191,
+      "total_usd": 1.7191
+    },
+    {
+      "mpn": "74HC595D,118",
+      "lcsc": "C5947",
+      "quantity": 3,
+      "unit_usd": 0.1132,
+      "total_usd": 0.3396
+    },
+    {
+      "mpn": "1N4148WS",
+      "lcsc": "C2128",
+      "quantity": 1,
+      "unit_usd": 0.015,
+      "total_usd": 0.015
+    },
+    {
+      "mpn": "MMBT3904",
+      "lcsc": "C20526",
+      "quantity": 22,
+      "unit_usd": 0.0116,
+      "total_usd": 0.2552
+    },
+    {
+      "mpn": "TLC555CDR",
+      "lcsc": "C6986",
+      "quantity": 1,
+      "unit_usd": 0.2326,
+      "total_usd": 0.2326
+    },
+    {
+      "mpn": "510k 1%",
+      "lcsc": "C23192",
+      "quantity": 81,
+      "unit_usd": 0.0024,
+      "total_usd": 0.1944
+    },
+    {
+      "mpn": "S10B-PHDSS(LF)(SN)",
+      "lcsc": "C161672",
+      "quantity": 10,
+      "unit_usd": 0.4727,
+      "total_usd": 4.727
+    },
+    {
+      "mpn": "B0505S-1WR3L",
+      "lcsc": "C20622559",
+      "quantity": 10,
+      "unit_usd": 0.6883,
+      "total_usd": 6.883
+    },
+    {
+      "mpn": "HT7533-1",
+      "lcsc": "C14289",
+      "quantity": 10,
+      "unit_usd": 0.1436,
+      "total_usd": 1.436
+    },
+    {
+      "mpn": "1.5k 1%",
+      "lcsc": "C22843",
+      "quantity": 20,
+      "unit_usd": 0.002,
+      "total_usd": 0.04
+    },
+    {
+      "mpn": "220 1%",
+      "lcsc": "C22962",
+      "quantity": 40,
+      "unit_usd": 0.0035,
+      "total_usd": 0.14
+    },
+    {
+      "mpn": "TLP3122A(TPL,E",
+      "lcsc": "C4153843",
+      "quantity": 20,
+      "unit_usd": 0.8563,
+      "total_usd": 17.126
+    },
+    {
+      "mpn": "PESD5V0S2BT",
+      "lcsc": "C2841440",
+      "quantity": 40,
+      "unit_usd": 0.0429,
+      "total_usd": 1.716
+    },
+    {
+      "mpn": "1n",
+      "lcsc": "C1588",
+      "quantity": 60,
+      "unit_usd": 0.0089,
+      "total_usd": 0.534
+    },
+    {
+      "mpn": "390k 1%",
+      "lcsc": "C23150",
+      "quantity": 20,
+      "unit_usd": 0.0032,
+      "total_usd": 0.064
+    },
+    {
+      "mpn": "EL357N(B)(TA)-G",
+      "lcsc": "C42381015",
+      "quantity": 20,
+      "unit_usd": 0.0578,
+      "total_usd": 1.156
+    },
+    {
+      "mpn": "LM393DR",
+      "lcsc": "C67470",
+      "quantity": 10,
+      "unit_usd": 0.0635,
+      "total_usd": 0.635
+    }
+  ]
+}

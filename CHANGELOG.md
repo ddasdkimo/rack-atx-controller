@@ -1,3 +1,28 @@
+# 2026-10-14 — B.2 circuit / S.3 placement / R.2 routed prototype candidate
+
+- Removed host LED sensing and isolated supplies; retained 20 POWER/RESET photorelays and independent host-local button ESD references. Original buttons connect in parallel; original LEDs remain on the motherboard.
+- Added 20 red drive-state LEDs, green 3V3/EN LEDs and labeled per-host PWR/RST positions. Existing RJ45 LINK/ACT remains. LEDs indicate drive state, not physical contact or host power feedback.
+- Fixed timer/startup behavior: MC14541B, C0G counted timeout, independent ARM gate, GPIO4/6/7 and external defaults. Native XML/ERC verifies 300 controller parts/956 pins and 6 adapter parts/20 pins. ERC zero on both.
+- User authorized completing routing after placement checks. 47 placement-distance checks passed. R.2 controller: 100×110 mm, 2 layers, 2,754 segments, 185 vias, 22 ground zones. Passive adapter: 26×34 mm, 30 segments, no vias. Both native connectivity and configured DRC report zero.
+- Crystal and buck critical routes use F.Cu without vias. Committed rule profile: 0.15 mm minimum track/clearance, 0.6/0.3 mm vias, 1 mm host-domain functional separation, 1 mm silk text/0.15 mm strokes. Custom LED footprints preserve KiCad copper lands and adjust only silk/fab artwork.
+- Re-ran B.2 behavioral simulation: 16 corners plus 9 cases pass, including indicator loads. 11.26–21.46 s is an assumed model stress range, not a measured or vendor-guaranteed range.
+- Updated native schematics/PDFs/BOM, 3D actual copper and passive adapter geometry, indicator demonstration, public routing view and documentation. Five-board parts US$162.53; new bare PCB quote remains unknown.
+- No manufacturing release: USB/Ethernet pair/return/impedance review, factory DFM and physical testing remain. S.3 unrouted baseline and older revisions/checkpoints preserved; generators now write placement baselines instead of overwriting routed boards.
+
+## 2026-10-14 — Control-only direction; routing stopped
+
+- User stopped B.1 / R.1 routing and selected ten POWER plus ten RESET outputs without host LED sensing. RESET already exists in B.1; original case buttons and lights remain usable. Saved PCB checkpoints are preserved.
+- Added `hardware/control-only-plan.json`: a conservative component-only projection keeps existing connectors and button ESD protection, removing 440 of 694 parts. Five-controller parts estimate falls from US$224.27 to US$162.07 using the 2026-10-13 catalog; no new PCB or assembled-board quote is claimed.
+- Reviewed the CLI SPICE study and independently reproduced four representative B.1 cases. LED low-side-drive misread is confirmed in the assumed model; timer tolerance and GPIO reset pull-up findings remain open. This is not hardware validation.
+- Control-only schematic/BOM, revised native PCB, 3D and public-site replacement remain pending. Existing B.1 artifacts are unchanged.
+
+# 2026-10-14 B.1 行為級 SPICE 模擬
+
+- 新增 hardware/simulation：ngspice 47 行為模型（LM393、TLC555、TLP3122A、EL357N、假設的主機板 LED 驅動）與六個網表；結果寫入 results/ 與 validation/checks.json 的 spice_simulation。電路、BOM、配置、3D 與接線圖不變。
+- 發現 LED 感測對低側開汲極驅動的主機板一律讀成常亮（熄滅差動 1.7 V／無機殼 LED 4.9 V），只有高側驅動正確；what-if 上拉可修但未採用。
+- TLC555 脈寬角落 6.75–25.7 s 超出 8–25 s 目標（X5R 電容 5 V 偏壓假設）；GPIO43/44 重置弱上拉使 555 RESET 約 2.28 V，建議換腳位。TLP3122A 驅動與回灌無問題。
+- scripts/check-circuit.py 重新產生 checks.json 時保留 spice_simulation。
+
 # 2026-10-14 B.1 / R.0 局部走線
 
 - 依使用者要求改採實務布局審閱，IPC 全面合規不再阻擋試佈線。

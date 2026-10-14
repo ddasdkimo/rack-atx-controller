@@ -6,7 +6,7 @@ import json, csv, math, itertools, xml.etree.ElementTree as ET
 from pathlib import Path
 R=Path(__file__).resolve().parents[1]
 x=json.loads((R/'hardware/circuit.json').read_text());parts=x['parts']
-report={'revision':x['revision'],'method':'KiCad exported netlist + bounded DC calculations; no physical test / SPICE'}
+report={'revision':x['revision'],'method':'KiCad exported netlist + bounded DC calculations; simulation reported separately; no physical test'}
 for board in ['controller','adapter']:
  tree=ET.parse(R/f'artifacts/local/{board}.xml')
  actual={}
@@ -45,7 +45,7 @@ for key,p in parts.items():
  if not p['footprint']:
   if key!='flag':missing.append(key)
   continue
- lib,name=p['footprint'].split(':');path=fpbase/(lib+'.pretty')/(name+'.kicad_mod')
+ lib,name=p['footprint'].split(':');path=(R/'hardware/cad/RackATX.pretty' if lib=='RackATX' else fpbase/(lib+'.pretty'))/(name+'.kicad_mod')
  pads=set(re.findall(r'\(pad "([^"]+)"',path.read_text()))
  assert pads=={n for n,_,_ in p['pins']},(key,pads,p['pins'])
 report['unassigned_footprints']=missing
@@ -53,38 +53,44 @@ report['isolation_topology']='PASS: controller and ten host domains remain separ
 # Direct map check catches plausible but wrong 4-pin aliases.
 assert [p[0] for p in parts['ssr']['pins']]==['1','3','4','6']
 assert [p[1] for p in parts['usbesd']['pins']]==['GND','IO1','IO2','VCC']
-# LED threshold corners: independently 1.5% effective resistor variation (1% tolerance + 0.5% thermal allowance), 3.3V +/-3%,
-# conservative total input-referred error +/-14mV covers offset + bias mismatch.
-# Solve conductance network including finite comparator output pull-up resistance.
-def threshold(vcm,rail,res,on,err):
- rp,rg,rm,rmg,rb,rf1,rf2,ro=res;rf=rf1+rf2
- if on:
-  # Low state <=0.7V at <=4mA over 0..70C; test both bounds.
-  ov=ro
-  vm=(vcm/rm+rail/rb+ov/rf)/(1/rm+1/rmg+1/rb+1/rf)
- else:
-  # Output high: the feedback draws through the 10k pullup.
-  vm=(vcm/rm+rail/rb+rail/(rf+ro))/(1/rm+1/rmg+1/rb+1/(rf+ro))
- return (vm+err)*(1+rp/rg)-vcm
-bounds={}
-for state in ['turn_on','turn_off']:
- vals=[]
- for vcm,rail,err,signs in itertools.product([0,5],[3.201,3.399],[-.014,.014],itertools.product([.985,1.015],repeat=8)):
-  rr=[a*b for a,b in zip([100e3,10e3,100e3,10e3,390e3,1020e3,1020e3,10e3],signs)]
-  if state=='turn_off':
-   for low in [0,.7]:vals.append(threshold(vcm,rail,rr[:-1]+[low],True,err))
-  else:vals.append(threshold(vcm,rail,rr,False,err))
- bounds[state]=[round(min(vals),3),round(max(vals),3)]
-assert bounds['turn_on'][1]<1.4,bounds
-assert bounds['turn_off'][0]>.2,bounds
-report['led_threshold_V']=bounds
-report['led_input_loading_bound_uA']=round(5/(100e3*.99)*1e6,2)
-report['led_conditions']='0..5V on each input, OFF differential <=0.2V, ON >=1.4V; resistor effective 1.5% including temperature allowance, host rail +/-3%, combined comparator input error +/-14mV. Motherboard envelope must be measured.'
+# Control-only topology and boot-critical GPIO mapping.
+assert x['revision']=='B.2'
+assert not any(c['key'] in ['iso','ldo','cmp','opto'] for c in x['components'])
+assert not any(n and ('PLED' in n or 'HDD' in n or 'TIMER_FIRE' in n) for c in x['components'] for n in c['nets'].values())
+assert x['gpio']['4']=='TIMER_ARM' and x['gpio']['6']=='OUT_OE_N' and x['gpio']['7']=='OUT_LATCH'
+assert not any(str(g) in x['gpio'] for g in [1,2,43,44])
+for h in range(1,11):
+ cs=[c for c in x['components'] if c['sheet']==f'host{h:02}']
+ assert sum(c['key']=='ssr' for c in cs)==2
+ assert sum(c['key']=='ledred' for c in cs)==2
+ for k,button in enumerate(['PWR','RST']):
+  idx=(h-1)*2+k+1; by={c['ref']:c for c in cs};pre=f'CTRL_H{h:02}_{button}'
+  assert by[f'D{100+idx}']['nets']=={'1':pre+'_K','2':pre+'_IND_A'}
+  assert by[f'R{300+idx}']['nets']=={'1':'PHOTO_5V','2':pre+'_IND_A'}
+ j=next(c for c in cs if c['key']=='port')
+ assert all(j['nets'][str(i)] is None for i in [5,6,7,8,10])
+ assert j['nets']['9']==f'H{h:02}_GND'
+t=next(c for c in x['components'] if c['key']=='timer')
+assert t['nets']=={'1':'TIMER_RTC','2':'TIMER_CTC','3':'TIMER_RS','4':None,'5':'5V','6':'TIMER_MR','7':'GND_CTRL','8':'TIMER_OUT','9':'5V','10':'GND_CTRL','11':None,'12':'5V','13':'5V','14':'5V'}
+byref={c['ref']:c for c in x['components']}
+assert byref['Q2']['nets']=={'1':'ARM_RESET_B','2':'GND_CTRL','3':'TIMER_MR'}
+assert byref['Q3']['nets']=={'1':'GATE_BASE','2':'ARM_SINK','3':'PHOTO_GATE'}
+assert byref['Q200']['nets']=={'1':'ARM_GATE_B','2':'GND_CTRL','3':'ARM_SINK'}
+assert byref['D201']['nets']=={'1':'GND_CTRL','2':'PWR_IND_A'}
+assert byref['D202']['nets']=={'1':'OUT_OE_N','2':'EN_IND_A'}
+report['local_indicators']='20 driver LEDs + 3V3 + active-low output-enable; existing RJ45 LINK/ACT; not physical contact feedback'
+report['control_only_topology']='PASS: 20 dry contacts, no LED sensing/supplies, ten separate host ESD references'
+report['boot_gpio']={'ARM':4,'OE_N':6,'LATCH':7,'removed_uart_timer_assignments':[43,44]}
 report['photorelay_if_min_mA']=round((4.5-1.7-.3)/(440*1.01)*1000,3)
 assert report['photorelay_if_min_mA']>=5
 report['photorelay_if_max_mA']=round((5.25-1.0)/(440*.99)*1000,3)
-report['timer_nominal_s']=round(math.log(3)*510000*30e-6,2)
-report['timer_note']='Timing capacitance under DC bias and temperature is unmeasured; 8..25s is a qualification target, not a guaranteed bound. Static stall releases; repeated edges can trigger further windows.'
+report['timer_nominal_s']=round(32768*2.3*200000*1e-9,5)
+report['timer_note']='MC14541B single-transition, AR=1, MR high default, QSEL=1, A=B=1. 200k/1nF C0G, Rs=400k. ARM gates the output independently. Clock tolerance/model and physical qualification are reported separately.'
 (R/'hardware/validation').mkdir(exist_ok=True)
+# Preserve the behavioral SPICE summary written by hardware/simulation/run.py; this script does not run SPICE.
+_prev=R/'hardware/validation/checks.json'
+if _prev.exists():
+ _old=json.loads(_prev.read_text())
+ if 'spice_simulation' in _old and _old['spice_simulation'].get('revision')==x['revision']:report['spice_simulation']=_old['spice_simulation']
 (R/'hardware/validation/checks.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
 print(json.dumps(report,ensure_ascii=False,indent=2))

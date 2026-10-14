@@ -1,0 +1,214 @@
+* Rack ATX controller B.1 -- behavioral SPICE models for ngspice 47
+*
+* These are datasheet-derived behavioral models written for this project.
+* They are NOT vendor-supplied SPICE models and are NOT validated against
+* hardware. Each block lists the datasheet limits it was fitted to and the
+* assumptions made. See README.md in this directory.
+
+* ---------------------------------------------------------------------------
+* MMBT3904 (C20526, hFE range 100..300). Base model is the common Fairchild
+* 2N3904 parameter set; BF overridden to cover the LCSC hFE rank.
+* ---------------------------------------------------------------------------
+.model MMBT3904_TYP NPN(IS=6.734f XTI=3 EG=1.11 VAF=74.03 BF=200 NE=1.259 ISE=6.734f
++ IKF=66.78m XTB=1.5 BR=.7371 NC=2 ISC=0 IKR=0 RC=1 CJC=3.638p MJC=.3085 VJC=.75 FC=.5
++ CJE=4.493p MJE=.2593 VJE=.75 TR=239.5n TF=301.2p ITF=.4 VTF=4 XTF=2 RB=10)
+.model MMBT3904_LO NPN(IS=6.734f XTI=3 EG=1.11 VAF=74.03 BF=100 NE=1.259 ISE=6.734f
++ IKF=66.78m XTB=1.5 BR=.7371 NC=2 ISC=0 IKR=0 RC=1 CJC=3.638p MJC=.3085 VJC=.75 FC=.5
++ CJE=4.493p MJE=.2593 VJE=.75 TR=239.5n TF=301.2p ITF=.4 VTF=4 XTF=2 RB=10)
+.model MMBT3904_HI NPN(IS=6.734f XTI=3 EG=1.11 VAF=74.03 BF=300 NE=1.259 ISE=6.734f
++ IKF=66.78m XTB=1.5 BR=.7371 NC=2 ISC=0 IKR=0 RC=1 CJC=3.638p MJC=.3085 VJC=.75 FC=.5
++ CJE=4.493p MJE=.2593 VJE=.75 TR=239.5n TF=301.2p ITF=.4 VTF=4 XTF=2 RB=10)
+
+* 1N4148WS (C2128) -- generic 1N4148 parameter set, 75 V breakdown.
+.model D1N4148WS D(IS=4.352n N=1.906 RS=0.6458 BV=75 IBV=0.1u CJO=4p M=0.3333 VJ=0.7 TT=11.5n)
+
+* ---------------------------------------------------------------------------
+* AO3401A (C15127) P-MOSFET as a switch. Level-1 fit: Vgs(th) about -0.9 V,
+* Rds(on) about 35 mOhm at Vgs=-4.5 V, body diode. Not a dynamic model.
+* Pins: G S D
+* ---------------------------------------------------------------------------
+.model AO3401A_M PMOS(LEVEL=1 VTO=-0.9 KP=25 LAMBDA=0.01 RD=0.025 RS=0.01)
+.model AO3401A_BODY D(IS=1e-12 N=1.1 RS=0.05)
+.subckt AO3401A G S D
+M1 D G S S AO3401A_M
+Dbody D S AO3401A_BODY
+Cgs G S 600p
+.ends
+
+* ---------------------------------------------------------------------------
+* LM393 (C67470) one comparator channel, behavioral.
+* Fitted limits (TI LM393 datasheet): VOS 2 mV typ / 5 mV max 25C, 9 mV full
+* temp; IIB 25 nA typ / 250 nA max (400 nA full temp), flows OUT of the pin
+* (PNP input); VOL 400 mV max at 4 mA (700 mV full temp) -> RON 100 / 175 ohm;
+* ICC about 0.4 mA per package. Output stage disabled when VCC < VCCMIN.
+* Common-mode range (0 .. VCC-1.5 V) is NOT enforced; check node voltages.
+* Pins: INM INP OUT VCC GND
+* ---------------------------------------------------------------------------
+.subckt LM393_CH INM INP OUT VCC GND params: VOS=0 IB=25n IOS=0 RON=100 VCCMIN=1.5
+Bpwr pwr GND V = 1/(1+exp(max(min(-(V(VCC,GND)-{VCCMIN})/0.1,50),-50)))
+* bias current out of each input pin (into the external network), only when powered
+Bibm GND INM I = ({IB}+{IOS}/2)*V(pwr)
+Bibp GND INP I = ({IB}-{IOS}/2)*V(pwr)
+* on = 1 when IN+ < IN- (output pulled low); VOS added at IN+
+Bon on GND V = V(pwr)/(1+exp(max(min((V(INP,GND)-V(INM,GND)+{VOS})/0.5m,50),-50)))
+Bout OUT GND I = V(on)*V(OUT,GND)/{RON}
+Cout OUT GND 5p
+Bicc VCC GND I = 0.4m*V(pwr)
+.ends
+
+* ---------------------------------------------------------------------------
+* TLC555 (C6986) monostable-capable behavioral model, purely analog.
+* Fitted limits at VDD=5 V (TI SLFS043K): VIT 2.8..3.8 V (2.7..3.9 full
+* temp), VI(TRIG) 1.36..1.96 (1.26..2.06), VI(RESET) 0.4..1.5 (0.3..1.8),
+* VOH >= 4.1 V at -1 mA, VOL <= 0.4 V at 8 mA, discharge 0.5 V at 10 mA.
+* KTH / KTR scale the 2/3 and 1/3 points derived from the CONT pin.
+* Comparators are smooth (2 mV). The SR latch is an analog bistable node Q
+* (0..1) with explicit positive feedback; trigger dominates threshold, reset
+* dominates both. A digital XSPICE latch was dropped because slow threshold
+* crossings drove it into the unknown state.
+* Pins: GND TRIG OUT RST CTRL THR DIS VDD
+* ---------------------------------------------------------------------------
+.subckt TLC555 GND TRIG OUT RST CTRL THR DIS VDD params: KTH=1 KTR=1 VRST=1.1 VOHDROP=0.2 RDIS=6
+Rc1 VDD CTRL 50k
+Rc2 CTRL GND 100k
+Bs s_an GND V = min(0.5+0.5*tanh((V(CTRL,GND)*0.5*{KTR}-V(TRIG,GND))/2m), 0.5+0.5*tanh((V(RST,GND)-{VRST})/2m))
+Br r_an GND V = max(0.5+0.5*tanh(({VRST}-V(RST,GND))/2m), min(0.5+0.5*tanh((V(THR,GND)-V(CTRL,GND)*{KTH})/2m), 0.5+0.5*tanh((V(TRIG,GND)-V(CTRL,GND)*0.5*{KTR})/2m)))
+* bistable: target = step(Q + S - R - 0.5); fixed points 0 and 1 only, no tracking of a partial R
+Bq Q GND I = -((0.5+0.5*tanh((V(Q,GND)+V(s_an)-V(r_an)-0.5)/0.02)) - V(Q,GND))/1k
+Cq Q GND 10n
+Rq Q GND 1G
+Bout out_i GND V = max(min(V(Q,GND),1),0)*(V(VDD,GND)-{VOHDROP})
+Rout out_i OUT 25
+* discharge switch: hard function of Q (a residual 1e-6 fraction of 1/RDIS would load the timing node)
+Bdis DIS GND I = (0.5-0.5*tanh((V(Q,GND)-0.5)/0.01))*V(DIS,GND)/{RDIS}
+Bidd VDD GND I = 0.2m
+.ends
+
+* ---------------------------------------------------------------------------
+* TLP3122A (C4153843) photorelay. LED: VF 1.1..1.4 V at 10 mA (1.27 typ),
+* IF abs max 50 mA. Trigger IFT 1 mA typ / 3 mA max; RON 0.13 typ / 0.25 max.
+* Output: switch closes when IF > IFT AND a first-order lagged IF (TON_TAU)
+* also exceeds IFT, giving about 2 ms turn-on at 8 mA (datasheet tON 2 ms typ,
+* 3 ms max); opens immediately (tOFF 0.1 ms typ, 1 ms max not modeled).
+* VFADJ shifts the LED curve for corners. TON_TAU=1n gives an ideal switch.
+* Pins: A K O1 O2
+* ---------------------------------------------------------------------------
+.model DTLP3122A D(IS=5.9e-14 N=1.9 RS=3)
+.subckt TLP3122A A K O1 O2 params: IFT=3m RON=0.25 VFADJ=0 TON_TAU=4.4m
+Dled A x DTLP3122A
+Vfadj x y DC {VFADJ}
+Vsens y K DC 0
+Bifl ifn 0 V = I(Vsens)
+Rl ifn ifl 1k
+Cl ifl 0 {TON_TAU/1k}
+Bsw O1 O2 I = V(O1,O2)*(((I(Vsens) > {IFT}) && (V(ifl) > {IFT})) ? 1/{RON} : 1e-9)
+.ends
+
+* ---------------------------------------------------------------------------
+* EL357N(B) (C42381015) optocoupler. LED VF 1.2 typ / 1.4 max at 20 mA.
+* CTR rank B 130..260 % at IF=5 mA, VCE=5 V. VCE(sat) 0.1 typ / 0.2 max.
+* tr/tf 18 us max -> first-order 8 us lag on the LED current.
+* Collector current = CTR*IF with a soft saturation knee plus 20 ohm.
+* Pins: A K C E
+* ---------------------------------------------------------------------------
+.model DEL357N D(IS=2.8e-14 N=1.7 RS=3)
+.subckt EL357N A K C E params: CTR=1.3 TAU=8u
+Dled A x DEL357N
+Vs x K DC 0
+Bif ifn E V = I(Vs)
+Rf ifn ifl 1k
+Cf ifl E {TAU/1k}
+Rc C ci 20
+Bc ci E I = (V(ci,E) > 0) ? {CTR}*max(V(ifl,E),0)*(1-exp(-V(ci,E)/0.05)) + 1e-9*V(ci,E) : 1e-9*V(ci,E)
+Cce C E 10p
+.ends
+
+* ---------------------------------------------------------------------------
+* PESD5V0S2BT (C2841440) bidirectional ESD pair, leakage only. Clamp above
+* about 6.5 V is approximated; datasheet leakage not extracted -> assumption
+* 1 uA at 5 V (RLEAK=5 Meg) as a worst case, typ far lower.
+* Pins: IO1 IO2 COM
+* ---------------------------------------------------------------------------
+.model DESDCL D(IS=1e-15 N=1 BV=6.5 IBV=1m RS=1)
+.subckt PESD5V0S2BT IO1 IO2 COM params: RLEAK=5meg
+R1 IO1 COM {RLEAK}
+R2 IO2 COM {RLEAK}
+D1a IO1 c1 DESDCL
+D1b COM c1 DESDCL
+D2a IO2 c2 DESDCL
+D2b COM c2 DESDCL
+.ends
+
+* ---------------------------------------------------------------------------
+* Motherboard front-panel LED driver, assumption model (no board measured).
+* MODE=0: LED+ tied to VRAIL through RS, LED- switched to GND by an open-drain
+*         driver (ON when CTL > 0.5 V). OFF state leaves LED- high-impedance.
+* MODE=1: LED+ switched to VRAIL through RS (high-side), LED- tied to GND.
+* MODE=2: LED+ tied to VRAIL through RS, LED- driven push-pull: 0 V when ON,
+*         VOFFLVL (3.3 V logic high) when OFF.
+* RLEAK: off-state leakage of the open-drain driver.
+* Pins: P M GND CTL
+* ---------------------------------------------------------------------------
+.model SWDRV SW(VT=0.5 VH=0.1 RON=5 ROFF=1e9)
+.model DBODYN D(IS=1e-12 N=1.1)
+.subckt MOBO_LED P M GND CTL params: VRAIL=5 RS=330 MODE=0 RLEAK=10meg VOFFLVL=3.3
+Vr rail GND {VRAIL}
+* low-side path (also the LED+ feed for MODE=2)
+Rs1 rail p1 {RS}
+Rlsp p1 P {(MODE==0 || MODE==2) ? 0.01 : 1e12}
+Sls M m1 CTL GND SWDRV
+Rlsm m1 GND {MODE==0 ? 0.01 : 1e12}
+Rleak M m2 {RLEAK}
+Rleaken m2 GND {MODE==0 ? 0.01 : 1e12}
+Dbody GND m3 DBODYN
+Rbodyen m3 M {MODE==0 ? 0.01 : 1e12}
+* high-side path
+Shs rail h1 CTL GND SWDRV
+Rs2 h1 h2 {RS}
+Rhsp h2 P {MODE==1 ? 0.01 : 1e12}
+Rhsm M GND {MODE==1 ? 0.01 : 1e12}
+* push-pull low-side path
+Bpp pp GND V = (V(CTL,GND) > 0.5) ? 0 : {VOFFLVL}
+Rpp pp p2 50
+Rppen p2 M {MODE==2 ? 0.01 : 1e12}
+.ends
+
+* ---------------------------------------------------------------------------
+* Case LED (generic). GREEN: VF about 2.0 V at 10 mA; BLUE: about 2.9 V.
+* PRESENT_G / PRESENT_B select the fitted branch; both 0 = no case LED.
+* Pins: A K
+* ---------------------------------------------------------------------------
+.model DLEDG D(IS=1.6e-19 N=2.0 RS=2)
+.model DLEDB D(IS=3.2e-22 N=2.5 RS=2)
+.subckt CASE_LED A K params: PRESENT_G=1 PRESENT_B=0
+Dg A g DLEDG
+Rg g K {PRESENT_G ? 0.01 : 1e12}
+Db A b DLEDB
+Rb b K {PRESENT_B ? 0.01 : 1e12}
+.ends
+
+* ---------------------------------------------------------------------------
+* HT7533-1 (C14289) LDO, behavioral: VOUT 3.3 V +/-3 %, dropout <= 100 mV at
+* 1 mA, load regulation 25 mV typ over 1..50 mA (0.5 ohm), IQ 2.5 uA.
+* Pins: VIN VOUT GND
+* ---------------------------------------------------------------------------
+.subckt HT7533 VIN VOUT GND params: VNOM=3.3 VDO=0.1
+Bldo o_i GND V = min(V(VIN,GND)-{VDO}, {VNOM})
+Ro o_i VOUT 0.5
+Biq VIN GND I = 2.5u
+.ends
+
+* ---------------------------------------------------------------------------
+* B0505S-1WR3L (C20622559) unregulated 1 W isolated DC-DC, behavioral.
+* Load regulation 5 % typ / 15 % max from 10 % to 100 % load; no-load rise
+* beyond that is an assumption (open-circuit about 5.9 V worst). Modeled as a
+* Thevenin source VOC with ROUT, isolated secondary referenced to GNDO.
+* Input current = output power / efficiency / VIN + 3 mA idle.
+* Pins: VIN GNDI VOUT GNDO
+* ---------------------------------------------------------------------------
+.subckt B0505S VIN GNDI VOUT GNDO params: VOC=5.9 ROUT=4.2 EFF=0.82
+Boc o_i GNDO V = {VOC}*V(VIN,GNDI)/5
+Ro o_i o_s {ROUT}
+Vso o_s VOUT DC 0
+Bin VIN GNDI I = 3m + max(V(VOUT,GNDO)*I(Vso),0)/{EFF}/max(V(VIN,GNDI),0.5)
+.ends

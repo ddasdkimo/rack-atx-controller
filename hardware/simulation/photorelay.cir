@@ -1,0 +1,36 @@
+B.1 photorelay drive -- one TLP3122A channel from the timed PHOTO_5V rail (operating point)
+* Host 01 PWR channel: R38/R39/Q5, R40/R41, U10. Q4 is held on (timer output high).
+* The 74HC595 output is a voltage source VDRV*LEVEL through RDRV; OE=0 makes it
+* high-impedance (output disabled), leaving only the 100 k pull-down on the base.
+* NCH-1 other channels are drawn from PHOTO_5V as a current sink to show Q4 drop.
+* Host side: a 10 k pull-up to 3.3 V on PWR_A, PWR_B = host ground (assumption for a
+* typical motherboard button input). The host domain is isolated; a 1 G tie gives it
+* a DC path for the simulator only.
+.include models.lib
+.param V5=5 VDRV=3.3 RDRV=80 LEVEL=1 OE=1 NCH=1
+.param K220=1 K1500=1 K100K=1 VFADJ=0 IFT=3m RON=0.25
+
+V5 5V 0 {V5}
+Vgate PHOTO_GATE 0 0.1
+XQ4 PHOTO_GATE 5V PHOTO_5V AO3401A
+R36 PHOTO_5V 0 10k
+Iother PHOTO_5V 0 {(NCH-1)*8.5m}
+
+Vdrv DRV_SRC 0 {VDRV*LEVEL}
+Rdrv DRV_SRC DRV {OE ? RDRV : 1e12}
+R38 DRV CTRL_B {1.5k*K1500}
+R39 CTRL_B 0 {100k*K100K}
+Q5 CTRL_K CTRL_B 0 MMBT3904_TYP
+R40 PHOTO_5V CTRL_R {220*K220}
+R41 CTRL_R CTRL_A {220*K220}
+XU10 CTRL_A CTRL_K H_PWR_A H_PWR_B TLP3122A params: IFT={IFT} VFADJ={VFADJ} RON={RON}
+
+Vhost HV33 H_PWR_B 3.3
+Rbtn HV33 H_PWR_A 10k
+Rtie H_PWR_B 0 1G
+
+.control
+op
+print i(v.xu10.vsens) v(photo_5v) v(drv) v(ctrl_b) v(ctrl_k) v(ctrl_a) v(h_pwr_a,h_pwr_b) i(v5)
+.endc
+.end

@@ -1,51 +1,5 @@
-> **目前已進入 R.0 局部佈線，尚未全板連通。** S.2 為保留的布局基準；以下舊版「待確認／未佈線」敘述屬歷史狀態。
+# Current compact board: S.3
 
-# S.1：兩層與縮板評估（B.1 電路不變）
+B.2 removes host LED sensing. Selected placement is100×110mm, two copper layers,300electrical components+fourM3holes. It reduces area67.65% versusS.2(200×170mm). R.2 routing was explicitly authorized and is now connected with zero configured DRC violations. See [S.3 rationale and checks](LAYOUT-S3.md).
 
-> 目前布局為 S.2（200×170 mm），待使用者確認，尚未佈線。以下 S.1 尺寸／費用／52 個佔位敘述為歷史紀錄；S.2 已補焊盤，詳見 [布局審閱](LAYOUT-S2.md)。舊尺寸報價不適用於 S.2。
-
-優先嘗試 **160 × 110 mm、2 層、單面元件**；160 × 110 mm 四層作為備案。原 200 × 160 mm 面積 32,000 mm²，候選 17,600 mm²，減少 45%。目前只有佔位可容納的證據，還沒有兩層可成功佈線的證據。
-
-## 為什麼可以研究兩層
-
-[Espressif ESP32-S3 PCB 指南](https://docs.espressif.com/projects/esp-hardware-design-guidelines/en/latest/esp32s3/pcb-layout-design.html)推薦四層，也明確允許兩層，要求底層少走線並保留良好的接地。S3FN8 已內建 flash、本案禁用 RF，不必再放外部 flash 走線；這有利於縮板，仍不免除 QFN 電源、晶振與回流路徑的要求。
-
-[WIZnet 硬體指南](https://docs.wiznet.io/Design-Guide/hardware_design_guide)要求 MDI 差動阻抗 100 Ω、短而匹配的線對、避免換層，PHY 至磁性元件以小於 25 mm 為目標，變壓器／RJ45 區下方不得任意鋪電源地。兩層可行是本案工程判斷，**不是 WIZnet 對這份配置的核准**。1.6 mm 兩層的介質高度較大，差動線寬／間距須依實際層疊計算，不能直接套用常見四層細線。
-
-## 已完成的空間檢查
-
-- [KiCad PCB 草稿](cad/compact-S1-placement.kicad_pcb)與 [配置資料](placement-study.json)包含中央板全部 694 個零件，沒有把分接板混入。
-- 十個 JST PHD 接頭沿 160 mm 板邊排成一列，每路 15 mm 節距；[JST 圖面](https://www.jst-mfg.com/product/pdf/eng/ePHD.pdf)十芯本體寬 11.9 mm。100 mm 邊不能直接容納同一列十個本體，改排兩邊是另一種設計，不能只縮外框。
-- 每路 59 個佔位；下方集中 MCU／Ethernet／輸出鎖存／5 V 電源。使用候選 KiCad footprint 的幾何外框及五類保守預留框，檢查全部矩形不重疊、未超出板框。
-- 52 個佔位尚無核定 land pattern：20 TLP3122A、20 EL357N、10 B0505S-1WR3L、1 電感及 1 電源端子。KiCad 以打叉、**沒有銅焊盤**的外框表示；其餘 642 個 footprint 也仍需原廠尺寸／腳號核對。
-- 配置演算法是面積研究，尚未依電氣回路優化。160×100 mm 在目前分區與演算法下放不下，160×110 mm 通過；這不是對更小板尺寸的數學不可能證明。
-- 公開 3D 從相同 JSON 產生佔位，為了讓線纜朝向兩台 PC，視覺上旋轉 90°。盒體是佔位，不是廠商 STEP 模型。兩台 PC 的 J01／J02 線纜起點一起更新，原機殼直通接線與信號配置不變。
-
-## 尚待完成的定版條件
-
-本檔沒有走線、地平面、固定孔或製造放行。現有候選 pad 的 net 名僅供檢視；52 個空框沒有 pad，不能將目前 ratsnest 視為完整待佈線網表。佔位無重疊不代表 DRC、電氣隔離或 EMC 合格。
-
-正式佈線先完成單路主機：把控制器端／主機端元件重新分在隔離邊界兩側，對雙面銅箔、過孔及器件下方建立隔離 keepout，再複製十路。十台 HOST_REF 與 GND_CTRL 保持獨立；模組 1500 VDC 的元件試驗值不是整板隔離額定值。現在的分路框與空白走廊不是核定爬電距離。
-
-中央區保留連續回流，將旁路電容移至對應電源腳附近，優化晶振／buck 回路、QFN fanout／熱焊盤及過孔工藝；做 USB 與 MDI 阻抗／差分檢查。之後補機殼出口、插拔手指空間、固定孔、組裝邊、DFM／DRC及原型測試。如果兩層必須犧牲回流或隔離才能走完，採同尺寸四層備案，不強行縮小。
-
-## 真正省多少
-
-2026-10-14 JLC 網頁一般交期、5 片的觀察與估算（USD）：
-
-| 方案 | 裸板 5 片 | 零件 5 份 | 全部焊好 5 片估算 |
-|---|---:|---:|---:|
-| 原 200×160 四層 | 50.60 | 224.27 | 372.90–392.35 |
-| 原尺寸改兩層 | 21.20 | 224.27 | 343.50–362.95 |
-| 候選 160×110 兩層 | 14.00 | 224.27 | 336.30–355.75 |
-| 備案 160×110 四層 | 41.30 | 224.27 | 363.60–383.05 |
-
-候選比原方案省 $36.60／5 片（每片 $7.32）；裸板少約 72%，全焊好製作合計約少 9–10%。同尺寸四層比兩層貴 $27.30／5 片，每片 $5.46，可視作回流與佈線餘裕的成本。5 片零件不变；縮板不會減少普通 Extended 上料種類或焊點費。所有數字均未含運稅、耗損／MOQ、工藝追加、分接板、線束、電源與外殼，不是到手或正式 PCBA 報價。
-
-使用者不急：一般交期、Economic 單面貼裝、Basic 優先、可等較便宜物流。無鉛 HASL／一般孔徑／綠油作估價基準，不假設優惠券或等待折扣；QFN 工藝審核若要求改表面處理或孔工藝，需要重算。
-
-## BOM 成本焦點
-
-$224.27 是五片，單片約 $44.85。按五片採購階梯價計，單片 TLP3122A 20 顆約 $14.91、隔離電源 10 顆約 $6.04，合計约 47%。這是後續降成本的主要檢討方向；不能在沒有重新分析按鍵電流／接點方向、感測供電與隔離方式前直接換低價零件。其他大項是十個 JST 接頭 $3.68、ESP32 $3.34、W5500 $2.82。本輪沒有改電路或暗中替換料號。
-
-[完整 BOM 檢視](https://rack-atx-controller-ddasdkimo.raidavid.chatgpt.site/bom.html) · [成本模型](bom/cost-model.json) · [所有估價紀錄](research/pcb-comparison-2026-10-14.json) · [收費說明](JLCPCB.md)
+Two-layer connectivity is complete. High-speed pair/return/impedance qualification, thermal management and factory DFM remain; see [R.2 report](ROUTING-R2.md). This is neither a production board nor a100×100mm discount-tier claim. The prior S.1/S.2 and partial R.0/R.1 files remain historical evidence; their pricing or routing results do not apply to B.2. [Historical compact study](archive/B1/docs/hardware/COMPACT-STUDY.md).

@@ -1,0 +1,22 @@
+{
+  "revision": "R.2",
+  "date": "2026-10-14",
+  "views_checked": [
+    "overview",
+    "controller",
+    "PC-01",
+    "PC-02",
+    "wiring",
+    "BOM",
+    "native copper layout"
+  ],
+  "viewport_checks": [
+    "desktop",
+    "390 x 844 mobile"
+  ],
+  "indicator_check": "RESET J02 illuminates only J02 RST in demo",
+  "layer_toggle_check": "B.Cu visibility changes and restores",
+  "javascript_errors": 0,
+  "native_editor": "Routed B.2 master reopened; native status bar 2754 segments, 185 vias, 0 unconnected",
+  "limitations": "Visual checks and demo interactions only; no physical device control or hardware test."
+}

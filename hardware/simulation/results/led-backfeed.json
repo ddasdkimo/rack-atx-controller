@@ -1,0 +1,500 @@
+{
+ "deck": "led-backfeed.cir",
+ "cases": {
+  "host_on_led_on_ctrl_on": {
+   "params": {
+    "RLEAK_ESD": "50meg",
+    "VRAIL": 5,
+    "CTL": 1,
+    "HRAIL": 3.3,
+    "C3V3": 3.3
+   },
+   "i(vip)": 1.874e-05,
+   "i(vim)": -3.569e-07,
+   "v(p)": 2.057,
+   "v(m)": 0.04459,
+   "v(splus)": 0.1872,
+   "v(sminus)": 0.08036,
+   "v(cmp)": 0.3124,
+   "v(pledn)": 0.01127,
+   "i(v.xmobo.vr)": -0.008918,
+   "i(v.xu12.vs)": 0.002826,
+   "into_controller_uA": {
+    "led_plus": 18.74,
+    "led_minus": -0.3569
+   },
+   "led_state_seen_by_mcu": "on"
+  },
+  "host_on_led_off_ctrl_on": {
+   "params": {
+    "RLEAK_ESD": "50meg",
+    "VRAIL": 5,
+    "CTL": 0,
+    "HRAIL": 3.3,
+    "C3V3": 3.3
+   },
+   "i(vip)": 4.533e-05,
+   "i(vim)": 2.916e-05,
+   "v(p)": 4.975,
+   "v(m)": 3.276,
+   "v(splus)": 0.4525,
+   "v(sminus)": 0.3662,
+   "v(cmp)": 0.3124,
+   "v(pledn)": 0.01127,
+   "i(v.xmobo.vr)": -7.482e-05,
+   "i(v.xu12.vs)": 0.002826,
+   "into_controller_uA": {
+    "led_plus": 45.33,
+    "led_minus": 29.16
+   },
+   "led_state_seen_by_mcu": "on"
+  },
+  "host_off_ctrl_on_case_led": {
+   "params": {
+    "RLEAK_ESD": "50meg",
+    "VRAIL": 0,
+    "CTL": 0,
+    "HRAIL": 3.399,
+    "C3V3": 3.3
+   },
+   "i(vip)": -2.266e-09,
+   "i(vim)": -1.006e-08,
+   "v(p)": 7.479e-07,
+   "v(m)": 0.09958,
+   "v(splus)": 0.0002273,
+   "v(sminus)": 0.1008,
+   "v(cmp)": 3.383,
+   "v(pledn)": 3.3,
+   "i(v.xmobo.vr)": 2.266e-09,
+   "i(v.xu12.vs)": 2.846e-14,
+   "into_controller_uA": {
+    "led_plus": -0.002266,
+    "led_minus": -0.01006
+   },
+   "led_state_seen_by_mcu": "off"
+  },
+  "host_off_ctrl_on_no_case_led": {
+   "params": {
+    "RLEAK_ESD": "50meg",
+    "VRAIL": 0,
+    "CTL": 0,
+    "HRAIL": 3.399,
+    "C3V3": 3.3,
+    "LEDG": 0
+   },
+   "i(vip)": -2.266e-09,
+   "i(vim)": -1.006e-08,
+   "v(p)": 7.478e-07,
+   "v(m)": 0.09958,
+   "v(splus)": 0.0002273,
+   "v(sminus)": 0.1008,
+   "v(cmp)": 3.383,
+   "v(pledn)": 3.3,
+   "i(v.xmobo.vr)": 2.266e-09,
+   "i(v.xu12.vs)": 2.846e-14,
+   "into_controller_uA": {
+    "led_plus": -0.002266,
+    "led_minus": -0.01006
+   },
+   "led_state_seen_by_mcu": "off"
+  },
+  "host_on_led_on_ctrl_off": {
+   "params": {
+    "RLEAK_ESD": "50meg",
+    "VRAIL": 5,
+    "CTL": 1,
+    "HRAIL": 0,
+    "C3V3": 0
+   },
+   "i(vip)": 1.874e-05,
+   "i(vim)": 4.073e-07,
+   "v(p)": 2.057,
+   "v(m)": 0.04458,
+   "v(splus)": 0.187,
+   "v(sminus)": 0.003944,
+   "v(cmp)": 1.924e-05,
+   "v(pledn)": 0.0,
+   "i(v.xmobo.vr)": -0.008918,
+   "i(v.xu12.vs)": -3.148e-17,
+   "into_controller_uA": {
+    "led_plus": 18.74,
+    "led_minus": 0.4073
+   },
+   "led_state_seen_by_mcu": "on"
+  },
+  "host_on_led_off_ctrl_off": {
+   "params": {
+    "RLEAK_ESD": "50meg",
+    "VRAIL": 5,
+    "CTL": 0,
+    "HRAIL": 0,
+    "C3V3": 0
+   },
+   "i(vip)": 4.533e-05,
+   "i(vim)": 2.991e-05,
+   "v(p)": 4.975,
+   "v(m)": 3.274,
+   "v(splus)": 0.4523,
+   "v(sminus)": 0.2896,
+   "v(cmp)": 0.001413,
+   "v(pledn)": 0.0,
+   "i(v.xmobo.vr)": -7.557e-05,
+   "i(v.xu12.vs)": -2.298e-15,
+   "into_controller_uA": {
+    "led_plus": 45.33,
+    "led_minus": 29.91
+   },
+   "led_state_seen_by_mcu": "on"
+  },
+  "host_on_led_off_ctrl_off_esd_1uA": {
+   "params": {
+    "RLEAK_ESD": "5meg",
+    "VRAIL": 5,
+    "CTL": 0,
+    "HRAIL": 0,
+    "C3V3": 0
+   },
+   "i(vip)": 4.622e-05,
+   "i(vim)": 3.049e-05,
+   "v(p)": 4.975,
+   "v(m)": 3.273,
+   "v(splus)": 0.4522,
+   "v(sminus)": 0.2895,
+   "v(cmp)": 0.001412,
+   "v(pledn)": 0.0,
+   "i(v.xmobo.vr)": -7.704e-05,
+   "i(v.xu12.vs)": -2.297e-15,
+   "into_controller_uA": {
+    "led_plus": 46.22,
+    "led_minus": 30.49
+   },
+   "led_state_seen_by_mcu": "on"
+  },
+  "host_on_3V3_led_on_ctrl_off": {
+   "params": {
+    "RLEAK_ESD": "50meg",
+    "VRAIL": 3.3,
+    "CTL": 1,
+    "HRAIL": 0,
+    "C3V3": 0
+   },
+   "i(vip)": 1.805e-05,
+   "i(vim)": 1.821e-07,
+   "v(p)": 1.981,
+   "v(m)": 0.01993,
+   "v(splus)": 0.1801,
+   "v(sminus)": 0.001763,
+   "v(cmp)": 8.601e-06,
+   "v(pledn)": 0.0,
+   "i(v.xmobo.vr)": -0.003997,
+   "i(v.xu12.vs)": -1.408e-17,
+   "into_controller_uA": {
+    "led_plus": 18.05,
+    "led_minus": 0.1821
+   },
+   "led_state_seen_by_mcu": "on"
+  },
+  "host_on_led_off_ctrl_on_highside": {
+   "params": {
+    "RLEAK_ESD": "50meg",
+    "VRAIL": 5,
+    "CTL": 0,
+    "HRAIL": 3.3,
+    "C3V3": 3.3,
+    "MODE": 1
+   },
+   "i(vip)": 5.004e-09,
+   "i(vim)": -8.931e-07,
+   "v(p)": 0.0007987,
+   "v(m)": 8.931e-09,
+   "v(splus)": 0.0002999,
+   "v(sminus)": 0.08931,
+   "v(cmp)": 3.284,
+   "v(pledn)": 3.3,
+   "i(v.xmobo.vr)": -5.004e-09,
+   "i(v.xu12.vs)": 2.764e-14,
+   "into_controller_uA": {
+    "led_plus": 0.005004,
+    "led_minus": -0.8931
+   },
+   "led_state_seen_by_mcu": "off"
+  },
+  "host_off_ctrl_on_highside": {
+   "params": {
+    "RLEAK_ESD": "50meg",
+    "VRAIL": 0,
+    "CTL": 0,
+    "HRAIL": 3.399,
+    "C3V3": 3.3,
+    "MODE": 1
+   },
+   "i(vip)": -2.5e-13,
+   "i(vim)": -9.198e-07,
+   "v(p)": 0.0002494,
+   "v(m)": 9.198e-09,
+   "v(splus)": 0.0002499,
+   "v(sminus)": 0.09198,
+   "v(cmp)": 3.383,
+   "v(pledn)": 3.3,
+   "i(v.xmobo.vr)": 2.497e-13,
+   "i(v.xu12.vs)": 2.854e-14,
+   "into_controller_uA": {
+    "led_plus": -2.5e-07,
+    "led_minus": -0.9198
+   },
+   "led_state_seen_by_mcu": "off"
+  },
+  "whatif_rpu22k_host_on_led_off_ctrl_on": {
+   "params": {
+    "RLEAK_ESD": "50meg",
+    "VRAIL": 5,
+    "CTL": 0,
+    "HRAIL": 3.3,
+    "C3V3": 3.3,
+    "RPU": "22k"
+   },
+   "i(vip)": 8.284e-05,
+   "i(vim)": -4.188e-07,
+   "v(p)": 4.973,
+   "v(m)": 4.147,
+   "v(splus)": 0.4523,
+   "v(sminus)": 0.4432,
+   "v(cmp)": 0.3125,
+   "v(pledn)": 0.01127,
+   "i(v.xmobo.vr)": -8.284e-05,
+   "i(v.xu12.vs)": 0.002826,
+   "into_controller_uA": {
+    "led_plus": 82.84,
+    "led_minus": -0.4188
+   },
+   "led_state_seen_by_mcu": "on"
+  },
+  "whatif_rpu22k_host_on_led_on_ctrl_on": {
+   "params": {
+    "RLEAK_ESD": "50meg",
+    "VRAIL": 5,
+    "CTL": 1,
+    "HRAIL": 3.3,
+    "C3V3": 3.3,
+    "RPU": "22k"
+   },
+   "i(vip)": 0.0001102,
+   "i(vim)": -9.18e-05,
+   "v(p)": 2.056,
+   "v(m)": 0.0446,
+   "v(splus)": 0.1872,
+   "v(sminus)": 0.08037,
+   "v(cmp)": 0.3124,
+   "v(pledn)": 0.01127,
+   "i(v.xmobo.vr)": -0.00892,
+   "i(v.xu12.vs)": 0.002826,
+   "into_controller_uA": {
+    "led_plus": 110.2,
+    "led_minus": -91.8
+   },
+   "led_state_seen_by_mcu": "on"
+  },
+  "whatif_rpu22k_host_on_led_on_ctrl_off": {
+   "params": {
+    "RLEAK_ESD": "50meg",
+    "VRAIL": 5,
+    "CTL": 1,
+    "HRAIL": 0,
+    "C3V3": 0,
+    "RPU": "22k"
+   },
+   "i(vip)": 0.0001102,
+   "i(vim)": -9.104e-05,
+   "v(p)": 2.056,
+   "v(m)": 0.04459,
+   "v(splus)": 0.1869,
+   "v(sminus)": 0.003944,
+   "v(cmp)": 1.924e-05,
+   "v(pledn)": 0.0,
+   "i(v.xmobo.vr)": -0.00892,
+   "i(v.xu12.vs)": -3.149e-17,
+   "into_controller_uA": {
+    "led_plus": 110.2,
+    "led_minus": -91.04
+   },
+   "led_state_seen_by_mcu": "on"
+  },
+  "whatif_rpu22k_host_off_ctrl_on": {
+   "params": {
+    "RLEAK_ESD": "50meg",
+    "VRAIL": 0,
+    "CTL": 0,
+    "HRAIL": 3.399,
+    "C3V3": 3.3,
+    "RPU": "22k"
+   },
+   "i(vip)": -7.625e-07,
+   "i(vim)": -1.717e-09,
+   "v(p)": 0.0002516,
+   "v(m)": 0.01703,
+   "v(splus)": 0.0002501,
+   "v(sminus)": 0.09349,
+   "v(cmp)": 3.383,
+   "v(pledn)": 3.3,
+   "i(v.xmobo.vr)": 7.625e-07,
+   "i(v.xu12.vs)": 2.853e-14,
+   "into_controller_uA": {
+    "led_plus": -0.7625,
+    "led_minus": -0.001717
+   },
+   "led_state_seen_by_mcu": "off"
+  },
+  "whatif_rpu22k_no_case_led_host_on_led_off": {
+   "params": {
+    "RLEAK_ESD": "50meg",
+    "VRAIL": 5,
+    "CTL": 0,
+    "HRAIL": 3.3,
+    "C3V3": 3.3,
+    "RPU": "22k",
+    "LEDG": 0
+   },
+   "i(vip)": 8.284e-05,
+   "i(vim)": -4.188e-07,
+   "v(p)": 4.973,
+   "v(m)": 4.147,
+   "v(splus)": 0.4523,
+   "v(sminus)": 0.4432,
+   "v(cmp)": 0.3125,
+   "v(pledn)": 0.01127,
+   "i(v.xmobo.vr)": -8.284e-05,
+   "i(v.xu12.vs)": 0.002826,
+   "into_controller_uA": {
+    "led_plus": 82.84,
+    "led_minus": -0.4188
+   },
+   "led_state_seen_by_mcu": "on"
+  },
+  "whatif_rpu2k2_host_on_led_off_ctrl_on": {
+   "params": {
+    "RLEAK_ESD": "50meg",
+    "VRAIL": 5,
+    "CTL": 0,
+    "HRAIL": 3.3,
+    "C3V3": 3.3,
+    "RPU": "2.2k"
+   },
+   "i(vip)": 8.94e-05,
+   "i(vim)": -4.922e-07,
+   "v(p)": 4.97,
+   "v(m)": 4.873,
+   "v(splus)": 0.4521,
+   "v(sminus)": 0.5204,
+   "v(cmp)": 3.286,
+   "v(pledn)": 3.3,
+   "i(v.xmobo.vr)": -8.94e-05,
+   "i(v.xu12.vs)": 2.367e-14,
+   "into_controller_uA": {
+    "led_plus": 89.4,
+    "led_minus": -0.4922
+   },
+   "led_state_seen_by_mcu": "off"
+  },
+  "whatif_rpu2k2_host_on_led_on_ctrl_on": {
+   "params": {
+    "RLEAK_ESD": "50meg",
+    "VRAIL": 5,
+    "CTL": 1,
+    "HRAIL": 3.3,
+    "C3V3": 3.3,
+    "RPU": "2.2k"
+   },
+   "i(vip)": 0.0009301,
+   "i(vim)": -0.0009118,
+   "v(p)": 2.05,
+   "v(m)": 0.04469,
+   "v(splus)": 0.1866,
+   "v(sminus)": 0.08037,
+   "v(cmp)": 0.3124,
+   "v(pledn)": 0.01127,
+   "i(v.xmobo.vr)": -0.008939,
+   "i(v.xu12.vs)": 0.002826,
+   "into_controller_uA": {
+    "led_plus": 930.1,
+    "led_minus": -911.8
+   },
+   "led_state_seen_by_mcu": "on"
+  },
+  "whatif_rpu2k2_host_on_led_off_ctrl_off": {
+   "params": {
+    "RLEAK_ESD": "50meg",
+    "VRAIL": 5,
+    "CTL": 0,
+    "HRAIL": 0,
+    "C3V3": 0,
+    "RPU": "2.2k"
+   },
+   "i(vip)": 9.028e-05,
+   "i(vim)": -4.92e-07,
+   "v(p)": 4.97,
+   "v(m)": 4.871,
+   "v(splus)": 0.4518,
+   "v(sminus)": 0.4309,
+   "v(cmp)": 0.002102,
+   "v(pledn)": 0.0,
+   "i(v.xmobo.vr)": -9.028e-05,
+   "i(v.xu12.vs)": -3.409e-15,
+   "into_controller_uA": {
+    "led_plus": 90.28,
+    "led_minus": -0.492
+   },
+   "led_state_seen_by_mcu": "on"
+  },
+  "whatif_rpu2k2_host_off_ctrl_on": {
+   "params": {
+    "RLEAK_ESD": "50meg",
+    "VRAIL": 0,
+    "CTL": 0,
+    "HRAIL": 3.399,
+    "C3V3": 3.3,
+    "RPU": "2.2k"
+   },
+   "i(vip)": -8.984e-07,
+   "i(vim)": -2.264e-10,
+   "v(p)": 0.0002965,
+   "v(m)": 0.002274,
+   "v(splus)": 0.0002542,
+   "v(sminus)": 0.09218,
+   "v(cmp)": 3.383,
+   "v(pledn)": 3.3,
+   "i(v.xmobo.vr)": 8.984e-07,
+   "i(v.xu12.vs)": 2.854e-14,
+   "into_controller_uA": {
+    "led_plus": -0.8984,
+    "led_minus": -0.0002264
+   },
+   "led_state_seen_by_mcu": "off"
+  },
+  "whatif_rpu2k2_no_case_led_host_on_led_off": {
+   "params": {
+    "RLEAK_ESD": "50meg",
+    "VRAIL": 5,
+    "CTL": 0,
+    "HRAIL": 3.3,
+    "C3V3": 3.3,
+    "RPU": "2.2k",
+    "LEDG": 0
+   },
+   "i(vip)": 8.94e-05,
+   "i(vim)": -4.922e-07,
+   "v(p)": 4.97,
+   "v(m)": 4.873,
+   "v(splus)": 0.4521,
+   "v(sminus)": 0.5204,
+   "v(cmp)": 3.286,
+   "v(pledn)": 3.3,
+   "i(v.xmobo.vr)": -8.94e-05,
+   "i(v.xu12.vs)": 2.367e-14,
+   "into_controller_uA": {
+    "led_plus": 89.4,
+    "led_minus": -0.4922
+   },
+   "led_state_seen_by_mcu": "off"
+  }
+ }
+}

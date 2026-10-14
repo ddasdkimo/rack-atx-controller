@@ -1,0 +1,244 @@
+{
+  "revision": "B.2",
+  "date": "2026-10-14",
+  "method": "ngspice datasheet-fitted aggregate counter and transistor/photorelay behavioral models",
+  "vendor_model": false,
+  "hardware_correlated": false,
+  "pass": true,
+  "circuit_sha256": "ad8ae88b83cd768a886921e554e22fc8aa85f66a2e4c8c526c976daa6c427cc4",
+  "nominal_timeout_s": 15.073279999999999,
+  "timer_pulse_range_s": [
+    11.2598,
+    21.46
+  ],
+  "timer_target_s": [
+    8,
+    25
+  ],
+  "oscillator_error_envelope_percent": 25,
+  "oscillator_bound_is_model_assumption": true,
+  "corners": [
+    {
+      "resistor_scale": 0.985,
+      "capacitor_scale": 0.948,
+      "clock_scale": 0.75,
+      "supply_V": 4.75,
+      "pulse_s": 18.7666
+    },
+    {
+      "resistor_scale": 0.985,
+      "capacitor_scale": 0.948,
+      "clock_scale": 0.75,
+      "supply_V": 5.25,
+      "pulse_s": 18.7667
+    },
+    {
+      "resistor_scale": 0.985,
+      "capacitor_scale": 0.948,
+      "clock_scale": 1.25,
+      "supply_V": 4.75,
+      "pulse_s": 11.26
+    },
+    {
+      "resistor_scale": 0.985,
+      "capacitor_scale": 0.948,
+      "clock_scale": 1.25,
+      "supply_V": 5.25,
+      "pulse_s": 11.2598
+    },
+    {
+      "resistor_scale": 0.985,
+      "capacitor_scale": 1.052,
+      "clock_scale": 0.75,
+      "supply_V": 4.75,
+      "pulse_s": 20.8255
+    },
+    {
+      "resistor_scale": 0.985,
+      "capacitor_scale": 1.052,
+      "clock_scale": 0.75,
+      "supply_V": 5.25,
+      "pulse_s": 20.8258
+    },
+    {
+      "resistor_scale": 0.985,
+      "capacitor_scale": 1.052,
+      "clock_scale": 1.25,
+      "supply_V": 4.75,
+      "pulse_s": 12.4955
+    },
+    {
+      "resistor_scale": 0.985,
+      "capacitor_scale": 1.052,
+      "clock_scale": 1.25,
+      "supply_V": 5.25,
+      "pulse_s": 12.4958
+    },
+    {
+      "resistor_scale": 1.015,
+      "capacitor_scale": 0.948,
+      "clock_scale": 0.75,
+      "supply_V": 4.75,
+      "pulse_s": 19.3386
+    },
+    {
+      "resistor_scale": 1.015,
+      "capacitor_scale": 0.948,
+      "clock_scale": 0.75,
+      "supply_V": 5.25,
+      "pulse_s": 19.3387
+    },
+    {
+      "resistor_scale": 1.015,
+      "capacitor_scale": 0.948,
+      "clock_scale": 1.25,
+      "supply_V": 4.75,
+      "pulse_s": 11.6032
+    },
+    {
+      "resistor_scale": 1.015,
+      "capacitor_scale": 0.948,
+      "clock_scale": 1.25,
+      "supply_V": 5.25,
+      "pulse_s": 11.6032
+    },
+    {
+      "resistor_scale": 1.015,
+      "capacitor_scale": 1.052,
+      "clock_scale": 0.75,
+      "supply_V": 4.75,
+      "pulse_s": 21.46
+    },
+    {
+      "resistor_scale": 1.015,
+      "capacitor_scale": 1.052,
+      "clock_scale": 0.75,
+      "supply_V": 5.25,
+      "pulse_s": 21.4598
+    },
+    {
+      "resistor_scale": 1.015,
+      "capacitor_scale": 1.052,
+      "clock_scale": 1.25,
+      "supply_V": 4.75,
+      "pulse_s": 12.876
+    },
+    {
+      "resistor_scale": 1.015,
+      "capacitor_scale": 1.052,
+      "clock_scale": 1.25,
+      "supply_V": 5.25,
+      "pulse_s": 12.8758
+    }
+  ],
+  "cases": {
+    "nominal": {
+      "arm_boot_max": 0.00870585,
+      "rail_boot_max": 2.41688e-10,
+      "if_max": 0.00823754,
+      "ind_max": 0.00207357,
+      "ind_end": 0.0,
+      "closed_total": 15.071,
+      "on_total": 15.0729,
+      "t_on": 0.0500007,
+      "t_off": 15.1229,
+      "pulse_w": 15.0729,
+      "rail_end": 2.42674e-10
+    },
+    "held_arm_60s": {
+      "arm_boot_max": 0.00870585,
+      "rail_boot_max": 2.41688e-10,
+      "if_max": 0.00823754,
+      "ind_max": 0.00207357,
+      "ind_end": 0.0,
+      "closed_total": 15.071,
+      "on_total": 15.0729,
+      "t_on": 0.0500007,
+      "t_off": 15.1229,
+      "pulse_w": 15.0729,
+      "rail_end": 2.42674e-10
+    },
+    "disarm_after_5s": {
+      "arm_boot_max": 0.00870585,
+      "rail_boot_max": 2.41688e-10,
+      "if_max": 0.00823754,
+      "ind_max": 0.00207357,
+      "ind_end": 0.0,
+      "closed_total": 4.99811,
+      "on_total": 5.00001,
+      "t_on": 0.0500007,
+      "t_off": 5.05001,
+      "pulse_w": 5.00001,
+      "rail_end": 2.41688e-10
+    },
+    "boot_no_firmware": {
+      "arm_boot_max": 0.00870585,
+      "rail_boot_max": 2.41688e-10,
+      "if_max": 5.30108e-22,
+      "ind_max": 0.0,
+      "ind_end": 0.0,
+      "closed_total": 0.0,
+      "on_total": 0.0,
+      "rail_end": 2.41688e-10
+    },
+    "boot_oe_stuck_enabled": {
+      "arm_boot_max": 0.00870585,
+      "rail_boot_max": 2.42675e-10,
+      "if_max": 1.44447e-22,
+      "ind_max": 0.0,
+      "ind_end": 0.0,
+      "closed_total": 0.0,
+      "on_total": 0.0,
+      "rail_end": 2.42674e-10
+    },
+    "boot_timer_q_forced_high": {
+      "arm_boot_max": 0.00870585,
+      "rail_boot_max": 2.42675e-10,
+      "if_max": 1.44447e-22,
+      "ind_max": 0.0,
+      "ind_end": 0.0,
+      "closed_total": 0.0,
+      "on_total": 0.0,
+      "rail_end": 2.42674e-10
+    },
+    "fast_power_ramp": {
+      "arm_boot_max": 0.028134,
+      "rail_boot_max": 2.42675e-10,
+      "if_max": 1.3859e-22,
+      "ind_max": 0.0,
+      "ind_end": 0.0,
+      "closed_total": 0.0,
+      "on_total": 0.0,
+      "rail_end": 2.42674e-10
+    },
+    "slow_power_ramp": {
+      "arm_boot_max": 0.00846275,
+      "rail_boot_max": 3.08501e-11,
+      "if_max": 1.3496e-22,
+      "ind_max": 0.0,
+      "ind_end": 0.0,
+      "closed_total": 0.0,
+      "on_total": 0.0,
+      "rail_end": 2.42674e-10
+    },
+    "repeated_arm_commands": {
+      "arm_boot_max": 0.00870585,
+      "rail_boot_max": 2.41688e-10,
+      "if_max": 0.00823755,
+      "ind_max": 0.00207357,
+      "ind_end": 0.00207356,
+      "closed_total": 19.9407,
+      "on_total": 19.95,
+      "t_on": 0.0500007,
+      "t_off": 5.05001,
+      "pulse_w": 5.00001,
+      "rail_end": 4.98931
+    }
+  },
+  "limitations": [
+    "Clock aggregated using datasheet RC equation; physical oscillator and exact IC behavior are not vendor modeled.",
+    "Bench-qualify timeout over power and operating temperature before manufacturing release.",
+    "Repeated ARM low/high transitions start new windows; not a safety-rated anti-malicious-firmware interlock.",
+    "USB/Ethernet SI, ESD, EMC, load transients and PCB behavior not covered."
+  ]
+}

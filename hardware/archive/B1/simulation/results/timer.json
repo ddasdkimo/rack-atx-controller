@@ -1,0 +1,117 @@
+{
+ "deck": "timer.cir",
+ "nominal": {
+  "trig_fall": 0.05,
+  "trig_rise": 0.0514,
+  "trig_pw": 0.001396,
+  "trig_n_min": 0.04671,
+  "trig_base_min": -0.5312,
+  "t_on": 0.05,
+  "t_off": 16.86,
+  "pulse_w": 16.81,
+  "t_last_off": 16.86,
+  "t_last_on": 0.05,
+  "on_total": 16.81,
+  "photo_5v_max": 5.0,
+  "photo_5v_off": 6.114e-09,
+  "rc_max": 3.333
+ },
+ "corners": [
+  {
+   "CT_uF": 17.21,
+   "KR32": 0.99,
+   "VIT_V": 2.7,
+   "pulse_s": 6.748
+  },
+  {
+   "CT_uF": 17.21,
+   "KR32": 0.99,
+   "VIT_V": 3.9,
+   "pulse_s": 13.16
+  },
+  {
+   "CT_uF": 17.21,
+   "KR32": 1.01,
+   "VIT_V": 2.7,
+   "pulse_s": 6.884
+  },
+  {
+   "CT_uF": 17.21,
+   "KR32": 1.01,
+   "VIT_V": 3.9,
+   "pulse_s": 13.42
+  },
+  {
+   "CT_uF": 33.0,
+   "KR32": 0.99,
+   "VIT_V": 2.7,
+   "pulse_s": 12.94
+  },
+  {
+   "CT_uF": 33.0,
+   "KR32": 0.99,
+   "VIT_V": 3.9,
+   "pulse_s": 25.22
+  },
+  {
+   "CT_uF": 33.0,
+   "KR32": 1.01,
+   "VIT_V": 2.7,
+   "pulse_s": 13.2
+  },
+  {
+   "CT_uF": 33.0,
+   "KR32": 1.01,
+   "VIT_V": 3.9,
+   "pulse_s": 25.73
+  }
+ ],
+ "behaviour": {
+  "fire_held_high_40s": {
+   "pulse_s": 16.81,
+   "on_total_s": 16.81,
+   "note": "edge-coupled trigger: a held FIRE level must not extend the pulse"
+  },
+  "retrigger_every_5s_1ms": {
+   "first_pulse_s": 16.81,
+   "on_total_s": 50.42,
+   "last_off_s": 56.86,
+   "last_on_s": 40.05
+  },
+  "retrigger_every_1s_1ms": {
+   "first_pulse_s": 16.81,
+   "on_total_s": 59.37,
+   "last_off_s": 50.86
+  },
+  "arm_dropped_5s_after_fire": {
+   "t_on_s": 0.05,
+   "t_off_s": 5.06,
+   "pulse_s": 5.01
+  },
+  "fire_while_disarmed": {
+   "photo_5v_max_V": 6.114e-09,
+   "rail_stays_off": true
+  },
+  "rail_20_channels_29ohm": {
+   "photo_5v_max_V": 4.992
+  },
+  "trigger_pulse_4V75_worst": {
+   "trig_pw_s": 0.001411,
+   "trig_n_min_V": 0.0458,
+   "trig_base_min_V": -0.5312
+  }
+ },
+ "pulse_range_s": [
+  6.748,
+  25.73
+ ],
+ "capacitance_assumption_uF": [
+  17.21,
+  33.0
+ ],
+ "qualification_target_s": [
+  8,
+  25
+ ],
+ "pulse_within_target": false
+}

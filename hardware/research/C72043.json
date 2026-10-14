@@ -1,0 +1,46 @@
+{
+  "id": "C72043",
+  "mpn": "19-217/GHC-YR1S2/3T",
+  "manufacturer": "Everlight Elec",
+  "package": "0603",
+  "classification": "Extended",
+  "assembly": "SMT Assembly",
+  "pcba_type": "Economic and Standard",
+  "stock": 0,
+  "loss": 6,
+  "prices": [
+    {
+      "min_qty": 1,
+      "max_qty": 499,
+      "usd": 0.0239
+    },
+    {
+      "min_qty": 500,
+      "max_qty": 2999,
+      "usd": 0.0196
+    },
+    {
+      "min_qty": 3000,
+      "max_qty": 5999,
+      "usd": 0.0172
+    },
+    {
+      "min_qty": 6000,
+      "max_qty": 23999,
+      "usd": 0.0158
+    },
+    {
+      "min_qty": 24000,
+      "max_qty": 50999,
+      "usd": 0.0146
+    },
+    {
+      "min_qty": 51000,
+      "max_qty": -1,
+      "usd": 0.0139
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/C72043",
+  "checked_at": "2026-10-14T15:02:54.507445+00:00",
+  "status": "public JLC page observed; recheck at ordering"
+}

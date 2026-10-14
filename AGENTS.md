@@ -1,42 +1,29 @@
 # Rack ATX controller maintenance
 
-This is the user's public hardware planning repository for a 10-host rack controller.
+This public hardware repository is a ten-host controller. Current source of truth: hardware/design.json for architecture,connector mapping and active revisions; scripts/make-schematic.py/hardware/circuit.json for B.2 electrical connectivity; hardware/placement-S3.json for S.3 native layout. Keep them synchronized.
+
+## Current scope and approval gate
+
+B.2 has POWER/RESET only, no host LED sensing. S.3 is100×110mm,two layers,300electrical components+4M3holes. Latest user instruction authorizes routing after checking placement: 「剩下就是持續完成板子 檢查零件佈局 並跑完線路」. B.2/S.3 placement checks passed and R.2 routing is now connected on both controller and adapter. Current copper source: hardware/cad/B2/*.kicad_pcb. Placement generators must write B2/placement and never silently overwrite routed masters. Validate with scripts/validate-routing-b2.py and update hardware/ROUTING-R2.md; do not treat zero DRC as USB/Ethernet or manufacturing qualification. Do not resume obsolete B.1/R.1 connectivity. Preserve all historical designs and local checkpoints. No purchase or manufacturing release is authorized.
+
+Original case POWER/RESET buttons connect through a passive parallel adapter; original LEDs stay directly on motherboard and never connect to the adapter/controller. HOST_REF is still required by the retained button TVS topology. Keep each host domain separate from all others and GND_CTRL. Do not invent universal F_PANEL pin numbers. Current customJST pins1/2=POWER,3/4=RESET,9=hostESDreference;5–8/10=NC.
 
 ## Required synchronized updates
 
-The user explicitly requests that every future circuit or board refinement also update the 3D model and wiring illustration.
+Every circuit/connector/cable/outline/placement change updates native schematic,BOM,3D/wiring,public pages,hardware notes and CHANGELOG in the same change. Rebuild withscripts/build.py; checkscripts/check.py. Visually inspect overview,controller,both simulatedPCs andwiring atdesktop/mobile. Central3D coordinates come fromS.3; component envelopes and simulatedPCs are not precision mechanical models.
 
-- Treat `hardware/design.json` as the source of truth for revisions, host/channel counts, connector pin assignments, functional blocks and candidate quantities.
-- When changing a circuit, connector, cable, board outline, component placement or isolation boundary, update the hardware notes, `visualization/viewer.template.html`, generated viewer files and `CHANGELOG.md` in the same change.
-- Regenerate with `python3 scripts/build.py`, run `python3 scripts/check.py`, and visually inspect overview, controller, both simulated PCs, and the wiring view at desktop and mobile widths.
-- Never present concept geometry as a routed PCB, manufacturable CAD, tested schematic, or a verified motherboard header pinout.
-- Do not invent universal F_PANEL pin numbers. The numbered Jxx connector belongs to this custom controller; motherboard signals must be mapped from the actual board manual.
-- Preserve original case switches and LEDs through passive straight-through connections; sensing is a limited-load parallel branch. Verify power-off loading and backfeed when designing the real input circuit.
-- Keep all ten host signal domains isolated from controller ground and each other. A host's reference wire belongs only to that host's isolated sensing domain.
-- Keep Git history public-safe: no credentials, local paths, private host inventory, or SSH keys. Do not publish unrelated workspace files.
+Use scripts/make-schematic.py, nativeKiCad export/ERC, scripts/check-circuit.py, hardware/simulation/run-b2.py and scripts/cost.py. Use KiCad's wx/pcbnew Python for make-layout-s3.py/check-layout-s3.py. Do not run native exports/ERC concurrently against the same project. The archival B.1 simulation/route scripts must not overwrite currentB.2 summaries or manifest.
 
-## Scope
+## Evidence and manufacturing
 
-## Manufacturing preference
+Prefer actualJLC assembly catalog parts; record exactMPN,C-number,package,classification,assemblymethod,stock/date andsource. LCSC availability alone is not assembly stock. Preserve unknowns; recheck before release. Current footprint candidates have real pads but are not physically/factoryqualified. NoGerber/CPL or acceptedPCBAquote exists. NewS.3 bare-board cost is pending; do not reuse oldS.1/S.2 estimates.
 
-The user requests considering JLCPCB PCB fabrication / PCBA and its available parts. Prefer components actually supported by JLCPCB assembly when electrically appropriate. Record manufacturer part number, exact LCSC/JLC part number, package, assembly method, library classification, stock-check date and verification status. An LCSC listing is not proof of JLC assembly stock. Recheck availability before board release. Keep unverified IDs null; never invent part numbers or mark this concept as order-ready. Cable assemblies and motherboard-specific leads require separate sourcing/assembly verification.
+User prefers economical normal lead time,one-sideEconomicPCBA,noexpedite andcheaperavailablefreight. Waiting is not an automatic discount. Separate barePCB,parts,assembly,freight/tax andequipmentcosts.
 
-## Current release scope
+B.2 behavior study passes16corners+9cases,including an assumed±25%clockstress envelope. It is not a vendor oscillator model,physicalprototypeorcompatibilitytest. Keep these limits visible. Practical original-manufacturer guidance and geometry checks guide placement; nofullIPCcomplianceclaim.
 
-Revision B.1 includes native KiCad schematics, catalog-backed BOM and analytical checks. No routed PCB, Gerbers, CPL, qualified footprints, SPICE run or physical prototype validation exists. Keep this boundary visible. Regenerate circuit/BOM via scripts/make-schematic.py, export both native KiCad netlists and ERC reports, run scripts/check-circuit.py and scripts/cost.py; update the cost summary in hardware/design.json and PDFs with the same circuit revision before rebuilding the viewer. Never publish raw KiCad netlists with absolute workstation paths.
+Keep Git/public files free of credentials,workstationpaths,privatehostinventory andrawnetlists. Ignore localbuilds/caches/tooloutputs andpreserve genuinebackups. Publicsite/GitHubupdates areauthorized for this work.
 
-## S.1 placement and purchasing
+## Firmware (B.2)
 
-The user is not in a hurry. Prefer normal lead time, one-side Economic PCBA and economical available shipping; do not assume waiting creates an automatic discount. S.1 adds a spatial study, not a fabrication PCB. Preserve the 5-family/52-envelope limitation and distinguish bounding-box checks from DRC and isolation approval. Sync placement-study.json into design.json when regenerating. Keep the full BOM review page current with cost data; distinguish one controller from five.
-
-## Current architecture decision
-
-The user returned to one integrated controller for ten hosts (B.1 electrical / S.1 placement). P.0 external-ESP32 breakaway research is archived, not selected. Retain its cost evidence and mark prototype-plan.json and design.next_prototype consistently. S.1 has zero routed tracks and still needs qualified footprints, routing and DRC; do not claim two-layer routing success.
-
-## S.2 placement confirmation gate
-
-Current layout: 200x170 mm S.2, two banks of five hosts, all 694 electrical footprints have pads plus four M3 mounting holes. The five previous envelope families are now drawing-transcribed or library footprints; not factory-qualified. Preserve S.1 as historical only. Regenerate with make-layout-review.py and audit with check-layout-review.py in KiCad Python. Sync layout-review-checks.json, layout SVG, design.layout_study, viewer and layout.html. The user now authorizes routing after a practical high-level placement review, without formal IPC compliance as a gate. Keep explicit DFM deviations and manufacturing limitations visible. One-board parts budget is separate; do not apply the old S.1 PCB price to S.2.
-
-## R.0 routing work
-
-Current working routing file is hardware/cad/routing-R0.kicad_pcb; S.2 is an immutable placement reference with zero tracks. R.0 contains a partial local routing pass only. Preserve unfinished connectivity, power/ground and high-speed routing status. Do not regenerate R.0 over later manual edits. Sync native track geometry to routing-R0.json, SVG, 3D and public layout page using export-routing-review.py.
+firmware/ is an ESP-IDF v5.3 project for the B.2 control-only board. main/board.h is the single place that maps circuit.json signals to GPIOs, the 74HC595 chain order and the press timing limits; keep it in sync when the circuit or GPIO table changes. The protocol (firmware/PROTOCOL.md) makes the controller the sole lease arbiter between monitor nodes A and B; do not add endpoints that act without a lease or bypass the per-host policy. The firmware has been compiled but not run on hardware; say so wherever its status is described.

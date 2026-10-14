@@ -1,0 +1,158 @@
+{
+ "deck": "powerup.cir",
+ "cases": {
+  "as_designed_gpio43_44_wpu_45k": {
+   "params": {},
+   "arm_max": 2.276,
+   "fire_max": 2.276,
+   "oe_n_min": 0.01641,
+   "rail_on_total": 0.0,
+   "if_max": 1.403e-10,
+   "if_total": 2.474e-13,
+   "closed_total": 0.0,
+   "trig_n_min": -1.034e-81,
+   "rail_enabled_during_boot": false,
+   "relay_closed_total_s": 0.0
+  },
+  "as_designed_vrst_1V8_worst": {
+   "params": {
+    "VRST": 1.8
+   },
+   "arm_max": 2.276,
+   "fire_max": 2.276,
+   "oe_n_min": 0.01641,
+   "rail_on_total": 0.0,
+   "if_max": 1.403e-10,
+   "if_total": 2.474e-13,
+   "closed_total": 0.0,
+   "trig_n_min": -1.034e-81,
+   "rail_enabled_during_boot": false,
+   "relay_closed_total_s": 0.0
+  },
+  "as_designed_firmware_late_1s": {
+   "params": {
+    "TFW": 1.0
+   },
+   "arm_max": 2.276,
+   "fire_max": 2.276,
+   "oe_n_min": 0.01641,
+   "rail_on_total": 0.0,
+   "if_max": 1.403e-10,
+   "if_total": 2.474e-13,
+   "closed_total": 0.0,
+   "trig_n_min": -1.034e-81,
+   "rail_enabled_during_boot": false,
+   "relay_closed_total_s": 0.0
+  },
+  "as_designed_slow_5V_ramp_100ms": {
+   "params": {
+    "TRAMP": "100m",
+    "TGL": "102m"
+   },
+   "arm_max": 2.287,
+   "fire_max": 2.276,
+   "oe_n_min": 0.01642,
+   "rail_on_total": 0.0,
+   "if_max": 1.403e-10,
+   "if_total": 2.474e-13,
+   "closed_total": 0.0,
+   "trig_n_min": -1.034e-81,
+   "rail_enabled_during_boot": false,
+   "relay_closed_total_s": 0.0
+  },
+  "as_designed_wpu_30k": {
+   "params": {
+    "RWPU": "30k"
+   },
+   "arm_max": 2.538,
+   "fire_max": 2.538,
+   "oe_n_min": 0.01641,
+   "rail_on_total": 0.0,
+   "if_max": 1.403e-10,
+   "if_total": 2.474e-13,
+   "closed_total": 0.0,
+   "trig_n_min": -1.034e-81,
+   "rail_enabled_during_boot": false,
+   "relay_closed_total_s": 0.0
+  },
+  "if_timer_pins_had_no_pullup": {
+   "params": {
+    "RWPU": "1e12"
+   },
+   "arm_max": 3.31e-07,
+   "fire_max": 0.000345,
+   "oe_n_min": 0.01642,
+   "rail_on_total": 0.0,
+   "if_max": 1.403e-10,
+   "if_total": 2.474e-13,
+   "closed_total": 0.0,
+   "trig_n_min": -1.034e-81,
+   "rail_enabled_during_boot": false,
+   "relay_closed_total_s": 0.0
+  },
+  "hypothetical_fast_edge_on_fire_at_50ms": {
+   "params": {
+    "TFG": "50m"
+   },
+   "arm_max": 2.276,
+   "fire_max": 3.297,
+   "oe_n_min": 0.01641,
+   "rail_on_total": 0.0,
+   "if_max": 1.403e-10,
+   "if_total": 2.474e-13,
+   "closed_total": 0.0,
+   "trig_n_min": -1.034e-81,
+   "rail_enabled_during_boot": false,
+   "relay_closed_total_s": 0.0
+  },
+  "hypothetical_fast_edge_on_fire_plus_oe_glitch_same_time": {
+   "params": {
+    "TFG": "50m",
+    "TGL": "50.5m"
+   },
+   "arm_max": 2.276,
+   "fire_max": 3.297,
+   "oe_n_min": 0.01642,
+   "rail_on_total": 0.0,
+   "if_max": 1.403e-10,
+   "if_total": 2.486e-13,
+   "closed_total": 0.0,
+   "trig_n_min": -1.034e-81,
+   "rail_enabled_during_boot": false,
+   "relay_closed_total_s": 0.0
+  },
+  "hypothetical_fast_edge_plus_oe_glitch_ideal_relay_switch": {
+   "params": {
+    "TFG": "50m",
+    "TGL": "50.5m",
+    "TON_TAU": "1n"
+   },
+   "arm_max": 2.276,
+   "fire_max": 3.297,
+   "oe_n_min": 0.01642,
+   "rail_on_total": 0.0,
+   "if_max": 1.403e-10,
+   "if_total": 2.486e-13,
+   "closed_total": 0.0,
+   "trig_n_min": -1.034e-81,
+   "rail_enabled_during_boot": false,
+   "relay_closed_total_s": 0.0
+  },
+  "if_timer_pins_had_no_pullup_fast_edge_on_fire": {
+   "params": {
+    "RWPU": "1e12",
+    "TFG": "50m"
+   },
+   "arm_max": 3.31e-07,
+   "fire_max": 3.294,
+   "oe_n_min": 0.01642,
+   "rail_on_total": 0.0,
+   "if_max": 1.403e-10,
+   "if_total": 2.474e-13,
+   "closed_total": 0.0,
+   "trig_n_min": -1.034e-81,
+   "rail_enabled_during_boot": false,
+   "relay_closed_total_s": 0.0
+  }
+ }
+}

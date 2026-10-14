@@ -1,0 +1,46 @@
+{
+  "id": "C163508",
+  "mpn": "CL10C102JB8NNNC",
+  "manufacturer": "Samsung Electro-Mechanics",
+  "package": "0603",
+  "classification": "Extended",
+  "assembly": "SMT Assembly",
+  "pcba_type": "Economic and Standard",
+  "stock": 483260,
+  "loss": 10,
+  "prices": [
+    {
+      "min_qty": 1,
+      "max_qty": 499,
+      "usd": 0.0083
+    },
+    {
+      "min_qty": 500,
+      "max_qty": 1499,
+      "usd": 0.0065
+    },
+    {
+      "min_qty": 1500,
+      "max_qty": 3999,
+      "usd": 0.0055
+    },
+    {
+      "min_qty": 4000,
+      "max_qty": 23999,
+      "usd": 0.0049
+    },
+    {
+      "min_qty": 24000,
+      "max_qty": 47999,
+      "usd": 0.0043
+    },
+    {
+      "min_qty": 48000,
+      "max_qty": -1,
+      "usd": 0.004
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/C163508",
+  "checked_at": "2026-10-14T08:48:03.275930+00:00",
+  "status": "public JLC page observed; recheck at ordering"
+}

@@ -1,31 +1,22 @@
-> **目前已進入 R.0 局部佈線，尚未全板連通。** S.2 為保留的布局基準；以下舊版「待確認／未佈線」敘述屬歷史狀態。
+# Active CAD: B.2 schematic / R.2 routing
 
-# KiCad schematic review — B.1
+Open `B2/rack-atx-controller.kicad_pro` for the controller schematic; `B2/adapter.kicad_pro` for the six-component passive adapter; `B2/rack-atx-controller.kicad_pcb` in PCB Editor for the 100×110 mm routed candidate. Routing was authorized by the user. No Gerber or CPL exists.
 
-> 目前布局為 S.2（200×170 mm），待使用者確認，尚未佈線。以下 S.1 尺寸／費用／52 個佔位敘述為歷史紀錄；S.2 已補焊盤，詳見 [布局審閱](../LAYOUT-S2.md)。舊尺寸報價不適用於 S.2。
-
-Open `rack-atx-controller.kicad_pro` with KiCad 10, then its root schematic. The controller has a root index and 38 child sheets; the ten host channels have distinct references and isolated net names. Open `adapter.kicad_pro` separately for the identical passive adapter built ten times. Do not include adapter parts in the central-board placement file.
-
-Native symbols and global net labels are electrically connected. `Rack.kicad_sym` and `sym-lib-table` are included; the schematic caches its symbols too. These are functional pin blocks, not simulated device models. PDF copies are under `../release/`.
-
-`../../scripts/make-schematic.py` generates the CAD, `../circuit.json` and both BOM formats. Edit that source when changing connections or values, regenerate and review the diff. Change `../design.json`, notes and the 3D template for the same revision. The generator currently uses the standard macOS KiCad 10 symbol library to read ESP32 pin definitions; other systems should adjust that library path.
-
-Five land-pattern families deliberately have no footprint assigned: TLP3122A, EL357N, B0505S-1WR3L, FNR4018 inductor and WJ500V input terminal. All other assigned footprints are candidates that still need dimensional/polarity review. Empty footprints are a layout release gate, not missing electrical connections. S.1 now adds `compact-S1-placement.kicad_pcb`: a 160×110 mm, 2-layer spatial packing study. It has 694 placements, including 52 pad-free envelopes for those five families. All assigned footprints remain candidates. There are no routed tracks, ground planes, mounting-hole design, Gerbers, DRC sign-off or CPL. Do not fabricate this file. Reference/net mapping on existing candidate pads is only a visual aid; missing envelopes do not represent electrical connectivity. View F.Fab/F.Courtyard and User.Drawings; crossed envelopes are intentionally incomplete.
-
-Reproduce checks with KiCad 10 CLI (replace `kicad-cli` with its installed absolute path if necessary):
+The B.2 controller contains 300 electrical components; the placement adds four M3 holes. The controller has 2,754 track segments and 185 vias; the 26×34 mm adapter has 30 segments and no vias. Both boards have zero native unconnected items and configured DRC violations. The web 3D uses native placement, copper and adapter coordinates with simplified component envelopes. USB/Ethernet qualification, factory DFM and physical tests remain; see ../ROUTING-R2.md. Generators write into B2/placement to preserve the routed master.
 
 ```sh
 python3 scripts/make-schematic.py
-kicad-cli sch export netlist --format kicadxml -o artifacts/local/controller.xml hardware/cad/rack-atx-controller.kicad_sch
-kicad-cli sch export netlist --format kicadxml -o artifacts/local/adapter.xml hardware/cad/adapter.kicad_sch
-kicad-cli sch erc --format json -o artifacts/local/erc.json hardware/cad/rack-atx-controller.kicad_sch
-kicad-cli sch erc --format json -o artifacts/local/adapter-erc.json hardware/cad/adapter.kicad_sch
+kicad-cli sch export netlist --format kicadxml -o artifacts/local/controller.xml hardware/cad/B2/rack-atx-controller.kicad_sch
+kicad-cli sch export netlist --format kicadxml -o artifacts/local/adapter.xml hardware/cad/B2/adapter.kicad_sch
+kicad-cli sch erc --format json -o artifacts/local/erc.json hardware/cad/B2/rack-atx-controller.kicad_sch
+kicad-cli sch erc --format json -o artifacts/local/adapter-erc.json hardware/cad/B2/adapter.kicad_sch
 python3 scripts/check-circuit.py
+python3 hardware/simulation/run-b2.py
 python3 scripts/cost.py
-kicad-cli sch export pdf -o hardware/release/controller-schematic.pdf hardware/cad/rack-atx-controller.kicad_sch
-kicad-cli sch export pdf -o hardware/release/adapter-schematic.pdf hardware/cad/adapter.kicad_sch
+kicad-cli sch export pdf -o hardware/release/controller-schematic.pdf hardware/cad/B2/rack-atx-controller.kicad_sch
+kicad-cli sch export pdf -o hardware/release/adapter-schematic.pdf hardware/cad/B2/adapter.kicad_sch
 ```
 
-Execute from the repository root. Local raw netlists/reports are ignored because KiCad embeds absolute source paths. The public validation summary contains no local paths. ERC is run with normal rules, without suppressions; native netlist checks separately test intended pin mapping, connector NCs and isolation boundaries. Passing these checks does not establish motherboard compatibility or manufacturability.
+Run from the repository root. Use KiCad's bundled Python (wx + pcbnew) for `scripts/make-layout-s3.py` and `scripts/check-layout-s3.py`, then `kicad-cli pcb drc --format json -o artifacts/local/s3-drc.json hardware/cad/B2/rack-atx-controller.kicad_pcb`. Export/ ERC operations on the same project must run sequentially. Source library paths in generators currently target macOS KiCad; adapt paths on other platforms.
 
-The public 3D uses the same placement JSON (rotated 90° for cable visibility), with bounding boxes rather than qualified component models. See [compact study](../COMPACT-STUDY.md). Regenerate with the bundled KiCad Python and `scripts/make-placement-study.py`, then sync the derived study into `hardware/design.json` before rebuilding. The packing algorithm checks bounding-box overlap and outline only, not routing feasibility.
+BOM, schematic and PCB candidate footprints agree; custom TLP3122A and input-terminal land patterns live in `RackATX.pretty`, referenced relative to B2. Manufacturer/physical DFM qualification is still required. Raw CLI netlists stay ignored because they include workstation paths. Never publish them. Historical CAD in this directory and archive/B1 is retained, not the current revision.
