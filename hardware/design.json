@@ -249,8 +249,8 @@
     "prefer_assembly_catalog_parts": true,
     "stock_verified": true,
     "fabrication_ready": false,
-    "notes": "300 electrical components + four M3 holes; 100x110 mm two-layer R.3 routed candidate. Controller and 26x34 mm passive adapter DRC/unconnected zero. No Gerber/CPL or factory/physical qualification.",
-    "stock_check_date": "2026-10-13–14"
+    "notes": "300 electrical components + four M3 holes; 100x110 mm two-layer R.3. Both boards ERC/DRC/unconnected zero; Gerber/drill and native BOM/CPL parity reviewed. Trial4 supplier corrections independently checked, supplemental IC/header previews complete. Factory direction/process acceptance and final same-CLI review remain pending.",
+    "stock_check_date": "2026-10-15 quote; not reserved"
   },
   "electronics": [
     {

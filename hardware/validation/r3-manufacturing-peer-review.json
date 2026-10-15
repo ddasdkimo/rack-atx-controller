@@ -18,12 +18,19 @@
   "followup_manifest_sha256": "42d8717a9ba8e6506b0bbeb3c0532337e6ba63d21fe2e31db8273a9e9651894a",
   "silk_reference_decision": "Hidden R/C/U reference silk retained; use zoomable annotated routing view for prototype debugging. No new copper/silk change.",
   "remaining": [
-    "JLCBOM/CPL rotation and LED polarity preview",
-    "QFNvia/finish/stencilDFM acceptance",
-    "Economicthrough-holeassembly eligibility/fullquote",
-    "Freight/tax/delivery destination",
-    "Factory-driven changes require peer recheck",
-    "Prototypefunctionalverification"
+    "C2841440 library direction and J105 full pin/anchor mapping",
+    "QFN via/finish/stencil and selected Economic through-hole process confirmation",
+    "Refresh final upload, stock, quote and freight/tax before ordering",
+    "Same CLI final review of the factory-resolved fixed package",
+    "Prototype functional verification after fabrication"
   ],
-  "followup_result": "Accepted: dependencies self-contained, no new offline blockers. Factory release gates unchanged."
+  "followup_result": "Accepted: dependencies self-contained, no new offline blockers. Factory release gates unchanged.",
+  "cpl_review": {
+    "status": "Intermediate independent review passed; not production release",
+    "manifest_sha256": "765f60e00126737eae5eaa7338f5759cf611d6c42bff8ba1a38ca7db35beaa6a",
+    "references": 300,
+    "SKUs": 46,
+    "changed_rows": 47,
+    "connector_centers_verified": 15
+  }
 }

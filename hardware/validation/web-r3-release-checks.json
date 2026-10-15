@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-15",
+  "pages": [
+    "layout.html#release-checks",
+    "index.html status and cost text",
+    "bom.html status text"
+  ],
+  "viewports": [
+    "default desktop",
+    "390x844 layout review"
+  ],
+  "checks": [
+    "Layout cost matches actual USD275.81 quote; no obsolete cost block",
+    "R.3 live pin counts shown instead of S.3 baseline distances",
+    "Factory blockers and final same-CLI review remain visible",
+    "Mobile checklist and cost text readable with no horizontal body overflow observed",
+    "No console errors in layout page",
+    "build.py and check.py passed"
+  ],
+  "native_circuit_or_3d_geometry_changed": false,
+  "manufacturing_ready": false
+}

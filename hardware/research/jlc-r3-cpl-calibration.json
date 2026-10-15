@@ -339,8 +339,9 @@
   ],
   "pending": [
     "C2841440 D2–D21 has a checker-placeholder model in JLC preview: no per-MPN orientation evidence. Removed unverified SOT-23 +180 trial; retained native angles pending supplier confirmation. Pin3 must face the host-reference pad; pins1/2 face isolated switch lines.",
-    "Complete all supplier pad/pin1/polarity preview checks",
-    "Independent review of frozen corrected export",
-    "QFN factory DFM acceptance"
-  ]
+    "J105 exact supplier anchor and full pin correspondence",
+    "QFN factory DFM and selected Economic through-hole process acceptance",
+    "Final review of the factory-resolved frozen candidate by the same CLI"
+  ],
+  "independent_preview_review": "Trial4 arithmetic, completeness, native-pad centres and reproducibility passed; final supplier qualification pending."
 }

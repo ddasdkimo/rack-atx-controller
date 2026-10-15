@@ -1,6 +1,6 @@
 {
   "date": "2026-10-15",
-  "status": "partial visual preview; NOT FOR PRODUCTION",
+  "status": "Supplemental IC/header preview completed; factory direction/process gates remain; NOT FOR PRODUCTION",
   "trial": "4",
   "trial_cpl_sha256": "a3b8cf7fc6a0e52f8075bc01206815f0c2ff7f0bdf80c15d7fe7be2d5877d393",
   "native_board_unchanged": true,
@@ -32,7 +32,17 @@
     "J105 connector full pin/anchor correspondence and Economic manual assembly remain factory checks",
     "Not every one of300parts has been individually certified in supplier preview",
     "QFN via/stencil/finish DFM pending",
-    "Same CLI independent review in progress; previous native-parity review does not approve these corrections"
+    "Final frozen-package review is required after supplier direction and DFM closure."
   ],
-  "manufacturing_ready": false
+  "manufacturing_ready": false,
+  "independent_review": {
+    "completed": true,
+    "frozen_manifest_sha256": "765f60e00126737eae5eaa7338f5759cf611d6c42bff8ba1a38ca7db35beaa6a",
+    "scope": "300refs/46SKUs,47changes,15nativepadcentres,repeatableexport; factorygates retained"
+  },
+  "supplemental_evidence": [
+    "hardware/research/jlc-r3-shift-registers.jpg",
+    "hardware/research/jlc-r3-headers.jpg"
+  ],
+  "native_geometry_audit": "hardware/validation/jlc-cpl-native-checks.json"
 }

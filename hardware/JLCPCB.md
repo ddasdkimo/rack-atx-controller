@@ -17,11 +17,11 @@ Final R.3 Gerber, BOM and CPL were uploaded in the authenticated JLC quote flow.
 
 PCB plus components is **197.44 USD**; populated-board average is **55.162 USD**. This is a live quotation, not a purchase, accepted factory DFM, complete equipment price or offer to supply loose parts. All 300 references / 46 SKUs were selected. Stock is not reserved. [Quote screenshot](research/jlc-r3-economic-5pcs-20261015.png) · [Structured observation](research/jlc-r3-quote-observations.json) · [Per-SKU purchase quantities and costs](research/jlc-r3-bom-quote.json).
 
-Assembly-related fees: setup8.24, stencil1.55, Extended loading46.35, SMT7.36, placement confirmation0.45, manual setup3.61, manual assembly9.90 and nitrogen0.91 USD. The site lists PCB24hours and assembly2–3days with zero expedite charge. X-ray has no separate line; that does not establish that inspection is included or unnecessary. Freight, tax and DFM-driven process changes remain unknown.
+Assembly-related fees: setup8.24, stencil1.55, Extended loading46.35, SMT7.36, placement confirmation0.45, manual setup3.61, manual assembly9.90 and nitrogen0.91 USD. The site lists PCB24hours and assembly2–3days with zero expedite charge. No unlisted charges are added to this displayed quote. Freight and tax are outside it. If the factory requires a technical process change, obtain its explanation and revised quotation before updating the cost.
 
 ## Placement and process gates
 
-**Not ready for production.** The native CPL reproduces KiCad anchors and rotations; JLC preview exposed connector-anchor and per-MPN rotation mismatches. Supplier-calibrated coordinates are being checked against real pad positions, pin1 and cathodes. Browser preview corrections must be reproduced in an exported file and independently reviewed. The native PCB/copper has not been changed to disguise these mismatches.
+**Not ready for production.** The native CPL reproduces KiCad anchors and rotations; JLC preview exposed connector-anchor and per-MPN rotation mismatches. Trial4 corrections have been reproduced and independently reviewed: all300 references,46SKUs and15 connector pad-centres agree. Supplemental U4–U6/J102/J103 previews are complete. C2841440 has no usable viewer model and J105 full pin/anchor mapping remains a factory gate. See [release checklist](RELEASE-CHECKLIST.md). The native PCB/copper has not been changed to disguise these mismatches.
 
 [Manufacturing review package](manufacturing/R3-candidate/) contains native Gerber/drill/BOM/CPL and independent CAM checks. Those checks establish native parity, not supplier placement qualification. The existing fixed reviewer snapshot is retained. A final calibrated package needs a fresh review by the same CLI reviewer.
 
