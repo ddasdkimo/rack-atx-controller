@@ -1,7 +1,7 @@
 {
-  "observed_at": "2026-10-15T09:30:36.313779+08:00",
+  "observed_at": "2026-10-15T10:46:00+08:00",
   "currency": "USD",
-  "status": "Authenticated JLCPCB 50-adapter quote and combined cart freight estimate; not ordered",
+  "status": "Authenticated HXY controller refresh and unchanged50-adapter cart; combined SF freight observed; not ordered",
   "scope": {
     "controllers": 5,
     "passive_adapters": 50,
@@ -12,9 +12,9 @@
   "controller": {
     "quantity": 5,
     "pcb_usd": 28.25,
-    "components_usd": 169.19,
+    "components_usd": 168.86,
     "assembly_related_usd": 78.37,
-    "total_usd": 275.81
+    "total_usd": 275.48
   },
   "adapter": {
     "quantity": 50,
@@ -89,11 +89,11 @@
   },
   "combined": {
     "pcb_usd": 46.1,
-    "components_usd": 192.23,
+    "components_usd": 191.9,
     "assembly_related_usd": 100.58,
-    "manufacturing_total_usd": 338.91,
+    "manufacturing_total_usd": 338.58,
     "freight_usd": 12.21,
-    "subtotal_with_freight_usd": 351.12,
+    "subtotal_with_freight_usd": 350.79,
     "packed_weight_kg": 2.52,
     "destination": "Taiwan",
     "carrier": "SF Express (Outside Guangdong）",
@@ -131,5 +131,6 @@
     "Firmware flashing and functional commissioning"
   ],
   "release_note": "Factory DFM/support replies and final same-CLI review still pending; prices do not authorize production.",
-  "supersedes": "jlc-r3-combined-quote-10adapters-20261015.json (historical quote: only one ten-host set of adapters)"
+  "supersedes": "jlc-r3-combined-quote-10adapters-20261015.json (historical quote: only one ten-host set of adapters)",
+  "evidence_screenshot": "hxy-trial5-combined-cart.png"
 }

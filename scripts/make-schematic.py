@@ -30,7 +30,7 @@ part('cmp','C67470','LM393DR','Package_SO:SOIC-8_3.9x4.9mm_P1.27mm',pins('OUT1,I
 part('iso','C20622559','B0505S-1WR3L','Rack:HENIPER_B0505S-1WR3L',pins('GND_IN,VIN,GND_ISO,VOUT_ISO',{'1':'power_in','2':'power_in','3':'power_out','4':'power_out'}))
 part('ldo','C14289','HT7533-1','Package_TO_SOT_SMD:SOT-89-3',pins('GND,VIN,VOUT',{'1':'power_in','2':'power_in','3':'power_out'}))
 part('port','C161672','S10B-PHDSS(LF)(SN)','Connector_JST:JST_PHD_S10B-PHDSS_2x05_P2.00mm_Horizontal',pins('PWR_A,PWR_B,RST_A,RST_B,NC5,NC6,NC7,NC8,HOST_REF,NC10'))
-part('esd','C2841440','PESD5V0S2BT','Package_TO_SOT_SMD:SOT-23',pins('IO1,IO2,GND'),note='TECH PUBLIC bidirectional dual TVS; verify pin 3 common on vendor drawing.')
+part('esd','C5451656','PESD5V0S2BT','Package_TO_SOT_SMD:SOT-23',pins('IO1,IO2,GND'),note='HXY bidirectional dual TVS; pin3 host reference, pins1/2 button pair. Leakage envelope: 3-5V active-low, pull-up <=47k; see hxy-button-leakage validation. JLC supplier rotation +180deg; native footprint unchanged.')
 part('hc595','C5947','74HC595D,118','Package_SO:SOIC-16_3.9x9.9mm_P1.27mm',pins('QB,QC,QD,QE,QF,QG,QH,GND,QH_SER,MR_N,SHCP,STCP,OE_N,DS,QA,VCC',{**{str(i):'output' for i in [1,2,3,4,5,6,7,9,15]},**{str(i):'input' for i in [10,11,12,13,14]},'8':'power_in','16':'power_in'}))
 part('timer','C7292','MC14541BDR2G','Package_SO:SOIC-14_3.9x8.7mm_P1.27mm',pins('RTC,CTC,RS,NC,AR,MR,GND,Q,QSEL,MODE,NC,A,B,VDD',{'1':'output','2':'output','3':'input','5':'input','6':'input','7':'power_in','8':'output','9':'input','10':'input','12':'input','13':'input','14':'power_in'}))
 part('buck','C780769','AP63203WU-7','Package_TO_SOT_SMD:TSOT-23-6',pins('FB,EN,VIN,GND,SW,BST',{'1':'input','2':'input','3':'power_in','4':'power_in','5':'power_out','6':'passive'}))

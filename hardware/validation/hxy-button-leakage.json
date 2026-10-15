@@ -1,0 +1,889 @@
+{
+  "date": "2026-10-15",
+  "candidate": "HXY PESD5V0S2BT / C5451656",
+  "decision": "Accepted for prototype within stated button-interface envelope; not universal motherboard qualification",
+  "pass": true,
+  "method": "ngspice DC constant-current leakage worst-direction envelope, cross-checked with Ohm law; not vendor SPICE model",
+  "circuit_sha256": "5bbc114ebe312162e145a14d1200e46ad064c53eae76d257424faeb9531bb466",
+  "channels_checked": [
+    {
+      "host": 1,
+      "button": "PWR",
+      "tvs": "D2",
+      "relay": "U8"
+    },
+    {
+      "host": 1,
+      "button": "RST",
+      "tvs": "D3",
+      "relay": "U9"
+    },
+    {
+      "host": 2,
+      "button": "PWR",
+      "tvs": "D4",
+      "relay": "U10"
+    },
+    {
+      "host": 2,
+      "button": "RST",
+      "tvs": "D5",
+      "relay": "U11"
+    },
+    {
+      "host": 3,
+      "button": "PWR",
+      "tvs": "D6",
+      "relay": "U12"
+    },
+    {
+      "host": 3,
+      "button": "RST",
+      "tvs": "D7",
+      "relay": "U13"
+    },
+    {
+      "host": 4,
+      "button": "PWR",
+      "tvs": "D8",
+      "relay": "U14"
+    },
+    {
+      "host": 4,
+      "button": "RST",
+      "tvs": "D9",
+      "relay": "U15"
+    },
+    {
+      "host": 5,
+      "button": "PWR",
+      "tvs": "D10",
+      "relay": "U16"
+    },
+    {
+      "host": 5,
+      "button": "RST",
+      "tvs": "D11",
+      "relay": "U17"
+    },
+    {
+      "host": 6,
+      "button": "PWR",
+      "tvs": "D12",
+      "relay": "U18"
+    },
+    {
+      "host": 6,
+      "button": "RST",
+      "tvs": "D13",
+      "relay": "U19"
+    },
+    {
+      "host": 7,
+      "button": "PWR",
+      "tvs": "D14",
+      "relay": "U20"
+    },
+    {
+      "host": 7,
+      "button": "RST",
+      "tvs": "D15",
+      "relay": "U21"
+    },
+    {
+      "host": 8,
+      "button": "PWR",
+      "tvs": "D16",
+      "relay": "U22"
+    },
+    {
+      "host": 8,
+      "button": "RST",
+      "tvs": "D17",
+      "relay": "U23"
+    },
+    {
+      "host": 9,
+      "button": "PWR",
+      "tvs": "D18",
+      "relay": "U24"
+    },
+    {
+      "host": 9,
+      "button": "RST",
+      "tvs": "D19",
+      "relay": "U25"
+    },
+    {
+      "host": 10,
+      "button": "PWR",
+      "tvs": "D20",
+      "relay": "U26"
+    },
+    {
+      "host": 10,
+      "button": "RST",
+      "tvs": "D21",
+      "relay": "U27"
+    }
+  ],
+  "dc_cases": 60,
+  "accepted_interface": {
+    "button_voltage_V": [
+      3.0,
+      5.0
+    ],
+    "max_pullup_ohm": 47000,
+    "topology": "Active-low input; one button terminal and HOST_REF verified as the same host ground; A/B may be exchanged",
+    "assumed_VIH_fraction": 0.7,
+    "assumed_VIL_fraction": 0.3,
+    "host_input_leakage_allowance_uA": 1,
+    "closed_path_assumption_ohm": 2.25
+  },
+  "datasheet_budget": {
+    "HXY_TVS_max_uA_at_VRWM_5V": 1,
+    "TLP3122A_max_off_uA_at_60V_Ta25C": 1,
+    "combined_added_leakage_uA": 2,
+    "drop_at_26k_V": 0.052,
+    "drop_at_47k_including_1uA_host_allowance_V": 0.141
+  },
+  "stress_assumption": {
+    "HXY_leakage_uA": 10,
+    "interpretation": "10x sensitivity study only; not a measured or guaranteed hot-temperature leakage bound",
+    "min_open_margin_in_envelope_V": 0.336
+  },
+  "limitations": [
+    "No actual motherboard model supplied; measure idle voltage and pull-up/logic margin before deployment.",
+    "HXY document does not give a guaranteed hot-temperature leakage curve; temperature tests remain required.",
+    "100k pull-up is exploratory, outside accepted envelope; the 10uA stress fails some cases and is intentionally reported.",
+    "Pin3 must remain connected to this host reference. Floating, different-reference, above5V, or unusual bidirectional button circuits are not qualified.",
+    "This verifies DC false-press/release margin only; no ESD surge, EMC, thermal or real hardware certification."
+  ],
+  "sources": [
+    "https://jlcpcb.com/partdetail/HXYMOSFET-PESD5V0S2BT/C5451656",
+    "https://toshiba.semicon-storage.com/info/TLP3122A_datasheet_en_20230525.pdf?did=60353&prodName=TLP3122A",
+    "https://edc.intel.com/content/www/us/en/design/platforms/core-processor-series-3-datasheet-volume-1-of-2/001/integrated-pull-ups-and-pull-downs/"
+  ],
+  "rows": [
+    {
+      "supply_V": 3.0,
+      "pullup_ohm": 1000,
+      "tvs_leakage_uA": 1,
+      "total_leakage_uA": 3,
+      "closed": false,
+      "voltage_V": 2.997,
+      "threshold_V": 2.0999999999999996,
+      "margin_V": 0.897,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 3.0,
+      "pullup_ohm": 1000,
+      "tvs_leakage_uA": 1,
+      "total_leakage_uA": 2,
+      "closed": true,
+      "voltage_V": 0.006730357,
+      "threshold_V": 0.8999999999999999,
+      "margin_V": 0.89327,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 3.0,
+      "pullup_ohm": 1000,
+      "tvs_leakage_uA": 10,
+      "total_leakage_uA": 12,
+      "closed": false,
+      "voltage_V": 2.988,
+      "threshold_V": 2.0999999999999996,
+      "margin_V": 0.888,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 3.0,
+      "pullup_ohm": 1000,
+      "tvs_leakage_uA": 10,
+      "total_leakage_uA": 11,
+      "closed": true,
+      "voltage_V": 0.006710152,
+      "threshold_V": 0.8999999999999999,
+      "margin_V": 0.89329,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 3.0,
+      "pullup_ohm": 10000,
+      "tvs_leakage_uA": 1,
+      "total_leakage_uA": 3,
+      "closed": false,
+      "voltage_V": 2.97,
+      "threshold_V": 2.0999999999999996,
+      "margin_V": 0.87,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 3.0,
+      "pullup_ohm": 10000,
+      "tvs_leakage_uA": 1,
+      "total_leakage_uA": 2,
+      "closed": true,
+      "voltage_V": 0.0006703492,
+      "threshold_V": 0.8999999999999999,
+      "margin_V": 0.89933,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 3.0,
+      "pullup_ohm": 10000,
+      "tvs_leakage_uA": 10,
+      "total_leakage_uA": 12,
+      "closed": false,
+      "voltage_V": 2.88,
+      "threshold_V": 2.0999999999999996,
+      "margin_V": 0.78,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 3.0,
+      "pullup_ohm": 10000,
+      "tvs_leakage_uA": 10,
+      "total_leakage_uA": 11,
+      "closed": true,
+      "voltage_V": 0.0006501037,
+      "threshold_V": 0.8999999999999999,
+      "margin_V": 0.89935,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 3.0,
+      "pullup_ohm": 26000,
+      "tvs_leakage_uA": 1,
+      "total_leakage_uA": 3,
+      "closed": false,
+      "voltage_V": 2.922,
+      "threshold_V": 2.0999999999999996,
+      "margin_V": 0.822,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 3.0,
+      "pullup_ohm": 26000,
+      "tvs_leakage_uA": 1,
+      "total_leakage_uA": 2,
+      "closed": true,
+      "voltage_V": 0.0002550933,
+      "threshold_V": 0.8999999999999999,
+      "margin_V": 0.899745,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 3.0,
+      "pullup_ohm": 26000,
+      "tvs_leakage_uA": 10,
+      "total_leakage_uA": 12,
+      "closed": false,
+      "voltage_V": 2.688,
+      "threshold_V": 2.0999999999999996,
+      "margin_V": 0.588,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 3.0,
+      "pullup_ohm": 26000,
+      "tvs_leakage_uA": 10,
+      "total_leakage_uA": 11,
+      "closed": true,
+      "voltage_V": 0.0002348451,
+      "threshold_V": 0.8999999999999999,
+      "margin_V": 0.899765,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 3.0,
+      "pullup_ohm": 47000,
+      "tvs_leakage_uA": 1,
+      "total_leakage_uA": 3,
+      "closed": false,
+      "voltage_V": 2.859,
+      "threshold_V": 2.0999999999999996,
+      "margin_V": 0.759,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 3.0,
+      "pullup_ohm": 47000,
+      "tvs_leakage_uA": 1,
+      "total_leakage_uA": 2,
+      "closed": true,
+      "voltage_V": 0.0001391104,
+      "threshold_V": 0.8999999999999999,
+      "margin_V": 0.899861,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 3.0,
+      "pullup_ohm": 47000,
+      "tvs_leakage_uA": 10,
+      "total_leakage_uA": 12,
+      "closed": false,
+      "voltage_V": 2.436,
+      "threshold_V": 2.0999999999999996,
+      "margin_V": 0.336,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 3.0,
+      "pullup_ohm": 47000,
+      "tvs_leakage_uA": 10,
+      "total_leakage_uA": 11,
+      "closed": true,
+      "voltage_V": 0.0001188613,
+      "threshold_V": 0.8999999999999999,
+      "margin_V": 0.899881,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 3.0,
+      "pullup_ohm": 100000,
+      "tvs_leakage_uA": 1,
+      "total_leakage_uA": 3,
+      "closed": false,
+      "voltage_V": 2.7,
+      "threshold_V": 2.0999999999999996,
+      "margin_V": 0.6,
+      "in_accepted_envelope": false,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 3.0,
+      "pullup_ohm": 100000,
+      "tvs_leakage_uA": 1,
+      "total_leakage_uA": 2,
+      "closed": true,
+      "voltage_V": 6.299858e-05,
+      "threshold_V": 0.8999999999999999,
+      "margin_V": 0.899937,
+      "in_accepted_envelope": false,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 3.0,
+      "pullup_ohm": 100000,
+      "tvs_leakage_uA": 10,
+      "total_leakage_uA": 12,
+      "closed": false,
+      "voltage_V": 1.8,
+      "threshold_V": 2.0999999999999996,
+      "margin_V": -0.3,
+      "in_accepted_envelope": false,
+      "pass_logic": false
+    },
+    {
+      "supply_V": 3.0,
+      "pullup_ohm": 100000,
+      "tvs_leakage_uA": 10,
+      "total_leakage_uA": 11,
+      "closed": true,
+      "voltage_V": 4.274904e-05,
+      "threshold_V": 0.8999999999999999,
+      "margin_V": 0.899957,
+      "in_accepted_envelope": false,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 3.3,
+      "pullup_ohm": 1000,
+      "tvs_leakage_uA": 1,
+      "total_leakage_uA": 3,
+      "closed": false,
+      "voltage_V": 3.297,
+      "threshold_V": 2.3099999999999996,
+      "margin_V": 0.987,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 3.3,
+      "pullup_ohm": 1000,
+      "tvs_leakage_uA": 1,
+      "total_leakage_uA": 2,
+      "closed": true,
+      "voltage_V": 0.007403841,
+      "threshold_V": 0.9899999999999999,
+      "margin_V": 0.982596,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 3.3,
+      "pullup_ohm": 1000,
+      "tvs_leakage_uA": 10,
+      "total_leakage_uA": 12,
+      "closed": false,
+      "voltage_V": 3.288,
+      "threshold_V": 2.3099999999999996,
+      "margin_V": 0.978,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 3.3,
+      "pullup_ohm": 1000,
+      "tvs_leakage_uA": 10,
+      "total_leakage_uA": 11,
+      "closed": true,
+      "voltage_V": 0.007383637,
+      "threshold_V": 0.9899999999999999,
+      "margin_V": 0.982616,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 3.3,
+      "pullup_ohm": 10000,
+      "tvs_leakage_uA": 1,
+      "total_leakage_uA": 3,
+      "closed": false,
+      "voltage_V": 3.27,
+      "threshold_V": 2.3099999999999996,
+      "margin_V": 0.96,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 3.3,
+      "pullup_ohm": 10000,
+      "tvs_leakage_uA": 1,
+      "total_leakage_uA": 2,
+      "closed": true,
+      "voltage_V": 0.000737834,
+      "threshold_V": 0.9899999999999999,
+      "margin_V": 0.989262,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 3.3,
+      "pullup_ohm": 10000,
+      "tvs_leakage_uA": 10,
+      "total_leakage_uA": 12,
+      "closed": false,
+      "voltage_V": 3.18,
+      "threshold_V": 2.3099999999999996,
+      "margin_V": 0.87,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 3.3,
+      "pullup_ohm": 10000,
+      "tvs_leakage_uA": 10,
+      "total_leakage_uA": 11,
+      "closed": true,
+      "voltage_V": 0.0007175885,
+      "threshold_V": 0.9899999999999999,
+      "margin_V": 0.989282,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 3.3,
+      "pullup_ohm": 26000,
+      "tvs_leakage_uA": 1,
+      "total_leakage_uA": 3,
+      "closed": false,
+      "voltage_V": 3.222,
+      "threshold_V": 2.3099999999999996,
+      "margin_V": 0.912,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 3.3,
+      "pullup_ohm": 26000,
+      "tvs_leakage_uA": 1,
+      "total_leakage_uA": 2,
+      "closed": true,
+      "voltage_V": 0.0002810526,
+      "threshold_V": 0.9899999999999999,
+      "margin_V": 0.989719,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 3.3,
+      "pullup_ohm": 26000,
+      "tvs_leakage_uA": 10,
+      "total_leakage_uA": 12,
+      "closed": false,
+      "voltage_V": 2.988,
+      "threshold_V": 2.3099999999999996,
+      "margin_V": 0.678,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 3.3,
+      "pullup_ohm": 26000,
+      "tvs_leakage_uA": 10,
+      "total_leakage_uA": 11,
+      "closed": true,
+      "voltage_V": 0.0002608044,
+      "threshold_V": 0.9899999999999999,
+      "margin_V": 0.989739,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 3.3,
+      "pullup_ohm": 47000,
+      "tvs_leakage_uA": 1,
+      "total_leakage_uA": 3,
+      "closed": false,
+      "voltage_V": 3.159,
+      "threshold_V": 2.3099999999999996,
+      "margin_V": 0.849,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 3.3,
+      "pullup_ohm": 47000,
+      "tvs_leakage_uA": 1,
+      "total_leakage_uA": 2,
+      "closed": true,
+      "voltage_V": 0.0001534714,
+      "threshold_V": 0.9899999999999999,
+      "margin_V": 0.989847,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 3.3,
+      "pullup_ohm": 47000,
+      "tvs_leakage_uA": 10,
+      "total_leakage_uA": 12,
+      "closed": false,
+      "voltage_V": 2.736,
+      "threshold_V": 2.3099999999999996,
+      "margin_V": 0.426,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 3.3,
+      "pullup_ohm": 47000,
+      "tvs_leakage_uA": 10,
+      "total_leakage_uA": 11,
+      "closed": true,
+      "voltage_V": 0.0001332223,
+      "threshold_V": 0.9899999999999999,
+      "margin_V": 0.989867,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 3.3,
+      "pullup_ohm": 100000,
+      "tvs_leakage_uA": 1,
+      "total_leakage_uA": 3,
+      "closed": false,
+      "voltage_V": 3.0,
+      "threshold_V": 2.3099999999999996,
+      "margin_V": 0.69,
+      "in_accepted_envelope": false,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 3.3,
+      "pullup_ohm": 100000,
+      "tvs_leakage_uA": 1,
+      "total_leakage_uA": 2,
+      "closed": true,
+      "voltage_V": 6.974843e-05,
+      "threshold_V": 0.9899999999999999,
+      "margin_V": 0.98993,
+      "in_accepted_envelope": false,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 3.3,
+      "pullup_ohm": 100000,
+      "tvs_leakage_uA": 10,
+      "total_leakage_uA": 12,
+      "closed": false,
+      "voltage_V": 2.1,
+      "threshold_V": 2.3099999999999996,
+      "margin_V": -0.21,
+      "in_accepted_envelope": false,
+      "pass_logic": false
+    },
+    {
+      "supply_V": 3.3,
+      "pullup_ohm": 100000,
+      "tvs_leakage_uA": 10,
+      "total_leakage_uA": 11,
+      "closed": true,
+      "voltage_V": 4.949889e-05,
+      "threshold_V": 0.9899999999999999,
+      "margin_V": 0.989951,
+      "in_accepted_envelope": false,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 5.0,
+      "pullup_ohm": 1000,
+      "tvs_leakage_uA": 1,
+      "total_leakage_uA": 3,
+      "closed": false,
+      "voltage_V": 4.997,
+      "threshold_V": 3.5,
+      "margin_V": 1.497,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 5.0,
+      "pullup_ohm": 1000,
+      "tvs_leakage_uA": 1,
+      "total_leakage_uA": 2,
+      "closed": true,
+      "voltage_V": 0.01122025,
+      "threshold_V": 1.5,
+      "margin_V": 1.48878,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 5.0,
+      "pullup_ohm": 1000,
+      "tvs_leakage_uA": 10,
+      "total_leakage_uA": 12,
+      "closed": false,
+      "voltage_V": 4.988,
+      "threshold_V": 3.5,
+      "margin_V": 1.488,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 5.0,
+      "pullup_ohm": 1000,
+      "tvs_leakage_uA": 10,
+      "total_leakage_uA": 11,
+      "closed": true,
+      "voltage_V": 0.01120005,
+      "threshold_V": 1.5,
+      "margin_V": 1.4888,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 5.0,
+      "pullup_ohm": 10000,
+      "tvs_leakage_uA": 1,
+      "total_leakage_uA": 3,
+      "closed": false,
+      "voltage_V": 4.97,
+      "threshold_V": 3.5,
+      "margin_V": 1.47,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 5.0,
+      "pullup_ohm": 10000,
+      "tvs_leakage_uA": 1,
+      "total_leakage_uA": 2,
+      "closed": true,
+      "voltage_V": 0.001120248,
+      "threshold_V": 1.5,
+      "margin_V": 1.49888,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 5.0,
+      "pullup_ohm": 10000,
+      "tvs_leakage_uA": 10,
+      "total_leakage_uA": 12,
+      "closed": false,
+      "voltage_V": 4.88,
+      "threshold_V": 3.5,
+      "margin_V": 1.38,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 5.0,
+      "pullup_ohm": 10000,
+      "tvs_leakage_uA": 10,
+      "total_leakage_uA": 11,
+      "closed": true,
+      "voltage_V": 0.001100002,
+      "threshold_V": 1.5,
+      "margin_V": 1.4989,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 5.0,
+      "pullup_ohm": 26000,
+      "tvs_leakage_uA": 1,
+      "total_leakage_uA": 3,
+      "closed": false,
+      "voltage_V": 4.922,
+      "threshold_V": 3.5,
+      "margin_V": 1.422,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 5.0,
+      "pullup_ohm": 26000,
+      "tvs_leakage_uA": 1,
+      "total_leakage_uA": 2,
+      "closed": true,
+      "voltage_V": 0.0004281553,
+      "threshold_V": 1.5,
+      "margin_V": 1.499572,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 5.0,
+      "pullup_ohm": 26000,
+      "tvs_leakage_uA": 10,
+      "total_leakage_uA": 12,
+      "closed": false,
+      "voltage_V": 4.688,
+      "threshold_V": 3.5,
+      "margin_V": 1.188,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 5.0,
+      "pullup_ohm": 26000,
+      "tvs_leakage_uA": 10,
+      "total_leakage_uA": 11,
+      "closed": true,
+      "voltage_V": 0.000407907,
+      "threshold_V": 1.5,
+      "margin_V": 1.499592,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 5.0,
+      "pullup_ohm": 47000,
+      "tvs_leakage_uA": 1,
+      "total_leakage_uA": 3,
+      "closed": false,
+      "voltage_V": 4.859,
+      "threshold_V": 3.5,
+      "margin_V": 1.359,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 5.0,
+      "pullup_ohm": 47000,
+      "tvs_leakage_uA": 1,
+      "total_leakage_uA": 2,
+      "closed": true,
+      "voltage_V": 0.0002348505,
+      "threshold_V": 1.5,
+      "margin_V": 1.499765,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 5.0,
+      "pullup_ohm": 47000,
+      "tvs_leakage_uA": 10,
+      "total_leakage_uA": 12,
+      "closed": false,
+      "voltage_V": 4.436,
+      "threshold_V": 3.5,
+      "margin_V": 0.936,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 5.0,
+      "pullup_ohm": 47000,
+      "tvs_leakage_uA": 10,
+      "total_leakage_uA": 11,
+      "closed": true,
+      "voltage_V": 0.0002146014,
+      "threshold_V": 1.5,
+      "margin_V": 1.499785,
+      "in_accepted_envelope": true,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 5.0,
+      "pullup_ohm": 100000,
+      "tvs_leakage_uA": 1,
+      "total_leakage_uA": 3,
+      "closed": false,
+      "voltage_V": 4.7,
+      "threshold_V": 3.5,
+      "margin_V": 1.2,
+      "in_accepted_envelope": false,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 5.0,
+      "pullup_ohm": 100000,
+      "tvs_leakage_uA": 1,
+      "total_leakage_uA": 2,
+      "closed": true,
+      "voltage_V": 0.0001079976,
+      "threshold_V": 1.5,
+      "margin_V": 1.499892,
+      "in_accepted_envelope": false,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 5.0,
+      "pullup_ohm": 100000,
+      "tvs_leakage_uA": 10,
+      "total_leakage_uA": 12,
+      "closed": false,
+      "voltage_V": 3.8,
+      "threshold_V": 3.5,
+      "margin_V": 0.3,
+      "in_accepted_envelope": false,
+      "pass_logic": true
+    },
+    {
+      "supply_V": 5.0,
+      "pullup_ohm": 100000,
+      "tvs_leakage_uA": 10,
+      "total_leakage_uA": 11,
+      "closed": true,
+      "voltage_V": 8.774803e-05,
+      "threshold_V": 1.5,
+      "margin_V": 1.499912,
+      "in_accepted_envelope": false,
+      "pass_logic": true
+    }
+  ]
+}

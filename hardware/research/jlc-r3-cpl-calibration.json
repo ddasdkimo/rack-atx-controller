@@ -1,11 +1,11 @@
 {
-  "status": "PREVIEW TRIAL 4 — NOT FOR PRODUCTION",
+  "status": "PREVIEW TRIAL 5 — HXY TVS substitution; NOT FOR PRODUCTION",
   "date": "2026-10-15",
   "manufacturing_ready": false,
   "board_sha256": "3351fc01286a8f864a5495cbc13865fb3866de1b18c28b6d9712be0e0d33f4f3",
   "native_cpl_sha256": "96895275459a239e20f3f6fd5eea72e89943231fbe581a3e2f0048159b3ef91d",
   "origin_note": "J01–J10/J101/J102/J103/J104/J105 trial XY uses bbox centre of numbered pad centres (including numbered shield pads). Native CAD is unchanged. Other references retain native anchors. Supplier review remains required.",
-  "rotation_note": "Per-MPN visual calibration. U2 restored to native0; U1/U3/U4/U5/U6/U7 minus90; D1 plus180. Not a universal KiCad/JLC rule.",
+  "rotation_note": "Per-MPN visual calibration. U2 restored to native0; U1/U3/U4/U5/U6/U7 minus90; D1 plus180. Not a universal KiCad/JLC rule. HXY C5451656 D2-D21 +180 based on actual D3 model, not a generic SOT23 rule. Full-board Trial5 preview confirms20models and D2/D12 both orientation classes; no web manual movement applied.",
   "corrections": [
     {
       "ref": "D1",
@@ -335,13 +335,158 @@
       "dx_mm": 1.4975,
       "dy_mm": 0,
       "rotation_delta_deg": 0
+    },
+    {
+      "ref": "D2",
+      "code": "C5451656",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "D3",
+      "code": "C5451656",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "D4",
+      "code": "C5451656",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "D5",
+      "code": "C5451656",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "D6",
+      "code": "C5451656",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "D7",
+      "code": "C5451656",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "D8",
+      "code": "C5451656",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "D9",
+      "code": "C5451656",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "D10",
+      "code": "C5451656",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "D11",
+      "code": "C5451656",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "D12",
+      "code": "C5451656",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "D13",
+      "code": "C5451656",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "D14",
+      "code": "C5451656",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "D15",
+      "code": "C5451656",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "D16",
+      "code": "C5451656",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "D17",
+      "code": "C5451656",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "D18",
+      "code": "C5451656",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "D19",
+      "code": "C5451656",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "D20",
+      "code": "C5451656",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
+    },
+    {
+      "ref": "D21",
+      "code": "C5451656",
+      "dx_mm": 0.0,
+      "dy_mm": 0.0,
+      "rotation_delta_deg": 180.0
     }
   ],
   "pending": [
-    "C2841440 D2–D21 has a checker-placeholder model in JLC preview: no per-MPN orientation evidence. Removed unverified SOT-23 +180 trial; retained native angles pending supplier confirmation. Pin3 must face the host-reference pad; pins1/2 face isolated switch lines.",
     "J105 exact supplier anchor and full pin correspondence",
     "QFN factory DFM and selected Economic through-hole process acceptance",
     "Final review of the factory-resolved frozen candidate by the same CLI"
   ],
-  "independent_preview_review": "Trial4 arithmetic, completeness, native-pad centres and reproducibility passed; final supplier qualification pending."
+  "independent_preview_review": "SameCLI HXY bounded review passed:20newrotations,reproducible export,60DCcases,BOM/quote. Final factory-resolved review still required.",
+  "preview_evidence": [
+    "hxy-trial5-all20-overview.png",
+    "hxy-trial5-d2-pin1.png",
+    "hxy-trial5-d12-pin1.png"
+  ],
+  "review_evidence": "hardware/validation/hxy-peer-review.json"
 }

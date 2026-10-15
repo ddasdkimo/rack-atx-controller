@@ -249,7 +249,7 @@
     "prefer_assembly_catalog_parts": true,
     "stock_verified": true,
     "fabrication_ready": false,
-    "notes": "300 electrical components + four M3 holes; 100x110 mm two-layer R.3. Both boards ERC/DRC/unconnected zero; Gerber/drill and native BOM/CPL parity reviewed. Trial4 supplier corrections independently checked, supplemental IC/header previews complete. Factory direction/process acceptance and final same-CLI review remain pending.",
+    "notes": "300 electrical components + four M3 holes; 100x110mm two-layer R.3. Both boards ERC/DRC/unconnected zero; native CAD/copper unchanged. Trial5 adds20HXY per-MPN rotations; all20models visible and both orientation classes checked. Bounded3-5V/47kohm leakage analysis passes60DC cases. J105/QFN/EconomicTH factory gates and final same-CLI review remain.",
     "stock_check_date": "2026-10-15 quote; not reserved"
   },
   "electronics": [
@@ -305,9 +305,9 @@
     {
       "role": "按鍵 ESD 保護",
       "mpn": "PESD5V0S2BT",
-      "code": "C2841440",
+      "code": "C5451656",
       "qty": 20,
-      "url": "https://jlcpcb.com/partdetail/C2841440"
+      "url": "https://jlcpcb.com/partdetail/C5451656"
     },
     {
       "role": "每台 POWER／RESET 驅動燈",
@@ -341,8 +341,8 @@
     "batches": [
       {
         "boards": 2,
-        "parts_total_usd": 69.74,
-        "parts_per_board_usd": 34.87,
+        "parts_total_usd": 69.26,
+        "parts_per_board_usd": 34.63,
         "assembly_labor_total_usd": 6.62,
         "setup_stencil_confirmation_manual_setup_usd": 13.74,
         "feeder_usd_range": [
@@ -354,12 +354,12 @@
           9.84
         ],
         "subtotal_range_usd": [
-          139.44,
-          158.28
+          138.96,
+          157.8
         ],
         "per_controller_range_usd": [
-          69.72,
-          79.14
+          69.48,
+          78.9
         ],
         "pcb_quantity_purchased": 5,
         "spare_unpopulated_pcbs": 3,
@@ -374,8 +374,8 @@
       },
       {
         "boards": 5,
-        "parts_total_usd": 162.38,
-        "parts_per_board_usd": 32.48,
+        "parts_total_usd": 162.04,
+        "parts_per_board_usd": 32.41,
         "assembly_labor_total_usd": 16.56,
         "setup_stencil_confirmation_manual_setup_usd": 13.74,
         "feeder_usd_range": [
@@ -387,12 +387,12 @@
           12.3
         ],
         "subtotal_range_usd": [
-          246.93,
-          263.31
+          246.59,
+          262.97
         ],
         "per_controller_range_usd": [
-          49.39,
-          52.66
+          49.32,
+          52.59
         ],
         "pcb_quantity_purchased": 5,
         "spare_unpopulated_pcbs": 0,
@@ -450,10 +450,10 @@
         "lead_days": 2,
         "dfm_accepted": false,
         "quantity": 5,
-        "five_board_materials_usd": 171.68,
+        "five_board_materials_usd": 171.34,
         "five_board_assembled_estimate_usd": [
-          256.23,
-          272.61
+          255.89,
+          272.27
         ]
       },
       {
@@ -463,10 +463,10 @@
         "lead_days": 3,
         "dfm_accepted": false,
         "quantity": 5,
-        "five_board_materials_usd": 189.58,
+        "five_board_materials_usd": 189.24,
         "five_board_assembled_estimate_usd": [
-          274.13,
-          290.51
+          273.79,
+          290.17
         ]
       },
       {
@@ -476,16 +476,16 @@
         "lead_days": 3,
         "dfm_accepted": false,
         "quantity": 5,
-        "five_board_materials_usd": 245.37,
+        "five_board_materials_usd": 245.03,
         "five_board_assembled_estimate_usd": [
-          329.92,
-          346.3
+          329.58,
+          345.96
         ]
       }
     ],
     "board_options_observed_date": "2026-10-15",
     "observed_quote": {
-      "observed_at": "2026-10-15T07:23:00+08:00",
+      "observed_at": "2026-10-15T10:46:00+08:00",
       "quantity": 5,
       "assembly_type": "Economic, Top",
       "finish": "ENIG 1uin",
@@ -493,12 +493,12 @@
       "parts_skus": 46,
       "parts_per_board": 300,
       "pcb_usd": 28.25,
-      "parts_usd": 169.19,
-      "parts_and_pcb_usd": 197.44,
+      "parts_usd": 168.86,
+      "parts_and_pcb_usd": 197.11,
       "assembly_related_usd": 78.37,
-      "pcba_with_parts_usd": 247.56,
-      "total_ex_shipping_tax_usd": 275.81,
-      "per_board_ex_shipping_tax_usd": 55.162,
+      "pcba_with_parts_usd": 247.23,
+      "total_ex_shipping_tax_usd": 275.48,
+      "per_board_ex_shipping_tax_usd": 55.096,
       "pcb_breakdown_usd": {
         "engineering": 4,
         "boards": 5.3,
@@ -521,12 +521,13 @@
       "assembly_lead_time_display": "2–3 days, $0 extra",
       "factory_qualified": false,
       "order_placed": false,
-      "evidence_screenshot": "jlc-r3-economic-5pcs-20261015.png"
+      "evidence_screenshot": "hxy-trial5-combined-cart.png",
+      "supplier_cpl": "controller-cpl-jlc-trial5.csv"
     },
     "combined_observed_quote": {
-      "observed_at": "2026-10-15T09:30:36.313779+08:00",
+      "observed_at": "2026-10-15T10:46:00+08:00",
       "currency": "USD",
-      "status": "Authenticated JLCPCB 50-adapter quote and combined cart freight estimate; not ordered",
+      "status": "Authenticated HXY controller refresh and unchanged50-adapter cart; combined SF freight observed; not ordered",
       "scope": {
         "controllers": 5,
         "passive_adapters": 50,
@@ -537,9 +538,9 @@
       "controller": {
         "quantity": 5,
         "pcb_usd": 28.25,
-        "components_usd": 169.19,
+        "components_usd": 168.86,
         "assembly_related_usd": 78.37,
-        "total_usd": 275.81
+        "total_usd": 275.48
       },
       "adapter": {
         "quantity": 50,
@@ -614,11 +615,11 @@
       },
       "combined": {
         "pcb_usd": 46.1,
-        "components_usd": 192.23,
+        "components_usd": 191.9,
         "assembly_related_usd": 100.58,
-        "manufacturing_total_usd": 338.91,
+        "manufacturing_total_usd": 338.58,
         "freight_usd": 12.21,
-        "subtotal_with_freight_usd": 351.12,
+        "subtotal_with_freight_usd": 350.79,
         "packed_weight_kg": 2.52,
         "destination": "Taiwan",
         "carrier": "SF Express (Outside Guangdong）",
@@ -656,9 +657,10 @@
         "Firmware flashing and functional commissioning"
       ],
       "release_note": "Factory DFM/support replies and final same-CLI review still pending; prices do not authorize production.",
-      "supersedes": "jlc-r3-combined-quote-10adapters-20261015.json (historical quote: only one ten-host set of adapters)"
+      "supersedes": "jlc-r3-combined-quote-10adapters-20261015.json (historical quote: only one ten-host set of adapters)",
+      "evidence_screenshot": "hxy-trial5-combined-cart.png"
     },
-    "one_board_parts_usd": 35.91,
+    "one_board_parts_usd": 35.67,
     "procurement_preference": "Normal lead time, one-sided Economic assembly, no expedite; choose cheaper available freight at checkout. No time-based discount assumed."
   },
   "layout_study": {
@@ -5249,9 +5251,9 @@
       "value": "TLP3122A(TPL,E",
       "classification": "Extended",
       "quantity_per_board": 20,
-      "unit_usd": 0.7994,
-      "per_board_usd": 15.988,
-      "batch_total_usd": 79.94,
+      "unit_usd": 0.799,
+      "per_board_usd": 15.98,
+      "batch_total_usd": 79.9,
       "source": "https://jlcpcb.com/partdetail/C4153843",
       "purchased_for_five": 100,
       "extra_quantity": 0,
@@ -5265,9 +5267,9 @@
       "value": "S10B-PHDSS(LF)(SN)",
       "classification": "Extended",
       "quantity_per_board": 10,
-      "unit_usd": 0.3679,
-      "per_board_usd": 3.679,
-      "batch_total_usd": 18.395,
+      "unit_usd": 0.3677,
+      "per_board_usd": 3.6770000000000005,
+      "batch_total_usd": 18.385,
       "source": "https://jlcpcb.com/partdetail/C161672",
       "purchased_for_five": 50,
       "extra_quantity": 0,
@@ -5281,9 +5283,9 @@
       "value": "ESP32-S3FN8",
       "classification": "Extended",
       "quantity_per_board": 1,
-      "unit_usd": 3.3377000000000003,
-      "per_board_usd": 3.3377000000000003,
-      "batch_total_usd": 16.6885,
+      "unit_usd": 3.3359,
+      "per_board_usd": 3.3359,
+      "batch_total_usd": 16.6795,
       "source": "https://jlcpcb.com/partdetail/C2913196",
       "purchased_for_five": 5,
       "extra_quantity": 0,
@@ -5297,9 +5299,9 @@
       "value": "W5500",
       "classification": "Extended",
       "quantity_per_board": 1,
-      "unit_usd": 2.7994,
-      "per_board_usd": 2.7994,
-      "batch_total_usd": 13.997,
+      "unit_usd": 2.8190999999999997,
+      "per_board_usd": 2.8190999999999997,
+      "batch_total_usd": 14.0955,
       "source": "https://jlcpcb.com/partdetail/C32843",
       "purchased_for_five": 5,
       "extra_quantity": 0,
@@ -5313,9 +5315,9 @@
       "value": "HR911105A",
       "classification": "Extended",
       "quantity_per_board": 1,
-      "unit_usd": 1.7195,
-      "per_board_usd": 1.7195,
-      "batch_total_usd": 8.5975,
+      "unit_usd": 1.7185,
+      "per_board_usd": 1.7185,
+      "batch_total_usd": 8.5925,
       "source": "https://jlcpcb.com/partdetail/C12074",
       "purchased_for_five": 5,
       "extra_quantity": 0,
@@ -5329,9 +5331,9 @@
       "value": "AP63203WU-7",
       "classification": "Extended",
       "quantity_per_board": 1,
-      "unit_usd": 1.1827999999999999,
-      "per_board_usd": 1.1827999999999999,
-      "batch_total_usd": 5.914,
+      "unit_usd": 1.1821,
+      "per_board_usd": 1.1821,
+      "batch_total_usd": 5.9105,
       "source": "https://jlcpcb.com/partdetail/C780769",
       "purchased_for_five": 5,
       "extra_quantity": 0,
@@ -5341,14 +5343,14 @@
       "key": "esd",
       "description": "訊號 ESD 保護",
       "mpn": "PESD5V0S2BT",
-      "code": "C2841440",
+      "code": "C5451656",
       "value": "PESD5V0S2BT",
       "classification": "Extended",
       "quantity_per_board": 20,
-      "unit_usd": 0.034300000000000004,
-      "per_board_usd": 0.7134400000000001,
-      "batch_total_usd": 3.5672,
-      "source": "https://jlcpcb.com/partdetail/C2841440",
+      "unit_usd": 0.0309,
+      "per_board_usd": 0.64272,
+      "batch_total_usd": 3.2136,
+      "source": "https://jlcpcb.com/partdetail/HXYMOSFET-PESD5V0S2BT/C5451656",
       "purchased_for_five": 104,
       "extra_quantity": 4,
       "price_basis": "JLC authenticated 5-board PCBA quote 2026-10-15; purchase quantities include displayed overage"
@@ -5361,9 +5363,9 @@
       "value": "22u",
       "classification": "Basic",
       "quantity_per_board": 2,
-      "unit_usd": 0.2372,
-      "per_board_usd": 0.4744,
-      "batch_total_usd": 2.372,
+      "unit_usd": 0.2371,
+      "per_board_usd": 0.4742,
+      "batch_total_usd": 2.371,
       "source": "https://jlcpcb.com/partdetail/C45783",
       "purchased_for_five": 10,
       "extra_quantity": 0,
@@ -5377,9 +5379,9 @@
       "value": "PRTR5V0U2X,215",
       "classification": "Extended",
       "quantity_per_board": 1,
-      "unit_usd": 0.4079,
-      "per_board_usd": 0.4079,
-      "batch_total_usd": 2.0395,
+      "unit_usd": 0.4077,
+      "per_board_usd": 0.4077,
+      "batch_total_usd": 2.0385,
       "source": "https://jlcpcb.com/partdetail/C12333",
       "purchased_for_five": 5,
       "extra_quantity": 0,
@@ -5409,9 +5411,9 @@
       "value": "74HC595D,118",
       "classification": "Basic",
       "quantity_per_board": 3,
-      "unit_usd": 0.1133,
-      "per_board_usd": 0.3399,
-      "batch_total_usd": 1.6995,
+      "unit_usd": 0.1132,
+      "per_board_usd": 0.3396,
+      "batch_total_usd": 1.698,
       "source": "https://jlcpcb.com/partdetail/C5947",
       "purchased_for_five": 15,
       "extra_quantity": 0,
@@ -5425,9 +5427,9 @@
       "value": "MC14541BDR2G",
       "classification": "Extended",
       "quantity_per_board": 1,
-      "unit_usd": 0.30169999999999997,
-      "per_board_usd": 0.30169999999999997,
-      "batch_total_usd": 1.5085,
+      "unit_usd": 0.3015,
+      "per_board_usd": 0.3015,
+      "batch_total_usd": 1.5075,
       "source": "https://jlcpcb.com/partdetail/C7292",
       "purchased_for_five": 5,
       "extra_quantity": 0,
@@ -5441,9 +5443,9 @@
       "value": "MF-MSMF150/24X-2 1.5A",
       "classification": "Extended",
       "quantity_per_board": 1,
-      "unit_usd": 0.1971,
-      "per_board_usd": 0.27593999999999996,
-      "batch_total_usd": 1.3797,
+      "unit_usd": 0.197,
+      "per_board_usd": 0.2758,
+      "batch_total_usd": 1.379,
       "source": "https://jlcpcb.com/partdetail/C78695",
       "purchased_for_five": 7,
       "extra_quantity": 2,
@@ -5505,9 +5507,9 @@
       "value": "TYPE-C-31-M-12",
       "classification": "Extended",
       "quantity_per_board": 1,
-      "unit_usd": 0.1863,
-      "per_board_usd": 0.1863,
-      "batch_total_usd": 0.9315,
+      "unit_usd": 0.1862,
+      "per_board_usd": 0.1862,
+      "batch_total_usd": 0.931,
       "source": "https://jlcpcb.com/partdetail/C165948",
       "purchased_for_five": 5,
       "extra_quantity": 0,

@@ -1,8 +1,10 @@
 {
   "date": "2026-10-15",
-  "status": "Observed authenticated Economic PCBA quote, all 46 SKUs selected; not an order",
+  "observed_at": "2026-10-15T10:46:00+08:00",
+  "status": "Authenticated Economic quote; HXY C5451656 selected, all46SKUs/300refs; cart saved, no order",
   "quantity": 5,
-  "parts_total_usd": 169.19,
+  "parts_total_usd": 168.86,
+  "raw_line_total_usd": 168.8641,
   "parts": [
     {
       "code": "C15850",
@@ -57,7 +59,7 @@
       "installed_per_board": 2,
       "purchased_for_five": 10,
       "extra_quantity": 0,
-      "total_usd": 2.372,
+      "total_usd": 2.371,
       "classification": "基礎型",
       "matched_description": "CL21A226MAQNNNE\nC45783\n22uF 25V X5R ±20% 0805 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
     },
@@ -185,12 +187,12 @@
       "installed_per_board": 1,
       "purchased_for_five": 5,
       "extra_quantity": 0,
-      "total_usd": 2.0395,
+      "total_usd": 2.0385,
       "classification": "擴展型",
       "matched_description": "PRTR5V0U2X,215\nC12333\n-40℃~+85℃ 100nA 17V 1pF 2 2.5A@8/20us 5.5V 9V ESD IEC 61000-4-2 Unidirectional SOT-143 ESD and Surge Protection (TVS/ESD) ROHS"
     },
     {
-      "code": "C2841440",
+      "code": "C5451656",
       "designators": [
         "D2",
         "D3",
@@ -216,9 +218,9 @@
       "installed_per_board": 20,
       "purchased_for_five": 104,
       "extra_quantity": 4,
-      "total_usd": 3.5672,
+      "total_usd": 3.2136,
       "classification": "擴展型",
-      "matched_description": "PESD5V0S2BT\nC2841440\n10A@8/20us 10V 5V 6.4V 60nA 7pF、15pF ESD IEC 61000-4-2、IEC 61000-4-5、IEC 61000-4-4 SOT-23 ESD and Surge Protection (TVS/ESD) ROHS"
+      "matched_description": "PESD5V0S2BT\nC5451656\n-55℃~+125℃ 100W 11A 1uA 2 20pF 5V 6V 9V Bidirectional ESD IEC 61000-4-2、IEC 61000-4-4 SOT-23 ESD and Surge Protection (TVS/ESD) ROHS"
     },
     {
       "code": "C2286",
@@ -272,7 +274,7 @@
       "installed_per_board": 1,
       "purchased_for_five": 7,
       "extra_quantity": 2,
-      "total_usd": 1.3797,
+      "total_usd": 1.379,
       "classification": "擴展型",
       "matched_description": "MF-MSMF150/24X-2\nC78695\n-40℃~+85℃ 120mΩ 1W 20A 24V 3.2mm 30mΩ 5.4mm 1812 Resettable Fuses ROHS"
     },
@@ -293,7 +295,7 @@
       "installed_per_board": 10,
       "purchased_for_five": 50,
       "extra_quantity": 0,
-      "total_usd": 18.395,
+      "total_usd": 18.385,
       "classification": "擴展型",
       "matched_description": "S10B-PHDSS(LF)(SN)\nC161672\n-25℃~+85℃ 10P 11.9mm 2 250V 2mm 2mm 2x5P 3A 5 5mm 9mm Copper alloy Glass fiber reinforced PA66 PHD Right Angle Tin UL94V-0 White Push-Pull,P=2mm Wire To Board Connector ROHS"
     },
@@ -330,7 +332,7 @@
       "installed_per_board": 1,
       "purchased_for_five": 5,
       "extra_quantity": 0,
-      "total_usd": 0.9315,
+      "total_usd": 0.931,
       "classification": "擴展型",
       "matched_description": "TYPE-C-31-M-12\nC165948\n-30℃~+80℃ 1 10,000 cycles 16P 20V 5A 7.35mm Female Surface Mount, Right Angle Type-C SMD USB Connectors ROHS"
     },
@@ -342,7 +344,7 @@
       "installed_per_board": 1,
       "purchased_for_five": 5,
       "extra_quantity": 0,
-      "total_usd": 8.5975,
+      "total_usd": 8.5925,
       "classification": "擴展型",
       "matched_description": "HR911105A\nC12074\n0℃~+70℃ 1 Filtered Gold Non-PoE Phosphor bronze RJ45 Jack Right Angle Shielded With LED 插件 Ethernet Connectors / Modular Connectors (RJ45 RJ11) ROHS"
     },
@@ -701,7 +703,7 @@
       "installed_per_board": 1,
       "purchased_for_five": 5,
       "extra_quantity": 0,
-      "total_usd": 5.914,
+      "total_usd": 5.9105,
       "classification": "擴展型",
       "matched_description": "AP63203WU-7\nC780769\n-40℃~+85℃@(TA) 1 1.1MHz 22uA 2A 3.3V 3.8V~32V Buck Built-in Fixed Overcurrent Protection、Light load efficient mode、Cycle-by-cycle current limiting、Hiccup current limiting、EMI optimization (spread spectrum) Step-down type Yes TSOT-23-6 DC-DC Converters ROHS"
     },
@@ -713,7 +715,7 @@
       "installed_per_board": 1,
       "purchased_for_five": 5,
       "extra_quantity": 0,
-      "total_usd": 16.6885,
+      "total_usd": 16.6795,
       "classification": "擴展型",
       "matched_description": "ESP32-S3FN8\nC2913196\nWatchdog reset、Software reset、Built-in general-purpose timer、Built-in temperature sensor、Touch function、True random number generator (TRNG)、Storage encryption、Infrared remote control QFN-56-EP(7x7) Microcontrollers (MCU/MPU/SOC) ROHS"
     },
@@ -725,7 +727,7 @@
       "installed_per_board": 1,
       "purchased_for_five": 5,
       "extra_quantity": 0,
-      "total_usd": 13.997,
+      "total_usd": 14.0955,
       "classification": "擴展型",
       "matched_description": "W5500\nC32843\n-40℃~+85℃ 10BASE-T、100BASE-TX 3.3V 32KB 8 SPI SPI Yes LQFP-48(7x7) Ethernet Controllers ROHS"
     },
@@ -739,7 +741,7 @@
       "installed_per_board": 3,
       "purchased_for_five": 15,
       "extra_quantity": 0,
-      "total_usd": 1.6995,
+      "total_usd": 1.698,
       "classification": "基礎型",
       "matched_description": "74HC595D,118\nC5947\n-40℃~+125℃ 1 100MHz 19ns@4.5V,50pF 2V~6V 74HC 8 Serial-to-Serial or Parallel Tri-State SOIC-16 Shift Registers ROHS"
     },
@@ -751,7 +753,7 @@
       "installed_per_board": 1,
       "purchased_for_five": 5,
       "extra_quantity": 0,
-      "total_usd": 1.5085,
+      "total_usd": 1.5075,
       "classification": "擴展型",
       "matched_description": "MC14541BDR2G\nC7292\n-55℃~+125℃ 3MHz 3V~18V SOIC-14 Timers / Counters ROHS"
     },
@@ -782,7 +784,7 @@
       "installed_per_board": 20,
       "purchased_for_five": 100,
       "extra_quantity": 0,
-      "total_usd": 79.94,
+      "total_usd": 79.9,
       "classification": "擴展型",
       "matched_description": "TLP3122A(TPL,E\nC4153843\n-40℃~+100℃ 1 Set Normally Open: 1A (SPST NO) 1.27V 1.4A 100us 250mΩ 2ms 3.75kV 400mW 50mA 60V DC SOP-4 Solid State Relays (MOS Output) ROHS"
     },

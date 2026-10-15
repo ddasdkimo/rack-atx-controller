@@ -2,7 +2,7 @@
   "date": "2026-10-15",
   "status": "PASS intended preview geometry and file integrity; NOT FOR PRODUCTION",
   "native_pcb_sha256": "3351fc01286a8f864a5495cbc13865fb3866de1b18c28b6d9712be0e0d33f4f3",
-  "trial_cpl_sha256": "a3b8cf7fc6a0e52f8075bc01206815f0c2ff7f0bdf80c15d7fe7be2d5877d393",
+  "trial_cpl_sha256": "5e8541d1e4b99522b3d2b6a2442cea3a89b224282cd046d4ae82cb415ab80358",
   "package_files_verified": 34,
   "zip_members_verified": 20,
   "references": 300,
@@ -11,6 +11,146 @@
   "other_native_anchors_checked": 285,
   "maximum_anchor_error_mm": 0.0,
   "supplemental_pin1_geometry": {
+    "D2": {
+      "delta_from_pad_bbox_center_mm": [
+        -0.9375,
+        0.95
+      ],
+      "CPL_rotation_deg": 180.0
+    },
+    "D3": {
+      "delta_from_pad_bbox_center_mm": [
+        -0.9375,
+        0.95
+      ],
+      "CPL_rotation_deg": 180.0
+    },
+    "D4": {
+      "delta_from_pad_bbox_center_mm": [
+        -0.9375,
+        0.95
+      ],
+      "CPL_rotation_deg": 180.0
+    },
+    "D5": {
+      "delta_from_pad_bbox_center_mm": [
+        -0.9375,
+        0.95
+      ],
+      "CPL_rotation_deg": 180.0
+    },
+    "D6": {
+      "delta_from_pad_bbox_center_mm": [
+        -0.9375,
+        0.95
+      ],
+      "CPL_rotation_deg": 180.0
+    },
+    "D7": {
+      "delta_from_pad_bbox_center_mm": [
+        -0.9375,
+        0.95
+      ],
+      "CPL_rotation_deg": 180.0
+    },
+    "D8": {
+      "delta_from_pad_bbox_center_mm": [
+        -0.9375,
+        0.95
+      ],
+      "CPL_rotation_deg": 180.0
+    },
+    "D9": {
+      "delta_from_pad_bbox_center_mm": [
+        -0.9375,
+        0.95
+      ],
+      "CPL_rotation_deg": 180.0
+    },
+    "D10": {
+      "delta_from_pad_bbox_center_mm": [
+        -0.9375,
+        0.95
+      ],
+      "CPL_rotation_deg": 180.0
+    },
+    "D11": {
+      "delta_from_pad_bbox_center_mm": [
+        -0.9375,
+        0.95
+      ],
+      "CPL_rotation_deg": 180.0
+    },
+    "D12": {
+      "delta_from_pad_bbox_center_mm": [
+        0.9375,
+        -0.95
+      ],
+      "CPL_rotation_deg": 0.0
+    },
+    "D13": {
+      "delta_from_pad_bbox_center_mm": [
+        0.9375,
+        -0.95
+      ],
+      "CPL_rotation_deg": 0.0
+    },
+    "D14": {
+      "delta_from_pad_bbox_center_mm": [
+        0.9375,
+        -0.95
+      ],
+      "CPL_rotation_deg": 0.0
+    },
+    "D15": {
+      "delta_from_pad_bbox_center_mm": [
+        0.9375,
+        -0.95
+      ],
+      "CPL_rotation_deg": 0.0
+    },
+    "D16": {
+      "delta_from_pad_bbox_center_mm": [
+        0.9375,
+        -0.95
+      ],
+      "CPL_rotation_deg": 0.0
+    },
+    "D17": {
+      "delta_from_pad_bbox_center_mm": [
+        0.9375,
+        -0.95
+      ],
+      "CPL_rotation_deg": 0.0
+    },
+    "D18": {
+      "delta_from_pad_bbox_center_mm": [
+        0.9375,
+        -0.95
+      ],
+      "CPL_rotation_deg": 0.0
+    },
+    "D19": {
+      "delta_from_pad_bbox_center_mm": [
+        0.9375,
+        -0.95
+      ],
+      "CPL_rotation_deg": 0.0
+    },
+    "D20": {
+      "delta_from_pad_bbox_center_mm": [
+        0.9375,
+        -0.95
+      ],
+      "CPL_rotation_deg": 0.0
+    },
+    "D21": {
+      "delta_from_pad_bbox_center_mm": [
+        0.9375,
+        -0.95
+      ],
+      "CPL_rotation_deg": 0.0
+    },
     "J102": {
       "delta_from_pad_bbox_center_mm": [
         -1.27,
@@ -302,121 +442,121 @@
     },
     {
       "ref": "D2",
-      "code": "C2841440",
+      "code": "C5451656",
       "anchor": "native",
       "error_mm": 0.0
     },
     {
       "ref": "D3",
-      "code": "C2841440",
+      "code": "C5451656",
       "anchor": "native",
       "error_mm": 0.0
     },
     {
       "ref": "D4",
-      "code": "C2841440",
+      "code": "C5451656",
       "anchor": "native",
       "error_mm": 0.0
     },
     {
       "ref": "D5",
-      "code": "C2841440",
+      "code": "C5451656",
       "anchor": "native",
       "error_mm": 0.0
     },
     {
       "ref": "D6",
-      "code": "C2841440",
+      "code": "C5451656",
       "anchor": "native",
       "error_mm": 0.0
     },
     {
       "ref": "D7",
-      "code": "C2841440",
+      "code": "C5451656",
       "anchor": "native",
       "error_mm": 0.0
     },
     {
       "ref": "D8",
-      "code": "C2841440",
+      "code": "C5451656",
       "anchor": "native",
       "error_mm": 0.0
     },
     {
       "ref": "D9",
-      "code": "C2841440",
+      "code": "C5451656",
       "anchor": "native",
       "error_mm": 0.0
     },
     {
       "ref": "D10",
-      "code": "C2841440",
+      "code": "C5451656",
       "anchor": "native",
       "error_mm": 0.0
     },
     {
       "ref": "D11",
-      "code": "C2841440",
+      "code": "C5451656",
       "anchor": "native",
       "error_mm": 0.0
     },
     {
       "ref": "D12",
-      "code": "C2841440",
+      "code": "C5451656",
       "anchor": "native",
       "error_mm": 0.0
     },
     {
       "ref": "D13",
-      "code": "C2841440",
+      "code": "C5451656",
       "anchor": "native",
       "error_mm": 0.0
     },
     {
       "ref": "D14",
-      "code": "C2841440",
+      "code": "C5451656",
       "anchor": "native",
       "error_mm": 0.0
     },
     {
       "ref": "D15",
-      "code": "C2841440",
+      "code": "C5451656",
       "anchor": "native",
       "error_mm": 0.0
     },
     {
       "ref": "D16",
-      "code": "C2841440",
+      "code": "C5451656",
       "anchor": "native",
       "error_mm": 0.0
     },
     {
       "ref": "D17",
-      "code": "C2841440",
+      "code": "C5451656",
       "anchor": "native",
       "error_mm": 0.0
     },
     {
       "ref": "D18",
-      "code": "C2841440",
+      "code": "C5451656",
       "anchor": "native",
       "error_mm": 0.0
     },
     {
       "ref": "D19",
-      "code": "C2841440",
+      "code": "C5451656",
       "anchor": "native",
       "error_mm": 0.0
     },
     {
       "ref": "D20",
-      "code": "C2841440",
+      "code": "C5451656",
       "anchor": "native",
       "error_mm": 0.0
     },
     {
       "ref": "D21",
-      "code": "C2841440",
+      "code": "C5451656",
       "anchor": "native",
       "error_mm": 0.0
     },
@@ -1850,7 +1990,7 @@
     }
   ],
   "limitations": [
-    "Factory library direction for C2841440 and exact J105 mapping remain unqualified.",
+    "Exact J105 supplier mapping and final factory-resolved review remain pending; HXY bounded review has separate evidence.",
     "Pad-centre parity does not certify physical assembly, QFN process or signal integrity."
   ],
   "manufacturing_ready": false

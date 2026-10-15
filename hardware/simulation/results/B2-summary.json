@@ -5,7 +5,7 @@
   "vendor_model": false,
   "hardware_correlated": false,
   "pass": true,
-  "circuit_sha256": "b3a777e74da47f35ede1a157c647bd9f833b7b381058343f84b508699f1d6ebe",
+  "circuit_sha256": "5bbc114ebe312162e145a14d1200e46ad064c53eae76d257424faeb9531bb466",
   "nominal_timeout_s": 15.073279999999999,
   "timer_pulse_range_s": [
     11.2598,

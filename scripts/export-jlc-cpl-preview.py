@@ -20,8 +20,8 @@ assert args.output.resolve() != source.resolve(), 'Never overwrite the native CP
 rows = list(csv.DictReader(source.open()))
 refs = {row['Designator'] for row in rows}
 assert len(rows) == len(refs) == 300
-bom = json.loads((ROOT/'hardware/research/jlc-r3-bom-quote.json').read_text())
-codes = {ref:part['code'] for part in bom['parts'] for ref in part['designators']}
+bom = list(csv.DictReader((ROOT/'hardware/bom/controller-jlc-bom.csv').open()))
+codes = {ref.strip():part['LCSC Part #'] for part in bom for ref in part['Designator'].split(',')}
 assert refs == set(codes)
 corrections = {rule['ref']:rule for rule in cal['corrections']}
 assert len(corrections) == len(cal['corrections']) and set(corrections) <= refs

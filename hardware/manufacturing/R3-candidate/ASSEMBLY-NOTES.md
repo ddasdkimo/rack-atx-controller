@@ -19,7 +19,7 @@ CPL uses mm, native absolute board origin, X right and Y up (negative values on 
 | MMBT3904 C20526 | B1/E2/C3 | Jiangsu Changjing original Rev2.1 p.1; native SOT-23 pin map matches. |
 | U1 AP63203WU-7 C780769 | FB1/EN2/VIN3/GND4/SW5/BST6 | Diodes original November2024 Rev3-2 p.1; native TSOT-23-6 pins match. |
 | D1 PRTR5V0U2X C12333 | GND1/I/O2/I/O3/VCC4 | Nexperia 1Apr2023 Rev4 p.2; native SOT-143 map matches. Larger pad1 is GND. |
-| Host PESD5V0S2BT C2841440 | Bidirectional channels pins1/2, common pin3 = that host's reference only | TECHPUBLIC original circuit p.1 visually verified. Never connect different host references or GND_CTRL together. |
+| Host HXY PESD5V0S2BT C5451656 | Bidirectional channels pins1/2, common pin3 = that host's reference only | HXY exact datasheet circuit/package visually verified; Trial5 supplier rotation +180 on D2-D21. Both orientation classes visually checked. Never connect different host references or GND_CTRL together. |
 | J105 HR911105A C12074 | Green A9/K10; yellow **K11/A12**. Native pin11 ETH_ACT_N, pin12 RJ_LED_Y_A. | HANRUN original schematic p.1 and component-side mechanical drawing p.3; 0.89 signal,1.02 LED,1.63 shield and3.25 locating holes match. |
 | Twenty TLP3122A | A1/K3, bilateral contact4/6 | Toshiba original SO6 land pattern checked in pre-release audit; 0.8×1.2 pads,2.54 pitch,6.3 opposing centres. |
 | J01–J10 S10B-PHDSS | Outward mating direction; custom harness pins1/2POWER,3/4RESET,9HOST_REF;5–8/10NC | JST PHD original drawing and all ten instances checked; see `hardware/validation/jst-phd-audit.json`. |

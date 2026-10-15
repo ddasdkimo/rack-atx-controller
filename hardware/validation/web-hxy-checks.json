@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-15",
+  "status": "PASS local build and desktop/mobile browser checks",
+  "views": [
+    "BOM HXY section and updated combined quote",
+    "3D overview",
+    "3D controller",
+    "PC01",
+    "PC02"
+  ],
+  "viewports": [
+    "default936x838",
+    "390x844"
+  ],
+  "public_data": "HXY C5451656;168.86parts/275.48controller/350.79combined",
+  "geometry": "Unchanged native PCB and wiring; supplier CPL model-only rotation correction",
+  "limits": [
+    "Simplified mechanical models",
+    "Factory DFM and final review pending"
+  ]
+}

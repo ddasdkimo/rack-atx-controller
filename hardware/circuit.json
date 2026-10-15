@@ -1779,7 +1779,7 @@
     },
     "esd": {
       "key": "esd",
-      "code": "C2841440",
+      "code": "C5451656",
       "value": "PESD5V0S2BT",
       "footprint": "Package_TO_SOT_SMD:SOT-23",
       "pins": [
@@ -1800,52 +1800,53 @@
         ]
       ],
       "kind": "ic",
-      "note": "TECH PUBLIC bidirectional dual TVS; verify pin 3 common on vendor drawing.",
+      "note": "HXY bidirectional dual TVS; pin3 host reference, pins1/2 button pair. Leakage envelope: 3-5V active-low, pull-up <=47k; see hxy-button-leakage validation. JLC supplier rotation +180deg; native footprint unchanged.",
       "catalog": {
-        "id": "C2841440",
+        "id": "C5451656",
         "mpn": "PESD5V0S2BT",
-        "manufacturer": "TECH PUBLIC",
+        "manufacturer": "HXY MOSFET",
         "package": "SOT-23",
         "classification": "Extended",
         "assembly": "SMT Assembly",
         "pcba_type": "Economic and Standard",
-        "stock": 2806,
-        "loss": 4,
+        "stock": 21243,
+        "loss": 5,
         "prices": [
           {
             "min_qty": 1,
-            "max_qty": 99,
-            "usd": 0.0429
+            "max_qty": 199,
+            "usd": 0.0309
           },
           {
-            "min_qty": 100,
-            "max_qty": 299,
-            "usd": 0.0343
+            "min_qty": 200,
+            "max_qty": 599,
+            "usd": 0.0243
           },
           {
-            "min_qty": 300,
+            "min_qty": 600,
             "max_qty": 2999,
-            "usd": 0.0299
+            "usd": 0.0206
           },
           {
             "min_qty": 3000,
-            "max_qty": 5999,
-            "usd": 0.0257
-          },
-          {
-            "min_qty": 6000,
             "max_qty": 8999,
-            "usd": 0.023
+            "usd": 0.0181
           },
           {
             "min_qty": 9000,
+            "max_qty": 20999,
+            "usd": 0.0162
+          },
+          {
+            "min_qty": 21000,
             "max_qty": -1,
-            "usd": 0.0217
+            "usd": 0.0152
           }
         ],
-        "source": "https://jlcpcb.com/partdetail/C2841440",
-        "checked_at": "2026-10-13T15:22:35.277548+00:00",
-        "status": "public JLC page observed; recheck at ordering"
+        "source": "https://jlcpcb.com/partdetail/HXYMOSFET-PESD5V0S2BT/C5451656",
+        "checked_at": "2026-10-15T01:56:00+00:00",
+        "status": "JLC catalog and sparse assembly preview observed; full replacement quote in progress; not reserved",
+        "datasheet_sha256": "60fcd6c846a27cfe1ff6079ab938ff8c0120d38a37899fe9cf41f8523bcdd324"
       }
     },
     "hc595": {

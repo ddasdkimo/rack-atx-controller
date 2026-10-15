@@ -3,7 +3,7 @@
   "source": "https://cart.jlcpcb.com/quote",
   "status": "Authenticated normal Economic quote observed; supplier placement calibration and QFN DFM not accepted",
   "uploaded_pcb_sha256": "3351fc01286a8f864a5495cbc13865fb3866de1b18c28b6d9712be0e0d33f4f3",
-  "current_candidate_change": "Final Gerber ZIP re-uploaded; CPL native origins/rotations require separate JLC calibration. PCB copper/placement unchanged.",
+  "current_candidate_change": "D2-D21 changed to HXY C5451656; Trial5 per-MPN rotation+180; PCB/copper/Gerber/nativeCPL unchanged.",
   "configuration": {
     "quantity": 5,
     "size_mm": [
@@ -50,7 +50,7 @@
     "horizontal_plating_additional": 3.44
   },
   "pcba_quote": {
-    "observed_at": "2026-10-15T07:23:00+08:00",
+    "observed_at": "2026-10-15T10:46:00+08:00",
     "quantity": 5,
     "assembly_type": "Economic, Top",
     "finish": "ENIG 1uin",
@@ -58,12 +58,12 @@
     "parts_skus": 46,
     "parts_per_board": 300,
     "pcb_usd": 28.25,
-    "parts_usd": 169.19,
-    "parts_and_pcb_usd": 197.44,
+    "parts_usd": 168.86,
+    "parts_and_pcb_usd": 197.11,
     "assembly_related_usd": 78.37,
-    "pcba_with_parts_usd": 247.56,
-    "total_ex_shipping_tax_usd": 275.81,
-    "per_board_ex_shipping_tax_usd": 55.162,
+    "pcba_with_parts_usd": 247.23,
+    "total_ex_shipping_tax_usd": 275.48,
+    "per_board_ex_shipping_tax_usd": 55.096,
     "pcb_breakdown_usd": {
       "engineering": 4,
       "boards": 5.3,
@@ -86,14 +86,15 @@
     "assembly_lead_time_display": "2–3 days, $0 extra",
     "factory_qualified": false,
     "order_placed": false,
-    "evidence_screenshot": "jlc-r3-economic-5pcs-20261015.png"
+    "evidence_screenshot": "hxy-trial5-combined-cart.png",
+    "supplier_cpl": "controller-cpl-jlc-trial5.csv"
   },
   "freight_tax": null,
   "notes": [
-    "Current quote includes all 46 matched SKUs and through-hole manual assembly charges. No order/cart/production release.",
+    "All46SKUs/300refs selected, including160 C25803 resistors; quoted and saved to existing cart only, no order/production release.",
     "Parts include UI purchase quantities and overage; remaining MOQ/price changes/DFM adjustments require recheck.",
     "Freight, taxes, passive adapters, harnesses, enclosure, external PSU and firmware commissioning are excluded.",
-    "Native CPL is not supplier-calibrated: connector centres and library zero angles need correction; preview remains a release blocker.",
+    "Trial5 adds20HXY rotations to prior47corrections. All20models visible; D2/D12 closeups establish both orientation classes. J105 supplier anchor and final review remain pending.",
     "QFN exposed-pad vias/stencil/finish still require factory DFM. Lower HASL option remains unqualified.",
     "Historical bare-board options omit the optional $1.05 production-file confirmation included in the current quote."
   ],

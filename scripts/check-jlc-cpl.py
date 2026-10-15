@@ -2,7 +2,7 @@
 """Read-only native-pad/CPL and package integrity check. Run with KiCad Python.
 
 This checks the intended preview convention, not JLC's unpublished library
-convention. Passing cannot qualify the missing TVS model or release production.
+convention. Passing cannot qualify factory processes or release production.
 """
 import argparse
 import csv
@@ -58,14 +58,15 @@ bom_rows = list(csv.DictReader((package / 'controller/controller-bom.csv').open(
 bom_refs = [ref.strip() for row in bom_rows for ref in row['Designator'].split(',')]
 assert len(bom_refs) == len(set(bom_refs)) == len(trial) == 300
 assert set(native) == set(trial) == set(bom_refs)
-quote = json.loads((ROOT / 'hardware/research/jlc-r3-bom-quote.json').read_text())
-code_pairs = [(r, part['code']) for part in quote['parts'] for r in part['designators']]
+manufacturing_codes = {ref.strip(): row['LCSC Part #'] for row in bom_rows for ref in row['Designator'].split(',')}
+bom_rows = list(csv.DictReader((ROOT / 'hardware/bom/controller-jlc-bom.csv').open()))
+code_pairs = [(r.strip(), part['LCSC Part #']) for part in bom_rows for r in part['Designator'].split(',')]
 assert len(code_pairs) == len(dict(code_pairs)) == 300
 codes = dict(code_pairs)
 assert set(codes) == set(trial) and len(set(codes.values())) == 46
 for row in bom_rows:
     for ref in row['Designator'].split(','):
-        assert codes[ref.strip()] == row['LCSC Part #'], 'Manufacturing BOM SKU mismatch'
+        assert manufacturing_codes[ref.strip()] == row['LCSC Part #'], 'Manufacturing BOM SKU mismatch'
 rules = {r['ref']: r for r in cal['corrections']}
 assert len(rules) == len(cal['corrections']) and set(rules) <= set(trial)
 board = pcb.LoadBoard(str(ROOT / 'hardware/cad/B2/rack-atx-controller.kicad_pcb'))
@@ -96,7 +97,7 @@ for ref, row in trial.items():
     assert 0 <= float(row['Rotation']) < 360
     assert abs(float(row['Rotation']) - (f.GetOrientationDegrees() + rule['rotation_delta_deg']) % 360) < 0.000001
     results.append({'ref': ref, 'code': codes[ref], 'anchor': 'numbered-pad bbox' if ref in connectors else 'native', 'error_mm': round(error, 9)})
-    if ref in {'U4', 'U5', 'U6', 'J102', 'J103'}:
+    if ref in {'U4', 'U5', 'U6', 'J102', 'J103'} | {f'D{i}' for i in range(2, 22)}:
         p1 = next(p for p in pads if p.GetNumber() == '1')
         dx, dy = mm(p1.GetPosition().x) - center[0], -mm(p1.GetPosition().y) - center[1]
         pin1[ref] = {'delta_from_pad_bbox_center_mm': [round(dx, 6), round(dy, 6)], 'CPL_rotation_deg': float(row['Rotation'])}
@@ -109,7 +110,7 @@ report = {
     'connector_centers_checked': len(connectors), 'other_native_anchors_checked': len(results) - len(connectors),
     'maximum_anchor_error_mm': max(r['error_mm'] for r in results),
     'supplemental_pin1_geometry': pin1, 'components': results,
-    'limitations': ['Factory library direction for C2841440 and exact J105 mapping remain unqualified.', 'Pad-centre parity does not certify physical assembly, QFN process or signal integrity.'],
+    'limitations': ['Exact J105 supplier mapping and final factory-resolved review remain pending; HXY bounded review has separate evidence.', 'Pad-centre parity does not certify physical assembly, QFN process or signal integrity.'],
     'manufacturing_ready': False,
 }
 args.output.parent.mkdir(parents=True, exist_ok=True)

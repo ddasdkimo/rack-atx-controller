@@ -15,8 +15,8 @@
   "batches": [
     {
       "boards": 2,
-      "parts_total_usd": 69.74,
-      "parts_per_board_usd": 34.87,
+      "parts_total_usd": 69.26,
+      "parts_per_board_usd": 34.63,
       "assembly_labor_total_usd": 6.62,
       "setup_stencil_confirmation_manual_setup_usd": 13.74,
       "feeder_usd_range": [
@@ -28,12 +28,12 @@
         9.84
       ],
       "subtotal_range_usd": [
-        139.44,
-        158.28
+        138.96,
+        157.8
       ],
       "per_controller_range_usd": [
-        69.72,
-        79.14
+        69.48,
+        78.9
       ],
       "pcb_quantity_purchased": 5,
       "spare_unpopulated_pcbs": 3,
@@ -48,8 +48,8 @@
     },
     {
       "boards": 5,
-      "parts_total_usd": 162.38,
-      "parts_per_board_usd": 32.48,
+      "parts_total_usd": 162.04,
+      "parts_per_board_usd": 32.41,
       "assembly_labor_total_usd": 16.56,
       "setup_stencil_confirmation_manual_setup_usd": 13.74,
       "feeder_usd_range": [
@@ -61,12 +61,12 @@
         12.3
       ],
       "subtotal_range_usd": [
-        246.93,
-        263.31
+        246.59,
+        262.97
       ],
       "per_controller_range_usd": [
-        49.39,
-        52.66
+        49.32,
+        52.59
       ],
       "pcb_quantity_purchased": 5,
       "spare_unpopulated_pcbs": 0,
@@ -124,10 +124,10 @@
       "lead_days": 2,
       "dfm_accepted": false,
       "quantity": 5,
-      "five_board_materials_usd": 171.68,
+      "five_board_materials_usd": 171.34,
       "five_board_assembled_estimate_usd": [
-        256.23,
-        272.61
+        255.89,
+        272.27
       ]
     },
     {
@@ -137,10 +137,10 @@
       "lead_days": 3,
       "dfm_accepted": false,
       "quantity": 5,
-      "five_board_materials_usd": 189.58,
+      "five_board_materials_usd": 189.24,
       "five_board_assembled_estimate_usd": [
-        274.13,
-        290.51
+        273.79,
+        290.17
       ]
     },
     {
@@ -150,16 +150,16 @@
       "lead_days": 3,
       "dfm_accepted": false,
       "quantity": 5,
-      "five_board_materials_usd": 245.37,
+      "five_board_materials_usd": 245.03,
       "five_board_assembled_estimate_usd": [
-        329.92,
-        346.3
+        329.58,
+        345.96
       ]
     }
   ],
   "board_options_observed_date": "2026-10-15",
   "observed_quote": {
-    "observed_at": "2026-10-15T07:23:00+08:00",
+    "observed_at": "2026-10-15T10:46:00+08:00",
     "quantity": 5,
     "assembly_type": "Economic, Top",
     "finish": "ENIG 1uin",
@@ -167,12 +167,12 @@
     "parts_skus": 46,
     "parts_per_board": 300,
     "pcb_usd": 28.25,
-    "parts_usd": 169.19,
-    "parts_and_pcb_usd": 197.44,
+    "parts_usd": 168.86,
+    "parts_and_pcb_usd": 197.11,
     "assembly_related_usd": 78.37,
-    "pcba_with_parts_usd": 247.56,
-    "total_ex_shipping_tax_usd": 275.81,
-    "per_board_ex_shipping_tax_usd": 55.162,
+    "pcba_with_parts_usd": 247.23,
+    "total_ex_shipping_tax_usd": 275.48,
+    "per_board_ex_shipping_tax_usd": 55.096,
     "pcb_breakdown_usd": {
       "engineering": 4,
       "boards": 5.3,
@@ -195,12 +195,13 @@
     "assembly_lead_time_display": "2–3 days, $0 extra",
     "factory_qualified": false,
     "order_placed": false,
-    "evidence_screenshot": "jlc-r3-economic-5pcs-20261015.png"
+    "evidence_screenshot": "hxy-trial5-combined-cart.png",
+    "supplier_cpl": "controller-cpl-jlc-trial5.csv"
   },
   "combined_observed_quote": {
-    "observed_at": "2026-10-15T09:30:36.313779+08:00",
+    "observed_at": "2026-10-15T10:46:00+08:00",
     "currency": "USD",
-    "status": "Authenticated JLCPCB 50-adapter quote and combined cart freight estimate; not ordered",
+    "status": "Authenticated HXY controller refresh and unchanged50-adapter cart; combined SF freight observed; not ordered",
     "scope": {
       "controllers": 5,
       "passive_adapters": 50,
@@ -211,9 +212,9 @@
     "controller": {
       "quantity": 5,
       "pcb_usd": 28.25,
-      "components_usd": 169.19,
+      "components_usd": 168.86,
       "assembly_related_usd": 78.37,
-      "total_usd": 275.81
+      "total_usd": 275.48
     },
     "adapter": {
       "quantity": 50,
@@ -288,11 +289,11 @@
     },
     "combined": {
       "pcb_usd": 46.1,
-      "components_usd": 192.23,
+      "components_usd": 191.9,
       "assembly_related_usd": 100.58,
-      "manufacturing_total_usd": 338.91,
+      "manufacturing_total_usd": 338.58,
       "freight_usd": 12.21,
-      "subtotal_with_freight_usd": 351.12,
+      "subtotal_with_freight_usd": 350.79,
       "packed_weight_kg": 2.52,
       "destination": "Taiwan",
       "carrier": "SF Express (Outside Guangdong）",
@@ -330,8 +331,9 @@
       "Firmware flashing and functional commissioning"
     ],
     "release_note": "Factory DFM/support replies and final same-CLI review still pending; prices do not authorize production.",
-    "supersedes": "jlc-r3-combined-quote-10adapters-20261015.json (historical quote: only one ten-host set of adapters)"
+    "supersedes": "jlc-r3-combined-quote-10adapters-20261015.json (historical quote: only one ten-host set of adapters)",
+    "evidence_screenshot": "hxy-trial5-combined-cart.png"
   },
-  "one_board_parts_usd": 35.91,
+  "one_board_parts_usd": 35.67,
   "procurement_preference": "Normal lead time, one-sided Economic assembly, no expedite; choose cheaper available freight at checkout. No time-based discount assumed."
 }

@@ -25,7 +25,7 @@ J01–J10 是自訂 JST PHD 10 pin，**不是主機板通用 F_PANEL 或 Etherne
 
 ## 成本範圍
 
-2026-10-15 在登入 JLC 後取得五片正常 Economic 報價：**裸板 US$28.25、零件 US$169.19、組裝相關費 US$78.37，合計 US$275.81**，平均 US$55.16／片。板子＋零件為 US$197.44。採 ENIG 1µin／蓋油，一般交期、不加急；未含運稅、轉接板、線束、外殼與供電配件。QFN 工藝及 CPL 校正仍待確認，不代表已可生產。詳見 [實際報價](hardware/JLCPCB.md) 及 [加工檔審閱包](hardware/manufacturing/R3-candidate)。
+2026-10-15 在登入 JLC 後取得五片正常 Economic 報價：**裸板 US$28.25、零件 US$168.86、組裝相關費 US$78.37，合計 US$275.48**，平均 US$55.10／片。板子＋零件為 US$197.11。採 ENIG 1µin／蓋油，一般交期、不加急；未含運稅、轉接板、線束、外殼與供電配件。QFN 工藝及 CPL 校正仍待確認，不代表已可生產。詳見 [實際報價](hardware/JLCPCB.md) 及 [加工檔審閱包](hardware/manufacturing/R3-candidate)。
 
 ## 重建
 

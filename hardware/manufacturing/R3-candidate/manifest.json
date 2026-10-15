@@ -12,7 +12,7 @@
       "native_drc": 0,
       "native_unconnected": 0,
       "files": {
-        "controller/controller-bom.csv": "88da58936dfdb3a60b68efbbd333e616b3df40ab214bd0c11cfafbab36933189",
+        "controller/controller-bom.csv": "6d57db77fd7cfec8b9aabfbb56af29217e68a441e3769e8b11563d95a2c483b6",
         "controller/controller-cpl.csv": "96895275459a239e20f3f6fd5eea72e89943231fbe581a3e2f0048159b3ef91d",
         "controller/native-pos.csv": "d3acd31588961a892acf7c3267245fe1a58604af6807d4230794c6cb46ca08f9",
         "controller/rack-atx-controller-B_Cu.gbl": "036aaeef8c83fddf713b336435a25c8ff6526c3404cdc0c31e1a9228aa017dc7",
@@ -61,10 +61,16 @@
     }
   },
   "pending": [
-    "JLCPCB full Economic quote and component/placement preview",
     "QFN via-in-pad process, finish and stencil DFM acceptance",
+    "J105 supplier pin/anchor convention and Economic through-hole process confirmation",
     "Final independent frozen-package review",
-    "Prototype functional verification"
+    "Prototype functional and motherboard compatibility verification"
   ],
-  "circuit_sha256": "b3a777e74da47f35ede1a157c647bd9f833b7b381058343f84b508699f1d6ebe"
+  "circuit_sha256": "5bbc114ebe312162e145a14d1200e46ad064c53eae76d257424faeb9531bb466",
+  "part_substitution": "2026-10-15: D2-D21 TECH PUBLIC C2841440 -> HXY C5451656. Copper/placement/Gerber/native CPL unchanged; HXY supplier CPL is Trial5.",
+  "supplier_preview": {
+    "controller_cpl": "controller-cpl-jlc-trial5.csv",
+    "sha256": "5e8541d1e4b99522b3d2b6a2442cea3a89b224282cd046d4ae82cb415ab80358",
+    "status": "HXY model alignment checked; J105/process/final reviewer gates remain; NOT FOR PRODUCTION"
+  }
 }

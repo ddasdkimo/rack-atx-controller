@@ -1,6 +1,6 @@
 {
   "date": "2026-10-15",
-  "status": "Supplemental IC/header preview completed; factory direction/process gates remain; NOT FOR PRODUCTION",
+  "status": "Historical Trial4 supplemental checks retained; current HXY Trial5 evidence is hxy-cpl-preview-checks.json",
   "trial": "4",
   "trial_cpl_sha256": "a3b8cf7fc6a0e52f8075bc01206815f0c2ff7f0bdf80c15d7fe7be2d5877d393",
   "native_board_unchanged": true,
@@ -38,11 +38,12 @@
   "independent_review": {
     "completed": true,
     "frozen_manifest_sha256": "765f60e00126737eae5eaa7338f5759cf611d6c42bff8ba1a38ca7db35beaa6a",
-    "scope": "300refs/46SKUs,47changes,15nativepadcentres,repeatableexport; factorygates retained"
+    "scope": "300refs/46SKUs,47changes,15nativepadcentres,repeatableexport; factorygates retained; applies to Trial4 only, not HXY substitution"
   },
   "supplemental_evidence": [
     "hardware/research/jlc-r3-shift-registers.jpg",
     "hardware/research/jlc-r3-headers.jpg"
   ],
-  "native_geometry_audit": "hardware/validation/jlc-cpl-native-checks.json"
+  "native_geometry_audit": "hardware/validation/jlc-cpl-native-checks.json",
+  "superseded_by": "hardware/validation/hxy-cpl-preview-checks.json"
 }

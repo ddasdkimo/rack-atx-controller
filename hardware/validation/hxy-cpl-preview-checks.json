@@ -1,0 +1,49 @@
+{
+  "observed_at": "2026-10-15T10:46:00+08:00",
+  "status": "PASS geometry/model evidence within scope; not manufacturing release",
+  "cpl_sha256": "5e8541d1e4b99522b3d2b6a2442cea3a89b224282cd046d4ae82cb415ab80358",
+  "bom_sha256": "6d57db77fd7cfec8b9aabfbb56af29217e68a441e3769e8b11563d95a2c483b6",
+  "part": "HXY PESD5V0S2BT C5451656",
+  "references": [
+    "D2",
+    "D3",
+    "D4",
+    "D5",
+    "D6",
+    "D7",
+    "D8",
+    "D9",
+    "D10",
+    "D11",
+    "D12",
+    "D13",
+    "D14",
+    "D15",
+    "D16",
+    "D17",
+    "D18",
+    "D19",
+    "D20",
+    "D21"
+  ],
+  "all20_models_visible": true,
+  "closeup_refs": [
+    "D2",
+    "D12"
+  ],
+  "orientation_check": "D2 pin1 upper-left/pin2 lower-left/common3 right; D12 rotated180, pin1 lower-right/common3 left. Package pins align with native pad copper. Both orientation classes sampled visually; all20 coordinates/angles checked numerically.",
+  "cpl_changes_from_trial4": 20,
+  "cpl_changes_from_native": 67,
+  "remaining": [
+    "J105 supplier anchor/pin mapping",
+    "QFN process DFM",
+    "Economic TH process acceptance",
+    "Final same-CLI review"
+  ],
+  "evidence": [
+    "hardware/research/hxy-trial5-all20-overview.png",
+    "hardware/research/hxy-trial5-d2-pin1.png",
+    "hardware/research/hxy-trial5-d12-pin1.png"
+  ],
+  "independent_review": "hardware/validation/hxy-peer-review.json"
+}

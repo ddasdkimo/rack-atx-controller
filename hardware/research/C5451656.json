@@ -1,0 +1,47 @@
+{
+  "id": "C5451656",
+  "mpn": "PESD5V0S2BT",
+  "manufacturer": "HXY MOSFET",
+  "package": "SOT-23",
+  "classification": "Extended",
+  "assembly": "SMT Assembly",
+  "pcba_type": "Economic and Standard",
+  "stock": 21243,
+  "loss": 5,
+  "prices": [
+    {
+      "min_qty": 1,
+      "max_qty": 199,
+      "usd": 0.0309
+    },
+    {
+      "min_qty": 200,
+      "max_qty": 599,
+      "usd": 0.0243
+    },
+    {
+      "min_qty": 600,
+      "max_qty": 2999,
+      "usd": 0.0206
+    },
+    {
+      "min_qty": 3000,
+      "max_qty": 8999,
+      "usd": 0.0181
+    },
+    {
+      "min_qty": 9000,
+      "max_qty": 20999,
+      "usd": 0.0162
+    },
+    {
+      "min_qty": 21000,
+      "max_qty": -1,
+      "usd": 0.0152
+    }
+  ],
+  "source": "https://jlcpcb.com/partdetail/HXYMOSFET-PESD5V0S2BT/C5451656",
+  "checked_at": "2026-10-15T01:56:00+00:00",
+  "status": "JLC catalog and sparse assembly preview observed; full replacement quote in progress; not reserved",
+  "datasheet_sha256": "60fcd6c846a27cfe1ff6079ab938ff8c0120d38a37899fe9cf41f8523bcdd324"
+}
