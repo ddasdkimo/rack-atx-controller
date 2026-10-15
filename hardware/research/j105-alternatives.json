@@ -1,0 +1,92 @@
+{
+  "checked_at": "2026-10-15T11:10:37.738865+08:00",
+  "scope": "J105 alternative research only; no substitution or manufacturing qualification",
+  "decision": "Keep HANRUN HR911105A C12074. No verified drop-in replacement with a fully qualified supplier model was found among the candidates inspected.",
+  "original": {
+    "manufacturer": "HANRUN",
+    "mpn": "HR911105A",
+    "code": "C12074",
+    "quoted_qty": 5,
+    "quoted_line_usd": 8.5925,
+    "quoted_unit_usd": 1.7185,
+    "source": "jlc-r3-bom-quote.json",
+    "supplier_full_pin_anchor_qualification": "pending"
+  },
+  "candidates": [
+    {
+      "manufacturer": "HCTL",
+      "mpn": "HC612601A-M899-A",
+      "code": "C3021374",
+      "url": "https://jlcpcb.com/partdetail/HCTL-HC612601A_M899A/C3021374",
+      "class": "Extended",
+      "assembly": "Wave Soldering",
+      "pcba": "Economic and Standard",
+      "catalog_stock": 929,
+      "available_order_qty": 885,
+      "unit_usd_at_5": 1.5571,
+      "actual_sparse_preview_qty": 5,
+      "actual_sparse_preview_line_usd": 7.7855,
+      "five_piece_difference_usd": -0.807,
+      "model": "Actual JLC 3D body and two purple markers visible. 2D and 3D inspection did not establish all signal/LED pins or the correct supplier anchor. A visible body is not full pin qualification.",
+      "datasheet_sha256": "efbd9d49d9d563188348578cea502685776edf9c6bf606578d442bbdf352ddbd",
+      "datasheet_title_mpn": "HC913550A-M899-A-F406",
+      "datasheet_mpn_matches_catalog": false,
+      "electrical_note": "Linked drawing page3 has the same logical pin1-12 signal/LED assignment as HR911105A; exact catalogue-to-drawing identity remains unconfirmed.",
+      "mechanical_note": "Linked drawing p1: shield-hole spacing15.75mm vs HANRUN15.49mm; LED-to-locator row4.06mm vs4.90mm; locator drill3.20mm vs3.25mm. Cannot qualify as drop-in.",
+      "adopted": false,
+      "preview_evidence": "j105-hctl-m899-preview.png"
+    },
+    {
+      "manufacturer": "HCTL",
+      "mpn": "HC612601A-M894-A",
+      "code": "C3021369",
+      "url": "https://jlcpcb.com/partdetail/HCTL-HC612601A_M894A/C3021369",
+      "class": "Extended",
+      "assembly": "Wave Soldering",
+      "pcba": "Economic and Standard",
+      "catalog_stock": 167,
+      "available_order_qty": 166,
+      "unit_usd_at_5": 1.7838,
+      "model": "Not tested in PCBA viewer; rejected at electrical pinout stage. EasyEDA footprint availability alone is not assembly model proof.",
+      "datasheet_sha256": "93bf4dfe9b4142a5534962391bc533c0422e91f9f1406460f0fe754c76a86f20",
+      "datasheet_title_mpn": "HC911103A-M894-A",
+      "rejection": "Linked drawing p3 uses pin3 TX centre tap, pin6 RX centre tap, pins7/8 RX+/RX-. Existing board uses pin3 RX+,pin4 TX centre tap,pin5 RX centre tap,pin6 RX-. Not a direct replacement. PDF identity also differs from catalogue.",
+      "adopted": false
+    },
+    {
+      "manufacturer": "CND-tek",
+      "mpn": "HR911105A P",
+      "code": "C48392702",
+      "url": "https://jlcpcb.com/partdetail/CNDtek-HR911105AP/C48392702",
+      "class": "Extended",
+      "assembly": "Wave Soldering",
+      "pcba": "Economic and Standard",
+      "catalog_stock": 0,
+      "estimated_unit_usd": 1.9223,
+      "rejection": "No assembly stock; catalogue offers consignment/request quote. No exact datasheet visible, and actual supplier model was not qualified.",
+      "adopted": false
+    },
+    {
+      "manufacturer": "HCTL",
+      "mpn": "HC612601A-M893-A",
+      "code": "C3021368",
+      "url": "https://jlcpcb.com/partdetail/HCTL-HC911130A_M893A/C3021368",
+      "unit_usd_at_5": 2.462,
+      "catalog_stock": 7511,
+      "available_order_qty": 7155,
+      "rejection": "Higher price and catalogue schematic has a different multi-pair/16-pin assignment. Not pursued as a drop-in; no supplier-model qualification.",
+      "adopted": false
+    }
+  ],
+  "cost_limit": "Candidate prices are part-only observations. Sparse one-part preview is not a complete PCBA quote. Do not subtract its saving from the full cart as a final quotation.",
+  "unchanged": {
+    "controller_pcb_sha256": "3351fc01286a8f864a5495cbc13865fb3866de1b18c28b6d9712be0e0d33f4f3",
+    "production_bom": true,
+    "supplier_cpl": "Trial5",
+    "combined_cart_usd": 350.79,
+    "cart_items": "5 controllers + 50 assembled adapters, SF freight12.21USD",
+    "order_submitted": false,
+    "payment_made": false
+  },
+  "next": "Resolve existing J105 full pin/anchor/rotation with supplier. A replacement would require exact manufacturer drawing, footprint/pin verification, real placement preview, full BOM requote and review."
+}
