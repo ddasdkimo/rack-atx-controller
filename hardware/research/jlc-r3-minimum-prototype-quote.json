@@ -1,0 +1,210 @@
+{
+  "observed_at": "2026-10-15T11:39:45.726999+08:00",
+  "currency": "USD",
+  "status": "Actual authenticated JLC PCB/PCBA quote and combined cart freight; evaluation only, not a quantity decision or order",
+  "basis": {
+    "revision": "B.2 / R.3",
+    "controller_cpl": "controller-cpl-jlc-trial5.csv",
+    "adapter_cpl": "adapter-cpl-jlc-trial1.csv",
+    "service": "Economic, top side, all BOM parts selected",
+    "controller_finish": "ENIG, same existing via/paste design; factory acceptance pending",
+    "adapter_finish": "LeadFree HASL, deburring disabled to match baseline",
+    "shipping": "SF Express (Outside Guangdong), Taiwan, 3-5 business days",
+    "expedite_usd": 0,
+    "coupons_applied": false,
+    "minimum": "For each design: fabricate at least 5 bare boards, assemble as few as 2. Actual UI confirms this for both boards."
+  },
+  "baseline": {
+    "source": "jlc-r3-combined-quote.json",
+    "assembled_controllers": 5,
+    "assembled_adapters": 50,
+    "manufacturing_total_usd": 338.58,
+    "freight_usd": 12.21,
+    "subtotal_with_freight_usd": 350.79
+  },
+  "scenarios": [
+    {
+      "id": "minimum",
+      "controller": {
+        "pcb_quantity": 5,
+        "assembled_quantity": 2,
+        "unpopulated_quantity": 3,
+        "pcb_usd": 28.25,
+        "components_usd": 80.02,
+        "assembly_related_usd": 68.2,
+        "total_usd": 176.47,
+        "parts_skus": 46,
+        "components_per_board": 300,
+        "assembly_breakdown_usd": {
+          "engineering": 8.24,
+          "stencil": 1.55,
+          "extended_parts": 46.35,
+          "smt_assembly": 3.18,
+          "placement_confirmation": 0.45,
+          "manual_setup": 3.61,
+          "manual_assembly": 3.96,
+          "nitrogen": 0.86
+        }
+      },
+      "adapter": {
+        "pcb_quantity": 5,
+        "assembled_quantity": 2,
+        "unpopulated_quantity": 3,
+        "pcb_usd": 6.15,
+        "components_usd": 1.13,
+        "assembly_related_usd": 5.58,
+        "total_usd": 12.86,
+        "assembly_breakdown_usd": {
+          "engineering": 0,
+          "stencil": 0,
+          "placement_confirmation": 0.45,
+          "manual_setup": 3.61,
+          "manual_assembly": 0.66,
+          "nitrogen": 0.86
+        }
+      },
+      "combined": {
+        "pcb_usd": 34.4,
+        "components_usd": 81.15,
+        "assembly_related_usd": 73.78,
+        "total_usd": 189.33,
+        "freight_usd": 6.78,
+        "subtotal_with_freight_usd": 196.11,
+        "packed_weight_kg": 1.03,
+        "estimated_ship_date": "2026-10-19",
+        "savings_vs_full_lot_usd": 154.68,
+        "savings_percent": 44.09
+      },
+      "simultaneous_hosts_with_included_adapters": 2
+    },
+    {
+      "id": "ten_host_test",
+      "controller": {
+        "pcb_quantity": 5,
+        "assembled_quantity": 2,
+        "unpopulated_quantity": 3,
+        "pcb_usd": 28.25,
+        "components_usd": 80.02,
+        "assembly_related_usd": 68.2,
+        "total_usd": 176.47,
+        "parts_skus": 46,
+        "components_per_board": 300,
+        "assembly_breakdown_usd": {
+          "engineering": 8.24,
+          "stencil": 1.55,
+          "extended_parts": 46.35,
+          "smt_assembly": 3.18,
+          "placement_confirmation": 0.45,
+          "manual_setup": 3.61,
+          "manual_assembly": 3.96,
+          "nitrogen": 0.86
+        }
+      },
+      "adapter": {
+        "pcb_quantity": 10,
+        "assembled_quantity": 10,
+        "unpopulated_quantity": 0,
+        "pcb_usd": 7.15,
+        "components_usd": 5.66,
+        "assembly_related_usd": 8.35,
+        "total_usd": 21.16,
+        "assembly_breakdown_usd": {
+          "engineering": 0,
+          "stencil": 0,
+          "placement_confirmation": 0.45,
+          "manual_setup": 3.61,
+          "manual_assembly": 3.3,
+          "nitrogen": 0.99
+        }
+      },
+      "combined": {
+        "pcb_usd": 35.4,
+        "components_usd": 85.68,
+        "assembly_related_usd": 76.55,
+        "total_usd": 197.63,
+        "freight_usd": 6.78,
+        "subtotal_with_freight_usd": 204.41,
+        "packed_weight_kg": 1.09,
+        "estimated_ship_date": "2026-10-19",
+        "savings_vs_full_lot_usd": 146.38,
+        "savings_percent": 41.73
+      },
+      "simultaneous_hosts_with_included_adapters": 10
+    }
+  ],
+  "recommendation": "2 assembled controllers + 10 assembled adapters for one simultaneous ten-host test set and a spare controller. Adds USD8.30 over the absolute minimum; not selected by user.",
+  "constraints": [
+    "2 adapters cannot simultaneously connect all ten hosts; move them between ports for sequential testing.",
+    "Reduced quantity saves initial cash but retains feeder/setup fees; later production repeats setup and shipping.",
+    "All quotes exclude import tax/clearance, harnesses, motherboard leads, 5V supplies, enclosures, flashing and functional commissioning.",
+    "QFN/J105/TH factory questions and final same-CLI review remain open. Quantity reduction does not close them.",
+    "Controller has 5 fabricated boards but only 2 populated; 3 bare boards are not functional spares."
+  ],
+  "official_minimum_source": "https://jlcpcb.com/blog/reduce-pcb-assembly-cost-prototype",
+  "evidence": [
+    {
+      "name": "adapter-10-quote.txt",
+      "sha256": "13b6bcc3543badb1a3b7b61fb75ded08753ab7a2cdfcb20f07332586e6018cd4"
+    },
+    {
+      "name": "adapter-2-bom.txt",
+      "sha256": "2b5ffb354ac60bb38684bd174f1c6307146979eb9f43177d35674d93155a055f"
+    },
+    {
+      "name": "adapter-2-quote.png",
+      "sha256": "9f16a866979dfe8bd24a342e76ddf5a5648fbf7c9bcdf93497f833ec0e6b237d"
+    },
+    {
+      "name": "adapter-2-quote.txt",
+      "sha256": "a97c513fe0292c3b261f7ca17e31d7499b29d5e7d85929e9197ff15918145e94"
+    },
+    {
+      "name": "combined-2-plus-10-cart.png",
+      "sha256": "58fffc20c95e4b5bd88bb1eb7e211b46acb34df45ddc91fe3c07618147f34658"
+    },
+    {
+      "name": "combined-2-plus-10-cart.txt",
+      "sha256": "9af44d22bdb7878cc27b0a31b015a0188fa3cb6b5a7fc5db138ab26577b03535"
+    },
+    {
+      "name": "combined-2-plus-2-cart.png",
+      "sha256": "a2b7d931788f22d0530127d149067b9e91c1f2c32235ba8abfddeb3c96f6d63a"
+    },
+    {
+      "name": "combined-2-plus-2-cart.txt",
+      "sha256": "0905f7f6d3d9a6e81d5741cddddadaee68884b422a5c774f62c84c97401e76a6"
+    },
+    {
+      "name": "comparison-page.png",
+      "sha256": "bf8b839ab6b174e70864e6384a3e6fbd97fac863eff8017eef0918a52255733a"
+    },
+    {
+      "name": "controller-2-bom.txt",
+      "sha256": "ccc34e77e56a8a4fdb0608be36eb1bcfe188e0c738e5cab87970f4aacc04478f"
+    },
+    {
+      "name": "controller-2-quote.png",
+      "sha256": "7fe83629d76a9e5c7fb00e1d49ea97ca7dabb51228ff96e0b2e0ca22ab76e148"
+    },
+    {
+      "name": "controller-2-quote.txt",
+      "sha256": "6f39c8b3c54d793a706b8becd541c0403bdb034ff529e2ae08db629667ba1777"
+    },
+    {
+      "name": "restored-baseline-cart.png",
+      "sha256": "b4bd1a62f65d4f5b76146c92fc9d7cda2b68cee5de71158e45fefbce515ef131"
+    },
+    {
+      "name": "restored-baseline-cart.txt",
+      "sha256": "4fce9c5998e39f26908025908ad937592645129d7f3bfc5cb3eeb007958a638f"
+    }
+  ],
+  "cart_restored": {
+    "verified_at": "2026-10-15T11:41:48.694676+08:00",
+    "assembled_controllers": 5,
+    "assembled_adapters": 50,
+    "subtotal_with_freight_usd": 350.79,
+    "new_quantity_selected_by_user": false,
+    "ordered": false
+  }
+}
