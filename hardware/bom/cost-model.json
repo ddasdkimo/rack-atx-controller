@@ -198,14 +198,15 @@
     "evidence_screenshot": "jlc-r3-economic-5pcs-20261015.png"
   },
   "combined_observed_quote": {
-    "observed_at": "2026-10-15T08:50:00+08:00",
+    "observed_at": "2026-10-15T09:30:36.313779+08:00",
     "currency": "USD",
-    "status": "Authenticated JLCPCB quote/cart and pre-submit shipping preview; not ordered",
+    "status": "Authenticated JLCPCB 50-adapter quote and combined cart freight estimate; not ordered",
     "scope": {
       "controllers": 5,
-      "passive_adapters": 10,
+      "passive_adapters": 50,
       "adapter_connectors_per_board": 6,
-      "shipping": "Combined shipment after all items ready"
+      "shipping": "Combined shipment after all items ready",
+      "complete_ten_host_sets": 5
     },
     "controller": {
       "quantity": 5,
@@ -215,7 +216,7 @@
       "total_usd": 275.81
     },
     "adapter": {
-      "quantity": 10,
+      "quantity": 50,
       "size_mm": [
         26,
         34
@@ -226,15 +227,17 @@
       "finish": "LeadFree HASL",
       "solder_mask": "Green",
       "assembly": "Economic, Top, all 6 through-hole connectors",
-      "pcb_usd": 7.15,
-      "components_usd": 5.66,
-      "assembly_related_usd": 8.35,
-      "pcba_including_components_usd": 14.01,
-      "total_usd": 21.16,
-      "per_board_usd": 2.116,
+      "pcb_usd": 17.85,
+      "components_usd": 23.04,
+      "assembly_related_usd": 22.21,
+      "pcba_including_components_usd": 45.25,
+      "total_usd": 63.1,
+      "per_board_usd": 1.262,
       "pcb_breakdown_usd": {
-        "special_offer": 5,
-        "leadfree_hasl": 1.1,
+        "engineering": 8,
+        "leadfree_hasl": 5.2,
+        "film": 0.3,
+        "material": 3.3,
         "confirm_production_file": 1.05
       },
       "assembly_breakdown_usd": {
@@ -244,8 +247,8 @@
         "large_size": 0,
         "placement_confirmation": 0.45,
         "manual_labor_setup": 3.61,
-        "manual_assembly": 3.3,
-        "nitrogen_reflow": 0.99
+        "manual_assembly": 16.5,
+        "nitrogen_reflow": 1.65
       },
       "parts": [
         {
@@ -254,8 +257,8 @@
           "designators": [
             "JA1"
           ],
-          "quantity": 10,
-          "total_usd": 4.728,
+          "quantity": 50,
+          "total_usd": 18.385,
           "classification": "Extended",
           "source": "JLCPCB assembly catalog auto-matched and selected"
         },
@@ -269,8 +272,8 @@
             "JA5",
             "JA6"
           ],
-          "quantity": 50,
-          "total_usd": 0.93,
+          "quantity": 250,
+          "total_usd": 4.65,
           "classification": "Extended",
           "source": "JLCPCB assembly catalog auto-matched and selected"
         }
@@ -280,16 +283,17 @@
       "gerber_sha256": "aa09a822aefb4ce1e3da1e49bd87490efef19c2c89dc28ba428c7cf20b5d8d0c",
       "bom_sha256": "38ac2d99667f5d8767d293c6fe0bf9f679d006f5a890ddc7346ab62c9bdadff2",
       "native_cpl_sha256": "5ece7084fdad39d6130663a0d5b3dfbb5945dda833aee3285569737a7f583789",
-      "supplier_preview_cpl_sha256": "9c1d757fdb22a5c81a2a8444456ba7a73b99943626940ccf89032ec555a90b15"
+      "supplier_preview_cpl_sha256": "9c1d757fdb22a5c81a2a8444456ba7a73b99943626940ccf89032ec555a90b15",
+      "manufacturing_time": "PCB 5-6 days; assembly 3-4 days; no expedite"
     },
     "combined": {
-      "pcb_usd": 35.4,
-      "components_usd": 174.85,
-      "assembly_related_usd": 86.72,
-      "manufacturing_total_usd": 296.97,
-      "freight_usd": 6.78,
-      "subtotal_with_freight_usd": 303.75,
-      "packed_weight_kg": 1.41,
+      "pcb_usd": 46.1,
+      "components_usd": 192.23,
+      "assembly_related_usd": 100.58,
+      "manufacturing_total_usd": 338.91,
+      "freight_usd": 12.21,
+      "subtotal_with_freight_usd": 351.12,
+      "packed_weight_kg": 2.52,
       "destination": "Taiwan",
       "carrier": "SF Express (Outside Guangdong）",
       "carrier_transit": "3-5 business days",
@@ -299,33 +303,34 @@
       "tax_status": "JLC checkout states duties, taxes and carrier clearance fees collected at destination; no amount displayed. Not assumed zero.",
       "coupons_applied": false,
       "expedite_usd": 0,
-      "manufacturing_time": "PCB 24 hours at no additional charge; assembly 2-3 days",
-      "estimated_ship_date": "2026-10-18"
+      "manufacturing_time": "Controller PCB 24 hours + assembly 2-3 days; adapter PCB 5-6 days + assembly 3-4 days. Ship together after all ready.",
+      "estimated_ship_date": "2026-10-23"
     },
     "shipping_alternatives": [
       {
         "carrier": "SF Express (Outside Guangdong）",
-        "usd": 6.78,
+        "usd": 12.21,
         "transit": "3-5 business days"
       },
       {
         "carrier": "FedEx Express",
-        "usd": 21.58,
+        "usd": 28.19,
         "transit": "5-7 business days"
       },
       {
         "carrier": "DHL Express",
-        "usd": 41.23,
+        "usd": 60.76,
         "transit": "2-4 business days"
       }
     ],
     "exclusions": [
       "Import taxes and carrier clearance fees not displayed",
-      "10 controller-to-adapter harnesses, motherboard jumper leads",
+      "50 controller-to-adapter harnesses, motherboard jumper leads",
       "5 V power supply and enclosure",
       "Firmware flashing and functional commissioning"
     ],
-    "release_note": "Factory DFM/support replies and final same-CLI review still pending; prices do not authorize production."
+    "release_note": "Factory DFM/support replies and final same-CLI review still pending; prices do not authorize production.",
+    "supersedes": "jlc-r3-combined-quote-10adapters-20261015.json (historical quote: only one ten-host set of adapters)"
   },
   "one_board_parts_usd": 35.91,
   "procurement_preference": "Normal lead time, one-sided Economic assembly, no expedite; choose cheaper available freight at checkout. No time-based discount assumed."

@@ -70,7 +70,7 @@
   <hr>
   <div class="rack-detail">主控板代貼零件 · 每片支援 10 台 · <a href="https://rack-atx-controller-ddasdkimo.raidavid.chatgpt.site/bom.html" target="_blank" rel="noopener noreferrer">開啟完整 BOM 與每項價格 →</a></div>
   <div class="table-responsive"><table class="table table-sm"><thead><tr><th>功能</th><th>選定料號／JLC 編號</th><th>數量</th></tr></thead><tbody data-electronics></tbody></table></div>
-  <div class="rack-detail"><b>新增完整報價：5 片主控＋10 片轉接板（接頭代焊）＋順豐合併寄台灣＝US$303.75。</b>轉接板十片 US$21.16；運費 US$6.78。未含進口稅／清關費與線束配件，未下單。<a href="/bom.html#combined-quote" target="_blank">查看全部拆項 →</a></div>
+  <div class="rack-detail"><b>新增完整報價：5 片主控＋50 片轉接板（接頭代焊）＋順豐合併寄台灣＝US$351.12。</b>轉接板五十片 US$63.10；運費 US$12.21。未含進口稅／清關費與線束配件，未下單。<a href="/bom.html#combined-quote" target="_blank">查看全部拆項 →</a></div>
   <div class="rack-detail" id="cost-comparison">5 片中央板 · JLC 網頁完整估價 · USD</div>
   <div class="text-small">2026-10-15 已上傳最新版 Gerber、BOM 與 300 個座標；46 種零件全部配對。Economic 單面、ENIG、一般交期，不加急。</div>
   <div class="table-responsive"><table class="table table-sm tabular-nums"><thead><tr><th>5 片 PCB</th><th>5 片零件</th><th>組裝及相關費</th><th>全部焊好合計</th></tr></thead><tbody data-live-quote></tbody></table></div>
@@ -126,7 +126,7 @@
     qs('[data-board-options]').innerHTML=design.costs.board_options.map(o=>'<tr><th scope="row">'+o.label+'</th><td>'+money(o.bare_pcb_usd)+'</td><td>'+money(o.five_board_materials_usd)+'</td><td>'+range(o.five_board_assembled_estimate_usd)+'</td></tr>').join('');
     const breakdown=[['裸板（工藝待確認）',()=> '見工藝試算'],['上板零件',b=>money(b.parts_total_usd)],['開單／鋼網／確認／通孔開工',b=>money(b.setup_stencil_confirmation_manual_setup_usd)],['SMT＋通孔焊接工資',b=>money(b.assembly_labor_total_usd)],['延伸料上料',b=>range(b.feeder_usd_range)],['X-ray',b=>range(b.xray_usd_range)],['零件＋組裝小計（未含板費）',b=>range(b.subtotal_range_usd)],['運費／稅金／耗損／工藝追加',()=> '待報價']];
     qs('[data-cost-breakdown]').innerHTML=breakdown.map(([label,value])=>'<tr><th scope="row">'+label+'</th>'+design.costs.batches.map(b=>'<td>'+value(b)+'</td>').join('')+'</tr>').join('');
-    qs('[data-cost-note]').textContent='庫存核對：'+design.costs.catalog_checked_date+' · '+design.costs.basic_skus+' 種 Basic · '+design.costs.extended_smt_skus+' 種 SMT 延伸料。10 片轉接板已取得含接頭代焊實價 US$21.16，詳見完整費用頁。';
+    qs('[data-cost-note]').textContent='庫存核對：'+design.costs.catalog_checked_date+' · '+design.costs.basic_skus+' 種 Basic · '+design.costs.extended_smt_skus+' 種 SMT 延伸料。50 片轉接板已取得含接頭代焊實價 US$63.10，詳見完整費用頁。';
     qs('[data-legend]').innerHTML=design.functions.map(f=>'<span><i style="background:'+cssSeries(f.id)+'"></i>'+f.label+'</span>').join('');
     const pinlist=qs('[data-pinlist]');
     function updatePins(){pinlist.innerHTML=design.connector.pins.map(p=>'<div class="rack-pinitem" style="opacity:'+(state.signal==='all'||p.group===state.signal||p.group==='unused'?1:.35)+'"><span>'+p.pin+' · '+p.signal+'</span><span>'+(p.conductor||'')+'</span></div>').join('');}
