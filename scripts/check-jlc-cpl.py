@@ -19,6 +19,7 @@ import pcbnew as pcb
 ROOT = Path(__file__).resolve().parents[1]
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--cpl', type=Path, required=True)
+parser.add_argument('--adapter-cpl', type=Path, help='Optional adapter supplier preview to verify with the controller')
 parser.add_argument('--output', type=Path, required=True)
 args = parser.parse_args()
 sha = lambda path: hashlib.sha256(path.read_bytes()).hexdigest()
@@ -102,6 +103,50 @@ for ref, row in trial.items():
         dx, dy = mm(p1.GetPosition().x) - center[0], -mm(p1.GetPosition().y) - center[1]
         pin1[ref] = {'delta_from_pad_bbox_center_mm': [round(dx, 6), round(dy, 6)], 'CPL_rotation_deg': float(row['Rotation'])}
 
+adapter_report = None
+if args.adapter_cpl:
+    # The adapter uses the same two exact SKUs as the controller. Only the
+    # recorded per-SKU angle convention is inherited, never its XY offsets.
+    adapter = pcb.LoadBoard(str(ROOT / 'hardware/cad/B2/adapter.kicad_pcb'))
+    afps = {f.GetReference(): f for f in adapter.GetFootprints()}
+    atrial = rows_by_ref(args.adapter_cpl)
+    anative = rows_by_ref(package / 'adapter/adapter-cpl.csv')
+    abom = list(csv.DictReader((package / 'adapter/adapter-bom.csv').open()))
+    apairs = [(ref.strip(), row['LCSC Part #']) for row in abom for ref in row['Designator'].split(',')]
+    acodes = dict(apairs)
+    assert len(apairs) == len(acodes) == 6 and len(set(acodes.values())) == 2
+    assert set(atrial) == set(anative) == set(afps) == set(acodes)
+    quote = json.loads((ROOT / 'hardware/research/jlc-r3-combined-quote.json').read_text())['adapter']
+    assert sha(args.adapter_cpl) == quote['supplier_preview_cpl_sha256'], 'Adapter differs from quoted preview'
+    assert sha(package / 'adapter/adapter-bom.csv') == quote['bom_sha256']
+    assert sha(ROOT / 'hardware/cad/B2/adapter.kicad_pcb') == quote['native_board_sha256']
+    aresults = []
+    for ref, row in atrial.items():
+        f = afps[ref]
+        pads = [p for p in f.Pads() if p.GetNumber() and p.GetAttribute() != pcb.PAD_ATTRIB_NPTH]
+        xs, ys = [mm(p.GetPosition().x) for p in pads], [-mm(p.GetPosition().y) for p in pads]
+        center = [(min(xs) + max(xs)) / 2, (min(ys) + max(ys)) / 2]
+        anchor = [mm(f.GetPosition().x), -mm(f.GetPosition().y)]
+        deltas = {r['rotation_delta_deg'] for r in rules.values() if r['code'] == acodes[ref]}
+        assert len(deltas) == 1, 'Per-SKU convention missing or inconsistent'
+        delta = next(iter(deltas))
+        error = math.dist([num(row['Mid X']), num(row['Mid Y'])], center)
+        assert error < 0.000002, (ref, center, row)
+        assert math.dist([num(anative[ref]['Mid X']), num(anative[ref]['Mid Y'])], anchor) < 0.000002
+        assert row['Layer'] == anative[ref]['Layer'] == 'Top' and not f.IsFlipped()
+        assert abs(float(anative[ref]['Rotation']) - f.GetOrientationDegrees() % 360) < 0.000001
+        assert 0 <= float(row['Rotation']) < 360
+        assert abs(float(row['Rotation']) - (f.GetOrientationDegrees() + delta) % 360) < 0.000001
+        p1 = next(p for p in pads if p.GetNumber() == '1')
+        aresults.append({'ref': ref, 'code': acodes[ref], 'center_mm': center,
+                         'pin1_mm': [mm(p1.GetPosition().x), -mm(p1.GetPosition().y)],
+                         'CPL_rotation_deg': float(row['Rotation']), 'error_mm': round(error, 9)})
+    adapter_report = {'references': len(aresults), 'unique_SKUs': len(set(acodes.values())),
+                      'trial_cpl_sha256': sha(args.adapter_cpl), 'quoted_preview_hash_matches': True,
+                      'maximum_anchor_error_mm': max(r['error_mm'] for r in aresults),
+                      'components': aresults,
+                      'limitation': 'Checks recorded per-SKU preview conventions, not factory assembly qualification.'}
+
 report = {
     'date': '2026-10-15', 'status': 'PASS intended preview geometry and file integrity; NOT FOR PRODUCTION',
     'native_pcb_sha256': cal['board_sha256'], 'trial_cpl_sha256': sha(args.cpl),
@@ -113,6 +158,10 @@ report = {
     'limitations': ['Exact J105 supplier mapping and final factory-resolved review remain pending; HXY bounded review has separate evidence.', 'Pad-centre parity does not certify physical assembly, QFN process or signal integrity.'],
     'manufacturing_ready': False,
 }
+if adapter_report:
+    report['adapter'] = adapter_report
 args.output.parent.mkdir(parents=True, exist_ok=True)
 args.output.write_text(json.dumps(report, indent=2) + '\n')
 print(f'PASS: {len(results)} refs, {len(connectors)} independent pad centres, {file_count} package files, {zip_count} ZIP members; factory gates remain.')
+if adapter_report:
+    print('PASS: adapter 6 refs / 2 SKUs; native pad centres, per-SKU rotations and quoted CPL hash agree.')
