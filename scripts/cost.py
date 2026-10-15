@@ -38,6 +38,7 @@ report['assumptions'].extend(['Materials-only uses JLC component catalog prices 
 report['board_options']=json.loads((R/'hardware/research/jlc-r3-quote-observations.json').read_text())['options']
 report['board_options_observed_date']='2026-10-15'
 report['observed_quote']=json.loads((R/'hardware/research/jlc-r3-quote-observations.json').read_text())['pcba_quote']
+report['combined_observed_quote']=json.loads((R/'hardware/research/jlc-r3-combined-quote.json').read_text())
 report['assumptions'][-4]='Native Gerber/CPL review passes; JLC preview revealed connector-origin and library-angle differences. Supplier CPL calibration and QFN DFM remain release blockers. Full Economic quote is recorded separately from these planning estimates.'
 for option in report['board_options']:
  option['quantity']=5

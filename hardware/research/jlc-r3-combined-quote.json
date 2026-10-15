@@ -1,0 +1,130 @@
+{
+  "observed_at": "2026-10-15T08:50:00+08:00",
+  "currency": "USD",
+  "status": "Authenticated JLCPCB quote/cart and pre-submit shipping preview; not ordered",
+  "scope": {
+    "controllers": 5,
+    "passive_adapters": 10,
+    "adapter_connectors_per_board": 6,
+    "shipping": "Combined shipment after all items ready"
+  },
+  "controller": {
+    "quantity": 5,
+    "pcb_usd": 28.25,
+    "components_usd": 169.19,
+    "assembly_related_usd": 78.37,
+    "total_usd": 275.81
+  },
+  "adapter": {
+    "quantity": 10,
+    "size_mm": [
+      26,
+      34
+    ],
+    "layers": 2,
+    "thickness_mm": 1.6,
+    "copper_oz": 1,
+    "finish": "LeadFree HASL",
+    "solder_mask": "Green",
+    "assembly": "Economic, Top, all 6 through-hole connectors",
+    "pcb_usd": 7.15,
+    "components_usd": 5.66,
+    "assembly_related_usd": 8.35,
+    "pcba_including_components_usd": 14.01,
+    "total_usd": 21.16,
+    "per_board_usd": 2.116,
+    "pcb_breakdown_usd": {
+      "special_offer": 5,
+      "leadfree_hasl": 1.1,
+      "confirm_production_file": 1.05
+    },
+    "assembly_breakdown_usd": {
+      "engineering": 0,
+      "stencil": 0,
+      "panel": 0,
+      "large_size": 0,
+      "placement_confirmation": 0.45,
+      "manual_labor_setup": 3.61,
+      "manual_assembly": 3.3,
+      "nitrogen_reflow": 0.99
+    },
+    "parts": [
+      {
+        "code": "C161672",
+        "mpn": "S10B-PHDSS(LF)(SN)",
+        "designators": [
+          "JA1"
+        ],
+        "quantity": 10,
+        "total_usd": 4.728,
+        "classification": "Extended",
+        "source": "JLCPCB assembly catalog auto-matched and selected"
+      },
+      {
+        "code": "C492401",
+        "mpn": "PZ254V-11-02P",
+        "designators": [
+          "JA2",
+          "JA3",
+          "JA4",
+          "JA5",
+          "JA6"
+        ],
+        "quantity": 50,
+        "total_usd": 0.93,
+        "classification": "Extended",
+        "source": "JLCPCB assembly catalog auto-matched and selected"
+      }
+    ],
+    "cpl_status": "Trial1 quote/preview only; pad bbox centers and inherited per-MPN angle corrections. Final independent review pending.",
+    "native_board_sha256": "abeb6f9e242a3652a62dade6b7242a9ac3bdc3016d7cb7d71c7d64891c93ad6b",
+    "gerber_sha256": "aa09a822aefb4ce1e3da1e49bd87490efef19c2c89dc28ba428c7cf20b5d8d0c",
+    "bom_sha256": "38ac2d99667f5d8767d293c6fe0bf9f679d006f5a890ddc7346ab62c9bdadff2",
+    "native_cpl_sha256": "5ece7084fdad39d6130663a0d5b3dfbb5945dda833aee3285569737a7f583789",
+    "supplier_preview_cpl_sha256": "9c1d757fdb22a5c81a2a8444456ba7a73b99943626940ccf89032ec555a90b15"
+  },
+  "combined": {
+    "pcb_usd": 35.4,
+    "components_usd": 174.85,
+    "assembly_related_usd": 86.72,
+    "manufacturing_total_usd": 296.97,
+    "freight_usd": 6.78,
+    "subtotal_with_freight_usd": 303.75,
+    "packed_weight_kg": 1.41,
+    "destination": "Taiwan",
+    "carrier": "SF Express (Outside Guangdong）",
+    "carrier_transit": "3-5 business days",
+    "incoterm": "CPT",
+    "import_tax_usd": null,
+    "clearance_usd": null,
+    "tax_status": "JLC checkout states duties, taxes and carrier clearance fees collected at destination; no amount displayed. Not assumed zero.",
+    "coupons_applied": false,
+    "expedite_usd": 0,
+    "manufacturing_time": "PCB 24 hours at no additional charge; assembly 2-3 days",
+    "estimated_ship_date": "2026-10-18"
+  },
+  "shipping_alternatives": [
+    {
+      "carrier": "SF Express (Outside Guangdong）",
+      "usd": 6.78,
+      "transit": "3-5 business days"
+    },
+    {
+      "carrier": "FedEx Express",
+      "usd": 21.58,
+      "transit": "5-7 business days"
+    },
+    {
+      "carrier": "DHL Express",
+      "usd": 41.23,
+      "transit": "2-4 business days"
+    }
+  ],
+  "exclusions": [
+    "Import taxes and carrier clearance fees not displayed",
+    "10 controller-to-adapter harnesses, motherboard jumper leads",
+    "5 V power supply and enclosure",
+    "Firmware flashing and functional commissioning"
+  ],
+  "release_note": "Factory DFM/support replies and final same-CLI review still pending; prices do not authorize production."
+}
